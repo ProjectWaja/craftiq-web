@@ -19,37 +19,37 @@ const PUZZLE_TYPES = [
     name: "What's Wrong?",
     count: 88,
     description: "Spot code violations in real installations. Tap the component that doesn't meet code.",
-    icon: "\u{1F50D}",
+    image: "/images/puzzles/whats-wrong-01.jpg",
   },
   {
     name: "What's Missing?",
     count: 73,
     description: "Identify missing components from a complete-looking install before it fails inspection.",
-    icon: "\u2753",
+    image: "/images/puzzles/whats-missing-01.jpg",
   },
   {
     name: "Build the Assembly",
     count: 60,
     description: "Drag and drop parts into the correct assembly order. Get the sequence wrong, it won't pass.",
-    icon: "\u{1F528}",
+    image: "/images/puzzles/build-the-assembly-01.jpg",
   },
   {
     name: "Size It Right",
     count: 139,
     description: "Calculate correct component sizing using real formulas from ASHRAE, NEC, and SMACNA standards.",
-    icon: "\u{1F4CF}",
+    image: "/images/puzzles/size-it-right-01.jpg",
   },
   {
     name: "Sequence the Install",
     count: 83,
     description: "Reorder shuffled installation steps. Real-world sequencing matters on the jobsite.",
-    icon: "\u{1F4CB}",
+    image: "/images/puzzles/sequence-the-install-01.jpg",
   },
   {
     name: "Code or No Code?",
     count: 142,
     description: "Does this scenario pass inspection or not? Binary judgment calls rooted in actual code sections.",
-    icon: "\u2705",
+    image: "/images/puzzles/code-or-no-code-01.jpg",
   },
 ];
 
@@ -65,7 +65,6 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20 md:pt-40 md:pb-32">
-        {/* Background image */}
         <div className="absolute inset-0 opacity-20">
           <Image
             src="/images/app/marketing-hero-image-01.jpg"
@@ -98,10 +97,10 @@ export default function Home() {
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="#download"
+                href="/play"
                 className="w-full rounded-xl bg-accent px-8 py-4 text-center text-lg font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl hover:shadow-accent/30 sm:w-auto"
               >
-                Download Free
+                Play Free Now
               </a>
               <a
                 href="#features"
@@ -148,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features / Puzzle Types */}
+      {/* Features / Puzzle Types — now with illustrations */}
       <section id="features" className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
@@ -166,21 +165,30 @@ export default function Home() {
               <a
                 key={puzzle.name}
                 href="/play"
-                className="group rounded-2xl border border-border bg-surface-light p-6 transition-all hover:border-accent/30 hover:bg-accent-glow"
+                className="group overflow-hidden rounded-2xl border border-border bg-surface-light transition-all hover:border-accent/30 hover:bg-accent-glow"
               >
-                <div className="flex items-start justify-between">
-                  <span className="text-3xl">{puzzle.icon}</span>
-                  <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">
+                {/* Puzzle illustration */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={puzzle.image}
+                    alt={puzzle.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-light via-transparent to-transparent" />
+                  <span className="absolute top-3 right-3 rounded-full bg-accent/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
                     {puzzle.count} puzzles
                   </span>
                 </div>
-                <h3 className="mt-4 font-mono text-lg font-bold">{puzzle.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                  {puzzle.description}
-                </p>
-                <span className="mt-3 inline-block text-xs font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                  Try it &rarr;
-                </span>
+                <div className="p-5">
+                  <h3 className="font-mono text-lg font-bold">{puzzle.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                    {puzzle.description}
+                  </p>
+                  <span className="mt-3 inline-block text-xs font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                    Try it &rarr;
+                  </span>
+                </div>
               </a>
             ))}
           </div>
@@ -204,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works — with onboarding crew illustrations */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
@@ -220,24 +228,182 @@ export default function Home() {
                 step: "01",
                 title: "Pick Your Trade",
                 description: "Choose from HVAC, Plumbing, Electrical, Pipefitting, Controls, and 5 premium specialties.",
+                image: "/images/app/onboarding-screens-01.jpg",
               },
               {
                 step: "02",
                 title: "Solve Real Puzzles",
                 description: "Every puzzle is based on real installation scenarios from actual construction project specs and plans.",
+                image: "/images/app/onboarding-screens-02.jpg",
               },
               {
                 step: "03",
                 title: "Learn the Code",
                 description: "Every answer explanation cites the actual code section — NEC, IMC, ASHRAE, SMACNA. You learn the 'why' behind every answer.",
+                image: "/images/app/onboarding-screens-03.jpg",
               },
             ].map((item) => (
-              <div key={item.step} className="rounded-2xl border border-border bg-surface-light p-8">
-                <span className="font-mono text-4xl font-black text-accent/30">{item.step}</span>
-                <h3 className="mt-4 font-mono text-xl font-bold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.description}</p>
+              <div key={item.step} className="overflow-hidden rounded-2xl border border-border bg-surface-light">
+                <div className="relative h-52">
+                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-light via-surface-light/30 to-transparent" />
+                  <span className="absolute bottom-4 left-5 font-mono text-4xl font-black text-accent/40">{item.step}</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-mono text-xl font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.description}</p>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Code Standards — with Code Insight illustration */}
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            {/* Code Insight image */}
+            <div className="relative overflow-hidden rounded-2xl">
+              <Image
+                src="/images/features/knowledge-tip-modal-01.jpg"
+                alt="Code Insight — NEC Article 110.26 clearance requirements with correct vs incorrect installation diagrams"
+                width={600}
+                height={600}
+                className="w-full rounded-2xl"
+              />
+            </div>
+
+            <div>
+              <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+                Real Standards
+              </h2>
+              <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
+                Every Answer Cites the Actual Code
+              </p>
+              <p className="mt-4 text-text-secondary">
+                No generic trivia. Every puzzle references real code standards used on the jobsite.
+                After each puzzle, you see the exact code section, correct vs. incorrect diagrams,
+                and why it matters.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-2">
+                {[
+                  "NEC", "IMC", "IPC", "ASHRAE 90.1", "ASHRAE 62.1",
+                  "SMACNA", "NFPA 90A", "NFPA 96", "IEEE 519", "ASME B31.9",
+                  "UL 508", "ASCE 7", "ASTM", "California T-24",
+                ].map((code) => (
+                  <span
+                    key={code}
+                    className="rounded-lg border border-border bg-surface-light px-3 py-1.5 font-mono text-xs text-text-secondary"
+                  >
+                    {code}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gamification — badges, level-up, streak, leaderboard, avatars */}
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+              Gamification
+            </h2>
+            <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
+              Earn Your Stripes
+            </p>
+            <p className="mt-4 text-text-secondary">
+              Track your journey from 1st Year to Master with XP, streaks, achievements, and leaderboard rankings.
+            </p>
+          </div>
+
+          {/* Feature images row */}
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { image: "/images/features/level-up-celebration-overlay-01.jpg", label: "Level Up Celebrations" },
+              { image: "/images/features/daily-challenge-streak-calendar-background-01.jpg", label: "Daily Streak Calendar" },
+              { image: "/images/features/leaderboard-community-background-01.jpg", label: "Community Leaderboard" },
+              { image: "/images/features/progress-achievement-card-01.jpg", label: "Achievement Tracking" },
+            ].map((item) => (
+              <div key={item.label} className="overflow-hidden rounded-2xl border border-border">
+                <div className="relative h-48">
+                  <Image src={item.image} alt={item.label} fill className="object-cover" />
+                </div>
+                <div className="bg-surface-light p-3 text-center">
+                  <span className="text-xs font-semibold text-text-secondary">{item.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Achievement badges */}
+          <div className="mx-auto mt-10 grid max-w-3xl grid-cols-4 gap-4 sm:grid-cols-6">
+            {Array.from({ length: 12 }, (_, i) => (
+              <div key={i} className="overflow-hidden rounded-xl">
+                <Image
+                  src={`/images/badges/achievement-badges-${String(i + 1).padStart(2, "0")}.jpg`}
+                  alt={`Achievement badge ${i + 1}`}
+                  width={120}
+                  height={120}
+                  className="w-full"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Level progression */}
+          <div className="mx-auto mt-10 flex max-w-2xl flex-wrap justify-center gap-3">
+            {[
+              { level: "1st Year", xp: "0", color: "#94A3B8" },
+              { level: "2nd Year", xp: "500", color: "#3B82F6" },
+              { level: "3rd Year", xp: "1,500", color: "#10B981" },
+              { level: "4th Year", xp: "3,000", color: "#F59E0B" },
+              { level: "Journeyman", xp: "5,000", color: "#8B5CF6" },
+              { level: "Master", xp: "8,000", color: "#EC4899" },
+            ].map((lvl) => (
+              <div
+                key={lvl.level}
+                className="rounded-xl border px-4 py-2.5 text-center"
+                style={{
+                  borderColor: `${lvl.color}33`,
+                  backgroundColor: `${lvl.color}0D`,
+                }}
+              >
+                <div className="text-sm font-bold" style={{ color: lvl.color }}>{lvl.level}</div>
+                <div className="text-[11px] text-text-tertiary">{lvl.xp} XP</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Trade avatars row */}
+          <div className="mx-auto mt-12 max-w-2xl">
+            <p className="mb-4 text-center text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+              Choose Your Avatar
+            </p>
+            <div className="flex justify-center gap-4">
+              {[
+                "avatar-hvac",
+                "avatar-electrical",
+                "avatar-controls",
+                "avatar-hydronics-plumbing-andpipe-fitter",
+                "avatar-fire-protection",
+                "avatar-concrete",
+              ].map((name) => (
+                <div key={name} className="h-16 w-16 overflow-hidden rounded-full border-2 border-border transition-all hover:border-accent hover:scale-110">
+                  <Image
+                    src={`/images/avatars/${name}.jpg`}
+                    alt={name.replace("avatar-", "").replace(/-/g, " ")}
+                    width={64}
+                    height={64}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -274,10 +440,10 @@ export default function Home() {
                 ))}
               </ul>
               <a
-                href="#download"
+                href="/play"
                 className="mt-8 block rounded-xl border border-border-medium bg-surface px-6 py-3 text-center text-sm font-semibold text-text-primary transition-colors hover:bg-white/[0.08]"
               >
-                Get Started
+                Play Free Now
               </a>
             </div>
 
@@ -323,162 +489,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Enterprise */}
+      {/* Enterprise — with crew illustration */}
       <section id="enterprise" className="py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-light p-10 text-center md:p-16">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
-              For Training Programs
-            </h2>
-            <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
-              Bulk Licensing for JATC &amp; Training Centers
-            </p>
-            <p className="mt-4 text-text-secondary">
-              Training directors and JATC coordinators: CraftIQ offers volume discounts
-              for apprenticeship programs. Bring CraftIQ to your entire training center.
-            </p>
-
-            <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-4">
-              {[
-                { seats: "10+", discount: "20%" },
-                { seats: "25+", discount: "30%" },
-                { seats: "50+", discount: "40%" },
-              ].map((tier) => (
-                <div key={tier.seats} className="rounded-xl border border-border bg-surface p-4">
-                  <div className="font-mono text-2xl font-extrabold text-accent">{tier.discount}</div>
-                  <div className="mt-1 text-xs text-text-tertiary">{tier.seats} licenses</div>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="mailto:enterprise@craftiq.org"
-              className="mt-10 inline-block rounded-xl bg-accent px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
-            >
-              Contact for Bulk Pricing
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Code Standards */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
-              Real Standards
-            </h2>
-            <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
-              Every Answer Cites the Actual Code
-            </p>
-            <p className="mt-4 text-text-secondary">
-              No generic trivia. Every puzzle references real code standards used on the jobsite.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
-            {[
-              "NEC", "IMC", "IPC", "ASHRAE 90.1", "ASHRAE 62.1", "ASHRAE 135",
-              "SMACNA", "NFPA 90A", "NFPA 96", "IEEE 519", "ASME B31.9",
-              "UL 508", "ASCE 7", "ASTM", "California T-24",
-            ].map((code) => (
-              <span
-                key={code}
-                className="rounded-lg border border-border bg-surface-light px-4 py-2 font-mono text-sm text-text-secondary"
-              >
-                {code}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievement Badges */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
-              Gamification
-            </h2>
-            <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
-              Earn Your Stripes
-            </p>
-            <p className="mt-4 text-text-secondary">
-              Track your journey from 1st Year to Master with XP, streaks, achievements, and leaderboard rankings.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-10 grid max-w-3xl grid-cols-4 gap-4 sm:grid-cols-6 md:grid-cols-6">
-            {Array.from({ length: 12 }, (_, i) => (
-              <div key={i} className="overflow-hidden rounded-xl">
+          <div className="overflow-hidden rounded-2xl border border-border">
+            <div className="grid md:grid-cols-2">
+              {/* Illustration side */}
+              <div className="relative hidden h-full min-h-[400px] md:block">
                 <Image
-                  src={`/images/badges/achievement-badges-${String(i + 1).padStart(2, "0")}.jpg`}
-                  alt={`Achievement badge ${i + 1}`}
-                  width={120}
-                  height={120}
-                  className="w-full"
+                  src="/images/app/onboarding-screens-04.jpg"
+                  alt="Trade crew leveling up together"
+                  fill
+                  className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-surface-light/80" />
               </div>
-            ))}
-          </div>
 
-          {/* Level progression */}
-          <div className="mx-auto mt-12 flex max-w-2xl flex-wrap justify-center gap-3">
-            {[
-              { level: "1st Year", xp: "0", color: "#94A3B8" },
-              { level: "2nd Year", xp: "500", color: "#3B82F6" },
-              { level: "3rd Year", xp: "1,500", color: "#10B981" },
-              { level: "4th Year", xp: "3,000", color: "#F59E0B" },
-              { level: "Journeyman", xp: "5,000", color: "#8B5CF6" },
-              { level: "Master", xp: "8,000", color: "#EC4899" },
-            ].map((lvl) => (
-              <div
-                key={lvl.level}
-                className="rounded-xl border px-4 py-2.5 text-center"
-                style={{
-                  borderColor: `${lvl.color}33`,
-                  backgroundColor: `${lvl.color}0D`,
-                }}
-              >
-                <div className="text-sm font-bold" style={{ color: lvl.color }}>{lvl.level}</div>
-                <div className="text-[11px] text-text-tertiary">{lvl.xp} XP</div>
+              {/* Content side */}
+              <div className="bg-surface-light p-10 md:p-14">
+                <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+                  For Training Programs
+                </h2>
+                <p className="mt-3 font-mono text-3xl font-bold">
+                  Bulk Licensing for JATC &amp; Training Centers
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+                  Training directors and JATC coordinators: CraftIQ offers volume discounts
+                  for apprenticeship programs. Bring CraftIQ to your entire training center.
+                </p>
+
+                <div className="mt-8 grid grid-cols-3 gap-3">
+                  {[
+                    { seats: "10+", discount: "20%" },
+                    { seats: "25+", discount: "30%" },
+                    { seats: "50+", discount: "40%" },
+                  ].map((tier) => (
+                    <div key={tier.seats} className="rounded-xl border border-border bg-background p-4 text-center">
+                      <div className="font-mono text-2xl font-extrabold text-accent">{tier.discount}</div>
+                      <div className="mt-1 text-xs text-text-tertiary">{tier.seats} licenses</div>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href="mailto:enterprise@craftiq.org"
+                  className="mt-8 inline-block rounded-xl bg-accent px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
+                >
+                  Contact for Bulk Pricing
+                </a>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Download CTA */}
+      {/* Download CTA — with XP gauge image */}
       <section id="download" className="py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="relative overflow-hidden rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/10 via-surface to-controls/10 p-10 text-center md:p-20">
-            <h2 className="font-mono text-3xl font-bold md:text-5xl">
-              Ready to Level Up?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
-              Join thousands of union apprentices mastering trade codes the smart way.
-              Free to start — no credit card required.
-            </p>
-
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              {/* Placeholder store badges — replace with real links when live */}
-              <a
-                href="#"
-                className="flex h-14 w-48 items-center justify-center rounded-xl bg-white text-background font-semibold text-sm transition-opacity hover:opacity-90"
-              >
-                <span className="mr-2 text-xl">&#63743;</span> App Store
-              </a>
-              <a
-                href="#"
-                className="flex h-14 w-48 items-center justify-center rounded-xl bg-white text-background font-semibold text-sm transition-opacity hover:opacity-90"
-              >
-                <span className="mr-2 text-xl">&#9654;</span> Google Play
-              </a>
+          <div className="relative overflow-hidden rounded-2xl border border-accent/20 p-10 text-center md:p-20">
+            {/* Background images */}
+            <div className="absolute inset-0 opacity-10">
+              <Image src="/images/features/iq-and-xp-gauge-01.jpg" alt="" fill className="object-cover" />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-background/95 to-controls/10" />
 
-            <p className="mt-6 text-sm text-text-tertiary">
-              Does your employer offer education benefits? Many union training programs cover CraftIQ Pro.
-            </p>
+            <div className="relative">
+              <h2 className="font-mono text-3xl font-bold md:text-5xl">
+                Ready to Level Up?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
+                Join thousands of union apprentices mastering trade codes the smart way.
+                Free to start — no credit card required.
+              </p>
+
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
+                  href="/play"
+                  className="flex h-14 w-56 items-center justify-center rounded-xl bg-accent text-white font-semibold text-sm shadow-lg shadow-accent/25 transition-all hover:shadow-xl hover:shadow-accent/30"
+                >
+                  Play Free in Browser
+                </a>
+                <a
+                  href="#"
+                  className="flex h-14 w-48 items-center justify-center rounded-xl bg-white text-background font-semibold text-sm transition-opacity hover:opacity-90"
+                >
+                  <span className="mr-2 text-xl">&#63743;</span> App Store
+                </a>
+                <a
+                  href="#"
+                  className="flex h-14 w-48 items-center justify-center rounded-xl bg-white text-background font-semibold text-sm transition-opacity hover:opacity-90"
+                >
+                  <span className="mr-2 text-xl">&#9654;</span> Google Play
+                </a>
+              </div>
+
+              <p className="mt-6 text-sm text-text-tertiary">
+                Does your employer offer education benefits? Many union training programs cover CraftIQ Pro.
+              </p>
+            </div>
           </div>
         </div>
       </section>

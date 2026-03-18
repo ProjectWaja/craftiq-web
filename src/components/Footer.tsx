@@ -20,10 +20,10 @@ export default function Footer() {
           <div>
             <h4 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Product</h4>
             <ul className="space-y-2">
-              <li><a href="#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Features</a></li>
-              <li><a href="#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a></li>
-              <li><a href="#trades" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Trades</a></li>
-              <li><a href="#enterprise" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Enterprise</a></li>
+              <li><a href="/#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Features</a></li>
+              <li><a href="/#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a></li>
+              <li><a href="/#trades" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Trades</a></li>
+              <li><a href="/#enterprise" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Enterprise</a></li>
             </ul>
           </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
             <h4 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Support</h4>
             <ul className="space-y-2">
               <li><Link href="/support" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Help &amp; FAQ</Link></li>
-              <li><a href="mailto:support@craftiq.org" className="text-sm text-text-secondary hover:text-text-primary transition-colors">support@craftiq.org</a></li>
+              <li><a href="mailto:scoprixlabs@gmail.com" className="text-sm text-text-secondary hover:text-text-primary transition-colors">scoprixlabs@gmail.com</a></li>
             </ul>
           </div>
         </div>

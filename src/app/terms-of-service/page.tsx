@@ -89,7 +89,7 @@ export default function TermsOfService() {
           <h2 className="mb-3 font-mono text-lg font-bold text-text-primary">10. Contact</h2>
           <p>
             Questions about these terms? Contact us at{" "}
-            <a href="mailto:legal@craftiq.org" className="text-accent hover:underline">legal@craftiq.org</a>.
+            <a href="mailto:scoprixlabs@gmail.com" className="text-accent hover:underline">scoprixlabs@gmail.com</a>.
           </p>
           <p className="mt-2">
             Scoprix LLC<br />

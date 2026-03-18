@@ -532,7 +532,7 @@ export default function Home() {
                 </div>
 
                 <a
-                  href="mailto:enterprise@craftiq.org"
+                  href="mailto:scoprixlabs@gmail.com"
                   className="mt-8 inline-block rounded-xl bg-accent px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
                 >
                   Contact for Bulk Pricing

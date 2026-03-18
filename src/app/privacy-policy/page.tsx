@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
           <h2 className="mb-3 font-mono text-lg font-bold text-text-primary">7. Contact Us</h2>
           <p>
             If you have questions about this privacy policy, contact us at{" "}
-            <a href="mailto:privacy@craftiq.org" className="text-accent hover:underline">privacy@craftiq.org</a>.
+            <a href="mailto:scoprixlabs@gmail.com" className="text-accent hover:underline">scoprixlabs@gmail.com</a>.
           </p>
           <p className="mt-2">
             Scoprix LLC<br />

@@ -37,7 +37,7 @@ export default function Header() {
             Pricing
           </a>
           <a
-            href="#download"
+            href="/#download"
             className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
             Download
@@ -65,7 +65,7 @@ export default function Header() {
             <a href="/#trades" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Trades</a>
             <a href="/#pricing" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Pricing</a>
             <a
-              href="#download"
+              href="/#download"
               onClick={() => setMenuOpen(false)}
               className="mt-2 rounded-xl bg-accent px-5 py-3 text-center text-sm font-semibold text-white"
             >

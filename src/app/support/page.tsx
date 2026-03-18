@@ -36,7 +36,7 @@ const FAQ = [
   },
   {
     q: "How do bulk/enterprise licenses work?",
-    a: "We offer volume discounts for JATC programs and training centers: 20% off for 10+ licenses, 30% for 25+, and 40% for 50+. Contact enterprise@craftiq.org for details.",
+    a: "We offer volume discounts for JATC programs and training centers: 20% off for 10+ licenses, 30% for 25+, and 40% for 50+. Contact scoprixlabs@gmail.com for details.",
   },
 ];
 
@@ -53,8 +53,8 @@ export default function Support() {
         <h2 className="font-mono text-lg font-bold">Contact Us</h2>
         <p className="mt-2 text-sm text-text-secondary">
           Can&apos;t find what you need? Email us at{" "}
-          <a href="mailto:support@craftiq.org" className="text-accent hover:underline">
-            support@craftiq.org
+          <a href="mailto:scoprixlabs@gmail.com" className="text-accent hover:underline">
+            scoprixlabs@gmail.com
           </a>{" "}
           and we&apos;ll get back to you within 24 hours.
         </p>

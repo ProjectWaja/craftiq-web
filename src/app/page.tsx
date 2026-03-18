@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TradeCards from "@/components/TradeCards";
 
 const TRADES = [
   { name: "HVAC / Sheet Metal", code: "hvac", color: "#3B82F6", union: "SMACNA / UA", icon: "\u{1F300}" },
@@ -162,8 +163,9 @@ export default function Home() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PUZZLE_TYPES.map((puzzle) => (
-              <div
+              <a
                 key={puzzle.name}
+                href="/play"
                 className="group rounded-2xl border border-border bg-surface-light p-6 transition-all hover:border-accent/30 hover:bg-accent-glow"
               >
                 <div className="flex items-start justify-between">
@@ -176,7 +178,10 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                   {puzzle.description}
                 </p>
-              </div>
+                <span className="mt-3 inline-block text-xs font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                  Try it &rarr;
+                </span>
+              </a>
             ))}
           </div>
         </div>
@@ -195,40 +200,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Trade cards image */}
-          <div className="mx-auto mt-10 max-w-lg">
-            <Image
-              src="/images/trades/trade-category-cards-01.jpg"
-              alt="Pick your trade — HVAC, Plumbing, Electrical, Pipefitting, Controls"
-              width={600}
-              height={600}
-              className="rounded-2xl"
-            />
-          </div>
-
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {TRADES.map((trade) => (
-              <div
-                key={trade.code}
-                className="relative rounded-2xl border p-4 transition-all hover:scale-[1.02]"
-                style={{
-                  borderColor: `${trade.color}22`,
-                  backgroundColor: `${trade.color}08`,
-                }}
-              >
-                {trade.premium && (
-                  <span className="absolute -top-2 right-3 rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold text-white">
-                    PRO
-                  </span>
-                )}
-                <span className="text-2xl">{trade.icon}</span>
-                <h3 className="mt-2 text-sm font-bold" style={{ color: trade.color }}>
-                  {trade.name}
-                </h3>
-                <p className="mt-1 text-[11px] text-text-tertiary">{trade.union}</p>
-              </div>
-            ))}
-          </div>
+          <TradeCards trades={TRADES} />
         </div>
       </section>
 

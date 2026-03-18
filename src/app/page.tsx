@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Features / Puzzle Types — now with illustrations */}
-      <section id="features" className="py-20">
+      <section id="features" className="bg-blueprint-iso py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">6 Puzzle Types</h2>
@@ -213,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* How It Works — with onboarding crew illustrations */}
-      <section className="py-20">
+      <section className="bg-blueprint-grid py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">How It Works</h2>
@@ -307,7 +307,7 @@ export default function Home() {
       </section>
 
       {/* Gamification — badges, level-up, streak, leaderboard, avatars */}
-      <section className="py-20">
+      <section className="bg-blueprint-hex py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
@@ -409,7 +409,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20">
+      <section id="pricing" className="bg-blueprint-grid py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Pricing</h2>

@@ -34,7 +34,57 @@ html {
 
 body {
   background-color: var(--color-background);
+  background-image: url('/images/backgrounds/app-store-screenshot-backgrounds-01.jpg');
+  background-size: 1024px 1024px;
+  background-repeat: repeat;
+  background-attachment: fixed;
   color: var(--color-text-primary);
+}
+
+/* Blueprint section backgrounds — use on alternating sections for visual depth */
+.bg-blueprint-grid {
+  position: relative;
+}
+.bg-blueprint-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/backgrounds/app-store-screenshot-backgrounds-04.jpg');
+  background-size: 1024px 1024px;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.bg-blueprint-iso {
+  position: relative;
+}
+.bg-blueprint-iso::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/backgrounds/app-store-screenshot-backgrounds-03.jpg');
+  background-size: 1024px 1024px;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.bg-blueprint-hex {
+  position: relative;
+}
+.bg-blueprint-hex::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/backgrounds/app-store-screenshot-backgrounds-02.jpg');
+  background-size: 1024px 1024px;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @keyframes float {

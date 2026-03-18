@@ -1,3 +1,8 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
+// === SHARED (synced to craftiq-web) ===
+
 export interface ApprenticeLevel {
   year: number;
   name: string;
@@ -5,11 +10,7 @@ export interface ApprenticeLevel {
   color: string;
 }
 
-export interface PlayerProgress {
-  totalXP: number;
-  puzzlesCompleted: number;
-  puzzlesCorrect: number;
-  completedPuzzleIds: string[];
+export interface StreakData {
   currentStreak: number;
   bestStreak: number;
   lastPuzzleDate: string | null;

@@ -1,3 +1,6 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
 import { TradeCode, TradeMap } from '@/types/trade';
 
 export const TRADES: TradeMap = {

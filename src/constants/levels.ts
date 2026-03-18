@@ -1,3 +1,8 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
+// === SHARED (synced to craftiq-web) ===
+
 import { ApprenticeLevel } from '@/types/scoring';
 
 export const APPRENTICE_LEVELS: ApprenticeLevel[] = [

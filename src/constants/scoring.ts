@@ -1,3 +1,6 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
 // What's Wrong scoring
 export const WHATS_WRONG_CORRECT_HIT = 20;
 export const WHATS_WRONG_FALSE_POSITIVE = -10;

@@ -2,8 +2,17 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { PuzzleResult, PuzzleType } from '@/types/puzzle';
 import { TradeCode } from '@/types/trade';
-import { PlayerProgress } from '@/types/scoring';
 import { getLevel, getLevelProgress, getXPToNextLevel, calculateXP, didLevelUp } from '@/lib/xp-system';
+
+interface PlayerProgress {
+  totalXP: number;
+  puzzlesCompleted: number;
+  puzzlesCorrect: number;
+  completedPuzzleIds: string[];
+  currentStreak: number;
+  bestStreak: number;
+  lastPuzzleDate: string | null;
+}
 
 interface GameState extends PlayerProgress {
   history: PuzzleResult[];

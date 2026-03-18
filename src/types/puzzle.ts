@@ -1,3 +1,6 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
 import { TradeCode } from './trade';
 
 export type PuzzleType = 'whats-wrong' | 'whats-missing' | 'sequence' | 'code-check' | 'size-it' | 'build-assembly';

@@ -1,3 +1,6 @@
+// AUTO-SYNCED from craftiq (mobile) — do not edit directly
+// Run `npm run sync` in craftiq to update
+
 import { ApprenticeLevel } from '@/types/scoring';
 import { APPRENTICE_LEVELS } from '@/constants/levels';
 import { STREAK_THRESHOLDS } from '@/constants/scoring';

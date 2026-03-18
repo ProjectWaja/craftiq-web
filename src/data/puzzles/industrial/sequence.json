@@ -1,0 +1,162 @@
+[
+  {
+    "id": "seq-in-001",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Process Piping Hydrostatic Test",
+    "description": "Put the steps for performing an ASME B31.3 hydrostatic pressure test on process piping in the correct order.",
+    "steps": [
+      { "id": 1, "text": "Review P&IDs and verify all welds are completed and NDE reports accepted", "order": 1 },
+      { "id": 2, "text": "Install temporary blinds at equipment connections and open-ended branches", "order": 2 },
+      { "id": 3, "text": "Remove or isolate pressure relief valves and instruments not rated for test pressure", "order": 3 },
+      { "id": 4, "text": "Fill system with clean water, venting air at all high points", "order": 4 },
+      { "id": 5, "text": "Gradually increase pressure to test pressure (1.5x design per B31.3)", "order": 5 },
+      { "id": 6, "text": "Hold at test pressure for minimum 10 minutes, then reduce to design pressure", "order": 6 },
+      { "id": 7, "text": "Visually inspect all joints and connections for leaks at design pressure", "order": 7 },
+      { "id": 8, "text": "Document results, drain system, remove blinds, and reinstall relief devices", "order": 8 }
+    ],
+    "explanation": "ASME B31.3 Section 345 prescribes hydrostatic testing at 1.5 times the design pressure. All welds must pass NDE before testing. Equipment and instruments must be isolated with blinds, and PRVs must be removed to prevent premature activation at test pressure. Air must be completely vented to prevent compressible gas hazards. The hold period verifies system integrity, and visual inspection at design pressure catches leaks that may seal under high pressure but leak at operating conditions.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-in-002",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Hazardous Area Classification Assessment",
+    "description": "Sequence the steps for performing a hazardous area classification assessment at an industrial facility per NFPA 497 and NEC Article 500.",
+    "steps": [
+      { "id": 1, "text": "Identify all sources of flammable gas, vapor, or combustible dust release", "order": 1 },
+      { "id": 2, "text": "Determine the type and properties of each hazardous material (flash point, vapor density, AIT, explosive limits)", "order": 2 },
+      { "id": 3, "text": "Assign NEC Class (I gas/vapor, II dust, III fiber) and Group (A through G) for each material", "order": 3 },
+      { "id": 4, "text": "Evaluate frequency and duration of hazardous atmosphere — Division 1 (normal) vs Division 2 (abnormal)", "order": 4 },
+      { "id": 5, "text": "Determine the extent (boundary distances) of each classified area using NFPA 497 tables and diagrams", "order": 5 },
+      { "id": 6, "text": "Prepare area classification drawings showing all classified zones with boundaries", "order": 6 },
+      { "id": 7, "text": "Specify electrical equipment ratings required for each classified area", "order": 7 },
+      { "id": 8, "text": "Document the assessment and obtain review by a qualified electrical engineer", "order": 8 }
+    ],
+    "explanation": "Hazardous area classification per NEC 500 and NFPA 497 follows a systematic process from hazard identification through documented area boundaries. The assessment must identify every potential release source, characterize the materials, classify the areas by Class/Division/Group, and determine boundary distances. This assessment drives all electrical equipment selection decisions and must be documented, reviewed, and maintained throughout the facility lifecycle.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-in-003",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Ventilation System Commissioning",
+    "description": "Order the steps for commissioning an industrial local exhaust ventilation system from installation completion through final testing and acceptance.",
+    "steps": [
+      { "id": 1, "text": "Visually inspect all ductwork joints, supports, and connections for proper fabrication", "order": 1 },
+      { "id": 2, "text": "Verify static grounding continuity on all duct sections and collector components", "order": 2 },
+      { "id": 3, "text": "Start exhaust fan and check rotation direction, vibration, and bearing temperatures", "order": 3 },
+      { "id": 4, "text": "Measure duct transport velocity at each branch with a pitot tube traverse", "order": 4 },
+      { "id": 5, "text": "Adjust blast gates and dampers to achieve design capture velocity at each hood", "order": 5 },
+      { "id": 6, "text": "Verify dust collector differential pressure, pulse cleaning cycle, and hopper discharge", "order": 6 },
+      { "id": 7, "text": "Perform smoke testing at each hood to confirm capture effectiveness", "order": 7 },
+      { "id": 8, "text": "Record all measurements on commissioning forms and compare to design values", "order": 8 }
+    ],
+    "explanation": "Industrial ventilation commissioning verifies that the installed system matches the design intent per ACGIH Industrial Ventilation Manual. Physical inspection comes first to catch fabrication defects, then static grounding is verified before introducing airflow (to prevent spark hazards). Fan startup precedes airflow measurement and balancing. Hood capture testing using smoke visualization is the final performance verification before documenting results.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-in-004",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam Boiler Startup Procedure",
+    "description": "Sequence the steps for cold startup of an industrial fire-tube steam boiler after annual inspection and maintenance.",
+    "steps": [
+      { "id": 1, "text": "Complete pre-startup checklist: verify all manways closed, safety devices reinstalled, stack damper open", "order": 1 },
+      { "id": 2, "text": "Fill boiler to normal water level using treated feedwater and verify on sight glass", "order": 2 },
+      { "id": 3, "text": "Test low-water cutoff by slowly lowering water level — verify burner lockout", "order": 3 },
+      { "id": 4, "text": "Purge firebox with air for minimum 4 furnace volumes per NFPA 85", "order": 4 },
+      { "id": 5, "text": "Light burner on low fire and slowly raise temperature (limit 100°F per hour to prevent thermal shock)", "order": 5 },
+      { "id": 6, "text": "At operating pressure, test each safety valve by raising pressure to pop point", "order": 6 },
+      { "id": 7, "text": "Perform bottom blowdown to remove settled sediment, then surface blowdown", "order": 7 },
+      { "id": 8, "text": "Transfer boiler to automatic control and verify all safety interlocks are functional", "order": 8 }
+    ],
+    "explanation": "Boiler cold startup follows a strict sequence mandated by ASME CSD-1 and NFPA 85 (Boiler and Combustion Systems Hazards Code). Water level must be established before any firing. The low-water cutoff test verifies the most critical safety device. Firebox purging prevents fuel-air explosions from accumulated gas. Slow heating prevents thermal shock cracking. Safety valve testing at pressure proves overpressure protection. Only after all safety devices are verified is the boiler released to automatic control.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-in-005",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air System Commissioning",
+    "description": "Order the steps for commissioning a new industrial compressed air system from compressor startup through point-of-use verification.",
+    "steps": [
+      { "id": 1, "text": "Verify compressor oil level, inlet filter, and electrical connections", "order": 1 },
+      { "id": 2, "text": "Start compressor in unloaded mode and check rotation, vibration, and oil pressure", "order": 2 },
+      { "id": 3, "text": "Load compressor and fill receiver tank, verify PRV set pressure at MAWP", "order": 3 },
+      { "id": 4, "text": "Start refrigerated air dryer and verify outlet dewpoint reaches specification", "order": 4 },
+      { "id": 5, "text": "Open receiver tank outlet and pressurize distribution piping gradually", "order": 5 },
+      { "id": 6, "text": "Check all piping joints and connections for leaks using soapy water or ultrasonic detector", "order": 6 },
+      { "id": 7, "text": "Verify pressure and flow at each point-of-use station with regulator adjusted", "order": 7 },
+      { "id": 8, "text": "Test all automatic condensate drains and document system performance data", "order": 8 }
+    ],
+    "explanation": "Compressed air system commissioning proceeds from the compressor outward to the point-of-use. The compressor must be verified mechanically before loading. The receiver tank provides system capacitance and is where the PRV is verified. The dryer must reach dewpoint specification before distribution piping is pressurized to prevent moisture condensation. Leak testing the entire distribution system is critical because compressed air leaks waste 20-30% of system capacity in a typical industrial plant.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-in-006",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "LOTO Procedure for Process Equipment",
+    "description": "Sequence the steps for a lockout/tagout procedure on an industrial process pump with multiple energy sources per OSHA 1910.147.",
+    "steps": [
+      { "id": 1, "text": "Notify all affected employees that a lockout is being performed on the equipment", "order": 1 },
+      { "id": 2, "text": "Shut down equipment using normal operating controls (stop button, DCS command)", "order": 2 },
+      { "id": 3, "text": "Isolate all energy sources: electrical disconnect, process block valves, compressed air supply", "order": 3 },
+      { "id": 4, "text": "Apply individual locks and tags to each energy isolating device", "order": 4 },
+      { "id": 5, "text": "Dissipate or restrain all stored/residual energy (bleed pressure, drain liquids, block elevated components)", "order": 5 },
+      { "id": 6, "text": "Verify zero energy state: attempt to start equipment, test for voltage, check pressure gauges read zero", "order": 6 },
+      { "id": 7, "text": "Perform the maintenance or repair work on the equipment", "order": 7 },
+      { "id": 8, "text": "Remove locks/tags in reverse order, re-energize, and notify affected employees of return to service", "order": 8 }
+    ],
+    "explanation": "OSHA 1910.147 (The Control of Hazardous Energy) prescribes a specific lockout/tagout sequence that must be followed without deviation. Notification comes first to alert all affected personnel. Normal shutdown precedes energy isolation. All energy sources (electrical, pneumatic, hydraulic, thermal, gravitational, chemical) must be identified and isolated. Stored energy must be dissipated before verification. The critical verification step (attempt to start) proves zero energy state. Failure to follow this sequence is the leading cause of industrial maintenance fatalities.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-in-007",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Chemical Tank Farm Piping Installation",
+    "description": "Order the steps for installing process piping at an industrial chemical tank farm, from civil work through commissioning.",
+    "steps": [
+      { "id": 1, "text": "Install concrete containment dikes and sump with leak detection per EPA/SPCC requirements", "order": 1 },
+      { "id": 2, "text": "Set pipe supports and racks at specified elevations and spacing", "order": 2 },
+      { "id": 3, "text": "Fabricate and install process piping with material per corrosion engineering specification", "order": 3 },
+      { "id": 4, "text": "Complete all weld joints and perform NDE per ASME B31.3 requirements", "order": 4 },
+      { "id": 5, "text": "Install instrumentation: flow meters, level transmitters, pressure gauges, and control valves", "order": 5 },
+      { "id": 6, "text": "Perform hydrostatic pressure test on all piping systems", "order": 6 },
+      { "id": 7, "text": "Install pipe insulation, heat tracing, and identification labels per ASME A13.1", "order": 7 },
+      { "id": 8, "text": "Flush system, perform chemical cleaning if required, and prepare for service introduction", "order": 8 }
+    ],
+    "explanation": "Chemical tank farm piping installation follows a construction sequence where each step depends on the previous. Containment must be complete before piping is installed to comply with EPA SPCC (Spill Prevention, Control, and Countermeasure) regulations. Pipe supports are set before piping fabrication. Welding and NDE must be complete before pressure testing. Insulation and heat tracing go on after the pressure test to allow visual inspection of all joints. Final system flushing removes construction debris before process chemicals are introduced.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-in-008",
+    "type": "sequence",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial PLC Control System Startup",
+    "description": "Sequence the steps for starting up a new PLC-based process control system in an industrial facility.",
+    "steps": [
+      { "id": 1, "text": "Verify all field wiring terminations against instrument loop drawings (point-to-point check)", "order": 1 },
+      { "id": 2, "text": "Power on PLC and verify processor status, I/O module health, and communication networks", "order": 2 },
+      { "id": 3, "text": "Download control program and verify configuration matches the functional design specification", "order": 3 },
+      { "id": 4, "text": "Perform I/O checkout: verify each input reads correct field signal, each output drives correct device", "order": 4 },
+      { "id": 5, "text": "Calibrate all analog instruments (4-20 mA loop calibration from sensor through PLC input)", "order": 5 },
+      { "id": 6, "text": "Test each safety interlock and emergency shutdown function per the cause-and-effect matrix", "order": 6 },
+      { "id": 7, "text": "Perform loop tuning on PID controllers with process fluid at operating conditions", "order": 7 },
+      { "id": 8, "text": "Conduct full integrated system test (IST) simulating normal and upset operating scenarios", "order": 8 }
+    ],
+    "explanation": "PLC startup follows a methodical bottom-up verification sequence per ANSI/ISA-62443 and ISA-88 guidelines. Wiring verification comes first because all subsequent tests depend on correct connections. Hardware health is confirmed before loading software. I/O checkout proves each signal path works. Instrument calibration ensures measurement accuracy. Safety interlock testing per the cause-and-effect matrix is a PSM requirement under OSHA 1910.119. PID tuning requires process conditions. The integrated system test proves the complete system operates as designed.",
+    "xpReward": 100
+  }
+]

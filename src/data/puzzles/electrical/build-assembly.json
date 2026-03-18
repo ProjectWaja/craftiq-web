@@ -1,0 +1,348 @@
+[
+  {
+    "id": "ba-elec-001",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Panel Feed Assembly",
+    "description": "Assemble the components for feeding a residential sub-panel from the main panel in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Double-pole breaker in main panel", "correctPosition": 1 },
+      { "id": 2, "name": "Feeder conductors (2 hots, 1 neutral, 1 ground) in conduit", "correctPosition": 2 },
+      { "id": 3, "name": "Sub-panel enclosure mounted at new location", "correctPosition": 3 },
+      { "id": 4, "name": "Feeder conductors terminated on sub-panel main lugs", "correctPosition": 4 },
+      { "id": 5, "name": "Separate neutral and ground bus bars (no bonding jumper)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Main bonding jumper at sub-panel" },
+      { "id": 102, "name": "Second grounding electrode at sub-panel" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Source breaker" },
+      { "id": 2, "label": "Position 2: Feeder run" },
+      { "id": 3, "label": "Position 3: Destination panel" },
+      { "id": 4, "label": "Position 4: Conductor terminations" },
+      { "id": 5, "label": "Position 5: Bus bar configuration" }
+    ],
+    "explanation": "Sub-panel feed assembly starts at the source breaker, runs feeder conductors, and terminates at the sub-panel. The critical detail is that the neutral must NOT be bonded to ground at the sub-panel — only at the main service panel per NEC 250.32(B). Installing a bonding jumper at a sub-panel creates dangerous parallel return paths.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-elec-002",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Receptacle Circuit Assembly",
+    "description": "Assemble the components of a bedroom receptacle circuit from the panel to the last outlet in the correct order.",
+    "parts": [
+      { "id": 1, "name": "15A AFCI combination breaker in panel", "correctPosition": 1 },
+      { "id": 2, "name": "14/2 NM-B cable from panel to first box", "correctPosition": 2 },
+      { "id": 3, "name": "First duplex receptacle with pigtail connections", "correctPosition": 3 },
+      { "id": 4, "name": "14/2 NM-B cable daisy-chained to subsequent boxes", "correctPosition": 4 },
+      { "id": 5, "name": "Last receptacle in circuit (end of run)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "GFCI breaker (unless in required location)" },
+      { "id": 102, "name": "14/3 NM-B cable with red traveler" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Panel protection" },
+      { "id": 2, "label": "Position 2: Home run cable" },
+      { "id": 3, "label": "Position 3: First outlet" },
+      { "id": 4, "label": "Position 4: Branch wiring" },
+      { "id": 5, "label": "Position 5: Last outlet" }
+    ],
+    "explanation": "Bedroom receptacle circuits require AFCI protection per NEC 210.12. The circuit starts at the AFCI breaker, runs a 'home run' cable to the first box, and daisy-chains to subsequent outlets. Pigtail connections (instead of using device terminals for pass-through) ensure downstream outlets stay energized if a device is removed.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-elec-003",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "3-Way Switch Circuit",
+    "description": "Assemble the wiring components for a 3-way switch circuit controlling a hallway light from two locations.",
+    "parts": [
+      { "id": 1, "name": "Power feed (14/2 NM-B) to first 3-way switch box", "correctPosition": 1 },
+      { "id": 2, "name": "First 3-way switch (common terminal to hot, travelers to brass screws)", "correctPosition": 2 },
+      { "id": 3, "name": "14/3 NM-B cable (travelers) between switch boxes", "correctPosition": 3 },
+      { "id": 4, "name": "Second 3-way switch (common terminal to switch leg, travelers from brass screws)", "correctPosition": 4 },
+      { "id": 5, "name": "Switch leg (14/2 NM-B) from second switch to light fixture", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "4-way switch" },
+      { "id": 102, "name": "Dimmer module" },
+      { "id": 103, "name": "14/4 NM-B cable" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source" },
+      { "id": 2, "label": "Position 2: First switch location" },
+      { "id": 3, "label": "Position 3: Traveler wires" },
+      { "id": 4, "label": "Position 4: Second switch location" },
+      { "id": 5, "label": "Position 5: Light fixture" }
+    ],
+    "explanation": "A 3-way switch circuit uses two 3-way switches and a 3-wire cable (14/3) for the travelers between them. Power enters at one switch common terminal, the two travelers connect via the 14/3 cable, and the other switch common goes to the light. The 14/3 cable carries the two traveler wires and the neutral per NEC 404.2(C).",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-elec-004",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "GFCI Circuit Assembly",
+    "description": "Assemble the components for a GFCI-protected bathroom circuit from the panel to protected downstream outlets.",
+    "parts": [
+      { "id": 1, "name": "20A circuit breaker in panel", "correctPosition": 1 },
+      { "id": 2, "name": "12/2 NM-B home run cable to first box", "correctPosition": 2 },
+      { "id": 3, "name": "GFCI receptacle (LINE terminals connected to panel feed)", "correctPosition": 3 },
+      { "id": 4, "name": "12/2 NM-B cable from GFCI LOAD terminals to downstream boxes", "correctPosition": 4 },
+      { "id": 5, "name": "Standard receptacles downstream (protected by upstream GFCI)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "GFCI breaker (alternative method, not used here)" },
+      { "id": 102, "name": "Isolated ground receptacle" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Panel overcurrent protection" },
+      { "id": 2, "label": "Position 2: Home run" },
+      { "id": 3, "label": "Position 3: GFCI device" },
+      { "id": 4, "label": "Position 4: Protected feed" },
+      { "id": 5, "label": "Position 5: Protected outlets" }
+    ],
+    "explanation": "GFCI devices have LINE and LOAD terminals. LINE connects to the power source (panel). LOAD feeds downstream receptacles, which are then GFCI-protected without needing individual GFCI devices. This is called 'feed-through' protection per NEC 210.8. The GFCI must be the first device in the circuit for maximum protection.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-elec-005",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Motor Starter Assembly",
+    "description": "Assemble the motor branch circuit components from the panel to the motor in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Motor branch circuit overcurrent protection (breaker/fuses)", "correctPosition": 1 },
+      { "id": 2, "name": "Branch circuit conductors sized at 125% of motor FLA", "correctPosition": 2 },
+      { "id": 3, "name": "Motor disconnect switch within sight of motor", "correctPosition": 3 },
+      { "id": 4, "name": "Magnetic contactor with overload relay (starter)", "correctPosition": 4 },
+      { "id": 5, "name": "Motor lead connections in motor terminal box", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Capacitor bank for power factor" },
+      { "id": 102, "name": "Step-down transformer" },
+      { "id": 103, "name": "Transfer switch" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Overcurrent protection" },
+      { "id": 2, "label": "Position 2: Branch circuit" },
+      { "id": 3, "label": "Position 3: Disconnect means" },
+      { "id": 4, "label": "Position 4: Motor control" },
+      { "id": 5, "label": "Position 5: Motor connection" }
+    ],
+    "explanation": "Motor circuits per NEC Article 430 have a specific hierarchy: branch circuit overcurrent protection (sized per 430.52, typically 250% of FLC for inverse-time breakers), conductors at 125% FLC (430.22), disconnect within sight (430.102), starter with overloads sized to motor FLA (430.32), and finally the motor connections.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-elec-006",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Service Entrance Assembly",
+    "description": "Assemble the residential service entrance components from the utility connection to the main panel in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Weather head (service head) at top of service mast", "correctPosition": 1 },
+      { "id": 2, "name": "Service entrance cable down mast to meter socket", "correctPosition": 2 },
+      { "id": 3, "name": "Meter socket (utility connection point)", "correctPosition": 3 },
+      { "id": 4, "name": "Service entrance conductors from meter to main panel", "correctPosition": 4 },
+      { "id": 5, "name": "200A main breaker panel with neutral-ground bond", "correctPosition": 5 },
+      { "id": 6, "name": "Grounding electrode conductor to ground rod system", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Automatic transfer switch" },
+      { "id": 102, "name": "Utility transformer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Utility connection point" },
+      { "id": 2, "label": "Position 2: Service mast" },
+      { "id": 3, "label": "Position 3: Metering" },
+      { "id": 4, "label": "Position 4: Service entrance" },
+      { "id": 5, "label": "Position 5: Main distribution" },
+      { "id": 6, "label": "Position 6: Grounding system" }
+    ],
+    "explanation": "The residential service entrance per NEC Article 230 flows from the utility: weather head catches the service drop, cable runs to the meter socket (utility's metering point), then to the main panel where the neutral-ground bond is made. The grounding electrode system connects the entire installation to earth per NEC 250.50.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-elec-007",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "EMT Conduit Run Assembly",
+    "description": "Assemble the components for an EMT conduit run between two junction boxes in the correct order.",
+    "parts": [
+      { "id": 1, "name": "EMT connector at first junction box knockout", "correctPosition": 1 },
+      { "id": 2, "name": "EMT conduit with bends (not exceeding 360 degrees total)", "correctPosition": 2 },
+      { "id": 3, "name": "EMT coupling at conduit joint (if needed)", "correctPosition": 3 },
+      { "id": 4, "name": "EMT connector at second junction box knockout", "correctPosition": 4 },
+      { "id": 5, "name": "Conduit support straps within 3 feet of each box and every 10 feet", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Sealing bushing (for outdoor only)" },
+      { "id": 102, "name": "Expansion fitting (for long exposed runs)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: First box connection" },
+      { "id": 2, "label": "Position 2: Conduit run" },
+      { "id": 3, "label": "Position 3: Conduit joining" },
+      { "id": 4, "label": "Position 4: Second box connection" },
+      { "id": 5, "label": "Position 5: Support and securing" }
+    ],
+    "explanation": "EMT conduit runs require proper connectors at each box (never just pushed in), bends within the 360-degree limit per NEC 358.26, couplings to join conduit lengths, and support straps per NEC 358.30 (within 3 feet of each box and every 10 feet maximum). Compression fittings are required in wet locations; set-screw fittings are acceptable in dry locations.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-elec-008",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Ground Rod Connection Assembly",
+    "description": "Assemble the grounding electrode system components from the panel to the earth in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Grounding bus bar in main panel", "correctPosition": 1 },
+      { "id": 2, "name": "Grounding electrode conductor (#4 AWG copper minimum for 200A)", "correctPosition": 2 },
+      { "id": 3, "name": "Listed grounding clamp or exothermic weld", "correctPosition": 3 },
+      { "id": 4, "name": "First 8-foot copper-clad ground rod driven full depth", "correctPosition": 4 },
+      { "id": 5, "name": "Bonding jumper to second ground rod at least 6 feet away", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Concrete encasement around ground rod" },
+      { "id": 102, "name": "Ground fault relay" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Panel connection" },
+      { "id": 2, "label": "Position 2: Conductor run" },
+      { "id": 3, "label": "Position 3: Electrode connection" },
+      { "id": 4, "label": "Position 4: Primary electrode" },
+      { "id": 5, "label": "Position 5: Supplemental electrode" }
+    ],
+    "explanation": "The grounding electrode system per NEC 250.50-250.70 provides the earth connection for the electrical system. Two ground rods are standard practice (second rod required if first exceeds 25 ohms per NEC 250.53). The GEC must be continuous or spliced only with irreversible compression connectors per NEC 250.64(C).",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-elec-009",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Junction Box Assembly",
+    "description": "Assemble the components for making proper splice connections inside a junction box in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Secure NM cables to box with cable clamps (within 12 inches)", "correctPosition": 1 },
+      { "id": 2, "name": "Strip cable sheath to expose individual conductors (1/4 inch inside box minimum)", "correctPosition": 2 },
+      { "id": 3, "name": "Connect all grounding conductors together with green wire nut (pigtail to box if metal)", "correctPosition": 3 },
+      { "id": 4, "name": "Splice neutral (white) conductors together with wire connectors", "correctPosition": 4 },
+      { "id": 5, "name": "Splice hot (black) conductors together with wire connectors", "correctPosition": 5 },
+      { "id": 6, "name": "Fold conductors neatly into box and install blank cover plate", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Terminal block for conductor splicing" },
+      { "id": 102, "name": "Potting compound to seal connections" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Cable entry and securing" },
+      { "id": 2, "label": "Position 2: Cable preparation" },
+      { "id": 3, "label": "Position 3: Grounding connections" },
+      { "id": 4, "label": "Position 4: Neutral splices" },
+      { "id": 5, "label": "Position 5: Hot splices" },
+      { "id": 6, "label": "Position 6: Closing and covering" }
+    ],
+    "explanation": "Junction box connections follow a specific order for safety: secure cables first, strip insulation, then connect grounds first (so the safety ground is established), neutrals next, and hots last per best practices. The cover plate must remain accessible per NEC 314.29. Grounds are connected first as the fundamental safety principle.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-elec-010",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Transfer Switch Assembly",
+    "description": "Assemble the components of an automatic transfer switch installation from utility source to emergency loads.",
+    "parts": [
+      { "id": 1, "name": "Utility (normal) power feed to ATS line side", "correctPosition": 1 },
+      { "id": 2, "name": "Generator output feed to ATS emergency side", "correctPosition": 2 },
+      { "id": 3, "name": "ATS transfer mechanism (electrically and mechanically interlocked)", "correctPosition": 3 },
+      { "id": 4, "name": "ATS load side output to emergency distribution panel", "correctPosition": 4 },
+      { "id": 5, "name": "Control wiring for generator start signal and status monitoring", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Paralleling switchgear" },
+      { "id": 102, "name": "Utility disconnect switch (upstream)" },
+      { "id": 103, "name": "Bypass isolation switch" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Normal source" },
+      { "id": 2, "label": "Position 2: Emergency source" },
+      { "id": 3, "label": "Position 3: Transfer mechanism" },
+      { "id": 4, "label": "Position 4: Load distribution" },
+      { "id": 5, "label": "Position 5: Control and monitoring" }
+    ],
+    "explanation": "The automatic transfer switch per NEC Article 700/701/702 has two source inputs (utility and generator), a mechanically interlocked transfer mechanism that prevents both sources from feeding the load simultaneously, and control wiring that starts the generator on utility power loss. Anti-paralleling is the most critical safety feature.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-elec-011",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Lighting Circuit Assembly",
+    "description": "Assemble a basic switch-controlled lighting circuit from the panel to the fixture in the correct order.",
+    "parts": [
+      { "id": 1, "name": "15A or 20A breaker in lighting panel", "correctPosition": 1 },
+      { "id": 2, "name": "14/2 NM-B cable (home run) to switch box", "correctPosition": 2 },
+      { "id": 3, "name": "Single-pole switch with hot wire on terminal (neutral passed through)", "correctPosition": 3 },
+      { "id": 4, "name": "14/2 NM-B switch leg to ceiling box", "correctPosition": 4 },
+      { "id": 5, "name": "Light fixture mounted to ceiling box with proper connections", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Dimmer with neutral wire requirement" },
+      { "id": 102, "name": "Photocell for automatic control" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Circuit protection" },
+      { "id": 2, "label": "Position 2: Power feed to switch" },
+      { "id": 3, "label": "Position 3: Switching device" },
+      { "id": 4, "label": "Position 4: Switch leg to fixture" },
+      { "id": 5, "label": "Position 5: Luminaire" }
+    ],
+    "explanation": "A basic switch loop starts with power from the panel to the switch box. NEC 404.2(C) now requires a neutral wire at switch boxes for future smart switch/timer compatibility. The switch interrupts only the hot conductor — never the neutral. The fixture box must be rated to support the fixture weight per NEC 314.27.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-elec-012",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Sub-Panel Feed to Detached Garage",
+    "description": "Assemble the components for feeding a sub-panel in a detached garage from the main house panel.",
+    "parts": [
+      { "id": 1, "name": "Double-pole breaker in house main panel", "correctPosition": 1 },
+      { "id": 2, "name": "4-wire feeder (2 hots, 1 neutral, 1 ground) in underground conduit", "correctPosition": 2 },
+      { "id": 3, "name": "PVC conduit buried at minimum 18 inches depth", "correctPosition": 3 },
+      { "id": 4, "name": "Sub-panel with separate neutral and ground buses (no bond)", "correctPosition": 4 },
+      { "id": 5, "name": "Grounding electrode system at detached structure", "correctPosition": 5 },
+      { "id": 6, "name": "Disconnect means at or within the detached garage", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Neutral-ground bonding jumper at sub-panel" },
+      { "id": 102, "name": "3-wire feeder without separate ground" },
+      { "id": 103, "name": "Direct-buried UF cable for feeder" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Source protection" },
+      { "id": 2, "label": "Position 2: Feeder conductors" },
+      { "id": 3, "label": "Position 3: Underground raceway" },
+      { "id": 4, "label": "Position 4: Remote panel" },
+      { "id": 5, "label": "Position 5: Local grounding" },
+      { "id": 6, "label": "Position 6: Local disconnect" }
+    ],
+    "explanation": "Feeding a detached structure per NEC 225.30-225.40 and 250.32 requires a 4-wire feeder (3-wire is only allowed for existing installations), separate neutral and ground at the remote panel, a local grounding electrode system, and a disconnect means. Underground conduit burial depth is 18 inches minimum for PVC per NEC Table 300.5. The neutral must NEVER be bonded to ground at the remote panel.",
+    "xpReward": 85
+  }
+]

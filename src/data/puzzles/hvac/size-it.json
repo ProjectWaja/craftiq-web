@@ -1,0 +1,529 @@
+[
+  {
+    "id": "si-hvac-001",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Residential Duct Sizing",
+    "scenario": "A residential supply branch duct needs to deliver 150 CFM to a bedroom. Using the equal friction method at 0.08\" W.C. per 100 feet, what is the correct round duct diameter?",
+    "hint": "Use a ductulator or friction chart. At 0.08\" friction rate, 150 CFM requires a specific diameter to keep velocity under 700 FPM.",
+    "options": [
+      { "text": "5\" round", "value": "5", "correct": false, "feedback": "5\" at 150 CFM would create excessive velocity (~1,100 FPM) and unacceptable noise in a residential branch duct." },
+      { "text": "6\" round", "value": "6", "correct": false, "feedback": "6\" at 150 CFM gives about 0.12\" friction rate — higher than the 0.08\" target. Close, but creates too much resistance." },
+      { "text": "7\" round", "value": "7", "correct": true, "feedback": "Correct! 7\" round at 150 CFM gives approximately 0.08\" W.C./100ft friction rate and ~560 FPM velocity — ideal for residential." },
+      { "text": "8\" round", "value": "8", "correct": false, "feedback": "8\" would work but is oversized. Lower friction rate is good, but wastes material, ceiling space, and construction cost." }
+    ],
+    "explanation": "Duct sizing uses the equal friction method per SMACNA standards. The goal is to balance airflow delivery with acceptable noise and friction loss. Residential branches typically target 0.08\" W.C./100ft.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-002",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Bathroom Exhaust Fan CFM",
+    "scenario": "You need to select an exhaust fan for a residential bathroom that is 8 feet by 10 feet with a standard 8-foot ceiling. What is the minimum required exhaust rate?",
+    "hint": "ASHRAE 62.2 requires a minimum of 50 CFM for intermittent bathroom exhaust, or 1 CFM per square foot — whichever is greater.",
+    "options": [
+      { "text": "50 CFM", "value": "50", "correct": false, "feedback": "50 CFM is the minimum for bathrooms under 50 sq ft. This bathroom is 80 sq ft, so 1 CFM/sq ft applies." },
+      { "text": "80 CFM", "value": "80", "correct": true, "feedback": "Correct! For bathrooms over 50 sq ft, ASHRAE 62.2 requires 1 CFM per square foot. 8×10 = 80 sq ft = 80 CFM minimum." },
+      { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM would work but exceeds the minimum requirement. This may cause excessive noise and energy use." },
+      { "text": "120 CFM", "value": "120", "correct": false, "feedback": "120 CFM is significantly oversized for an 80 sq ft bathroom. While it would ventilate well, it wastes energy." }
+    ],
+    "explanation": "Bathroom exhaust sizing follows ASHRAE 62.2: 50 CFM minimum for small bathrooms, or 1 CFM per square foot for bathrooms larger than 50 square feet.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-003",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Condensate Drain Pipe Size",
+    "scenario": "A 3-ton residential air conditioning system needs a primary condensate drain line. What is the minimum drain pipe size required?",
+    "hint": "IMC Table 307.2.1 specifies condensate drain pipe sizes based on equipment capacity in tons of refrigeration.",
+    "options": [
+      { "text": "1/2\" PVC", "value": "0.5", "correct": false, "feedback": "1/2\" is too small and would restrict flow, causing the drain pan to overflow. Not permitted by code for this capacity." },
+      { "text": "3/4\" PVC", "value": "0.75", "correct": true, "feedback": "Correct! IMC Table 307.2.1 requires a minimum 3/4\" drain for equipment up to 7.5 tons of refrigeration." },
+      { "text": "1\" PVC", "value": "1.0", "correct": false, "feedback": "1\" would work but is larger than required. Standard practice uses 3/4\" for residential units up to 7.5 tons." },
+      { "text": "1-1/4\" PVC", "value": "1.25", "correct": false, "feedback": "1-1/4\" is oversized for a 3-ton unit. This size is typically used for units over 7.5 tons per IMC Table 307.2.1." }
+    ],
+    "explanation": "Condensate drain sizing is governed by IMC Table 307.2.1. A 3/4\" pipe handles up to 7.5 tons. The pipe must also maintain a minimum 1/8\" per foot slope.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-004",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Gas Pipe Sizing",
+    "scenario": "A 200,000 BTU/h furnace is located 50 feet from the gas meter. Using natural gas at 0.5 PSI with a 0.5\" W.C. pressure drop allowance, what minimum pipe size is required?",
+    "hint": "Refer to IFGC Table 402.4. Find the column for 50-foot length, then the row that meets or exceeds 200,000 BTU/h capacity.",
+    "options": [
+      { "text": "3/4\" iron pipe", "value": "0.75", "correct": false, "feedback": "3/4\" at 50 feet only delivers about 120,000 BTU/h at 0.5\" W.C. drop — not enough for a 200,000 BTU/h appliance." },
+      { "text": "1\" iron pipe", "value": "1.0", "correct": true, "feedback": "Correct! Per IFGC Table 402.4, 1\" iron pipe at 50 feet delivers approximately 275,000 BTU/h — sufficient for the 200,000 BTU/h load." },
+      { "text": "1-1/4\" iron pipe", "value": "1.25", "correct": false, "feedback": "1-1/4\" would work but is oversized for this application. It handles up to ~490,000 BTU/h at 50 feet." },
+      { "text": "1/2\" iron pipe", "value": "0.5", "correct": false, "feedback": "1/2\" at 50 feet only delivers about 50,000 BTU/h. Far too small — would cause serious pressure drop and incomplete combustion." }
+    ],
+    "explanation": "Gas pipe sizing uses IFGC capacity tables based on pipe length, size, and allowable pressure drop. Undersized gas piping causes low inlet pressure, incomplete combustion, and safety hazards.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-005",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Filter MERV Rating Selection",
+    "scenario": "A standard residential HVAC system needs a replacement air filter. The homeowner wants good indoor air quality without stressing the blower. What MERV rating is recommended?",
+    "hint": "ASHRAE 62.2 recommends a minimum of MERV 6 for residential. Higher ratings catch more particles but increase static pressure.",
+    "options": [
+      { "text": "MERV 4", "value": "4", "correct": false, "feedback": "MERV 4 only catches large particles like dust and carpet fibers. Below the ASHRAE 62.2 minimum recommendation for residential systems." },
+      { "text": "MERV 8", "value": "8", "correct": true, "feedback": "Correct! MERV 8 catches mold spores, dust, and pet dander while maintaining acceptable static pressure on standard residential blowers." },
+      { "text": "MERV 13", "value": "13", "correct": false, "feedback": "MERV 13 has excellent filtration but may cause excessive static pressure on standard residential systems not designed for high-efficiency filters." },
+      { "text": "MERV 16", "value": "16", "correct": false, "feedback": "MERV 16 is near-HEPA filtration. Standard residential systems cannot handle this restriction without significant airflow reduction and blower damage." }
+    ],
+    "explanation": "Filter selection balances air quality with system performance. MERV 8 is the sweet spot for most residential systems per ASHRAE recommendations. Higher ratings require systems designed for increased static pressure.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-hvac-006",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Cooling Tonnage Calculation",
+    "scenario": "A well-insulated 1,500 sq ft ranch home in Climate Zone 4 (mixed climate) needs a new air conditioner. Using the rule-of-thumb method, what tonnage is appropriate?",
+    "hint": "In Climate Zone 4, a well-insulated home typically needs 400-500 sq ft per ton. Always verify with a Manual J calculation.",
+    "options": [
+      { "text": "2 tons", "value": "2", "correct": false, "feedback": "2 tons (24,000 BTU/h) provides only 750 sq ft per ton — likely undersized, leading to poor humidity control on peak days." },
+      { "text": "3 tons", "value": "3", "correct": true, "feedback": "Correct! 3 tons (36,000 BTU/h) gives 500 sq ft per ton — appropriate for a well-insulated home in Zone 4. Always verify with ACCA Manual J." },
+      { "text": "4 tons", "value": "4", "correct": false, "feedback": "4 tons is oversized. Short-cycling reduces dehumidification, wastes energy, and increases equipment wear. Proper sizing per Manual J is critical." },
+      { "text": "5 tons", "value": "5", "correct": false, "feedback": "5 tons is significantly oversized at 300 sq ft per ton. Severe short-cycling would cause humidity problems and premature compressor failure." }
+    ],
+    "explanation": "Cooling system sizing per ACCA Manual J prevents oversizing (short-cycling, humidity issues) and undersizing (comfort complaints). Rule-of-thumb is 400-600 sq ft per ton depending on climate and insulation.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-007",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Chilled Water Pipe Sizing",
+    "scenario": "A chilled water loop needs to carry 100 GPM to serve multiple AHUs. Using a maximum velocity of 4 ft/s per ASHRAE guidelines, what pipe size is needed?",
+    "hint": "Use the formula: GPM = Velocity × Area × 2.448. Solve for pipe area, then find the corresponding standard pipe size.",
+    "options": [
+      { "text": "3\" pipe", "value": "3", "correct": false, "feedback": "3\" pipe at 100 GPM creates velocity over 4.5 ft/s — exceeding the recommended maximum, causing noise and erosion." },
+      { "text": "4\" pipe", "value": "4", "correct": true, "feedback": "Correct! 4\" pipe at 100 GPM gives approximately 2.5 ft/s — well within the 4 ft/s maximum. Good balance of cost and performance." },
+      { "text": "5\" pipe", "value": "5", "correct": false, "feedback": "5\" would work but is oversized. Lower velocity (1.6 ft/s) increases pipe cost and may allow air to settle in the pipe." },
+      { "text": "6\" pipe", "value": "6", "correct": false, "feedback": "6\" is significantly oversized for 100 GPM. The low velocity (~1.1 ft/s) wastes material and may cause air entrapment issues." }
+    ],
+    "explanation": "Chilled water pipe sizing balances velocity limits (erosion, noise) with cost. ASHRAE recommends max 4 ft/s for pipes 2\" and larger. Use pipe sizing tables or the velocity-area formula.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-hvac-008",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Refrigerant Suction Line Size",
+    "scenario": "You are installing a 3-ton residential split system with R-410A. The suction line run is 25 feet with 10 feet of vertical rise. What suction line diameter should you use?",
+    "hint": "Manufacturer specifications typically call for 3/4\" suction lines for 3-ton R-410A systems. Line sizing affects oil return and capacity.",
+    "options": [
+      { "text": "1/2\" OD", "value": "0.5", "correct": false, "feedback": "1/2\" suction line is far too small for a 3-ton system. Excessive pressure drop would reduce capacity by 15-20% and risk compressor damage." },
+      { "text": "5/8\" OD", "value": "0.625", "correct": false, "feedback": "5/8\" is undersized for a 3-ton system. It restricts gas flow, reduces capacity, and may cause oil return problems on vertical risers." },
+      { "text": "3/4\" OD", "value": "0.75", "correct": true, "feedback": "Correct! 3/4\" OD is the standard suction line for 3-ton R-410A residential split systems per manufacturer specifications." },
+      { "text": "7/8\" OD", "value": "0.875", "correct": false, "feedback": "7/8\" is used for 4-5 ton systems. Oversized suction lines on a 3-ton unit cause low velocity, poor oil return, and refrigerant slugging." }
+    ],
+    "explanation": "Suction line sizing is critical: too small causes capacity loss, too large causes poor oil return. Always follow manufacturer specifications for the specific tonnage and refrigerant.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-009",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Ventilation Air Calculation",
+    "scenario": "An office space has 20 occupants in a 2,000 sq ft area. Per ASHRAE 62.1 Ventilation Rate Procedure, what is the minimum required outdoor airflow?",
+    "hint": "ASHRAE 62.1 uses both people (5 CFM/person for office) and area (0.06 CFM/sq ft for office) components. Add them together.",
+    "options": [
+      { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM only covers the people component (20 × 5). You're missing the area component required by ASHRAE 62.1." },
+      { "text": "220 CFM", "value": "220", "correct": true, "feedback": "Correct! People: 20 × 5 = 100 CFM. Area: 2,000 × 0.06 = 120 CFM. Total: 100 + 120 = 220 CFM per ASHRAE 62.1." },
+      { "text": "300 CFM", "value": "300", "correct": false, "feedback": "300 CFM exceeds the minimum requirement. Over-ventilation wastes energy by conditioning excess outdoor air." },
+      { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM (20 CFM/person) is an old rule of thumb. ASHRAE 62.1 uses a dual-method that typically requires less outdoor air." }
+    ],
+    "explanation": "ASHRAE 62.1 calculates outdoor air using both people (breathing zone) and area (off-gassing) rates. For offices: 5 CFM/person + 0.06 CFM/sq ft. This dual method was introduced in the 2004 standard.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-hvac-010",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Cooling Tower Sizing",
+    "scenario": "A 350-ton water-cooled chiller operates at a 2.5 GPM/ton condenser flow rate. The cooling tower must reject total heat (cooling + compressor heat). What cooling tower capacity is needed?",
+    "hint": "Total heat rejection = cooling capacity + compressor heat. For a typical chiller, heat rejection is approximately 1.25 times the cooling load.",
+    "options": [
+      { "text": "350 tons", "value": "350", "correct": false, "feedback": "350 tons only covers the cooling load. The tower must also reject the heat of compression, which adds roughly 25% more heat." },
+      { "text": "437 tons", "value": "437", "correct": true, "feedback": "Correct! Heat rejection ≈ 1.25 × 350 = 437.5 tons. The tower must reject cooling load plus compressor heat (about 25% for electric chillers)." },
+      { "text": "500 tons", "value": "500", "correct": false, "feedback": "500 tons (1.43x) is oversized for a standard electric chiller. This ratio is more typical for absorption chillers." },
+      { "text": "700 tons", "value": "700", "correct": false, "feedback": "700 tons (2x) is far oversized. This would waste capital cost and operating energy for fans." }
+    ],
+    "explanation": "Cooling towers reject both the building cooling load and compressor motor heat. For electric centrifugal chillers, total heat rejection is typically 1.2-1.3 times the cooling capacity per ASHRAE Handbook.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-hvac-011",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Supply Register Sizing",
+    "scenario": "A bedroom needs 150 CFM from a ceiling supply register. For quiet residential operation, what register size keeps the noise criterion (NC) below NC-25?",
+    "hint": "Residential registers should target face velocity below 500 FPM for NC-25. Size = CFM ÷ (velocity × AK factor).",
+    "options": [
+      { "text": "6\" × 4\"", "value": "6x4", "correct": false, "feedback": "6×4 has only ~0.13 sq ft effective free area. At 150 CFM, velocity exceeds 1,150 FPM — very noisy in a bedroom." },
+      { "text": "8\" × 6\"", "value": "8x6", "correct": false, "feedback": "8×6 has ~0.22 sq ft free area. At 150 CFM, velocity is about 680 FPM — still above the NC-25 threshold for bedrooms." },
+      { "text": "10\" × 6\"", "value": "10x6", "correct": true, "feedback": "Correct! 10×6 has ~0.30 sq ft free area. At 150 CFM, velocity is about 500 FPM — meeting the NC-25 noise criterion for bedrooms." },
+      { "text": "14\" × 6\"", "value": "14x6", "correct": false, "feedback": "14×6 would be very quiet but is oversized. Lower velocity may cause poor air distribution and 'dumping' of cold air." }
+    ],
+    "explanation": "Register sizing balances airflow delivery with noise. SMACNA guidelines recommend selecting registers based on NC ratings. Bedrooms need NC-25 or below, requiring face velocities under 500 FPM.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-012",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Expansion Tank Sizing",
+    "scenario": "A hot water heating system has 200 gallons of water and operates between 50°F fill temperature and 200°F operating temperature. The system pressure relief is set at 30 PSI and fill pressure is 12 PSI. What is the minimum expansion tank size?",
+    "hint": "Use the expansion factor for water (50°F to 200°F ≈ 3.0%). Tank size = system volume × expansion factor × acceptance factor.",
+    "options": [
+      { "text": "6 gallons", "value": "6", "correct": false, "feedback": "6 gallons doesn't account for the pressure acceptance factor. The tank must accommodate expansion AND maintain proper pressure." },
+      { "text": "10 gallons", "value": "10", "correct": true, "feedback": "Correct! Expansion = 200 × 0.03 = 6 gal. Acceptance factor for 12/30 PSI ≈ 0.6. Tank = 6 ÷ 0.6 ≈ 10 gallons. Per ASHRAE guidelines." },
+      { "text": "15 gallons", "value": "15", "correct": false, "feedback": "15 gallons is oversized for this system. While not harmful, it adds unnecessary cost and space requirements." },
+      { "text": "20 gallons", "value": "20", "correct": false, "feedback": "20 gallons is double the required size. Over-sizing expansion tanks doesn't improve safety but wastes money." }
+    ],
+    "explanation": "Expansion tank sizing accounts for water volume expansion and pressure acceptance factor. Undersized tanks cause the relief valve to open; oversized tanks waste money. Use ASHRAE or tank manufacturer sizing tools.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-hvac-013",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Hot Water Pipe Insulation",
+    "scenario": "A 3/4-inch copper hot water supply pipe (140°F) runs through an unconditioned crawl space in a residential home. Per IECC, what minimum insulation thickness is required?",
+    "hint": "The International Energy Conservation Code (IECC) requires insulation on all hot water piping in unconditioned spaces. Residential requirements typically reference R-value or minimum thickness based on pipe size.",
+    "options": [
+      { "text": "No insulation required", "value": "0", "correct": false, "feedback": "Insulation IS required on hot water pipes in unconditioned spaces per IECC Section R403.4.2. Uninsulated pipes lose significant heat, wasting energy and increasing wait time for hot water." },
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is below the minimum for pipes in unconditioned spaces. While better than nothing, it doesn't meet the R-3 minimum required by IECC for hot water piping." },
+      { "text": "1\" insulation", "value": "1", "correct": true, "feedback": "Correct! IECC R403.4.2 requires a minimum of R-3 insulation on hot water pipes in unconditioned spaces. For 3/4\" pipe, 1\" thick fiberglass or elastomeric insulation meets this R-3 requirement." },
+      { "text": "2\" insulation", "value": "2", "correct": false, "feedback": "2\" exceeds the residential requirement for 3/4\" pipe. While more insulation helps, it's costly and difficult to install in tight crawl spaces." }
+    ],
+    "explanation": "Hot water pipe insulation in unconditioned spaces prevents standby heat loss and reduces energy costs. IECC requires R-3 minimum insulation for all hot water piping in unconditioned spaces, recirculation loops, and piping from water heater to kitchen (first 8 feet minimum).",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-014",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Duct Insulation R-Value",
+    "scenario": "A sheet metal supply air duct runs through an unconditioned attic in Climate Zone 5. The duct supplies 55°F air from the air handler to conditioned rooms below. Per IECC/ASHRAE 90.1, what minimum insulation R-value is required on this duct?",
+    "hint": "IECC Table R403.3.1 and ASHRAE 90.1 specify duct insulation R-values based on duct location. Supply ducts in unconditioned attics have the highest requirements due to extreme temperature differentials.",
+    "options": [
+      { "text": "R-4.2", "value": "4.2", "correct": false, "feedback": "R-4.2 is the minimum for ducts in unconditioned basements or crawl spaces. Attic ducts face much greater temperature extremes and require higher R-values." },
+      { "text": "R-6", "value": "6", "correct": false, "feedback": "R-6 is insufficient for supply ducts in unconditioned attics in Climate Zone 5. This value applies to ducts within conditioned spaces or less extreme locations." },
+      { "text": "R-8", "value": "8", "correct": true, "feedback": "Correct! IECC Table R403.3.1 requires minimum R-8 insulation for supply ducts in unconditioned attics in Climate Zones 5-8. This reduces both cooling energy loss in summer and heating loss in winter." },
+      { "text": "R-13", "value": "13", "correct": false, "feedback": "R-13 is not a standard duct insulation requirement. While more insulation is better thermally, R-13 duct wrap is uncommon and R-8 meets code requirements." }
+    ],
+    "explanation": "Duct insulation in unconditioned attics is critical because attic temperatures can range from below freezing to over 150°F. IECC/ASHRAE 90.1 requires R-8 for supply ducts in attics in most climate zones. Return ducts may have a lower R-6 requirement in some zones.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-015",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Refrigerant Suction Line Insulation",
+    "scenario": "A 1-1/8\" OD refrigerant suction line runs from the evaporator to the condensing unit on a commercial DX cooling system. The suction line operates at approximately 40°F. What minimum insulation thickness is required per IMC?",
+    "hint": "IMC Section 1104.1 requires insulation on refrigerant suction lines to prevent condensation and maintain system efficiency. The insulation must have a vapor retarder for cold lines.",
+    "options": [
+      { "text": "1/4\" insulation", "value": "0.25", "correct": false, "feedback": "1/4\" is far too thin to prevent surface condensation on a 40°F line. Moisture will condense, drip, and cause water damage. The line will also gain heat, reducing system capacity." },
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is below the minimum for lines over 1\" in diameter. While it may work on very small lines, larger diameter suction lines need thicker insulation to prevent sweating." },
+      { "text": "3/4\" insulation", "value": "0.75", "correct": true, "feedback": "Correct! IMC 1104.1 and ASHRAE 90.1 require minimum 3/4\" thick insulation with a vapor retarder on refrigerant suction lines 1\" and larger. This prevents condensation and maintains system efficiency." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": false, "feedback": "1-1/2\" exceeds the requirement for a suction line at 40°F. This thickness is typically reserved for very large pipes or extremely cold applications." }
+    ],
+    "explanation": "Refrigerant suction line insulation serves two purposes: preventing condensation (which causes water damage and mold) and maintaining system efficiency (heat gain reduces cooling capacity). IMC 1104.1 requires insulation with a vapor retarder on all suction and liquid lines where condensation might occur.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-016",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Steam Pipe Insulation — High Temperature",
+    "scenario": "A 4-inch medium-pressure steam supply pipe operates at 350°F in a commercial building mechanical room. Per ASHRAE 90.1 Table 6.8.3-1, what minimum insulation thickness is required?",
+    "hint": "ASHRAE 90.1 Table 6.8.3-1 provides minimum insulation thickness for heating systems based on fluid temperature range and pipe size. For pipes over 300°F, thicker insulation is required to prevent burns and save energy.",
+    "options": [
+      { "text": "1\" insulation", "value": "1", "correct": false, "feedback": "1\" is insufficient for 350°F steam on a 4\" pipe. At this temperature, 1\" insulation results in a surface temperature that exceeds the 140°F ASTM C1055 burn threshold." },
+      { "text": "2\" insulation", "value": "2", "correct": false, "feedback": "2\" is close but below the minimum for the 301-400°F range on a 4\" pipe. Personnel protection and energy codes both require more insulation at this temperature." },
+      { "text": "3\" insulation", "value": "3", "correct": true, "feedback": "Correct! ASHRAE 90.1 Table 6.8.3-1 requires 3\" minimum insulation for 4-inch pipe in the 301-400°F range. This maintains surface temperature below burn thresholds and minimizes heat loss." },
+      { "text": "4\" insulation", "value": "4", "correct": false, "feedback": "4\" exceeds the minimum for this application. While more insulation reduces heat loss further, it adds significant cost, weight, and clearance issues. 3\" meets code." }
+    ],
+    "explanation": "High-temperature steam pipe insulation sizing per ASHRAE 90.1 considers both energy efficiency and personnel protection. At 350°F, uninsulated pipe surfaces cause instant burns. The 3\" minimum for 4\" pipe at 301-400°F also meets ASTM C1055 surface temperature guidelines for personnel protection.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-hvac-017",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Seismic Bracing — Pipe Transverse Spacing",
+    "scenario": "You are installing 4-inch chilled water piping in a Seismic Design Category D building. Per UCSB spec and SMACNA seismic guidelines, what is the maximum spacing for transverse seismic braces on the piping?",
+    "hint": "UCSB specifications and SMACNA Seismic Restraint Manual define maximum brace intervals for pipe systems. Transverse braces resist side-to-side movement perpendicular to the pipe run.",
+    "options": [
+      { "text": "20 feet", "value": "20", "correct": false, "feedback": "20 feet is more conservative than required. While closer spacing increases restraint, the standard maximum for pipe transverse bracing is 40 feet per SMACNA/UCSB spec." },
+      { "text": "40 feet", "value": "40", "correct": true, "feedback": "Correct! Per UCSB spec and SMACNA seismic guidelines, transverse seismic braces on piping must be spaced at a maximum of 40 feet. Longitudinal braces are allowed at 80-foot intervals." },
+      { "text": "60 feet", "value": "60", "correct": false, "feedback": "60 feet is the maximum interval for duct longitudinal bracing, not pipe transverse bracing. Pipe transverse bracing is required every 40 feet maximum." },
+      { "text": "80 feet", "value": "80", "correct": false, "feedback": "80 feet is the maximum for pipe longitudinal bracing, not transverse. Transverse braces resist lateral motion and must be closer together — every 40 feet." }
+    ],
+    "explanation": "Seismic bracing intervals per UCSB spec: pipe transverse = 40 ft max, pipe longitudinal = 80 ft max, duct transverse = 30 ft max, duct longitudinal = 60 ft max. Transverse braces are always closer together because lateral forces during an earthquake are the primary concern for pipe and duct systems.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-hvac-018",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Seismic Bracing — Duct Transverse Spacing",
+    "scenario": "A rectangular supply duct runs 120 feet through a seismically braced mechanical room. Per UCSB spec and SMACNA seismic guidelines, how many transverse seismic braces are required along this duct run?",
+    "hint": "UCSB spec requires transverse seismic braces on ductwork at a maximum of 30-foot intervals. Calculate the number of braces needed for 120 feet of duct.",
+    "options": [
+      { "text": "2 braces", "value": "2", "correct": false, "feedback": "2 braces at 120 feet means 60-foot spacing — double the allowed 30-foot maximum for duct transverse bracing. This leaves large sections unrestrained during seismic events." },
+      { "text": "3 braces", "value": "3", "correct": false, "feedback": "3 braces creates 40-foot spacing, which exceeds the 30-foot maximum for duct transverse bracing per UCSB spec. You need at least one more brace." },
+      { "text": "4 braces", "value": "4", "correct": true, "feedback": "Correct! 120 ft / 30 ft max spacing = 4 braces minimum. Place them at approximately 30-foot intervals along the duct run. Additionally, a brace is needed within 12 feet of each end." },
+      { "text": "6 braces", "value": "6", "correct": false, "feedback": "6 braces at 20-foot spacing is more conservative than required. While not wrong, the minimum per UCSB spec is 4 braces at 30-foot intervals for a 120-foot run." }
+    ],
+    "explanation": "Duct seismic bracing per UCSB spec follows SMACNA guidelines: transverse braces at 30 ft max, longitudinal at 60 ft max. For a 120-foot run, minimum 4 transverse braces are needed. Always add a brace within 12 feet of each end and at any change of direction.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-hvac-019",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Kitchen Exhaust Duct Fire Barrier Insulation",
+    "scenario": "A Type I kitchen exhaust duct passes through a 2-hour fire-rated wall assembly. Per UCSB spec, the fire barrier wrap on the duct requires specific insulation properties. What minimum insulation thickness and density is required?",
+    "hint": "UCSB spec references fire barrier requirements for kitchen exhaust ductwork penetrating rated assemblies. The insulation must withstand high temperatures from grease fires without melting or combusting.",
+    "options": [
+      { "text": "1\" thick, 3 lb/cu.ft density", "value": "1-3", "correct": false, "feedback": "1\" at 3 lb/cu.ft is too thin and too light. Kitchen exhaust can reach extremely high temperatures during a grease fire, and this wrap would fail to maintain the fire barrier rating." },
+      { "text": "1.5\" thick, 6 lb/cu.ft density", "value": "1.5-6", "correct": true, "feedback": "Correct! Per UCSB spec, fire barrier insulation on kitchen exhaust ductwork must be a minimum of 1.5 inches thick with a density of 6 lb/cu.ft. This provides adequate fire resistance for the rated assembly penetration." },
+      { "text": "2\" thick, 4 lb/cu.ft density", "value": "2-4", "correct": false, "feedback": "While 2\" thickness exceeds the minimum, the 4 lb/cu.ft density is below the required 6 lb/cu.ft. Density is critical because higher-density insulation resists heat transfer and maintains structural integrity under fire conditions." },
+      { "text": "1\" thick, 8 lb/cu.ft density", "value": "1-8", "correct": false, "feedback": "The density exceeds the minimum, but at only 1\" thick, the insulation does not meet the 1.5-inch minimum thickness required per UCSB spec for kitchen exhaust fire barrier applications." }
+    ],
+    "explanation": "Kitchen exhaust fire barrier insulation per UCSB spec must be minimum 1.5\" thick at 6 lb/cu.ft density. This combination ensures the fire barrier maintains its rating during a grease fire event, which can exceed 2000°F. Both thickness and density must be met — one cannot compensate for the other.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-020",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Tie Rod Sizing for Wide Ductwork",
+    "scenario": "You are fabricating a 48-inch wide rectangular supply duct that requires internal tie rods to prevent the duct walls from bowing outward under positive pressure. Per UCSB spec and SMACNA standards, what minimum tie rod diameter is required?",
+    "hint": "UCSB spec references SMACNA tie rod requirements based on duct width. The threshold for tie rod size changes at 36 inches of duct width.",
+    "options": [
+      { "text": "1/8\" diameter", "value": "0.125", "correct": false, "feedback": "1/8\" tie rods are not used for any duct application. They lack the tensile strength to resist the pressure forces acting on duct walls, even on narrow ducts." },
+      { "text": "1/4\" diameter", "value": "0.25", "correct": false, "feedback": "1/4\" tie rods are only adequate for ducts 36 inches or less in width per UCSB spec. At 48 inches, the larger surface area creates greater pressure loads that require a larger rod." },
+      { "text": "3/8\" diameter", "value": "0.375", "correct": true, "feedback": "Correct! Per UCSB spec, ducts wider than 36 inches require a minimum 3/8\" diameter tie rod. Ducts 36 inches or less can use 1/4\" minimum. The larger rod handles the increased pressure force on the wider panel." },
+      { "text": "1/2\" diameter", "value": "0.5", "correct": false, "feedback": "1/2\" exceeds the minimum requirement for 48-inch duct. While stronger, the added material cost and installation difficulty are not justified. 3/8\" is the correct minimum per UCSB spec." }
+    ],
+    "explanation": "Tie rod sizing per UCSB spec and SMACNA: 1/4\" minimum for ducts 36\" or narrower, 3/8\" minimum for ducts wider than 36\". Tie rods prevent wall deflection under operating pressure, which causes air leakage, noise, and premature joint failure. Spacing and pattern must also follow SMACNA tables.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-021",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Chilled Water Pipe Insulation — Large Pipe",
+    "scenario": "A 10-inch chilled water supply pipe runs through an unconditioned basement at 45°F. Per California T-24 Table 120.3-A, what insulation thickness is required for cooling piping 40-60°F on pipes 8 inches and larger?",
+    "hint": "T-24 Table 120.3-A has a column for pipes 8 inches and larger. Look up the 40-60°F space cooling row for that column.",
+    "options": [
+      { "text": "0.5 inch", "value": "0.5", "correct": false, "feedback": "0.5 inch is only adequate for pipes smaller than 1 inch in the 40-60°F range. A 10-inch pipe has much more surface area and needs thicker insulation to prevent condensation." },
+      { "text": "1.0 inch", "value": "1.0", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, space cooling piping at 40-60°F on pipes 8 inches and larger requires 1.0 inch of insulation. This prevents condensation on the cold pipe surface in unconditioned spaces." },
+      { "text": "1.5 inches", "value": "1.5", "correct": false, "feedback": "1.5 inches is the requirement for piping below 40°F on 8-inch and larger pipes. At 45°F, the pipe falls in the 40-60°F range which requires less insulation." },
+      { "text": "2.0 inches", "value": "2.0", "correct": false, "feedback": "2.0 inches is the requirement for heating water piping at 141-200°F on large pipes. Chilled water at 45°F requires less insulation thickness for the 40-60°F cooling range." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, space cooling piping at 40-60°F requires 1.0 inch insulation on pipes 8 inches and larger. The table values decrease as pipe size increases for cooling applications because larger pipes have a lower surface-area-to-volume ratio. If this pipe were routed outdoors, add 0.5 inch for a total of 1.5 inches.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-022",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Supply Duct R-Value — Unconditioned Space",
+    "scenario": "A supply duct runs through an unconditioned attic space to serve a second-floor office. The duct is entirely inside the building but not in conditioned space. Per UCSB spec, what minimum R-value insulation is required?",
+    "hint": "UCSB spec differentiates between ducts outside the building, in unconditioned interior spaces, and in exposed conditioned spaces. Each location has a different R-value requirement.",
+    "options": [
+      { "text": "R-4.2", "value": "4.2", "correct": false, "feedback": "R-4.2 is for supply ducts exposed in conditioned spaces where the temperature differential is small. An unconditioned attic has much greater temperature swings and needs higher insulation." },
+      { "text": "R-6", "value": "6", "correct": false, "feedback": "R-6 is not a standard threshold in the UCSB duct insulation table. The spec uses R-4.2, R-8, and R-12 as the primary R-value levels for different duct locations." },
+      { "text": "R-8", "value": "8", "correct": true, "feedback": "Correct! Per UCSB spec, supply and return ducts in unconditioned interior spaces require R-8 minimum insulation. Use DW-A, DW-B, or DW-C with FSK or PSK jacket." },
+      { "text": "R-12", "value": "12", "correct": false, "feedback": "R-12 is required for supply/return ducts outside the building in climate zones 5-8. Interior unconditioned spaces only require R-8 per UCSB spec." }
+    ],
+    "explanation": "Duct insulation per UCSB spec: R-8 for supply/return in unconditioned interior spaces, R-4.2 for exposed conditioned spaces, and R-8 to R-12 for exterior ducts depending on climate zone. The insulation types allowed are DW-A, DW-B, or DW-C with FSK (foil-scrim-kraft) or PSK (polypropylene-scrim-kraft) jacket facing.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-023",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Duct Seismic Brace Exemption — Small Duct",
+    "scenario": "A round exhaust duct is 24 inches in diameter with hangers spaced at 10-foot intervals. Per UCSB seismic bracing requirements, is this duct exempt from seismic bracing?",
+    "hint": "The seismic bracing exemption for ductwork depends on the duct cross-sectional area (for rectangular) or diameter (for round), combined with the hanger length.",
+    "options": [
+      { "text": "Exempt — under 32-inch diameter with hangers under 12 inches", "value": "exempt", "correct": false, "feedback": "While the 24-inch diameter is under the 32-inch threshold, you must verify the hanger length is 12 inches or less. The exemption requires BOTH conditions to be met." },
+      { "text": "Exempt — under 6 sq ft cross-sectional area", "value": "exempt-area", "correct": false, "feedback": "A 24-inch round duct has a cross-sectional area of about 3.14 sq ft, which is under the 6 sq ft threshold. But the exemption also requires hanger length verification." },
+      { "text": "Not enough information — need to know hanger length", "value": "need-info", "correct": true, "feedback": "Correct! The exemption requires the duct to be under 6 sq ft area OR under 32-inch diameter AND hangers must be 12 inches or less. The problem states 10-foot hanger intervals but does not specify hanger drop length, which is critical for the exemption." },
+      { "text": "Not exempt — 24 inches exceeds the limit", "value": "not-exempt", "correct": false, "feedback": "24 inches does NOT exceed the 32-inch diameter limit. The question is whether the hanger drop lengths are 12 inches or less, which determines if the exemption applies." }
+    ],
+    "explanation": "Duct seismic bracing exemptions per UCSB spec: ducts with 6 sq ft or less cross-sectional area OR 32-inch or less diameter are exempt only if hanger drop lengths are 12 inches or less. Both the size criterion and the hanger length criterion must be met. Long hangers allow more swing during seismic events, negating the small-duct exemption.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-024",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "High-Temperature Pipe Insulation Thickness",
+    "scenario": "A 6-inch steam supply pipe operates at 300°F and runs through an interior mechanical room. Per California T-24 Table 120.3-A, what insulation thickness is required for space heating piping at 251-350°F in the 4-6 inch pipe size range?",
+    "hint": "T-24 Table 120.3-A has specific rows for temperature ranges above 250°F. Look up the 251-350°F row under the 4-6 inch pipe column for space heating service.",
+    "options": [
+      { "text": "3.0 inches", "value": "3.0", "correct": false, "feedback": "3.0 inches is the requirement for pipes smaller than 1 inch at 251-350°F. Larger pipes at this temperature range need thicker insulation due to the greater surface area." },
+      { "text": "4.0 inches", "value": "4.0", "correct": false, "feedback": "4.0 inches is the requirement for 1-1.25 inch pipes at 251-350°F per T-24. The 4-6 inch pipe column requires a higher value." },
+      { "text": "4.5 inches", "value": "4.5", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, space heating piping at 251-350°F in the 4-6 inch size range requires 4.5 inches of insulation. This substantial thickness is needed to limit heat loss and maintain safe surface temperatures on high-temperature piping." },
+      { "text": "5.0 inches", "value": "5.0", "correct": false, "feedback": "5.0 inches is required for piping above 350°F in the 4-6 inch range, or for pipes 8 inches and larger at 251-350°F. At 300°F on a 6-inch pipe, 4.5 inches is the correct value." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, the 251-350°F range for 4-6 inch pipes requires 4.5 inches of insulation. At these temperatures, insulation serves dual purposes: energy conservation (reducing BTU losses) and personnel protection (keeping surface temperature below 140°F). If this pipe ran outside, add 0.5 inch for a total of 5.0 inches.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-025",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "UCSB Kitchen MAU Motor Sizing",
+    "scenario": "On the UCSB San Benito Student Housing project, make-up air unit MAU-B2-R-1 (AAON RNA-020-C-A-3) serves the kitchen at 5,800 CFM with a calculated brake horsepower of 4.4 BHP. Per NEMA standard motor sizes, what motor HP should be specified?",
+    "hint": "Motors must be the next standard NEMA size above the calculated BHP. Standard NEMA sizes include 1, 1.5, 2, 3, 5, 7.5, 10, 15, 20 HP. The motor must never be smaller than the BHP.",
+    "options": [
+      { "text": "5 HP", "value": "5", "correct": false, "feedback": "5 HP is only 12% above the 4.4 BHP. With dirty filters increasing static pressure, the motor could overload. The equipment schedule confirms a larger motor is specified." },
+      { "text": "7.5 HP", "value": "7.5", "correct": true, "feedback": "Correct! Per the UCSB schedule, MAU-B2-R-1 uses a 7.5 HP motor with VFD. At 4.4 BHP, the 7.5 HP motor provides 70% margin for filter loading and system effects, and runs efficiently at partial load via the VFD." },
+      { "text": "10 HP", "value": "10", "correct": false, "feedback": "10 HP would work but is oversized. The equipment schedule specifies 7.5 HP — oversizing wastes money and reduces motor efficiency at the typical operating point." },
+      { "text": "4.5 HP", "value": "4.5", "correct": false, "feedback": "4.5 HP is not a standard NEMA motor size. Standard sizes jump from 3 to 5 to 7.5 HP. Always select from standard NEMA frame sizes." }
+    ],
+    "explanation": "Per the UCSB San Benito schedule, MAU-B2-R-1 is specified with a 7.5 HP motor for 4.4 BHP at 5,800 CFM and 2.0\" ESP (3.2\" TSP total). The 7.5 HP provides margin for filter loading — as filters get dirty, static pressure increases and the fan draws more power. The unit operates with a VFD for variable airflow control in the kitchen hood makeup application.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-026",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "UCSB Electrical Room AHU Sensible Cooling",
+    "scenario": "AHU-B1-1-4 on the UCSB San Benito project is an AAON H3-ERB-3 serving the electrical room at 4,000 CFM. The total cooling capacity is 143.6 MBH. What is the sensible cooling load for this electrical room AHU?",
+    "hint": "Electrical rooms generate almost entirely sensible heat from transformers, switchgear, and panels — very little latent (moisture) load. The sensible heat ratio should be high.",
+    "options": [
+      { "text": "100.5 MBH", "value": "100.5", "correct": false, "feedback": "100.5 MBH would give a sensible heat ratio of only 0.70, typical of a humid space like a kitchen. Electrical rooms have much higher SHR because the heat is almost entirely from electrical equipment." },
+      { "text": "121.8 MBH", "value": "121.8", "correct": true, "feedback": "Correct! Per the UCSB schedule, AHU-B1-1-4 has 121.8 MBH sensible out of 143.6 MBH total — an SHR of 0.85. The high ratio reflects the electrical room's dry heat profile from transformers and switchgear." },
+      { "text": "143.6 MBH", "value": "143.6", "correct": false, "feedback": "143.6 MBH is the total cooling capacity, not the sensible portion. Total cooling includes both sensible (temperature change) and latent (moisture removal) components." },
+      { "text": "69.7 MBH", "value": "69.7", "correct": false, "feedback": "69.7 MBH is the sensible capacity for AHU-B1-1-1, a different unit serving occupied spaces. Always verify you are reading the correct row on the equipment schedule." }
+    ],
+    "explanation": "The UCSB schedule shows AHU-B1-1-4 at 121.8 MBH sensible out of 143.6 MBH total (SHR = 0.85). Electrical rooms have high sensible heat ratios because loads are almost entirely from equipment dissipating dry heat. Compare to AHU-B1-1-1 at 69.7/95.4 MBH (SHR = 0.73), serving occupied spaces with more latent load from people and infiltration.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-hvac-027",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "UCSB Dryer Exhaust Fan Static Pressure",
+    "scenario": "On the UCSB San Benito project, dryer exhaust fan DEF-1-1-1 is an Enervex MBES500x serving the laundry room at 3,300 CFM. What external static pressure must this fan overcome?",
+    "hint": "Dryer exhaust systems have higher static pressure than typical building exhaust due to lint screen resistance, long duct runs, and code-required minimum duct velocities to transport lint.",
+    "options": [
+      { "text": "0.5\" WG", "value": "0.5", "correct": false, "feedback": "0.5\" WG is the ESP for a standard bathroom exhaust fan like EF-B1-1-1 at 1,100 CFM. Dryer exhaust systems need significantly more static pressure due to lint accumulation and higher duct velocities." },
+      { "text": "0.729\" WG", "value": "0.729", "correct": false, "feedback": "0.729\" WG is the ESP for general exhaust fan EF-250 at 250 CFM. Dryer exhaust at 3,300 CFM requires more static pressure than general building exhaust." },
+      { "text": "0.982\" WG", "value": "0.982", "correct": true, "feedback": "Correct! Per the UCSB schedule, DEF-1-1-1 is rated at 0.982\" ESP. Dryer exhaust systems operate at higher static because IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint buildup." },
+      { "text": "1.5\" WG", "value": "1.5", "correct": false, "feedback": "1.5\" WG exceeds the scheduled ESP. While some dryer exhaust systems with very long runs reach this level, the UCSB schedule specifies 0.982\" WG for this application." }
+    ],
+    "explanation": "Per the UCSB San Benito schedule, DEF-1-1-1 operates at 3,300 CFM and 0.982\" ESP. Dryer exhaust is a specialized system — IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint accumulation, smooth interior duct surfaces, and accessible cleanouts. The Enervex MBES500x is an inline fan designed specifically for dryer exhaust with lint-resistant construction.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-hvac-028",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "UCSB Supply Air Diffuser CFM from Tag",
+    "scenario": "On the UCSB San Benito mechanical plans, a supply air diffuser is tagged SA12X8. Using the diffuser schedule tag format (type + neck size + CFM), what airflow does this diffuser deliver?",
+    "hint": "UCSB diffuser tags follow the format: SA = Supply Air, 12X8 = 12\"x8\" neck size, and the CFM is the last number in the full tag. Check the diffuser schedule for SA12X8.",
+    "options": [
+      { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM corresponds to the SA12X4-200 diffuser, which has a smaller 12\"x4\" neck. The SA12X8 has a larger neck area and delivers more airflow." },
+      { "text": "375 CFM", "value": "375", "correct": true, "feedback": "Correct! Per the UCSB diffuser schedule, SA12X8-375 delivers 375 CFM. The 12\"x8\" neck provides 96 sq inches of free area, sized for 375 CFM at the maximum 0.15\" WG pressure drop." },
+      { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM is the rating for the EA10X10-400 exhaust grille, not a supply air diffuser. The SA12X8 neck size is rated for 375 CFM per the schedule." },
+      { "text": "690 CFM", "value": "690", "correct": false, "feedback": "690 CFM corresponds to the EA12X12-690 exhaust grille. Supply diffusers at this neck size deliver less than exhaust grilles because supply diffusers must control throw pattern and noise." }
+    ],
+    "explanation": "The UCSB diffuser tag SA12X8-375 tells the installer everything: SA = Supply Air, 12X8 = 12\"x8\" rectangular neck, 375 = CFM. This tagging convention is standard on commercial plans so installers can verify correct diffuser placement without referencing the schedule. The maximum pressure drop per diffuser is 0.15\" WG including the duct transition.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-hvac-029",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "UCSB Exhaust Grille Neck Size for 400 CFM",
+    "scenario": "On the UCSB San Benito plans, a mechanical room exhaust point requires 400 CFM. What minimum neck size from the exhaust grille schedule should be selected?",
+    "hint": "Check the exhaust air (EA) grille schedule. Each grille size has a rated CFM. You need the smallest grille that can handle 400 CFM without exceeding 0.15\" WG pressure drop.",
+    "options": [
+      { "text": "6\"x6\" (EA6X6)", "value": "6x6", "correct": false, "feedback": "The EA6X6 is rated for only 100 CFM. At 400 CFM through a 6\"x6\" neck, velocity would be approximately 1,600 FPM — creating excessive noise and pressure drop far above the 0.15\" WG limit." },
+      { "text": "8\"x8\" (EA8X8)", "value": "8x8", "correct": false, "feedback": "The EA8X8 is rated for 200 CFM. Forcing 400 CFM through an 8\"x8\" grille doubles the design velocity, creating unacceptable noise (NC-40+) and pressure drop exceeding 0.15\" WG." },
+      { "text": "10\"x10\" (EA10X10)", "value": "10x10", "correct": true, "feedback": "Correct! Per the UCSB schedule, EA10X10-400 is rated for exactly 400 CFM. The 10\"x10\" neck provides 100 sq inches of free area, maintaining velocity and pressure drop within the 0.15\" WG limit." },
+      { "text": "12\"x12\" (EA12X12)", "value": "12x12", "correct": false, "feedback": "The EA12X12 is rated for 690 CFM. While it would work, it is oversized for 400 CFM — the lower velocity would cause poor air distribution and the larger grille wastes wall/ceiling space and costs more." }
+    ],
+    "explanation": "Grille selection must match the CFM requirement. The UCSB exhaust grille schedule shows: EA6X6-100, EA8X8-200, EA10X10-400, EA12X12-690, EA16X16-1150. For 400 CFM, the EA10X10 is the correct match. Undersizing creates noise and excessive pressure drop; oversizing wastes money and reduces air velocity below effective levels for proper room air circulation.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-hvac-030",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "UCSB Mechanical Room Exhaust Louver Free Area",
+    "scenario": "On the UCSB San Benito project, a mechanical room exhaust system requires 3,000 CFM. Per the louver schedule, what minimum free area must the exhaust louver provide?",
+    "hint": "Louver free area is the actual open area after subtracting the frame, blades, and bird screen. The plans specify minimum free area requirements for each CFM rating. Higher CFM needs more free area to keep face velocity below 500 FPM.",
+    "options": [
+      { "text": "2 sq ft", "value": "2", "correct": false, "feedback": "2 sq ft is the minimum free area for 1,000 CFM. At 3,000 CFM through 2 sq ft, face velocity would be 1,500 FPM — causing rain entrainment, excessive noise, and pressure drop through the louver blades." },
+      { "text": "2.8 sq ft", "value": "2.8", "correct": false, "feedback": "2.8 sq ft is the minimum for approximately 2,000 CFM. At 3,000 CFM, the resulting 1,071 FPM face velocity still exceeds the typical 400-500 FPM maximum for weather-resistant louvers." },
+      { "text": "6 sq ft", "value": "6", "correct": true, "feedback": "Correct! Per the UCSB louver schedule, 3,000 CFM requires a minimum of 6 sq ft free area. This gives a face velocity of 500 FPM (3,000 / 6 = 500), which is the maximum recommended for storm-resistant louvers to prevent rain penetration." },
+      { "text": "9 sq ft", "value": "9", "correct": false, "feedback": "9 sq ft is the minimum free area for 3,500 CFM per the plans. While a larger louver would reduce velocity and pressure drop, it is oversized for 3,000 CFM and wastes wall space." }
+    ],
+    "explanation": "The UCSB louver schedule specifies minimum free areas: 1,000 CFM = 2 sq ft, 2,000 CFM = 2.8 sq ft, 3,000 CFM = 6 sq ft, 3,500 CFM = 9 sq ft, 5,780 CFM = 30 sq ft. For 3,000 CFM, the 6 sq ft minimum maintains approximately 500 FPM face velocity — the industry standard maximum for storm-resistant louvers per AMCA 550. Higher velocities cause water carryover into the duct system.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-hvac-031",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "UCSB Residential Bathroom Exhaust CFM",
+    "scenario": "On the UCSB San Benito student housing plans, a 4-bedroom unit has 2 full bathrooms. What total exhaust CFM is required for the bathroom exhaust system?",
+    "hint": "Residential exhaust rates depend on bathroom type. The UCSB plans specify different CFM rates for half baths, full baths, and shared bathrooms. A full bathroom with a shower requires more exhaust than a half bath (toilet and sink only).",
+    "options": [
+      { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust requirement for a single full bathroom. With 2 full baths, you need to account for both." },
+      { "text": "150 CFM", "value": "150", "correct": false, "feedback": "150 CFM is the rate for a single shared bathroom (used by 3+ people). Two standard full baths each require 100 CFM." },
+      { "text": "200 CFM", "value": "200", "correct": true, "feedback": "Correct! Each full bathroom requires 100 CFM per the UCSB plans. Two full baths = 2 x 100 = 200 CFM total bathroom exhaust for the unit." },
+      { "text": "270 CFM", "value": "270", "correct": false, "feedback": "270 CFM is the kitchen range hood exhaust rate per unit, not bathroom exhaust. Bathroom exhaust is calculated separately at 100 CFM per full bath." }
+    ],
+    "explanation": "The UCSB plans specify bathroom exhaust rates: 50 CFM for a half bath (toilet/sink only), 100 CFM for a full bath (with shower/tub), and 150 CFM for a shared bathroom serving 3+ occupants. For a 4-bedroom unit with 2 full baths: 2 x 100 = 200 CFM. This meets IMC Table 403.3 minimum requirements for residential bathroom ventilation and helps control moisture to prevent mold growth.",
+    "xpReward": 35
+  }
+]

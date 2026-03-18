@@ -1,0 +1,529 @@
+[
+  {
+    "id": "si-pipe-001",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Pipe Schedule Selection",
+    "scenario": "You need to select the correct pipe schedule for a 2-inch carbon steel pipe carrying 150 PSI steam at 366°F. Which schedule provides adequate wall thickness for this service?",
+    "hint": "ASME B31.1 requires wall thickness calculation based on internal pressure and temperature. For 150 PSI steam, standard weight (Schedule 40) is typically adequate for 2-inch pipe.",
+    "options": [
+      { "text": "Schedule 10 (0.065\" wall)", "value": "10", "correct": false, "feedback": "Schedule 10 is too thin for 150 PSI steam service. It's typically used for low-pressure drainage or non-critical applications only." },
+      { "text": "Schedule 40 (0.154\" wall)", "value": "40", "correct": true, "feedback": "Correct! Schedule 40 (standard weight) provides adequate wall thickness for 2-inch pipe at 150 PSI and 366°F per ASME B31.1 pressure design calculations." },
+      { "text": "Schedule 80 (0.218\" wall)", "value": "80", "correct": false, "feedback": "Schedule 80 would work but is heavier and more expensive than necessary. It's typically specified for higher pressures (300+ PSI) or where threading reduces wall thickness." },
+      { "text": "Schedule 160 (0.344\" wall)", "value": "160", "correct": false, "feedback": "Schedule 160 is significantly oversized for 150 PSI service. This schedule is reserved for high-pressure applications (600+ PSI) and wastes material and money." }
+    ],
+    "explanation": "Pipe schedule selection is based on internal pressure, temperature, and material allowable stress per ASME B31.1. For standard low-pressure steam (15-150 PSI), Schedule 40 is typical for most pipe sizes. Threaded connections may require Schedule 80 to compensate for wall thickness lost to threads.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-002",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Heating Hot Water Pipe Sizing",
+    "scenario": "A hot water heating system needs to deliver 500,000 BTU/h to a building wing. With a 20°F temperature differential (supply at 180°F, return at 160°F), what pipe size is required for the main supply? Use the formula: GPM = BTU/h ÷ (500 × Delta-T).",
+    "hint": "First calculate flow: 500,000 ÷ (500 × 20) = 50 GPM. Then size pipe for 50 GPM at 4 ft/s maximum velocity per ASHRAE guidelines.",
+    "options": [
+      { "text": "1-1/2\" pipe", "value": "1.5", "correct": false, "feedback": "1-1/2\" pipe at 50 GPM creates velocity over 8 ft/s — far exceeding the 4 ft/s maximum. This causes noise, erosion, and excessive pressure drop." },
+      { "text": "2\" pipe", "value": "2", "correct": false, "feedback": "2\" pipe at 50 GPM gives about 5 ft/s velocity — still above the 4 ft/s recommended maximum for HVAC hot water systems. Close, but too small." },
+      { "text": "2-1/2\" pipe", "value": "2.5", "correct": true, "feedback": "Correct! 2-1/2\" pipe at 50 GPM gives approximately 3.2 ft/s velocity — within the 4 ft/s maximum per ASHRAE guidelines. Good balance of cost and performance." },
+      { "text": "3\" pipe", "value": "3", "correct": false, "feedback": "3\" pipe would work but is oversized at about 2.2 ft/s. Lower velocity wastes material cost and increases installation difficulty." }
+    ],
+    "explanation": "Hot water pipe sizing uses the BTU/Delta-T/500 formula to determine GPM, then sizes pipe for acceptable velocity (typically 4 ft/s maximum for HVAC per ASHRAE). This is a fundamental pipefitting calculation used daily on commercial projects.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-003",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Steam Pipe Sizing",
+    "scenario": "A low-pressure steam system (15 PSI) needs to supply 1,000 lbs/hr of steam through a 100-foot run. Using steam pipe sizing tables with a maximum pressure drop of 2 PSI per 100 feet, what pipe size is required?",
+    "hint": "At 15 PSI, 1,000 lbs/hr of steam requires specific pipe diameter to keep velocity and pressure drop within limits. Refer to ASHRAE steam pipe capacity tables.",
+    "options": [
+      { "text": "2\" pipe", "value": "2", "correct": false, "feedback": "2\" pipe at 1,000 lbs/hr and 15 PSI would have excessive pressure drop (over 8 PSI per 100 ft) and velocity over 12,000 FPM — far too small." },
+      { "text": "3\" pipe", "value": "3", "correct": true, "feedback": "Correct! 3\" pipe at 15 PSI carries approximately 1,000-1,200 lbs/hr with a pressure drop under 2 PSI per 100 feet and velocity around 6,000 FPM per ASHRAE steam tables." },
+      { "text": "4\" pipe", "value": "4", "correct": false, "feedback": "4\" pipe would handle the flow easily but is oversized. Low velocity in oversized steam pipe can cause condensate to not drain properly, leading to water hammer." },
+      { "text": "6\" pipe", "value": "6", "correct": false, "feedback": "6\" is dramatically oversized for 1,000 lbs/hr at 15 PSI. The very low velocity would cause serious condensate drainage problems and wastes material." }
+    ],
+    "explanation": "Steam pipe sizing considers pressure, flow rate, pressure drop, and velocity limits. Unlike water, steam has much higher velocities (4,000-6,000 FPM typical) and sizing must balance pressure drop against minimum velocity needed for proper condensate sweep per ASHRAE Handbook.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-pipe-004",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Expansion Loop Dimensions",
+    "scenario": "A 100-foot run of 4-inch Schedule 40 carbon steel pipe operates at 350°F (installed at 70°F). The calculated thermal expansion is 2.18 inches. What is the minimum leg length for a U-shaped expansion loop?",
+    "hint": "Use the expansion loop formula: L = sqrt(6.02 × D × Δ) where L is leg length in inches, D is pipe OD in inches, and Δ is expansion in inches. 4\" pipe OD = 4.5 inches.",
+    "options": [
+      { "text": "4 feet", "value": "4", "correct": false, "feedback": "4 feet (48\") is too short. The loop would be overstressed, exceeding the allowable bending stress and risking fatigue cracking at the elbows." },
+      { "text": "6 feet 6 inches", "value": "6.5", "correct": true, "feedback": "Correct! L = sqrt(6.02 × 4.5 × 2.18) = sqrt(59.1) ≈ 7.7 feet. In practice, round up and the minimum is approximately 6.5-8 feet, with 6.5 feet being the minimum per the simplified loop sizing formula." },
+      { "text": "10 feet", "value": "10", "correct": false, "feedback": "10 feet would work but is significantly longer than needed. Oversized loops waste material, take up excessive space, and add unnecessary weight to the support system." },
+      { "text": "2 feet", "value": "2", "correct": false, "feedback": "2 feet is far too short for a 4-inch pipe absorbing 2.18 inches of expansion. The loop would be extremely overstressed and fail quickly." }
+    ],
+    "explanation": "Expansion loop sizing uses the pipe OD and calculated expansion to determine minimum leg length. The formula L = sqrt(6.02 × D × Δ) is derived from beam deflection equations and ensures the loop stays within allowable stress limits per ASME B31.1.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-pipe-005",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hanger Rod Sizing",
+    "scenario": "A 4-inch Schedule 40 steel pipe full of water weighs approximately 22.5 lbs/ft. With hangers spaced at 10 feet, each hanger supports approximately 225 lbs. Including a valve at one hanger point, the total load is 350 lbs. What minimum all-thread rod diameter is needed?",
+    "hint": "Refer to MSS SP-69 rod capacity tables. Use root area for threaded rod capacity calculations. Apply a 5:1 safety factor on ultimate strength.",
+    "options": [
+      { "text": "1/4\" all-thread", "value": "0.25", "correct": false, "feedback": "1/4\" rod has a safe working load of approximately 260 lbs — insufficient for the 350 lb load. The rod would be overstressed, risking failure." },
+      { "text": "3/8\" all-thread", "value": "0.375", "correct": true, "feedback": "Correct! 3/8\" all-thread rod has a safe working load of approximately 500-600 lbs (A36 steel), providing adequate capacity for the 350 lb load with proper safety factor per MSS SP-69." },
+      { "text": "1/2\" all-thread", "value": "0.5", "correct": false, "feedback": "1/2\" rod (safe load ~1,100 lbs) would work but is oversized for this application. While not wrong, it wastes material. Good practice reserves larger rod for heavier loads." },
+      { "text": "5/8\" all-thread", "value": "0.625", "correct": false, "feedback": "5/8\" rod (safe load ~1,700 lbs) is significantly oversized for a 350 lb load. This size is typically used for 8-inch and larger pipe." }
+    ],
+    "explanation": "Hanger rod sizing per MSS SP-69 requires calculating the total load at each hanger point (pipe + water + insulation + fittings/valves) and selecting a rod with adequate safe working load. The safe working load uses a 5:1 safety factor on ultimate tensile strength.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-006",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pump Head Calculation",
+    "scenario": "A hot water system requires 80 GPM through a piping circuit with 200 feet of pipe, 15 elbows, and a coil with 8 ft of head loss. The pipe friction loss is 3.5 ft per 100 ft of pipe. Each elbow has an equivalent length of 5 feet. What minimum pump head is needed?",
+    "hint": "Total equivalent length = straight pipe + (number of elbows × equivalent length per elbow). Multiply by friction loss per 100 ft. Add equipment losses.",
+    "options": [
+      { "text": "12 feet of head", "value": "12", "correct": false, "feedback": "12 feet only accounts for roughly the straight pipe friction. You're missing the fitting equivalent lengths and equipment losses." },
+      { "text": "17.6 feet of head", "value": "17.6", "correct": true, "feedback": "Correct! Total equivalent length = 200 + (15 × 5) = 275 ft. Friction loss = 275 × 3.5/100 = 9.6 ft. Plus coil loss = 9.6 + 8.0 = 17.6 ft total head." },
+      { "text": "25 feet of head", "value": "25", "correct": false, "feedback": "25 feet is oversized. While selecting a pump with some margin is good practice, this exceeds the calculated head by 40%, wasting energy and potentially causing flow issues." },
+      { "text": "7 feet of head", "value": "7", "correct": false, "feedback": "7 feet only covers the straight pipe friction at 200 ft. You forgot to add the equivalent length of fittings and the coil pressure drop." }
+    ],
+    "explanation": "Pump head calculation uses the equivalent length method: add straight pipe length to fitting equivalent lengths, multiply by friction loss per 100 feet, then add equipment pressure drops. This is a core pipefitting calculation for every hydronic system per ASHRAE Handbook.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-pipe-007",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Glycol Concentration",
+    "scenario": "An outdoor hydronic system in a climate where the minimum ambient temperature reaches -10°F needs freeze protection. What concentration of propylene glycol is needed to protect to -10°F?",
+    "hint": "Propylene glycol freeze protection is based on concentration by volume. Refer to glycol manufacturer freeze point charts.",
+    "options": [
+      { "text": "20% glycol by volume", "value": "20", "correct": false, "feedback": "20% propylene glycol only protects to about +17°F — it would freeze solid at -10°F, potentially rupturing pipes and equipment." },
+      { "text": "35% glycol by volume", "value": "35", "correct": false, "feedback": "35% protects to about 0°F — still not adequate for -10°F conditions. The system would be at risk on the coldest nights." },
+      { "text": "45% glycol by volume", "value": "45", "correct": true, "feedback": "Correct! 45% propylene glycol provides burst protection to approximately -20°F to -25°F, with freeze point (slush) around -10°F to -15°F. This provides adequate protection with safety margin." },
+      { "text": "60% glycol by volume", "value": "60", "correct": false, "feedback": "60% is excessive for -10°F protection. Over-concentration reduces heat transfer capacity significantly (20%+ reduction) and increases pumping costs due to higher viscosity." }
+    ],
+    "explanation": "Glycol concentration must be calculated for the specific minimum temperature. Over-concentration is almost as bad as under-concentration because it dramatically reduces heat transfer efficiency and increases viscosity, requiring larger pumps and more energy per ASHRAE guidelines.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-008",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pressure Relief Valve Sizing",
+    "scenario": "A 2,000,000 BTU/h hot water boiler operates at 30 PSI. The pressure relief valve must be sized to relieve the full boiler input if the circulator fails. What minimum relief valve capacity is needed?",
+    "hint": "ASME CSD-1 requires the relief valve to relieve at least the full boiler output. For hot water boilers, capacity is rated in BTU/h. The valve must open before pressure exceeds 30 PSI + 10% (33 PSI).",
+    "options": [
+      { "text": "1,000,000 BTU/h", "value": "1000000", "correct": false, "feedback": "1,000,000 BTU/h is only half the boiler input. If the circulator fails and the burner fires at full capacity, this valve cannot relieve fast enough — a dangerous situation." },
+      { "text": "2,000,000 BTU/h", "value": "2000000", "correct": true, "feedback": "Correct! The relief valve must handle the full boiler input of 2,000,000 BTU/h per ASME Section IV and CSD-1. This ensures safe pressure relief even if circulation stops completely." },
+      { "text": "3,000,000 BTU/h", "value": "3000000", "correct": false, "feedback": "3,000,000 BTU/h exceeds the required capacity. While oversizing slightly is acceptable, significantly oversized valves open too easily and chatter, causing premature wear." },
+      { "text": "500,000 BTU/h", "value": "500000", "correct": false, "feedback": "500,000 BTU/h is only 25% of the boiler input — grossly undersized. The relief valve would be overwhelmed in a no-flow condition, risking catastrophic pressure buildup." }
+    ],
+    "explanation": "Boiler safety relief valves must be sized to relieve 100% of the boiler's rated input per ASME Section IV (Heating Boilers) and CSD-1 (Controls and Safety Devices for Automatically Fired Boilers). This is a non-negotiable life safety requirement.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-pipe-009",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Strainer Selection",
+    "scenario": "A Y-strainer needs to be installed ahead of a 2-inch control valve on a chilled water system. The strainer body must match the pipe size and the screen mesh must catch particles that could damage the valve. What mesh size is appropriate?",
+    "hint": "Standard practice for protecting control valves is a 20-mesh screen (0.033\" openings). The strainer body should match the pipe size and be rated for system pressure.",
+    "options": [
+      { "text": "4-mesh screen (0.187\" openings)", "value": "4", "correct": false, "feedback": "4-mesh has openings too large to protect a control valve. Particles over 0.1\" can damage valve seats and plug control valve trim." },
+      { "text": "20-mesh screen (0.033\" openings)", "value": "20", "correct": true, "feedback": "Correct! 20-mesh is the standard screen size for protecting control valves in HVAC systems. It catches debris that could damage valve seats while maintaining acceptable pressure drop." },
+      { "text": "100-mesh screen (0.006\" openings)", "value": "100", "correct": false, "feedback": "100-mesh is extremely fine and would clog rapidly in an HVAC system, requiring constant cleaning. This mesh is used for special applications like instrumentation protection." },
+      { "text": "No screen needed — just the body", "value": "0", "correct": false, "feedback": "A strainer without a screen serves no purpose. The screen is the functional element that catches debris. Without it, particles pass through and damage the control valve." }
+    ],
+    "explanation": "Strainer mesh selection balances particle capture against pressure drop and maintenance frequency. For HVAC control valve protection, 20-mesh is the industry standard per valve manufacturer recommendations and ASHRAE guidelines.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-pipe-010",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pipe Insulation Thickness",
+    "scenario": "A 3-inch chilled water pipe (40°F) runs through an unconditioned space where ambient temperature may reach 90°F and 80% relative humidity. Per ASHRAE 90.1, what minimum insulation thickness is required?",
+    "hint": "ASHRAE 90.1 Table 6.8.3-2 covers chilled water and refrigerant insulation requirements. Cold pipe insulation must prevent surface condensation.",
+    "options": [
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is insufficient to prevent surface condensation at 80% RH. Condensation will form on the insulation surface, dripping and causing water damage and mold growth." },
+      { "text": "1\" insulation", "value": "1", "correct": true, "feedback": "Correct! ASHRAE 90.1 requires minimum 1\" insulation for 3-inch chilled water pipe in the 40-55°F range. This thickness prevents surface condensation in typical humidity conditions when properly vapor-sealed." },
+      { "text": "2\" insulation", "value": "2", "correct": false, "feedback": "2\" exceeds the minimum requirement for 3-inch pipe. While more insulation is not harmful, it increases cost and may cause clearance issues in tight spaces." },
+      { "text": "3\" insulation", "value": "3", "correct": false, "feedback": "3\" is far more than required. This thickness is typically only needed for very large pipes or extremely cold applications (below 0°F)." }
+    ],
+    "explanation": "Chilled water pipe insulation thickness is determined by ASHRAE 90.1 based on pipe size and fluid temperature. The primary goal is preventing surface condensation, which requires adequate thickness and a continuous vapor barrier on the warm side of the insulation.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-pipe-011",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Flange Pressure Rating",
+    "scenario": "A piping system operates at 450 PSI and 600°F using ASTM A105 carbon steel flanges. What minimum ASME B16.5 flange class is required at this operating condition?",
+    "hint": "ASME B16.5 pressure-temperature ratings decrease with increasing temperature. A Class 300 flange in A105 steel is rated for 750 PSI at 100°F but only 535 PSI at 500°F and 410 PSI at 650°F.",
+    "options": [
+      { "text": "Class 300", "value": "300", "correct": false, "feedback": "Class 300 in A105 is rated for approximately 410 PSI at 650°F and 535 PSI at 500°F. At 600°F, the rating falls to approximately 465 PSI — only slightly above 450 PSI with no safety margin." },
+      { "text": "Class 600", "value": "600", "correct": true, "feedback": "Correct! Class 600 in A105 is rated for approximately 930 PSI at 600°F — well above the 450 PSI operating pressure with a comfortable safety margin per ASME B16.5 Table 2-1.1." },
+      { "text": "Class 150", "value": "150", "correct": false, "feedback": "Class 150 in A105 is rated for only about 170 PSI at 600°F — far below the 450 PSI operating pressure. This would be a catastrophic under-rating." },
+      { "text": "Class 900", "value": "900", "correct": false, "feedback": "Class 900 (rated ~1,390 PSI at 600°F) would work but is significantly oversized. The flanges are much heavier, more expensive, and require higher bolting torques than necessary." }
+    ],
+    "explanation": "Flange class selection must account for BOTH pressure AND temperature per ASME B16.5 pressure-temperature tables. A flange adequate at ambient temperature may be under-rated at elevated temperatures because material strength decreases with heat. Always check the rating at the maximum operating temperature.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-pipe-012",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Weld Filler Metal Selection",
+    "scenario": "You are welding ASTM A335 P-11 (1-1/4% Chrome - 1/2% Moly) pipe for a 600°F steam system. Which SMAW electrode is the correct filler metal match for this base material?",
+    "hint": "Filler metal must match or exceed the base metal chemistry and mechanical properties. P-11 is a chrome-moly alloy requiring matching chrome-moly filler per ASME Section II Part C.",
+    "options": [
+      { "text": "E7018 (carbon steel electrode)", "value": "E7018", "correct": false, "feedback": "E7018 is a carbon steel electrode with no chrome or moly content. Using it on P-11 pipe creates a weld deposit that cannot withstand 600°F service — it will experience creep failure and oxidation." },
+      { "text": "E8018-B2 (1-1/4 Cr - 1/2 Mo electrode)", "value": "E8018-B2", "correct": true, "feedback": "Correct! E8018-B2 has matching 1-1/4% chromium and 1/2% molybdenum content for P-11 base material. It provides proper high-temperature creep resistance and oxidation resistance per AWS A5.5 and ASME Section IX." },
+      { "text": "E309-16 (stainless steel electrode)", "value": "E309-16", "correct": false, "feedback": "E309-16 is an austenitic stainless steel electrode used for dissimilar metal joints, not for matching chrome-moly to chrome-moly. It would create a dissimilar weld metal microstructure with potential carbon migration issues." },
+      { "text": "E6010 (cellulose-coated electrode)", "value": "E6010", "correct": false, "feedback": "E6010 is a carbon steel cellulose electrode used for root passes on carbon steel pipe. It has no alloy content and would create a weld that fails in high-temperature chrome-moly service." }
+    ],
+    "explanation": "Chrome-moly piping requires matching filler metals to maintain high-temperature properties. ASME Section IX and B31.1 require filler metal that matches or exceeds the base metal's chemical composition and mechanical properties at operating temperature. The -B2 suffix designates 1-1/4 Cr - 1/2 Mo alloy content per AWS A5.5.",
+    "xpReward": 90
+  },
+  {
+    "id": "si-pipe-013",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hot Water Return Insulation",
+    "scenario": "A 2-inch hot water return pipe (180°F) runs through an unconditioned mechanical chase in a commercial building. Per ASHRAE 90.1 Table 6.8.3-1, what minimum insulation thickness is required?",
+    "hint": "ASHRAE 90.1 Table 6.8.3-1 covers insulation for heating systems. For pipes in the 141-200°F range, look up the column for the nominal pipe size to find the minimum thickness.",
+    "options": [
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is below the minimum for a 2\" pipe in the 141-200°F range. This thin insulation allows excessive heat loss that increases boiler fuel consumption significantly." },
+      { "text": "1\" insulation", "value": "1", "correct": true, "feedback": "Correct! ASHRAE 90.1 Table 6.8.3-1 requires minimum 1\" insulation for pipes 1\" to 2\" in the 141-200°F range. This balances heat retention with practical installation on smaller pipes." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": false, "feedback": "1-1/2\" exceeds the minimum for 2\" pipe in this temperature range. The 1-1/2\" requirement applies to larger pipes (4\" and above) at this temperature." },
+      { "text": "2\" insulation", "value": "2", "correct": false, "feedback": "2\" is well above the minimum. While more insulation saves energy, the diminishing returns don't justify the cost increase for a 2\" return pipe at 180°F." }
+    ],
+    "explanation": "Hot water return pipe insulation is often overlooked but critical for system efficiency. Return pipes lose heat throughout the entire circulation loop. ASHRAE 90.1 requires insulation based on pipe size and fluid temperature to minimize standby losses.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-014",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Large Chilled Water Pipe Insulation",
+    "scenario": "A 6-inch chilled water supply pipe (42°F) runs through an unconditioned parking garage where ambient conditions reach 95°F and 75% RH. Per ASHRAE 90.1 Table 6.8.3-2, what minimum insulation thickness is required?",
+    "hint": "ASHRAE 90.1 Table 6.8.3-2 covers cooling systems. For chilled water in the 40-55°F range, insulation thickness increases with pipe size. A continuous vapor barrier is essential to prevent condensation within the insulation.",
+    "options": [
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is insufficient for a 6\" chilled water pipe. At 42°F with high ambient humidity, this thickness results in surface condensation — water drips, insulation becomes waterlogged, and R-value drops to near zero." },
+      { "text": "1\" insulation", "value": "1", "correct": false, "feedback": "1\" is the minimum for smaller chilled water pipes (up to 4\"). For 6\" pipe, the increased surface area requires thicker insulation to prevent condensation at the insulation surface." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": true, "feedback": "Correct! ASHRAE 90.1 Table 6.8.3-2 requires minimum 1-1/2\" insulation for 6-inch pipe in the 40-55°F range. Combined with a continuous vapor barrier, this prevents surface condensation in typical commercial conditions." },
+      { "text": "2-1/2\" insulation", "value": "2.5", "correct": false, "feedback": "2-1/2\" exceeds the minimum requirement. This thickness is typically needed for very large pipes (8\" and above) or pipes below 40°F operating temperature." }
+    ],
+    "explanation": "Chilled water pipe insulation on large pipes must account for increased surface area and condensation potential. The vapor barrier integrity is as critical as the insulation thickness — any breach allows moisture migration to the cold pipe surface, destroying the insulation system over time.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-pipe-015",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Dual-Temperature Pipe Insulation",
+    "scenario": "A 4-inch pipe in a commercial building serves as both heating supply (180°F) in winter and chilled water supply (45°F) in summer using a changeover valve system. Per ASHRAE 90.1, which insulation requirement governs — heating or cooling — and what thickness?",
+    "hint": "When a pipe operates at both heating and cooling temperatures, the more stringent insulation requirement applies. Cooling systems also require a vapor barrier, which heating systems do not.",
+    "options": [
+      { "text": "1\" — use the heating table", "value": "1-heat", "correct": false, "feedback": "The heating table requirement (1\" for 4\" pipe at 141-200°F) is less stringent. Using only the heating requirement would result in condensation failure during cooling season — the pipe sweats when carrying 45°F water." },
+      { "text": "1\" — use the cooling table", "value": "1-cool", "correct": true, "feedback": "Correct! ASHRAE 90.1 requires using the MORE stringent table — cooling Table 6.8.3-2 governs. For 4\" pipe at 40-55°F, 1\" insulation WITH a vapor barrier is required. The vapor barrier is critical for changeover systems." },
+      { "text": "1-1/2\" — use the heating table", "value": "1.5-heat", "correct": false, "feedback": "1-1/2\" exceeds the heating requirement for this pipe size, and the heating table doesn't address the vapor barrier needed for cooling mode. The cooling table governs." },
+      { "text": "2\" — combine both tables", "value": "2-combo", "correct": false, "feedback": "You don't add the requirements together. Use the more stringent of the two tables. The cooling table with its vapor barrier requirement governs this dual-temperature application." }
+    ],
+    "explanation": "Dual-temperature (changeover) piping must meet the cooling insulation requirement because condensation prevention is the controlling factor. The vapor barrier required for cooling mode also benefits heating mode by preventing moisture intrusion. Always design insulation for the worst-case operating condition.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-pipe-016",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Outdoor Steam Condensate Insulation",
+    "scenario": "A 3-inch steam condensate return pipe (200°F) runs outdoors exposed to weather between two buildings. The pipe is 150 feet long in a climate with winter temperatures reaching -10°F. Per ASHRAE 90.1 and freeze protection requirements, what minimum insulation thickness is needed?",
+    "hint": "Outdoor piping must meet ASHRAE 90.1 minimum thickness AND provide freeze protection during shutdown periods. For 3\" pipe at 200°F, check Table 6.8.3-1 for the 141-200°F range, then evaluate whether that thickness also provides adequate freeze protection.",
+    "options": [
+      { "text": "1\" insulation", "value": "1", "correct": false, "feedback": "1\" meets the minimum ASHRAE energy requirement for 3\" pipe at 141-200°F, but provides inadequate freeze protection for outdoor pipe in -10°F conditions. During a boiler shutdown, the pipe freezes within hours." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": false, "feedback": "1-1/2\" improves freeze protection but still allows freezing in extreme cold during extended shutdowns. ASHRAE 90.1 is the minimum energy code — freeze protection may require additional measures." },
+      { "text": "2\" insulation with heat trace", "value": "2-ht", "correct": true, "feedback": "Correct! For outdoor condensate pipe in extreme climates, ASHRAE 90.1 minimum (1-1/2\" for 3\" pipe at this range) is supplemented with additional insulation AND electric heat trace for freeze protection during shutdown. 2\" insulation with heat trace is the standard engineering practice." },
+      { "text": "3\" insulation only", "value": "3", "correct": false, "feedback": "3\" insulation alone only delays freezing — it cannot prevent it during an extended shutdown in -10°F conditions. Without heat trace, any thickness of insulation will eventually allow the pipe to freeze." }
+    ],
+    "explanation": "Outdoor piping in cold climates requires both energy code compliance (ASHRAE 90.1) and freeze protection. Insulation alone slows heat loss but cannot prevent freezing during shutdowns. Electric heat trace under insulation maintains pipe temperature above freezing. The insulation then protects the heat trace system efficiency. This is standard practice per ASHRAE and NAIMA guidelines.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-pipe-017",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pipe Insulation K-Value Selection",
+    "scenario": "An engineer specifies insulation with the lowest thermal conductivity (K-value) for a high-temperature steam pipe to minimize heat loss. Per UCSB spec, three insulation materials are available: mineral wool, elastomeric, and polyisocyanurate (polyiso). Which material has the best (lowest) K-value?",
+    "hint": "UCSB spec lists K-values for common pipe insulation materials. Lower K-value means better insulating performance. Compare: mineral wool, elastomeric, and polyiso.",
+    "options": [
+      { "text": "Mineral wool (K = 0.24)", "value": "mineral-wool", "correct": false, "feedback": "Mineral wool at K = 0.24 is a solid performer for high-temperature applications but does not have the lowest K-value among the three options listed in UCSB spec." },
+      { "text": "Elastomeric (K = 0.28)", "value": "elastomeric", "correct": false, "feedback": "Elastomeric insulation at K = 0.28 has the highest (worst) K-value of the three. It is commonly used for cold piping due to its built-in vapor barrier, but it has higher thermal conductivity." },
+      { "text": "Polyisocyanurate (K = 0.19)", "value": "polyiso", "correct": true, "feedback": "Correct! Per UCSB spec, polyisocyanurate has a K-value of 0.19 — the lowest of the three materials. This means it provides the best insulating performance per inch of thickness." },
+      { "text": "All three have the same K-value", "value": "same", "correct": false, "feedback": "Each insulation material has a different K-value based on its composition. Polyiso (0.19) outperforms mineral wool (0.24) and elastomeric (0.28) in thermal resistance per inch." }
+    ],
+    "explanation": "UCSB spec K-values: polyiso = 0.19, mineral wool = 0.24, elastomeric = 0.28. Lower K-value means less heat transfer per inch of thickness. However, material selection also considers temperature limits (mineral wool handles higher temps), moisture resistance (elastomeric has built-in vapor barrier), and cost. Polyiso offers the best thermal performance but has a temperature limit around 300°F.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-018",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Insulation Surface Temperature Limit",
+    "scenario": "A 6-inch high-pressure steam pipe (400°F) runs at shoulder height through a busy mechanical room where workers regularly walk within arm's reach. Per UCSB spec, what is the maximum allowable insulation surface temperature for personnel protection?",
+    "hint": "UCSB spec references ASTM C1055 personnel protection criteria. The insulation must be thick enough to reduce the outer surface temperature below the burn threshold.",
+    "options": [
+      { "text": "100°F", "value": "100", "correct": false, "feedback": "100°F is below the UCSB spec threshold. While a cooler surface is safer, achieving 100°F on a 400°F pipe requires excessive insulation thickness that is not economically justified." },
+      { "text": "140°F", "value": "140", "correct": true, "feedback": "Correct! Per UCSB spec and ASTM C1055, the maximum insulation surface temperature for personnel protection is 140°F. Above this temperature, brief skin contact can cause burns." },
+      { "text": "180°F", "value": "180", "correct": false, "feedback": "180°F exceeds the personnel protection limit. Contact with a 180°F surface causes a burn in less than 1 second. UCSB spec requires the surface to be at or below 140°F." },
+      { "text": "212°F", "value": "212", "correct": false, "feedback": "212°F is the boiling point of water and would cause instant severe burns on contact. The personnel protection limit per UCSB spec is 140°F, which provides a margin against accidental contact burns." }
+    ],
+    "explanation": "UCSB spec sets a maximum insulation surface temperature of 140°F per ASTM C1055 personnel protection standards. At 140°F, a 5-second contact produces only minor discomfort. Above 140°F, contact time to burn decreases rapidly. Insulation thickness must be calculated to achieve this surface temperature based on pipe temperature, ambient conditions, and insulation K-value.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-019",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Ball Valve Pressure Rating",
+    "scenario": "You are selecting a 1-1/2\" ball valve for a 400 PSI chilled water system. Per UCSB spec, what is the rated working pressure for ball valves 2 inches and smaller?",
+    "hint": "UCSB spec specifies pressure ratings for ball valves based on size. Smaller valves typically have higher pressure ratings than larger valves of the same class.",
+    "options": [
+      { "text": "150 psi", "value": "150", "correct": false, "feedback": "150 psi is far below the required 400 PSI operating pressure. A valve rated at 150 psi would be dangerously under-rated and could fail catastrophically." },
+      { "text": "300 psi", "value": "300", "correct": false, "feedback": "300 psi is still below the 400 PSI operating pressure. Installing this valve would violate code requirements that the valve rating must meet or exceed system pressure." },
+      { "text": "600 psi", "value": "600", "correct": true, "feedback": "Correct! Per UCSB spec, ball valves 2 inches and smaller are rated at 600 psi. This comfortably exceeds the 400 PSI system pressure with adequate safety margin." },
+      { "text": "1000 psi", "value": "1000", "correct": false, "feedback": "1000 psi exceeds the UCSB spec rating for standard ball valves. While higher-rated valves exist as specialty items, the standard spec calls for 600 psi for valves 2 inches and under." }
+    ],
+    "explanation": "UCSB spec rates ball valves at 600 psi for sizes 2 inches and smaller. This rating applies at ambient temperature — at elevated temperatures, the working pressure may need to be derated per ASME B16.34 pressure-temperature tables. Always verify the valve rating meets or exceeds the maximum system pressure including any test pressures.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-020",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pot Feeder Sizing for Chemical Treatment",
+    "scenario": "You are installing a bypass pot feeder for chemical treatment on a closed-loop hydronic system with a total volume of 8,000 gallons. Per UCSB spec, what size pot feeder should be specified?",
+    "hint": "UCSB spec sizes pot feeders based on total system volume. There is a breakpoint at 15,000 gallons that determines whether a smaller or larger feeder is required.",
+    "options": [
+      { "text": "2 gallon pot feeder", "value": "2", "correct": false, "feedback": "2 gallons is too small even for an 8,000-gallon system. It would require multiple refills to properly treat the system, increasing labor and the risk of inadequate treatment." },
+      { "text": "5 gallon pot feeder", "value": "5", "correct": true, "feedback": "Correct! Per UCSB spec, systems under 15,000 gallons require a 5-gallon pot feeder. This size holds enough chemical to properly treat the system volume in a single charge." },
+      { "text": "10-12 gallon pot feeder", "value": "10-12", "correct": false, "feedback": "10-12 gallon pot feeders are specified for systems over 15,000 gallons per UCSB spec. For an 8,000-gallon system, this is larger than required and adds unnecessary cost." },
+      { "text": "20 gallon pot feeder", "value": "20", "correct": false, "feedback": "20 gallons is significantly oversized for any standard closed-loop system. UCSB spec only goes up to 10-12 gallons for the largest systems (over 15,000 gallons)." }
+    ],
+    "explanation": "Pot feeder sizing per UCSB spec: 5 gallons for systems under 15,000 gallons, 10-12 gallons for systems over 15,000 gallons. Pot feeders allow adding corrosion inhibitors and biocides to closed-loop systems without draining. Proper sizing ensures adequate chemical volume for effective treatment per water treatment guidelines.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-021",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Heating Water Pipe Insulation — 2-Inch at 180°F",
+    "scenario": "A 2-inch heating water pipe operates at 180°F in an interior mechanical room. Per California T-24 Table 120.3-A, what insulation thickness is required for a 1.5-3 inch pipe in the 141-200°F temperature range?",
+    "hint": "T-24 Table 120.3-A lists insulation thickness by pipe size and fluid temperature range for space heating service. Find the intersection of 1.5-3 inch column and 141-200°F row.",
+    "options": [
+      { "text": "1.0 inch", "value": "1.0", "correct": false, "feedback": "1.0 inch is the requirement for the 105-140°F range on small pipes. At 180°F in the 141-200°F range, a 1.5-3 inch pipe needs more insulation." },
+      { "text": "1.5 inches", "value": "1.5", "correct": false, "feedback": "1.5 inches is the value for pipes smaller than 1.25 inches at 141-200°F. A 2-inch pipe falls in the 1.5-3 inch column, which has a higher requirement." },
+      { "text": "2.0 inches", "value": "2.0", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, space heating piping at 141-200°F in the 1.5-3 inch pipe size range requires 2.0 inches of insulation. This thickness limits heat loss and keeps surface temperature below 140°F for personnel safety." },
+      { "text": "2.5 inches", "value": "2.5", "correct": false, "feedback": "2.5 inches is the requirement for the 201-250°F range on 1.5-3 inch pipes. At 180°F, the pipe is in the 141-200°F range which requires only 2.0 inches." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, a 2-inch pipe (1.5-3 inch column) at 180°F (141-200°F row) for space heating requires 2.0 inches of insulation. Common insulation types for heating water up to 200°F include PI-A (mineral wool), PI-B (elastomeric), PI-E (calcium silicate), and PI-H (aerogel). If this pipe ran outside, add 0.5 inch for 2.5 inches total.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-022",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Generator Exhaust Insulation Type and Thickness",
+    "scenario": "You are insulating a generator exhaust pipe that reaches 1,000°F during operation. Per UCSB spec, what insulation type and thickness is required, and what is the maximum allowable surface temperature?",
+    "hint": "UCSB spec specifies two insulation options for generator exhaust: a traditional material at greater thickness and an advanced material at reduced thickness. Both must achieve the same surface temperature limit.",
+    "options": [
+      { "text": "PI-A (mineral wool), 3 inches, 180°F max surface", "value": "PI-A-3", "correct": false, "feedback": "Mineral wool (PI-A) is rated for heating water up to 200°F service temperature, not 1,000°F+ exhaust temperatures. It would degrade and fail at generator exhaust temperatures." },
+      { "text": "PI-E (calcium silicate), 4 inches, 158°F max surface", "value": "PI-E-4", "correct": true, "feedback": "Correct! Per UCSB spec, generator exhaust requires PI-E (calcium silicate) at 4 inches thick OR PI-I (extreme aerogel) at 2 inches thick. Maximum surface temperature is 158°F. Calcium silicate withstands temperatures over 1200°F." },
+      { "text": "PI-B (elastomeric), 2 inches, 140°F max surface", "value": "PI-B-2", "correct": false, "feedback": "Elastomeric (PI-B) insulation melts at around 250°F. It cannot withstand generator exhaust temperatures of 1,000°F+. This material is only suitable for cold piping like chilled water and condensate drains." },
+      { "text": "PI-D (polyisocyanurate), 3 inches, 200°F max surface", "value": "PI-D-3", "correct": false, "feedback": "Polyisocyanurate (PI-D) is limited to about 300°F service temperature and is used for boiler feed pipes. It would char and fail at generator exhaust temperatures." }
+    ],
+    "explanation": "Generator exhaust insulation per UCSB spec: PI-E (calcium silicate) at 4 inches OR PI-I (extreme aerogel) at 2 inches, with a maximum surface temperature of 158°F. Calcium silicate is non-combustible, withstands temperatures over 1200°F, and maintains structural integrity under vibration. The 158°F surface limit is slightly above the standard 140°F personnel protection limit, reflecting the typically restricted access to generator rooms.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-pipe-023",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Seismic Bracing Interval — Piping Transverse",
+    "scenario": "You are installing seismic bracing on a 6-inch chilled water main that runs 200 feet through a basement. Per UCSB spec, what is the maximum spacing for transverse seismic braces on piping?",
+    "hint": "UCSB seismic bracing intervals for piping differ from ductwork. Piping has wider spacing allowances than duct due to the inherent stiffness of pipe compared to sheet metal.",
+    "options": [
+      { "text": "20 feet maximum", "value": "20", "correct": false, "feedback": "20 feet is too conservative for piping transverse braces. Pipe is inherently stiffer than ductwork and can span greater distances between seismic restraints." },
+      { "text": "30 feet maximum", "value": "30", "correct": false, "feedback": "30 feet is the maximum transverse spacing for DUCTWORK, not piping. Piping has a wider allowable spacing due to its greater rigidity and moment of inertia." },
+      { "text": "40 feet maximum", "value": "40", "correct": true, "feedback": "Correct! Per UCSB spec, transverse seismic braces on piping are required at 40 feet maximum intervals. For a 200-foot run, you need a minimum of 5 transverse braces. Longitudinal braces are required at 80-foot intervals." },
+      { "text": "60 feet maximum", "value": "60", "correct": false, "feedback": "60 feet is the maximum longitudinal (along the pipe axis) bracing interval, not transverse (perpendicular to pipe axis). Transverse braces are needed at 40-foot intervals." }
+    ],
+    "explanation": "Piping seismic bracing per UCSB spec: transverse at 40 ft max, longitudinal at 80 ft max. Piping exemptions apply for pipes 3 inches and smaller that weigh less than 10 lbs/ft in SDC D/E/F with Ip=1.0. Always place a brace within 12 feet of each end, at changes of direction, and at equipment connections. A 200-foot run needs minimum 5 transverse and 3 longitudinal braces.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-024",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Boiler Feed Pipe Insulation — High Temperature",
+    "scenario": "A 3-inch boiler feed pipe operates at 230°F. Per UCSB spec and T-24, what insulation thickness and type is required for a 1.5-3 inch pipe in the 201-250°F temperature range?",
+    "hint": "For boiler feed service above 200°F, the insulation type changes from the standard heating water materials. T-24 Table 120.3-A specifies the thickness, and the UCSB insulation type table specifies acceptable materials.",
+    "options": [
+      { "text": "2.0 inches, PI-A (mineral wool)", "value": "2.0-PIA", "correct": false, "feedback": "2.0 inches is the thickness for the 141-200°F range, and while mineral wool can handle 230°F, the thickness is incorrect for the 201-250°F range on 1.5-3 inch pipes." },
+      { "text": "2.5 inches, PI-D (polyisocyanurate) or PI-F (cellular glass)", "value": "2.5-PID", "correct": true, "feedback": "Correct! Per T-24, 1.5-3 inch pipes at 201-250°F require 2.5 inches of insulation. For boiler feed service (201-250°F), acceptable types are PI-A (mineral wool), PI-D (polyiso), PI-F (cellular glass), or PI-H (aerogel)." },
+      { "text": "3.0 inches, PI-E (calcium silicate)", "value": "3.0-PIE", "correct": false, "feedback": "3.0 inches exceeds the T-24 requirement of 2.5 inches for this pipe size and temperature range. While calcium silicate can handle the temperature, it's not the most cost-effective choice for 230°F service." },
+      { "text": "1.5 inches, PI-B (elastomeric)", "value": "1.5-PIB", "correct": false, "feedback": "Elastomeric (PI-B) is limited to about 250°F but is primarily specified for cold piping (chilled water, condensate). At 230°F, PI-B would be at its absolute limit and is not a listed material for boiler feed service per UCSB spec." }
+    ],
+    "explanation": "Boiler feed pipe at 201-250°F requires 2.5 inches of insulation on 1.5-3 inch pipes per T-24 Table 120.3-A. Acceptable insulation types for boiler feed include PI-A (mineral wool), PI-D (polyisocyanurate), PI-F (cellular glass), and PI-H (aerogel). The higher temperature service requires insulation materials rated above 250°F with low thermal conductivity at elevated temperatures.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-pipe-025",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Primary ASHP Pump Head",
+    "scenario": "On the UCSB San Benito Student Housing project, primary ASHP pump PHWP-1 (Bell & Gossett E-80SC-4x4x11B) delivers 210 GPM for the air-to-water heat pump loop. What pump head is required per the equipment schedule?",
+    "hint": "Pump head is measured in feet of water gauge (ft WG) and represents the total friction loss the pump must overcome in the piping circuit — including pipe friction, fittings, valves, equipment coils, and control valves.",
+    "options": [
+      { "text": "16 ft WG", "value": "16", "correct": false, "feedback": "16 ft WG is the head for PHWP-5, the smaller primary boiler pump at 165 GPM. The ASHP primary pumps serve a larger circuit with more friction loss." },
+      { "text": "23 ft WG", "value": "23", "correct": false, "feedback": "23 ft WG is the head for tertiary pump THWP-B3 at 50 GPM. Different circuits have different friction losses based on pipe length, fitting count, and equipment pressure drops." },
+      { "text": "35 ft WG", "value": "35", "correct": true, "feedback": "Correct! Per the UCSB schedule, PHWP-1 through PHWP-4 each require 35 ft WG of head at 210 GPM. The higher head reflects the longer piping circuit to the outdoor AWHP units plus the heat pump coil pressure drop." },
+      { "text": "50 ft WG", "value": "50", "correct": false, "feedback": "50 ft WG would be typical for a large campus distribution loop. The UCSB primary ASHP circuit at 35 ft WG is a building-level loop serving four heat pumps." }
+    ],
+    "explanation": "Per the UCSB schedule, all four primary ASHP pumps (PHWP-1/2/3/4) are identical Bell & Gossett E-80SC-4x4x11B units rated at 210 GPM and 35 ft WG head with 70.2% pump efficiency and 5 HP motors at 460V/3-phase. The 4x4x11B designation means 4-inch suction, 4-inch discharge, and 11-inch impeller (B trim). Having four identical pumps provides N+1 redundancy for the heat pump plant.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-pipe-026",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "UCSB Expansion Tank Acceptance Volume",
+    "scenario": "The UCSB San Benito project has a 20,000-gallon heating hot water system. The expansion tanks ET-1/2/3/4 are Taco CA-10000-125 bladder-type tanks. What acceptance volume is required per tank?",
+    "hint": "Acceptance volume is the amount of expanded water each tank can absorb as the system heats from fill temperature to operating temperature. It must account for the water volume expansion coefficient over the temperature range.",
+    "options": [
+      { "text": "500 gallons", "value": "500", "correct": false, "feedback": "500 gallons per tank (2,000 total for 4 tanks) would only accommodate 10% expansion of the 20,000 gallon system. Water expansion from 60°F to 120°F is less than 2%, but the tank acceptance must be larger than the expansion volume alone." },
+      { "text": "1,710 gallons", "value": "1710", "correct": true, "feedback": "Correct! Per the UCSB schedule, each tank has 1,710 gallons of acceptance volume in a 2,640-gallon tank. The acceptance volume must exceed the system expansion volume plus a safety margin, with the remaining tank volume providing the air cushion at the 30 PSIG fill pressure." },
+      { "text": "2,640 gallons", "value": "2640", "correct": false, "feedback": "2,640 gallons is the total tank volume, not the acceptance volume. The acceptance volume (1,710 gallons) is always less than the total tank volume because the bladder requires an air charge cushion above the water." },
+      { "text": "5,000 gallons", "value": "5000", "correct": false, "feedback": "5,000 gallons would be 25% of the system volume — far more than needed. The scheduled acceptance volume of 1,710 gallons per tank (6,840 gallons total across 4 tanks) properly accounts for thermal expansion of the 20,000-gallon system." }
+    ],
+    "explanation": "The Taco CA-10000-125 expansion tanks at UCSB each have 1,710 gallons acceptance in a 2,640-gallon tank body. The 30 PSIG fill pressure pre-charges the air side of the bladder. With four tanks totaling 6,840 gallons of acceptance for a 20,000-gallon system, the design accommodates water expansion from fill temperature through the 120°F operating temperature plus safety margin. The 125 PSIG rated pressure provides adequate margin above the system relief valve setting.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-pipe-027",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "UCSB Radiator Flow Rate",
+    "scenario": "On the UCSB San Benito project, wall radiator WH-1 (Runtal R3F-4) is rated at 4,785 BTU/hr with entering water at 119°F and leaving at 101°F. What flow rate in GPM is required to deliver this heating capacity?",
+    "hint": "Use the hydronic heating formula: GPM = BTU/hr / (500 x Delta-T). The 500 factor converts GPM to lbs/hr for water (8.33 lb/gal x 60 min/hr = 500). Delta-T is the temperature drop across the radiator.",
+    "options": [
+      { "text": "0.3 GPM", "value": "0.3", "correct": false, "feedback": "0.3 GPM is the flow for the smaller radiator WH-2 at 2,339 BTU/hr. At 0.3 GPM with an 18°F delta-T, you would only get 0.3 x 500 x 18 = 2,700 BTU/hr — not enough for WH-1." },
+      { "text": "0.6 GPM", "value": "0.6", "correct": true, "feedback": "Correct! Per the schedule, WH-1 requires 0.6 GPM. Checking: 0.6 GPM x 500 x (119-101)°F = 0.6 x 500 x 18 = 5,400 BTU/hr. The slight difference from 4,785 BTU/hr accounts for the radiator's actual heat transfer efficiency." },
+      { "text": "1.0 GPM", "value": "1.0", "correct": false, "feedback": "1.0 GPM at 18°F delta-T would deliver 9,000 BTU/hr — nearly double what WH-1 needs. Oversizing flow wastes pump energy and creates balancing issues with other radiators on the loop." },
+      { "text": "2.0 GPM", "value": "2.0", "correct": false, "feedback": "2.0 GPM would deliver 18,000 BTU/hr at the same delta-T — almost 4x the radiator's capacity. High flow rates through a small radiator also create noise from water velocity through the valve." }
+    ],
+    "explanation": "The Runtal R3F-4 radiator WH-1 requires 0.6 GPM per the UCSB schedule. Using the hydronic formula: Q = GPM x 500 x delta-T = 0.6 x 500 x 18 = 5,400 BTU/hr theoretical. The schedule rating of 4,785 BTU/hr reflects actual radiator performance including surface heat transfer coefficients and room air temperature effects. The 119°F EWT and 101°F LWT give an 18°F drop — typical for low-temperature hot water radiator systems.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-pipe-028",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Underground Main Header Pipe Size",
+    "scenario": "On the UCSB San Benito site plan, the underground hot water supply and return headers run from the central plant to the residential buildings. What pipe size are the main headers?",
+    "hint": "The central plant serves the entire campus through underground pre-insulated piping. Main headers must be sized for the total system flow — all buildings combined. Check the site plan for the largest pipe size leaving the central plant.",
+    "options": [
+      { "text": "8\" HWS/HWR", "value": "8", "correct": false, "feedback": "8\" is used for branch headers serving individual buildings or building clusters. The main headers leaving the central plant must be larger to carry the total campus flow." },
+      { "text": "10\" HWS/HWR", "value": "10", "correct": false, "feedback": "10\" pipe is not shown on the UCSB site plan. The main headers jump from 8\" branches directly to 14\" mains at the central plant." },
+      { "text": "14\" HWS/HWR", "value": "14", "correct": true, "feedback": "Correct! Per the UCSB site plan, the main headers are 14\" HWS and 14\" HWR. These carry the full system flow from the central plant to the campus distribution network, where they reduce to 8\", 6\", 4\", 3\", 2-1/2\", and 2\" as they branch to individual buildings." },
+      { "text": "16\" HWS/HWR", "value": "16", "correct": false, "feedback": "16\" exceeds the main header size shown on the UCSB plans. The 14\" mains provide adequate capacity for the campus heating load at design velocity." }
+    ],
+    "explanation": "The UCSB San Benito district heating system uses 14\" HWS and 14\" HWR main headers from the central plant. The piping reduces progressively as it branches: 14\" mains to 8\" sub-mains to 6\" to 4\" to 3\" to 2-1/2\" to 2\" building connections. Underground piping outside the central plant is rated for 180 degrees F, while all other underground piping is rated for 140 degrees F.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-029",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Building 7 Hydronic Riser Size",
+    "scenario": "On the UCSB San Benito project, Building 7 is a larger residential building serving 7 floors of student housing with hydronic radiators. What pipe size are the main HWS/HWR risers in this building?",
+    "hint": "Larger buildings with more floors need bigger risers to handle the total flow for all connected radiators. Building 7 is specifically called out on the plans as having larger risers than the typical residential buildings.",
+    "options": [
+      { "text": "2\" HWS/HWR", "value": "2", "correct": false, "feedback": "2\" risers are used for the smallest building connections. A 7-floor building with multiple radiators per floor requires significantly more flow capacity than 2\" piping can handle." },
+      { "text": "2-1/2\" HWS/HWR", "value": "2.5", "correct": false, "feedback": "2-1/2\" is the typical riser size for standard residential buildings on the UCSB project. Building 7 is a larger building and requires bigger risers to serve its 7 floors." },
+      { "text": "4\" HWS/HWR", "value": "4", "correct": true, "feedback": "Correct! Per the UCSB plans, Building 7 has 4\" HWS/HWR risers — larger than the standard 2-1/2\" risers in typical residential buildings. The 7-floor building requires more flow capacity to serve all connected radiator units." },
+      { "text": "6\" HWS/HWR", "value": "6", "correct": false, "feedback": "6\" is used for underground sub-main distribution piping, not building risers. Even the largest residential building on the UCSB project uses 4\" risers." }
+    ],
+    "explanation": "Building 7 at UCSB San Benito uses 4\" HWS/HWR risers, compared to the standard 2-1/2\" risers in typical residential buildings. The riser size is driven by the total connected load — with 7 floors of radiator units at 3/4\" connections each, the riser must carry the cumulative flow. The piping reduces from 4\" at the base to smaller sizes at upper floors: branches reduce from 2-1/2\" to 1-1/2\" to 1-1/4\" to 1\" to 3/4\" at unit connections.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-pipe-030",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "UCSB Individual Radiator Connection Size",
+    "scenario": "On the UCSB San Benito project, hydronic piping branches from the floor distribution header to an individual wall-mounted radiator in a student room. What pipe size connects to the radiator unit?",
+    "hint": "Individual radiator connections are the smallest pipes in the hydronic distribution system. The branch piping reduces progressively from the riser to the unit — check what the final connection size is at the radiator.",
+    "options": [
+      { "text": "1/2\" HWS and 1/2\" HWR", "value": "0.5", "correct": false, "feedback": "1/2\" is too small for radiator connections in a commercial/institutional hydronic system. The flow restriction would cause excessive pressure drop and prevent the radiator from reaching design output." },
+      { "text": "3/4\" HWS and 3/4\" HWR", "value": "0.75", "correct": true, "feedback": "Correct! Per the UCSB plans, each radiator unit connects with 3/4\" HWS and 3/4\" HWR piping. This is the standard connection size for residential wall-mounted radiators like the Runtal R3F-4 units specified on this project." },
+      { "text": "1\" HWS and 1\" HWR", "value": "1", "correct": false, "feedback": "1\" is the next size up in the branch reduction sequence (riser to 1-1/2\" to 1-1/4\" to 1\" to 3/4\"). The 1\" size serves the branch header, not the individual unit connection." },
+      { "text": "1-1/2\" HWS and 1-1/2\" HWR", "value": "1.5", "correct": false, "feedback": "1-1/2\" is used for floor branch distribution piping, not individual unit connections. The system reduces: riser to 1-1/2\" branch to 1-1/4\" to 1\" to 3/4\" at the radiator." }
+    ],
+    "explanation": "Individual radiator units on the UCSB project connect with 3/4\" HWS and 3/4\" HWR piping. The hydronic distribution follows a progressive reduction pattern: main riser (2-1/2\" or 4\" depending on building) to floor branch 1-1/2\" to 1-1/4\" to 1\" to 3/4\" at the unit. Each unit has isolation valves and the floor branch has automatic balancing valves to ensure even flow distribution across all radiators.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-pipe-031",
+    "type": "size-it",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Underground Piping Temperature Rating",
+    "scenario": "On the UCSB San Benito site plan, underground pre-insulated hot water piping runs from the central plant to the residential buildings. What temperature must the piping directly outside the central plant be rated for?",
+    "hint": "The central plant produces the hottest water in the system. Underground piping nearest the plant sees the highest temperatures before any heat loss occurs in the distribution network.",
+    "options": [
+      { "text": "120 degrees F", "value": "120", "correct": false, "feedback": "120 degrees F is the leaving water temperature from the heat pumps (LWT). The underground piping must be rated higher than the operating temperature to provide a safety margin and account for peak conditions." },
+      { "text": "140 degrees F", "value": "140", "correct": false, "feedback": "140 degrees F is the rating for underground piping away from the central plant (to/from buildings). The piping directly outside the central plant requires a higher rating because it sees hotter water during peak heating conditions." },
+      { "text": "180 degrees F", "value": "180", "correct": true, "feedback": "Correct! Per the UCSB plans, underground piping outside the central plant must be rated for 180 degrees F. This accounts for peak heating conditions when the electric boiler supplements the heat pumps, potentially producing water above the normal 120 degrees F operating temperature." },
+      { "text": "212 degrees F", "value": "212", "correct": false, "feedback": "212 degrees F (boiling point at sea level) exceeds the specification. The UCSB system is a hot water system, not steam, so piping ratings do not need to reach boiling temperatures." }
+    ],
+    "explanation": "The UCSB plans specify two temperature ratings for underground piping: 180 degrees F for piping directly outside the central plant, and 140 degrees F for all other underground piping. The higher rating near the plant accounts for peak conditions when the electric boiler (Fulton EZE-480) supplements the air-to-water heat pumps. The pre-insulated piping must terminate a minimum of 2'-0\" inside the building to allow proper transition to building piping systems.",
+    "xpReward": 45
+  }
+]

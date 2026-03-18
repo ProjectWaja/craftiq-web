@@ -1,0 +1,291 @@
+[
+  {
+    "id": "ww-plmb-001",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Residential DWV Drain Line",
+    "components": [
+      { "id": 1, "name": "4\" PVC main building drain", "correct": true },
+      { "id": 2, "name": "Horizontal drain pipe sloped at 1/16\" per foot", "correct": false, "violation": "Drain pipes 3\" and larger require a minimum slope of 1/8\" per foot. Pipes smaller than 3\" require 1/4\" per foot minimum. A slope of 1/16\" per foot will not provide adequate flow velocity to carry solids.", "codeReference": "IPC 704.1" },
+      { "id": 3, "name": "Cleanout at base of stack", "correct": true },
+      { "id": 4, "name": "3\" branch drain connected with sanitary tee on its back (horizontal)", "correct": false, "violation": "Sanitary tees may only be used for vertical-to-horizontal transitions. For horizontal-to-horizontal connections, a wye with 45-degree bend or combination wye-bend must be used to maintain proper flow.", "codeReference": "IPC 706.3" },
+      { "id": 5, "name": "Proper pipe support hangers at 4-foot intervals", "correct": true },
+      { "id": 6, "name": "ABS to PVC connection with solvent cement", "correct": false, "violation": "ABS and PVC cannot be joined with solvent cement. These dissimilar plastics require a listed mechanical coupling (such as a banded no-hub coupling) or approved transition fitting.", "codeReference": "IPC 705.5" }
+    ],
+    "explanation": "DWV systems must maintain proper slope for drainage, use correct fittings for each orientation, and never mix plastic pipe materials without approved transition fittings. These are fundamental plumbing code requirements.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-plmb-002",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Kitchen Sink Drain Installation",
+    "components": [
+      { "id": 1, "name": "Basket strainer with proper putty seal", "correct": true },
+      { "id": 2, "name": "Continuous waste connecting double bowl", "correct": true },
+      { "id": 3, "name": "S-trap under sink", "correct": false, "violation": "S-traps are prohibited by code because they are prone to self-siphoning, which breaks the trap seal and allows sewer gases into the living space. A P-trap must be used instead.", "codeReference": "IPC 1002.2" },
+      { "id": 4, "name": "1-1/4\" tailpiece from sink", "correct": false, "violation": "Kitchen sinks require a minimum 1-1/2\" drain. The 1-1/4\" size is only permitted for lavatory (bathroom) sinks. An undersized kitchen drain will clog frequently from food waste.", "codeReference": "IPC Table 709.1" },
+      { "id": 5, "name": "Dishwasher drain connected to disposal", "correct": true },
+      { "id": 6, "name": "AAV (Air Admittance Valve) properly installed", "correct": true }
+    ],
+    "explanation": "Kitchen sink plumbing requires P-traps (never S-traps), properly sized drain pipes, and correct connections. S-traps are one of the most common code violations found in DIY plumbing work.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-plmb-003",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Heater Installation",
+    "components": [
+      { "id": 1, "name": "Gas water heater on garage floor", "correct": false, "violation": "Gas-fired water heaters in garages must have their ignition source elevated a minimum of 18 inches above the garage floor to prevent ignition of flammable vapors from gasoline and other fuels.", "codeReference": "IPC 501.1 / IFGC 305.3" },
+      { "id": 2, "name": "T&P relief valve installed in top 6 inches", "correct": true },
+      { "id": 3, "name": "T&P discharge pipe reduced from 3/4\" to 1/2\"", "correct": false, "violation": "The T&P relief valve discharge pipe must not be smaller than the valve outlet, which is 3/4\". Reducing the pipe restricts the relief flow and creates a dangerous pressure condition.", "codeReference": "IPC 504.6.2" },
+      { "id": 4, "name": "Gas shutoff valve within 6 feet of unit", "correct": true },
+      { "id": 5, "name": "Proper venting through roof", "correct": true },
+      { "id": 6, "name": "Sediment trap (drip leg) on gas line", "correct": true }
+    ],
+    "explanation": "Water heater installations are one of the most inspected plumbing items. Elevation in garages, proper T&P valve piping, and gas safety are all life-safety requirements that protect occupants.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-plmb-004",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Bathroom Lavatory Rough-In",
+    "components": [
+      { "id": 1, "name": "1-1/4\" P-trap installed correctly", "correct": true },
+      { "id": 2, "name": "Trap arm longer than allowed distance to vent", "correct": false, "violation": "For a 1-1/4\" trap arm, the maximum distance to the vent is 5 feet. Exceeding this distance risks siphoning the trap seal. The trap arm distance is measured from the trap weir to the vent connection.", "codeReference": "IPC Table 906.1" },
+      { "id": 3, "name": "Hot water on left side supply", "correct": true },
+      { "id": 4, "name": "Supply valves (angle stops) installed", "correct": true },
+      { "id": 5, "name": "Vent pipe connected below the trap weir", "correct": false, "violation": "The vent connection must be above the trap weir (the overflow point of the trap). Connecting below the weir makes it a wet vent carrying waste, not a true vent, and will not properly protect the trap seal.", "codeReference": "IPC 905.2" }
+    ],
+    "explanation": "Lavatory rough-ins require proper trap arm length to maintain the trap seal and correct vent placement above the trap weir. These details are critical during rough-in inspection.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-plmb-005",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Residential Water Supply Piping",
+    "components": [
+      { "id": 1, "name": "3/4\" copper main supply entering house", "correct": true },
+      { "id": 2, "name": "Main shutoff valve at point of entry", "correct": true },
+      { "id": 3, "name": "No backflow preventer at hose bibb", "correct": false, "violation": "All hose bibbs (sill cocks) must have a backflow preventer or be a listed frost-proof hose bibb with integral vacuum breaker to prevent backflow contamination of the potable water supply.", "codeReference": "IPC 608.15.4.2" },
+      { "id": 4, "name": "1/2\" branch lines to fixtures", "correct": true },
+      { "id": 5, "name": "Lead solder used on copper joints", "correct": false, "violation": "Lead solder is prohibited on any pipe or fitting in a potable water system. Only lead-free solder (0.2% maximum lead content) may be used per the Safe Drinking Water Act and plumbing codes.", "codeReference": "IPC 605.11.2" },
+      { "id": 6, "name": "Water hammer arrestors at washing machine", "correct": true }
+    ],
+    "explanation": "Potable water systems must prevent backflow contamination and use only lead-free materials. These requirements protect public health and are strictly enforced.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-plmb-006",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Commercial Restroom Fixture Venting",
+    "components": [
+      { "id": 1, "name": "Water closets with proper flush valves", "correct": true },
+      { "id": 2, "name": "3\" vent pipe through roof", "correct": true },
+      { "id": 3, "name": "Crown vent installed on P-trap", "correct": false, "violation": "Crown venting (connecting the vent at the top of the trap) is prohibited because it creates a cross-connection path and can siphon waste into the vent. The vent must connect to the trap arm downstream of the trap.", "codeReference": "IPC 906.2" },
+      { "id": 4, "name": "Horizontal vent pipe below flood-level rim of fixture", "correct": false, "violation": "Vent pipes must rise vertically to a point at least 6 inches above the flood-level rim of the highest fixture served before turning horizontal. This prevents waste from backing up into the vent.", "codeReference": "IPC 905.5" },
+      { "id": 5, "name": "Floor drains with trap primers", "correct": true },
+      { "id": 6, "name": "Urinals with proper spacing and carriers", "correct": true }
+    ],
+    "explanation": "Commercial venting systems must follow strict rules about vent connections and routing. Crown venting and improperly routed horizontal vents are common violations that compromise the entire DWV system.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-plmb-007",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Cross-Connection Control",
+    "components": [
+      { "id": 1, "name": "Backflow preventer on irrigation system", "correct": true },
+      { "id": 2, "name": "Boiler fill with RPZ backflow preventer", "correct": true },
+      { "id": 3, "name": "Garden hose submerged in swimming pool", "correct": false, "violation": "A garden hose submerged in a pool creates a direct cross-connection. If a back-siphonage event occurs, contaminated pool water can be drawn into the potable supply. Hose bibbs must have vacuum breakers and hoses must never be submerged.", "codeReference": "IPC 608.1" },
+      { "id": 4, "name": "Laundry tub faucet with spout below rim", "correct": false, "violation": "Faucets and fill valves must maintain an air gap of at least 1 inch or two pipe diameters (whichever is greater) above the flood-level rim of the fixture. A spout that can be submerged creates a backflow risk.", "codeReference": "IPC 608.15.1" },
+      { "id": 5, "name": "Atmospheric vacuum breaker on lawn sprinkler", "correct": true },
+      { "id": 6, "name": "Water softener with listed air gap on drain", "correct": true }
+    ],
+    "explanation": "Cross-connection control is one of the most important aspects of plumbing. Every connection between potable and non-potable water must have appropriate backflow protection to prevent contamination.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-plmb-008",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Gas Piping for Water Heater",
+    "components": [
+      { "id": 1, "name": "CSST (corrugated stainless steel tubing) with proper bonding", "correct": true },
+      { "id": 2, "name": "Manual gas shutoff valve within reach", "correct": true },
+      { "id": 3, "name": "No sediment trap (drip leg) before gas valve", "correct": false, "violation": "A sediment trap (drip leg) must be installed as close as practical to the appliance inlet and ahead of the gas valve. It captures moisture and debris that could damage the gas valve.", "codeReference": "IFGC 408.4 / IPC 1212.7" },
+      { "id": 4, "name": "Gas pipe running through a return air duct", "correct": false, "violation": "Gas piping must not be installed in or through any air duct, clothes chute, chimney, vent, dumbwaiter, or elevator shaft. A leak inside a duct would distribute gas throughout the building.", "codeReference": "IFGC 404.3" },
+      { "id": 5, "name": "Proper pipe support at 6-foot intervals", "correct": true }
+    ],
+    "explanation": "Gas piping installation requires sediment traps to protect appliance gas valves and must never run through air ducts or concealed shafts where leaks cannot be detected and could spread through the building.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-plmb-009",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Shower/Tub Drain and Valve",
+    "components": [
+      { "id": 1, "name": "2\" shower drain with strainer", "correct": true },
+      { "id": 2, "name": "Shower valve without pressure-balancing or thermostatic protection", "correct": false, "violation": "All shower and tub/shower combination valves must be pressure-balancing, thermostatic-mixing, or combination type to prevent scalding. This is a life-safety requirement, especially for children and elderly.", "codeReference": "IPC 424.3 / ASSE 1016" },
+      { "id": 3, "name": "Shower pan liner with proper dam at door", "correct": true },
+      { "id": 4, "name": "P-trap installed correctly below drain", "correct": true },
+      { "id": 5, "name": "Shower head at 80 inches above floor", "correct": true },
+      { "id": 6, "name": "Hot water supply connected to right side of valve", "correct": false, "violation": "Hot water must be connected to the left side of the valve (when facing the valve from inside the shower). This is a universal plumbing convention and code requirement to prevent scalding confusion.", "codeReference": "IPC 424.5" }
+    ],
+    "explanation": "Shower installations require anti-scald protection and proper hot/cold orientation. Scalding injuries are serious, and pressure-balancing or thermostatic valves are required by code to protect occupants.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-plmb-010",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Service Entry",
+    "components": [
+      { "id": 1, "name": "1\" copper water service from meter", "correct": true },
+      { "id": 2, "name": "Main shutoff valve inside building", "correct": true },
+      { "id": 3, "name": "No expansion tank on closed system", "correct": false, "violation": "When a backflow preventer or check valve is installed on the water service (creating a closed system), a thermal expansion tank is required. Without it, heated water expanding has nowhere to go and can cause dangerous pressure buildup.", "codeReference": "IPC 607.3.2" },
+      { "id": 4, "name": "Pressure reducing valve set to 80 PSI", "correct": false, "violation": "Water pressure must not exceed 80 PSI at any fixture. However, pressure reducing valves should typically be set to 60-70 PSI to provide a safety margin. At 80 PSI exactly, there is no margin for pressure spikes or regulator drift.", "codeReference": "IPC 604.8" },
+      { "id": 5, "name": "Copper pipe properly sleeved through foundation", "correct": true },
+      { "id": 6, "name": "Dielectric union at copper-to-steel transition", "correct": true }
+    ],
+    "explanation": "Water service entry requires proper pressure control and thermal expansion protection. A closed system (with backflow preventer) without an expansion tank can cause the T&P valve on the water heater to weep or, worse, cause pipe or fitting failure.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-plmb-011",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Medical Gas Piping System",
+    "components": [
+      { "id": 1, "name": "Brazed copper tube joints with nitrogen purge", "correct": true },
+      { "id": 2, "name": "Pipe labeled with proper color coding", "correct": true },
+      { "id": 3, "name": "Zone valve boxes properly located", "correct": true },
+      { "id": 4, "name": "Standard plumbing solder used on oxygen lines", "correct": false, "violation": "Standard plumbing solder contains tin and sometimes other contaminants that are incompatible with oxygen systems. Medical gas piping must be brazed with BCuP-5 (silver-phosphorus-copper) alloy while purging with oil-free nitrogen.", "codeReference": "NFPA 99 / ASSE 6010" },
+      { "id": 5, "name": "No pressure test with oil-free nitrogen before use", "correct": false, "violation": "Medical gas piping must undergo a standing pressure test at 1.5 times the working pressure using oil-free nitrogen for 24 hours, followed by purging and cross-connection verification before any patient use.", "codeReference": "NFPA 99, Section 5.1.12" },
+      { "id": 6, "name": "Alarm panels connected to building management", "correct": true }
+    ],
+    "explanation": "Medical gas piping is a specialized plumbing discipline governed by NFPA 99 and ASSE standards. Material selection, brazing procedures, and testing protocols are extremely strict because patient lives depend on system purity and integrity.",
+    "xpReward": 90
+  },
+  {
+    "id": "ww-plmb-012",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Grease Interceptor Installation",
+    "components": [
+      { "id": 1, "name": "Interceptor sized per fixture unit load", "correct": true },
+      { "id": 2, "name": "Flow control fitting installed at inlet", "correct": true },
+      { "id": 3, "name": "Garbage disposal connected upstream of interceptor", "correct": false, "violation": "Garbage disposals (food waste disposers) are generally prohibited from discharging through a grease interceptor. The ground food particles overwhelm the interceptor's capacity and require much more frequent cleaning, reducing effectiveness.", "codeReference": "IPC 1003.3.5" },
+      { "id": 4, "name": "Cleanout access at inlet and outlet", "correct": true },
+      { "id": 5, "name": "No sampling port on outlet", "correct": false, "violation": "A sampling tee or port must be installed on the outlet (downstream) side of the interceptor to allow the municipality or authority to test effluent quality. This is required by most jurisdictions and sewer use ordinances.", "codeReference": "IPC 1003.3.4" },
+      { "id": 6, "name": "Interceptor properly vented", "correct": true }
+    ],
+    "explanation": "Grease interceptor installations must comply with both plumbing codes and local sewer authority requirements. Proper sizing, no garbage disposal connections, and downstream sampling are critical for commercial kitchen compliance.",
+    "xpReward": 85
+  },
+  {
+    "id": "ww-plmb-013",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Union Hall Training: Backflow Prevention Assembly",
+    "components": [
+      { "id": 1, "name": "Isolation valves installed on both sides of the RPZ assembly", "correct": true },
+      { "id": 2, "name": "RPZ backflow preventer installed in a below-grade pit below the flood rim level", "correct": false, "violation": "An RPZ assembly must never be installed in a pit or vault below the flood rim level. The relief port is designed to discharge water to atmosphere when backpressure is detected. If submerged, the relief port cannot function and the device cannot protect the potable supply — defeating its entire purpose.", "codeReference": "ASSE 5013 / USC Manual of Cross-Connection Control" },
+      { "id": 3, "name": "Test cocks obstructed and not accessible for annual testing", "correct": false, "violation": "Test cocks on backflow preventers must remain accessible for annual field testing by a certified tester. Obstructing or burying test cocks prevents required testing and is a violation of the water purveyor's cross-connection control program.", "codeReference": "IPC 312.10 / ASSE 5110" },
+      { "id": 4, "name": "Assembly supported at proper height with strut channel and hangers", "correct": true },
+      { "id": 5, "name": "Relief port discharge pipe terminated with no air gap above nearest drain", "correct": false, "violation": "The relief port discharge must terminate with an air gap above any drain receptor. Without an air gap, a cross-connection is created at the very device meant to prevent cross-connections. The discharge must also be visible to indicate when the relief valve is operating.", "codeReference": "IPC 608.16.4 / ASSE 5013" },
+      { "id": 6, "name": "Strainer installed upstream of the RPZ assembly", "correct": true }
+    ],
+    "explanation": "Backflow preventer installation is a core UA (United Association) training topic. RPZ assemblies are the highest level of backflow protection and must be installed above grade where the relief port can discharge freely. Test cocks must remain accessible for the annual certification test required by water purveyors. These are critical public health protection devices.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-plmb-014",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Union Hall Training: Medical Gas Brazing",
+    "components": [
+      { "id": 1, "name": "Tube cut square with a tubing cutter and deburred", "correct": true },
+      { "id": 2, "name": "Joint surfaces properly cleaned and prepared before brazing", "correct": true },
+      { "id": 3, "name": "Using standard silver solder (BAg) instead of BCuP-5 on oxygen lines", "correct": false, "violation": "Standard silver brazing alloy (BAg series) contains flux and materials not suitable for oxygen service. Oxygen lines require phosphorus-copper-silver alloy (BCuP-5) applied without flux, as flux residue can contaminate the oxygen supply and is a combustion risk in an oxygen-enriched environment.", "codeReference": "NFPA 99 Section 5.1.10 / ASSE 6010" },
+      { "id": 4, "name": "No nitrogen purge flowing through the pipe during brazing", "correct": false, "violation": "An oil-free nitrogen purge must flow continuously through the tube during all brazing operations. Without a nitrogen purge, copper oxide scale forms inside the joint. This scale can break loose and contaminate the medical gas system, potentially reaching patients and causing serious harm.", "codeReference": "NFPA 99 Section 5.1.10.4 / ASSE 6010" },
+      { "id": 5, "name": "No fire watch posted during brazing operations", "correct": false, "violation": "A dedicated fire watch must be posted during and for a minimum period after all brazing and hot work operations per NFPA 51B. In a healthcare facility, this is especially critical due to the presence of oxygen-enriched environments and vulnerable patients.", "codeReference": "NFPA 51B / OSHA 1926.352" },
+      { "id": 6, "name": "Brazer holds current ASSE 6010 medical gas certification", "correct": true }
+    ],
+    "explanation": "Medical gas brazing is a specialized UA skill requiring ASSE 6010 certification. Apprentices learn at the union hall that oxygen lines demand phosphorus-free brazing alloy (BCuP-5), continuous nitrogen purging to prevent internal oxidation, and strict fire watch protocols. A contaminated medical gas system can directly harm or kill patients — there is zero tolerance for procedural shortcuts.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-plmb-015",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Butterfly Valve Installation",
+    "components": [
+      { "id": 1, "name": "Butterfly valve properly aligned between flanges", "correct": true },
+      { "id": 2, "name": "8-inch butterfly valve with lever handle operator", "correct": false, "violation": "Butterfly valves 6 inches and larger must be equipped with a gear operator, not a lever handle. Lever handles on large valves allow rapid closure that causes water hammer, and they cannot provide the fine control needed for balancing. Gear operators also prevent unauthorized operation.", "codeReference": "UCSB Plumbing Specification / AWWA C504" },
+      { "id": 3, "name": "Valve stem oriented correctly per manufacturer", "correct": true },
+      { "id": 4, "name": "Flange bolts torqued to specification", "correct": true },
+      { "id": 5, "name": "Position indicator visible on valve", "correct": true },
+      { "id": 6, "name": "Isolation valve accessible for maintenance", "correct": true }
+    ],
+    "explanation": "Large butterfly valves require gear operators for controlled operation. A lever handle on an 8-inch valve allows a single person to slam the valve shut, creating destructive water hammer that can damage piping, fittings, and equipment throughout the system.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-plmb-016",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Valve Pressure Rating Mismatch",
+    "components": [
+      { "id": 1, "name": "System designed for 125 psi operating pressure", "correct": true },
+      { "id": 2, "name": "Gate valve rated at only 100 psi installed on 125 psi system", "correct": false, "violation": "Valves must be rated to exceed the maximum operating pressure by at least 50% per UCSB specifications. A 100 psi rated valve on a 125 psi system is under-rated and risks catastrophic valve body failure. A minimum 200 psi rated valve (Class 150) is required.", "codeReference": "UCSB Plumbing Specification / ASME B16.34" },
+      { "id": 3, "name": "Pressure relief valve set at 150 psi", "correct": true },
+      { "id": 4, "name": "Pressure gauge installed with snubber", "correct": true },
+      { "id": 5, "name": "Check valve on pump discharge", "correct": true },
+      { "id": 6, "name": "Pipe supports at proper intervals", "correct": true },
+      { "id": 7, "name": "System hydrostatic test completed and documented", "correct": true }
+    ],
+    "explanation": "Valve pressure ratings must exceed maximum operating pressure by a safety margin. UCSB specs require a minimum 50% safety factor. Installing under-rated valves creates a risk of catastrophic failure that can flood occupied spaces and endanger personnel.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-plmb-017",
+    "type": "whats-wrong",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Grooved Coupling Gasket on Steam System",
+    "components": [
+      { "id": 1, "name": "Grooved-end pipe properly roll-grooved", "correct": true },
+      { "id": 2, "name": "Grooved coupling with EPDM gasket installed on 300°F steam line", "correct": false, "violation": "EPDM gaskets have a maximum continuous service temperature of 250°F. Using EPDM on a 300°F steam line exceeds the gasket temperature rating, leading to gasket degradation, steam leaks, and potential burn injuries. A Grade T or high-temperature silicone gasket rated for the service temperature is required.", "codeReference": "ASTM D2000 / Victaulic Grade T Gasket Specifications" },
+      { "id": 3, "name": "Coupling housing torqued to manufacturer specifications", "correct": true },
+      { "id": 4, "name": "Pipe properly aligned and supported at coupling", "correct": true },
+      { "id": 5, "name": "Steam trap downstream of equipment", "correct": true },
+      { "id": 6, "name": "Drip leg at end of steam main", "correct": true },
+      { "id": 7, "name": "Safety relief valve protecting isolated section", "correct": true }
+    ],
+    "explanation": "Gasket material compatibility with service temperature is critical in steam systems. EPDM is excellent for hot water up to 250°F but will fail rapidly at steam temperatures above its rating. Always verify gasket material ratings match the actual service conditions before installation.",
+    "xpReward": 75
+  }
+]

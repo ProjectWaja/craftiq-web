@@ -1,0 +1,160 @@
+[
+  {
+    "id": "seq-dc-001",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Server Room Commissioning",
+    "description": "Put the data center server room commissioning steps in the correct order, from construction completion to live operations.",
+    "steps": [
+      { "id": 1, "text": "Perform deep clean of room — remove construction debris and dust", "order": 1 },
+      { "id": 2, "text": "Install raised floor system with proper pedestal heights and leveling", "order": 2 },
+      { "id": 3, "text": "Install and start CRAH cooling units, bring room to operating temperature", "order": 3 },
+      { "id": 4, "text": "Power on UPS system and verify battery charge and bypass operation", "order": 4 },
+      { "id": 5, "text": "Cool room to target temperature (68-72°F) and stabilize humidity (40-60% RH)", "order": 5 },
+      { "id": 6, "text": "Perform full load bank test on UPS and generator transfer", "order": 6 },
+      { "id": 7, "text": "Install servers and IT equipment into racks", "order": 7 },
+      { "id": 8, "text": "Verify environmental monitoring, alarms, and DCIM integration", "order": 8 }
+    ],
+    "explanation": "Server room commissioning follows a strict sequence. The room must be clean before floor installation to prevent particulate contamination. Cooling must be operational before IT equipment is installed — servers powered on in an uncooled room can overheat in minutes. Load bank testing verifies power infrastructure under controlled conditions before risking live equipment.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-dc-002",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "UPS Battery Replacement",
+    "description": "Sequence the steps for safely replacing UPS battery strings in a live data center without interrupting IT load.",
+    "steps": [
+      { "id": 1, "text": "Notify operations and obtain change management approval", "order": 1 },
+      { "id": 2, "text": "Transfer UPS to internal maintenance bypass mode", "order": 2 },
+      { "id": 3, "text": "Verify load is being carried by the bypass path using output metering", "order": 3 },
+      { "id": 4, "text": "Open battery disconnect breaker and verify zero voltage at terminals", "order": 4 },
+      { "id": 5, "text": "Remove old battery strings, following proper PPE and handling procedures", "order": 5 },
+      { "id": 6, "text": "Install new battery strings and torque all connections to specification", "order": 6 },
+      { "id": 7, "text": "Close battery disconnect breaker and verify charging current", "order": 7 },
+      { "id": 8, "text": "Return UPS to normal online (double-conversion) mode and verify operation", "order": 8 }
+    ],
+    "explanation": "Battery replacement in a live data center requires careful coordination. The UPS bypass ensures load continuity during the maintenance window. Verifying zero voltage before touching batteries prevents DC arc flash incidents. New batteries must charge fully before the UPS is returned to normal mode to ensure backup runtime.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-dc-003",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Hot Aisle Containment Installation",
+    "description": "Order the steps for retrofitting hot aisle containment on an existing server rack row.",
+    "steps": [
+      { "id": 1, "text": "Position racks in proper hot/cold aisle alignment with consistent row spacing", "order": 1 },
+      { "id": 2, "text": "Install blanking panels in all empty U-spaces within racks", "order": 2 },
+      { "id": 3, "text": "Mount end wall frames and panels at both ends of the hot aisle", "order": 3 },
+      { "id": 4, "text": "Install containment roof panel framework spanning between rack tops", "order": 4 },
+      { "id": 5, "text": "Place roof panels and seal gaps between racks and roof structure", "order": 5 },
+      { "id": 6, "text": "Install self-closing doors with magnetic latches at end walls", "order": 6 },
+      { "id": 7, "text": "Verify containment integrity and seal any remaining air gaps", "order": 7 }
+    ],
+    "explanation": "Hot aisle containment must be built from the rack outward. Blanking panels seal the rack-level bypasses first, then end walls and roof panels create the enclosure. Doors go last since they need the frame structure in place. Sealing gaps is the final critical step — even small leaks significantly reduce containment effectiveness.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-dc-004",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Clean Agent Suppression Activation Sequence",
+    "description": "Order the events that occur during an automatic clean agent fire suppression activation, from initial detection to agent hold time.",
+    "steps": [
+      { "id": 1, "text": "VESDA air sampling detects smoke at Alert threshold (earliest warning)", "order": 1 },
+      { "id": 2, "text": "VESDA reaches Action threshold — first alarm stage activates", "order": 2 },
+      { "id": 3, "text": "Second detector confirms fire condition (cross-zone verification)", "order": 3 },
+      { "id": 4, "text": "Pre-discharge alarm activates — audible horn and visible strobes", "order": 4 },
+      { "id": 5, "text": "Countdown timer begins (typically 30-60 seconds) for personnel evacuation", "order": 5 },
+      { "id": 6, "text": "Abort window — manual abort switch can halt discharge if false alarm", "order": 6 },
+      { "id": 7, "text": "Solenoid valve opens and clean agent discharges into protected space", "order": 7 },
+      { "id": 8, "text": "Room pressurizes and agent must maintain design concentration for required hold time (10+ minutes)", "order": 8 }
+    ],
+    "explanation": "Clean agent suppression follows a precise sequence designed to balance rapid fire response with personnel safety. Cross-zone verification prevents false discharges. The pre-discharge alarm and abort window give occupants time to evacuate. The hold time ensures the fire is fully extinguished and cannot reignite. Per NFPA 2001, every step is mandatory.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-dc-005",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Generator Load Bank Test",
+    "description": "Sequence the steps for performing a full load bank test on a standby diesel generator.",
+    "steps": [
+      { "id": 1, "text": "Inspect generator — check oil level, coolant, belts, and battery charger", "order": 1 },
+      { "id": 2, "text": "Verify fuel day tank level and fuel supply system operation", "order": 2 },
+      { "id": 3, "text": "Start generator at no-load and verify stable voltage and frequency", "order": 3 },
+      { "id": 4, "text": "Apply 25% load from load bank and monitor for 30 minutes", "order": 4 },
+      { "id": 5, "text": "Increase to 50% rated load and monitor temperatures and pressures", "order": 5 },
+      { "id": 6, "text": "Increase to 75% rated load and verify all parameters within limits", "order": 6 },
+      { "id": 7, "text": "Increase to 100% rated load and run for minimum 2 hours per NFPA 110", "order": 7 },
+      { "id": 8, "text": "Remove load incrementally, run at no-load for cool-down, then shutdown", "order": 8 }
+    ],
+    "explanation": "Load bank testing proves the generator can deliver its rated capacity under controlled conditions. NFPA 110 requires annual load testing. Gradual load stepping prevents thermal shock to the engine. The 100% load run for 2 hours proves sustained capacity. Cool-down at no-load allows turbocharger bearings to cool before oil flow stops.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-dc-006",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Raised Floor Installation",
+    "description": "Order the steps for installing a raised floor system in a new data center room.",
+    "steps": [
+      { "id": 1, "text": "Establish reference grid layout and mark pedestal locations on slab", "order": 1 },
+      { "id": 2, "text": "Set pedestal heights using laser level to achieve uniform floor plane", "order": 2 },
+      { "id": 3, "text": "Level and secure pedestals to floor slab with adhesive or mechanical fasteners", "order": 3 },
+      { "id": 4, "text": "Install stringers connecting pedestals to create structural grid", "order": 4 },
+      { "id": 5, "text": "Lay standard solid floor tiles starting from reference corner", "order": 5 },
+      { "id": 6, "text": "Cut and fit perimeter tiles at walls and around columns", "order": 6 },
+      { "id": 7, "text": "Install perforated tiles at planned CRAH discharge locations and cold aisles", "order": 7 }
+    ],
+    "explanation": "Raised floor installation requires precision leveling to support equipment loads and maintain uniform plenum depth for airflow. Pedestals must be secured and leveled before tiles go down. Perforated tiles go last because their placement depends on the final CRAH and rack layout. Floor flatness is typically specified at +/- 1mm per TIA-942.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-dc-007",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "PDU Energization Sequence",
+    "description": "Sequence the steps for safely energizing a new floor-mount PDU in a live data center.",
+    "steps": [
+      { "id": 1, "text": "Verify all lockout/tagout devices are removed and clearance is granted", "order": 1 },
+      { "id": 2, "text": "Close utility main breaker and verify incoming voltage at switchgear", "order": 2 },
+      { "id": 3, "text": "Verify ATS (automatic transfer switch) is in normal source position", "order": 3 },
+      { "id": 4, "text": "Start UPS and verify it enters online double-conversion mode", "order": 4 },
+      { "id": 5, "text": "Verify UPS battery bank is charging and at acceptable voltage", "order": 5 },
+      { "id": 6, "text": "Close PDU input breaker and verify transformer output voltage", "order": 6 },
+      { "id": 7, "text": "Energize PDU output bus and verify voltage at panelboard", "order": 7 },
+      { "id": 8, "text": "Close individual branch circuit breakers and verify output at rack PDU strips", "order": 8 }
+    ],
+    "explanation": "PDU energization follows a strict top-down sequence from source to load. Each step is verified before proceeding to the next to catch wiring errors, transformer issues, or protection coordination problems before they affect downstream equipment. Energizing out of sequence can damage equipment or cause arc flash incidents.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-dc-008",
+    "type": "sequence",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "CRAH Chilled Water Startup",
+    "description": "Order the steps for starting up a CRAH (Computer Room Air Handler) unit connected to a chilled water plant.",
+    "steps": [
+      { "id": 1, "text": "Verify chilled water isolation valves are open on supply and return", "order": 1 },
+      { "id": 2, "text": "Open chilled water supply valve slowly to prevent water hammer", "order": 2 },
+      { "id": 3, "text": "Vent trapped air at high-point air vents on the coil piping", "order": 3 },
+      { "id": 4, "text": "Inspect all connections and fittings for leaks under pressure", "order": 4 },
+      { "id": 5, "text": "Start chilled water pump and verify design flow rate at balancing valve", "order": 5 },
+      { "id": 6, "text": "Enable CRAH cooling mode via the unit controller", "order": 6 },
+      { "id": 7, "text": "Verify chilled water supply temperature at coil inlet (typically 42-45°F)", "order": 7 },
+      { "id": 8, "text": "Check supply air temperature downstream of CRAH and adjust setpoints", "order": 8 }
+    ],
+    "explanation": "CRAH chilled water startup must be methodical to avoid water hammer, air locks, and leaks. Opening valves slowly prevents pressure surges. Venting air is critical — trapped air blocks flow through the coil and reduces cooling capacity. Verifying flow rate and temperatures confirms the unit can meet its design cooling load.",
+    "xpReward": 75
+  }
+]

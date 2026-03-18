@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cc-in-001",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "ASME B31.3 — Process Piping Hydrostatic Test Pressure",
+    "scenario": "A chemical plant is testing a new stainless steel process piping system designed for 150 psig at 400°F. The piping contractor fills the system with water and pressurizes it to 225 psig (1.5 times the design pressure) at ambient temperature. The test is held for 10 minutes with no pressure drop, then reduced to 150 psig for a visual inspection of all joints. No leaks are found and the test is documented.",
+    "isUpToCode": true,
+    "codeReference": "ASME B31.3 Section 345.4.2",
+    "explanation": "This passes ASME B31.3 requirements. Section 345.4.2 requires the hydrostatic test pressure to be at least 1.5 times the design pressure, corrected for the ratio of allowable stress at test temperature to allowable stress at design temperature. At ambient temperature (approximately 70°F), the allowable stress for most materials is equal to or greater than at 400°F, so the 1.5x multiplier applied to the design pressure of 150 psig gives 225 psig — the minimum acceptable test pressure. The 10-minute hold and subsequent visual inspection at design pressure satisfy the code examination requirements.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-in-002",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "NEC 500 — Standard Motor in Class I, Division 2 Area",
+    "scenario": "An engineer specifies a standard open-type (ODP — Open Drip-Proof) induction motor to drive a pump located in a Class I, Division 2, Group D area at a petroleum refinery. The engineer argues that since Division 2 only has hazardous concentrations during abnormal conditions, and the motor has no arcing components during normal operation, a standard motor is acceptable without explosionproof or Division 2 rating.",
+    "isUpToCode": false,
+    "codeReference": "NEC 501.125(B)",
+    "explanation": "This fails code. While NEC 501.125(B) does allow certain motor types in Class I, Division 2 locations, an open-type (ODP) motor is not one of them. Permitted motor types include: totally enclosed fan-cooled (TEFC), totally enclosed nonventilated (TENV), or totally enclosed pipe-ventilated motors that do not have arcing or sparking components such as brushes or switching mechanisms. The motor must also not have exposed hot surfaces exceeding 80% of the autoignition temperature of the specific gas group. An ODP motor draws ambient (potentially flammable) air directly through the motor windings, creating an internal ignition hazard if a fault occurs. The engineer's reasoning about Division 2 being abnormal conditions only is flawed — the electrical equipment must still be safe during those abnormal conditions.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-in-003",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "OSHA PSM — Process Hazard Analysis Frequency",
+    "scenario": "A chemical manufacturing facility covered under OSHA 1910.119 (Process Safety Management) completed its initial Process Hazard Analysis (PHA) when the plant was built 7 years ago. The plant manager states that since no significant process changes have been made, the original PHA is still valid and does not need to be updated. No revalidation has been performed since the initial study.",
+    "isUpToCode": false,
+    "codeReference": "OSHA 1910.119(e)(6)",
+    "explanation": "This fails OSHA PSM requirements. OSHA 1910.119(e)(6) explicitly requires that the Process Hazard Analysis be updated and revalidated at least every 5 years. The plant's PHA is now 7 years old and 2 years past the mandatory revalidation deadline. The revalidation requirement exists because process conditions, equipment condition, personnel, and industry knowledge of hazards change over time, even without intentional process modifications. Additionally, incident investigations, near-misses, and new regulatory guidance since the original PHA may reveal hazards not previously identified. The 5-year revalidation is mandatory regardless of whether process changes have occurred.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-in-004",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Exhaust Ventilation Rates",
+    "scenario": "A manufacturing facility has installed a general dilution ventilation system in a solvent cleaning area. The system provides 2 CFM per square foot of floor area for the 1,000 square foot room (2,000 CFM total). The room handles Class IB flammable liquids (flash point below 73°F). The ventilation system runs continuously during operating hours and exhausts directly to the outdoors with no recirculation.",
+    "isUpToCode": true,
+    "codeReference": "IFC 5003.8.4 / OSHA 1910.106(d)(4)",
+    "explanation": "This passes code requirements. IFC Section 5003.8.4 requires a minimum of 1 CFM per square foot of floor area for rooms handling hazardous materials, with the exhaust discharged directly outdoors. The installed system provides 2 CFM per square foot (2,000 CFM for 1,000 sq ft), which exceeds the minimum requirement. The system is correctly configured as 100% exhaust with no recirculation, as required for flammable liquid handling areas. Note that while this meets the minimum code requirement for general ventilation, a hazard assessment may determine that higher rates or local exhaust ventilation at the point of use is needed to keep vapor concentrations below 25% of the LEL, as required by NFPA 30.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-in-005",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam PRV Discharge Requirements",
+    "scenario": "A plant engineer installs a new pressure relief valve on a 150 psig steam header. The PRV discharge is piped horizontally through the boiler room wall, then down to terminate 4 feet above the ground in the equipment yard. The discharge pipe includes two 90-degree elbows and is reduced from the PRV outlet size of 2 inches to 1.5 inches to fit through an existing wall penetration. No drip pan or drain is installed at the discharge point.",
+    "isUpToCode": false,
+    "codeReference": "ASME BPVC Section I PG-71 / ASME B31.1 Section 122.6",
+    "explanation": "This fails code on multiple counts. First, ASME Section I PG-71.4 prohibits reducing the discharge pipe below the area of the PRV outlet — the 2-inch to 1.5-inch reduction restricts flow and creates excessive back pressure on the PRV, reducing its relieving capacity. Second, the discharge termination at 4 feet above ground level creates a scalding hazard to personnel in the equipment yard; discharge must be directed to a safe location where personnel cannot be exposed to the steam release. Third, the horizontal discharge piping without a drain will accumulate condensate, which can cause water hammer when the PRV lifts. PRV discharge piping must be self-draining with a drip pan elbow or weep hole at the low point per ASME B31.1 Section 122.6.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-in-006",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air Receiver Tank Code Compliance",
+    "scenario": "An industrial facility installs a new 500-gallon compressed air receiver tank rated at 200 psig MAWP. The tank bears an ASME Section VIII, Division 1 stamp with the National Board registration number. A pressure relief valve is installed and set at 200 psig. The tank is located outdoors on a concrete pad with an automatic condensate drain at the bottom and a pressure gauge at the top. An annual external inspection is performed by a qualified inspector.",
+    "isUpToCode": true,
+    "codeReference": "ASME BPVC Section VIII / OSHA 1910.169",
+    "explanation": "This passes code requirements. The tank has proper ASME Section VIII certification with National Board registration as required by OSHA 1910.169. The PRV is correctly set at the MAWP of 200 psig, satisfying ASME Section VIII UG-134 which requires the relief device to be set at or below the MAWP. The automatic condensate drain and pressure gauge are operational requirements for reliable compressed air service. The annual external inspection meets the minimum inspection frequency required by most jurisdictional authorities. Note that internal inspections may also be required at intervals determined by the jurisdiction and the tank's corrosion history.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-in-007",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Chemical Storage Ventilation Requirements",
+    "scenario": "A manufacturing plant converts a standard warehouse space into a flammable liquid storage room. The room stores Class IB and IC flammable liquids in 55-gallon drums. The contractor installs a mechanical exhaust system providing 1.5 CFM per square foot of floor area, but the exhaust fan and motor are standard (non-explosionproof) equipment mounted inside the room at ceiling level. The exhaust ductwork discharges to the outdoors through the roof.",
+    "isUpToCode": false,
+    "codeReference": "NFPA 30 Section 6.4 / NEC 500.5",
+    "explanation": "This fails code. While the exhaust rate of 1.5 CFM per square foot exceeds the minimum IFC requirement of 1 CFM per square foot, the fan and motor mounted inside the flammable liquid storage room must be rated for the hazardous area classification. Per NFPA 30 and NEC 500.5, the interior of a flammable liquid storage room is classified as Class I, Division 2 (or Class I, Zone 2). The standard, non-explosionproof fan and motor can produce sparks from the motor brushes, bearings, or fan blade contact that could ignite flammable vapors. The fan and motor must either be rated for the classified area or located outside the classified space with the fan on the clean (exhaust) side of the room wall, drawing air through the room without placing any electrical ignition source inside it.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-in-008",
+    "type": "code-check",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial Grounding and Bonding for Static Control",
+    "scenario": "A chemical plant transfers toluene (a Class IB flammable liquid) from a tank truck to a storage tank using a pump and hose system. The storage tank is bonded to the facility grounding electrode system. The tank truck driver connects a bonding cable from the truck chassis to the storage tank before connecting the transfer hose. The transfer hose is conductive (static-dissipative) with a resistance less than 1 megohm per NFPA 77. The pump is bonded to the piping system. All connections are verified with an ohmmeter before transfer begins.",
+    "isUpToCode": true,
+    "codeReference": "NFPA 77 / NFPA 30 Section 18.5 / API RP 2003",
+    "explanation": "This passes code requirements. NFPA 77 (Recommended Practice on Static Electricity) and NFPA 30 Section 18.5 require bonding between all conductive components in a flammable liquid transfer system to prevent static charge accumulation and spark discharge. The key elements are all present: the truck is bonded to the storage tank (equalizing potential), the transfer hose is conductive/static-dissipative (less than 1 megohm resistance), the pump is bonded to the piping, and the storage tank is grounded. Verification with an ohmmeter before transfer begins is a best practice that confirms all connections are intact. Toluene has a very low minimum ignition energy, making static bonding and grounding absolutely critical during transfer operations.",
+    "xpReward": 100
+  }
+]

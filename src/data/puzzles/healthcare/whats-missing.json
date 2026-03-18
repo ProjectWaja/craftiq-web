@@ -1,0 +1,282 @@
+[
+  {
+    "id": "wm-hc-001",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Operating Room HVAC Install",
+    "description": "A new operating room suite is under construction. The HVAC rough-in is complete with ductwork, a dedicated AHU, and supply diffusers installed. Review the installation and identify what critical components are missing.",
+    "presentItems": [
+      "Dedicated air handling unit with cooling and heating coils",
+      "Supply ductwork with MERV 14 pre-filters",
+      "Laminar flow diffuser array centered over surgical table",
+      "Return air grilles at low wall level",
+      "Temperature control thermostat on wall"
+    ],
+    "missingItems": [
+      {
+        "name": "HEPA (99.97%) terminal filters at supply diffusers",
+        "explanation": "FGI Guidelines 2.1-3.2 and ASHRAE 170 require HEPA filtration (99.97% efficiency at 0.3 microns) at the terminal point of air delivery in operating rooms. MERV 14 pre-filters alone do not achieve the required filtration efficiency. Without HEPA filters, surgical site infection rates increase significantly as airborne bacteria and particulates reach the sterile field."
+      },
+      {
+        "name": "Differential pressure monitor with visual display at OR entry",
+        "explanation": "ASHRAE 170 Table 7-1 requires operating rooms to maintain positive pressure (minimum +0.01 inches w.g.) relative to corridors. A visible pressure monitor at the room entrance allows staff to verify the pressure relationship is maintained before starting procedures. Without it, negative pressure excursions during door openings go undetected."
+      },
+      {
+        "name": "Humidity sensor and humidification control system",
+        "explanation": "ASHRAE 170 Table 7-1 requires OR humidity to be maintained between 20-60% RH. A dedicated humidity sensor and humidification/dehumidification system must be provided. Without humidity control, low humidity increases electrostatic discharge risk near oxygen-enriched environments, and high humidity promotes microbial growth on sterile surfaces."
+      }
+    ],
+    "distractors": [
+      "UV-C germicidal irradiation system in ductwork",
+      "Bipolar ionization air purification",
+      "Redundant AHU for OR suite backup",
+      "Carbon filtration for odor control"
+    ],
+    "explanation": "Operating room HVAC requires three layers of protection beyond basic heating and cooling: HEPA terminal filtration for particulate removal, positive pressure monitoring to prevent contamination ingress, and humidity control for electrostatic and microbial risk management. These requirements come from ASHRAE 170, FGI Guidelines, and are directly tied to surgical site infection prevention.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hc-002",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Gas Outlet Station",
+    "description": "A patient headwall in a new ICU room has been roughed in with medical gas piping. Review the outlet station and identify what components are missing from the installation.",
+    "presentItems": [
+      "Oxygen (O2) outlet with DISS connection",
+      "Medical air outlet with DISS connection",
+      "Vacuum outlet with DISS connection",
+      "Copper medical gas piping brazed to station inlets",
+      "Outlet faceplates with gas-specific color coding"
+    ],
+    "missingItems": [
+      {
+        "name": "Nitrogen (N2) or WAGD (waste anesthetic gas disposal) outlet",
+        "explanation": "FGI Guidelines Table 2.1-3 requires ICU rooms to have provisions for waste anesthetic gas disposal or additional gas outlets depending on facility requirements. NFPA 99 Section 5.1.12 requires WAGD outlets in locations where anesthetic gases are administered to prevent staff exposure to waste gases."
+      },
+      {
+        "name": "Gas-specific pin-indexing or diameter-indexing verification tags",
+        "explanation": "NFPA 99 Section 5.1.12.3 requires that each outlet be verified by cross-connection testing after installation to confirm the correct gas is delivered from each outlet. Verification tags documenting successful testing must be present. Without verification, a cross-connection during brazing could deliver the wrong gas — oxygen connected to nitrogen lines has caused patient deaths."
+      }
+    ],
+    "distractors": [
+      "Carbon dioxide (CO2) outlet",
+      "Helium-oxygen mixture outlet",
+      "Nitric oxide delivery outlet",
+      "Pneumatic tube system connection"
+    ],
+    "explanation": "Medical gas outlet stations must include all required gas services for the room type per FGI Guidelines and be verified for cross-connections per NFPA 99. Cross-connection errors — where the wrong gas is delivered from an outlet — are among the most dangerous installation errors in healthcare facilities and have resulted in patient fatalities. Every outlet must be individually tested and tagged before patient use.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hc-003",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Essential Electrical System",
+    "description": "A new hospital wing has its essential electrical system partially installed. The generator, automatic transfer switch, and life safety branch are operational. Review the installation and identify what is missing.",
+    "presentItems": [
+      "Emergency diesel generator with sub-base fuel tank",
+      "Automatic transfer switch (ATS) for life safety branch",
+      "Life safety branch powering exit signs and egress lighting",
+      "Fire alarm system on life safety branch",
+      "Generator starting batteries with charger"
+    ],
+    "missingItems": [
+      {
+        "name": "Critical branch with dedicated ATS",
+        "explanation": "NEC 517.34 requires a separate critical branch that powers patient care task lighting, selected receptacles in patient care areas, nurse call systems, and other critical loads. The critical branch requires its own automatic transfer switch per NEC 517.30(B)(4). Without the critical branch, patient care areas lose power for monitoring equipment and task lighting during utility outages."
+      },
+      {
+        "name": "Equipment branch with delayed automatic or manual transfer",
+        "explanation": "NEC 517.35 requires an equipment branch that powers major mechanical equipment including HVAC systems, elevators, and supply/exhaust ventilation. This branch uses delayed automatic or manual transfer to prevent simultaneous motor starting from overloading the generator. Without it, heating/cooling and ventilation for patient care areas is lost during outages."
+      },
+      {
+        "name": "Battery-backed emergency lighting for 90 minutes minimum",
+        "explanation": "NEC 700.12(F) and NFPA 101 Section 7.9 require battery-backed emergency lighting units that provide illumination for at least 90 minutes in the event of both utility and generator failure. These unit equipment fixtures are the last line of defense for egress lighting if the generator fails to start."
+      }
+    ],
+    "distractors": [
+      "Uninterruptible power supply (UPS) for all patient monitors",
+      "Solar panel backup array",
+      "Second utility feed from separate substation",
+      "Flywheel energy storage system"
+    ],
+    "explanation": "The NEC 517 essential electrical system has three required branches: life safety, critical, and equipment. Each serves different loads and has specific transfer requirements. Together they ensure hospitals maintain exit lighting, patient care power, and mechanical systems during utility outages. The 90-minute battery backup provides an additional failsafe if the generator itself fails.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hc-004",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Nurse Call System",
+    "description": "A new medical-surgical unit has patient rooms with bed locations and bathrooms. Basic electrical and low-voltage rough-in is complete. Review the nurse call provisions and identify what is missing.",
+    "presentItems": [
+      "Pillow speaker with call button at each bed location",
+      "Staff station master console at nursing desk",
+      "Corridor dome light above each patient room door",
+      "Low-voltage wiring from rooms to head-end controller",
+      "Code blue emergency button in each patient room"
+    ],
+    "missingItems": [
+      {
+        "name": "Pull-cord call station in each patient bathroom",
+        "explanation": "FGI Guidelines Section 2.1-8.3 requires a nurse call device in every patient bathroom accessible to a person who has fallen. A pull-cord station extending to within 6 inches of the floor allows a patient who has fallen to summon help. Patient falls in bathrooms are one of the most common hospital injuries, and without a reachable call device, a patient may lie on the floor for an extended period."
+      },
+      {
+        "name": "Staff emergency call station (code button) in each bathroom",
+        "explanation": "FGI Guidelines require provisions for staff to initiate an emergency call from patient bathrooms. Staff assisting patients who experience cardiac arrest or severe falls need to summon a code team without leaving the patient. This is separate from the patient pull-cord and must trigger an urgent/emergency priority alarm."
+      }
+    ],
+    "distractors": [
+      "Wireless real-time location tracking badge",
+      "Two-way video intercom at each bed",
+      "Patient entertainment system integration",
+      "Automated bed exit alarm sensor"
+    ],
+    "explanation": "Nurse call systems in healthcare facilities must extend to every location where patients may need assistance, particularly bathrooms where fall risk is highest. FGI Guidelines mandate both patient-accessible call stations (pull cords reaching floor level) and staff emergency stations in bathrooms. These devices are critical for patient safety and rapid response to medical emergencies.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hc-005",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Negative Pressure Isolation Room",
+    "description": "A new airborne infection isolation (AII) room has been constructed with a private bathroom and anteroom. Basic HVAC is installed. Review the installation and identify what critical components are missing.",
+    "presentItems": [
+      "Dedicated exhaust fan serving the isolation room",
+      "Self-closing door with gasket seals",
+      "Private bathroom connected to the patient room",
+      "Supply air diffuser in ceiling",
+      "HEPA filtration on exhaust before discharge to outdoors"
+    ],
+    "missingItems": [
+      {
+        "name": "Permanently installed visual pressure monitoring device at room entry",
+        "explanation": "ASHRAE 170 Section 7.2 and FGI Guidelines 2.1-3.2 require a permanently mounted visual mechanism to constantly monitor the negative pressure status of AII rooms. A pressure differential monitor or ball-in-tube indicator at the room entrance allows staff to verify the room is maintaining negative pressure before entering. Without it, pressure failures go undetected and infectious aerosols escape."
+      },
+      {
+        "name": "Self-closing door between patient room and anteroom",
+        "explanation": "FGI Guidelines 2.1-2.4 require an anteroom with self-closing doors forming an airlock between the AII room and the corridor. The anteroom prevents direct air exchange between the corridor and patient room when staff enter or exit. Without an anteroom with properly functioning self-closing doors, each entry/exit event allows a bolus of contaminated air to escape into the corridor."
+      },
+      {
+        "name": "Audible and visual alarm for pressure differential loss",
+        "explanation": "ASHRAE 170 and FGI Guidelines require an alarm system that activates when the room loses its negative pressure differential (minimum -0.01 inches w.g.). If the exhaust fan fails or a door is held open, the alarm must notify staff immediately. Without an alarm, the room may appear to be functioning while actually allowing airborne pathogens to escape to adjacent spaces."
+      }
+    ],
+    "distractors": [
+      "UV-C air disinfection system in ductwork",
+      "Portable HEPA air scrubber unit",
+      "Negative ion generator in patient room",
+      "Copper antimicrobial touch surfaces"
+    ],
+    "explanation": "Airborne infection isolation rooms are designed to contain pathogens like tuberculosis, measles, and SARS-CoV-2. ASHRAE 170 and FGI Guidelines require continuous negative pressure monitoring with visible indicators, anteroom airlocks, and alarm systems to ensure containment integrity. A failure in any of these components can expose staff, other patients, and visitors to highly infectious airborne diseases.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hc-006",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Sterile Processing Area",
+    "description": "A new sterile processing department (SPD) has been constructed with decontamination, assembly, and sterile storage areas. Review the installation for missing components.",
+    "presentItems": [
+      "Physical wall separation between decontamination and clean assembly areas",
+      "Pass-through sterilizer between clean assembly and sterile storage",
+      "Dedicated exhaust system in decontamination area",
+      "Stainless steel work surfaces and sinks",
+      "Handwashing stations at room transitions"
+    ],
+    "missingItems": [
+      {
+        "name": "Negative pressure in decontamination relative to clean assembly",
+        "explanation": "ASHRAE 170 Table 7-1 requires the decontamination area to be at negative pressure relative to adjacent clean areas with a minimum of 6 ACH (all exhausted, no recirculation). Without negative pressure, aerosolized bioburden from contaminated instruments migrates into the clean assembly area, potentially recontaminating sterilized instruments."
+      },
+      {
+        "name": "Positive pressure in sterile storage relative to corridors",
+        "explanation": "ASHRAE 170 Table 7-1 requires sterile storage areas to maintain positive pressure relative to adjacent spaces with a minimum of 4 ACH. Without positive pressure, corridor air carrying particulates and microorganisms infiltrates the sterile storage area, compromising the sterility of processed instruments awaiting use in surgery."
+      }
+    ],
+    "distractors": [
+      "Laminar flow workbench in assembly area",
+      "HEPA filtration at sterile storage entry",
+      "Automated instrument tracking RFID system",
+      "Temperature-controlled instrument drying cabinet"
+    ],
+    "explanation": "Sterile processing departments require a carefully designed pressure cascade: negative in decontamination to contain bioburden, neutral or slightly positive in clean assembly, and positive in sterile storage to protect processed instruments. This pressure relationship per ASHRAE 170 ensures a one-way flow of air from clean to dirty areas, preventing cross-contamination in the instrument reprocessing workflow.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hc-007",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Patient Bathroom Accessibility and Safety",
+    "description": "A new patient bathroom in a medical-surgical unit has been roughed in with plumbing and electrical. Review the installation and identify what safety components are missing.",
+    "presentItems": [
+      "ADA-compliant toilet with proper mounting height",
+      "Roll-in shower with fold-down bench",
+      "Lavatory sink with lever-handle faucet",
+      "GFCI-protected receptacle outlet",
+      "Floor drain with proper slope to drain"
+    ],
+    "missingItems": [
+      {
+        "name": "Thermostatic mixing valve limiting water temperature to 110°F maximum",
+        "explanation": "ASSE 1070 and FGI Guidelines Section 2.1-2.6 require thermostatic mixing valves on all patient-accessible hot water outlets to prevent scalding. Patients on medications, elderly patients, and those with neuropathy may not sense dangerously hot water. Hospital hot water systems typically operate at 140°F for Legionella control, so mixing valves are essential to deliver safe temperatures at the point of use."
+      },
+      {
+        "name": "Emergency nurse call pull-cord extending to 6 inches from floor",
+        "explanation": "FGI Guidelines Section 2.1-8.3 requires a nurse call pull-cord station in every patient bathroom, accessible from the floor level. The cord must extend to within 6 inches of the finished floor so a patient who has fallen can reach it. This is a critical patient safety device — bathroom falls account for a significant portion of hospital fall injuries."
+      }
+    ],
+    "distractors": [
+      "Heated towel bar",
+      "Anti-microbial toilet seat",
+      "Touchless soap dispenser with sensor",
+      "In-floor radiant heating"
+    ],
+    "explanation": "Patient bathrooms in healthcare facilities must address two specific hazards: scalding from high-temperature water systems and patient falls. Thermostatic mixing valves per ASSE 1070 protect vulnerable patients from water maintained at Legionella-killing temperatures. Nurse call pull cords per FGI Guidelines ensure fallen patients can summon help. Both are code-required life safety devices, not optional amenities.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hc-008",
+    "type": "whats-missing",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Emergency Department Triage Area",
+    "description": "A new emergency department triage and treatment area has been built with patient bays and a trauma room. Basic mechanical and electrical systems are installed. Review for missing components.",
+    "presentItems": [
+      "Medical gas outlets (O2, medical air, vacuum) at each bay",
+      "Essential electrical system receptacles at patient bays",
+      "Nurse call system with emergency buttons",
+      "Central monitoring station with telemetry",
+      "Handwashing stations between patient bays"
+    ],
+    "missingItems": [
+      {
+        "name": "Airborne infection isolation capability or direct exhaust provisions",
+        "explanation": "FGI Guidelines Section 2.1-5.1 require emergency departments to have provisions for receiving patients with airborne infectious diseases, including at least one AII (airborne infection isolation) room with negative pressure or the ability to convert a treatment bay to negative pressure. Without this capability, a patient with active tuberculosis or novel respiratory pathogen can expose the entire ED waiting area."
+      },
+      {
+        "name": "Emergency power for all patient care receptacles on critical branch",
+        "explanation": "NEC 517.34(A) requires that selected receptacles in emergency treatment areas be connected to the critical branch of the essential electrical system. Without critical branch power, a utility outage means loss of power to patient monitors, defibrillators, and ventilators — equipment that is actively keeping emergency patients alive."
+      },
+      {
+        "name": "Decontamination shower with floor drain and backflow prevention",
+        "explanation": "FGI Guidelines Section 2.1-5.5 require emergency departments to have decontamination facilities for patients arriving with chemical, biological, or radiological contamination. Without a dedicated decontamination area with proper drainage and backflow prevention, contaminated runoff can enter the facility's sanitary drain system and potentially expose other areas."
+      }
+    ],
+    "distractors": [
+      "CT scanner in triage area",
+      "Hyperbaric chamber adjacent to ED",
+      "Dedicated surgical suite in ED",
+      "Pneumatic tube system to laboratory"
+    ],
+    "explanation": "Emergency departments are the front line for both routine and catastrophic healthcare events. FGI Guidelines and NEC 517 require infection isolation capability for airborne disease containment, essential electrical power for critical life-support equipment, and decontamination facilities for hazardous exposure incidents. These systems must be in place before the facility opens because emergency departments cannot predict what will come through the door.",
+    "xpReward": 100
+  }
+]

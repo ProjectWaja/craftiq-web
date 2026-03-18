@@ -1,0 +1,139 @@
+[
+  {
+    "id": "ww-cp-001",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Primary/Secondary Pumping System",
+    "components": [
+      { "id": 1, "name": "Primary pumps matched to chiller flow rate", "correct": true },
+      { "id": 2, "name": "Decoupler pipe sized at 2\" (system mains are 10\")", "correct": false, "violation": "The decoupler (bridge) pipe must be sized to match the largest system pipe — in this case 10\". An undersized decoupler creates excessive pressure drop between primary and secondary loops, causing flow interference and unpredictable delta-T performance.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Primary-Secondary Pumping" },
+      { "id": 3, "name": "Secondary pumps with VFDs", "correct": true },
+      { "id": 4, "name": "Temperature sensors on supply and return", "correct": true },
+      { "id": 5, "name": "Check valves on primary pump discharge", "correct": true },
+      { "id": 6, "name": "No isolation valves on decoupler pipe", "correct": false, "violation": "The decoupler pipe should not have isolation valves — this is correct as installed. However, the decoupler pipe connections are spaced only 2 pipe diameters apart. Connections must be spaced at least 6-10 pipe diameters apart to prevent flow turbulence and ensure proper hydraulic separation.", "codeReference": "ASHRAE Fundamentals Handbook — Hydronic System Design" }
+    ],
+    "explanation": "Primary/secondary pumping relies on hydraulic separation through the decoupler pipe. The decoupler must match the largest system pipe size and have adequate spacing between tees to prevent the primary and secondary loops from interfering with each other.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-cp-002",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Cooling Tower Installation",
+    "components": [
+      { "id": 1, "name": "Cooling tower fans operating normally", "correct": true },
+      { "id": 2, "name": "Basin heater thermostat failed — reads 72°F in 28°F weather", "correct": false, "violation": "The basin heater thermostat has failed, not activating the heater in freezing conditions. Without basin heat, water in the sump and exposed piping will freeze, cracking the basin and potentially rupturing condenser water piping. Basin heaters must be verified annually before cold weather.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Cooling Towers" },
+      { "id": 3, "name": "Condenser water supply and return piping insulated", "correct": true },
+      { "id": 4, "name": "Drift eliminator visibly damaged — multiple broken louvers", "correct": false, "violation": "Damaged drift eliminators allow excessive water loss through carryover of water droplets into the discharge airstream. This wastes water and chemical treatment, and can create safety hazards from ice formation on nearby surfaces in winter. Drift loss should be limited to 0.001-0.005% of circulating flow per ASHRAE.", "codeReference": "ASHRAE 90.1-2019 Section 6.5.5 / CTI Standard 140" },
+      { "id": 5, "name": "Makeup water float valve functional", "correct": true },
+      { "id": 6, "name": "Vibration switches on fan motors", "correct": true }
+    ],
+    "explanation": "Cooling towers require vigilant maintenance of freeze protection and drift elimination. A failed basin heater thermostat can lead to catastrophic freeze damage, and damaged drift eliminators waste treated water and create environmental hazards.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-cp-003",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chiller Plant Piping",
+    "components": [
+      { "id": 1, "name": "Chiller evaporator piped correctly (supply and return)", "correct": true },
+      { "id": 2, "name": "Condenser water return piped to condenser supply header", "correct": false, "violation": "The condenser water return from the cooling tower is piped to the supply header instead of the return header. This reverses flow through the condenser, sending warm water from the tower back through the supply side. The chiller will see elevated condensing temperatures, causing high head pressure, reduced capacity, and potential high-pressure safety trips.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Chiller Plant Piping" },
+      { "id": 3, "name": "Flow switch installed on evaporator", "correct": true },
+      { "id": 4, "name": "Condenser water pump running", "correct": true },
+      { "id": 5, "name": "Chiller operating at high head pressure (165 psig vs. 125 psig design)", "correct": false, "violation": "Head pressure of 165 psig is 40 psig above design conditions, directly caused by the reversed condenser water piping. The chiller's high-pressure safety should trip at approximately 175 psig. Operating continuously at elevated head pressure wastes energy (approximately 2% per degree of elevated condensing temperature) and stresses compressor components.", "codeReference": "AHRI 550/590 — Performance Rating of Water-Chilling Packages" },
+      { "id": 6, "name": "Pressure gauges on evaporator inlet and outlet", "correct": true }
+    ],
+    "explanation": "Reversed condenser water piping is a commissioning error that causes the chiller to work against elevated condensing temperatures. This dramatically increases energy consumption and can lead to compressor damage from sustained high head pressure operation.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-cp-004",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Boiler Room Gas Train",
+    "components": [
+      { "id": 1, "name": "Main gas shutoff valve accessible", "correct": true },
+      { "id": 2, "name": "Gas pressure regulator set to 7\" W.C.", "correct": true },
+      { "id": 3, "name": "No low-gas-pressure switch installed", "correct": false, "violation": "NFPA 85 requires a low-gas-pressure switch on boilers over 400 MBH input. The switch must be interlocked to prevent burner operation when gas pressure drops below minimum, preventing incomplete combustion, flame instability, and potential delayed ignition explosions.", "codeReference": "NFPA 85 — Boiler and Combustion Systems Hazards Code, Section 6.4.3" },
+      { "id": 4, "name": "Pilot gas solenoid valve", "correct": true },
+      { "id": 5, "name": "No high-gas-pressure switch installed", "correct": false, "violation": "NFPA 85 requires a high-gas-pressure switch to prevent burner operation when gas supply pressure exceeds the maximum rated pressure. Overpressure can cause excessive firing rate, flame impingement, and damage to the combustion chamber. The switch must be wired in the safety interlock circuit.", "codeReference": "NFPA 85 — Boiler and Combustion Systems Hazards Code, Section 6.4.3" },
+      { "id": 6, "name": "Main gas valve (dual safety shutoff)", "correct": true },
+      { "id": 7, "name": "Manual test cock for leak testing", "correct": true }
+    ],
+    "explanation": "A complete gas train for commercial boilers per NFPA 85 must include both low-gas-pressure and high-gas-pressure switches interlocked with the burner safety circuit. Missing either switch creates a serious safety hazard that would fail any jurisdictional inspection.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-cp-005",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Centrifugal Pump Installation",
+    "components": [
+      { "id": 1, "name": "Pump mounted on concrete inertia base", "correct": true },
+      { "id": 2, "name": "Suction line reduced from 8\" to 4\" directly at pump inlet (3 elbows in last 10 feet)", "correct": false, "violation": "The suction line is undersized and has too many elbows near the pump inlet, resulting in insufficient Net Positive Suction Head (NPSH). The suction pipe should be at least one size larger than the pump inlet, use an eccentric reducer (flat on top) to prevent air pockets, and have a minimum of 5 straight pipe diameters before the pump inlet. Insufficient NPSH causes cavitation, which destroys impellers.", "codeReference": "Hydraulic Institute Standards — ANSI/HI 9.6.6 Pump Piping" },
+      { "id": 3, "name": "Discharge pipe with check valve and gate valve", "correct": true },
+      { "id": 4, "name": "Pump vibrating excessively — cavitation noise audible", "correct": false, "violation": "The cavitation noise (sounds like gravel passing through the pump) confirms insufficient NPSH available. Continued operation will erode the impeller vanes, damage seals, and ultimately destroy the pump. The pump must be shut down and suction piping corrected before returning to service.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Centrifugal Pumps" },
+      { "id": 5, "name": "Pressure gauges on suction and discharge", "correct": true },
+      { "id": 6, "name": "Flexible connectors at pump connections", "correct": true }
+    ],
+    "explanation": "Pump cavitation from inadequate NPSH is one of the most common and destructive problems in central plants. Proper suction piping design — adequate size, eccentric reducer, minimal fittings, and straight run — is critical to pump longevity.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-cp-006",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Plate Heat Exchanger",
+    "components": [
+      { "id": 1, "name": "Heat exchanger frame bolts torqued to spec", "correct": true },
+      { "id": 2, "name": "Fouled plates — heavy scale deposits visible on waterside surfaces", "correct": false, "violation": "Heavy scale buildup on heat exchanger plates indicates failed water treatment. Fouling reduces heat transfer efficiency and increases pressure drop across the exchanger. Scale deposits as thin as 1/32\" can reduce heat transfer by 25%. The plates must be cleaned with an approved chemical descaler and water treatment program corrected.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Heat Exchangers" },
+      { "id": 3, "name": "Isolation valves on all four ports", "correct": true },
+      { "id": 4, "name": "Gaskets deteriorating — visible deformation and weeping at plate edges", "correct": false, "violation": "Deteriorating gaskets allow cross-contamination between the two fluid circuits and external leaks. Gaskets degrade from excessive temperature, chemical exposure, or age. The heat exchanger must be disassembled and all gaskets replaced per manufacturer specifications. Running with leaking gaskets risks contaminating the clean circuit.", "codeReference": "TEMA Standards — Tubular Exchanger Manufacturers Association" },
+      { "id": 5, "name": "Approach temperature measured at 12°F (design is 3°F)", "correct": false, "violation": "An approach temperature of 12°F versus a 3°F design indicates severely degraded performance — the fouled plates and failing gaskets are reducing heat transfer capacity by approximately 75%. The exchanger is not meeting design conditions and is wasting energy by forcing the primary equipment to work harder.", "codeReference": "AHRI 400 — Liquid to Liquid Heat Exchangers" },
+      { "id": 6, "name": "Temperature sensors on all four connections", "correct": true }
+    ],
+    "explanation": "Plate heat exchangers require regular maintenance including cleaning and gasket inspection. A rising approach temperature is the key diagnostic indicator of fouling — track it monthly. When approach temp exceeds 2x design, cleaning is overdue.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-cp-007",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Variable Flow Chilled Water System",
+    "components": [
+      { "id": 1, "name": "Chilled water pumps with VFDs installed", "correct": true },
+      { "id": 2, "name": "VFD in bypass mode — motor running at full speed while VFD is functional", "correct": false, "violation": "The VFD is in bypass mode despite being fully functional, meaning the pump runs at constant full speed. This eliminates the energy savings from variable flow operation. At 50% flow, a VFD-controlled pump uses only ~12.5% of full-speed power (affinity laws). Running in bypass at full speed wastes substantial energy and creates excessive pressure in the system.", "codeReference": "ASHRAE 90.1-2019 Section 6.5.4.5 — Variable Flow Requirements" },
+      { "id": 3, "name": "2-way control valves on air handler coils — several leaking through when closed", "correct": false, "violation": "Leaking 2-way valves allow chilled water to bypass through coils that should be off, reducing system delta-T. Low delta-T syndrome forces additional chillers online prematurely and wastes energy. Valves must be replaced or repacked. ASHRAE recommends close-off pressure ratings that exceed pump shutoff head.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment, Valves" },
+      { "id": 4, "name": "Differential pressure sensor located at pump discharge header", "correct": false, "violation": "The DP sensor is located at the pump discharge instead of at the most remote coil or 2/3 of the way out in the system. Sensing DP at the pump header causes the VFD to maintain artificially high system pressure, defeating the purpose of variable flow. The sensor must be relocated to represent the actual system load point.", "codeReference": "ASHRAE Guideline 36 — High-Performance Sequences of Operation" },
+      { "id": 5, "name": "Minimum flow bypass valve installed", "correct": true },
+      { "id": 6, "name": "Supply water temperature at design setpoint", "correct": true }
+    ],
+    "explanation": "Variable flow systems require all three elements working correctly: VFDs actually controlling pump speed, tight 2-way valves maintaining delta-T, and DP sensors at the proper remote location. Failure of any one element undermines the entire strategy.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-cp-008",
+    "type": "whats-wrong",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Condenser Water Chemical Treatment",
+    "components": [
+      { "id": 1, "name": "Cooling tower with makeup water connected", "correct": true },
+      { "id": 2, "name": "No blowdown controller installed — blowdown valve manually operated", "correct": false, "violation": "Without automatic blowdown control, condenser water cycles of concentration are unmanaged. Manual blowdown is unreliable and either wastes water (over-blowing) or allows mineral concentration to build (under-blowing). An automatic conductivity controller with a motorized blowdown valve is required to maintain proper cycles of concentration (typically 3-6 cycles).", "codeReference": "ASHRAE Guideline 12 — Minimizing the Risk of Legionellosis" },
+      { "id": 3, "name": "Scale buildup visible on condenser tubes through inspection port", "correct": false, "violation": "Visible scale on condenser tubes indicates water treatment failure. Scale acts as insulation on heat transfer surfaces — 1/16\" of scale increases energy consumption by approximately 11%. The condenser must be chemically or mechanically cleaned, and the water treatment program must be corrected to prevent recurrence.", "codeReference": "ASHRAE Handbook — HVAC Applications, Water Treatment" },
+      { "id": 4, "name": "Chemical feed pump installed", "correct": true },
+      { "id": 5, "name": "Conductivity reading at 4,500 µS/cm (target is 1,500-2,500 µS/cm)", "correct": false, "violation": "Conductivity of 4,500 µS/cm is nearly double the upper target limit, confirming excessive mineral concentration. High conductivity accelerates scale formation, promotes corrosion, and creates conditions favorable for Legionella growth. Immediate blowdown is needed to reduce conductivity to target range.", "codeReference": "ASHRAE Standard 188 — Legionellosis: Risk Management for Building Water Systems" },
+      { "id": 6, "name": "Corrosion coupons installed for monitoring", "correct": true }
+    ],
+    "explanation": "Condenser water treatment is essential for energy efficiency, equipment life, and occupant health. Uncontrolled blowdown leads to scale, corrosion, and biological growth including Legionella. ASHRAE Standard 188 now requires written water management programs for cooling towers.",
+    "xpReward": 75
+  }
+]

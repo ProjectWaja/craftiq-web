@@ -1,0 +1,304 @@
+[
+  {
+    "id": "seq-hvac-001",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Duct System Startup",
+    "description": "Put the duct system startup procedure in the correct order.",
+    "steps": [
+      { "id": 1, "text": "Verify all duct connections are sealed and supported", "order": 1 },
+      { "id": 2, "text": "Check that all dampers are in the open position", "order": 2 },
+      { "id": 3, "text": "Install and inspect air filters", "order": 3 },
+      { "id": 4, "text": "Start the air handler / fan unit", "order": 4 },
+      { "id": 5, "text": "Measure airflow at each supply register (CFM)", "order": 5 },
+      { "id": 6, "text": "Balance the system by adjusting branch dampers", "order": 6 },
+      { "id": 7, "text": "Verify return air is adequate (no positive pressure)", "order": 7 },
+      { "id": 8, "text": "Document final readings and close out", "order": 8 }
+    ],
+    "explanation": "Startup sequence matters! Running the fan before checking connections can pressurize unsealed joints and blow insulation particles into the space. Always verify physical install before energizing.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-hvac-002",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Filter Replacement Procedure",
+    "description": "Order the steps for replacing air filters in a commercial AHU.",
+    "steps": [
+      { "id": 1, "text": "Turn off the air handler unit", "order": 1 },
+      { "id": 2, "text": "Open the filter access panel", "order": 2 },
+      { "id": 3, "text": "Note the filter size and type on the old filter", "order": 3 },
+      { "id": 4, "text": "Remove old filters and bag them for disposal", "order": 4 },
+      { "id": 5, "text": "Inspect filter rack for damage or gaps", "order": 5 },
+      { "id": 6, "text": "Install new filters with airflow arrows pointing correct direction", "order": 6 },
+      { "id": 7, "text": "Close access panel and ensure seal", "order": 7 },
+      { "id": 8, "text": "Restart the unit and verify pressure drop across filters", "order": 8 }
+    ],
+    "explanation": "Always turn off the unit before changing filters. Airflow arrows on filters must match the air direction. Verifying pressure drop ensures proper seating — too low means air is bypassing the filter.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-hvac-003",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Refrigerant Recovery",
+    "description": "Sequence the steps for recovering refrigerant from an AC system before repair.",
+    "steps": [
+      { "id": 1, "text": "Connect manifold gauges to system service ports", "order": 1 },
+      { "id": 2, "text": "Read and record current system pressures", "order": 2 },
+      { "id": 3, "text": "Connect recovery machine to manifold center hose", "order": 3 },
+      { "id": 4, "text": "Connect recovery machine outlet to recovery cylinder", "order": 4 },
+      { "id": 5, "text": "Open manifold valves and start recovery machine", "order": 5 },
+      { "id": 6, "text": "Recover until system reaches required vacuum level", "order": 6 },
+      { "id": 7, "text": "Close manifold valves and stop recovery machine", "order": 7 },
+      { "id": 8, "text": "Weigh recovery cylinder and record amount recovered", "order": 8 }
+    ],
+    "explanation": "EPA Section 608 requires proper refrigerant recovery. Venting refrigerant is illegal and carries heavy fines. Always record the amount recovered — it must match what goes back in or be reported.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hvac-004",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Ductwork Leak Testing",
+    "description": "Order the steps for performing a duct leakage test on a new install.",
+    "steps": [
+      { "id": 1, "text": "Seal all supply registers and return grilles with tape/plastic", "order": 1 },
+      { "id": 2, "text": "Connect duct pressurization fan to main trunk opening", "order": 2 },
+      { "id": 3, "text": "Pressurize duct system to 1\" W.C. (250 Pa)", "order": 3 },
+      { "id": 4, "text": "Measure airflow through pressurization fan (CFM at test pressure)", "order": 4 },
+      { "id": 5, "text": "Calculate leakage as percentage of design airflow", "order": 5 },
+      { "id": 6, "text": "Walk the system and identify leak locations with smoke pencil", "order": 6 },
+      { "id": 7, "text": "Seal identified leaks with mastic or approved sealant", "order": 7 },
+      { "id": 8, "text": "Re-test to verify leakage meets specification", "order": 8 }
+    ],
+    "explanation": "SMACNA and energy codes limit duct leakage to 4-6% of design airflow. Sealing ducts before testing tells you the baseline. Smoke pencils are the fastest way to find leaks once pressurized.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hvac-005",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Condensate Drain Installation",
+    "description": "Order the steps for installing a condensate drain on an AHU.",
+    "steps": [
+      { "id": 1, "text": "Locate the drain pan connection on the AHU", "order": 1 },
+      { "id": 2, "text": "Install a P-trap at the drain pan outlet", "order": 2 },
+      { "id": 3, "text": "Run drain pipe with 1/4\" per foot slope toward drain point", "order": 3 },
+      { "id": 4, "text": "Install a secondary drain pan under the unit (if required)", "order": 4 },
+      { "id": 5, "text": "Connect overflow switch to secondary pan", "order": 5 },
+      { "id": 6, "text": "Pour water into primary pan to verify drainage", "order": 6 },
+      { "id": 7, "text": "Verify overflow switch shuts down unit when triggered", "order": 7 }
+    ],
+    "explanation": "The P-trap is critical — it prevents conditioned air from being blown out (positive pressure) or drawn in (negative pressure) through the drain line. Always test with actual water, never assume gravity works.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-hvac-006",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Chiller Startup Procedure",
+    "description": "Order the steps for starting up a water-cooled chiller after off-season shutdown.",
+    "steps": [
+      { "id": 1, "text": "Verify oil level and crankcase heater operation", "order": 1 },
+      { "id": 2, "text": "Open condenser and evaporator water valves", "order": 2 },
+      { "id": 3, "text": "Start condenser water pumps and verify flow", "order": 3 },
+      { "id": 4, "text": "Start chilled water pumps and verify flow", "order": 4 },
+      { "id": 5, "text": "Start cooling tower fans", "order": 5 },
+      { "id": 6, "text": "Enable chiller controls and set temperature setpoint", "order": 6 },
+      { "id": 7, "text": "Allow chiller to start and ramp up to load", "order": 7 },
+      { "id": 8, "text": "Monitor operating pressures, temperatures, and amps for 30 minutes", "order": 8 },
+      { "id": 9, "text": "Log all startup readings in the maintenance record", "order": 9 }
+    ],
+    "explanation": "Water flow MUST be established before starting the chiller — running without flow freezes the evaporator (ice ball) or overheats the condenser. Oil heater ensures proper lubrication at startup.",
+    "xpReward": 85
+  },
+  {
+    "id": "seq-hvac-007",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Thermostat Replacement",
+    "description": "Order the steps for replacing a thermostat with a new smart thermostat.",
+    "steps": [
+      { "id": 1, "text": "Turn off power to HVAC system at breaker", "order": 1 },
+      { "id": 2, "text": "Remove old thermostat cover and photograph existing wiring", "order": 2 },
+      { "id": 3, "text": "Label each wire with its terminal letter (R, W, Y, G, C)", "order": 3 },
+      { "id": 4, "text": "Disconnect wires from old thermostat", "order": 4 },
+      { "id": 5, "text": "Remove old mounting plate from wall", "order": 5 },
+      { "id": 6, "text": "Mount new thermostat backplate and level it", "order": 6 },
+      { "id": 7, "text": "Connect labeled wires to matching terminals on new thermostat", "order": 7 },
+      { "id": 8, "text": "Attach thermostat to backplate and power on system", "order": 8 },
+      { "id": 9, "text": "Configure WiFi, test heating and cooling modes", "order": 9 }
+    ],
+    "explanation": "Photographing and labeling wires BEFORE disconnecting is the most important step. Without it, you're guessing at wire assignments which can damage the new thermostat or HVAC equipment.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-hvac-008",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Air Balancing Procedure",
+    "description": "Order the steps for balancing airflow in a multi-zone duct system.",
+    "steps": [
+      { "id": 1, "text": "Review mechanical drawings for design CFM at each outlet", "order": 1 },
+      { "id": 2, "text": "Verify the system is operating at design conditions (fan speed, filter, dampers)", "order": 2 },
+      { "id": 3, "text": "Measure total system airflow at the AHU", "order": 3 },
+      { "id": 4, "text": "Measure airflow at each supply diffuser with a balancing hood", "order": 4 },
+      { "id": 5, "text": "Start with the outlet closest to the AHU and adjust its damper", "order": 5 },
+      { "id": 6, "text": "Work outward, adjusting each branch damper to achieve design CFM", "order": 6 },
+      { "id": 7, "text": "Re-measure all outlets after adjustments (changes affect the whole system)", "order": 7 },
+      { "id": 8, "text": "Repeat adjustment cycle until all outlets are within ±10% of design", "order": 8 },
+      { "id": 9, "text": "Lock damper positions and document final readings", "order": 9 }
+    ],
+    "explanation": "Air balancing is iterative — adjusting one damper changes airflow everywhere else. Always start closest to the fan and work outward. Lock dampers when done to prevent tampering.",
+    "xpReward": 80
+  },
+  {
+    "id": "seq-hvac-009",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "AC System Charge Check",
+    "description": "Order the steps for checking refrigerant charge on a residential AC system.",
+    "steps": [
+      { "id": 1, "text": "Verify indoor and outdoor units are running", "order": 1 },
+      { "id": 2, "text": "Allow system to run for 15 minutes to stabilize", "order": 2 },
+      { "id": 3, "text": "Connect manifold gauges to service ports", "order": 3 },
+      { "id": 4, "text": "Read suction pressure and liquid pressure", "order": 4 },
+      { "id": 5, "text": "Measure suction line temperature for superheat calculation", "order": 5 },
+      { "id": 6, "text": "Measure liquid line temperature for subcooling calculation", "order": 6 },
+      { "id": 7, "text": "Compare readings to manufacturer specifications", "order": 7 },
+      { "id": 8, "text": "Add or recover refrigerant to match target superheat/subcooling", "order": 8 }
+    ],
+    "explanation": "The system must stabilize before readings are meaningful. Superheat tells you evaporator performance, subcooling tells you condenser performance. Both must be checked — not just pressures alone.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-hvac-010",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Fire Damper Inspection",
+    "description": "Order the steps for the required periodic fire damper inspection.",
+    "steps": [
+      { "id": 1, "text": "Locate fire damper via access door in duct or above ceiling", "order": 1 },
+      { "id": 2, "text": "Shut down the AHU serving the duct section", "order": 2 },
+      { "id": 3, "text": "Visually inspect damper blades for damage, corrosion, or obstruction", "order": 3 },
+      { "id": 4, "text": "Verify fusible link is intact and rated correctly", "order": 4 },
+      { "id": 5, "text": "Manually trip the damper to verify full closure", "order": 5 },
+      { "id": 6, "text": "Reset the damper and verify it locks in the open position", "order": 6 },
+      { "id": 7, "text": "Document inspection date, damper location, and pass/fail status", "order": 7 },
+      { "id": 8, "text": "Tag the damper with inspection date per NFPA 80 requirements", "order": 8 }
+    ],
+    "explanation": "NFPA 80 requires fire damper inspection 1 year after installation and every 4 years after (every 6 years for hospitals). A failed fire damper in a fire event is catastrophic — this is life safety.",
+    "xpReward": 90
+  },
+  {
+    "id": "seq-hvac-013",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Union Apprenticeship: Duct Leakage Test",
+    "description": "Order the steps for a SMACNA duct leakage test as taught in union apprenticeship training.",
+    "steps": [
+      { "id": 1, "text": "Seal all openings — registers, grilles, and open ends — with caps or plastic and tape", "order": 1 },
+      { "id": 2, "text": "Connect calibrated fan and duct tester apparatus to a main trunk opening", "order": 2 },
+      { "id": 3, "text": "Pressurize the duct system to the specified test pressure (typically 1\" W.C.)", "order": 3 },
+      { "id": 4, "text": "Record baseline leakage reading from the duct tester (CFM at test pressure)", "order": 4 },
+      { "id": 5, "text": "Walk the system and check for leaks using a smoke pencil or theatrical fog", "order": 5 },
+      { "id": 6, "text": "Mark all identified leak locations and seal with mastic or approved sealant", "order": 6 },
+      { "id": 7, "text": "Re-pressurize and retest to verify leakage is within SMACNA allowable limits", "order": 7 },
+      { "id": 8, "text": "Document all results and submit the leakage test report to the engineer/GC", "order": 8 }
+    ],
+    "explanation": "Duct leakage testing is a critical SMACNA apprenticeship skill. Union halls teach this procedure because energy codes now mandate duct leakage testing on most commercial projects. SMACNA standards limit leakage to CL 48, 24, 12, 6, or 3 depending on pressure class. Proper documentation is required for commissioning.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-hvac-014",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Union Certification: Fire Damper Inspection",
+    "description": "Order the steps for an NFPA 80 fire damper inspection as taught in UA/SMACNA union training programs.",
+    "steps": [
+      { "id": 1, "text": "Locate the fire damper on the building plans and identify its rating and type", "order": 1 },
+      { "id": 2, "text": "Gain access to the damper via ceiling access panel or duct access door", "order": 2 },
+      { "id": 3, "text": "Visually inspect the damper for physical damage, corrosion, or obstructions", "order": 3 },
+      { "id": 4, "text": "Cycle the damper fully closed and fully open to verify free operation", "order": 4 },
+      { "id": 5, "text": "Check the fusible link rating matches the fire-rated assembly requirement", "order": 5 },
+      { "id": 6, "text": "Verify proper clearance between damper frame and blade — no binding or gaps", "order": 6 },
+      { "id": 7, "text": "Document findings including damper location, condition, and pass/fail status", "order": 7 },
+      { "id": 8, "text": "Attach an inspection tag to the damper with date, inspector name, and result", "order": 8 }
+    ],
+    "explanation": "Fire damper inspection is a union certification skill taught in both UA and SMACNA programs. NFPA 80 requires inspection 1 year after installation and every 4 years after (6 years for hospitals). Union-trained inspectors are in high demand because many buildings are out of compliance. Proper tagging creates an audit trail that protects the building owner and the inspector.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-hvac-015",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "TAB Procedure for Air Balancing",
+    "description": "Order the steps for a Testing, Adjusting, and Balancing (TAB) procedure on a commercial air system per ASHRAE 111 and SMACNA TAB standards.",
+    "steps": [
+      { "id": 1, "text": "Set up and calibrate all TAB instruments (manometer, anemometer, balancing hood)", "order": 1 },
+      { "id": 2, "text": "Verify fan rotation direction and belt tension at each air handling unit", "order": 2 },
+      { "id": 3, "text": "Measure total system airflow at the AHU discharge using a pitot tube traverse", "order": 3 },
+      { "id": 4, "text": "Adjust main trunk dampers to distribute airflow proportionally to each branch", "order": 4 },
+      { "id": 5, "text": "Balance branch duct dampers starting with the branch nearest the fan", "order": 5 },
+      { "id": 6, "text": "Balance individual terminal devices (diffusers, registers) to design CFM", "order": 6 },
+      { "id": 7, "text": "Verify minimum outdoor air intake meets ASHRAE 62.1 ventilation requirements", "order": 7 },
+      { "id": 8, "text": "Document all final readings, damper positions, and fan operating data on the TAB report", "order": 8 }
+    ],
+    "explanation": "The TAB procedure per ASHRAE 111 and SMACNA TAB standards follows a top-down approach: verify the fan delivers design airflow first, then balance from the trunk outward to terminals. Adjusting terminal devices before setting main dampers wastes time because every upstream change affects downstream airflow. Outdoor air verification is done after balancing because OA damper position interacts with system static pressure.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-hvac-016",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Duct Leakage Testing per SMACNA CL-6",
+    "description": "Order the steps for performing a duct leakage test to SMACNA Seal Class A / Leakage Class 6 requirements.",
+    "steps": [
+      { "id": 1, "text": "Seal all duct openings — registers, grilles, and open ends — with approved caps or plastic and tape", "order": 1 },
+      { "id": 2, "text": "Connect calibrated duct leakage test fan and digital manometer to a main trunk opening", "order": 2 },
+      { "id": 3, "text": "Pressurize the duct system to 1.5 times the design static pressure", "order": 3 },
+      { "id": 4, "text": "Measure leakage rate in CFM through the test fan at the elevated test pressure", "order": 4 },
+      { "id": 5, "text": "Compare measured leakage to the CL=6 allowable limit per SMACNA Duct Leakage Test Manual", "order": 5 },
+      { "id": 6, "text": "If leakage exceeds CL-6, locate and repair leaks with mastic sealant or approved methods", "order": 6 },
+      { "id": 7, "text": "Re-seal all openings and retest the repaired section to confirm compliance", "order": 7 },
+      { "id": 8, "text": "Document test pressure, measured leakage, allowable leakage, and pass/fail on the leakage test report", "order": 8 }
+    ],
+    "explanation": "SMACNA Leakage Class 6 (CL=6) is one of the tightest leakage standards, commonly specified on laboratory, hospital, and high-performance buildings. Testing at 1.5x design static pressure provides a safety margin. CL=6 limits leakage to 6 CFM per 100 square feet of duct surface area at the test pressure. Achieving CL-6 requires Seal Class A — all transverse joints, longitudinal seams, and duct wall penetrations must be sealed.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hvac-017",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Fire-Rated Duct Installation",
+    "description": "Order the steps for installing fire-rated ductwork through a fire-rated assembly per NFPA 90A and ISO 6944.",
+    "steps": [
+      { "id": 1, "text": "Review drawings to verify where fire-rated duct construction is required", "order": 1 },
+      { "id": 2, "text": "Install ductwork using minimum G-90 galvanized steel as required for fire-rated assemblies", "order": 2 },
+      { "id": 3, "text": "Apply listed fire-resistive coating to a minimum thickness of 0.04 inches on all duct surfaces", "order": 3 },
+      { "id": 4, "text": "Seal all transverse joints and longitudinal seams with fire-rated sealant", "order": 4 },
+      { "id": 5, "text": "Install UL-listed fire dampers at each penetration through a fire-rated wall or floor", "order": 5 },
+      { "id": 6, "text": "Test each fire damper for proper closure by tripping the fusible link mechanism", "order": 6 },
+      { "id": 7, "text": "Label all fire-rated duct sections with the UL fire rating and listing number", "order": 7 },
+      { "id": 8, "text": "Schedule and pass inspection by the authority having jurisdiction before concealing the assembly", "order": 8 }
+    ],
+    "explanation": "Fire-rated duct installation per NFPA 90A requires a systems approach: the duct material (G-90 galvanized), fire-resistive coating (minimum 0.04\" thick per ISO 6944), sealed joints, and fire dampers all work together to maintain the fire barrier. Every fire damper must be functionally tested before the ceiling or wall is closed. Labeling is required so future inspectors can verify the rating. This is life-safety work — shortcuts here kill people.",
+    "xpReward": 75
+  }
+]

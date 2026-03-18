@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ba-in-001",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Process Piping Spool Assembly",
+    "description": "Assemble the components of an ASME B31.3 process piping spool in the correct order from pipe preparation through final inspection.",
+    "parts": [
+      { "id": 1, "name": "Cut pipe to length and bevel ends for butt-weld joint", "correctPosition": 1 },
+      { "id": 2, "name": "Fit-up pipe and fittings with alignment clamps and tack welds", "correctPosition": 2 },
+      { "id": 3, "name": "Complete root pass weld using GTAW (TIG) process", "correctPosition": 3 },
+      { "id": 4, "name": "Fill and cap passes using SMAW or FCAW process", "correctPosition": 4 },
+      { "id": 5, "name": "Perform NDE (radiographic or ultrasonic examination) of welds", "correctPosition": 5 },
+      { "id": 6, "name": "Install flanges, gaskets, and bolt-up to torque specification", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Apply external pipe coating for underground burial" },
+      { "id": 102, "name": "Thread and seal pipe joints with PTFE tape" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Material preparation" },
+      { "id": 2, "label": "Position 2: Fit-up and alignment" },
+      { "id": 3, "label": "Position 3: Root weld" },
+      { "id": 4, "label": "Position 4: Weld completion" },
+      { "id": 5, "label": "Position 5: Weld examination" },
+      { "id": 6, "label": "Position 6: Mechanical connections" }
+    ],
+    "explanation": "Process piping spool fabrication under ASME B31.3 follows a strict weld procedure sequence. Pipe ends must be beveled per the Welding Procedure Specification (WPS). Fit-up with proper gap and alignment ensures weld quality. The root pass uses GTAW (TIG) for high-quality fusion on the inside surface — critical for corrosion resistance and flow. Fill/cap passes complete the joint. NDE (radiography or UT) must be performed before flanging to allow weld repair if defects are found. Threaded connections are a distractor because B31.3 process piping uses welded joints for hazardous fluid service; external coating is for underground pipe, not process spool fabrication.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-in-002",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Hazardous Area Electrical Installation",
+    "description": "Assemble the components of a Class I, Division 1 electrical installation from the power source through the field device, in the correct order per NEC Article 501.",
+    "parts": [
+      { "id": 1, "name": "Motor control center (MCC) in unclassified area", "correctPosition": 1 },
+      { "id": 2, "name": "Conduit seal fitting at classified/unclassified boundary", "correctPosition": 2 },
+      { "id": 3, "name": "Rigid metal conduit through classified area", "correctPosition": 3 },
+      { "id": 4, "name": "Explosionproof junction box with threaded hubs", "correctPosition": 4 },
+      { "id": 5, "name": "Conduit seal fitting within 18 inches of equipment enclosure", "correctPosition": 5 },
+      { "id": 6, "name": "Explosionproof motor with listed terminal box", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Liquidtight flexible metallic conduit (LFMC)" },
+      { "id": 102, "name": "PVC-coated rigid conduit with plastic fittings" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source (safe area)" },
+      { "id": 2, "label": "Position 2: Area boundary transition" },
+      { "id": 3, "label": "Position 3: Classified area raceway" },
+      { "id": 4, "label": "Position 4: Junction/pull point" },
+      { "id": 5, "label": "Position 5: Equipment entry seal" },
+      { "id": 6, "label": "Position 6: Field equipment" }
+    ],
+    "explanation": "A Class I, Division 1 electrical installation per NEC 501 requires a continuous chain of explosionproof components from the area boundary to the field device. The MCC resides in the unclassified area. The first conduit seal at the boundary prevents gas migration into the safe area per NEC 501.15(A)(4). Rigid metal conduit is the required raceway in Division 1 per NEC 501.10(A). Explosionproof junction boxes contain any internal explosion. A second seal within 18 inches of the motor per NEC 501.15(A)(1) prevents gas from entering the conduit from the motor enclosure. LFMC and PVC are distractors — they are not permitted wiring methods in Class I, Division 1 locations.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-in-003",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Ventilation System Components",
+    "description": "Assemble the components of an industrial local exhaust ventilation system in the correct order from the contaminant source to the exhaust discharge.",
+    "parts": [
+      { "id": 1, "name": "Capture hood at contaminant source (slotted or enclosing type)", "correctPosition": 1 },
+      { "id": 2, "name": "Branch duct with blast gate for flow balancing", "correctPosition": 2 },
+      { "id": 3, "name": "Main trunk duct (sized for combined branch flows)", "correctPosition": 3 },
+      { "id": 4, "name": "Dust collector or air cleaning device", "correctPosition": 4 },
+      { "id": 5, "name": "Exhaust fan (clean-air side of collector)", "correctPosition": 5 },
+      { "id": 6, "name": "Exhaust stack with discharge above roofline", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Return air ductwork to occupied space" },
+      { "id": 102, "name": "Humidifier in main trunk duct" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Contaminant capture" },
+      { "id": 2, "label": "Position 2: Branch collection" },
+      { "id": 3, "label": "Position 3: Trunk transport" },
+      { "id": 4, "label": "Position 4: Air cleaning" },
+      { "id": 5, "label": "Position 5: Air mover" },
+      { "id": 6, "label": "Position 6: Atmospheric discharge" }
+    ],
+    "explanation": "An industrial LEV system follows the ACGIH Industrial Ventilation Manual design hierarchy. Capture hoods are positioned closest to the contaminant source to maximize capture efficiency. Branch ducts with blast gates connect individual hoods to the main trunk, allowing flow balancing. The trunk duct transports contaminated air to the dust collector, which removes particulate before the air reaches the fan. The fan is always on the clean-air side to prevent abrasive wear and spark hazards. The exhaust stack discharges cleaned air above the roofline. Returning exhaust air to occupied spaces is a distractor — industrial exhaust must discharge outdoors per OSHA 1910.94.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-in-004",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam Distribution System",
+    "description": "Assemble the components of an industrial steam distribution system in the correct order from the boiler through the process load to condensate return.",
+    "parts": [
+      { "id": 1, "name": "Steam boiler with safety valve and main steam stop valve", "correctPosition": 1 },
+      { "id": 2, "name": "Steam header with pressure reducing valve (PRV station)", "correctPosition": 2 },
+      { "id": 3, "name": "Drip leg with steam trap at header low points", "correctPosition": 3 },
+      { "id": 4, "name": "Branch line with isolation valve to process heat exchanger", "correctPosition": 4 },
+      { "id": 5, "name": "Steam trap on heat exchanger condensate outlet", "correctPosition": 5 },
+      { "id": 6, "name": "Condensate return piping to boiler feedwater tank", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Cooling tower for steam condensing" },
+      { "id": 102, "name": "Glycol injection pump at header" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Steam generation" },
+      { "id": 2, "label": "Position 2: Pressure regulation and distribution" },
+      { "id": 3, "label": "Position 3: Condensate removal from distribution" },
+      { "id": 4, "label": "Position 4: Process connection" },
+      { "id": 5, "label": "Position 5: Process condensate removal" },
+      { "id": 6, "label": "Position 6: Condensate recovery" }
+    ],
+    "explanation": "Industrial steam distribution follows a strict flow path per ASME B31.1 Power Piping code. The boiler generates high-pressure steam that enters the header. A PRV station reduces pressure to the process requirement. Drip legs at header low points collect condensate that forms during distribution — this condensate must be trapped immediately to prevent water hammer. Branch lines deliver steam to process loads. Steam traps at each heat exchanger outlet pass condensate while blocking live steam. Condensate returns to the feedwater tank for reuse, recovering approximately 20% of the total energy. A cooling tower is a distractor — it serves the cooling water system, not the steam system. Glycol has no application in steam distribution.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-in-005",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air System — Compressor to Point-of-Use",
+    "description": "Assemble the components of an industrial compressed air system in the correct order from the air compressor through treatment to the point-of-use outlet.",
+    "parts": [
+      { "id": 1, "name": "Rotary screw air compressor with inlet filter", "correctPosition": 1 },
+      { "id": 2, "name": "Aftercooler with moisture separator and auto drain", "correctPosition": 2 },
+      { "id": 3, "name": "ASME-rated receiver tank with PRV and pressure gauge", "correctPosition": 3 },
+      { "id": 4, "name": "Refrigerated air dryer (or desiccant dryer for instrument air)", "correctPosition": 4 },
+      { "id": 5, "name": "Particulate and coalescing filters", "correctPosition": 5 },
+      { "id": 6, "name": "Distribution piping with drop legs and point-of-use regulators", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Nitrogen membrane separator module" },
+      { "id": 102, "name": "Vacuum pump for negative-pressure applications" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Compression" },
+      { "id": 2, "label": "Position 2: Initial cooling and moisture removal" },
+      { "id": 3, "label": "Position 3: Storage and pressure stabilization" },
+      { "id": 4, "label": "Position 4: Drying" },
+      { "id": 5, "label": "Position 5: Final filtration" },
+      { "id": 6, "label": "Position 6: Distribution and use" }
+    ],
+    "explanation": "A properly designed compressed air system treats air in stages per Compressed Air & Gas Institute (CAGI) best practices and ISO 8573. The compressor produces hot, wet, oil-laden air. The aftercooler drops the temperature, condensing approximately 70% of moisture which is removed by the separator. The receiver tank stores compressed air, dampens pulsation, and allows further moisture dropout. The air dryer reduces the dewpoint to prevent condensation in distribution piping (refrigerated dryers achieve 35-40°F dewpoint; desiccant dryers achieve -40°F for instrument air per ISA-7.0.01). Final particulate and coalescing filters remove remaining contaminants before the clean, dry air enters the distribution system. Nitrogen separators and vacuum pumps are distractors — they are separate systems that may use compressed air as an input but are not part of the compressed air treatment chain.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-in-006",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Chemical Containment and Piping System",
+    "description": "Assemble the components of a chemical storage and transfer system in the correct order from storage through containment to the process connection.",
+    "parts": [
+      { "id": 1, "name": "Chemical storage tank on concrete pad within containment dike", "correctPosition": 1 },
+      { "id": 2, "name": "Tank outlet valve with leak detection in containment sump", "correctPosition": 2 },
+      { "id": 3, "name": "Chemical transfer pump (magnetically coupled, sealless)", "correctPosition": 3 },
+      { "id": 4, "name": "Double-walled piping with leak detection between walls", "correctPosition": 4 },
+      { "id": 5, "name": "Flow meter, pressure transmitter, and control valve", "correctPosition": 5 },
+      { "id": 6, "name": "Process vessel injection point with check valve and isolation valve", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Atmospheric vent to outdoors from transfer piping" },
+      { "id": 102, "name": "Heat exchanger for chemical pre-heating" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Bulk storage" },
+      { "id": 2, "label": "Position 2: Primary containment interface" },
+      { "id": 3, "label": "Position 3: Fluid mover" },
+      { "id": 4, "label": "Position 4: Secondary containment transport" },
+      { "id": 5, "label": "Position 5: Process control" },
+      { "id": 6, "label": "Position 6: Process delivery" }
+    ],
+    "explanation": "Chemical storage and transfer systems per EPA 40 CFR 112 (SPCC) and NFPA 30 require multiple layers of containment and control. The storage tank sits within a containment dike sized for 110% of the tank volume. Leak detection in the containment sump provides early warning. Magnetically coupled (sealless) pumps eliminate shaft seal leaks for hazardous chemicals. Double-walled piping provides secondary containment during transport with interstitial leak detection. Flow measurement and control valves enable precise chemical dosing. The check valve at the process vessel prevents backflow of process fluids into the chemical system. Each layer provides defense-in-depth against chemical releases to the environment.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-in-007",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial Control Loop (4-20 mA)",
+    "description": "Assemble the components of a standard industrial 4-20 mA control loop in the correct signal flow order from the process variable measurement through the controller to the final control element.",
+    "parts": [
+      { "id": 1, "name": "Process transmitter (pressure, temperature, or flow — 4-20 mA output)", "correctPosition": 1 },
+      { "id": 2, "name": "Signal wiring through marshalling cabinet to I/O terminal", "correctPosition": 2 },
+      { "id": 3, "name": "PLC/DCS analog input module (AI — reads process variable)", "correctPosition": 3 },
+      { "id": 4, "name": "PID controller function block (compares PV to setpoint, calculates output)", "correctPosition": 4 },
+      { "id": 5, "name": "PLC/DCS analog output module (AO — sends 4-20 mA to valve)", "correctPosition": 5 },
+      { "id": 6, "name": "I/P transducer and control valve (converts signal to mechanical position)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Ethernet switch for Modbus TCP communication" },
+      { "id": 102, "name": "Safety instrumented system (SIS) logic solver" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Process measurement" },
+      { "id": 2, "label": "Position 2: Signal transport" },
+      { "id": 3, "label": "Position 3: Signal input to controller" },
+      { "id": 4, "label": "Position 4: Control algorithm" },
+      { "id": 5, "label": "Position 5: Control signal output" },
+      { "id": 6, "label": "Position 6: Final control element" }
+    ],
+    "explanation": "The 4-20 mA control loop is the fundamental building block of industrial process control per ANSI/ISA-5.1 instrumentation standards. The field transmitter converts a physical process variable (pressure, temperature, flow, level) to a 4-20 mA signal proportional to its calibrated range. The signal travels through wiring to the PLC/DCS input module, which converts it to a digital value. The PID control function compares the process variable to the operator setpoint and calculates an output. The analog output module sends a 4-20 mA signal to the control valve's I/P (current-to-pneumatic) transducer, which converts the electrical signal to a 3-15 psig air signal that positions the valve. This closed-loop architecture enables automatic process control. The Ethernet switch and SIS are distractors — they represent different communication and safety systems.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-in-008",
+    "type": "build-assembly",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Process Cooling Water Circuit",
+    "description": "Assemble the components of an industrial process cooling water circuit in the correct order from heat rejection through cooling water treatment back to the process.",
+    "parts": [
+      { "id": 1, "name": "Induced-draft cooling tower with fill media and basin", "correctPosition": 1 },
+      { "id": 2, "name": "Cooling water circulation pump (with strainer on suction)", "correctPosition": 2 },
+      { "id": 3, "name": "Chemical treatment injection point (biocide, inhibitor, scale control)", "correctPosition": 3 },
+      { "id": 4, "name": "Supply header with isolation valves to process heat exchangers", "correctPosition": 4 },
+      { "id": 5, "name": "Process heat exchangers (shell-and-tube or plate-and-frame)", "correctPosition": 5 },
+      { "id": 6, "name": "Return header back to cooling tower distribution deck", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Chiller with refrigerant compressor" },
+      { "id": 102, "name": "Steam-to-water heat exchanger for heating" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Heat rejection to atmosphere" },
+      { "id": 2, "label": "Position 2: Water circulation" },
+      { "id": 3, "label": "Position 3: Water quality management" },
+      { "id": 4, "label": "Position 4: Distribution" },
+      { "id": 5, "label": "Position 5: Process heat pickup" },
+      { "id": 6, "label": "Position 6: Return to tower" }
+    ],
+    "explanation": "The industrial process cooling water circuit is an open-loop evaporative system per ASHRAE and Cooling Technology Institute (CTI) guidelines. The cooling tower rejects heat to the atmosphere through evaporation, producing cooled water in the basin (typically 85°F at design conditions). Circulation pumps draw from the basin through suction strainers that remove debris. Chemical treatment is injected downstream of the pump to control biological growth (Legionella per ASHRAE 188), scale formation, and corrosion. The supply header distributes cooling water to process heat exchangers where it absorbs process heat. Warm return water (typically 95°F) flows back to the cooling tower distribution deck for recooling. Chillers are a distractor — they provide mechanical refrigeration for lower temperatures than a cooling tower can achieve. The steam heat exchanger is a heating device, not a cooling component.",
+    "xpReward": 100
+  }
+]

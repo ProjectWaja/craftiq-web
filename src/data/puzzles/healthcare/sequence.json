@@ -1,0 +1,160 @@
+[
+  {
+    "id": "seq-hc-001",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Medical Gas System Commissioning",
+    "description": "Put the medical gas system commissioning steps in the correct order, from installation completion to patient use authorization.",
+    "steps": [
+      { "id": 1, "text": "Complete all brazing and mechanical connections on the piping system", "order": 1 },
+      { "id": 2, "text": "Perform initial blow-down of piping with oil-free nitrogen to remove debris", "order": 2 },
+      { "id": 3, "text": "Pressure test all piping at 1.5x working pressure with oil-free nitrogen for 24 hours", "order": 3 },
+      { "id": 4, "text": "Perform cross-connection test at every outlet to verify correct gas delivery", "order": 4 },
+      { "id": 5, "text": "Purge entire system with the specific gas (O2, N2O, medical air, etc.)", "order": 5 },
+      { "id": 6, "text": "Conduct purity test — verify gas identity, dew point, and particulate levels", "order": 6 },
+      { "id": 7, "text": "Engage third-party verifier to certify system per NFPA 99 Section 5.1.12", "order": 7 },
+      { "id": 8, "text": "Obtain written authorization from the facility's designated medical gas system authority", "order": 8 }
+    ],
+    "explanation": "Medical gas commissioning per NFPA 99 Section 5.1.12 follows a strict sequence designed to catch every possible error before gases reach patients. The nitrogen blow-down removes brazing flux and debris. Pressure testing proves joint integrity. Cross-connection testing — the most critical step — verifies every outlet delivers the correct gas, since a cross-connection can kill patients. Purity testing confirms the gas meets USP standards. Only after third-party verification and written authorization can the system be placed in patient service.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hc-002",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "OR HVAC Startup Procedure",
+    "description": "Sequence the steps for starting up the HVAC system in a newly constructed operating room suite before surgical use.",
+    "steps": [
+      { "id": 1, "text": "Verify ductwork installation is complete with all joints sealed and insulated", "order": 1 },
+      { "id": 2, "text": "Install MERV 14 pre-filters and HEPA terminal filters", "order": 2 },
+      { "id": 3, "text": "Start the dedicated AHU and balance supply and return airflows", "order": 3 },
+      { "id": 4, "text": "Verify minimum 20 ACH total with at least 4 ACH outdoor air per ASHRAE 170", "order": 4 },
+      { "id": 5, "text": "Confirm positive pressure relationship to corridors (minimum +0.01 in. w.g.)", "order": 5 },
+      { "id": 6, "text": "Verify temperature control within 68-75°F and humidity within 20-60% RH", "order": 6 },
+      { "id": 7, "text": "Perform particle count testing to verify air cleanliness under operational conditions", "order": 7 },
+      { "id": 8, "text": "Document all readings and obtain infection control committee sign-off", "order": 8 }
+    ],
+    "explanation": "OR HVAC startup must be methodical because every parameter — air change rate, pressure, temperature, humidity, and particulate levels — directly affects surgical site infection rates. Filters must be installed before the AHU starts to prevent construction dust from contaminating ductwork. Airflow balancing comes before pressure verification because the pressure relationship depends on the balance between supply and exhaust volumes. Particle count testing proves the entire system works as an integrated unit.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hc-003",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Essential Electrical System Transfer Test",
+    "description": "Sequence the steps for performing a complete essential electrical system transfer test in a hospital, from simulated utility loss through return to normal power.",
+    "steps": [
+      { "id": 1, "text": "Notify all departments and coordinate with clinical staff to protect patients", "order": 1 },
+      { "id": 2, "text": "Simulate utility power loss at the main service entrance", "order": 2 },
+      { "id": 3, "text": "Verify generator auto-starts and reaches rated voltage/frequency", "order": 3 },
+      { "id": 4, "text": "Confirm life safety branch transfers within 10 seconds per NEC 517.31", "order": 4 },
+      { "id": 5, "text": "Verify critical branch transfers and powers patient care equipment", "order": 5 },
+      { "id": 6, "text": "Confirm equipment branch transfers with time delay for motor sequencing", "order": 6 },
+      { "id": 7, "text": "Run generator under full essential system load for minimum 30 minutes", "order": 7 },
+      { "id": 8, "text": "Restore utility power and verify automatic retransfer to normal source", "order": 8 }
+    ],
+    "explanation": "Essential electrical system transfer testing per NFPA 110 and NEC 517 must verify the complete chain from utility loss through generator start, load transfer across all three branches, sustained generator operation, and retransfer. The 10-second life safety branch requirement is absolute. The equipment branch uses a time-delayed transfer to prevent simultaneous motor starting from overloading the generator. Clinical coordination is critical because the test creates real power interruptions to non-essential circuits.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hc-004",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Sterile Processing Decontamination Workflow",
+    "description": "Order the steps for the sterile processing workflow from receiving contaminated instruments to sterile storage, focusing on the mechanical and plumbing systems involved.",
+    "steps": [
+      { "id": 1, "text": "Receive contaminated instruments in negative-pressure decontamination room", "order": 1 },
+      { "id": 2, "text": "Pre-rinse instruments at decontamination sink with tempered water", "order": 2 },
+      { "id": 3, "text": "Process instruments through automated washer-disinfector at 180°F minimum", "order": 3 },
+      { "id": 4, "text": "Pass decontaminated instruments through wall pass-through to clean assembly area", "order": 4 },
+      { "id": 5, "text": "Inspect, assemble, and wrap instrument sets in positive-pressure clean room", "order": 5 },
+      { "id": 6, "text": "Process wrapped sets through steam sterilizer at 270°F / 132°C", "order": 6 },
+      { "id": 7, "text": "Transfer sterilized sets to positive-pressure sterile storage area", "order": 7 }
+    ],
+    "explanation": "The sterile processing workflow is a one-directional flow from dirty to clean, supported by pressure cascading per ASHRAE 170. The decontamination area is at negative pressure to contain bioburden aerosols. The clean assembly area is at neutral or positive pressure. Sterile storage is at positive pressure to prevent recontamination. Wall pass-throughs and physical barriers ensure contaminated and sterile instruments never share the same space. Water temperature at the washer-disinfector must reach thermal disinfection levels per ASSE 1070/AAMI ST79.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hc-005",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "ICRA Barrier Installation",
+    "description": "Order the steps for installing infection control risk assessment (ICRA) barriers before beginning construction in an occupied hospital area.",
+    "steps": [
+      { "id": 1, "text": "Perform ICRA risk assessment and obtain infection control committee approval", "order": 1 },
+      { "id": 2, "text": "Relocate or protect existing medical gas and electrical systems in the work zone", "order": 2 },
+      { "id": 3, "text": "Construct dust-tight hard barriers (drywall or plywood) from floor to deck above", "order": 3 },
+      { "id": 4, "text": "Install HEPA-filtered negative air machine exhausting from the construction zone", "order": 4 },
+      { "id": 5, "text": "Seal all penetrations (pipes, conduits, ducts) through barrier walls", "order": 5 },
+      { "id": 6, "text": "Create anteroom vestibule with tacky mats for worker entry/exit", "order": 6 },
+      { "id": 7, "text": "Verify negative pressure in construction zone relative to patient areas and document daily", "order": 7 }
+    ],
+    "explanation": "ICRA barriers are required by FGI Guidelines and The Joint Commission whenever construction occurs in or near occupied healthcare areas. The goal is to prevent construction dust — which contains Aspergillus spores and other pathogens — from reaching immunocompromised patients. Hard barriers sealed floor to deck prevent direct air migration. HEPA-filtered negative pressure ensures any leakage is into the construction zone, not out. Daily pressure verification documents ongoing compliance throughout the project duration.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hc-006",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Negative Pressure Room Verification",
+    "description": "Sequence the steps for verifying and certifying an airborne infection isolation (AII) room's negative pressure performance.",
+    "steps": [
+      { "id": 1, "text": "Close all doors and windows and ensure HVAC system is in normal operating mode", "order": 1 },
+      { "id": 2, "text": "Verify exhaust airflow rate meets or exceeds 12 ACH per ASHRAE 170", "order": 2 },
+      { "id": 3, "text": "Verify supply airflow rate is set below exhaust to create negative offset", "order": 3 },
+      { "id": 4, "text": "Measure pressure differential at room entry (minimum -0.01 in. w.g.)", "order": 4 },
+      { "id": 5, "text": "Perform smoke test at door undercut to visually confirm inward airflow direction", "order": 5 },
+      { "id": 6, "text": "Verify anteroom pressure is between corridor and patient room pressures", "order": 6 },
+      { "id": 7, "text": "Confirm pressure monitoring device reads correctly and alarms function at setpoint", "order": 7 },
+      { "id": 8, "text": "Document all readings and certify room for AII use per CDC/HICPAC guidelines", "order": 8 }
+    ],
+    "explanation": "AII room verification follows a systematic approach per ASHRAE 170 and CDC guidelines. Exhaust must exceed supply to create the pressure differential. The pressure measurement confirms the quantitative differential, while the smoke test provides visual confirmation of airflow direction. The anteroom must maintain an intermediate pressure to function as an airlock. Alarm testing ensures staff are notified if the room loses its negative pressure status. Full documentation is required for Joint Commission and state health department compliance.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hc-007",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Air Quality Testing",
+    "description": "Order the steps for performing medical air quality testing on a hospital's medical air supply system per NFPA 99.",
+    "steps": [
+      { "id": 1, "text": "Verify compressor system is running normally with lead/lag operation", "order": 1 },
+      { "id": 2, "text": "Allow system to stabilize at normal operating pressure for 30 minutes", "order": 2 },
+      { "id": 3, "text": "Sample air at the furthest outlet from the compressor source", "order": 3 },
+      { "id": 4, "text": "Test for carbon monoxide (CO must be less than 1 ppm)", "order": 4 },
+      { "id": 5, "text": "Test for carbon dioxide (CO2 must be less than 500 ppm)", "order": 5 },
+      { "id": 6, "text": "Measure dew point (must be -40°F or below at line pressure)", "order": 6 },
+      { "id": 7, "text": "Test for gaseous hydrocarbons (must be less than 1 ppm as methane equivalent)", "order": 7 },
+      { "id": 8, "text": "Document results and compare to NFPA 99 Table 5.1.12.2 acceptance criteria", "order": 8 }
+    ],
+    "explanation": "Medical air quality testing per NFPA 99 Section 5.1.3.5 must verify that the air delivered to patients meets stringent purity standards. Testing at the furthest outlet ensures the entire distribution system is evaluated, including any contamination picked up in the piping. CO monitoring is critical because compressor intake contamination from vehicles or equipment can introduce lethal levels of carbon monoxide into the patient breathing circuit. The -40°F dew point requirement prevents moisture condensation and microbial growth in the piping system.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hc-008",
+    "type": "sequence",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Fire Alarm Integration Testing in Patient Areas",
+    "description": "Sequence the steps for testing fire alarm integration with building systems in healthcare patient care areas.",
+    "steps": [
+      { "id": 1, "text": "Notify hospital administration, nursing, and security of scheduled test", "order": 1 },
+      { "id": 2, "text": "Place fire alarm system in test mode to prevent central station dispatch", "order": 2 },
+      { "id": 3, "text": "Activate initiating device (smoke detector or pull station) in patient area", "order": 3 },
+      { "id": 4, "text": "Verify HVAC system activates smoke control mode (fans to smoke evacuation position)", "order": 4 },
+      { "id": 5, "text": "Verify fire/smoke dampers close in affected smoke compartment ductwork", "order": 5 },
+      { "id": 6, "text": "Confirm automatic door release for magnetic hold-open devices on smoke doors", "order": 6 },
+      { "id": 7, "text": "Verify elevator recall to designated floor per NFPA 72 and ASME A17.1", "order": 7 },
+      { "id": 8, "text": "Restore all systems to normal, take system out of test mode, and document results", "order": 8 }
+    ],
+    "explanation": "Fire alarm integration testing in hospitals verifies that all building systems respond correctly to an alarm condition per NFPA 72 and NFPA 101. Healthcare facilities use a 'defend in place' strategy — patients cannot evacuate quickly, so smoke compartmentalization is critical. HVAC systems must transition to smoke control mode, dampers must close to prevent smoke spread through ductwork, magnetic hold-open devices must release smoke doors, and elevators must recall. Each integration point is a potential failure that could allow smoke to spread to occupied patient areas.",
+    "xpReward": 100
+  }
+]

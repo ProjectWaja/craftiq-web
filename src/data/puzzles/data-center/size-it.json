@@ -1,0 +1,138 @@
+[
+  {
+    "id": "si-dc-001",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "UPS Sizing for IT Load",
+    "scenario": "A data center room has a total IT load of 100 kW. The server power supplies operate at a 0.9 power factor. You need to select a UPS system that can handle the full load. What is the minimum UPS kVA rating you should specify?",
+    "hint": "kVA = kW / power factor. Always round up to the next standard UPS frame size to allow headroom for future growth and transient loads.",
+    "options": [
+      { "text": "100 kVA", "value": "a", "correct": false, "feedback": "100 kVA assumes a unity (1.0) power factor. At 0.9 PF, 100 kVA only delivers 90 kW — not enough for a 100 kW load." },
+      { "text": "120 kVA", "value": "b", "correct": true, "feedback": "Correct. 100 kW / 0.9 PF = 111.1 kVA. The next standard UPS frame size is 120 kVA, which provides the required capacity plus a small margin for load growth." },
+      { "text": "150 kVA", "value": "c", "correct": false, "feedback": "150 kVA would work but is oversized. The calculated requirement is 111.1 kVA, making 120 kVA the most appropriate standard size without excessive overprovisioning." },
+      { "text": "90 kVA", "value": "d", "correct": false, "feedback": "90 kVA at 0.9 PF only delivers 81 kW — well under the 100 kW IT load. This UPS would be overloaded immediately." }
+    ],
+    "explanation": "UPS systems are rated in kVA (kilovolt-amperes), not kW. To convert an IT load in kW to the required UPS kVA rating, divide by the power factor: kVA = kW / PF. For a 100 kW load at 0.9 PF, you need at least 111.1 kVA. Standard UPS frame sizes are typically 100, 120, 150, 200 kVA, so you select the next size up — 120 kVA. Never size a UPS at exactly the calculated load; always leave margin for inrush currents and future growth.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-002",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "CRAH Tonnage for Heat Rejection",
+    "scenario": "A data hall contains IT equipment generating 200 kW of heat. All heat must be removed by Computer Room Air Handlers (CRAHs). How many tons of cooling capacity are required to reject this heat load?",
+    "hint": "1 ton of refrigeration = 3.517 kW of heat removal. Divide the total heat load in kW by 3.517 to get the required tonnage.",
+    "options": [
+      { "text": "40 tons", "value": "a", "correct": false, "feedback": "40 tons = 140.7 kW of cooling — only 70% of the 200 kW heat load. The room would overheat quickly." },
+      { "text": "50 tons", "value": "b", "correct": false, "feedback": "50 tons = 175.9 kW. This is still 24 kW short of the 200 kW load and provides no safety margin." },
+      { "text": "57 tons", "value": "c", "correct": true, "feedback": "Correct. 200 kW / 3.517 kW per ton = 56.9 tons, rounded to 57 tons. This matches the IT heat rejection requirement." },
+      { "text": "75 tons", "value": "d", "correct": false, "feedback": "75 tons = 263.8 kW of cooling. While having extra capacity is not harmful, this significantly oversizes the system by over 30%, increasing capital and operating costs unnecessarily for a straightforward sizing question." }
+    ],
+    "explanation": "Cooling capacity in data centers is often expressed in tons of refrigeration. One ton equals 12,000 BTU/hr or 3.517 kW. To size CRAHs, divide the total IT heat load by 3.517: 200 kW / 3.517 = 56.9 tons, which rounds to approximately 57 tons. In practice, engineers add redundancy (N+1 or 2N) on top of the base capacity, but the fundamental sizing calculation starts with this conversion. All electrical energy consumed by IT equipment is ultimately converted to heat that must be removed.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-003",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "PDU Breaker Sizing per NEC",
+    "scenario": "A 42U server rack draws 8 kW of IT load and is fed by a 208V three-phase power distribution unit (PDU). Per NEC Article 210.20, continuous loads must not exceed 80% of the breaker rating. What is the minimum standard breaker size for this rack's branch circuit?",
+    "hint": "For 3-phase power: I = P / (V x sqrt(3)). Then apply the NEC 80% continuous load rule: breaker >= calculated amps x 1.25. Round up to the next standard breaker size.",
+    "options": [
+      { "text": "20A", "value": "a", "correct": false, "feedback": "The full-load current is 22.2A. A 20A breaker is already below the load current — it would trip immediately, even before applying the 80% derating rule." },
+      { "text": "25A", "value": "b", "correct": false, "feedback": "22.2A x 1.25 = 27.8A. A 25A breaker only allows 20A continuous (80%), which is less than the 22.2A load. This breaker is undersized per NEC 210.20." },
+      { "text": "30A", "value": "c", "correct": true, "feedback": "Correct. I = 8,000 / (208 x 1.732) = 22.2A. Per NEC 210.20, multiply by 1.25: 22.2 x 1.25 = 27.8A. The next standard breaker size is 30A, which allows 24A continuous — sufficient for the load." },
+      { "text": "40A", "value": "d", "correct": false, "feedback": "40A would work electrically but oversizes the circuit. The calculated minimum is 27.8A, making 30A the correct standard size. Oversizing breakers can compromise conductor protection per NEC requirements." }
+    ],
+    "explanation": "Per NEC Article 210.20, branch circuit overcurrent devices must be rated at no less than 125% of the continuous load. For a 3-phase 208V circuit: I = P / (V x sqrt(3)) = 8,000 / (208 x 1.732) = 22.2A. Applying the 125% factor: 22.2 x 1.25 = 27.8A. Standard breaker sizes are 15, 20, 25, 30, 35, 40A, so you select 30A. This is a fundamental calculation for every rack whip and PDU branch circuit in a data center. Getting it wrong means nuisance trips (undersized) or inadequate protection (oversized).",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-004",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "UPS Battery Bank Sizing",
+    "scenario": "A 500 kVA UPS system operates at 0.9 power factor and must provide 15 minutes of battery runtime at full load. The battery bank must be oversized by 20% to account for aging and end-of-life capacity degradation. What is the minimum battery bank energy capacity required?",
+    "hint": "Energy (kWh) = kW x hours of runtime. Convert 15 minutes to hours (0.25 hr), multiply by the kW load, then add the 20% aging factor.",
+    "options": [
+      { "text": "112.5 kWh", "value": "a", "correct": false, "feedback": "112.5 kWh is the raw energy requirement (500 x 0.9 x 0.25) without the 20% aging derating. Batteries lose capacity over time, so the bank must be oversized at installation to still meet runtime at end of life." },
+      { "text": "125 kWh", "value": "b", "correct": false, "feedback": "125 kWh assumes the full 500 kVA without the 0.9 power factor conversion: 500 x 0.25 = 125. UPS output power in kW = kVA x PF, so the actual load is 450 kW, not 500 kW." },
+      { "text": "135 kWh", "value": "c", "correct": true, "feedback": "Correct. kW load = 500 x 0.9 = 450 kW. Energy = 450 x 0.25 hr = 112.5 kWh. With 20% aging factor: 112.5 x 1.2 = 135 kWh." },
+      { "text": "150 kWh", "value": "d", "correct": false, "feedback": "150 kWh applies the 20% aging factor to 125 kWh (500 kVA x 0.25 hr x 1.2), but this incorrectly uses kVA instead of kW. The power factor must be applied first to get the true kW load." }
+    ],
+    "explanation": "Battery bank sizing requires converting UPS kVA to kW (kVA x power factor), then calculating energy for the desired runtime. For a 500 kVA UPS at 0.9 PF: 500 x 0.9 = 450 kW. At 15 minutes (0.25 hours) runtime: 450 x 0.25 = 112.5 kWh. Batteries degrade over their 5-10 year lifespan, so the industry standard practice is to add a 20% aging factor at initial sizing: 112.5 x 1.2 = 135 kWh. This ensures the battery bank still delivers the required 15 minutes of runtime even at end of life when capacity has degraded.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-005",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Raised Floor Tile Airflow for High-Density Rack",
+    "scenario": "A high-density server rack dissipates 15 kW of heat. The data center uses a raised floor plenum with perforated floor tiles for cold air delivery. Using the industry rule of thumb for airflow requirements, how much airflow (in CFM) should be delivered through the perforated tiles in front of this rack?",
+    "hint": "The common data center rule of thumb is approximately 100 CFM per kW of IT load for the total airflow requirement.",
+    "options": [
+      { "text": "750 CFM", "value": "a", "correct": false, "feedback": "750 CFM provides only 50 CFM per kW. This is severely insufficient airflow and would cause the rack inlet temperature to rise well above ASHRAE recommended limits." },
+      { "text": "1,000 CFM", "value": "b", "correct": false, "feedback": "1,000 CFM provides about 67 CFM per kW. While closer, this is still below the recommended 100 CFM per kW rule of thumb and would likely result in hot spots." },
+      { "text": "1,500 CFM", "value": "c", "correct": true, "feedback": "Correct. At approximately 100 CFM per kW, a 15 kW rack requires about 1,500 CFM. This provides adequate airflow to maintain ASHRAE-recommended inlet temperatures." },
+      { "text": "2,500 CFM", "value": "d", "correct": false, "feedback": "2,500 CFM (167 CFM per kW) significantly over-delivers cold air. While more cooling is not directly harmful, it wastes fan energy and can cause condensation or bypass airflow issues in adjacent areas." }
+    ],
+    "explanation": "A widely used data center rule of thumb is that approximately 100 CFM of airflow is needed per kW of IT heat load to maintain recommended rack inlet temperatures (per ASHRAE TC 9.9 guidelines of 64-80 degrees F). For a 15 kW rack, this means roughly 1,500 CFM. This airflow is typically delivered through 25% open perforated floor tiles, each providing 400-600 CFM depending on plenum pressure. A 15 kW rack might need 3-4 perforated tiles in its cold aisle. Computational Fluid Dynamics (CFD) modeling provides more precise results, but this rule of thumb is essential for initial planning.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-006",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Standby Generator Sizing",
+    "scenario": "A data center facility has the following electrical loads: 2 MW of IT equipment, 800 kW of mechanical systems (chillers, pumps, CRAHs), and 200 kW of lighting and miscellaneous loads. The generator must be derated by 25% for altitude, ambient temperature, and transient loading margins. What generator class should be specified?",
+    "hint": "Sum all loads to get the total facility requirement, then divide by the derating factor (0.75 for 25% derating) to find the nameplate generator rating needed. Round up to the next standard generator frame size.",
+    "options": [
+      { "text": "3 MW", "value": "a", "correct": false, "feedback": "3 MW is the raw load total (2 + 0.8 + 0.2 = 3 MW) without any derating. After applying the 25% derating, a 3 MW generator can only deliver 2.25 MW — well short of the 3 MW load." },
+      { "text": "3.5 MW", "value": "b", "correct": false, "feedback": "3.5 MW derated by 25% delivers only 2.625 MW. This is still 375 kW short of the 3 MW total facility load." },
+      { "text": "4 MW", "value": "c", "correct": true, "feedback": "Correct. Total load = 3 MW. With 25% derating: 3 MW / 0.75 = 4 MW nameplate rating required. A 4 MW class generator delivers 3 MW after derating, matching the facility load." },
+      { "text": "5 MW", "value": "d", "correct": false, "feedback": "5 MW is significantly oversized. The calculated requirement is 4 MW. While N+1 redundancy may call for additional generators, each unit should be sized to the calculated 4 MW class." }
+    ],
+    "explanation": "Generator sizing for data centers must account for all facility loads — not just IT, but also mechanical cooling and building systems. Total load: 2 MW (IT) + 800 kW (mechanical) + 200 kW (lighting/misc) = 3 MW. Generators must be derated for real-world conditions including altitude above sea level, high ambient temperatures, and transient step-load acceptance. A 25% derating is common in practice, meaning the generator nameplate must be: 3 MW / 0.75 = 4 MW. Most data centers use multiple generators in parallel (N+1 or 2N) for redundancy, but each unit is sized to carry the full facility load or a calculated portion of it based on the redundancy scheme.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-007",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Chilled Water Flow Rate",
+    "scenario": "A data center chiller plant has a total cooling capacity of 400 tons. The chilled water system is designed with a 12 degree F temperature differential (delta-T) between the supply and return water. What is the required chilled water flow rate in gallons per minute (GPM)?",
+    "hint": "The chilled water flow formula is: GPM = (tons x 24) / delta-T. This is derived from the relationship where 1 ton = 12,000 BTU/hr and water absorbs 1 BTU per pound per degree F, with water weighing approximately 8.33 lb/gal.",
+    "options": [
+      { "text": "600 GPM", "value": "a", "correct": false, "feedback": "600 GPM with a 12 degree F delta-T only provides 300 tons of cooling capacity (600 x 12 / 24 = 300). This is 100 tons short of the required 400 tons." },
+      { "text": "800 GPM", "value": "b", "correct": true, "feedback": "Correct. GPM = (400 tons x 24) / 12 degree F = 9,600 / 12 = 800 GPM. This flow rate at 12 degrees delta-T transfers exactly 400 tons of heat." },
+      { "text": "1,000 GPM", "value": "c", "correct": false, "feedback": "1,000 GPM at 12 degree F delta-T would provide 500 tons of cooling (1,000 x 12 / 24 = 500). This oversizes the piping and pumps by 25%, increasing cost and energy consumption." },
+      { "text": "1,200 GPM", "value": "d", "correct": false, "feedback": "1,200 GPM at 12 degree F delta-T yields 600 tons (1,200 x 12 / 24 = 600). This is 50% oversized and would require significantly larger pipes, pumps, and variable frequency drives." }
+    ],
+    "explanation": "The fundamental chilled water flow formula is GPM = (tons x 24) / delta-T. This comes from the basic heat transfer equation: Q = m x Cp x delta-T, where Q is heat in BTU/hr, m is mass flow rate, Cp is specific heat of water (1 BTU/lb/degree F), and delta-T is the temperature difference. The constant 24 accounts for the conversion factors (12,000 BTU/ton divided by 500, where 500 = 60 min/hr x 8.33 lb/gal x 1 BTU/lb/degree F). For 400 tons at 12 degree F delta-T: (400 x 24) / 12 = 800 GPM. A higher delta-T reduces flow rate and pipe sizes but requires more chiller efficiency. Most data center chilled water systems operate between 10-14 degree F delta-T.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-dc-008",
+    "type": "size-it",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Cable Tray Fill per NEC 392",
+    "scenario": "A network infrastructure project requires routing 200 Category 6A data cables through a cable tray. Each Cat6A cable has an outside diameter (OD) of 0.35 inches. Per NEC Article 392, the maximum fill for signal cables in a cable tray is 50% of the cross-sectional area. Using a standard 4-inch deep cable tray, what is the minimum tray width required?",
+    "hint": "Calculate total cable area using A = N x pi x (OD/2)^2. Then divide by the 50% fill factor to get the required tray cross-section. Standard tray widths are 6, 12, 18, 24, and 36 inches.",
+    "options": [
+      { "text": "12-inch tray (48 sq in usable)", "value": "a", "correct": false, "feedback": "A 12-inch x 4-inch tray has 48 sq in total, but only 24 sq in at 50% fill. The 200 cables need 19.2 sq in of actual cable area, requiring 38.4 sq in of tray space. 24 sq in is insufficient." },
+      { "text": "18-inch tray (72 sq in usable)", "value": "b", "correct": false, "feedback": "An 18-inch tray provides 36 sq in at 50% fill, which is just barely short of the 38.5 sq in required. While close, it does not meet the NEC minimum and would fail inspection." },
+      { "text": "24-inch tray (96 sq in usable)", "value": "c", "correct": true, "feedback": "Correct. Each cable area = pi x 0.175^2 = 0.0962 sq in. Total = 200 x 0.0962 = 19.24 sq in. At 50% fill: 19.24 / 0.50 = 38.5 sq in required. A 24-inch x 4-inch tray = 96 sq in total (48 sq in at 50% fill), which satisfies the requirement with room for growth." },
+      { "text": "36-inch tray (144 sq in usable)", "value": "d", "correct": false, "feedback": "A 36-inch tray provides 72 sq in at 50% fill. While it works, it is significantly oversized for 200 cables requiring only 38.5 sq in. The 24-inch tray is the correct minimum size." }
+    ],
+    "explanation": "NEC Article 392 governs cable tray installations. For signal and data cables, the maximum fill area is 50% of the tray cross-section, which allows for heat dissipation and future cable additions. The calculation: each Cat6A cable with 0.35-inch OD has a cross-sectional area of pi x (0.175)^2 = 0.0962 sq in. For 200 cables: 200 x 0.0962 = 19.24 sq in of cable area. At 50% maximum fill, the tray must have at least 19.24 / 0.50 = 38.5 sq in of cross-sectional area. Standard tray sizes at 4-inch depth: 12-inch (48 sq in total, 24 usable), 18-inch (72 total, 36 usable), 24-inch (96 total, 48 usable). The 24-inch tray is the first standard size that exceeds the 38.5 sq in requirement at 50% fill.",
+    "xpReward": 60
+  }
+]

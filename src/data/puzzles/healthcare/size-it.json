@@ -1,0 +1,138 @@
+[
+  {
+    "id": "si-hc-001",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "OR Air Change Rate Calculation",
+    "scenario": "A hospital operating room measures 20 feet long x 20 feet wide x 10 feet high (4,000 cubic feet). ASHRAE 170 requires a minimum of 20 air changes per hour (ACH). What is the minimum supply airflow in cubic feet per minute (CFM) required for this OR?",
+    "hint": "CFM = (Room Volume x ACH) / 60. Calculate the room volume first, then multiply by the required air changes per hour, and divide by 60 minutes per hour.",
+    "options": [
+      { "text": "1,000 CFM", "value": "a", "correct": false, "feedback": "1,000 CFM provides only 15 ACH for this room volume (1,000 x 60 / 4,000 = 15). This is 25% below the ASHRAE 170 minimum of 20 ACH for operating rooms." },
+      { "text": "1,333 CFM", "value": "b", "correct": true, "feedback": "Correct. Room volume = 20 x 20 x 10 = 4,000 cu ft. CFM = (4,000 x 20) / 60 = 1,333 CFM. This delivers exactly the ASHRAE 170 minimum of 20 ACH." },
+      { "text": "1,600 CFM", "value": "c", "correct": false, "feedback": "1,600 CFM provides 24 ACH (1,600 x 60 / 4,000 = 24). While exceeding the minimum is not wrong, this is 20% oversized for the base calculation. Some facilities do design above minimum, but the question asks for the minimum." },
+      { "text": "800 CFM", "value": "d", "correct": false, "feedback": "800 CFM provides only 12 ACH (800 x 60 / 4,000 = 12). This is only 60% of the required minimum and would fail to adequately dilute surgical smoke and airborne contaminants." }
+    ],
+    "explanation": "The fundamental ventilation calculation for healthcare spaces is CFM = (Volume x ACH) / 60. For an OR with 4,000 cubic feet volume and the ASHRAE 170 minimum of 20 ACH: (4,000 x 20) / 60 = 1,333 CFM. This is the minimum supply air volume — the design engineer may specify more to account for filter loading, duct leakage, and future OR equipment heat loads. Of this total, at least 4 ACH (267 CFM) must be outdoor air per ASHRAE 170 Table 7-1.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hc-002",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Medical Gas Pipe Sizing",
+    "scenario": "A hospital floor has 24 medical-surgical beds, each requiring an oxygen outlet. The diversity factor for a med-surg unit is 0.5 (50% simultaneous use). Each outlet flows at 10 LPM when in use. The oxygen main riser serving this floor must handle the diversified demand. Using NFPA 99 sizing methods, what is the minimum diversified flow rate for the floor riser?",
+    "hint": "Diversified flow = Number of outlets x Flow per outlet x Diversity factor. Convert LPM to a total to find the riser demand.",
+    "options": [
+      { "text": "80 LPM", "value": "a", "correct": false, "feedback": "80 LPM would serve only 8 outlets at full flow, or represent a diversity factor of 0.33, which is too low for a med-surg unit where patient acuity can surge." },
+      { "text": "120 LPM", "value": "b", "correct": true, "feedback": "Correct. 24 outlets x 10 LPM x 0.5 diversity = 120 LPM. This accounts for the statistical likelihood that approximately half the outlets will be in use simultaneously on a typical med-surg floor." },
+      { "text": "240 LPM", "value": "c", "correct": false, "feedback": "240 LPM assumes 100% simultaneous use (24 x 10 = 240 with no diversity). While conservative, this significantly oversizes the riser. NFPA 99 allows diversity factors because not all outlets are used simultaneously — sizing at 100% wastes material and increases installation cost." },
+      { "text": "60 LPM", "value": "d", "correct": false, "feedback": "60 LPM represents a diversity factor of only 0.25, which is too aggressive for a medical-surgical floor. During high census periods, more than 25% of patients may require supplemental oxygen." }
+    ],
+    "explanation": "Medical gas pipe sizing per NFPA 99 uses diversity factors to account for the statistical probability of simultaneous use. For a med-surg floor: 24 outlets x 10 LPM per outlet x 0.5 diversity = 120 LPM diversified demand. The diversity factor varies by unit type — ICUs use 1.0 (100% simultaneous), ORs use 1.0, while med-surg floors typically use 0.5. The riser pipe diameter is then selected from NFPA 99 flow tables to carry 120 LPM at acceptable velocity and pressure drop. Undersizing causes low pressure alarms during peak demand; oversizing wastes copper tubing and brazing labor.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hc-003",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Essential Electrical Branch Capacity",
+    "scenario": "A hospital wing has the following critical branch loads: 40 patient bed receptacles at 180 VA each (NEC demand factor), nurse call system at 5 kVA, patient corridor lighting at 8 kVA, and selected critical equipment at 12 kVA. Per NEC 517.34, what is the minimum critical branch transformer/panel capacity needed?",
+    "hint": "Sum all critical branch loads. For receptacle loads, multiply the number of receptacles by the VA demand factor, then convert to kVA and add all loads together. Round up to the next standard transformer size.",
+    "options": [
+      { "text": "25 kVA", "value": "a", "correct": false, "feedback": "25 kVA is less than the total load of 32.2 kVA. The transformer would be overloaded immediately upon energization, causing overheating and potential failure during the most critical time — a utility outage." },
+      { "text": "30 kVA", "value": "b", "correct": false, "feedback": "30 kVA is still below the calculated 32.2 kVA load. Even without future growth margin, the transformer must exceed the calculated load at minimum." },
+      { "text": "37.5 kVA", "value": "c", "correct": true, "feedback": "Correct. Total load = (40 x 180 VA = 7,200 VA = 7.2 kVA) + 5 + 8 + 12 = 32.2 kVA. The next standard transformer size is 37.5 kVA, providing 16% headroom for load growth." },
+      { "text": "50 kVA", "value": "d", "correct": false, "feedback": "50 kVA would work but is significantly oversized at 55% above the calculated load. The 37.5 kVA standard size adequately serves 32.2 kVA with appropriate margin." }
+    ],
+    "explanation": "Critical branch sizing per NEC 517.34 requires summing all loads assigned to the branch. Patient bed receptacles use an NEC demand factor of 180 VA each: 40 x 180 = 7,200 VA (7.2 kVA). Adding nurse call (5 kVA), corridor lighting (8 kVA), and critical equipment (12 kVA) gives 32.2 kVA total. Standard dry-type transformer sizes are 15, 25, 30, 37.5, 45, 50, 75 kVA. The 37.5 kVA transformer is the first standard size that exceeds the calculated load, providing modest headroom for future additions without excessive oversizing.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hc-004",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Negative Pressure Room Exhaust CFM",
+    "scenario": "An airborne infection isolation (AII) room measures 12 feet x 14 feet x 9 feet ceiling height (1,512 cubic feet). ASHRAE 170 requires a minimum of 12 ACH with all air exhausted (no recirculation). To maintain negative pressure, the exhaust must exceed supply by at least 10%. What is the minimum exhaust airflow in CFM?",
+    "hint": "First calculate the base CFM from ACH requirements: CFM = (Volume x ACH) / 60. Then add 10% to create the negative pressure offset.",
+    "options": [
+      { "text": "302 CFM", "value": "a", "correct": false, "feedback": "302 CFM is the base airflow for 12 ACH (1,512 x 12 / 60 = 302.4). This is the supply air volume. The exhaust must exceed this by at least 10% to create negative pressure." },
+      { "text": "333 CFM", "value": "b", "correct": true, "feedback": "Correct. Base CFM = (1,512 x 12) / 60 = 302.4 CFM. Adding 10% exhaust offset: 302.4 x 1.10 = 332.6, rounded to 333 CFM. This creates the negative pressure differential required for containment." },
+      { "text": "252 CFM", "value": "c", "correct": false, "feedback": "252 CFM provides only 10 ACH (252 x 60 / 1,512 = 10), which is below the ASHRAE 170 minimum of 12 ACH for AII rooms." },
+      { "text": "400 CFM", "value": "d", "correct": false, "feedback": "400 CFM provides 15.9 ACH with a 32% overage above the base requirement. While more exhaust is not harmful for containment, this exceeds what the question asks for as the minimum." }
+    ],
+    "explanation": "AII room exhaust sizing combines two requirements: the ASHRAE 170 minimum of 12 ACH and a supply-exhaust offset to create negative pressure. Base CFM = (1,512 cu ft x 12 ACH) / 60 = 302.4 CFM. The exhaust must exceed supply by approximately 10% to reliably maintain the minimum -0.01 inches w.g. pressure differential: 302.4 x 1.10 = 332.6 CFM (rounded to 333 CFM). All exhaust air from AII rooms must be HEPA-filtered before discharge outdoors or returned to the general HVAC system. The 10% offset is a design convention — actual offset depends on room tightness and door operation frequency.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hc-005",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Medical Air Compressor Sizing",
+    "scenario": "A hospital has 120 medical air outlets across all patient care areas. The peak diversified demand is calculated at 250 LPM (using NFPA 99 diversity factors). The system requires an N+1 duplex compressor arrangement where each compressor must independently handle the peak demand. The compressors operate at 55 PSI line pressure. What is the minimum individual compressor capacity needed?",
+    "hint": "For N+1 redundancy, each individual compressor must be capable of handling the full peak demand on its own. Convert LPM to SCFM: 1 SCFM ≈ 28.3 LPM.",
+    "options": [
+      { "text": "4.4 SCFM at 55 PSI", "value": "a", "correct": false, "feedback": "4.4 SCFM represents the total demand divided by 2, assuming both compressors share the load. In N+1 configuration, each unit must handle the full peak demand independently because one compressor may be down for maintenance." },
+      { "text": "8.8 SCFM at 55 PSI", "value": "b", "correct": true, "feedback": "Correct. 250 LPM / 28.3 LPM per SCFM = 8.83 SCFM, rounded to 8.8 SCFM. Each compressor in the N+1 duplex must independently deliver the full 8.8 SCFM peak demand at 55 PSI line pressure." },
+      { "text": "12 SCFM at 55 PSI", "value": "c", "correct": false, "feedback": "12 SCFM exceeds the calculated 8.8 SCFM requirement by 36%. While some design margin is acceptable, this oversizing is beyond what the calculation calls for." },
+      { "text": "6 SCFM at 55 PSI", "value": "d", "correct": false, "feedback": "6 SCFM is only 68% of the required 8.83 SCFM demand. This compressor would be unable to maintain system pressure during peak demand, triggering low-pressure alarms and potentially starving patient ventilators of medical air." }
+    ],
+    "explanation": "Medical air compressor sizing per NFPA 99 Section 5.1.3.5 requires each compressor in a duplex (N+1) system to handle the full peak diversified demand independently. The calculation: 250 LPM peak demand / 28.3 LPM per SCFM = 8.83 SCFM at 55 PSI line pressure. Each compressor is sized at 8.8 SCFM minimum. The N+1 requirement means one compressor is always available for maintenance or breakdown — critical because medical air is a life-safety gas delivered directly to patient breathing circuits. Oil-free scroll or reciprocating compressors are required per NFPA 99 to prevent hydrocarbon contamination.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hc-006",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Emergency Generator Sizing for Essential Loads",
+    "scenario": "A hospital's essential electrical system has the following branch loads: Life Safety Branch = 75 kW, Critical Branch = 150 kW, Equipment Branch = 225 kW (including HVAC motors with a 1.25 motor starting factor on largest motor of 50 kW). What is the minimum generator kW rating required?",
+    "hint": "Sum all three essential branch loads. For the equipment branch, add the motor starting factor (25% of the largest motor) to the running load to account for inrush current during transfer.",
+    "options": [
+      { "text": "450 kW", "value": "a", "correct": false, "feedback": "450 kW is the sum of running loads without motor starting factor: 75 + 150 + 225 = 450 kW. This does not account for the 12.5 kW motor starting inrush on the 50 kW motor (50 x 0.25 = 12.5 kW)." },
+      { "text": "462.5 kW", "value": "b", "correct": true, "feedback": "Correct. Total = 75 (life safety) + 150 (critical) + 225 (equipment) + 12.5 (motor starting: 50 kW x 0.25) = 462.5 kW. The generator must handle all running loads plus the inrush of the largest motor starting." },
+      { "text": "500 kW", "value": "c", "correct": false, "feedback": "500 kW would work and provides a reasonable margin, but it exceeds the calculated minimum of 462.5 kW. While some margin is good practice, the question asks for the minimum rating." },
+      { "text": "400 kW", "value": "d", "correct": false, "feedback": "400 kW is undersized by over 60 kW. The generator would be overloaded during equipment branch transfer, potentially causing voltage/frequency dip and tripping critical loads." }
+    ],
+    "explanation": "Hospital generator sizing per NEC 517.30 and NFPA 110 must account for all three essential system branches plus motor starting factors. The life safety branch transfers first (within 10 seconds), the critical branch transfers next, and the equipment branch transfers last with a time delay to sequence motor starts. The largest motor's starting inrush (typically 1.25x running load) is added because the generator must maintain voltage and frequency during motor starts. 75 + 150 + 225 + (50 x 0.25) = 462.5 kW minimum. In practice, a 500 kW generator with margin would be specified, but the mathematical minimum is 462.5 kW.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hc-007",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Chilled Water for Healthcare AHUs",
+    "scenario": "A hospital's operating room AHU requires 30 tons of cooling capacity. The chilled water system operates with a 10°F temperature differential (delta-T) between supply and return. What chilled water flow rate in GPM must be provided to this AHU?",
+    "hint": "Use the chilled water flow formula: GPM = (Tons x 24) / Delta-T. The constant 24 comes from the relationship: 12,000 BTU/ton divided by 500 (60 min/hr x 8.33 lb/gal x 1 BTU/lb/°F).",
+    "options": [
+      { "text": "48 GPM", "value": "a", "correct": false, "feedback": "48 GPM at 10°F delta-T provides only 20 tons of cooling (48 x 10 / 24 = 20). This is 10 tons short of the required 30 tons — the AHU cannot maintain OR temperature." },
+      { "text": "72 GPM", "value": "b", "correct": true, "feedback": "Correct. GPM = (30 tons x 24) / 10°F = 720 / 10 = 72 GPM. This flow rate at a 10°F delta-T transfers exactly 30 tons of cooling to the AHU coil." },
+      { "text": "90 GPM", "value": "c", "correct": false, "feedback": "90 GPM at 10°F delta-T provides 37.5 tons (90 x 10 / 24 = 37.5). While providing the required cooling, this oversizes the piping and control valve by 25%, increasing cost and reducing control accuracy." },
+      { "text": "60 GPM", "value": "d", "correct": false, "feedback": "60 GPM at 10°F delta-T provides only 25 tons (60 x 10 / 24 = 25). This is 5 tons short — the OR may overheat during procedures with high surgical lighting and equipment heat loads." }
+    ],
+    "explanation": "The chilled water flow formula GPM = (Tons x 24) / Delta-T is essential for sizing piping, control valves, and balancing valves for every AHU and fan coil unit in a healthcare facility. For a 30-ton OR AHU at 10°F delta-T: (30 x 24) / 10 = 72 GPM. Healthcare AHUs typically operate at lower delta-T (10-12°F) compared to commercial systems (12-16°F) because OR temperature control requires faster response and more precise control. The 72 GPM figure determines the chilled water pipe size, control valve Cv, and balancing valve setting for this AHU branch.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hc-008",
+    "type": "size-it",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Nurse Call Zone Sizing",
+    "scenario": "A hospital medical-surgical unit has 36 patient beds arranged in 18 semi-private rooms. Each bed requires a pillow speaker station, each bathroom requires a pull-cord station, and each room requires a staff emergency station. Additionally, each room has a corridor dome light. How many total nurse call devices (stations, pull cords, and dome lights) must be installed for this unit?",
+    "hint": "Count devices per room: pillow speaker per bed (2 per semi-private), 1 bathroom pull-cord per room, 1 staff emergency per room, 1 corridor dome light per room. Then multiply by the number of rooms.",
+    "options": [
+      { "text": "72 devices", "value": "a", "correct": false, "feedback": "72 accounts for only pillow speakers (36 beds x 2 devices each = 72). This misses bathroom pull-cords, staff emergency stations, and corridor dome lights." },
+      { "text": "90 devices", "value": "b", "correct": true, "feedback": "Correct. Per room: 2 pillow speakers + 1 bathroom pull-cord + 1 staff emergency + 1 dome light = 5 devices. Total: 18 rooms x 5 = 90 devices for the unit." },
+      { "text": "108 devices", "value": "c", "correct": false, "feedback": "108 would assume 6 devices per room. The question specifies 5 device types per room (2 pillow speakers, 1 pull-cord, 1 staff emergency, 1 dome light)." },
+      { "text": "54 devices", "value": "d", "correct": false, "feedback": "54 assumes 3 devices per room, missing the bathroom pull-cord and staff emergency stations. FGI Guidelines require these additional devices for patient safety." }
+    ],
+    "explanation": "Nurse call system sizing per FGI Guidelines requires careful device counting at each patient location. For a semi-private room: 2 pillow speaker stations (one per bed per FGI 2.1-8.3), 1 bathroom pull-cord station (extending to 6 inches from floor), 1 staff emergency station (for code calls), and 1 corridor dome light (for visual alert outside the room). That is 5 devices per room x 18 rooms = 90 total devices. This count drives the nurse call system controller capacity, wiring home runs, and head-end panel sizing. Undercounting devices during design results in costly change orders during construction.",
+    "xpReward": 75
+  }
+]

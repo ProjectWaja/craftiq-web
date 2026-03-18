@@ -1,0 +1,294 @@
+[
+  {
+    "id": "wm-hr-001",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Fire Pump Assembly",
+    "description": "A high-rise building fire pump room has a horizontal split-case fire pump installed with a diesel driver. Review the installation and identify what critical components are missing.",
+    "presentItems": [
+      "Horizontal split-case fire pump on concrete housekeeping pad",
+      "Diesel engine driver with exhaust piping",
+      "Suction pipe from water supply with OS&Y gate valve",
+      "Discharge pipe with check valve",
+      "Fire pump controller with engine start circuit"
+    ],
+    "missingItems": [
+      {
+        "name": "Jockey pump (pressure maintenance pump) with controller",
+        "explanation": "NFPA 20 Section 4.26 requires a pressure maintenance (jockey) pump to maintain system pressure and prevent the main fire pump from starting on minor system leaks or pressure fluctuations. Without a jockey pump, the main fire pump cycles on and off frequently, causing excessive wear on bearings, packing, and the driver. The jockey pump is typically sized at 1% of the fire pump rated flow."
+      },
+      {
+        "name": "Casing relief valve on pump discharge",
+        "explanation": "NFPA 20 Section 4.18 requires a casing relief valve when the pump is driven by a variable-speed source (diesel engine) or when churn pressure plus maximum static suction pressure exceeds the pressure rating of system components. The relief valve prevents overpressurization of the pump casing and downstream piping, protecting against pipe failures and fitting blowouts."
+      },
+      {
+        "name": "Flow meter or flow test connection on discharge header",
+        "explanation": "NFPA 20 Section 4.19 and NFPA 25 require provisions for annual flow testing of the fire pump. A flow meter on the discharge header or a test header with hose valves allows the fire pump to be tested at full rated flow without discharging into the building system. Without test provisions, the fire pump cannot be properly acceptance-tested or annually verified."
+      }
+    ],
+    "distractors": [
+      "Secondary suction connection from city water main",
+      "Variable frequency drive on fire pump motor",
+      "Heat exchanger for engine cooling",
+      "Fire pump room dehumidifier"
+    ],
+    "explanation": "A complete fire pump assembly per NFPA 20 requires not just the main pump, but also a jockey pump for pressure maintenance, a casing relief valve for overpressure protection, and test provisions for annual flow verification. Missing any of these components compromises the reliability and testability of the fire suppression system that every occupant of the high-rise depends on for safety.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hr-002",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Standpipe Installation",
+    "description": "A 25-story high-rise has a Class I standpipe system installed in two enclosed stairwells. Review the installation and identify what critical components are missing.",
+    "presentItems": [
+      "6-inch standpipe riser in each enclosed stairwell",
+      "2-1/2 inch hose valves at each floor landing",
+      "Fire pump in basement providing required pressure",
+      "Check valve at base of each riser",
+      "Roof manifold with hose connections"
+    ],
+    "missingItems": [
+      {
+        "name": "Fire department connection (FDC) at street level",
+        "explanation": "NFPA 14 Section 7.12 requires a fire department connection (FDC) for each standpipe zone to allow fire department pumper trucks to supplement or replace the building fire pump. The FDC provides a secondary water supply path critical when the building fire pump fails or when demand exceeds building pump capacity. The FDC must be on the street side of the building, clearly labeled, and compatible with local fire department fittings."
+      },
+      {
+        "name": "Pressure-restricting devices at lower-floor hose connections",
+        "explanation": "NFPA 14 Section 7.3.3 requires pressure-restricting devices (PRDs) at hose connections where residual pressure exceeds 175 psi. In a 25-story building, the lower floors experience significant static head pressure from the water column above. Without PRDs, the pressure at lower-floor hose connections is dangerously high, making nozzle control impossible for firefighters and risking hose coupling failure."
+      },
+      {
+        "name": "Drain valve and drain piping at base of each riser",
+        "explanation": "NFPA 14 Section 7.7 requires a drain connection at the low point of each standpipe riser for testing, maintenance, and winterization. Without a drain valve, the standpipe cannot be properly drained for inspection, hydrostatically tested, or winterized in unheated stairwells. The drain must discharge to a visible location to verify complete drainage."
+      }
+    ],
+    "distractors": [
+      "Backflow preventer on each riser",
+      "Water flow alarm on standpipe riser",
+      "Pressure gauge at roof level only",
+      "Automatic air release valve at each floor"
+    ],
+    "explanation": "A complete standpipe installation per NFPA 14 requires more than just the risers and hose connections. The fire department connection provides critical supply redundancy, pressure-restricting devices protect firefighters at lower floors from excessive pressure, and drain connections enable required testing and maintenance. Each missing component creates a gap in firefighting capability.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hr-003",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Stairwell Pressurization System",
+    "description": "A 35-story high-rise has a stairwell pressurization fan installed on the roof with ductwork connected to the top of the stairwell. Review the system and identify what components are missing.",
+    "presentItems": [
+      "Centrifugal supply fan on roof rated for required airflow",
+      "Ductwork from fan to stairwell penetration at top floor",
+      "Stairwell doors with self-closing hardware on every floor",
+      "Fire alarm system with smoke detectors in common areas",
+      "Fan connected to emergency power panel"
+    ],
+    "missingItems": [
+      {
+        "name": "Multiple injection points distributed every 2-3 floors",
+        "explanation": "NFPA 92 Section 4.4.2.1 requires multiple injection points for stairwells taller than 8 stories. A single top injection point creates a severe pressure gradient — excessive pressure at the top (doors cannot be opened) and insufficient pressure at the bottom (smoke enters stairwell). Ductwork must distribute supply air through injection points every 2-3 floors to achieve the uniform 0.05 to 0.10 inches w.c. pressure differential required across the entire stairwell height."
+      },
+      {
+        "name": "Barometric relief dampers for overpressure protection",
+        "explanation": "NFPA 92 Section 4.4.2.2 requires pressure relief to prevent overpressurization when all stairwell doors are closed simultaneously. Without barometric relief dampers, the stairwell pressure exceeds the 30 lbf maximum door-opening force allowed by IBC 1010.1.3, preventing occupants from entering the stairwell for evacuation. Relief dampers typically exhaust to the building exterior."
+      },
+      {
+        "name": "Differential pressure sensors with fan speed control",
+        "explanation": "NFPA 92 Section 4.4.3 requires means to adjust stairwell pressure based on the number of doors open during evacuation. As doors open, pressure drops; as they close, pressure builds. Without differential pressure sensors and variable fan speed control, the system cannot adapt to changing conditions during evacuation. A fixed-speed fan either overpressurizes with doors closed or underpressurizes with multiple doors open."
+      }
+    ],
+    "distractors": [
+      "Exhaust fan at stairwell base",
+      "CO2 monitoring in stairwell",
+      "Stairwell lighting occupancy sensors",
+      "Vestibule at each stairwell entry"
+    ],
+    "explanation": "Stairwell pressurization in a 35-story high-rise is a complex smoke control system governed by NFPA 92 and IBC 403. A single injection point at the top of a tall stairwell creates dangerous pressure imbalances. The system requires multiple injection points, barometric relief, and active pressure sensing to maintain the required pressure differential across all floors simultaneously — especially as doors open and close during evacuation.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hr-004",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise Water Pressure Zone",
+    "description": "A 40-story high-rise residential tower has a domestic water booster pump in the basement and piping running to the upper floors. Review the water distribution system and identify what is missing.",
+    "presentItems": [
+      "Triplex booster pump system in basement mechanical room",
+      "Main water riser from basement to roof",
+      "Branch connections at each floor",
+      "Individual unit shut-off valves",
+      "Water meter at building entrance"
+    ],
+    "missingItems": [
+      {
+        "name": "Pressure reducing valve (PRV) stations at zone boundaries",
+        "explanation": "IPC Section 604.8 limits water pressure at any fixture to 80 psi. In a 40-story building, the booster pump must deliver water at high pressure to reach the top floors, but this creates excessive pressure at lower floors. PRV stations are required at zone boundaries (typically every 10-15 floors) to reduce pressure to safe levels. Without PRVs, lower-floor fixtures and piping are exposed to pressures exceeding 150 psi, causing fixture failure, pipe joint leaks, and water hammer."
+      },
+      {
+        "name": "Thermal expansion tanks at each pressure zone",
+        "explanation": "IPC Section 607.3 requires thermal expansion protection in closed water systems. When a PRV or backflow preventer creates a closed system and water heaters raise water temperature, thermal expansion can cause pressure spikes exceeding pipe and fixture ratings. Expansion tanks absorb this pressure increase, preventing relief valve discharge, pipe stress, and potential water heater tank failure."
+      }
+    ],
+    "distractors": [
+      "Rooftop gravity storage tank",
+      "Water softener on each floor",
+      "Recirculating hot water pump per zone",
+      "Backflow preventer at each floor branch"
+    ],
+    "explanation": "High-rise domestic water distribution must address the fundamental physics of water pressure. Water pressure increases 0.433 psi per foot of height, so a 40-story building generates approximately 230 psi of static head. IPC 604.8 limits fixture pressure to 80 psi, requiring pressure zones with PRVs. Thermal expansion tanks are equally critical once PRVs create closed zones. Together, these components protect piping, fixtures, and occupants from excessive water pressure.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hr-005",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Elevator Machine Room",
+    "description": "A high-rise elevator machine room on the roof contains gearless traction machines, controllers, and electrical disconnects. Review the installation and identify what components are missing.",
+    "presentItems": [
+      "Gearless traction elevator machines for 6 passenger cars",
+      "Elevator controller cabinets with VFD drives",
+      "Main line disconnecting means per NEC 620.51",
+      "Car lighting and ventilation power disconnects",
+      "Machine room fire-rated door with self-closer"
+    ],
+    "missingItems": [
+      {
+        "name": "Dedicated machine room cooling system",
+        "explanation": "ASME A17.1 Section 2.8.1 requires elevator machine rooms to maintain ambient temperature between 55 degrees F and 104 degrees F. Modern gearless machines and VFD controllers generate significant heat. Without a dedicated split system or chilled water cooling unit, summer temperatures in a rooftop machine room can exceed 130 degrees F, causing drive faults, motor overheating, and elevator shutdowns during peak building occupancy."
+      },
+      {
+        "name": "Smoke detector connected to elevator recall circuit",
+        "explanation": "NFPA 72 Section 21.3.5 and ASME A17.1 require smoke detection in every elevator machine room connected to the building fire alarm system for Phase I elevator recall. When smoke is detected, all elevators must automatically return to the designated recall floor (typically lobby) and open their doors. Without this detector, elevators continue normal operation during a fire, potentially delivering passengers to a fire floor."
+      },
+      {
+        "name": "Emergency two-way communication system in machine room",
+        "explanation": "NEC 620.5 and ASME A17.1 require a means of communication between the machine room and the fire command center or building management office. During emergency operations or maintenance, technicians working in the machine room must be able to communicate with building operations. This is separate from the in-car emergency phone and is critical for coordinating firefighter service operations per IBC 403.4.6."
+      }
+    ],
+    "distractors": [
+      "Backup elevator machine per shaft",
+      "Machine room bathroom facility",
+      "Seismic isolators under machines",
+      "Emergency escape hatch in machine room floor"
+    ],
+    "explanation": "Elevator machine rooms in high-rise buildings serve as the nerve center for vertical transportation and require more than just the mechanical equipment. ASME A17.1 mandates temperature control for reliable operation, NFPA 72 requires smoke detection for elevator recall, and NEC 620 requires communication systems. A machine room failure in a high-rise can strand hundreds of occupants and prevent firefighter access to upper floors.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hr-006",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Smoke Evacuation System",
+    "description": "A high-rise office building has a smoke control system designed for the large open-floor-plate office areas. Review the system and identify what components are missing.",
+    "presentItems": [
+      "Smoke exhaust fans on roof rated for 4 air changes per hour",
+      "Smoke dampers at each floor connection to exhaust shaft",
+      "Fire alarm panel with floor-by-floor zone detection",
+      "Ductwork from floor dampers to roof exhaust fans",
+      "Dedicated smoke exhaust shaft through building core"
+    ],
+    "missingItems": [
+      {
+        "name": "Make-up air system for smoke exhaust floors",
+        "explanation": "NFPA 92 Section 4.6 requires a make-up air supply to replace the air exhausted during smoke removal. Without make-up air, the floor under smoke exhaust develops negative pressure, preventing stairwell doors from opening (opposing the required positive stairwell pressure) and reducing the effectiveness of the exhaust system. Make-up air should enter at low velocity from adjacent floors, stairwells, or dedicated supply, limited to 200 fpm per NFPA 92 to avoid disturbing the smoke layer."
+      },
+      {
+        "name": "Smoke control panel at fire command center",
+        "explanation": "IBC Section 909.16 and IBC 403.4.6 require a dedicated smoke control panel (or annunciator) at the fire command center showing the status of all smoke control components — fans, dampers, and air handlers. Firefighters must be able to verify smoke control system operation and manually override automatic sequences from the fire command center. Without this panel, there is no way to confirm or control smoke movement during an emergency."
+      },
+      {
+        "name": "Weekly automatic self-test sequence with fault reporting",
+        "explanation": "IBC Section 909.18 requires dedicated smoke control systems to be tested in accordance with their approved design. NFPA 92 recommends periodic automated testing where each component (fan, damper, actuator) cycles to verify operability and reports faults to the building management system. Without automated testing, component failures go undetected until the next annual test or an actual fire event."
+      }
+    ],
+    "distractors": [
+      "Sprinkler system upgrade for smoke cooling",
+      "Smoke curtains at elevator lobbies",
+      "Carbon monoxide detectors on each floor",
+      "Pressurized refuge areas on every floor"
+    ],
+    "explanation": "A high-rise smoke evacuation system per NFPA 92 and IBC 909 requires more than just exhaust capability. Make-up air prevents excessive negative pressure that interferes with egress. A smoke control panel at the fire command center gives firefighters visibility and control. Automated testing ensures the system works when needed — smoke control systems that sit idle for years may have failed damper actuators, seized fan bearings, or faulty wiring that only automated testing reveals.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-hr-007",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Emergency Power Riser",
+    "description": "A high-rise building has an emergency diesel generator on the roof with emergency power distributed to life-safety loads. Review the distribution and identify what is missing.",
+    "presentItems": [
+      "Diesel generator with sub-base fuel tank on rooftop",
+      "Automatic transfer switch (ATS) at generator output",
+      "Emergency power riser in dedicated shaft",
+      "Emergency panelboards on each floor",
+      "Exit signs and emergency lighting connected to panels"
+    ],
+    "missingItems": [
+      {
+        "name": "2-hour fire-rated wiring or enclosure for emergency circuits",
+        "explanation": "NEC 700.10(D) requires emergency circuit wiring to be protected by either 2-hour fire-rated cable assemblies (CI cable) or wiring enclosed in 2-hour fire-rated construction. Standard wiring in conduit is not sufficient unless the conduit is within a 2-hour rated shaft or enclosure. Without fire-rated protection, a fire on any floor can sever the emergency riser, disabling emergency power to every floor above the fire."
+      },
+      {
+        "name": "Emergency power connection for fire pump",
+        "explanation": "IBC Section 403.4.8.1 and NFPA 20 Section 9.6 require fire pumps in high-rise buildings to have a connection to emergency power via a dedicated ATS. The fire pump is the single most critical load in a high-rise fire — without it, standpipes and sprinklers at upper floors lose pressure. The fire pump ATS must be separate from the life-safety ATS to prevent pump starting transients from affecting other emergency loads."
+      },
+      {
+        "name": "Emergency power for elevator operations (firefighter service)",
+        "explanation": "IBC Section 403.4.8 and NEC 620.91 require emergency power for at least one elevator serving each floor for firefighter service. Elevators are essential for firefighter access to upper floors during a high-rise fire. The emergency generator must have sufficient capacity to run the selected elevator(s) plus all other life-safety loads simultaneously."
+      }
+    ],
+    "distractors": [
+      "Individual battery backup per emergency luminaire",
+      "Solar panel array for emergency power supplement",
+      "Emergency power to tenant IT closets",
+      "Dedicated emergency power for lobby lighting"
+    ],
+    "explanation": "The emergency power system in a high-rise building must support the full range of life-safety loads defined by IBC 403 and NEC 700. Beyond basic exit signs and emergency lighting, the system must power fire pumps, at least one elevator for firefighter service, stairwell pressurization fans, smoke control systems, and the fire command center. Fire-rated wiring ensures the distribution survives a fire on any floor.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-hr-008",
+    "type": "whats-missing",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Rooftop Mechanical Equipment",
+    "description": "A high-rise building has rooftop air handling units, cooling towers, and exhaust fans installed. Review the rooftop mechanical installation and identify what is missing.",
+    "presentItems": [
+      "Air handling units with economizer sections",
+      "Cooling tower with basin heater for freeze protection",
+      "General exhaust fans for restrooms and kitchens",
+      "Refrigerant piping to rooftop condensing units",
+      "Electrical disconnects within sight of each unit"
+    ],
+    "missingItems": [
+      {
+        "name": "Equipment fall protection and guardrails per OSHA",
+        "explanation": "OSHA 1910.28 and IBC 1015.2 require fall protection for rooftop mechanical equipment requiring regular maintenance. Guardrails, safety posts for tie-off lanyards, or permanent lifeline systems must be provided around equipment located near roof edges. Maintenance workers accessing cooling towers, AHUs, and exhaust fans without fall protection face fatal fall hazards on every service visit."
+      },
+      {
+        "name": "Vibration isolation and seismic restraints on equipment",
+        "explanation": "IMC 302.1 requires vibration isolation for rooftop mechanical equipment to prevent structure-borne noise and vibration from transmitting to occupied floors below. In seismic zones, ASCE 7 Chapter 13 additionally requires seismic restraints to prevent equipment from sliding or toppling during an earthquake. Unrestrained rooftop equipment in a high-rise can damage piping, ductwork, and electrical connections during seismic events."
+      },
+      {
+        "name": "Roof penetration curbs with proper flashing and weatherproofing",
+        "explanation": "IMC 306.5 and roofing manufacturer requirements specify that all mechanical equipment and ductwork penetrating the roof membrane must be installed on properly flashed curbs extending a minimum of 8 inches above the finished roof surface. Without proper curbs and flashing, rain and snowmelt infiltrate through penetrations, causing structural damage, mold growth, and damage to electrical systems on floors below."
+      }
+    ],
+    "distractors": [
+      "Rooftop weather station for BMS optimization",
+      "Sound attenuation barriers around all equipment",
+      "Dedicated freight elevator to rooftop",
+      "Bird netting over cooling tower basins"
+    ],
+    "explanation": "Rooftop mechanical installations in high-rise buildings must address safety, structural, and weatherproofing requirements beyond just the mechanical systems. Fall protection saves lives during routine maintenance, seismic restraints prevent catastrophic equipment displacement, and proper roof penetration detailing prevents water damage. These components are frequently overlooked during design but are essential for safe, reliable long-term operation.",
+    "xpReward": 75
+  }
+]

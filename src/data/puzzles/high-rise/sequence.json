@@ -1,0 +1,162 @@
+[
+  {
+    "id": "seq-hr-001",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Fire Pump Acceptance Test",
+    "description": "Put the fire pump acceptance test steps in the correct order per NFPA 20 and NFPA 25, from pre-test preparation through final documentation.",
+    "steps": [
+      { "id": 1, "text": "Verify fire pump room is complete — piping, valves, controller, and wiring installed per approved drawings", "order": 1 },
+      { "id": 2, "text": "Inspect suction supply — confirm water source is available and suction valve is fully open", "order": 2 },
+      { "id": 3, "text": "Start pump manually from controller and verify rotation direction", "order": 3 },
+      { "id": 4, "text": "Run pump at churn (no-flow) condition and record churn pressure on discharge gauge", "order": 4 },
+      { "id": 5, "text": "Open test header valves progressively to 100% rated flow while recording pressure at each point", "order": 5 },
+      { "id": 6, "text": "Increase flow to 150% of rated capacity and verify pump meets performance curve", "order": 6 },
+      { "id": 7, "text": "Verify automatic start on pressure drop — simulate low system pressure and confirm pump starts within 10 seconds", "order": 7 },
+      { "id": 8, "text": "Document all test results on NFPA 25 acceptance test form and submit to authority having jurisdiction", "order": 8 }
+    ],
+    "explanation": "Fire pump acceptance testing per NFPA 20 Section 14.2 follows a structured sequence to verify pump performance across the entire operating range. Churn pressure establishes the baseline, flow testing at 100% and 150% verifies the pump meets its rated performance curve, and automatic start testing confirms the control system functions correctly. The 150% flow test is critical because it proves the pump will not overload or overheat when sprinkler demand exceeds design flow during a large fire.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hr-002",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Standpipe Hydrostatic Test",
+    "description": "Sequence the steps for performing a hydrostatic pressure test on a new high-rise standpipe system per NFPA 14.",
+    "steps": [
+      { "id": 1, "text": "Close all hose valves and cap all outlets on the standpipe riser", "order": 1 },
+      { "id": 2, "text": "Fill system completely with water from lowest point, venting air at highest point", "order": 2 },
+      { "id": 3, "text": "Connect hydrostatic test pump to test connection at base of riser", "order": 3 },
+      { "id": 4, "text": "Pressurize system to 200 psi or 50 psi above maximum operating pressure, whichever is greater", "order": 4 },
+      { "id": 5, "text": "Hold test pressure for minimum 2 hours while inspecting all joints and connections for leaks", "order": 5 },
+      { "id": 6, "text": "Walk every floor — visually inspect each hose valve, coupling, and fitting under pressure", "order": 6 },
+      { "id": 7, "text": "Record pressure readings at start and end of test period to verify no pressure loss", "order": 7 },
+      { "id": 8, "text": "Depressurize system, remove caps, and restore hose valves to operational condition", "order": 8 }
+    ],
+    "explanation": "Standpipe hydrostatic testing per NFPA 14 Section 11.4 verifies the mechanical integrity of the entire piping system before it is placed in service. Filling from the bottom and venting from the top eliminates trapped air that would compress and mask leaks. The 200 psi minimum test pressure exceeds normal operating conditions to provide a safety margin. The 2-hour hold period allows even slow leaks at threaded joints or gaskets to become visible. Every joint on every floor must be visually inspected under pressure.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hr-003",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Stairwell Pressurization Commissioning",
+    "description": "Order the commissioning steps for a stairwell pressurization system in a 30-story high-rise building per NFPA 92.",
+    "steps": [
+      { "id": 1, "text": "Verify all supply ductwork, injection points, and relief dampers are installed per design", "order": 1 },
+      { "id": 2, "text": "Start pressurization fan on emergency power and verify rated airflow at fan discharge", "order": 2 },
+      { "id": 3, "text": "Close all stairwell doors and measure differential pressure at every 5th floor", "order": 3 },
+      { "id": 4, "text": "Verify pressure is between 0.05 and 0.10 inches w.c. across closed doors on all floors", "order": 4 },
+      { "id": 5, "text": "Open doors on 3 consecutive floors simultaneously to simulate evacuation conditions", "order": 5 },
+      { "id": 6, "text": "Verify minimum 0.05 inches w.c. is maintained at closed doors while 3 doors are open", "order": 6 },
+      { "id": 7, "text": "Measure door-opening force on every floor — must not exceed 30 lbf per IBC 1010.1.3", "order": 7 },
+      { "id": 8, "text": "Test fire alarm integration — confirm fan activates automatically on alarm condition", "order": 8 }
+    ],
+    "explanation": "Stairwell pressurization commissioning per NFPA 92 must verify system performance under both static (all doors closed) and dynamic (doors open) conditions. The 0.05 to 0.10 inches w.c. pressure range is narrow — too low allows smoke infiltration, too high prevents door opening. Testing with 3 doors open simultaneously simulates the maximum expected number of open doors during evacuation. Door-opening force must be measured because excessive pressure makes doors impassable for children, elderly, and disabled occupants.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hr-004",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise Plumbing Pressure Zone Setup",
+    "description": "Sequence the steps for establishing a new domestic water pressure zone in a high-rise building being constructed floor by floor.",
+    "steps": [
+      { "id": 1, "text": "Install and test the domestic water booster pump system in the basement", "order": 1 },
+      { "id": 2, "text": "Run the main riser from the booster pump to the top of the new pressure zone", "order": 2 },
+      { "id": 3, "text": "Install duplex PRV station at the zone boundary with isolation valves", "order": 3 },
+      { "id": 4, "text": "Install strainers upstream and pressure relief valves downstream of each PRV", "order": 4 },
+      { "id": 5, "text": "Connect branch piping to fixtures on each floor within the zone", "order": 5 },
+      { "id": 6, "text": "Set PRV outlet pressure to limit maximum fixture pressure to 80 psi at lowest floor", "order": 6 },
+      { "id": 7, "text": "Flush system, pressure test all piping at 1.5 times working pressure", "order": 7 },
+      { "id": 8, "text": "Verify pressure readings at highest and lowest fixtures in zone — adjust PRV as needed", "order": 8 }
+    ],
+    "explanation": "High-rise plumbing pressure zone setup follows a bottom-up installation sequence per IPC Section 604. The booster pump must be operational before the riser is filled and tested. PRV stations are installed at zone boundaries where pressure would otherwise exceed 80 psi at the lowest fixture. Strainers protect PRV internals, and relief valves protect against PRV failure. Final verification at both the highest and lowest fixtures ensures the zone operates within IPC limits throughout.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hr-005",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Smoke Control System Testing",
+    "description": "Order the commissioning test sequence for a high-rise floor-by-floor smoke control system per IBC 909 and NFPA 92.",
+    "steps": [
+      { "id": 1, "text": "Verify all smoke dampers, exhaust fans, and make-up air paths are installed per approved design", "order": 1 },
+      { "id": 2, "text": "Test each individual smoke damper for full open and full close operation with position feedback", "order": 2 },
+      { "id": 3, "text": "Activate smoke control mode for a single test floor via fire alarm panel", "order": 3 },
+      { "id": 4, "text": "Verify exhaust fan starts and smoke damper opens only on the fire floor", "order": 4 },
+      { "id": 5, "text": "Measure airflow through the fire floor exhaust duct to verify minimum 6 air changes per hour", "order": 5 },
+      { "id": 6, "text": "Verify adjacent floors maintain positive pressure relative to the fire floor", "order": 6 },
+      { "id": 7, "text": "Test firefighter smoke control panel manual overrides at the fire command center", "order": 7 },
+      { "id": 8, "text": "Repeat sequence for each floor zone and document all results per IBC 909.18", "order": 8 }
+    ],
+    "explanation": "Smoke control system testing per IBC 909.18 and NFPA 92 requires individual component verification before system-level testing. Each damper must be confirmed operational before integrated testing begins. The floor-by-floor approach verifies that smoke is exhausted from the fire floor while adjacent floors remain positively pressurized. Manual override testing at the fire command center confirms firefighter control capability. Per IBC 909.18.8, every floor zone must be tested and documented individually.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hr-006",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Emergency Generator Load Test Sequence",
+    "description": "Sequence the steps for performing a full emergency generator load test in a high-rise building per NFPA 110.",
+    "steps": [
+      { "id": 1, "text": "Pre-inspect generator — check oil, coolant, battery charger, fuel level, and belt tension", "order": 1 },
+      { "id": 2, "text": "Simulate utility power failure to verify automatic generator start within 10 seconds", "order": 2 },
+      { "id": 3, "text": "Verify automatic transfer switch (ATS) transfers emergency loads to generator power", "order": 3 },
+      { "id": 4, "text": "Confirm all emergency loads energize — exit signs, emergency lighting, fire pump, elevator recall", "order": 4 },
+      { "id": 5, "text": "Run generator at building emergency load for minimum 30 minutes per NFPA 110", "order": 5 },
+      { "id": 6, "text": "Monitor engine parameters — coolant temp, oil pressure, exhaust temp, and voltage output", "order": 6 },
+      { "id": 7, "text": "Restore utility power and verify ATS retransfers loads back to normal source", "order": 7 },
+      { "id": 8, "text": "Run generator at no-load for 5-minute cool-down period before shutdown", "order": 8 }
+    ],
+    "explanation": "Emergency generator testing in high-rise buildings per NFPA 110 verifies the entire backup power chain from generator start through load transfer and retransfer. The 10-second start requirement per NEC 700.12 ensures life-safety loads restore quickly. Running at building load (not a load bank) verifies real-world performance including fire pump starting transients. The cool-down period prevents turbocharger bearing damage from hot shutdown.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-hr-007",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Elevator Recall Testing",
+    "description": "Sequence the Phase I and Phase II elevator recall testing steps per ASME A17.1 and NFPA 72 for a high-rise building.",
+    "steps": [
+      { "id": 1, "text": "Verify smoke detectors are installed in every elevator lobby, hoistway, and machine room", "order": 1 },
+      { "id": 2, "text": "Activate lobby smoke detector on a non-recall floor — verify all cars recall to designated level", "order": 2 },
+      { "id": 3, "text": "Verify car doors open and remain open at the recall floor with hall call buttons disabled", "order": 3 },
+      { "id": 4, "text": "Activate smoke detector at designated recall floor — verify cars recall to alternate floor", "order": 4 },
+      { "id": 5, "text": "Activate machine room smoke detector — verify cars recall and main power disconnect alerts", "order": 5 },
+      { "id": 6, "text": "Switch to Phase II firefighter service using key switch in recalled car", "order": 6 },
+      { "id": 7, "text": "Verify firefighter can control car with constant-pressure door open/close and floor selection", "order": 7 },
+      { "id": 8, "text": "Return all elevators to normal service and document all test results", "order": 8 }
+    ],
+    "explanation": "Elevator recall testing per ASME A17.1 Section 2.27 and NFPA 72 Section 21.3 verifies both automatic Phase I recall (smoke detection triggers elevator return to ground floor) and Phase II firefighter service (manual control by fire department). Testing must cover all three detector locations — lobby, recall floor, and machine room — because each triggers a different response. Recall floor detector activation requires alternate floor recall because smoke at the primary recall floor means that floor is no longer safe for passengers.",
+    "xpReward": 100
+  },
+  {
+    "id": "seq-hr-008",
+    "type": "sequence",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise HVAC Riser Startup",
+    "description": "Order the steps for initial startup of a high-rise central HVAC system with vertical supply and return risers serving multiple floors.",
+    "steps": [
+      { "id": 1, "text": "Flush chilled and hot water piping loops to remove construction debris", "order": 1 },
+      { "id": 2, "text": "Fill and pressurize hydronic risers, venting air at high points on each floor", "order": 2 },
+      { "id": 3, "text": "Start central plant pumps and verify flow rates at balancing valves on each floor", "order": 3 },
+      { "id": 4, "text": "Start air handling units and verify supply air temperature at first-floor discharge", "order": 4 },
+      { "id": 5, "text": "Balance supply air ductwork from lowest floor upward, adjusting dampers at each floor", "order": 5 },
+      { "id": 6, "text": "Measure return air quantities and adjust return dampers to match supply volumes", "order": 6 },
+      { "id": 7, "text": "Verify space temperatures and humidity at representative zones on 5 floors minimum", "order": 7 },
+      { "id": 8, "text": "Commission BMS controls — verify setpoints, schedules, and alarm functions per sequences of operation", "order": 8 }
+    ],
+    "explanation": "High-rise HVAC startup is a multi-discipline process that must proceed from the central plant outward to the terminal units. Hydronic systems must be flushed, filled, and air-free before pump operation — trapped air blocks flow and damages pump seals. Air balancing proceeds from the bottom up because imbalances at lower floors affect pressure and flow at all floors above. Final BMS commissioning verifies the control system manages all components per the sequences of operation document.",
+    "xpReward": 75
+  }
+]

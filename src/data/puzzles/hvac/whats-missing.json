@@ -1,0 +1,465 @@
+[
+  {
+    "id": "wm-hvac-001",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Residential Split System Installation",
+    "description": "A technician installed a residential split-system AC. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "Outdoor condensing unit on concrete pad",
+      "Indoor evaporator coil mounted on furnace",
+      "Copper refrigerant line set (suction and liquid)",
+      "Electrical disconnect at outdoor unit",
+      "Thermostat wired and mounted"
+    ],
+    "missingItems": [
+      {
+        "name": "Condensate drain line with P-trap",
+        "explanation": "Every evaporator coil produces condensate that must be drained. A P-trap prevents conditioned air from being pulled through the drain line. Required by IMC 307.2."
+      },
+      {
+        "name": "Refrigerant line insulation",
+        "explanation": "The suction line must be insulated to prevent condensation and maintain system efficiency. Required by IMC 1104.1."
+      }
+    ],
+    "distractors": [
+      "Crankcase heater",
+      "Barometric damper",
+      "Condensate neutralizer kit",
+      "Secondary drain pan"
+    ],
+    "explanation": "A complete split system installation requires proper condensate drainage and refrigerant line insulation. Missing either causes water damage or reduced efficiency.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-hvac-002",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Gas Furnace Installation",
+    "description": "A gas furnace has been installed in a utility closet. Check the installation for missing components.",
+    "presentItems": [
+      "80% AFUE gas furnace on platform",
+      "Gas supply line with shutoff valve",
+      "B-vent flue pipe through roof",
+      "Return air duct connected",
+      "Supply plenum with takeoffs"
+    ],
+    "missingItems": [
+      {
+        "name": "Sediment trap (drip leg)",
+        "explanation": "A sediment trap (drip leg) must be installed as close to the equipment as practical. It catches debris and moisture before they enter the gas valve. Required by IFGC 408.4."
+      },
+      {
+        "name": "Combustion air openings",
+        "explanation": "A furnace in a confined space requires combustion air openings — typically two openings, one within 12 inches of the top and one within 12 inches of the bottom. Required by IFGC 304."
+      }
+    ],
+    "distractors": [
+      "Condensate pump",
+      "Power vent motor",
+      "UV germicidal light",
+      "Duct silencer"
+    ],
+    "explanation": "Gas furnaces require a sediment trap to protect the gas valve and adequate combustion air openings in confined spaces. Both are code requirements that protect safety.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-hvac-003",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Bathroom Exhaust Fan",
+    "description": "A bathroom exhaust fan was installed in a new construction home. Identify what's missing.",
+    "presentItems": [
+      "Exhaust fan housing in ceiling",
+      "Flexible duct from fan to roof cap",
+      "Roof cap with screen",
+      "Wall switch for on/off control",
+      "Electrical connection at fan"
+    ],
+    "missingItems": [
+      {
+        "name": "Backdraft damper",
+        "explanation": "A backdraft damper prevents outside air, insects, and moisture from entering through the exhaust duct when the fan is off. Required by IMC 501.2."
+      },
+      {
+        "name": "Makeup air pathway",
+        "explanation": "Exhaust fans remove air from the space, which must be replaced. In tight construction, a dedicated makeup air path or transfer grille is needed. Required by IRC M1507.3."
+      }
+    ],
+    "distractors": [
+      "Humidity sensor",
+      "Inline duct booster fan",
+      "Sound attenuator"
+    ],
+    "explanation": "Bathroom exhaust installations need a backdraft damper to prevent reverse airflow and a makeup air pathway to replace exhausted air, especially in modern tight-construction homes.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-hvac-004",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Residential Duct System",
+    "description": "A new residential duct system has been roughed in. Check for missing components.",
+    "presentItems": [
+      "Sheet metal trunk line from furnace",
+      "Branch ducts to each room",
+      "Supply registers at each room",
+      "Return air grille in hallway",
+      "Duct connections sealed with mastic"
+    ],
+    "missingItems": [
+      {
+        "name": "Duct support hangers at proper intervals",
+        "explanation": "Horizontal ducts must be supported at intervals not exceeding 10 feet. Without proper support, ducts sag and restrict airflow. Required by SMACNA standards and IMC 603.2."
+      },
+      {
+        "name": "Return air filter rack or grille",
+        "explanation": "A filter rack or filter-back grille is required to protect the equipment from debris and maintain air quality. Required by IMC 606.2."
+      }
+    ],
+    "distractors": [
+      "Duct smoke detector",
+      "Turning vanes in elbows",
+      "Volume dampers at each branch",
+      "Duct liner insulation"
+    ],
+    "explanation": "Residential duct systems require proper support to prevent sagging and a filter to protect equipment. Both are basic requirements that affect system performance and longevity.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-hvac-005",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Rooftop Unit Installation",
+    "description": "A 10-ton rooftop packaged unit has been installed on a commercial building. Review the installation for missing items.",
+    "presentItems": [
+      "Rooftop unit on roof curb",
+      "Ductwork connected through roof opening",
+      "Electrical disconnect within sight",
+      "Gas line with shutoff valve and drip leg",
+      "Thermostat installed in occupied space",
+      "Condensate drain piped to roof drain"
+    ],
+    "missingItems": [
+      {
+        "name": "Vibration isolation curb or pads",
+        "explanation": "Rooftop units generate significant vibration that transmits through the building structure. Vibration isolation prevents noise complaints and structural fatigue. Required by ASHRAE guidelines."
+      },
+      {
+        "name": "Roof curb rain hood/flashing",
+        "explanation": "The junction between curb and roof membrane must be properly flashed and sealed to prevent water infiltration. Missing flashing leads to roof leaks. Required by SMACNA Architectural Sheet Metal Manual."
+      }
+    ],
+    "distractors": [
+      "Economizer damper",
+      "Barometric relief damper",
+      "Crankcase heater",
+      "Discharge air temperature sensor"
+    ],
+    "explanation": "Rooftop installations require vibration isolation to prevent noise/structural issues and proper curb flashing to prevent roof leaks. Both protect the building long-term.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-hvac-006",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Commercial Air Handler Installation",
+    "description": "A commercial AHU has been installed in a mechanical room. Identify the missing components.",
+    "presentItems": [
+      "Air handling unit with blower, cooling coil, and heating coil",
+      "Supply and return ductwork connected",
+      "Chilled water piping to cooling coil",
+      "Hot water piping to heating coil",
+      "Control panel with VFD for fan motor",
+      "Outside air intake duct"
+    ],
+    "missingItems": [
+      {
+        "name": "Access doors for coil and filter service",
+        "explanation": "Access doors must be provided upstream and downstream of coils and at filter sections for maintenance. Without them, filters cannot be changed and coils cannot be cleaned. Required by SMACNA standards."
+      },
+      {
+        "name": "Smoke detector in return air duct",
+        "explanation": "Duct smoke detectors are required in systems over 2,000 CFM to shut down the fan upon smoke detection and prevent smoke spread through the building. Required by NFPA 90A and IMC 606.4."
+      }
+    ],
+    "distractors": [
+      "UV germicidal lights",
+      "Sound attenuator",
+      "Humidifier",
+      "Energy recovery ventilator"
+    ],
+    "explanation": "Commercial AHU installations require access doors for maintenance and duct smoke detectors for life safety. Both are code requirements for systems above 2,000 CFM.",
+    "xpReward": 70
+  },
+  {
+    "id": "wm-hvac-007",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Chilled Water Piping System",
+    "description": "A chilled water piping loop has been installed for a commercial cooling system. Check for missing components.",
+    "presentItems": [
+      "Chiller with evaporator and condenser",
+      "Primary chilled water pump",
+      "Chilled water supply and return piping",
+      "Pipe insulation with vapor barrier",
+      "Isolation valves at major equipment",
+      "Balancing valves at each AHU"
+    ],
+    "missingItems": [
+      {
+        "name": "Expansion tank",
+        "explanation": "As water temperature changes, it expands and contracts. An expansion tank absorbs this volume change and prevents dangerous pressure buildup. Required by IMC 1005.1."
+      },
+      {
+        "name": "Air separator or air vent",
+        "explanation": "Dissolved air in chilled water causes corrosion, noise, and reduced heat transfer. An air separator removes entrained air from the system. Required by ASHRAE Handbook — HVAC Systems and Equipment."
+      }
+    ],
+    "distractors": [
+      "Chemical treatment pot feeder",
+      "Strainer at chiller inlet",
+      "Flow switch",
+      "Buffer tank"
+    ],
+    "explanation": "Hydronic systems require expansion tanks to handle thermal expansion and air separators to remove entrained air. Both are essential for reliable, efficient operation.",
+    "xpReward": 70
+  },
+  {
+    "id": "wm-hvac-008",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Mini-Split Indoor Unit",
+    "description": "A ductless mini-split indoor wall unit has been installed in a bedroom addition. Identify what's missing.",
+    "presentItems": [
+      "Indoor wall-mounted evaporator unit",
+      "Refrigerant lines through wall penetration",
+      "Condensate drain line from unit",
+      "Communication wire to outdoor unit",
+      "Remote control and wall bracket"
+    ],
+    "missingItems": [
+      {
+        "name": "Condensate pump or overflow safety switch",
+        "explanation": "When the indoor unit is not high enough above a drain point, a condensate pump is needed. At minimum, an overflow safety switch prevents water damage if the drain clogs. Required by IMC 307.2.2."
+      },
+      {
+        "name": "Wall sleeve seal and weatherproofing",
+        "explanation": "The wall penetration for refrigerant lines must be sealed with a proper wall sleeve and caulk to prevent air infiltration, moisture intrusion, and pest entry. Required by manufacturer installation guides."
+      }
+    ],
+    "distractors": [
+      "Condensate neutralizer",
+      "Line hide decorative cover",
+      "Smart thermostat adapter"
+    ],
+    "explanation": "Mini-split installations require condensate overflow protection to prevent water damage and proper wall penetration sealing to maintain the building envelope.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-hvac-009",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Kitchen Hood Exhaust System",
+    "description": "A Type I commercial kitchen hood has been installed over a cooking line. Check for missing components.",
+    "presentItems": [
+      "Stainless steel Type I hood with grease filters",
+      "Exhaust ductwork welded and sealed",
+      "Exhaust fan on roof",
+      "Fire suppression nozzles under hood",
+      "Light fixtures in hood"
+    ],
+    "missingItems": [
+      {
+        "name": "Makeup air unit",
+        "explanation": "Kitchen exhaust removes large volumes of air that must be replaced. A dedicated makeup air unit prevents negative pressure, back-drafting of gas appliances, and door slamming. Required by IMC 508."
+      },
+      {
+        "name": "Grease duct cleanout access",
+        "explanation": "Grease duct systems must have cleanout/access openings at direction changes and at 20-foot intervals for inspection and cleaning. Required by IMC 506.3.12."
+      }
+    ],
+    "distractors": [
+      "Duct smoke detector",
+      "UV grease reduction system",
+      "Variable speed fan controller",
+      "Grease trap in drain"
+    ],
+    "explanation": "Commercial kitchen hoods require makeup air to replace exhausted air and cleanout access in the grease duct for regular fire safety maintenance.",
+    "xpReward": 70
+  },
+  {
+    "id": "wm-hvac-010",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "VAV Box Installation",
+    "description": "A pressure-independent VAV terminal box has been installed above the ceiling. Identify missing components.",
+    "presentItems": [
+      "VAV box with actuator and controller",
+      "Inlet duct from main trunk",
+      "Outlet duct to diffusers",
+      "Hot water reheat coil",
+      "DDC controller with zone sensor"
+    ],
+    "missingItems": [
+      {
+        "name": "Flexible duct connection at inlet",
+        "explanation": "A flexible duct connector at the VAV box inlet isolates fan vibration and noise from transferring through the duct system to the occupied space. Required by SMACNA HVAC Duct Construction Standards."
+      },
+      {
+        "name": "Balancing damper downstream",
+        "explanation": "A manual balancing damper is needed downstream to fine-tune airflow to each diffuser branch. Without it, air distribution cannot be properly balanced. Required by ASHRAE Standard 111."
+      }
+    ],
+    "distractors": [
+      "Sound attenuator",
+      "Duct smoke detector",
+      "Airflow measuring station",
+      "Fire damper"
+    ],
+    "explanation": "VAV box installations need flexible connections for vibration isolation and balancing dampers for proper air distribution to the served zones.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-hvac-011",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Clean Room HVAC System",
+    "description": "An ISO Class 7 clean room HVAC system has been installed. Check for missing components in this critical application.",
+    "presentItems": [
+      "Dedicated AHU with high-efficiency cooling coil",
+      "HEPA filter terminal units at ceiling",
+      "Low-wall return air grilles",
+      "Chilled water piping to AHU",
+      "BAS controls with temperature and humidity sensors",
+      "Positive room pressure relative to adjacent spaces"
+    ],
+    "missingItems": [
+      {
+        "name": "Pre-filter bank upstream of HEPA filters",
+        "explanation": "Pre-filters (MERV 8 minimum, typically MERV 13-14) must be installed upstream to extend the life of expensive HEPA filters. Without pre-filtration, HEPA filters load prematurely. Required by ISO 14644 guidelines."
+      },
+      {
+        "name": "Room pressure differential monitor with alarm",
+        "explanation": "Clean rooms must maintain a minimum positive pressure differential (typically 0.03-0.05 in. W.C.). A pressure monitor with alarm alerts staff when containment is compromised. Required by ISO 14644-4."
+      },
+      {
+        "name": "Airlock or anteroom at entry point",
+        "explanation": "An airlock or anteroom with interlocked doors prevents contamination during personnel entry. It serves as a buffer zone between the clean room and adjacent spaces. Required by ISO 14644-4."
+      }
+    ],
+    "distractors": [
+      "UV germicidal irradiation system",
+      "Humidifier with RO water supply",
+      "Carbon filtration stage"
+    ],
+    "explanation": "Clean room HVAC systems have stricter requirements than standard systems. Pre-filtration protects HEPA filters, pressure monitoring ensures containment, and airlocks prevent contamination during entry.",
+    "xpReward": 90
+  },
+  {
+    "id": "wm-hvac-012",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Window AC Unit Installation",
+    "description": "A window air conditioning unit has been installed in a bedroom. Check for missing items.",
+    "presentItems": [
+      "Window AC unit seated in window frame",
+      "Window sash lowered onto unit",
+      "Power cord plugged into wall outlet",
+      "Unit leveled with slight rear tilt"
+    ],
+    "missingItems": [
+      {
+        "name": "Side panel seals and weatherstripping",
+        "explanation": "The gaps between the unit and window frame must be sealed with the included side panels and weatherstripping to prevent air infiltration, rain entry, and insect intrusion."
+      },
+      {
+        "name": "Support bracket or angle",
+        "explanation": "Units must be securely supported. Heavier units require an exterior support bracket to prevent the unit from falling. Recommended by manufacturer installation guidelines and building codes."
+      }
+    ],
+    "distractors": [
+      "Dedicated 20-amp circuit",
+      "Exterior rain hood",
+      "Condensate drain hose"
+    ],
+    "explanation": "Window AC installations need proper side panel sealing to prevent air and water infiltration, and support brackets for safety. These simple steps are often skipped but are important.",
+    "xpReward": 40
+  },
+  {
+    "id": "wm-hvac-013",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Commercial Duct Run in Seismic Zone",
+    "description": "A large commercial duct system has been installed in a seismically active area. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "24x24 galvanized steel supply duct with turning vanes",
+      "Trapeze hangers at proper spacing per SMACNA",
+      "Fire dampers at all rated wall penetrations",
+      "Flexible duct connections at equipment",
+      "Duct sealed with mastic at all joints"
+    ],
+    "missingItems": [
+      {
+        "name": "Seismic bracing on duct run",
+        "explanation": "Ductwork in seismic zones must have lateral and longitudinal seismic bracing per ASCE 7, SMACNA Seismic Restraint Manual, and IBC requirements. Without seismic bracing, duct runs can swing, collapse, or separate at joints during an earthquake, blocking egress paths and compromising fire/smoke barriers."
+      },
+      {
+        "name": "Fire damper at rated wall penetration",
+        "explanation": "All duct penetrations through fire-rated wall and floor assemblies require listed fire dampers matching the assembly rating. Missing fire dampers allow fire and smoke to spread between compartments, defeating the building's fire protection strategy. Required by IMC 607.3."
+      }
+    ],
+    "distractors": [
+      "Sound attenuator at AHU discharge",
+      "Smoke detector in duct",
+      "Duct access door for cleaning"
+    ],
+    "explanation": "Seismic bracing and fire dampers are critical life-safety components in commercial duct installations. UCSB specs mandate seismic restraint per ASCE 7 and fire dampers at every rated penetration. Both are frequently missed during installation and caught during final inspection.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-hvac-014",
+    "type": "whats-missing",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Kitchen Exhaust System Components",
+    "description": "A Type I commercial kitchen exhaust system has been installed. Check for missing components required by the UCSB specification.",
+    "presentItems": [
+      "Type I grease hood over cooking appliances",
+      "Welded 16-gauge grease duct to roof",
+      "Upblast exhaust fan with grease drain",
+      "Automatic fire suppression system in hood",
+      "Makeup air unit providing tempered supply"
+    ],
+    "missingItems": [
+      {
+        "name": "Fire barrier wrap on grease duct (minimum 1.5 inches per ASTM E2336)",
+        "explanation": "Grease ducts passing through building spaces must be wrapped with fire barrier material tested to ASTM E2336 / UL 2221 at a minimum thickness of 1.5 inches. This protects the building structure from a grease duct fire, which can reach temperatures exceeding 2000°F."
+      },
+      {
+        "name": "Cleanout access doors at every direction change",
+        "explanation": "Grease ducts require cleanout access openings at every change in direction and at horizontal sections to allow thorough cleaning. Grease buildup in inaccessible duct sections is a leading cause of commercial kitchen fires. Required by IMC 506.3.9."
+      }
+    ],
+    "distractors": [
+      "Carbon filter for odor control",
+      "Grease interceptor in drain",
+      "UV-C grease destruction system"
+    ],
+    "explanation": "Commercial kitchen exhaust systems are high-fire-risk installations. UCSB specs require fire barrier wrap meeting ASTM E2336 at 1.5-inch minimum thickness and cleanout access at every direction change. These protect the building and enable the regular cleaning required to prevent grease fires.",
+    "xpReward": 50
+  }
+]

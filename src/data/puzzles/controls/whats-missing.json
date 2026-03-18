@@ -1,0 +1,467 @@
+[
+  {
+    "id": "wm-ctrl-001",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "BAS System Head-End Installation",
+    "description": "A building automation system head-end has been set up in the IT/controls room. Review the installation for missing components.",
+    "presentItems": [
+      "BAS server workstation with operator software installed",
+      "Network switch connecting BAS server to IP controllers",
+      "UPS battery backup for server",
+      "Monitor, keyboard, and mouse at operator station",
+      "BACnet/IP communication established to field controllers"
+    ],
+    "missingItems": [
+      {
+        "name": "Automatic server data backup system",
+        "explanation": "BAS databases, graphics, programming, and trend data must be backed up automatically on a regular schedule. Without backup, a server failure results in complete loss of all building control configurations and historical data. Required by ASHRAE Guideline 13."
+      },
+      {
+        "name": "BACnet Broadcast Management Device (BBMD)",
+        "explanation": "In multi-subnet BACnet/IP installations, a BBMD is required to forward broadcast messages between subnets. Without it, devices on different subnets cannot discover or communicate with each other. Required by ASHRAE 135 for routed IP networks."
+      }
+    ],
+    "distractors": [
+      "Dedicated graphics card for 3D modeling",
+      "Wireless keyboard and mouse",
+      "Secondary display monitor",
+      "Printer for alarm reports"
+    ],
+    "explanation": "BAS head-end installations require data backup to protect against catastrophic data loss and proper BACnet network infrastructure (BBMD) for multi-subnet communication. Both are frequently overlooked during initial commissioning.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-ctrl-002",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "VAV Box Controls Installation",
+    "description": "A VAV terminal box with hot water reheat has been installed with its controls. Identify what's missing from the controls installation.",
+    "presentItems": [
+      "DDC VAV controller mounted on box",
+      "Zone temperature sensor on wall in served space",
+      "Damper actuator connected to VAV damper",
+      "Hot water reheat valve with actuator",
+      "Controller wired to BAS network trunk"
+    ],
+    "missingItems": [
+      {
+        "name": "Airflow measuring sensor (velocity pressure transducer)",
+        "explanation": "A pressure-independent VAV box requires an airflow sensor to measure actual airflow. Without it, the controller cannot regulate airflow to meet minimum ventilation or maximum cooling setpoints. Required by ASHRAE 62.1 and Guideline 36."
+      },
+      {
+        "name": "Discharge air temperature sensor",
+        "explanation": "A discharge air temperature sensor after the reheat coil is needed to prevent overheating and to confirm the reheat valve is functioning correctly. Required by ASHRAE Guideline 36 for VAV boxes with reheat."
+      }
+    ],
+    "distractors": [
+      "Occupancy sensor",
+      "CO2 sensor",
+      "Duct smoke detector",
+      "Sound attenuator"
+    ],
+    "explanation": "VAV box controls require airflow measurement for ventilation compliance per ASHRAE 62.1 and discharge air sensing for reheat control per Guideline 36. These sensors are essential for pressure-independent operation.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-ctrl-003",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "AHU Controls Package",
+    "description": "A commercial air handling unit has controls installed. Check for missing control components.",
+    "presentItems": [
+      "DDC controller in panel on AHU",
+      "Supply air temperature sensor in discharge duct",
+      "Supply fan VFD with BAS communication",
+      "Outdoor air damper with actuator",
+      "Chilled water valve with actuator",
+      "Hot water valve with actuator"
+    ],
+    "missingItems": [
+      {
+        "name": "Mixed air temperature sensor",
+        "explanation": "A mixed air temperature sensor downstream of the mixing plenum is critical for economizer control and freeze protection. Without it, the controller cannot verify proper air mixing or detect freezing conditions. Required by ASHRAE Guideline 36."
+      },
+      {
+        "name": "Duct static pressure sensor in supply duct",
+        "explanation": "A duct static pressure sensor (typically at 2/3 of the way down the longest duct run) is required for fan speed control. Without it, the VFD cannot modulate fan speed to maintain proper duct pressure. Required by ASHRAE 90.1 and Guideline 36."
+      },
+      {
+        "name": "Filter differential pressure sensor or switch",
+        "explanation": "A differential pressure sensor across the filter bank monitors filter loading. Without it, there is no indication when filters need replacement, leading to excessive energy use from high pressure drop or poor air quality from bypassed filters."
+      }
+    ],
+    "distractors": [
+      "Humidifier control valve",
+      "UV germicidal lamp controller",
+      "Sound level meter"
+    ],
+    "explanation": "Complete AHU controls require mixed air sensing for economizer/freeze protection, duct static pressure for fan control, and filter monitoring for maintenance. These three sensors are mandatory per ASHRAE Guideline 36.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-ctrl-004",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Chiller Plant Controls",
+    "description": "A chiller plant with two water-cooled chillers has controls installed. Identify missing control components.",
+    "presentItems": [
+      "Plant DDC controller with chiller staging logic",
+      "Chilled water supply and return temperature sensors",
+      "Condenser water supply and return temperature sensors",
+      "Chiller enable/disable commands via BACnet",
+      "Primary chilled water pump status feedback",
+      "Cooling tower fan VFDs with BAS control"
+    ],
+    "missingItems": [
+      {
+        "name": "Chilled water flow meter or differential pressure sensor",
+        "explanation": "A flow meter or DP sensor across the evaporator is needed to verify water flow before enabling the chiller and to calculate plant load (BTU metering). Running a chiller without confirmed flow causes evaporator freeze-up. Required by ASHRAE Guideline 36."
+      },
+      {
+        "name": "Condenser water flow switch or meter",
+        "explanation": "Condenser water flow must be verified before chiller startup. Without a flow switch, the chiller could start with no condenser flow, causing high head pressure, compressor damage, and safety lockout. Required by chiller manufacturer sequences."
+      }
+    ],
+    "distractors": [
+      "Refrigerant leak detector",
+      "Vibration sensor on chiller",
+      "Ambient light sensor",
+      "Sound level sensor"
+    ],
+    "explanation": "Chiller plant controls must verify water flow on both the evaporator and condenser sides before enabling chillers. Flow verification prevents catastrophic equipment damage and is required by both ASHRAE Guideline 36 and chiller manufacturers.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-ctrl-005",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Boiler Plant Controls",
+    "description": "A hot water boiler plant with two condensing boilers has controls installed. Check for missing components.",
+    "presentItems": [
+      "Boiler plant DDC controller",
+      "Hot water supply and return temperature sensors",
+      "Boiler enable/disable via BACnet gateway",
+      "Hot water pump VFDs with BAS speed control",
+      "Outdoor air temperature sensor for reset schedule"
+    ],
+    "missingItems": [
+      {
+        "name": "Hot water differential pressure sensor across building loop",
+        "explanation": "A differential pressure sensor across the supply and return mains is essential for variable-speed pump control. Without it, the pump VFDs cannot modulate speed to maintain system pressure as zone valves open and close. Required by ASHRAE 90.1 for variable-flow systems."
+      },
+      {
+        "name": "Low water temperature safety interlock",
+        "explanation": "A low water temperature safety sensor is needed to prevent thermal shock to condensing boilers during cold starts and to interlock pump operation. Boilers require minimum return water temperature per manufacturer requirements to prevent flue gas condensation damage in non-condensing units."
+      }
+    ],
+    "distractors": [
+      "Combustion air damper actuator",
+      "Stack temperature sensor",
+      "Natural gas flow meter",
+      "CO detector in mechanical room"
+    ],
+    "explanation": "Boiler plant controls require differential pressure sensing for variable-speed pump control per ASHRAE 90.1 and temperature safety interlocks to protect boiler equipment. These are frequently missing in controls submittals.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-ctrl-006",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Lighting Control System",
+    "description": "A lighting control system has been installed in an office building. Identify missing control components.",
+    "presentItems": [
+      "Lighting control panel with relay modules",
+      "Occupancy sensors in private offices",
+      "Wall switches with override timers in open areas",
+      "BAS interface for scheduling",
+      "Daylight harvesting sensors at perimeter zones"
+    ],
+    "missingItems": [
+      {
+        "name": "Photocell sensor for exterior lighting control",
+        "explanation": "Exterior lighting requires a photocell or astronomical time clock to turn on at dusk and off at dawn. Without it, exterior lighting runs on schedule only, wasting energy if the schedule doesn't match actual daylight. Required by ASHRAE 90.1 Section 9.4.1."
+      },
+      {
+        "name": "Emergency lighting bypass or transfer relay",
+        "explanation": "Life-safety and egress lighting must remain on during emergencies regardless of automation commands. A bypass relay ensures emergency circuits are not controlled by the BAS or lighting control panel. Required by NEC Article 700 and IBC."
+      }
+    ],
+    "distractors": [
+      "Dimming ballast controllers",
+      "Motion-activated pathway lights",
+      "Color temperature adjustment module"
+    ],
+    "explanation": "Lighting controls must include photocell sensing for exterior efficiency per ASHRAE 90.1 and emergency lighting bypass for life safety per NEC 700. Automated lighting must never override life-safety circuits.",
+    "xpReward": 40
+  },
+  {
+    "id": "wm-ctrl-007",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BAS Network Infrastructure",
+    "description": "A building automation network has been installed connecting multiple floors. Identify what's missing from the network infrastructure.",
+    "presentItems": [
+      "BACnet/IP backbone on building Ethernet LAN",
+      "BACnet routers at each floor connecting MS/TP trunks to IP",
+      "Managed network switch for BAS traffic",
+      "BAS server connected to backbone",
+      "Field controllers daisy-chained on MS/TP trunks"
+    ],
+    "missingItems": [
+      {
+        "name": "End-of-line termination resistors on each MS/TP trunk",
+        "explanation": "Each BACnet MS/TP trunk requires 120-ohm termination resistors at both physical ends of the bus to prevent signal reflections. Without termination, communication errors increase significantly, especially on longer trunk runs. Required by ASHRAE 135."
+      },
+      {
+        "name": "Virtual Local Area Network (VLAN) segregation for BAS traffic",
+        "explanation": "BAS network traffic should be segregated from general IT traffic using a dedicated VLAN. Without VLAN separation, broadcast storms, network congestion, or security breaches on the IT network can disrupt building automation. Recommended by NIST SP 800-82 for industrial control systems."
+      }
+    ],
+    "distractors": [
+      "Wireless access points for mobile BAS access",
+      "Fiber optic media converters",
+      "Network attached storage (NAS) device",
+      "VPN concentrator"
+    ],
+    "explanation": "BAS networks require proper physical-layer termination (end-of-line resistors) per ASHRAE 135 and logical network segregation (VLAN) per NIST cybersecurity guidelines. Both are essential for reliable and secure BAS communication.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-ctrl-008",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Energy Metering Installation",
+    "description": "An energy metering system has been installed for a commercial building. Check for missing components.",
+    "presentItems": [
+      "Main electrical meter with kWh pulse output",
+      "Current transformers on main electrical feeds",
+      "BAS controller receiving meter pulse data",
+      "Natural gas meter with pulse output to BAS"
+    ],
+    "missingItems": [
+      {
+        "name": "BTU meter on chilled water plant (flow + temperature sensors)",
+        "explanation": "A BTU meter measuring chilled water flow and delta-T is essential for tracking cooling energy production and calculating chiller plant efficiency (kW/ton). Without it, there is no way to verify plant performance. Required by ASHRAE 90.1 for buildings over 25,000 sq ft."
+      },
+      {
+        "name": "Electrical submeter on HVAC equipment panels",
+        "explanation": "Submetering HVAC electrical consumption separately from lighting and plug loads enables energy analysis and identifies waste. ASHRAE 90.1 Section 8 and many energy codes require tenant-level or system-level submetering for energy management."
+      }
+    ],
+    "distractors": [
+      "Power quality analyzer",
+      "Harmonic distortion meter",
+      "Water leak detection sensor"
+    ],
+    "explanation": "Comprehensive energy metering requires both thermal (BTU) and electrical submetering to enable energy analysis and efficiency verification. ASHRAE 90.1 requires metering infrastructure for building performance monitoring.",
+    "xpReward": 55
+  },
+  {
+    "id": "wm-ctrl-009",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Fire and Smoke System Integration",
+    "description": "A BAS integration with the fire alarm system has been set up. Identify missing components.",
+    "presentItems": [
+      "Fire alarm panel with BACnet gateway to BAS",
+      "Duct smoke detectors at AHUs reporting to fire alarm panel",
+      "BAS graphic showing fire alarm status points",
+      "AHU shutdown command on fire alarm activation",
+      "Smoke damper position monitoring on BAS"
+    ],
+    "missingItems": [
+      {
+        "name": "Hardwired AHU shutdown independent of BAS",
+        "explanation": "Duct smoke detector shutdown of AHU fans must be hardwired directly to the fan starter or disconnect, independent of any BAS command. BAS-only shutdown is not acceptable for life-safety functions because software can fail. Required by NFPA 90A and NEC 725.3."
+      },
+      {
+        "name": "Stairwell pressurization fan automatic start interlock",
+        "explanation": "Stairwell pressurization fans must start automatically on fire alarm activation through a hardwired connection from the fire alarm panel, not through a BAS software command. This is a life-safety function that must operate independently. Required by NFPA 92 and IBC 909."
+      }
+    ],
+    "distractors": [
+      "Sprinkler tamper switch",
+      "Elevator recall interface",
+      "PA system interface",
+      "Magnetic door hold-open device"
+    ],
+    "explanation": "Fire and smoke integration requires hardwired safety interlocks that operate independently of the BAS. The BAS can monitor and display status, but life-safety control functions must never depend solely on software per NFPA 90A and NFPA 92.",
+    "xpReward": 70
+  },
+  {
+    "id": "wm-ctrl-010",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Building Pressurization Controls",
+    "description": "Controls for maintaining positive building pressure in a commercial office have been installed. Check for missing components.",
+    "presentItems": [
+      "Building static pressure sensor (indoor vs. outdoor)",
+      "Return fan VFD with BAS speed control",
+      "Supply fan VFD with BAS speed control",
+      "BAS control sequence for pressure offset"
+    ],
+    "missingItems": [
+      {
+        "name": "Outdoor air measuring station at AHU intake",
+        "explanation": "An airflow measuring station at the outdoor air intake is needed to verify and control the actual amount of outdoor air being introduced. Without it, the system cannot confirm ASHRAE 62.1 ventilation minimums are met while maintaining building pressure."
+      },
+      {
+        "name": "Relief or exhaust air path with motorized damper",
+        "explanation": "When more outdoor air is brought in than can be returned, excess air must have a relief path (barometric or motorized relief damper). Without it, the building over-pressurizes, causing doors to not close properly and excessive infiltration/exfiltration. Required by ASHRAE Guideline 36."
+      }
+    ],
+    "distractors": [
+      "Wind speed sensor on roof",
+      "Barometric pressure transmitter",
+      "Revolving door speed controller"
+    ],
+    "explanation": "Building pressurization controls require accurate outdoor airflow measurement for ventilation verification and a properly controlled relief air path to prevent over-pressurization. Both are part of ASHRAE Guideline 36 multi-zone AHU sequences.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-ctrl-011",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Laboratory Controls System",
+    "description": "A laboratory HVAC and controls system has been installed for a research facility. Identify missing control components.",
+    "presentItems": [
+      "Lab exhaust fan with VFD",
+      "Fume hood face velocity controllers",
+      "Room pressure monitor and controller",
+      "Supply air valve with flow controller",
+      "Temperature control with reheat for each lab",
+      "BAS integration for monitoring and alarms"
+    ],
+    "missingItems": [
+      {
+        "name": "Room pressure offset tracking between supply and exhaust",
+        "explanation": "Labs require precise negative pressure relative to corridors by maintaining a fixed CFM offset between supply and exhaust airflow. The exhaust must always exceed supply by a specific amount (typically 50-200 CFM) to maintain containment. Required by ASHRAE 110 and ANSI Z9.5."
+      },
+      {
+        "name": "Emergency exhaust mode with manual override",
+        "explanation": "A manual emergency purge button at the lab entrance must command maximum exhaust and minimum supply to purge hazardous fumes during a spill. This safety function must override normal BAS operation. Required by ANSI Z9.5 and NFPA 45."
+      },
+      {
+        "name": "Exhaust air velocity or flow verification at each fume hood",
+        "explanation": "Each fume hood requires independent verification that face velocity meets the minimum (typically 80-100 FPM) with an alarm if velocity drops below the safety threshold. Without it, hazardous fumes can escape into the lab. Required by OSHA 29 CFR 1910.1450 and ASHRAE 110."
+      }
+    ],
+    "distractors": [
+      "Air quality particulate sensor",
+      "Humidity sensor in lab",
+      "Light level sensor"
+    ],
+    "explanation": "Laboratory controls are among the most complex and safety-critical in building automation. Pressure offset tracking, emergency purge capability, and fume hood velocity verification are all life-safety requirements per ASHRAE 110, ANSI Z9.5, and OSHA standards.",
+    "xpReward": 90
+  },
+  {
+    "id": "wm-ctrl-012",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Clean Room Controls System",
+    "description": "An ISO Class 7 clean room controls system has been installed in a pharmaceutical facility. Identify missing control components.",
+    "presentItems": [
+      "Dedicated clean room AHU controller",
+      "Room temperature and humidity sensors",
+      "HEPA filter differential pressure monitoring",
+      "Supply fan VFD with BAS control",
+      "Room pressure displayed on local gauge",
+      "Airlock door interlock system"
+    ],
+    "missingItems": [
+      {
+        "name": "Particle counter with continuous monitoring and alarm",
+        "explanation": "ISO 14644-1 Class 7 clean rooms require continuous particle monitoring to verify classification is maintained during operations. A particle counter with BAS alarm ensures immediate notification if contamination levels exceed limits. Required by ISO 14644-2."
+      },
+      {
+        "name": "Cascade pressure control across all adjacent rooms",
+        "explanation": "Clean rooms must maintain a pressure cascade — each room at a specific pressure relative to adjacent spaces (typically 0.03-0.05 in. W.C. per boundary). The controls must maintain this cascade through all door openings and varying exhaust loads. Required by ISO 14644-4."
+      }
+    ],
+    "distractors": [
+      "VOC sensor",
+      "CO2 sensor",
+      "Acoustic noise monitor",
+      "UV light intensity sensor"
+    ],
+    "explanation": "Clean room controls require continuous particle monitoring per ISO 14644-2 and cascade pressure control across room boundaries per ISO 14644-4. These are fundamental requirements for maintaining pharmaceutical-grade clean room classification.",
+    "xpReward": 85
+  },
+  {
+    "id": "wm-ctrl-013",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "CO2-Based Demand Ventilation System",
+    "description": "A CO2-based demand controlled ventilation system has been installed in a conference room zone. Review the installation for missing components.",
+    "presentItems": [
+      "Wall-mounted CO2 sensor in conference room",
+      "DDC controller programmed for DCV sequence",
+      "VAV box with modulating outdoor air damper",
+      "BACnet communication to BAS head-end",
+      "CO2 setpoint configured at 1000 ppm"
+    ],
+    "missingItems": [
+      {
+        "name": "CO2 sensor calibration gas port",
+        "explanation": "UCSB specifications require CO2 sensors with an accessible calibration gas port for field verification. CO2 sensors drift over time and must be calibrated against a known reference gas concentration. Without a calibration port, the sensor cannot be properly field-verified, leading to inaccurate ventilation control and potential indoor air quality problems."
+      },
+      {
+        "name": "Outdoor air CO2 reference sensor",
+        "explanation": "Demand controlled ventilation systems should include an outdoor CO2 reference sensor to establish the baseline concentration. Outdoor CO2 varies by location (typically 400-450 ppm but can be higher near traffic). Without a reference, the system assumes a fixed baseline that may not reflect actual conditions, leading to under- or over-ventilation per ASHRAE 62.1."
+      }
+    ],
+    "distractors": [
+      "Humidity sensor for dehumidification",
+      "Occupancy sensor for lighting control",
+      "Particulate matter sensor"
+    ],
+    "explanation": "CO2 demand ventilation requires proper sensor calibration capability and an outdoor reference measurement. UCSB specs mandate calibration ports on all CO2 sensors because sensor drift is a known issue that directly affects indoor air quality and ASHRAE 62.1 ventilation compliance.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-ctrl-014",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet Controller Network Installation",
+    "description": "A new BACnet/IP controller has been installed on the building automation network. Check for missing components per UCSB specifications.",
+    "presentItems": [
+      "BACnet/IP controller with web interface",
+      "Cat6A Ethernet cable to network switch",
+      "Controller programmed with sequences of operation",
+      "All I/O points wired and tested",
+      "Controller registered on BAS head-end"
+    ],
+    "missingItems": [
+      {
+        "name": "BACnet communication card (B-OWS or B-AAC profile)",
+        "explanation": "UCSB specifications require controllers to have a BACnet communication card supporting the appropriate device profile (B-OWS for operator workstations, B-AAC for advanced application controllers). The communication card ensures full BACnet interoperability including read/write property services, COV subscriptions, and alarm/event notification per ASHRAE 135-2016."
+      },
+      {
+        "name": "Network time synchronization configuration",
+        "explanation": "BACnet controllers must be configured for network time synchronization (TimeSynchronization service) to ensure all trend logs, alarms, and events across the BAS have consistent timestamps. Without time sync, troubleshooting becomes extremely difficult when events on different controllers show different times. Required by ASHRAE 135 and UCSB BAS specifications."
+      }
+    ],
+    "distractors": [
+      "Wireless mesh radio module",
+      "Cellular modem for remote access",
+      "GPS antenna for location services"
+    ],
+    "explanation": "BACnet interoperability requires proper communication profiles and time synchronization across all controllers. UCSB specs mandate ASHRAE 135-2016 compliance including standardized device profiles and consistent timestamps for effective building operations.",
+    "xpReward": 50
+  }
+]

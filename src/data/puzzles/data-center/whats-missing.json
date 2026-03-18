@@ -1,0 +1,266 @@
+[
+  {
+    "id": "wm-dc-001",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Hot Aisle Containment System",
+    "description": "A new data center row has server racks installed in a hot/cold aisle configuration. Review the installation and identify what critical containment components are missing.",
+    "presentItems": [
+      "Two rows of 42U server racks facing each other",
+      "Perforated floor tiles in cold aisle",
+      "CRAH units at ends of rows",
+      "Overhead cable trays installed",
+      "Servers installed and powered on"
+    ],
+    "missingItems": [
+      {
+        "name": "Containment roof panels over hot aisle",
+        "explanation": "Without roof panels sealing the top of the hot aisle, hot exhaust air rises and recirculates over the rack tops into the cold aisle. Roof panels are essential to channel hot air back to CRAH return intakes. Per ASHRAE TC 9.9, containment can improve cooling efficiency by 20-30%."
+      },
+      {
+        "name": "Containment end doors with self-closing hardware",
+        "explanation": "End doors seal the hot aisle at each row end, preventing hot and cold air from mixing. Doors must have self-closing mechanisms so they are never inadvertently left open. Required for effective containment per TIA-942 Annex G."
+      },
+      {
+        "name": "Blanking panels in empty U-spaces",
+        "explanation": "Every empty U-space in a rack is a bypass path for hot air to short-circuit into the cold aisle. Blanking panels seal these openings and are the single most cost-effective airflow management improvement. Required per ASHRAE TC 9.9 best practices."
+      }
+    ],
+    "distractors": [
+      "In-row cooling units",
+      "Rear door heat exchangers",
+      "Chimney cabinets",
+      "Cold aisle floor sealing strips"
+    ],
+    "explanation": "Hot aisle containment requires three components working together: blanking panels at the rack level, roof panels above, and end doors at row ends. Without all three, hot exhaust air finds alternate paths to recirculate into the cold supply, creating hot spots and wasting cooling energy.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-dc-002",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Environmental Monitoring System",
+    "description": "A data center has servers installed and running, with basic power monitoring. Check what environmental monitoring components are missing.",
+    "presentItems": [
+      "Server racks with active IT load",
+      "PDU with power metering display",
+      "UPS system with network management card",
+      "Fire alarm panel with smoke detectors",
+      "Building management system (BMS) for HVAC"
+    ],
+    "missingItems": [
+      {
+        "name": "Temperature and humidity sensors at rack inlets",
+        "explanation": "ASHRAE TC 9.9 recommends temperature monitoring at the top, middle, and bottom of each rack cold aisle inlet. Without sensors, hot spots go undetected until equipment throttles or shuts down. Temperature should be maintained within the A1 recommended envelope of 64.4-80.6°F."
+      },
+      {
+        "name": "DCIM software platform integration",
+        "explanation": "Data Center Infrastructure Management (DCIM) software aggregates data from power, cooling, and environmental sensors into a single pane of glass. Without DCIM, operators cannot correlate cooling capacity with IT load, plan capacity, or respond proactively to thermal events."
+      }
+    ],
+    "distractors": [
+      "Seismic sensors",
+      "Ambient light sensors",
+      "Sound level monitoring",
+      "Air quality particulate counter"
+    ],
+    "explanation": "Environmental monitoring is the nervous system of a data center. Temperature sensors detect hot spots before they cause outages, humidity sensors prevent condensation or static discharge, and DCIM ties it all together for proactive management.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-dc-003",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Emergency Power Off (EPO) System",
+    "description": "A new data center room is operational with UPS and PDU systems. Review the electrical safety provisions and identify what is missing.",
+    "presentItems": [
+      "UPS system with maintenance bypass",
+      "Floor-mount PDUs with branch circuit breakers",
+      "Fire alarm system connected to suppression",
+      "Emergency lighting with battery backup",
+      "Electrical room door with panic hardware"
+    ],
+    "missingItems": [
+      {
+        "name": "Emergency Power Off (EPO) button at principal exit doors",
+        "explanation": "NEC 645.10 requires a means to disconnect power to all IT equipment in an information technology equipment room. The EPO must be located at each principal exit door, clearly marked, and protected against accidental activation. This allows first responders to de-energize the room before entering during an emergency."
+      }
+    ],
+    "distractors": [
+      "Redundant EPO at each rack",
+      "Biometric reader for EPO access",
+      "Remote EPO activation via BMS",
+      "EPO battery backup system"
+    ],
+    "explanation": "The EPO system is a life-safety requirement per NEC 645.10. It must disconnect all power to IT equipment and HVAC systems serving the IT space. The EPO button must be located at principal exit doors so emergency personnel can de-energize before entering. Accidental EPO activation is a leading cause of data center outages, so covered or guarded buttons are recommended.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-dc-004",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Redundant Power Architecture",
+    "description": "A data center is being built to support critical applications requiring concurrent maintainability. Evaluate the power infrastructure for missing redundancy components.",
+    "presentItems": [
+      "Utility power feed from single substation",
+      "Single diesel generator with ATS",
+      "Single UPS with battery backup",
+      "Single floor-mount PDU per row",
+      "Single power whip to each rack"
+    ],
+    "missingItems": [
+      {
+        "name": "Redundant A+B power distribution paths",
+        "explanation": "A concurrently maintainable (Tier III) design requires two independent power distribution paths (A and B) from UPS to rack. Each path must be capable of supporting the full IT load so that either path can be taken down for maintenance without affecting operations. Per TIA-942 and Uptime Institute Tier III requirements."
+      },
+      {
+        "name": "Static transfer switch (STS) for single-corded loads",
+        "explanation": "Servers with only one power supply cannot benefit from A+B redundancy without a static transfer switch. An STS automatically switches between the A and B feeds in under 4 milliseconds if the primary feed fails, providing redundancy for single-corded equipment."
+      }
+    ],
+    "distractors": [
+      "Rotary UPS flywheel system",
+      "DC power distribution (380V DC)",
+      "Fuel cell backup power",
+      "Third (C) power distribution path"
+    ],
+    "explanation": "Tier III (concurrently maintainable) data centers require every component in the power chain to have a redundant counterpart that can carry the full load. The A+B architecture ensures no single point of failure exists, and STS handles the reality that not all equipment has dual power supplies.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-dc-005",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Very Early Smoke Detection (VESDA)",
+    "description": "A data center has been built with fire protection systems. Review the detection systems and identify what early-warning capability is absent.",
+    "presentItems": [
+      "Conventional spot-type smoke detectors on ceiling",
+      "Clean agent fire suppression system (Novec 1230)",
+      "Fire alarm control panel with monitoring",
+      "Manual pull stations at exits",
+      "Sprinkler system in non-IT support spaces"
+    ],
+    "missingItems": [
+      {
+        "name": "VESDA air-sampling smoke detection in supply and return plenums",
+        "explanation": "Standard spot-type smoke detectors have high activation thresholds and long response times in high-airflow environments like data centers. VESDA (Very Early Smoke Detection Apparatus) continuously samples air through a pipe network and can detect smoke at concentrations 1,000 times below conventional detectors. NFPA 76 and TIA-942 strongly recommend air-sampling detection in data center spaces and plenums."
+      }
+    ],
+    "distractors": [
+      "Flame detection cameras",
+      "Heat rate-of-rise detectors",
+      "Linear heat detection cable",
+      "Aspirating smoke detection in cable trays"
+    ],
+    "explanation": "In data centers, the high airflow rates from CRAH units dilute smoke, making conventional spot detectors slow to respond. VESDA air-sampling detection provides the earliest possible warning — often detecting a developing fault minutes before it becomes a fire. This early warning allows orderly shutdown of equipment before suppression activation.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-dc-006",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Water Leak Detection System",
+    "description": "A data center with raised floor and chilled water cooling infrastructure has been commissioned. Review the water protection systems and identify what is missing.",
+    "presentItems": [
+      "Raised floor with 24-inch plenum",
+      "Chilled water piping under raised floor",
+      "CRAH units with chilled water coils",
+      "Floor drains in mechanical areas",
+      "Isolation valves on chilled water branches"
+    ],
+    "missingItems": [
+      {
+        "name": "Leak detection sensing cable under raised floor",
+        "explanation": "Chilled water piping under a raised floor creates the risk of water damage to power and data cabling below. Leak detection sensing cable must be routed beneath all chilled water piping, around CRAH units, and near any potential water source. The cable detects water contact and pinpoints the leak location for rapid response."
+      },
+      {
+        "name": "Leak detection controller with BMS alarm integration",
+        "explanation": "Leak detection sensors are useless without a controller that triggers immediate alarms. The controller must integrate with the BMS/DCIM system for 24/7 monitoring and should trigger automatic isolation valve closure in critical zones."
+      }
+    ],
+    "distractors": [
+      "Dehumidification system under floor",
+      "Waterproof coating on floor slab",
+      "Sump pump in raised floor plenum",
+      "Humidity sensors in every rack"
+    ],
+    "explanation": "Water is the most common cause of unplanned data center outages after power failures. Leak detection cable under raised floors with chilled water piping is essential to detect and localize leaks before they damage IT infrastructure. Per TIA-942, leak detection should be installed beneath all water sources in the data center.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-dc-007",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "PDU Monitoring and Metering",
+    "description": "A data center has power distribution units installed and energized. Review the monitoring capabilities and identify what metering is absent.",
+    "presentItems": [
+      "Floor-mount PDU with step-down transformer",
+      "Input breaker with mechanical trip indicator",
+      "Output panelboard with branch circuit breakers",
+      "Power whips distributed to rack-mount PDU strips",
+      "Basic kWh meter at PDU input"
+    ],
+    "missingItems": [
+      {
+        "name": "Branch circuit monitoring system (BCMS) with per-circuit metering",
+        "explanation": "ASHRAE 90.4 requires sub-metering of electrical distribution in data centers to calculate PUE and identify inefficiencies. Branch circuit monitoring provides real-time current, voltage, and power readings per circuit, enabling capacity planning, load balancing, and early detection of overloaded circuits before breakers trip."
+      },
+      {
+        "name": "Network-connected monitoring with SNMP/Modbus integration",
+        "explanation": "Metering data is only useful if it reaches the DCIM/BMS platform. PDU monitoring must communicate via SNMP, Modbus, or BACnet to provide real-time dashboards, trending, threshold alarms, and capacity planning data. Without network integration, operators must manually read meters at each PDU."
+      }
+    ],
+    "distractors": [
+      "Power quality analyzer per circuit",
+      "Individual watt-hour sub-meters per rack",
+      "Harmonic distortion monitoring",
+      "Thermal imaging cameras on busbars"
+    ],
+    "explanation": "Modern data center standards require granular power monitoring at the branch circuit level. ASHRAE 90.4 mandates electrical metering for PUE calculation. Branch circuit monitoring enables proactive capacity management — knowing exactly how much power each circuit uses prevents stranded capacity and overloaded circuits.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-dc-008",
+    "type": "whats-missing",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Labeling and Documentation",
+    "description": "A data center is being turned over from construction to operations. Equipment is installed and operational. Review the administrative and documentation requirements and identify what is absent.",
+    "presentItems": [
+      "Equipment nameplates from manufacturers",
+      "Electrical panel schedules posted",
+      "Fire suppression system signage",
+      "Exit signs and emergency lighting",
+      "Basic network documentation in spreadsheet"
+    ],
+    "missingItems": [
+      {
+        "name": "TIA-606 compliant labeling system",
+        "explanation": "TIA-606-C requires a comprehensive labeling standard covering every cable, patch panel port, rack, pathway, and space in the data center. Labels must follow a hierarchical naming convention that identifies the building, floor, room, rack, and port. Without standardized labeling, troubleshooting and moves/adds/changes become error-prone and time-consuming."
+      },
+      {
+        "name": "As-built drawings and single-line electrical diagrams",
+        "explanation": "As-built drawings reflecting actual installed conditions (not just design intent) are critical for safe maintenance and future expansion. Single-line electrical diagrams showing the complete power chain from utility to rack are essential for understanding redundancy paths and performing safe lockout/tagout procedures."
+      },
+      {
+        "name": "Standard operating procedures (SOPs) and method of procedures (MOPs)",
+        "explanation": "Operational documentation including SOPs for routine tasks and MOPs for changes is required for consistent, safe operations. Without documented procedures, knowledge exists only in individuals' heads, creating operational risk during staff turnover or emergency situations."
+      }
+    ],
+    "distractors": [
+      "3D BIM model of the facility",
+      "Augmented reality maintenance overlays",
+      "QR codes on every cable",
+      "RFID asset tracking tags"
+    ],
+    "explanation": "Documentation and labeling are the most overlooked aspects of data center commissioning. TIA-606 labeling ensures anyone can trace any cable. As-built drawings prevent dangerous assumptions during maintenance. SOPs/MOPs ensure consistent, safe operations regardless of which technician is on shift.",
+    "xpReward": 100
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "seq-pipe-001",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Pipe Welding Procedure",
+    "description": "Put the pipe butt-weld procedure steps in the correct order for a carbon steel pipe joint.",
+    "steps": [
+      { "id": 1, "text": "Verify pipe material and wall thickness match the WPS (Welding Procedure Specification)", "order": 1 },
+      { "id": 2, "text": "Bevel pipe ends to 37.5° and clean to bright metal", "order": 2 },
+      { "id": 3, "text": "Fit up joint with proper root gap (1/8\") using tack welds", "order": 3 },
+      { "id": 4, "text": "Set up argon back-purge inside the pipe", "order": 4 },
+      { "id": 5, "text": "Weld root pass using GTAW (TIG) process", "order": 5 },
+      { "id": 6, "text": "Weld hot pass immediately after root to prevent cracking", "order": 6 },
+      { "id": 7, "text": "Complete fill and cap passes using SMAW or FCAW", "order": 7 },
+      { "id": 8, "text": "Visually inspect and mark weld with welder ID", "order": 8 }
+    ],
+    "explanation": "Pipe welding follows a strict sequence per AWS D10.9 and the project WPS. The back-purge prevents root oxidation, and the hot pass must follow immediately to prevent root cracking from cooling stresses. Every weld must be traceable to the welder.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-pipe-002",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hydronic System Commissioning",
+    "description": "Order the steps for commissioning a new closed-loop hydronic heating system.",
+    "steps": [
+      { "id": 1, "text": "Verify all piping connections are complete and valves are in correct positions", "order": 1 },
+      { "id": 2, "text": "Fill system with treated water through makeup water connection", "order": 2 },
+      { "id": 3, "text": "Vent air from all high points using manual and automatic vents", "order": 3 },
+      { "id": 4, "text": "Perform hydrostatic pressure test at 1.5× design pressure", "order": 4 },
+      { "id": 5, "text": "Check expansion tank pre-charge pressure and connection", "order": 5 },
+      { "id": 6, "text": "Start circulator pump and verify flow at all circuits", "order": 6 },
+      { "id": 7, "text": "Balance flow to each terminal unit using balancing valves", "order": 7 },
+      { "id": 8, "text": "Fire boiler, bring system to operating temperature, and re-vent", "order": 8 }
+    ],
+    "explanation": "Hydronic commissioning must follow this sequence: physical verification, fill, vent, pressure test, then startup. Never fire the boiler before confirming flow — operating a boiler without circulation causes localized boiling and thermal shock per ASME B31.9.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-pipe-003",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Medical Gas System Installation",
+    "description": "Order the steps for installing a medical gas piping system per NFPA 99.",
+    "steps": [
+      { "id": 1, "text": "Verify all piping material is ACR (cleaned for oxygen service) copper", "order": 1 },
+      { "id": 2, "text": "Cut tube with tube cutter — no hack saws (prevents contamination)", "order": 2 },
+      { "id": 3, "text": "Deburr tube ends and blow out with nitrogen", "order": 3 },
+      { "id": 4, "text": "Set up continuous nitrogen purge through tube during brazing", "order": 4 },
+      { "id": 5, "text": "Braze joints with BAg-1 or BAg-7 filler (minimum 45% silver)", "order": 5 },
+      { "id": 6, "text": "Pressure test with oil-free nitrogen at 1.5× operating pressure for 24 hours", "order": 6 },
+      { "id": 7, "text": "Blow down and purge entire system with oil-free nitrogen", "order": 7 },
+      { "id": 8, "text": "Perform cross-connection verification test at every outlet", "order": 8 }
+    ],
+    "explanation": "Medical gas installation per NFPA 99 demands extreme cleanliness: ACR copper, nitrogen purge during brazing, approved filler metals, extended pressure tests, and cross-connection verification to ensure the correct gas reaches every outlet.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-pipe-004",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Steam System Startup",
+    "description": "Order the steps for safely starting up a low-pressure steam boiler and distribution system after a shutdown.",
+    "steps": [
+      { "id": 1, "text": "Verify boiler water level is at normal operating level", "order": 1 },
+      { "id": 2, "text": "Test low-water cutoff by lowering water level", "order": 2 },
+      { "id": 3, "text": "Open all steam supply valves slowly to warm piping gradually", "order": 3 },
+      { "id": 4, "text": "Open drip leg valves to drain accumulated condensate from mains", "order": 4 },
+      { "id": 5, "text": "Light off boiler at low fire and build pressure slowly", "order": 5 },
+      { "id": 6, "text": "Verify steam traps are operating (check trap discharge temperature)", "order": 6 },
+      { "id": 7, "text": "Close drip leg drain valves once mains are clear of condensate", "order": 7 },
+      { "id": 8, "text": "Bring boiler to normal operating pressure and verify all safety controls", "order": 8 }
+    ],
+    "explanation": "Steam system startup requires gradual warming to prevent thermal shock and water hammer. Draining condensate from cold mains before pressurizing is critical — trapped condensate at steam velocity causes destructive water hammer per ASME B31.1.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-pipe-005",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hydrostatic Pressure Test",
+    "description": "Order the steps for performing a hydrostatic pressure test on a new piping system per ASME B31.1.",
+    "steps": [
+      { "id": 1, "text": "Isolate test section and verify all joints are complete (no open ends)", "order": 1 },
+      { "id": 2, "text": "Remove or restrain expansion joints and isolate sensitive equipment", "order": 2 },
+      { "id": 3, "text": "Fill system slowly with clean water from the lowest point", "order": 3 },
+      { "id": 4, "text": "Vent all air from high points as water fills the system", "order": 4 },
+      { "id": 5, "text": "Pressurize to 1.5× design pressure using a hand pump or test pump", "order": 5 },
+      { "id": 6, "text": "Hold test pressure for minimum 10 minutes while inspecting all joints", "order": 6 },
+      { "id": 7, "text": "Record test pressure, duration, and results on test documentation", "order": 7 }
+    ],
+    "explanation": "Hydrostatic testing per ASME B31.1 Section 137 verifies piping system integrity before operation. Filling from the bottom and venting air prevents trapped air pockets that give false pressure readings. The 1.5× test pressure provides the required safety margin.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-pipe-006",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Pipe Threading Procedure",
+    "description": "Order the steps for cutting and threading a length of steel pipe for a threaded joint.",
+    "steps": [
+      { "id": 1, "text": "Measure and mark the pipe to required length", "order": 1 },
+      { "id": 2, "text": "Secure pipe in pipe vise and cut with pipe cutter or band saw", "order": 2 },
+      { "id": 3, "text": "Ream the inside of the cut end to remove burr", "order": 3 },
+      { "id": 4, "text": "Select correct die head size and install in threading machine", "order": 4 },
+      { "id": 5, "text": "Apply cutting oil and thread the pipe to proper engagement length", "order": 5 },
+      { "id": 6, "text": "Check thread quality with ring gauge or by hand-threading a fitting", "order": 6 },
+      { "id": 7, "text": "Apply PTFE tape or pipe dope to male threads and assemble joint", "order": 7 }
+    ],
+    "explanation": "Proper threading requires reaming after cutting to remove the internal burr that restricts flow and causes turbulence. Thread engagement length per ASME B1.20.1 varies by pipe size — too few threads leak, too many risk bottoming out and cracking the fitting.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-pipe-007",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Brazing Copper Pipe",
+    "description": "Order the steps for brazing a copper tube joint using silver brazing alloy.",
+    "steps": [
+      { "id": 1, "text": "Cut copper tube square using a tube cutter", "order": 1 },
+      { "id": 2, "text": "Deburr and ream the cut end inside and out", "order": 2 },
+      { "id": 3, "text": "Clean tube end and fitting socket with emery cloth or abrasive pad", "order": 3 },
+      { "id": 4, "text": "Apply flux to tube end and fitting socket", "order": 4 },
+      { "id": 5, "text": "Assemble joint and rotate slightly to spread flux", "order": 5 },
+      { "id": 6, "text": "Heat joint evenly with oxy-acetylene or air-acetylene torch", "order": 6 },
+      { "id": 7, "text": "Apply brazing alloy rod when flux becomes clear — let capillary action draw filler into joint", "order": 7 }
+    ],
+    "explanation": "Brazing depends on capillary action to draw molten filler metal into the joint gap. Proper cleaning ensures wetting, and even heating ensures the filler flows completely around the joint per AWS Brazing Handbook and ASME B31.9.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-pipe-008",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Grooved Pipe Joining (Victaulic)",
+    "description": "Order the steps for making a grooved mechanical pipe joint on steel pipe.",
+    "steps": [
+      { "id": 1, "text": "Verify pipe ends are cut square (within 1/16 inch)", "order": 1 },
+      { "id": 2, "text": "Roll groove on each pipe end using groove-rolling machine", "order": 2 },
+      { "id": 3, "text": "Inspect groove dimensions with go/no-go gauge", "order": 3 },
+      { "id": 4, "text": "Lubricate gasket with approved silicone lubricant", "order": 4 },
+      { "id": 5, "text": "Install gasket over pipe ends, centered on the joint", "order": 5 },
+      { "id": 6, "text": "Assemble coupling housing halves over gasket and loosely install bolts", "order": 6 },
+      { "id": 7, "text": "Alternate tightening bolts to ensure metal-to-metal pad contact", "order": 7 }
+    ],
+    "explanation": "Grooved pipe joining per manufacturer standards requires proper groove dimensions (verified by gauge), lubricated gaskets, and even bolt tightening. This method allows faster installation and easier disassembly than welded connections per ASME B31.9.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-pipe-009",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Boiler Feed Piping Installation",
+    "description": "Order the steps for installing boiler near piping and making final connections.",
+    "steps": [
+      { "id": 1, "text": "Install boiler on foundation and verify level", "order": 1 },
+      { "id": 2, "text": "Install safety relief valve on boiler — pipe discharge to safe location", "order": 2 },
+      { "id": 3, "text": "Connect supply header with isolation valve and check valve", "order": 3 },
+      { "id": 4, "text": "Connect return piping with circulator pump and isolation valves", "order": 4 },
+      { "id": 5, "text": "Install low-water cutoff and pipe makeup water with backflow preventer", "order": 5 },
+      { "id": 6, "text": "Connect expansion tank to system at pump suction (point of no pressure change)", "order": 6 },
+      { "id": 7, "text": "Connect gas piping with shutoff valve, sediment trap, and union", "order": 7 },
+      { "id": 8, "text": "Install air separator near point of lowest solubility (highest temperature)", "order": 8 }
+    ],
+    "explanation": "Boiler near piping follows a logical sequence: safety devices first (relief valve), then flow connections, water level protection, expansion accommodation, and fuel supply. The expansion tank connection point at pump suction is critical for proper system pressurization per ASME B31.9.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-pipe-010",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Glycol Fill Procedure",
+    "description": "Order the steps for filling a closed-loop system with propylene glycol solution.",
+    "steps": [
+      { "id": 1, "text": "Calculate required glycol concentration based on minimum ambient temperature", "order": 1 },
+      { "id": 2, "text": "Pre-mix glycol and water to the correct concentration in a mixing tank", "order": 2 },
+      { "id": 3, "text": "Connect glycol pump to system fill connection", "order": 3 },
+      { "id": 4, "text": "Pump glycol solution into system while venting air from high points", "order": 4 },
+      { "id": 5, "text": "Circulate system and continue venting until all air is removed", "order": 5 },
+      { "id": 6, "text": "Test glycol concentration with refractometer — adjust if needed", "order": 6 },
+      { "id": 7, "text": "Verify expansion tank is properly sized for glycol (higher expansion rate than water)", "order": 7 }
+    ],
+    "explanation": "Glycol fill requires pre-mixing to the exact concentration — never dump straight glycol into a system. Glycol expands more than plain water, so the expansion tank must be re-sized. Always test concentration with a refractometer per ASHRAE guidelines.",
+    "xpReward": 80
+  },
+  {
+    "id": "seq-pipe-011",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Expansion Loop Installation",
+    "description": "Order the steps for installing a pipe expansion loop in a straight run of hot water piping.",
+    "steps": [
+      { "id": 1, "text": "Calculate thermal expansion of the pipe run using steel expansion coefficient", "order": 1 },
+      { "id": 2, "text": "Size the expansion loop dimensions based on calculated movement", "order": 2 },
+      { "id": 3, "text": "Install main anchors at each end of the piping segment", "order": 3 },
+      { "id": 4, "text": "Install pipe guides on each side of the loop per spacing requirements", "order": 4 },
+      { "id": 5, "text": "Fabricate and install the expansion loop with long-radius elbows", "order": 5 },
+      { "id": 6, "text": "Verify remaining supports allow axial pipe movement (sliding supports)", "order": 6 }
+    ],
+    "explanation": "Expansion loop installation requires calculation first, then anchors, then guides, then the loop itself. The guide spacing near the loop is critical — the first guide should be within 4 pipe diameters of the loop per ASME B31.1 Section 119.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-pipe-012",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Hot Tap and Valve Replacement",
+    "description": "Order the steps for replacing a failed valve on a live pressurized system using a hot tap and line stop.",
+    "steps": [
+      { "id": 1, "text": "Install hot tap fitting and valve on the pipe upstream and downstream of failed valve", "order": 1 },
+      { "id": 2, "text": "Drill through pipe wall through the hot tap valve (under pressure)", "order": 2 },
+      { "id": 3, "text": "Insert line stop plugs through hot tap valves to isolate the failed valve section", "order": 3 },
+      { "id": 4, "text": "Drain the isolated section between line stops", "order": 4 },
+      { "id": 5, "text": "Remove and replace the failed valve", "order": 5 },
+      { "id": 6, "text": "Refill the section, vent air, and remove line stop plugs", "order": 6 },
+      { "id": 7, "text": "Close and cap hot tap valves — leave fittings in place for future use", "order": 7 }
+    ],
+    "explanation": "Hot tapping and line stopping allow valve replacement without system shutdown — a critical journeyman/foreman-level skill. This procedure must follow ASME B31.1 requirements for welding on in-service piping and requires specialized equipment and training.",
+    "xpReward": 90
+  },
+  {
+    "id": "seq-pipe-013",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Union Training: Hydrostatic Pressure Test",
+    "description": "Order the steps for performing a hydrostatic pressure test as taught at the UA union hall per ASME B31.1.",
+    "steps": [
+      { "id": 1, "text": "Install test boundary equipment — blinds, caps, and test fittings at all open ends", "order": 1 },
+      { "id": 2, "text": "Fill system with water slowly from the lowest point", "order": 2 },
+      { "id": 3, "text": "Bleed all air from high points using vent valves until solid water stream flows", "order": 3 },
+      { "id": 4, "text": "Pressurize system to 1.5 times design pressure using calibrated test pump", "order": 4 },
+      { "id": 5, "text": "Hold test pressure for minimum 10 minutes with no pressure drop", "order": 5 },
+      { "id": 6, "text": "Inspect all joints, welds, and connections visually while under pressure", "order": 6 },
+      { "id": 7, "text": "Record pressure gauge readings, test duration, and inspection results on test documentation", "order": 7 },
+      { "id": 8, "text": "Drain system and remove all test equipment (blinds, caps, test pump)", "order": 8 }
+    ],
+    "explanation": "Hydrostatic testing per ASME B31.1 Section 137 is a fundamental UA apprentice skill. The key sequence points: boundaries must be installed before filling, all air must be bled before pressurizing (trapped air gives false readings and is a compressible energy hazard), and visual inspection happens while the system is still under pressure — never after depressurizing.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-pipe-014",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Union Certification: Silver Brazing Certification",
+    "description": "Order the steps for performing a UA brazing qualification test on a copper tube joint using silver brazing alloy.",
+    "steps": [
+      { "id": 1, "text": "Select proper brazing alloy (BAg series) and matching flux for the application", "order": 1 },
+      { "id": 2, "text": "Clean tube end and fitting socket to bright copper using emery cloth or abrasive pad", "order": 2 },
+      { "id": 3, "text": "Apply flux to male tube end only — do not flux inside the fitting socket", "order": 3 },
+      { "id": 4, "text": "Assemble joint ensuring proper insertion depth per fitting manufacturer specifications", "order": 4 },
+      { "id": 5, "text": "Heat the base metal (tube and fitting) evenly — never apply flame directly to the brazing alloy", "order": 5 },
+      { "id": 6, "text": "Touch filler metal rod to the joint when flux becomes clear and base metal reaches brazing temperature", "order": 6 },
+      { "id": 7, "text": "Allow capillary action to draw the brazing alloy completely around and into the joint", "order": 7 },
+      { "id": 8, "text": "Let joint cool naturally to room temperature — never quench with water or wet rags", "order": 8 }
+    ],
+    "explanation": "Silver brazing certification is one of the first welding qualifications a UA apprentice earns. Critical sequence points: flux goes on the male end only (flux inside the socket gets trapped and weakens the joint), heat the base metal not the alloy (direct flame on the filler rod causes it to ball up instead of flowing), and never quench (thermal shock can crack the joint or create micro-fissures that fail under pressure).",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-pipe-015",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Hydronic Pipe Pressure Testing per ASME B31.9",
+    "description": "Order the steps for performing a hydrostatic pressure test on a closed-loop hydronic piping system per ASME B31.9.",
+    "steps": [
+      { "id": 1, "text": "Fill the system with clean water from the lowest point to minimize trapped air", "order": 1 },
+      { "id": 2, "text": "Bleed all air from high points using manual air vents until solid water flows", "order": 2 },
+      { "id": 3, "text": "Pressurize the system to 1.5 times the design working pressure using a calibrated test pump", "order": 3 },
+      { "id": 4, "text": "Maintain test pressure for a minimum of 2 hours with no pressure drop", "order": 4 },
+      { "id": 5, "text": "Walk the system and visually inspect every joint, weld, and connection for leaks while under pressure", "order": 5 },
+      { "id": 6, "text": "Document test pressure, hold duration, and inspection results on the pressure test report", "order": 6 },
+      { "id": 7, "text": "If any leak is found, drain the section, repair, and retest the entire section from the beginning", "order": 7 }
+    ],
+    "explanation": "ASME B31.9 Section 937 governs hydrostatic testing of building services piping. The 1.5x design pressure factor provides a safety margin above normal operating conditions. The 2-hour hold time is longer than basic ASME B31.1 requirements because hydronic systems operate continuously and any leak worsens over time. Trapped air compresses under pressure and gives false readings — bleeding is critical before pressurizing.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-pipe-016",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Underground Pre-Insulated Piping Installation",
+    "description": "Order the steps for installing underground pre-insulated hydronic piping per Spec 23 21 14.",
+    "steps": [
+      { "id": 1, "text": "Excavate trench to required depth ensuring minimum 36 inches of cover over the pipe", "order": 1 },
+      { "id": 2, "text": "Prepare a level sand bed at the bottom of the trench (minimum 4-inch depth)", "order": 2 },
+      { "id": 3, "text": "Lay pre-insulated carrier pipe on the sand bed with factory joints aligned", "order": 3 },
+      { "id": 4, "text": "Install copper tracer wire along the top of the pipe for future leak detection and locating", "order": 4 },
+      { "id": 5, "text": "Backfill around the pipe with clean sand to 6 inches above the pipe crown", "order": 5 },
+      { "id": 6, "text": "Pressure test the carrier pipe before completing the backfill", "order": 6 },
+      { "id": 7, "text": "Complete backfill with native soil in compacted lifts to finished grade", "order": 7 },
+      { "id": 8, "text": "Document burial depth, tracer wire location, and pressure test results with as-built drawings", "order": 8 }
+    ],
+    "explanation": "Underground pre-insulated piping per Spec 23 21 14 requires careful installation to prevent insulation and pipe damage. The sand bed and sand backfill protect the factory insulation jacket from rocks and sharp objects. Tracer wire is essential because pre-insulated pipe is non-metallic on the exterior and cannot be located with standard pipe locators. Pressure testing before completing backfill allows leak repair without re-excavation.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-pipe-017",
+    "type": "sequence",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Chemical Pot Feeder Installation",
+    "description": "Order the steps for installing a chemical pot feeder on a closed-loop hydronic system per Spec 23 21 13.",
+    "steps": [
+      { "id": 1, "text": "Mount the pot feeder on a housekeeping pad or wall bracket at an accessible height", "order": 1 },
+      { "id": 2, "text": "Install isolation ball valves on both the inlet and outlet connections", "order": 2 },
+      { "id": 3, "text": "Connect bypass piping so the feeder can be isolated without shutting down the system", "order": 3 },
+      { "id": 4, "text": "Install a manual air vent at the top of the pot feeder", "order": 4 },
+      { "id": 5, "text": "Connect a drain valve with hose bibb at the bottom of the pot feeder", "order": 5 },
+      { "id": 6, "text": "Fill the pot feeder with the specified water treatment chemical and pressure test all connections", "order": 6 },
+      { "id": 7, "text": "Label the pot feeder with the chemical type, concentration, and date of last service", "order": 7 }
+    ],
+    "explanation": "Chemical pot feeders per Spec 23 21 13 allow water treatment chemicals to be added to a closed-loop system without draining. Isolation valves and bypass piping are essential so the feeder can be serviced while the system remains operational. The air vent allows air to escape during filling, and the drain allows flushing. Labeling with chemical type and date is required for OSHA GHS compliance and maintenance tracking.",
+    "xpReward": 50
+  }
+]

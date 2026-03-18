@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cc-cp-001",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Safety Valve Set Pressure",
+    "scenario": "A hot water boiler in a central plant has a maximum allowable working pressure (MAWP) of 150 psig. During annual inspection, the inspector notes that the ASME safety relief valve is stamped with a set pressure of 157.5 psig — exactly 5% above the MAWP. The plant engineer argues this provides a small safety margin above normal operating pressure.",
+    "isUpToCode": false,
+    "codeReference": "ASME Boiler and Pressure Vessel Code, Section IV — HG-400",
+    "explanation": "ASME BPVC Section IV requires that safety relief valves on hot water boilers be set at or below the maximum allowable working pressure (MAWP), never above it. A valve set at 157.5 psig on a 150 psig rated boiler allows the vessel to be pressurized beyond its design limit before the valve lifts. This defeats the purpose of the safety valve, which is to prevent overpressurization at or before the rated limit. The valve must be replaced with one stamped at 150 psig or lower. This is a mandatory violation that will fail jurisdictional inspection, and the boiler must be taken out of service until corrected.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-002",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Constant Flow 500-Ton Chiller Plant",
+    "scenario": "A new commercial campus has a 500-ton centrifugal chiller plant with two chillers piped in a constant primary flow arrangement. All air handler coils use 3-way control valves to maintain constant flow through the chiller evaporators. There are no variable frequency drives on any chilled water pumps, and the system has no provisions for variable flow operation at any point in the distribution loop.",
+    "isUpToCode": false,
+    "codeReference": "ASHRAE 90.1-2019 Section 6.5.4.5",
+    "explanation": "ASHRAE 90.1-2019 Section 6.5.4.5 requires variable flow on chilled water systems with a combined chilled water pump system power exceeding 10 HP. A 500-ton chiller plant far exceeds the 300-ton threshold where variable flow becomes mandatory. The system must be redesigned with 2-way control valves at all coils, variable frequency drives on chilled water pumps, differential pressure sensors for pump speed control, and a minimum flow bypass valve to protect chiller evaporators at low loads. Constant-flow systems at this scale waste enormous pumping energy, particularly at part-load conditions that represent the vast majority of annual operating hours.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-003",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Room Combustion Air Opening",
+    "scenario": "A 2,000 MBH (2,000,000 BTU/hr) input gas-fired boiler is installed in a dedicated mechanical room. The room relies solely on natural ventilation for combustion air through a single 1 square foot (144 square inches) opening in the exterior wall, located near the ceiling. There is no second opening near the floor and no mechanical ventilation system for combustion air supply.",
+    "isUpToCode": false,
+    "codeReference": "IMC Section 701 / IFGC Section 304.6",
+    "explanation": "This installation fails on multiple counts. First, when combustion air is drawn directly from outdoors using natural ventilation, the IMC and IFGC require TWO openings — one within 12 inches of the ceiling and one within 12 inches of the floor — to create natural convective air circulation. Only one opening is provided. Second, each opening must be sized at a minimum of 1 square inch per 4,000 BTU/hr of total input rating. For a 2,000,000 BTU/hr boiler: 2,000,000 / 4,000 = 500 square inches minimum per opening. The single 144 square inch opening is drastically undersized even if it were the only requirement. The room needs two openings of at least 500 square inches each (approximately 20 inches x 25 inches) to provide adequate combustion air for safe boiler operation.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-004",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Boiler Fuel Train Missing Interlocks",
+    "scenario": "A 4,000 MBH commercial boiler has a dual fuel train with motorized gas valves and a flame safeguard controller. During commissioning, the controls technician verifies that the pre-purge timer is set for a 30-second purge cycle before ignition. However, the technician discovers there is no post-purge cycle programmed after burner shutdown, and the proof-of-closure interlock on the main gas valve is not wired. The installing contractor states post-purge and proof-of-closure were removed from the sequence to simplify the control wiring.",
+    "isUpToCode": false,
+    "codeReference": "NFPA 85 — Boiler and Combustion Systems Hazards Code, Section 6.4",
+    "explanation": "NFPA 85 requires a complete set of safety interlocks for boiler fuel train operation, including both pre-purge AND proof of valve closure. Pre-purge alone is insufficient. Post-purge ensures that any residual combustion gases are cleared from the firebox after burner shutdown, preventing accumulation of unburned fuel vapor. The proof-of-closure interlock confirms that the main gas valves have physically closed after a shutdown signal — without it, a leaking or stuck-open valve could allow raw gas to accumulate in the combustion chamber, creating an explosion hazard on the next ignition attempt. Both interlocks are mandatory life-safety requirements that cannot be removed or bypassed for any reason. The system must be rewired immediately and the boiler locked out until all NFPA 85 interlocks are verified operational.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-005",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Single-Speed Cooling Tower Fan",
+    "scenario": "A new cooling tower has been installed to serve a 1,200 GPM condenser water loop for a 400-ton chiller plant. The tower is equipped with a single-speed 30 HP axial fan motor with a simple on/off contactor. There is no variable frequency drive, two-speed motor, or pony motor arrangement. The mechanical engineer states that a single-speed fan provides adequate capacity for the peak design condition and keeps the installation cost lower.",
+    "isUpToCode": false,
+    "codeReference": "ASHRAE 90.1-2019 Section 6.5.5.2",
+    "explanation": "ASHRAE 90.1-2019 Section 6.5.5.2 requires that cooling tower fans serving condenser water loops with a flow rate exceeding 900 GPM use either two-speed motors, variable-speed drives, or other approved modulating control. At 1,200 GPM, this system clearly exceeds the 900 GPM threshold. A single-speed fan cycling on and off wastes significant energy and causes large swings in condenser water temperature, reducing chiller efficiency. Variable-speed fan control is the preferred approach because fan power varies with the cube of speed — operating at 80% speed uses only about 51% of full-load power. A VFD on the cooling tower fan typically pays for itself within one to two cooling seasons through reduced energy consumption.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-006",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Propylene Glycol Drain Disposal",
+    "scenario": "During a chilled water system flush before a central plant renovation, the mechanical contractor pumped approximately 150 gallons of 30% propylene glycol solution directly into the building's sanitary drain through a floor drain in the mechanical room. The contractor explains that propylene glycol is a non-toxic, food-grade antifreeze that is safe for sanitary sewer disposal, unlike ethylene glycol which would require hazardous waste handling.",
+    "isUpToCode": true,
+    "codeReference": "IPC Section 803.2 / FDA GRAS Classification",
+    "explanation": "Propylene glycol is classified by the FDA as 'generally recognized as safe' (GRAS) and is non-toxic, unlike ethylene glycol which is hazardous to humans and animals. The IPC permits discharge of non-toxic substances to the sanitary drain system. Propylene glycol solutions at typical concentrations used in HVAC systems (25-50%) are biodegradable and do not pose a toxicity hazard to municipal wastewater treatment processes. However, contractors should always verify local sewer use ordinances, as some jurisdictions impose biochemical oxygen demand (BOD) limits that may require dilution or metered discharge of large volumes. For most routine system flushes of this volume, sanitary drain disposal of propylene glycol is code-compliant.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-007",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "High-Pressure Steam Weld Without NDE",
+    "scenario": "A new 300 PSI high-pressure steam main has been installed in a central plant using Schedule 80 carbon steel pipe with butt-welded joints. All welds were performed by a certified welder holding current ASME qualifications. The welding contractor states that all welds passed visual inspection by the welder and a third-party visual inspector, and no further non-destructive examination (NDE) such as radiographic testing (RT) or ultrasonic testing (UT) was performed. The contractor considers visual inspection sufficient.",
+    "isUpToCode": false,
+    "codeReference": "ASME B31.1 — Power Piping, Section 136",
+    "explanation": "ASME B31.1 (Power Piping) governs steam systems operating above 15 psig and requires non-destructive examination (NDE) of welded joints based on the service conditions, pressure class, and pipe size. For high-pressure steam at 300 PSI, radiographic examination (RT) or ultrasonic examination (UT) is required on a specified percentage of butt welds — typically 100% for the highest-pressure services. Visual inspection alone cannot detect subsurface defects such as incomplete fusion, internal porosity, slag inclusions, or hydrogen cracking that may exist within the weld. Under 300 PSI steam pressure and temperatures exceeding 400°F, these hidden defects can propagate and cause catastrophic pipe failure, posing extreme danger to plant personnel. All welds must be examined by RT or UT before the system can be placed into service.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-cp-008",
+    "type": "code-check",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Primary-Only Variable Flow with Bypass",
+    "scenario": "A central chilled water plant is designed as a primary-only variable flow system with two 250-ton chillers. All air handler coils use 2-way modulating control valves, and the chilled water pumps are equipped with variable frequency drives controlled by a differential pressure sensor at the most remote coil. A minimum flow bypass valve is installed at the plant and is set to maintain 30% of design flow through the chiller evaporators when building load drops below that threshold.",
+    "isUpToCode": true,
+    "codeReference": "ASHRAE 90.1-2019 Section 6.5.4.5 / ASHRAE Handbook — HVAC Systems and Equipment",
+    "explanation": "This is a fully code-compliant primary-only variable flow chilled water design that meets ASHRAE 90.1-2019 requirements. The 2-way control valves allow flow to vary with load, the VFDs on pumps reduce energy consumption at part load, and the differential pressure sensor at the most remote coil ensures the pumps maintain only the minimum pressure needed to serve all loads. The minimum flow bypass valve set at 30% of design flow protects the chiller evaporators from low-flow conditions that could cause freezing or laminar flow issues. This design is the current industry-preferred approach as it eliminates the need for separate primary and secondary pumping loops, reducing both first cost and operating energy compared to traditional primary-secondary systems.",
+    "xpReward": 60
+  }
+]

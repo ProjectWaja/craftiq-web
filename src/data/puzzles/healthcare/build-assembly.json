@@ -1,0 +1,238 @@
+[
+  {
+    "id": "ba-hc-001",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Gas Outlet Assembly",
+    "description": "Assemble the medical gas outlet station components in the correct order, from the zone valve to the patient connection point.",
+    "parts": [
+      { "id": 1, "name": "Zone valve box (outside served area)", "correctPosition": 1 },
+      { "id": 2, "name": "Copper medical gas branch piping (brazed joints)", "correctPosition": 2 },
+      { "id": 3, "name": "Station outlet rough-in with gas-specific threading", "correctPosition": 3 },
+      { "id": 4, "name": "DISS (Diameter Index Safety System) outlet faceplate", "correctPosition": 4 },
+      { "id": 5, "name": "Gas-specific quick-connect adapter and flowmeter", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Schrader valve fitting" },
+      { "id": 102, "name": "Pressure regulator at outlet" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Zone isolation" },
+      { "id": 2, "label": "Position 2: Distribution piping" },
+      { "id": 3, "label": "Position 3: Wall rough-in" },
+      { "id": 4, "label": "Position 4: Terminal connection" },
+      { "id": 5, "label": "Position 5: Patient interface" }
+    ],
+    "explanation": "Medical gas outlet assemblies follow a strict hierarchy per NFPA 99 Section 5.1.4. The zone valve provides emergency shutoff outside the served area. Brazed copper branch piping distributes gas from the zone valve to individual outlets. The rough-in provides the mechanical mounting and gas-specific connection. The DISS faceplate ensures only the correct gas equipment can be connected — each gas has a unique diameter index to prevent cross-connections. The quick-connect adapter and flowmeter are the patient-facing interface. Schrader valves are a distractor — they are used in tire inflation, not medical gas systems. Individual outlet pressure regulators are unnecessary because system pressure is regulated at the source.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hc-002",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Essential Electrical System Hierarchy",
+    "description": "Assemble the hospital essential electrical system components in the correct hierarchy from the generator to the patient loads, showing the three required branches.",
+    "parts": [
+      { "id": 1, "name": "Emergency diesel generator with automatic start", "correctPosition": 1 },
+      { "id": 2, "name": "Generator paralleling switchgear / main distribution", "correctPosition": 2 },
+      { "id": 3, "name": "Life safety branch ATS (transfers within 10 seconds)", "correctPosition": 3 },
+      { "id": 4, "name": "Critical branch ATS (transfers after life safety)", "correctPosition": 4 },
+      { "id": 5, "name": "Equipment branch ATS (delayed transfer for motor sequencing)", "correctPosition": 5 },
+      { "id": 6, "name": "Branch panelboards serving patient care area loads", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Uninterruptible power supply (UPS) for all branches" },
+      { "id": 102, "name": "Solar inverter tied to essential system" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power generation" },
+      { "id": 2, "label": "Position 2: Central distribution" },
+      { "id": 3, "label": "Position 3: First priority transfer" },
+      { "id": 4, "label": "Position 4: Second priority transfer" },
+      { "id": 5, "label": "Position 5: Third priority transfer" },
+      { "id": 6, "label": "Position 6: Load distribution" }
+    ],
+    "explanation": "The NEC 517 essential electrical system has a defined hierarchy. The generator feeds a main distribution point. From there, three separate automatic transfer switches serve the three branches in priority order: life safety first (within 10 seconds per NEC 517.31), critical second (patient care loads), and equipment third (with delayed transfer to prevent simultaneous motor starting that could overload the generator per NEC 517.35). Each branch has dedicated panelboards at the patient care level. A UPS is a distractor because while some facilities use UPS systems for specific loads, NEC 517 does not require UPS as part of the essential electrical system structure. Solar inverters cannot serve as the essential system power source.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hc-003",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "OR HVAC System Components",
+    "description": "Assemble the operating room HVAC system from the air handling unit through the air delivery and return path in the correct sequence.",
+    "parts": [
+      { "id": 1, "name": "Dedicated AHU with cooling coil, heating coil, and humidifier", "correctPosition": 1 },
+      { "id": 2, "name": "MERV 14 pre-filter bank in AHU", "correctPosition": 2 },
+      { "id": 3, "name": "Supply ductwork with fire/smoke dampers at barriers", "correctPosition": 3 },
+      { "id": 4, "name": "HEPA terminal filter (99.97% at 0.3 micron)", "correctPosition": 4 },
+      { "id": 5, "name": "Laminar flow ceiling diffuser array over surgical table", "correctPosition": 5 },
+      { "id": 6, "name": "Low-wall return air grilles to return ductwork", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Recirculating fan-filter unit" },
+      { "id": 102, "name": "Energy recovery ventilator (ERV)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Air conditioning" },
+      { "id": 2, "label": "Position 2: Primary filtration" },
+      { "id": 3, "label": "Position 3: Air distribution" },
+      { "id": 4, "label": "Position 4: Final filtration" },
+      { "id": 5, "label": "Position 5: Room air delivery" },
+      { "id": 6, "label": "Position 6: Air return" }
+    ],
+    "explanation": "OR HVAC follows a two-stage filtration approach per ASHRAE 170 and FGI Guidelines. The AHU conditions the air (temperature, humidity) and passes it through MERV 14 pre-filters to capture large particles and protect the HEPA filters downstream. Supply ductwork distributes air with fire/smoke dampers at smoke barriers per NFPA 101. HEPA terminal filters at the ceiling provide final 99.97% filtration just before air enters the OR — this location minimizes the chance of contamination from ductwork. Laminar flow diffusers create a unidirectional air curtain over the surgical table, pushing contaminants down and away from the sterile field. Low-wall returns create a top-down airflow pattern. Energy recovery ventilators are a distractor — they are prohibited where they could cross-contaminate supply and exhaust air in healthcare critical areas.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hc-004",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Isolation Room Pressure Control",
+    "description": "Assemble the airborne infection isolation (AII) room pressure control system in the correct sequence from air supply through containment verification.",
+    "parts": [
+      { "id": 1, "name": "Supply air diffuser with volume damper (set below exhaust rate)", "correctPosition": 1 },
+      { "id": 2, "name": "HEPA-filtered exhaust grille in patient room", "correctPosition": 2 },
+      { "id": 3, "name": "Dedicated exhaust fan (sized 10-15% above supply volume)", "correctPosition": 3 },
+      { "id": 4, "name": "Self-closing doors with gasket seals and anteroom airlock", "correctPosition": 4 },
+      { "id": 5, "name": "Pressure differential monitor with visual display at entry", "correctPosition": 5 },
+      { "id": 6, "name": "Audible/visual alarm for pressure loss notification", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Positive pressure fan at corridor" },
+      { "id": 102, "name": "UV-C recirculation air cleaner" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Controlled air input" },
+      { "id": 2, "label": "Position 2: Contaminated air capture" },
+      { "id": 3, "label": "Position 3: Exhaust removal" },
+      { "id": 4, "label": "Position 4: Physical containment" },
+      { "id": 5, "label": "Position 5: Pressure verification" },
+      { "id": 6, "label": "Position 6: Failure notification" }
+    ],
+    "explanation": "AII room pressure control is a layered system per ASHRAE 170 and CDC/HICPAC guidelines. The supply volume damper is set to deliver less air than the exhaust removes, creating the negative pressure differential. The exhaust grille captures contaminated air, which passes through HEPA filtration before the dedicated exhaust fan discharges it outdoors. Self-closing gasketed doors and the anteroom airlock prevent air exchange during entry/exit. The pressure monitor provides continuous visual confirmation of negative pressure status. The alarm system notifies staff if pressure is lost due to fan failure, door being held open, or AHU malfunction. A positive pressure fan at the corridor is a distractor — it would oppose the required negative pressure relationship.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hc-005",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Sterile Processing Workflow Stations",
+    "description": "Assemble the sterile processing department stations in the correct sequence following the one-directional dirty-to-clean workflow.",
+    "parts": [
+      { "id": 1, "name": "Soiled receiving and sorting area (negative pressure)", "correctPosition": 1 },
+      { "id": 2, "name": "Decontamination sinks and automated washer-disinfectors", "correctPosition": 2 },
+      { "id": 3, "name": "Pass-through window/wall to clean side", "correctPosition": 3 },
+      { "id": 4, "name": "Clean assembly and packaging workstations (neutral/positive pressure)", "correctPosition": 4 },
+      { "id": 5, "name": "Steam sterilizers (autoclaves) with pass-through to sterile side", "correctPosition": 5 },
+      { "id": 6, "name": "Sterile storage room (positive pressure)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Ethylene oxide (EtO) sterilizer in patient area" },
+      { "id": 102, "name": "Instrument sharpening station" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Contaminated intake" },
+      { "id": 2, "label": "Position 2: Decontamination" },
+      { "id": 3, "label": "Position 3: Clean transfer point" },
+      { "id": 4, "label": "Position 4: Preparation" },
+      { "id": 5, "label": "Position 5: Sterilization" },
+      { "id": 6, "label": "Position 6: Sterile storage" }
+    ],
+    "explanation": "The sterile processing workflow is a strict one-directional path per FGI Guidelines Section 2.1-5.8 and AAMI ST79. Contaminated instruments enter the soiled area (maintained at negative pressure per ASHRAE 170 to contain bioburden aerosols), undergo decontamination through manual cleaning and automated washer-disinfectors, then pass through a physical barrier to the clean side. Clean instruments are inspected, assembled into sets, and wrapped for sterilization. Steam sterilizers with pass-through capability allow sterile output to exit directly into the positive-pressure sterile storage area. EtO sterilizers are a distractor — they require dedicated ventilated rooms due to toxic gas and are never located in patient areas.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hc-006",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Medical Air Quality Chain",
+    "description": "Assemble the medical air supply system components in the correct order from ambient air intake to the patient outlet, showing each quality assurance stage.",
+    "parts": [
+      { "id": 1, "name": "Outdoor air intake (located away from exhaust and contamination sources)", "correctPosition": 1 },
+      { "id": 2, "name": "Oil-free scroll compressor with inlet filtration", "correctPosition": 2 },
+      { "id": 3, "name": "Air receiver tank with automatic condensate drain", "correctPosition": 3 },
+      { "id": 4, "name": "Desiccant dryer (achieving -40°F dew point)", "correctPosition": 4 },
+      { "id": 5, "name": "Carbon monoxide and dew point monitors with alarms", "correctPosition": 5 },
+      { "id": 6, "name": "Medical air distribution piping to patient outlets", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Oil-lubricated rotary screw compressor" },
+      { "id": 102, "name": "Refrigerated air dryer (40°F dew point)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Air source" },
+      { "id": 2, "label": "Position 2: Compression" },
+      { "id": 3, "label": "Position 3: Storage and moisture separation" },
+      { "id": 4, "label": "Position 4: Drying" },
+      { "id": 5, "label": "Position 5: Quality monitoring" },
+      { "id": 6, "label": "Position 6: Distribution to patients" }
+    ],
+    "explanation": "The medical air quality chain per NFPA 99 Section 5.1.3.5 ensures breathing-quality air reaches patients. The outdoor intake must be located per NFPA 99 to avoid contamination sources. Oil-free compressors are mandatory — oil-lubricated compressors are a distractor because they introduce hydrocarbons into the air stream. The receiver tank allows moisture to separate and drain. The desiccant dryer achieves the required -40°F dew point — a refrigerated dryer (40°F dew point distractor) does not meet the NFPA 99 requirement. Continuous CO and dew point monitoring provides real-time quality assurance before the air enters the distribution system. Every stage is a quality gate that protects patients from contaminated breathing air.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hc-007",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Patient Headwall Assembly",
+    "description": "Assemble the components of a patient headwall in an ICU room in the correct order from infrastructure to patient-facing services.",
+    "parts": [
+      { "id": 1, "name": "Structural backing and electrical/plumbing rough-in", "correctPosition": 1 },
+      { "id": 2, "name": "Medical gas outlet stations (O2, medical air, vacuum, WAGD)", "correctPosition": 2 },
+      { "id": 3, "name": "Electrical receptacles (normal and essential system, hospital-grade)", "correctPosition": 3 },
+      { "id": 4, "name": "Nurse call pillow speaker station with code blue button", "correctPosition": 4 },
+      { "id": 5, "name": "Data/communication outlets and patient monitoring connections", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Patient entertainment system speaker" },
+      { "id": 102, "name": "Pneumatic tube station at headwall" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Infrastructure" },
+      { "id": 2, "label": "Position 2: Life safety gases" },
+      { "id": 3, "label": "Position 3: Power" },
+      { "id": 4, "label": "Position 4: Communication" },
+      { "id": 5, "label": "Position 5: Data/monitoring" }
+    ],
+    "explanation": "Patient headwall assembly follows a logical construction sequence per FGI Guidelines Section 2.1-8. Structural backing and rough-in must be complete before any finish devices are installed. Medical gas outlets are installed first because their brazed piping connections are the most labor-intensive and require pressure testing per NFPA 99 before walls are closed. Electrical receptacles follow — a mix of normal and essential system (critical branch) per NEC 517.18 with hospital-grade green-dot designation. Nurse call stations are low-voltage and installed after high-voltage electrical is complete. Data outlets for patient monitoring are installed last as they connect to the nurse call and patient monitoring networks. Patient entertainment and pneumatic tubes are distractors — they are not part of the clinical headwall standard.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hc-008",
+    "type": "build-assembly",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Healthcare Fire Alarm Zone Architecture",
+    "description": "Assemble the healthcare facility fire alarm system architecture from detection through notification, showing the unique healthcare considerations for defend-in-place strategy.",
+    "parts": [
+      { "id": 1, "name": "Initiating devices (smoke detectors, duct detectors, manual pull stations)", "correctPosition": 1 },
+      { "id": 2, "name": "Fire alarm control panel (FACP) with zone identification", "correctPosition": 2 },
+      { "id": 3, "name": "Smoke compartment dampers and door release activation", "correctPosition": 3 },
+      { "id": 4, "name": "HVAC smoke control mode (fan shutdown or smoke evacuation)", "correctPosition": 4 },
+      { "id": 5, "name": "Staff notification (coded alert at nurse stations, not general evacuation)", "correctPosition": 5 },
+      { "id": 6, "name": "Central station monitoring and fire department notification", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Public address evacuation announcement to all patients" },
+      { "id": 102, "name": "Automatic sprinkler system shutdown on alarm" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Detection" },
+      { "id": 2, "label": "Position 2: Signal processing" },
+      { "id": 3, "label": "Position 3: Smoke compartment isolation" },
+      { "id": 4, "label": "Position 4: HVAC response" },
+      { "id": 5, "label": "Position 5: Staff alert (defend in place)" },
+      { "id": 6, "label": "Position 6: External notification" }
+    ],
+    "explanation": "Healthcare fire alarm architecture per NFPA 72 and NFPA 101 is unique because hospitals use a 'defend in place' strategy — patients cannot be quickly evacuated, so the system focuses on compartmentalization and staff-directed response. Initiating devices detect the fire condition. The FACP identifies the zone and activates smoke compartment isolation (dampers close, magnetic hold-open doors release) to confine smoke to the smallest area. HVAC transitions to smoke control mode. Staff are notified via coded signals at nurse stations — NOT a general evacuation announcement, which is a distractor because it would cause panic among patients who cannot self-evacuate. A public address evacuation is the opposite of the defend-in-place strategy. Automatic sprinkler shutdown is also a distractor — sprinklers must remain armed and active during any alarm condition.",
+    "xpReward": 100
+  }
+]

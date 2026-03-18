@@ -1,0 +1,336 @@
+[
+  {
+    "id": "ba-hvac-001",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Condensate Drain Assembly",
+    "description": "Assemble the condensate drain components in the correct order from the evaporator coil drain pan to the floor drain.",
+    "parts": [
+      { "id": 1, "name": "Drain pan connection fitting", "correctPosition": 1 },
+      { "id": 2, "name": "P-trap", "correctPosition": 2 },
+      { "id": 3, "name": "Horizontal drain pipe (1/4\"/ft slope)", "correctPosition": 3 },
+      { "id": 4, "name": "Indirect waste air gap", "correctPosition": 4 },
+      { "id": 5, "name": "Floor drain receptor", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Check valve" },
+      { "id": 102, "name": "Pressure reducing valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At coil drain pan" },
+      { "id": 2, "label": "Position 2: Below connection" },
+      { "id": 3, "label": "Position 3: Horizontal run" },
+      { "id": 4, "label": "Position 4: At termination" },
+      { "id": 5, "label": "Position 5: Final receptor" }
+    ],
+    "explanation": "The P-trap must be immediately after the drain pan connection to create a water seal preventing conditioned air from being pulled through the drain. The air gap at termination prevents sewer gas entry per IMC 307.2.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-hvac-002",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Gas Pipe to Furnace Connection",
+    "description": "Assemble the gas piping components from the branch line to the furnace gas valve in the correct order.",
+    "parts": [
+      { "id": 1, "name": "Branch line tee connection", "correctPosition": 1 },
+      { "id": 2, "name": "Manual shutoff valve", "correctPosition": 2 },
+      { "id": 3, "name": "Sediment trap (drip leg)", "correctPosition": 3 },
+      { "id": 4, "name": "Union fitting", "correctPosition": 4 },
+      { "id": 5, "name": "Furnace gas valve inlet", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Backflow preventer" },
+      { "id": 102, "name": "Pressure relief valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At branch line" },
+      { "id": 2, "label": "Position 2: After branch" },
+      { "id": 3, "label": "Position 3: Before equipment" },
+      { "id": 4, "label": "Position 4: Service connection" },
+      { "id": 5, "label": "Position 5: At gas valve" }
+    ],
+    "explanation": "Gas pipe connections require a manual shutoff, sediment trap (drip leg) to catch debris before the gas valve, and a union for service access. Order is critical for code compliance per IFGC 408.4.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-hvac-003",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Thermostat Wire Run",
+    "description": "Assemble the thermostat wiring path from the HVAC equipment to the wall thermostat.",
+    "parts": [
+      { "id": 1, "name": "Equipment control board terminals", "correctPosition": 1 },
+      { "id": 2, "name": "18-gauge thermostat wire through plenum", "correctPosition": 2 },
+      { "id": 3, "name": "Fire-rated wall penetration sleeve", "correctPosition": 3 },
+      { "id": 4, "name": "Thermostat mounting plate and wiring", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Line voltage junction box" },
+      { "id": 102, "name": "Current transformer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At equipment" },
+      { "id": 2, "label": "Position 2: Through plenum space" },
+      { "id": 3, "label": "Position 3: Wall penetration" },
+      { "id": 4, "label": "Position 4: At thermostat location" }
+    ],
+    "explanation": "Thermostat wiring uses low-voltage Class 2 wire (typically 18/5 or 18/8). Wire passing through a fire-rated assembly needs a fire-rated penetration seal. Runs must be separated from line voltage per NEC 725.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-hvac-004",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Refrigerant Line Set Assembly",
+    "description": "Assemble the refrigerant line set components from the outdoor condensing unit to the indoor evaporator coil.",
+    "parts": [
+      { "id": 1, "name": "Outdoor unit service valve connection", "correctPosition": 1 },
+      { "id": 2, "name": "Insulated suction line and liquid line", "correctPosition": 2 },
+      { "id": 3, "name": "Wall penetration with sleeve and seal", "correctPosition": 3 },
+      { "id": 4, "name": "Indoor coil flare or brazed connections", "correctPosition": 4 },
+      { "id": 5, "name": "Nitrogen pressure test (350 PSI)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion valve bypass" },
+      { "id": 102, "name": "Compressor hard-start kit" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Outdoor unit" },
+      { "id": 2, "label": "Position 2: Line run" },
+      { "id": 3, "label": "Position 3: Building penetration" },
+      { "id": 4, "label": "Position 4: Indoor connections" },
+      { "id": 5, "label": "Position 5: Testing" }
+    ],
+    "explanation": "Refrigerant line installation follows a specific sequence: connect at outdoor unit, run insulated lines, seal wall penetration, make indoor connections, then pressure test with nitrogen before evacuation per IMC 1104.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-hvac-005",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Exhaust Fan Duct Assembly",
+    "description": "Assemble the bathroom exhaust fan duct run from the fan unit to the exterior termination.",
+    "parts": [
+      { "id": 1, "name": "Exhaust fan housing outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Insulated flex duct with clamps", "correctPosition": 2 },
+      { "id": 3, "name": "Rigid metal duct through attic", "correctPosition": 3 },
+      { "id": 4, "name": "Roof or wall cap with damper", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Return air grille" },
+      { "id": 102, "name": "Fire damper" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At fan" },
+      { "id": 2, "label": "Position 2: Flexible connection" },
+      { "id": 3, "label": "Position 3: Through attic" },
+      { "id": 4, "label": "Position 4: Exterior termination" }
+    ],
+    "explanation": "Exhaust fan ducts must terminate outdoors — never into an attic or soffit. A short flex duct section isolates vibration, rigid duct provides the main run, and the cap with damper prevents backdraft per IRC M1507.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-hvac-006",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "VAV Box Installation Assembly",
+    "description": "Assemble the VAV terminal box and its connections in the correct order from the main duct to the diffuser.",
+    "parts": [
+      { "id": 1, "name": "Flexible duct connector from trunk", "correctPosition": 1 },
+      { "id": 2, "name": "VAV box with damper actuator", "correctPosition": 2 },
+      { "id": 3, "name": "Hot water reheat coil section", "correctPosition": 3 },
+      { "id": 4, "name": "Sound attenuator lining", "correctPosition": 4 },
+      { "id": 5, "name": "Branch duct to ceiling diffuser", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Smoke damper" },
+      { "id": 102, "name": "Economizer actuator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Inlet from main duct" },
+      { "id": 2, "label": "Position 2: Terminal unit" },
+      { "id": 3, "label": "Position 3: Heating section" },
+      { "id": 4, "label": "Position 4: Noise control" },
+      { "id": 5, "label": "Position 5: To diffuser" }
+    ],
+    "explanation": "VAV box assembly flows from the main duct through a flex connector (vibration isolation), the VAV box (flow control), reheat coil (zone heating), sound lining (noise control), then to the diffuser per ASHRAE and SMACNA standards.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-hvac-007",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Hot Water Reheat Coil Piping",
+    "description": "Assemble the hot water piping components at a reheat coil in the correct order from the supply main to the return main.",
+    "parts": [
+      { "id": 1, "name": "Supply isolation valve", "correctPosition": 1 },
+      { "id": 2, "name": "Control valve with actuator", "correctPosition": 2 },
+      { "id": 3, "name": "Reheat coil (supply connection)", "correctPosition": 3 },
+      { "id": 4, "name": "Reheat coil (return connection)", "correctPosition": 4 },
+      { "id": 5, "name": "Return isolation valve with balancing", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion tank" },
+      { "id": 102, "name": "Air separator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From supply main" },
+      { "id": 2, "label": "Position 2: Flow control" },
+      { "id": 3, "label": "Position 3: Coil inlet" },
+      { "id": 4, "label": "Position 4: Coil outlet" },
+      { "id": 5, "label": "Position 5: To return main" }
+    ],
+    "explanation": "Reheat coil piping requires isolation valves for service, a control valve on the supply side for modulating flow, and a balancing valve on the return for commissioning. This arrangement follows ASHRAE Handbook recommendations.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-hvac-008",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Flex Duct to Boot Connection",
+    "description": "Assemble the flexible duct connection from a sheet metal branch takeoff to a ceiling supply boot.",
+    "parts": [
+      { "id": 1, "name": "Sheet metal branch collar", "correctPosition": 1 },
+      { "id": 2, "name": "Flex duct inner liner over collar", "correctPosition": 2 },
+      { "id": 3, "name": "Mechanical clamp on inner liner", "correctPosition": 3 },
+      { "id": 4, "name": "Flex duct outer jacket and insulation", "correctPosition": 4 },
+      { "id": 5, "name": "Outer clamp and mastic seal", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Duct tape wrap" },
+      { "id": 102, "name": "Zip tie fastener" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Starting point" },
+      { "id": 2, "label": "Position 2: Inner connection" },
+      { "id": 3, "label": "Position 3: Inner seal" },
+      { "id": 4, "label": "Position 4: Insulation layer" },
+      { "id": 5, "label": "Position 5: Outer seal" }
+    ],
+    "explanation": "Proper flex duct connections require pulling the inner liner over the collar, clamping it, then sealing the outer jacket separately. Duct tape alone is NOT acceptable — mechanical clamps and mastic are required per SMACNA standards.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-hvac-009",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Chilled Water Coil Piping",
+    "description": "Assemble the chilled water piping at an AHU cooling coil from supply to return, including all required accessories.",
+    "parts": [
+      { "id": 1, "name": "Supply shutoff valve", "correctPosition": 1 },
+      { "id": 2, "name": "Strainer", "correctPosition": 2 },
+      { "id": 3, "name": "Two-way control valve", "correctPosition": 3 },
+      { "id": 4, "name": "Cooling coil connections", "correctPosition": 4 },
+      { "id": 5, "name": "Balancing valve", "correctPosition": 5 },
+      { "id": 6, "name": "Return shutoff valve", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Condensate neutralizer" },
+      { "id": 102, "name": "Mixing valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From chilled water supply" },
+      { "id": 2, "label": "Position 2: Before control valve" },
+      { "id": 3, "label": "Position 3: Flow regulation" },
+      { "id": 4, "label": "Position 4: Through coil" },
+      { "id": 5, "label": "Position 5: Flow measurement" },
+      { "id": 6, "label": "Position 6: To chilled water return" }
+    ],
+    "explanation": "Chilled water coil piping follows a specific sequence: shutoff valve, strainer (protects control valve), control valve (modulates flow), coil, balancing valve (for commissioning), and return shutoff per ASHRAE 90.1.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hvac-010",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "Smoke Damper Assembly in Fire Wall",
+    "description": "Assemble the components for a smoke damper installation where ductwork penetrates a 2-hour fire-rated wall.",
+    "parts": [
+      { "id": 1, "name": "Fire-rated wall sleeve (steel)", "correctPosition": 1 },
+      { "id": 2, "name": "Fire/smoke damper unit in sleeve", "correctPosition": 2 },
+      { "id": 3, "name": "UL-listed fire caulk perimeter seal", "correctPosition": 3 },
+      { "id": 4, "name": "Damper actuator wired to fire alarm", "correctPosition": 4 },
+      { "id": 5, "name": "Access door for inspection and testing", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Backdraft damper" },
+      { "id": 102, "name": "Volume damper" },
+      { "id": 103, "name": "Flexible duct connector" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Wall penetration" },
+      { "id": 2, "label": "Position 2: Within wall assembly" },
+      { "id": 3, "label": "Position 3: Perimeter sealing" },
+      { "id": 4, "label": "Position 4: Controls connection" },
+      { "id": 5, "label": "Position 5: Maintenance access" }
+    ],
+    "explanation": "Fire/smoke damper installations must include a proper wall sleeve, UL-listed perimeter seal, connection to the fire alarm system for automatic closure, and an access door for required periodic testing per NFPA 80 and IBC 717.",
+    "xpReward": 85
+  },
+  {
+    "id": "ba-hvac-011",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Supply Register Installation",
+    "description": "Assemble the components for installing a ceiling supply register from the duct branch to the finished ceiling.",
+    "parts": [
+      { "id": 1, "name": "Sheet metal supply boot", "correctPosition": 1 },
+      { "id": 2, "name": "Duct connection to boot collar", "correctPosition": 2 },
+      { "id": 3, "name": "Boot sealed and secured to framing", "correctPosition": 3 },
+      { "id": 4, "name": "Supply register face with damper", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Return air filter" },
+      { "id": 102, "name": "Duct smoke detector" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Ceiling/floor opening" },
+      { "id": 2, "label": "Position 2: Duct attachment" },
+      { "id": 3, "label": "Position 3: Securing" },
+      { "id": 4, "label": "Position 4: Finish trim" }
+    ],
+    "explanation": "Supply register installation starts with the boot positioned at the opening, connected to ductwork, sealed and secured to prevent rattling, then the register face is installed last. The register damper allows airflow adjustment per SMACNA standards.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-hvac-012",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Kitchen Hood Duct Assembly",
+    "description": "Assemble the kitchen hood exhaust duct system from the hood to the rooftop exhaust fan.",
+    "parts": [
+      { "id": 1, "name": "Hood exhaust collar with grease gutter", "correctPosition": 1 },
+      { "id": 2, "name": "Welded steel grease duct (vertical riser)", "correctPosition": 2 },
+      { "id": 3, "name": "Cleanout access door at direction change", "correctPosition": 3 },
+      { "id": 4, "name": "Grease duct through roof with fire-rated enclosure", "correctPosition": 4 },
+      { "id": 5, "name": "Upblast exhaust fan with grease containment", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Flexible duct connector" },
+      { "id": 102, "name": "Inline centrifugal fan" },
+      { "id": 103, "name": "Galvanized spiral duct" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At hood" },
+      { "id": 2, "label": "Position 2: Vertical run" },
+      { "id": 3, "label": "Position 3: Direction change" },
+      { "id": 4, "label": "Position 4: Roof penetration" },
+      { "id": 5, "label": "Position 5: At rooftop" }
+    ],
+    "explanation": "Kitchen hood grease ducts must be welded steel (no flex duct or galvanized allowed), with cleanout access at every direction change, fire-rated roof penetration, and an upblast fan for proper grease containment per IMC 506 and NFPA 96.",
+    "xpReward": 75
+  }
+]

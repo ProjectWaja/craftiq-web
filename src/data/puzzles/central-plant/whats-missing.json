@@ -1,0 +1,280 @@
+[
+  {
+    "id": "wm-cp-001",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chiller Plant Evaporator Protection",
+    "description": "A chilled water plant has been installed with chillers, primary pumps, and distribution piping. Review the installation for missing safety components.",
+    "presentItems": [
+      "Water-cooled centrifugal chiller",
+      "Primary chilled water pumps",
+      "Chilled water supply and return piping",
+      "Condenser water piping to cooling tower",
+      "Temperature sensors on supply and return",
+      "Isolation valves on chiller connections"
+    ],
+    "missingItems": [
+      {
+        "name": "Flow switch on evaporator barrel",
+        "explanation": "A flow switch is required on the chiller evaporator to verify water flow before allowing compressor operation. Without flow verification, the evaporator can freeze and rupture — a catastrophic and expensive failure. ASHRAE and all chiller manufacturers require evaporator flow proof as a safety interlock."
+      },
+      {
+        "name": "Low-temperature safety cutout on evaporator leaving water",
+        "explanation": "A low-temperature safety (typically set at 36°F for water systems) must be installed on the evaporator leaving water line. This is the last line of defense against freeze-up if the flow switch fails or flow is insufficient. Required by chiller manufacturer and ASHRAE guidelines."
+      }
+    ],
+    "distractors": [
+      "Refrigerant leak detector",
+      "Vibration dampers on chiller",
+      "Oil separator on discharge line",
+      "Sight glass on liquid line"
+    ],
+    "explanation": "Evaporator freeze protection requires redundant safety devices: a flow switch to verify water movement and a low-temperature cutout as backup. Evaporator barrel replacement on a large chiller can cost $50,000-$150,000, making these inexpensive safety devices critical.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-cp-002",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Hot Water Boiler Installation",
+    "description": "A 2,000 MBH gas-fired hot water boiler has been installed for building heating. Review the installation for missing safety devices.",
+    "presentItems": [
+      "Gas-fired hot water boiler",
+      "Burner assembly with flame safeguard",
+      "Gas train with dual shutoff valves",
+      "Pressure/temperature gauge on boiler outlet",
+      "Expansion tank on system",
+      "Flue pipe connected to stack"
+    ],
+    "missingItems": [
+      {
+        "name": "Low-water cutoff (LWCO)",
+        "explanation": "ASME Section IV and NFPA 85 require a low-water cutoff on all boilers. The LWCO shuts down the burner if water level drops below a safe level. Operating a boiler without adequate water causes overheating of the heat exchanger, which can lead to a catastrophic failure or explosion."
+      },
+      {
+        "name": "ASME-rated pressure relief valve",
+        "explanation": "Every boiler must have an ASME-rated pressure relief valve set at or below the maximum allowable working pressure (MAWP). This is the primary protection against overpressure. The valve must discharge to a safe location and cannot have any valves between it and the boiler."
+      }
+    ],
+    "distractors": [
+      "Condensate neutralizer",
+      "Deaerator",
+      "Steam separator",
+      "Feedwater economizer"
+    ],
+    "explanation": "Low-water cutoffs and pressure relief valves are the two most critical boiler safety devices. Both are required by ASME Boiler and Pressure Vessel Code Section IV and enforced by jurisdictional boiler inspectors. Missing either one makes the boiler an uninsurable and illegal pressure vessel.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-cp-003",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Cooling Tower Basin Assembly",
+    "description": "A new induced-draft cooling tower has been installed on the roof. Review the basin assembly for missing components.",
+    "presentItems": [
+      "Cooling tower with fill media",
+      "Induced-draft fan with motor",
+      "Condenser water supply and return connections",
+      "Basin with sump and strainer",
+      "Basin heater for freeze protection",
+      "Access ladder and handrails"
+    ],
+    "missingItems": [
+      {
+        "name": "Makeup water assembly (float valve, backflow preventer, water meter)",
+        "explanation": "Cooling towers continuously lose water through evaporation (approximately 1.8 GPM per 100 tons), drift, and blowdown. Without automatic makeup, the basin will run dry, causing pump cavitation and loss of condenser water flow. A backflow preventer is required by plumbing code to prevent contaminated tower water from entering the potable supply."
+      },
+      {
+        "name": "Overflow drain piped to approved receptor",
+        "explanation": "An overflow drain prevents basin flooding during heavy rain or makeup valve failure. The drain must be piped to an approved storm drain or receptor — never directly to sanitary sewer due to chemical treatment content. The overflow should be sized for the full makeup water flow rate."
+      }
+    ],
+    "distractors": [
+      "Refrigerant receiver",
+      "Desuperheater",
+      "Subcooler coil",
+      "Head pressure control valve"
+    ],
+    "explanation": "A complete cooling tower basin requires automatic makeup water with backflow prevention and an overflow drain. Makeup water is essential for continuous operation, and the overflow prevents damage from water level control failures.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-cp-004",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chilled Water Pump System",
+    "description": "A base-mounted centrifugal pump set has been installed for chilled water distribution. Review the piping arrangement for missing components.",
+    "presentItems": [
+      "Base-mounted centrifugal pump on concrete pad",
+      "Motor coupled to pump",
+      "Suction and discharge piping connected",
+      "Gate valve on discharge",
+      "Pressure gauges on suction and discharge",
+      "Pipe supports and hangers"
+    ],
+    "missingItems": [
+      {
+        "name": "Suction strainer (Y-strainer or basket strainer)",
+        "explanation": "A strainer is required on the pump suction to catch debris (weld slag, pipe scale, dirt) that can damage the pump impeller and mechanical seal. Particularly critical during initial startup of new systems. The strainer should be a Y-type or basket type with a blowdown valve for cleaning."
+      },
+      {
+        "name": "Flexible connectors (pump suction and discharge)",
+        "explanation": "Flexible connectors isolate pump vibration from the piping system. Without them, pump vibration transmits through the piping, causing noise complaints, joint fatigue, and premature failure of fittings. Flexible connectors also compensate for minor misalignment."
+      },
+      {
+        "name": "Check valve on pump discharge",
+        "explanation": "A check valve on the discharge side prevents reverse flow through the pump when it shuts down. Without a check valve, water flows backward through the idle pump, spinning the impeller in reverse. This can damage the pump and causes water hammer when the pump restarts against reverse flow."
+      }
+    ],
+    "distractors": [
+      "Expansion joint",
+      "Air vent on pump casing",
+      "Variable frequency drive",
+      "Balancing valve"
+    ],
+    "explanation": "A complete pump installation requires suction protection (strainer), vibration isolation (flex connectors), and backflow prevention (check valve). These three items prevent the most common causes of pump damage and system problems.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-cp-005",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Expansion Tank Installation",
+    "description": "A bladder-type expansion tank has been installed on the chilled water system. Review the installation for missing companion components.",
+    "presentItems": [
+      "Bladder-type expansion tank properly sized",
+      "Tank pre-charge set to system static pressure",
+      "System fill valve with PRV",
+      "Isolation valve on tank connection",
+      "Pressure gauge at tank connection point"
+    ],
+    "missingItems": [
+      {
+        "name": "Air separator at point of no pressure change",
+        "explanation": "An air separator must be installed at the point of no pressure change (typically at the expansion tank connection point, on the pump suction side). Without an air separator, dissolved air comes out of solution at low-pressure points, causing air binding in coils, corrosion, and noise. The separator removes entrained and dissolved air continuously."
+      },
+      {
+        "name": "Backflow preventer on system fill connection",
+        "explanation": "The system fill valve must include an RPZ (Reduced Pressure Zone) backflow preventer to protect the potable water supply from contamination by system water containing glycol, treatment chemicals, or corrosion products. Required by all plumbing codes (IPC 608) and most jurisdictions require annual testing."
+      }
+    ],
+    "distractors": [
+      "Chemical feed pot",
+      "Condensate return pump",
+      "Steam trap",
+      "Deaerator tank"
+    ],
+    "explanation": "The expansion tank, air separator, and fill valve with backflow preventer work as a system at the point of no pressure change. The air separator removes air that the expansion tank cannot handle, and the backflow preventer protects potable water — a health code requirement.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-cp-006",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Chilled Water Distribution System",
+    "description": "A multi-branch chilled water distribution system serves 8 air handlers across 4 floors. Review the piping for missing flow management components.",
+    "presentItems": [
+      "Chilled water supply and return mains",
+      "Branch piping to each air handler",
+      "2-way control valves at each coil",
+      "Isolation valves on each branch",
+      "Pipe insulation with vapor barrier",
+      "Differential pressure transmitter for VFD control"
+    ],
+    "missingItems": [
+      {
+        "name": "Circuit balancing valves on each branch",
+        "explanation": "ASHRAE 90.1 and good engineering practice require circuit balancing valves (CBVs) on each branch to allow proportional balancing of the hydronic system. Without CBVs, nearby coils get excess flow while remote coils are starved. Automatic flow-limiting valves (pressure-independent) are preferred for variable flow systems."
+      },
+      {
+        "name": "Drain and vent valves at system low and high points",
+        "explanation": "Every hydronic system requires drain valves at low points for system draining and maintenance, and manual or automatic air vents at high points to remove trapped air. Trapped air causes air binding, reduced flow, noise, and accelerated corrosion. High-point vents are especially critical during initial fill."
+      }
+    ],
+    "distractors": [
+      "Steam traps on each branch",
+      "Pressure relief valves at each floor",
+      "Flow switches on each branch",
+      "Glycol injection ports"
+    ],
+    "explanation": "Hydronic distribution systems require balancing capability per ASHRAE 90.1 Section 6.7.2.3 and proper venting/draining provisions. Without balancing valves, commissioning is impossible and comfort complaints are inevitable. Without vents and drains, maintenance becomes extremely difficult.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-cp-007",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Plant Combustion Air",
+    "description": "A 1,500 MBH gas-fired boiler is installed in a dedicated mechanical room. Review the room for missing ventilation components.",
+    "presentItems": [
+      "Gas-fired hot water boiler",
+      "Flue vent pipe through roof with proper termination",
+      "Gas piping with meter and regulator",
+      "Boiler room door with self-closer",
+      "CO detector mounted in boiler room",
+      "Fire suppression sprinkler heads"
+    ],
+    "missingItems": [
+      {
+        "name": "Combustion air intake (outdoor air opening or duct)",
+        "explanation": "IMC Section 701 and IFGC Chapter 3 require combustion air provisions for all fuel-burning equipment. A 1,500 MBH boiler requires approximately 1,500 CFM of combustion and ventilation air. Two permanent openings are required: one within 12 inches of the ceiling and one within 12 inches of the floor, each sized at 1 sq. inch per 4,000 BTU/hr for direct outdoor air."
+      },
+      {
+        "name": "Combustion air damper (motorized, interlocked with burner)",
+        "explanation": "When combustion air is ducted from outdoors, a motorized damper should be interlocked with the burner to open before ignition and close when the boiler is off. This prevents cold air infiltration during off cycles, which wastes energy and can freeze piping in the mechanical room during winter."
+      }
+    ],
+    "distractors": [
+      "Exhaust fan for boiler room",
+      "Refrigerant leak detector",
+      "Smoke detector in flue pipe",
+      "Barometric draft regulator"
+    ],
+    "explanation": "Combustion air is one of the most commonly overlooked requirements in boiler rooms. Without adequate combustion air, the boiler operates with incomplete combustion, producing carbon monoxide and risking a back-draft of flue gases into the occupied space. IMC and IFGC have specific sizing requirements based on BTU input.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-cp-008",
+    "type": "whats-missing",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Condenser Water Treatment System",
+    "description": "A 1,000-ton condenser water loop serves multiple chillers and a cooling tower. Review the water treatment setup for missing components.",
+    "presentItems": [
+      "Cooling tower with basin",
+      "Condenser water piping loop",
+      "Makeup water connection with float valve",
+      "Manual blowdown valve",
+      "Corrosion inhibitor chemical drum"
+    ],
+    "missingItems": [
+      {
+        "name": "Automatic chemical feed system (controller, metering pumps, chemical drums)",
+        "explanation": "A manual chemical addition program is inadequate for a 1,000-ton system. An automatic controller with ORP (Oxidation-Reduction Potential) sensing for biocide and timer-based or proportional feed for scale/corrosion inhibitors ensures consistent treatment. ASHRAE Standard 188 requires documented water management programs for cooling towers."
+      },
+      {
+        "name": "Automatic blowdown controller with conductivity sensor",
+        "explanation": "Manual blowdown cannot maintain consistent cycles of concentration. An automatic conductivity controller continuously monitors TDS and opens the blowdown valve to maintain target conductivity (typically 3-5 cycles of concentration). This prevents both scale formation (too many cycles) and water waste (too few cycles)."
+      },
+      {
+        "name": "Conductivity controller and sensor in condenser water line",
+        "explanation": "A conductivity sensor installed in the condenser water return line provides real-time monitoring of dissolved solids concentration. This data drives automatic blowdown and alerts operators to treatment upsets. Without continuous monitoring, water quality problems go undetected until equipment damage occurs."
+      }
+    ],
+    "distractors": [
+      "UV sterilization unit",
+      "Reverse osmosis system",
+      "Sand filter on makeup",
+      "Ozone generator"
+    ],
+    "explanation": "A complete condenser water treatment system requires automatic chemical feed, automatic blowdown, and conductivity monitoring. ASHRAE Standard 188 and Guideline 12 establish minimum requirements for cooling tower water management to prevent Legionella, scale, and corrosion.",
+    "xpReward": 100
+  }
+]

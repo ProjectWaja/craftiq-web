@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cc-hc-001",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "ASHRAE 170 — OR Air Change Requirements",
+    "scenario": "A hospital operating room is designed with 20 total air changes per hour (ACH), of which 4 ACH are outdoor air. The room has HEPA terminal filtration, laminar flow supply diffusers over the surgical table, and low-wall return grilles. The room maintains positive pressure relative to the corridor at +0.01 inches w.g.",
+    "isUpToCode": true,
+    "codeReference": "ASHRAE 170 Table 7-1",
+    "explanation": "This installation meets ASHRAE 170 Table 7-1 requirements for operating rooms. The standard requires a minimum of 20 total ACH with at least 4 ACH of outdoor air. The positive pressure relationship to corridors prevents unfiltered corridor air from entering the sterile environment. HEPA filtration and laminar flow delivery over the surgical table are best practices aligned with FGI Guidelines Section 2.1-3.2 for reducing surgical site infection risk. All specified parameters are at or above the minimum code requirements.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hc-002",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "NEC 517 — Essential Branch Circuits",
+    "scenario": "A hospital has connected its nurse call system, patient care corridor lighting, and selected receptacles at patient bed locations to the normal (non-essential) power distribution. The reasoning is that the generator is old and the facility wants to minimize the load on the essential electrical system. Exit signs and fire alarm are on the life safety branch.",
+    "isUpToCode": false,
+    "codeReference": "NEC 517.33 / NEC 517.34",
+    "explanation": "This fails code. NEC 517.33 and 517.34 specifically require nurse call systems, task illumination in patient care areas, and selected receptacles at patient bed locations to be connected to the critical branch of the essential electrical system. These loads are not optional — they must be on the critical branch regardless of generator capacity concerns. During a utility outage, patients on monitors and ventilators need powered receptacles, nurses need call system notification, and clinical staff need task lighting. If the generator cannot handle the full essential system load, the generator must be upgraded — not the load assignments reduced.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hc-003",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "NFPA 99 — Medical Gas Storage",
+    "scenario": "A hospital stores its bulk oxygen supply in a dedicated outdoor enclosure located 25 feet from the nearest building air intake, 15 feet from any combustible structure, and 10 feet from the nearest public sidewalk. The enclosure has a non-combustible roof for weather protection and a chain-link security fence. Proper DOT signage is posted on all sides.",
+    "isUpToCode": true,
+    "codeReference": "NFPA 99 Section 5.1.3.3",
+    "explanation": "This installation passes NFPA 99 requirements. Section 5.1.3.3 requires bulk oxygen storage to be located at least 10 feet from combustible structures, at least 10 feet from public sidewalks, and at least 20 feet from building air intakes. The 25-foot distance to air intakes exceeds the 20-foot minimum. The non-combustible roof for weather protection is permitted. The chain-link security fence and DOT signage meet the requirements for protection against unauthorized access and hazard communication. All minimum distances are satisfied.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hc-004",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Isolation Room Pressure Requirements",
+    "scenario": "An airborne infection isolation (AII) room is designed with 10 total air changes per hour, all supplied from the central AHU. The exhaust rate is set equal to the supply rate to maintain neutral pressure in the room. The room has a self-closing door and HEPA filtration on the exhaust duct before it connects to the general building exhaust system.",
+    "isUpToCode": false,
+    "codeReference": "ASHRAE 170 Table 7-1 / FGI Guidelines 2.1-3.2",
+    "explanation": "This fails on multiple counts. First, ASHRAE 170 Table 7-1 requires a minimum of 12 total ACH in AII rooms — the 10 ACH provided is below the minimum. Second, AII rooms must maintain negative pressure (minimum -0.01 inches w.g.) relative to adjacent spaces, which requires the exhaust rate to exceed the supply rate — not equal it. Neutral pressure provides no directional airflow control and allows infectious aerosols to escape when doors open. Third, while HEPA filtration on the exhaust is good practice, it does not compensate for inadequate air changes or incorrect pressure relationships. The room as designed would not contain airborne pathogens.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hc-005",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "OR Temperature and Humidity",
+    "scenario": "A hospital maintains its operating rooms at 72°F with relative humidity controlled at 45%. The HVAC system includes a dedicated AHU with cooling coil, reheat coil, and steam humidifier. Temperature and humidity are displayed on a wall-mounted sensor visible to the surgical team. The system has alarming capability for out-of-range conditions.",
+    "isUpToCode": true,
+    "codeReference": "ASHRAE 170 Table 7-1 / FGI Guidelines",
+    "explanation": "This passes all code requirements. ASHRAE 170 Table 7-1 specifies an OR temperature range of 68-75°F and a relative humidity range of 20-60%. The facility's 72°F and 45% RH are well within both ranges. The visible display allows the surgical team to verify conditions during procedures. The alarm capability ensures staff are notified if conditions drift out of range. The dedicated AHU with cooling, reheat, and humidification provides the three-stage control needed to simultaneously manage temperature and humidity — essential because cooling the air also removes moisture, requiring separate reheat and humidification stages.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hc-006",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Emergency Power Transfer Time",
+    "scenario": "A hospital's emergency generator starts and reaches rated voltage and frequency in 8 seconds after utility power loss. However, the automatic transfer switch for the life safety branch has a programmed intentional delay of 5 seconds before initiating transfer to avoid transferring on momentary utility dips. This means the total time from utility loss to life safety branch energization is 13 seconds.",
+    "isUpToCode": false,
+    "codeReference": "NEC 517.31(B) / NFPA 110 Type 10",
+    "explanation": "This fails code. NEC 517.31(B) requires the life safety branch to be restored within 10 seconds of power interruption. While the 5-second ATS delay is a common technique for avoiding unnecessary transfers during momentary utility fluctuations, the total 13-second restoration time (8-second generator start + 5-second ATS delay) exceeds the absolute 10-second maximum. The ATS time delay must be shortened or eliminated for the life safety branch to meet the code requirement. Critical life safety loads — exit signs, egress lighting, fire alarm — cannot be dark for 13 seconds during a hospital emergency. NFPA 110 classifies hospital generators as Type 10, meaning 10 seconds maximum from any cause of power loss to full restoration.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hc-007",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Gas Piping Material",
+    "scenario": "A hospital renovation project installs new medical gas piping using Type K hard-drawn copper tubing cleaned and capped for medical gas service per CGA G-4.1. All joints are brazed using BCuP-5 (silver-phosphorus) brazing alloy with nitrogen purge during brazing. The piping is labeled every 20 feet with gas name, color code, and direction of flow arrows.",
+    "isUpToCode": true,
+    "codeReference": "NFPA 99 Section 5.1.10",
+    "explanation": "This installation meets NFPA 99 requirements. Section 5.1.10 requires medical gas piping to be Type K or L seamless copper tubing specifically cleaned, capped, and sealed for medical gas service. BCuP-5 (silver-phosphorus) brazing alloy is an approved joining material. Nitrogen purging during brazing is required to prevent copper oxide formation inside the pipe, which could create particulate contamination in the gas stream. Pipe labeling at regular intervals with gas name, color coding, and flow direction arrows meets the identification requirements of NFPA 99 Section 5.1.11. This is a properly specified and executed medical gas installation.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hc-008",
+    "type": "code-check",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Patient Care Area Receptacle Requirements",
+    "scenario": "A new patient bed location in a general care nursing unit has four receptacles installed: two on the headwall (one normal, one on the critical branch of the essential electrical system marked with a distinctive color) and two on the opposite wall (both normal power). None of the receptacles are GFCI-protected. All receptacles are hospital-grade with a green dot marking. The room has a patient bathroom with a GFCI-protected receptacle.",
+    "isUpToCode": true,
+    "codeReference": "NEC 517.18 / NEC 517.19 / NEC 517.21",
+    "explanation": "This passes code requirements. NEC 517.18(A) requires a minimum of four receptacles at each patient bed location in general care areas, with at least one connected to the essential electrical system (critical branch) per NEC 517.34. The essential system receptacle must be identified by distinctive color or marking. NEC 517.21 exempts patient bed locations from GFCI requirements — this is intentional because nuisance GFCI trips could de-energize life support equipment. Hospital-grade receptacles (identified by the green dot) are required per NEC 517.18(C). The GFCI-protected bathroom receptacle satisfies NEC 210.8 for wet locations while keeping the patient bed location receptacles free from nuisance trip risk.",
+    "xpReward": 100
+  }
+]

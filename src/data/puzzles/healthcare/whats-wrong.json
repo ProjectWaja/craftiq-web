@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ww-hc-001",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Gas Zone Valve Installation Errors",
+    "components": [
+      { "id": 1, "name": "Zone valve box mounted in corridor outside OR suite", "correct": true },
+      { "id": 2, "name": "Zone valve installed inside the room it controls", "correct": false, "violation": "NFPA 99 Section 5.1.4.1 requires medical gas zone valves to be installed outside the area they serve — typically in a corridor or alcove — so the gas supply can be shut off without entering a room involved in a fire or emergency. A valve inside the served room cannot be safely accessed during an emergency.", "codeReference": "NFPA 99 Section 5.1.4.1" },
+      { "id": 3, "name": "Zone valve label reads 'Medical Air' but controls oxygen piping", "correct": false, "violation": "NFPA 99 Section 5.1.11 requires all medical gas zone valves to be permanently labeled with the name or chemical symbol of the specific gas they control and the rooms/areas they serve. Mislabeled valves can lead to shutting off the wrong gas during an emergency, potentially cutting oxygen to patients on life support.", "codeReference": "NFPA 99 Section 5.1.11" },
+      { "id": 4, "name": "No warning sign indicating shutting off valve affects patient care areas", "correct": false, "violation": "NFPA 99 Section 5.1.4.1 requires a warning sign at each zone valve indicating that the valve supplies gases to patient care areas and should only be closed in an emergency. Without proper signage, maintenance personnel may inadvertently close a valve during routine work, interrupting gas supply to patients.", "codeReference": "NFPA 99 Section 5.1.4.1" },
+      { "id": 5, "name": "Valve box accessible at a height of 5 feet above finished floor", "correct": true },
+      { "id": 6, "name": "Zone valve has manual quarter-turn handle with visual position indicator", "correct": true }
+    ],
+    "explanation": "Medical gas zone valves are critical life-safety components in healthcare facilities. NFPA 99 mandates their placement outside the served area, correct labeling for each gas, and prominent warning signage. Errors in any of these can lead to patient harm — either by preventing emergency shutoff access or by causing accidental shutoff of the wrong gas supply during a critical moment.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hc-002",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "OR Ventilation Violations",
+    "components": [
+      { "id": 1, "name": "HEPA filtration at terminal air supply diffusers", "correct": true },
+      { "id": 2, "name": "Operating room at 12 air changes per hour (ACH)", "correct": false, "violation": "ASHRAE Standard 170 Table 7-1 requires a minimum of 20 total air changes per hour in operating rooms, with at least 4 ACH of outdoor air. At only 12 ACH, airborne contaminants and surgical smoke are not adequately diluted, significantly increasing surgical site infection risk.", "codeReference": "ASHRAE 170 Table 7-1" },
+      { "id": 3, "name": "OR door propped open during surgical procedure", "correct": false, "violation": "FGI Guidelines Section 2.2-3.1 and ASHRAE 170 require operating rooms to maintain positive pressure relative to adjacent corridors. Propping the door open defeats the positive pressure relationship, allowing corridor contaminants to enter the sterile field. Studies show each OR door opening increases airborne colony-forming units by 15-30%.", "codeReference": "FGI Guidelines 2.2-3.1 / ASHRAE 170" },
+      { "id": 4, "name": "Return air grilles located at floor level on opposite wall from supply", "correct": true },
+      { "id": 5, "name": "No temperature monitoring or humidity display in OR", "correct": false, "violation": "ASHRAE 170 Table 7-1 specifies OR temperature range of 68-75°F and relative humidity of 20-60%. Without visible monitoring, staff cannot verify conditions are within range. Low humidity increases static discharge risk near flammable anesthetics, and high humidity promotes microbial growth. The OR team must be able to verify conditions in real time.", "codeReference": "ASHRAE 170 Table 7-1 / FGI Guidelines" },
+      { "id": 6, "name": "Laminar airflow diffuser positioned directly over surgical table", "correct": true }
+    ],
+    "explanation": "Operating room ventilation is one of the most critical HVAC applications in healthcare. ASHRAE 170 mandates 20 ACH to dilute surgical smoke and airborne pathogens, positive pressure to prevent corridor air infiltration, and strict temperature/humidity control. Every violation directly increases surgical site infection risk, which affects approximately 2-5% of surgical patients annually.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hc-003",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "NEC 517 Essential Electrical System Wiring",
+    "components": [
+      { "id": 1, "name": "Life safety branch circuits in dedicated raceway", "correct": true },
+      { "id": 2, "name": "Critical branch and normal power wiring sharing the same conduit", "correct": false, "violation": "NEC 517.30(C)(3) requires that the life safety branch, critical branch, and equipment branch wiring be kept entirely independent of all other wiring. Mixing essential electrical system branch wiring with normal power circuits in the same raceway means a single conduit failure could disable both the essential and normal systems simultaneously, defeating the purpose of the essential electrical system.", "codeReference": "NEC 517.30(C)(3)" },
+      { "id": 3, "name": "Emergency transfer switch located in a non-secured mechanical room", "correct": false, "violation": "NEC 517.30(B)(1) requires transfer switches for the essential electrical system to be located in spaces that minimize the possibility of interruption from fire, flooding, or vandalism. An unsecured mechanical room exposes the transfer switch to damage or tampering, which could disable the entire essential electrical system during an emergency.", "codeReference": "NEC 517.30(B)(1)" },
+      { "id": 4, "name": "Life safety branch powering exit signs and egress lighting only", "correct": true },
+      { "id": 5, "name": "No selective coordination study performed on essential system overcurrent devices", "correct": false, "violation": "NEC 517.17 requires selective coordination of overcurrent protective devices serving the essential electrical system. Without a coordination study, a fault on a single branch circuit could trip the upstream feeder breaker, causing a blackout across the entire essential electrical system — including life safety loads like exit lighting and fire alarm systems.", "codeReference": "NEC 517.17" },
+      { "id": 6, "name": "Generator rated for full essential electrical system load", "correct": true }
+    ],
+    "explanation": "The essential electrical system in healthcare facilities is a life-safety system governed by NEC Article 517. Separation of branch wiring, secure transfer switch locations, and selective overcurrent coordination are all mandatory to ensure that no single failure can disable critical power to patient care areas. These systems must keep operating rooms, ICUs, and life safety systems powered during utility outages.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hc-004",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Isolated Power System Faults",
+    "components": [
+      { "id": 1, "name": "Isolation transformer installed in OR electrical panel", "correct": true },
+      { "id": 2, "name": "Line isolation monitor (LIM) alarm threshold set at 10 mA", "correct": false, "violation": "NFPA 99 Section 6.3.2.6.3 and NEC 517.160(A)(5) require the line isolation monitor to activate both a visual and audible alarm when the total hazard current reaches 5 mA — not 10 mA. At 10 mA, the leakage current is already at a dangerous level that could cause ventricular fibrillation in a patient with direct cardiac connections (catheters, pacemaker leads).", "codeReference": "NFPA 99 Section 6.3.2.6.3 / NEC 517.160(A)(5)" },
+      { "id": 3, "name": "LIM visual indicator not visible from the surgical team's position", "correct": false, "violation": "NEC 517.160(A)(5) requires the line isolation monitor indicator to be visible to personnel in the anesthetizing location. If the surgical team cannot see the LIM display, they will not know when hazard current has reached dangerous levels, and they cannot take corrective action by removing suspect equipment before a second fault causes a ground fault current through a patient.", "codeReference": "NEC 517.160(A)(5)" },
+      { "id": 4, "name": "Isolated power receptacles marked with orange triangle", "correct": true },
+      { "id": 5, "name": "Isolated power system not tested after installation before patient use", "correct": false, "violation": "NFPA 99 Section 6.3.4 requires isolated power systems to be tested upon initial installation and at defined intervals thereafter. Testing must verify that the LIM activates at the proper threshold, all receptacles are properly connected to the isolated circuit, and grounding integrity is maintained. Using the system without testing exposes patients to unknown shock hazards.", "codeReference": "NFPA 99 Section 6.3.4" },
+      { "id": 6, "name": "Equipment grounding conductor bonded to reference grounding bar", "correct": true }
+    ],
+    "explanation": "Isolated power systems in wet procedure locations and operating rooms are designed to prevent ground-fault-induced power interruptions and protect patients from microshock. The line isolation monitor is the sentinel device — it must alarm at 5 mA, be visible to the surgical team, and be properly tested. In healthcare, patients with indwelling catheters can be killed by as little as 20 microamperes of current applied directly to the heart.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hc-005",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Medical Air Compressor Room Issues",
+    "components": [
+      { "id": 1, "name": "Duplex compressor system with lead/lag controls", "correct": true },
+      { "id": 2, "name": "Compressor intake located adjacent to loading dock exhaust vent", "correct": false, "violation": "NFPA 99 Section 5.1.3.5.3 requires medical air compressor intakes to be located outdoors and away from any source of contamination, including engine exhaust, vacuum system discharge, and loading docks. A compressor intake near a loading dock can draw in vehicle exhaust (carbon monoxide, diesel particulates), contaminating the medical air supply delivered to patient breathing circuits.", "codeReference": "NFPA 99 Section 5.1.3.5.3" },
+      { "id": 3, "name": "No carbon monoxide (CO) monitor on medical air system", "correct": false, "violation": "NFPA 99 Section 5.1.3.5.13 requires continuous monitoring of the medical air supply for carbon monoxide. Medical air is delivered directly to patient breathing circuits via ventilators and masks. Without CO monitoring, contaminated air could be supplied to patients without detection, causing carbon monoxide poisoning — particularly dangerous for intubated patients who cannot smell or detect contamination.", "codeReference": "NFPA 99 Section 5.1.3.5.13" },
+      { "id": 4, "name": "Receiver tank with automatic condensate drain", "correct": true },
+      { "id": 5, "name": "Medical air dew point maintained at -40°F or below", "correct": true },
+      { "id": 6, "name": "No desiccant dryer installed on medical air system", "correct": false, "violation": "NFPA 99 Section 5.1.3.5.8 requires medical air to meet a dew point of -40°F or below to prevent moisture from condensing in the piping system. Without a desiccant dryer (or equivalent), moisture in the compressed air can promote bacterial growth in the distribution piping, corrode copper medical gas tubing, and deliver water droplets to patient breathing circuits.", "codeReference": "NFPA 99 Section 5.1.3.5.8" }
+    ],
+    "explanation": "Medical air compressor systems supply breathing-quality air directly to patients. NFPA 99 imposes strict requirements on intake location, air quality monitoring, and moisture removal to ensure the delivered air is free from contaminants. Unlike industrial compressed air, medical air failures can directly harm or kill patients, making these systems among the most regulated mechanical installations in healthcare facilities.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hc-006",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Patient Care Area Grounding Violations",
+    "components": [
+      { "id": 1, "name": "Redundant equipment grounding conductor in branch circuit", "correct": true },
+      { "id": 2, "name": "Patient bed frame not bonded to the patient equipment grounding point", "correct": false, "violation": "NEC 517.13(B) requires an equipment grounding conductor to connect the grounding terminal of all receptacles and fixed electrical equipment in patient care areas to the patient equipment grounding point. An unbonded bed frame can develop a voltage potential difference relative to other grounded equipment — if a patient simultaneously touches the bed and a grounded IV pole, even a small voltage difference can cause microshock.", "codeReference": "NEC 517.13(B)" },
+      { "id": 3, "name": "Receptacle grounding impedance measured at 0.5 ohms", "correct": false, "violation": "NEC 517.13 and NFPA 99 Section 6.3.3.2 require the impedance of the grounding path in patient care areas to not exceed 0.1 ohms. At 0.5 ohms, the grounding path has five times the allowable resistance, which means fault currents will clear more slowly and voltage on equipment enclosures could reach levels dangerous to patients.", "codeReference": "NEC 517.13 / NFPA 99 Section 6.3.3.2" },
+      { "id": 4, "name": "Hospital-grade receptacles installed and identified with green dot", "correct": true },
+      { "id": 5, "name": "Ground fault circuit interrupter (GFCI) installed in general patient care area", "correct": false, "violation": "NEC 517.21 specifically exempts patient bed locations from GFCI requirements because nuisance tripping of a GFCI could de-energize life support equipment. In patient care areas, the redundant grounding system and low-impedance grounding path provide the required protection. GFCIs are permitted in patient bathrooms per NEC 210.8, but not at patient bed locations.", "codeReference": "NEC 517.21" },
+      { "id": 6, "name": "Patient equipment grounding bus in panelboard serving patient care area", "correct": true }
+    ],
+    "explanation": "Grounding in patient care areas is fundamentally different from commercial or residential installations. NEC Article 517 requires redundant grounding paths with very low impedance (0.1 ohms maximum) to protect patients who may be connected to electrical equipment through catheters, leads, or monitors. The prohibition on GFCIs at bed locations reflects the life-safety priority of maintaining continuous power to critical medical equipment over nuisance-trip protection.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hc-007",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 2,
+    "title": "Pharmaceutical Storage HVAC Failures",
+    "components": [
+      { "id": 1, "name": "Dedicated HVAC system for pharmacy storage area", "correct": true },
+      { "id": 2, "name": "Pharmacy storage temperature at 78°F with no alarm system", "correct": false, "violation": "USP 797/800 and FGI Guidelines require pharmaceutical storage areas to maintain temperatures between 68-77°F (20-25°C) for controlled room temperature drugs. At 78°F the room exceeds the limit, and without a temperature monitoring/alarm system, excursions can go undetected for hours or days, potentially rendering expensive medications ineffective or dangerous.", "codeReference": "USP 797/800 / FGI Guidelines 2.5-2.3" },
+      { "id": 3, "name": "Hazardous drug compounding area at same pressure as corridor", "correct": false, "violation": "USP 800 and ASHRAE 170 require hazardous drug (HD) compounding areas to be maintained at negative pressure relative to surrounding spaces with a minimum of 12 ACH and all air exhausted externally (no recirculation). Equal pressure means hazardous drug aerosols and vapors can escape into adjacent corridors, exposing staff and patients to carcinogenic and teratogenic compounds.", "codeReference": "USP 800 / ASHRAE 170 Table 7-1" },
+      { "id": 4, "name": "HEPA-filtered laminar airflow workbench in sterile compounding area", "correct": true },
+      { "id": 5, "name": "Return air from pharmacy recirculated to general building system", "correct": false, "violation": "ASHRAE 170 Table 7-1 requires that air from pharmacy compounding areas — especially those handling hazardous drugs — be exhausted directly outdoors and never recirculated. Recirculating pharmacy air into the general building HVAC system distributes drug aerosols, chemical vapors, and potential allergens throughout the facility.", "codeReference": "ASHRAE 170 Table 7-1" },
+      { "id": 6, "name": "Humidity maintained at 40-60% RH in sterile compounding area", "correct": true }
+    ],
+    "explanation": "Pharmacy and pharmaceutical storage areas in healthcare facilities have strict HVAC requirements driven by USP standards, ASHRAE 170, and FGI Guidelines. Temperature excursions degrade medications, inadequate negative pressure exposes workers to hazardous drugs, and recirculated air spreads contaminants. These failures can result in both patient harm from degraded medications and occupational exposure to chemotherapy agents.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hc-008",
+    "type": "whats-wrong",
+    "trade": "healthcare",
+    "difficulty": 3,
+    "title": "Emergency Power System Deficiencies",
+    "components": [
+      { "id": 1, "name": "Diesel generator with automatic transfer switch", "correct": true },
+      { "id": 2, "name": "Generator transfer time measured at 15 seconds", "correct": false, "violation": "NEC 517.31(B) and NFPA 99 Section 6.4.1.1.4 require the life safety branch of the essential electrical system to restore power within 10 seconds of utility failure. A 15-second transfer time means exit lighting, fire alarm systems, and critical corridor illumination remain dark for 5 seconds beyond the allowable limit — an eternity during a hospital evacuation.", "codeReference": "NEC 517.31(B) / NFPA 99 Section 6.4.1.1.4" },
+      { "id": 3, "name": "No generator weekly exercise test program in place", "correct": false, "violation": "NFPA 110 Section 8.4.2 requires standby generators in Level 1 facilities (hospitals) to be exercised under load for a minimum of 30 minutes weekly. Without regular testing, fuel system issues, battery failures, and engine problems go undetected until an actual emergency, when the generator may fail to start — leaving the entire essential electrical system without power.", "codeReference": "NFPA 110 Section 8.4.2" },
+      { "id": 4, "name": "Generator fuel storage capacity for 24 hours at full load", "correct": true },
+      { "id": 5, "name": "Essential electrical system loads not inventoried or documented", "correct": false, "violation": "NEC 517.30(A) requires a complete inventory of essential electrical system loads to ensure the generator has adequate capacity and that all critical loads are properly connected to the correct branch. Without load documentation, equipment may be connected to the wrong branch or the generator may be overloaded, causing cascading failures during a utility outage.", "codeReference": "NEC 517.30(A) / NFPA 99 Section 6.4.1" },
+      { "id": 6, "name": "Battery charger maintaining generator starting batteries", "correct": true }
+    ],
+    "explanation": "Emergency power in hospitals is a life-safety system with zero tolerance for failure. The 10-second transfer requirement ensures critical systems remain operational during utility outages. Weekly testing catches problems before they become emergencies. Load documentation ensures the generator is not overloaded and all critical loads are on the correct essential system branch — because when the power goes out in a hospital, lives literally depend on these systems working correctly.",
+    "xpReward": 100
+  }
+]

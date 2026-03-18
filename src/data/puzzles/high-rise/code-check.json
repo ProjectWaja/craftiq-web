@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cc-hr-001",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "IBC 403 — High-Rise Building Definition",
+    "scenario": "A 72-foot-tall commercial office building (measured from the lowest level of fire department vehicle access to the floor of the highest occupied story) has automatic sprinklers throughout, a fire alarm system, and two enclosed stairwells. The building does not have a standpipe system, stairwell pressurization, a fire command center, or emergency voice/alarm communication. The owner states these are not required because the building is under 75 feet.",
+    "isUpToCode": false,
+    "codeReference": "IBC Section 403.1",
+    "explanation": "This fails code. IBC Section 403.1 defines a high-rise building as having an occupied floor located more than 75 feet above the lowest level of fire department vehicle access. At 72 feet, this building is NOT classified as a high-rise under IBC. However, some jurisdictions amend the threshold to 55 or 60 feet. The question states 72 feet — technically under the IBC threshold of 75 feet, but local amendments may apply. More critically, NFPA 14 Section 7.3.1 independently requires standpipes in buildings where the floor level of the highest story exceeds 30 feet above the lowest level of fire department vehicle access. So while the building may avoid IBC 403 high-rise requirements, it still requires standpipes per NFPA 14. The owner's blanket statement that none of these systems are required is incorrect.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hr-002",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "NFPA 14 — Standpipe System Classification",
+    "scenario": "A 45-story residential high-rise has Class III standpipe systems in both enclosed stairwells. Each floor has both 2-1/2 inch hose connections for fire department use and 1-1/2 inch connections with attached hose for occupant use. The building is fully sprinklered. The design engineer sized the system for a minimum flow of 500 GPM with 100 psi residual at the topmost outlet, with the fire pump providing 750 GPM at 175 psi.",
+    "isUpToCode": true,
+    "codeReference": "NFPA 14 Section 7.10",
+    "explanation": "This passes code. NFPA 14 Section 7.10 requires Class I standpipe systems (2-1/2 inch connections for fire department use) in high-rise buildings. Class III systems provide both Class I (2-1/2 inch) and Class II (1-1/2 inch with hose) connections, exceeding the minimum requirement. The hydraulic design of 500 GPM at 100 psi residual at the topmost outlet meets NFPA 14 Section 7.10 for a fully sprinklered building. The fire pump at 750 GPM provides adequate capacity. Class III is permitted but not required — the design exceeds minimum requirements by also providing occupant-use hose stations.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hr-003",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "NFPA 20 — Electric Fire Pump Installation",
+    "scenario": "A high-rise building has an electric-drive fire pump installed in a dedicated pump room with 2-hour fire-rated walls. The pump is supplied by a single normal power source from the building's main electrical service. There is no connection to the building's emergency generator, and no second independent power source is provided. The pump controller has a transfer switch for an alternate power source, but nothing is connected to it.",
+    "isUpToCode": false,
+    "codeReference": "NFPA 20 Section 9.3.2 / IBC 403.4.8.1",
+    "explanation": "This fails code. NFPA 20 Section 9.3.2 requires electric-drive fire pumps to have a reliable power source, and IBC Section 403.4.8.1 specifically requires high-rise buildings to provide a secondary power supply for fire pumps. An unused transfer switch with no alternate source connected provides zero redundancy. If the single power supply fails — due to utility outage, fire damage to feeders, or electrical fault — the fire pump is completely disabled. In a high-rise, this means no water pressure for standpipes or sprinklers above the gravity-fed zone. The secondary source must be either an emergency generator or a separate utility service from an independent feeder.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hr-004",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "NFPA 92 — Stairwell Pressurization Rates",
+    "scenario": "A stairwell pressurization system in a 28-story high-rise maintains 0.08 inches w.c. pressure differential across closed stairwell doors on all floors. With the minimum number of doors open per NFPA 92 (3 doors open simultaneously), the system maintains a minimum air velocity of 200 feet per minute through each open doorway. The door-opening force measured at all floors is between 20 and 28 lbf.",
+    "isUpToCode": true,
+    "codeReference": "NFPA 92 Section 4.4.2 / IBC 1010.1.3",
+    "explanation": "This passes code. NFPA 92 Section 4.4.2 requires stairwell pressurization to achieve two performance criteria: (1) a minimum pressure differential of 0.05 inches w.c. across closed doors (this system achieves 0.08), and (2) sufficient airflow through open doors to prevent smoke migration. The 200 fpm velocity through open doorways is commonly accepted as the minimum to prevent smoke infiltration. IBC 1010.1.3 limits door-opening force to 30 lbf — the measured 20-28 lbf is within limits. The system achieves the delicate balance between maintaining enough pressure to exclude smoke while not overpressurizing to the point where doors cannot be opened.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hr-005",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "IBC 403 — High-Rise Sprinkler Requirements",
+    "scenario": "A new 20-story high-rise office building is designed without automatic sprinkler protection. The architect argues that the building has adequate stairwells, standpipes, fire alarm system, smoke control, and a fire command center, so sprinklers are unnecessary. The building has no exemption or alternative compliance path approved.",
+    "isUpToCode": false,
+    "codeReference": "IBC Section 403.3.1",
+    "explanation": "This fails code. IBC Section 403.3.1 requires all high-rise buildings (occupied floor more than 75 feet above fire department access) to be equipped with automatic sprinkler systems throughout. There is no exception or trade-off permitted — sprinklers are mandatory regardless of other fire protection systems installed. Sprinklers are the single most effective fire suppression measure, reducing fire deaths by 80% in buildings where they are installed. In a high-rise, firefighters cannot effectively deploy hose lines above approximately the 7th floor without interior standpipe connections, making automatic suppression essential for containing fires before they grow beyond control.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hr-006",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "IBC 403 — Elevator Lobby Ventilation",
+    "scenario": "A 35-story high-rise building has enclosed elevator lobbies on every floor served by the building HVAC system. Each elevator lobby has a smoke detector connected to the fire alarm system for Phase I elevator recall. The lobbies are not pressurized and do not have dedicated smoke exhaust. The elevator hoistway is vented at the top per code. The building relies on the floor-by-floor smoke control system to manage smoke movement rather than pressurizing individual elevator lobbies.",
+    "isUpToCode": true,
+    "codeReference": "IBC Section 403.4.6 / IBC 3006",
+    "explanation": "This passes code with conditions. IBC Section 3006.2 requires enclosed elevator lobbies or an approved alternative at each floor in high-rise buildings to prevent smoke from entering the hoistway. The lobby does not necessarily require its own pressurization system if the building's smoke control system (per IBC 909) prevents smoke from migrating through the lobby to the hoistway. Smoke detectors for Phase I recall are separately required per NFPA 72. The hoistway venting at the top is required per IBC 3004. The building's approach of using the floor smoke control system in lieu of individual lobby pressurization is permitted if the smoke control engineer of record demonstrates adequate protection.",
+    "xpReward": 100
+  },
+  {
+    "id": "cc-hr-007",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "IBC 403 — Fire Command Center Requirements",
+    "scenario": "A new 25-story high-rise has a fire command center located on the ground floor near the main entrance, with direct access from the exterior. The room contains the fire alarm control panel, voice/alarm communication panel, fire department telephone system, elevator status indicators, smoke control panel, sprinkler valve status, and standpipe system status. The room is enclosed with 1-hour fire-rated construction and has emergency lighting.",
+    "isUpToCode": true,
+    "codeReference": "IBC Section 403.4.6",
+    "explanation": "This passes code. IBC Section 403.4.6 requires a fire command center in all high-rise buildings. It must be located on the first story of the building, with direct access from the exterior. The required features include: fire alarm system interface, voice/alarm communication, fire department telephone, elevator floor indicators and controls, emergency generator status, smoke control system interface, sprinkler valve and waterflow indicators, standpipe status, and stairwell door unlocking controls. The 1-hour fire rating, emergency lighting, and location on the ground floor with exterior access all meet the code requirements. This room serves as the central coordination point for fire department operations in the building.",
+    "xpReward": 75
+  },
+  {
+    "id": "cc-hr-008",
+    "type": "code-check",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "IPC — High-Rise Plumbing Codes",
+    "scenario": "A 50-story residential high-rise has a domestic water system with a booster pump delivering water at 230 psi to the main riser. The building is divided into 4 pressure zones of approximately 12 floors each. The lowest zone (floors 1-12) receives water directly from the city main at 65 psi with no pressure reducing valve. Floors 13-24 have a PRV station reducing pressure from the booster output. Floors 25-36 and 37-50 each have their own PRV stations as well. The maximum pressure at the lowest fixture in each zone is maintained at 75 psi.",
+    "isUpToCode": true,
+    "codeReference": "IPC Section 604.8",
+    "explanation": "This passes code. IPC Section 604.8 requires that water pressure at any fixture not exceed 80 psi. The system design maintains maximum 75 psi at the lowest fixture in each zone, which is within the 80 psi limit. The lowest zone (floors 1-12) at 65 psi from city main pressure does not need a PRV since it already falls below 80 psi at all fixtures. The three upper zones each have PRV stations that reduce the booster pump output pressure to appropriate zone pressures. This is a well-designed high-rise plumbing system that properly addresses the 0.433 psi per foot of elevation head that makes pressure management essential in tall buildings.",
+    "xpReward": 100
+  }
+]

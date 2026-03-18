@@ -1,0 +1,351 @@
+[
+  {
+    "id": "ba-pipe-001",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Steam Trap Station Assembly",
+    "description": "Assemble the steam trap station components in correct order from the steam equipment outlet to the condensate return main.",
+    "parts": [
+      { "id": 1, "name": "Equipment condensate outlet connection", "correctPosition": 1 },
+      { "id": 2, "name": "Dirt leg (strainer/sediment pocket)", "correctPosition": 2 },
+      { "id": 3, "name": "Isolation valve (upstream of trap)", "correctPosition": 3 },
+      { "id": 4, "name": "Steam trap (inverted bucket type)", "correctPosition": 4 },
+      { "id": 5, "name": "Check valve and isolation valve (downstream)", "correctPosition": 5 },
+      { "id": 6, "name": "Connection to condensate return main", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve" },
+      { "id": 102, "name": "Expansion joint" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Equipment outlet" },
+      { "id": 2, "label": "Position 2: Debris collection" },
+      { "id": 3, "label": "Position 3: Upstream isolation" },
+      { "id": 4, "label": "Position 4: Condensate removal" },
+      { "id": 5, "label": "Position 5: Downstream protection" },
+      { "id": 6, "label": "Position 6: Return connection" }
+    ],
+    "explanation": "A steam trap station requires a dirt leg to protect the trap from debris, isolation valves on both sides for maintenance, and a check valve downstream to prevent reverse flow from the condensate return. This arrangement follows ASHRAE and ASME B31.1 best practices.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-pipe-002",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "PRV Station Assembly",
+    "description": "Assemble the pressure reducing valve station components from the high-pressure supply to the low-pressure distribution.",
+    "parts": [
+      { "id": 1, "name": "High-pressure supply isolation valve", "correctPosition": 1 },
+      { "id": 2, "name": "Y-strainer with blowdown valve", "correctPosition": 2 },
+      { "id": 3, "name": "Pressure reducing valve (PRV)", "correctPosition": 3 },
+      { "id": 4, "name": "Downstream pressure gauge", "correctPosition": 4 },
+      { "id": 5, "name": "Safety relief valve (set above reduced pressure)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam trap" },
+      { "id": 102, "name": "Flow meter" },
+      { "id": 103, "name": "Backflow preventer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Inlet isolation" },
+      { "id": 2, "label": "Position 2: Debris protection" },
+      { "id": 3, "label": "Position 3: Pressure regulation" },
+      { "id": 4, "label": "Position 4: Pressure monitoring" },
+      { "id": 5, "label": "Position 5: Overpressure protection" }
+    ],
+    "explanation": "A PRV station must have a strainer upstream to protect the valve internals, a pressure gauge downstream for monitoring, and a safety relief valve to protect against PRV failure. The relief valve is critical — if the PRV fails open, full supply pressure reaches the low-pressure side per ASME B31.1.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-pipe-003",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pump Piping Assembly",
+    "description": "Assemble the piping components at a base-mounted centrifugal pump from the suction side through to the discharge piping.",
+    "parts": [
+      { "id": 1, "name": "Suction isolation valve (gate valve)", "correctPosition": 1 },
+      { "id": 2, "name": "Concentric reducer at pump suction (flat on top)", "correctPosition": 2 },
+      { "id": 3, "name": "Flexible connector at pump suction flange", "correctPosition": 3 },
+      { "id": 4, "name": "Pump (suction to discharge)", "correctPosition": 4 },
+      { "id": 5, "name": "Flexible connector at pump discharge flange", "correctPosition": 5 },
+      { "id": 6, "name": "Check valve and discharge isolation valve", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion tank" },
+      { "id": 102, "name": "Air separator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From main piping" },
+      { "id": 2, "label": "Position 2: Pipe transition" },
+      { "id": 3, "label": "Position 3: Vibration isolation — inlet" },
+      { "id": 4, "label": "Position 4: Pump unit" },
+      { "id": 5, "label": "Position 5: Vibration isolation — outlet" },
+      { "id": 6, "label": "Position 6: Discharge protection and isolation" }
+    ],
+    "explanation": "Pump piping requires a specific arrangement: suction-side gate valve (never throttled), eccentric/concentric reducer (flat side up to prevent air pockets), flexible connectors on both flanges for vibration isolation, and check valve before discharge isolation valve per ASHRAE and ASME B31.9.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-pipe-004",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Boiler Near Piping Assembly",
+    "description": "Assemble the boiler near piping from the hot water boiler outlet through the supply header components.",
+    "parts": [
+      { "id": 1, "name": "Boiler supply outlet with isolation valve", "correctPosition": 1 },
+      { "id": 2, "name": "Air separator (installed at highest temperature point)", "correctPosition": 2 },
+      { "id": 3, "name": "Expansion tank connection tee", "correctPosition": 3 },
+      { "id": 4, "name": "System supply header", "correctPosition": 4 },
+      { "id": 5, "name": "Circulator pump with check valve", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Condensate pump" },
+      { "id": 102, "name": "Steam trap" },
+      { "id": 103, "name": "Vacuum breaker" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Boiler outlet" },
+      { "id": 2, "label": "Position 2: Air removal" },
+      { "id": 3, "label": "Position 3: Expansion accommodation" },
+      { "id": 4, "label": "Position 4: Distribution" },
+      { "id": 5, "label": "Position 5: Flow generation" }
+    ],
+    "explanation": "Boiler near piping places the air separator at the point of lowest gas solubility (hottest point, immediately after the boiler). The expansion tank connects at the pump suction — this is the point of no pressure change, ensuring the tank maintains proper system pressurization per ASME B31.9 and ASHRAE.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-pipe-005",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Chiller Evaporator Piping",
+    "description": "Assemble the chilled water piping at a chiller evaporator from the building return to the building supply.",
+    "parts": [
+      { "id": 1, "name": "Building chilled water return header", "correctPosition": 1 },
+      { "id": 2, "name": "Isolation valve and Y-strainer", "correctPosition": 2 },
+      { "id": 3, "name": "Chiller evaporator (return enters, supply exits)", "correctPosition": 3 },
+      { "id": 4, "name": "Flow switch on evaporator outlet", "correctPosition": 4 },
+      { "id": 5, "name": "Isolation valve and balancing valve", "correctPosition": 5 },
+      { "id": 6, "name": "Building chilled water supply header", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam trap" },
+      { "id": 102, "name": "Pressure reducing valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Building return" },
+      { "id": 2, "label": "Position 2: Evaporator inlet protection" },
+      { "id": 3, "label": "Position 3: Heat exchange" },
+      { "id": 4, "label": "Position 4: Flow verification" },
+      { "id": 5, "label": "Position 5: Outlet control and isolation" },
+      { "id": 6, "label": "Position 6: Building supply" }
+    ],
+    "explanation": "Chiller evaporator piping requires a strainer upstream to protect heat exchanger tubes, a flow switch to prevent operation without water flow (which causes ice formation), and balancing/isolation valves for commissioning and maintenance per manufacturer requirements and ASHRAE guidelines.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-pipe-006",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Expansion Tank Piping",
+    "description": "Assemble the diaphragm expansion tank piping connection from the system piping to the tank.",
+    "parts": [
+      { "id": 1, "name": "Tee connection at pump suction (point of no pressure change)", "correctPosition": 1 },
+      { "id": 2, "name": "Isolation valve for tank service", "correctPosition": 2 },
+      { "id": 3, "name": "Pressure gauge tee", "correctPosition": 3 },
+      { "id": 4, "name": "Diaphragm expansion tank", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Check valve" },
+      { "id": 102, "name": "Strainer" },
+      { "id": 103, "name": "Flow meter" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: System connection point" },
+      { "id": 2, "label": "Position 2: Service isolation" },
+      { "id": 3, "label": "Position 3: Pressure monitoring" },
+      { "id": 4, "label": "Position 4: Tank" }
+    ],
+    "explanation": "The expansion tank must connect at the pump suction — the point of no pressure change. This ensures the pump adds pressure to the system (not subtracts it), keeping the system above atmospheric pressure everywhere and preventing air ingestion per ASHRAE and ASME B31.9.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-pipe-007",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Air Separator Assembly",
+    "description": "Assemble the air separator and related components in a hydronic heating system piping loop.",
+    "parts": [
+      { "id": 1, "name": "Hot water supply from boiler (highest temperature point)", "correctPosition": 1 },
+      { "id": 2, "name": "Tangential air separator body", "correctPosition": 2 },
+      { "id": 3, "name": "Automatic air vent on top of separator", "correctPosition": 3 },
+      { "id": 4, "name": "Expansion tank connection tee (below separator)", "correctPosition": 4 },
+      { "id": 5, "name": "Supply piping to building distribution", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam trap" },
+      { "id": 102, "name": "Check valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Hottest water inlet" },
+      { "id": 2, "label": "Position 2: Air removal device" },
+      { "id": 3, "label": "Position 3: Air discharge" },
+      { "id": 4, "label": "Position 4: Expansion accommodation" },
+      { "id": 5, "label": "Position 5: To distribution" }
+    ],
+    "explanation": "The air separator is installed at the point of lowest air solubility — the hottest point in the system, right after the boiler. The automatic vent releases separated air, and the expansion tank connects nearby at the same low-pressure point per ASHRAE Handbook and ASME B31.9.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-pipe-008",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Backflow Preventer Assembly",
+    "description": "Assemble the reduced pressure zone (RPZ) backflow preventer station on a boiler makeup water line.",
+    "parts": [
+      { "id": 1, "name": "Potable water supply isolation valve", "correctPosition": 1 },
+      { "id": 2, "name": "Y-strainer to protect RPZ internals", "correctPosition": 2 },
+      { "id": 3, "name": "RPZ backflow preventer with test ports", "correctPosition": 3 },
+      { "id": 4, "name": "Downstream isolation valve", "correctPosition": 4 },
+      { "id": 5, "name": "Air gap drain from relief port to floor drain", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve" },
+      { "id": 102, "name": "Water meter" },
+      { "id": 103, "name": "Expansion tank" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From potable supply" },
+      { "id": 2, "label": "Position 2: Debris protection" },
+      { "id": 3, "label": "Position 3: Backflow protection" },
+      { "id": 4, "label": "Position 4: Downstream isolation" },
+      { "id": 5, "label": "Position 5: Relief discharge" }
+    ],
+    "explanation": "RPZ backflow preventers protect potable water from contamination by boiler chemicals. The strainer protects the RPZ check valves, isolation valves allow annual testing, and the relief port must drain to an air gap (not direct connection) per plumbing code and ASSE 1013.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-pipe-009",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Medical Gas Zone Valve Box",
+    "description": "Assemble the components inside a medical gas zone valve box for an oxygen zone in the correct order from the main supply to the zone distribution.",
+    "parts": [
+      { "id": 1, "name": "Zone inlet connection from main riser", "correctPosition": 1 },
+      { "id": 2, "name": "Zone shutoff valve (quarter-turn ball valve)", "correctPosition": 2 },
+      { "id": 3, "name": "Pressure gauge downstream of valve", "correctPosition": 3 },
+      { "id": 4, "name": "Pressure switch/sensor for area alarm", "correctPosition": 4 },
+      { "id": 5, "name": "Zone outlet to branch piping serving outlets", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve" },
+      { "id": 102, "name": "Check valve" },
+      { "id": 103, "name": "Flow meter" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Zone inlet" },
+      { "id": 2, "label": "Position 2: Emergency shutoff" },
+      { "id": 3, "label": "Position 3: Pressure monitoring" },
+      { "id": 4, "label": "Position 4: Alarm sensing" },
+      { "id": 5, "label": "Position 5: Zone distribution" }
+    ],
+    "explanation": "Medical gas zone valve boxes per NFPA 99 must contain a labeled zone shutoff valve, pressure gauge, and pressure switch connected to the area alarm system. The valve allows emergency shutoff of the zone while the alarm system notifies clinical staff of any pressure changes. This is a life-safety installation.",
+    "xpReward": 80
+  },
+  {
+    "id": "ba-pipe-010",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Glycol Fill Station",
+    "description": "Assemble the glycol fill station components for charging a closed-loop hydronic system.",
+    "parts": [
+      { "id": 1, "name": "Glycol mixing/storage tank with agitator", "correctPosition": 1 },
+      { "id": 2, "name": "Fill pump with suction strainer", "correctPosition": 2 },
+      { "id": 3, "name": "Discharge hose with pressure gauge", "correctPosition": 3 },
+      { "id": 4, "name": "System fill valve connection", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion joint" },
+      { "id": 102, "name": "Steam trap" },
+      { "id": 103, "name": "Backflow preventer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Pre-mixed solution source" },
+      { "id": 2, "label": "Position 2: Fluid transfer" },
+      { "id": 3, "label": "Position 3: Delivery line" },
+      { "id": 4, "label": "Position 4: System connection" }
+    ],
+    "explanation": "Glycol must be pre-mixed to the correct concentration before filling — never dump straight glycol into a system. The fill pump provides pressure to push fluid into the pressurized system, and the strainer prevents contaminants from entering. Always verify concentration with a refractometer after filling per ASHRAE guidelines.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-pipe-011",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Strainer and Control Valve Train",
+    "description": "Assemble the control valve train from the supply header to a heating coil, including all required accessories.",
+    "parts": [
+      { "id": 1, "name": "Supply isolation valve (gate or butterfly)", "correctPosition": 1 },
+      { "id": 2, "name": "Y-strainer with blowdown valve", "correctPosition": 2 },
+      { "id": 3, "name": "Two-way control valve with actuator", "correctPosition": 3 },
+      { "id": 4, "name": "Heating coil supply and return connections", "correctPosition": 4 },
+      { "id": 5, "name": "Balancing valve with memory stop", "correctPosition": 5 },
+      { "id": 6, "name": "Return isolation valve", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion tank" },
+      { "id": 102, "name": "Air separator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From supply header" },
+      { "id": 2, "label": "Position 2: Debris protection" },
+      { "id": 3, "label": "Position 3: Flow regulation" },
+      { "id": 4, "label": "Position 4: Heat exchange" },
+      { "id": 5, "label": "Position 5: Flow measurement and balance" },
+      { "id": 6, "label": "Position 6: To return header" }
+    ],
+    "explanation": "The control valve train sequence is critical: strainer before control valve (protects valve seat), control valve on supply side (for accurate control), balancing valve on return (for commissioning). This arrangement follows ASHRAE 90.1 and standard hydronic piping practice per ASME B31.9.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-pipe-012",
+    "type": "build-assembly",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Heat Exchanger Piping Assembly",
+    "description": "Assemble the primary and secondary side piping at a plate-and-frame heat exchanger for a building heating system.",
+    "parts": [
+      { "id": 1, "name": "Primary supply isolation valve and strainer", "correctPosition": 1 },
+      { "id": 2, "name": "Primary side of heat exchanger (hot in, cooled out)", "correctPosition": 2 },
+      { "id": 3, "name": "Primary return isolation valve with P/T ports", "correctPosition": 3 },
+      { "id": 4, "name": "Secondary circulator pump with check valve", "correctPosition": 4 },
+      { "id": 5, "name": "Secondary side of heat exchanger (cold in, heated out)", "correctPosition": 5 },
+      { "id": 6, "name": "Secondary supply to building with isolation and balancing valves", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam trap" },
+      { "id": 102, "name": "Condensate pump" },
+      { "id": 103, "name": "Vacuum breaker" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Primary hot supply" },
+      { "id": 2, "label": "Position 2: Primary heat exchange" },
+      { "id": 3, "label": "Position 3: Primary return" },
+      { "id": 4, "label": "Position 4: Secondary flow generation" },
+      { "id": 5, "label": "Position 5: Secondary heat exchange" },
+      { "id": 6, "label": "Position 6: Secondary building supply" }
+    ],
+    "explanation": "Heat exchanger piping connects primary (district/boiler) and secondary (building) loops. Counter-flow arrangement maximizes heat transfer efficiency. The strainer protects primary exchanger plates, P/T ports allow performance monitoring, and the secondary pump circulates building water independently per ASHRAE and ASME B31.9.",
+    "xpReward": 85
+  }
+]

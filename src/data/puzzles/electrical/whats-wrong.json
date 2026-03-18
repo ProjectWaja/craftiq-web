@@ -1,0 +1,293 @@
+[
+  {
+    "id": "ww-elec-001",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Residential Panel Installation",
+    "components": [
+      { "id": 1, "name": "200A main breaker panel mounted on plywood", "correct": true },
+      { "id": 2, "name": "Panel installed with only 24 inches of clearance in front", "correct": false, "violation": "NEC requires a minimum of 36 inches of clear working space in front of electrical panels for safe access and operation.", "codeReference": "NEC 110.26(A)(1)", "fixDescription": "Relocate obstructions to provide a minimum 36 inches of clear working space in front of the panel." },
+      { "id": 3, "name": "Neutral and ground bars bonded at main panel", "correct": true },
+      { "id": 4, "name": "Service entrance conductors properly terminated", "correct": true },
+      { "id": 5, "name": "Double-tapped breaker with two #12 wires on single-pole breaker", "correct": false, "violation": "Unless the breaker is listed and labeled for two conductors, only one conductor per terminal is allowed. Double-tapping causes loose connections and overheating.", "codeReference": "NEC 110.14(A)", "fixDescription": "Install a tandem breaker or add a new breaker for the second circuit. Only use terminals rated for multiple conductors." },
+      { "id": 6, "name": "Panel cover installed with all knockouts intact", "correct": true }
+    ],
+    "explanation": "Residential panel installations must maintain proper working clearance for electrician safety and prevent double-tapped breakers that cause arcing and fires. These are among the most common inspection failures.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-elec-002",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Kitchen Receptacle Wiring",
+    "components": [
+      { "id": 1, "name": "20-amp GFCI receptacle at countertop", "correct": true },
+      { "id": 2, "name": "Receptacle installed with no GFCI protection within 6 feet of kitchen sink", "correct": false, "violation": "All 125-volt, 15- and 20-ampere receptacles that serve kitchen countertop surfaces must have GFCI protection. Any receptacle within 6 feet of the sink edge requires GFCI.", "codeReference": "NEC 210.8(A)(6)", "fixDescription": "Replace with a GFCI receptacle or protect the circuit with a GFCI breaker." },
+      { "id": 3, "name": "Dedicated 20A circuit for countertop receptacles", "correct": true },
+      { "id": 4, "name": "12 AWG copper conductors", "correct": true },
+      { "id": 5, "name": "Receptacle backstabbed instead of using screw terminals", "correct": false, "violation": "While backstab connections are technically allowed for 14 AWG, they are unreliable on 12 AWG 20A circuits and are a leading cause of loose connections and arcing. Screw terminals or clamp-type connections are required for 12 AWG.", "codeReference": "NEC 110.14(A) / UL Listing", "fixDescription": "Use screw terminal connections or spec-grade receptacles with clamp-type terminals for all 12 AWG connections." },
+      { "id": 6, "name": "Box fill compliant with conductor count", "correct": true }
+    ],
+    "explanation": "Kitchen circuits require GFCI protection and reliable connections. Backstab connections on 20A circuits are a leading cause of residential electrical fires. Always use screw terminals on 12 AWG wire.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-elec-003",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Grounding and Bonding at Water Heater",
+    "components": [
+      { "id": 1, "name": "240V circuit with proper disconnect", "correct": true },
+      { "id": 2, "name": "Equipment grounding conductor connected to water heater frame", "correct": true },
+      { "id": 3, "name": "Metal water pipe used as sole grounding electrode", "correct": false, "violation": "A metal underground water pipe electrode must be supplemented by an additional grounding electrode. It cannot serve as the sole grounding electrode because plastic pipe repairs can interrupt the path.", "codeReference": "NEC 250.53(D)(2)", "fixDescription": "Install a supplemental grounding electrode such as a ground rod or concrete-encased electrode in addition to the water pipe." },
+      { "id": 4, "name": "Bonding jumper installed across dielectric unions", "correct": true },
+      { "id": 5, "name": "Ground wire spliced with electrical tape instead of listed connector", "correct": false, "violation": "Grounding conductor splices must use listed connectors such as split bolts, compression connectors, or exothermic welds. Electrical tape alone is not a listed grounding connection method.", "codeReference": "NEC 250.64(C)", "fixDescription": "Replace the taped splice with a listed grounding connector such as an irreversible compression connector." },
+      { "id": 6, "name": "Proper wire gauge for circuit ampacity", "correct": true }
+    ],
+    "explanation": "Grounding and bonding are the most critical safety systems in electrical work. Improper grounding connections can leave an entire system unprotected during a fault, risking electrocution and fire.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-elec-004",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Bathroom GFCI Circuit",
+    "components": [
+      { "id": 1, "name": "20A dedicated bathroom branch circuit", "correct": true },
+      { "id": 2, "name": "GFCI receptacle installed at vanity", "correct": true },
+      { "id": 3, "name": "Standard 15A receptacle used on 20A bathroom circuit", "correct": false, "violation": "On a 20-ampere branch circuit in a bathroom, at least one receptacle must be rated 20A. A single 15A receptacle on a 20A circuit is a violation. Only when there are multiple receptacles on a 20A circuit are 15A devices permitted.", "codeReference": "NEC 210.21(B)(3)", "fixDescription": "Install a 20A-rated receptacle (T-slot) on the 20A bathroom circuit." },
+      { "id": 4, "name": "12 AWG wiring in NM-B cable", "correct": true },
+      { "id": 5, "name": "No AFCI protection on bathroom circuit", "correct": false, "violation": "As of NEC 2014 and later, AFCI protection is required for all 120V, 15A and 20A branch circuits in dwelling unit bathrooms (added in subsequent code cycles to the list of required areas).", "codeReference": "NEC 210.12(A)", "fixDescription": "Install a combination AFCI/GFCI breaker, or use a dual-function AFCI/GFCI receptacle at the first outlet." },
+      { "id": 6, "name": "Receptacle box secured to wall framing", "correct": true }
+    ],
+    "explanation": "Bathroom circuits require both GFCI and AFCI protection in modern code. The receptacle ampere rating must match or be compatible with the circuit rating. These details are frequently tested on journeyman exams.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-elec-005",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Outdoor Receptacle Installation",
+    "components": [
+      { "id": 1, "name": "Weatherproof in-use cover on outdoor receptacle", "correct": true },
+      { "id": 2, "name": "GFCI-protected 20A outdoor receptacle", "correct": true },
+      { "id": 3, "name": "UF cable buried only 6 inches deep without conduit", "correct": false, "violation": "Direct-buried UF cable for a 120V, 20A GFCI-protected circuit requires a minimum burial depth of 12 inches. Without GFCI protection, the minimum is 24 inches. 6 inches is insufficient.", "codeReference": "NEC Table 300.5", "fixDescription": "Re-trench and bury the UF cable at a minimum depth of 12 inches for a GFCI-protected circuit." },
+      { "id": 4, "name": "Receptacle mounted at proper height", "correct": true },
+      { "id": 5, "name": "No equipment grounding conductor in underground run", "correct": false, "violation": "Even though UF cable includes a grounding conductor, if individual conductors are used in conduit underground, an equipment grounding conductor must be included. All outdoor receptacles require an effective ground-fault current path.", "codeReference": "NEC 250.114", "fixDescription": "Ensure the equipment grounding conductor is continuous from the panel to the receptacle." },
+      { "id": 6, "name": "Box listed for wet locations", "correct": true }
+    ],
+    "explanation": "Outdoor wiring requires proper burial depth, GFCI protection, and weatherproof enclosures. Insufficient burial depth is dangerous because landscape work or frost can damage the cable and create a shock hazard.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-elec-006",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Conduit Fill Violation",
+    "components": [
+      { "id": 1, "name": "3/4\" EMT conduit run between junction boxes", "correct": true },
+      { "id": 2, "name": "Six #12 THHN conductors plus one #12 ground in 1/2\" EMT", "correct": false, "violation": "A 1/2\" EMT has only 0.122 sq in of usable area at 40% fill. Seven #12 THHN conductors require 0.0584 sq in each = 0.409 sq in total, which exceeds the 40% conduit fill limit for three or more conductors.", "codeReference": "NEC 344.22 / Chapter 9, Table 1", "fixDescription": "Upsize to 3/4\" EMT (0.213 sq in at 40% fill) or reduce the number of conductors in the raceway." },
+      { "id": 3, "name": "Conduit supported within 3 feet of each box", "correct": true },
+      { "id": 4, "name": "Proper bushings at conduit terminations", "correct": true },
+      { "id": 5, "name": "More than 360 degrees of bends between pull points", "correct": false, "violation": "The maximum number of bends between pull points cannot exceed 360 degrees (four 90-degree bends). Exceeding this limit makes wire pulling extremely difficult and risks damaging conductor insulation.", "codeReference": "NEC 344.26", "fixDescription": "Install a pull box to break up the conduit run and reduce the total bend degrees between pull points to 360 degrees or less." },
+      { "id": 6, "name": "EMT connectors and couplings are steel compression type", "correct": true }
+    ],
+    "explanation": "Conduit fill and bend limits protect conductor insulation during installation. Overfilling causes heat buildup and makes pulling impossible. Exceeding 360 degrees of bends damages wire insulation during pulling.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-elec-007",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Junction Box Issues",
+    "components": [
+      { "id": 1, "name": "4\" square metal junction box", "correct": true },
+      { "id": 2, "name": "Junction box concealed behind drywall with no access", "correct": false, "violation": "All junction boxes, pull boxes, and conduit bodies must remain accessible without removing any part of the building structure. Boxes cannot be buried behind walls, ceilings, or floors.", "codeReference": "NEC 314.29", "fixDescription": "Install a blank cover plate that is accessible, or relocate the junction box to an accessible location." },
+      { "id": 3, "name": "Wire connections made with listed wire connectors", "correct": true },
+      { "id": 4, "name": "Box has 8 conductors but volume only supports 6", "correct": false, "violation": "Box fill calculations per NEC 314.16 require each #12 conductor to have 2.25 cu in. An overfilled box causes conductor damage, overheating, and difficulty making proper connections.", "codeReference": "NEC 314.16(B)", "fixDescription": "Install a larger junction box or extension ring to provide adequate volume for all conductors, clamps, devices, and grounds." },
+      { "id": 5, "name": "NM cable properly secured with cable clamp at box", "correct": true },
+      { "id": 6, "name": "All conductors properly identified by color", "correct": true }
+    ],
+    "explanation": "Junction boxes must remain accessible for inspection and maintenance, and must be large enough to contain all conductors safely. Box fill violations are one of the most common NEC violations found in residential work.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-elec-008",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Service Entrance Problems",
+    "components": [
+      { "id": 1, "name": "200A service entrance with weather head", "correct": true },
+      { "id": 2, "name": "Service entrance cables secured to building", "correct": true },
+      { "id": 3, "name": "Meter socket properly grounded", "correct": true },
+      { "id": 4, "name": "Service drop clearance only 8 feet above driveway", "correct": false, "violation": "Service drop conductors over areas accessible to vehicular traffic must maintain a minimum clearance of 18 feet. Over residential driveways, the minimum is 12 feet. 8 feet is dangerously low.", "codeReference": "NEC 230.24(B)", "fixDescription": "Raise the point of attachment or install a service mast to achieve the minimum 12-foot clearance over the driveway." },
+      { "id": 5, "name": "No working space lighting at panel location", "correct": false, "violation": "Working space around service equipment rated 600V or less requires illumination. An electrician must be able to see clearly when operating breakers or performing maintenance.", "codeReference": "NEC 110.26(D)", "fixDescription": "Install a dedicated light fixture or ensure adequate illumination at the electrical panel working space." },
+      { "id": 6, "name": "Main bonding jumper installed", "correct": true }
+    ],
+    "explanation": "Service entrance installations have strict clearance and safety requirements. Insufficient service drop height poses electrocution risk from vehicles and ladders. Adequate lighting prevents accidents during panel operation.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-elec-009",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Motor Connection Violations",
+    "components": [
+      { "id": 1, "name": "Motor nameplate visible and legible", "correct": true },
+      { "id": 2, "name": "Disconnect switch within sight of motor", "correct": true },
+      { "id": 3, "name": "Motor branch circuit with no overload protection", "correct": false, "violation": "Each motor must have overload protection to prevent damage from sustained overcurrent. Overloads are separate from the branch circuit short-circuit protection and are typically sized at 115-125% of motor FLA.", "codeReference": "NEC 430.32", "fixDescription": "Install properly sized overload relays in the motor starter, or use a self-protected combination starter with built-in overloads." },
+      { "id": 4, "name": "Branch circuit conductors sized per NEC Table 430.250", "correct": true },
+      { "id": 5, "name": "Flexible metal conduit to motor without bonding jumper", "correct": false, "violation": "Flexible metal conduit over 6 feet in length requires an equipment bonding jumper. Even under 6 feet, the FMC connections must provide a reliable ground path, and many jurisdictions require a bonding jumper regardless of length.", "codeReference": "NEC 250.118(5)", "fixDescription": "Install an equipment bonding jumper inside or outside the flexible metal conduit from the junction box to the motor terminal box." },
+      { "id": 6, "name": "Motor grounded to equipment grounding conductor", "correct": true }
+    ],
+    "explanation": "Motor circuits have unique NEC requirements separate from general branch circuits. Overload protection and proper bonding of flexible connections are critical for motor safety and longevity.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-elec-010",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Lighting Circuit in Commercial Office",
+    "components": [
+      { "id": 1, "name": "277V fluorescent lighting on 20A circuit", "correct": true },
+      { "id": 2, "name": "Emergency lighting with battery backup", "correct": true },
+      { "id": 3, "name": "Neutral conductor shared between two circuits without being identified", "correct": false, "violation": "When a shared neutral (multi-wire branch circuit) is used, the neutral must be identified as to which circuits it serves. Additionally, simultaneous disconnect of all ungrounded conductors sharing the neutral is required.", "codeReference": "NEC 210.4(B)", "fixDescription": "Use a 2-pole breaker or handle-tied breakers for the multi-wire branch circuit, and identify the shared neutral at all junction points." },
+      { "id": 4, "name": "Switches at proper height per ADA", "correct": true },
+      { "id": 5, "name": "Suspended ceiling grid used as equipment grounding conductor", "correct": false, "violation": "Suspended ceiling support wires and grid members are not listed as equipment grounding conductors. A separate equipment grounding conductor or grounding path must be provided for all lighting fixtures.", "codeReference": "NEC 250.118 / 410.44", "fixDescription": "Install a separate equipment grounding conductor to each luminaire, using the branch circuit EGC run with the circuit conductors." },
+      { "id": 6, "name": "Proper wire connectors rated for circuit voltage", "correct": true }
+    ],
+    "explanation": "Commercial lighting circuits often use 277V and multi-wire branch circuits. Shared neutrals require handle-tied breakers, and ceiling grids cannot substitute for proper equipment grounding conductors.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-elec-011",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Commercial Switchgear Installation",
+    "components": [
+      { "id": 1, "name": "1200A main switchboard with proper bus ratings", "correct": true },
+      { "id": 2, "name": "Arc-flash labels posted on all equipment", "correct": true },
+      { "id": 3, "name": "Only 30 inches of clear width at switchgear working space", "correct": false, "violation": "For equipment rated over 600A, the working space must be at least 36 inches wide or the width of the equipment, whichever is greater. 30 inches does not meet the minimum for this 1200A switchboard.", "codeReference": "NEC 110.26(A)(2)", "fixDescription": "Ensure the working space is at least 36 inches wide (or the full width of the equipment) and extends 36 inches in depth from the front of the equipment." },
+      { "id": 4, "name": "Short-circuit current rating (SCCR) labeled on equipment", "correct": true },
+      { "id": 5, "name": "No selectively coordinated overcurrent protection", "correct": false, "violation": "NEC requires selective coordination of overcurrent protective devices for emergency systems, legally required standby systems, and critical operations power systems. Without it, a fault on one circuit can trip upstream devices, blacking out the entire system.", "codeReference": "NEC 700.32 / 701.27", "fixDescription": "Perform a selective coordination study and install properly rated and coordinated overcurrent protective devices throughout the system." },
+      { "id": 6, "name": "Concrete housekeeping pad under switchgear", "correct": true }
+    ],
+    "explanation": "Commercial switchgear requires careful attention to working clearances, SCCR ratings, arc-flash labeling, and selective coordination. These are journeyman and master-level code requirements that protect both electricians and building occupants.",
+    "xpReward": 90
+  },
+  {
+    "id": "ww-elec-012",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Healthcare Facility Electrical System",
+    "components": [
+      { "id": 1, "name": "Essential electrical system with life safety branch", "correct": true },
+      { "id": 2, "name": "Generator with automatic transfer switch", "correct": true },
+      { "id": 3, "name": "Patient care area receptacles on normal power only", "correct": false, "violation": "Patient bed locations in critical care areas require receptacles connected to the critical branch of the essential electrical system, not normal power. Loss of power to life-support equipment during an outage is life-threatening.", "codeReference": "NEC 517.19 / NFPA 99", "fixDescription": "Connect patient care area receptacles to the critical branch of the essential electrical system with proper color coding (red for emergency, white/gray for normal)." },
+      { "id": 4, "name": "Isolated ground receptacles in operating rooms", "correct": true },
+      { "id": 5, "name": "Wet procedure location with no special grounding", "correct": false, "violation": "Wet procedure locations in healthcare facilities require either an isolated power system with line isolation monitor (LIM), or GFCI protection. Standard grounding alone is insufficient for areas where patients may be connected to equipment.", "codeReference": "NEC 517.20", "fixDescription": "Install an isolated power system with a line isolation monitor (LIM), or provide GFCI protection for all circuits serving the wet procedure location." },
+      { "id": 6, "name": "Generator starts within 10 seconds of power loss", "correct": true }
+    ],
+    "explanation": "Healthcare electrical systems are among the most complex and critical installations. The NEC Article 517 and NFPA 99 requirements protect patients who may be directly connected to electrical equipment. Errors can be fatal.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-elec-013",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Union Hall Training: Arc Flash PPE Assessment",
+    "components": [
+      { "id": 1, "name": "IBEW apprentice wearing Category 1 arc-rated shirt and pants at a 480V MCC", "correct": false, "violation": "The incident energy analysis on the arc flash label indicates Category 3 hazard. Wearing Category 1 PPE (4 cal/cm²) provides dangerously insufficient protection for a Category 3 exposure (25 cal/cm²). PPE category must meet or exceed the hazard level.", "codeReference": "NFPA 70E Table 130.7(C)(15)(a)", "fixDescription": "Replace with minimum Category 3 arc-rated PPE ensemble (arc-rated coveralls, arc-rated jacket and pants) rated for at least 25 cal/cm²." },
+      { "id": 2, "name": "Worker wearing a face shield instead of arc-rated balaclava with shield", "correct": false, "violation": "A standard face shield does not provide arc-rated protection for the face and neck. Category 3 requires an arc-rated balaclava worn under an arc-rated face shield and hard hat to protect exposed skin from arc flash burns.", "codeReference": "NFPA 70E 130.7(C)(10)", "fixDescription": "Replace the standard face shield with a full arc-rated balaclava and arc-rated face shield combination rated for the incident energy level." },
+      { "id": 3, "name": "Probing 480V MCC bus with no voltage-rated gloves", "correct": false, "violation": "When performing energized electrical work such as voltage testing on a 480V MCC, voltage-rated insulating gloves with leather protectors are required. Class 00 or Class 0 gloves are minimum for 480V work, and the shock protection boundaries must be observed.", "codeReference": "NFPA 70E 130.7(C)(7) / Table 130.7(C)(7)(a)", "fixDescription": "Wear Class 0 (or higher) voltage-rated rubber insulating gloves with leather protectors rated for a minimum of 1000V AC." },
+      { "id": 4, "name": "Arc-rated hard hat with chin strap secured", "correct": true },
+      { "id": 5, "name": "Approach boundary rope and stanchions set up around work area", "correct": true },
+      { "id": 6, "name": "Energized electrical work permit signed by qualified supervisor", "correct": true }
+    ],
+    "explanation": "IBEW apprenticeship training emphasizes that arc flash PPE must match or exceed the incident energy level determined by the arc flash study. Wearing insufficient PPE category is one of the most dangerous errors an electrician can make. NFPA 70E Table 130.7(C)(15)(a) defines PPE categories, and the arc flash label on the equipment dictates minimum requirements. Always verify the label before selecting PPE.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-elec-014",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Union Hall Training: Motor Control Center Troubleshooting",
+    "components": [
+      { "id": 1, "name": "Bucket drawer pulled out of 480V MCC without de-energizing and applying LOTO", "correct": false, "violation": "Removing an MCC bucket while the bus is energized exposes the worker to live 480V bus stabs and creates an arc flash hazard. OSHA 1910.147 and NFPA 70E require the MCC to be de-energized and locked out/tagged out before withdrawing any bucket unless the equipment is specifically designed for hot-swap operation.", "codeReference": "OSHA 1910.147 / NFPA 70E 120.5", "fixDescription": "De-energize the MCC section, apply lockout/tagout devices, verify zero energy state, then withdraw the bucket for servicing." },
+      { "id": 2, "name": "Multimeter test leads with cracked and damaged insulation", "correct": false, "violation": "Damaged test lead insulation can expose the user to electrical shock and can cause phase-to-phase or phase-to-ground short circuits resulting in arc flash. All test equipment must be inspected before each use per NFPA 70E and replaced if damaged.", "codeReference": "NFPA 70E 110.4(B) / 120.1", "fixDescription": "Replace the damaged test leads with CAT III or CAT IV rated leads appropriate for the 480V system. Inspect all test equipment before each use." },
+      { "id": 3, "name": "No single-line diagram posted at or near the MCC", "correct": false, "violation": "A single-line diagram showing the electrical distribution system must be available to workers for safe operation and troubleshooting. Without it, workers cannot identify all energy sources, which is essential for lockout/tagout procedures.", "codeReference": "NEC 408.4 / NFPA 70E 205.2", "fixDescription": "Post a current single-line diagram at or near the MCC showing all power sources, disconnecting means, and protective devices." },
+      { "id": 4, "name": "Each bucket clearly labeled with equipment name and circuit identification", "correct": true },
+      { "id": 5, "name": "Arc flash label posted on the MCC with incident energy and PPE requirements", "correct": true },
+      { "id": 6, "name": "MCC installed on concrete housekeeping pad in dedicated electrical room", "correct": true }
+    ],
+    "explanation": "IBEW journeyman training stresses that MCC troubleshooting is one of the most hazardous tasks in commercial/industrial electrical work. The combination of 480V bus bars, high available fault current, and confined spaces makes proper LOTO procedures and equipment inspection absolutely critical. Pulling an energized bucket is one of the leading causes of electrical fatalities in the trade.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-elec-015",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Carrier Frequency Setting",
+    "components": [
+      { "id": 1, "name": "VFD properly mounted in ventilated enclosure", "correct": true },
+      { "id": 2, "name": "VFD carrier frequency set at 14 kHz", "correct": false, "violation": "UCSB specifications limit VFD carrier (switching) frequency to a maximum of 10 kHz. Higher carrier frequencies increase motor bearing currents, accelerate insulation degradation, and generate excessive electromagnetic interference (EMI) that affects nearby sensitive equipment.", "codeReference": "UCSB VFD Specification / IEEE 519" },
+      { "id": 3, "name": "Input line reactor installed", "correct": true },
+      { "id": 4, "name": "Motor overload protection properly configured", "correct": true },
+      { "id": 5, "name": "Grounding conductor terminated at VFD ground lug", "correct": true },
+      { "id": 6, "name": "Control wiring in shielded cable separated from power", "correct": true }
+    ],
+    "explanation": "VFD carrier frequency directly affects motor life and EMI. While higher frequencies reduce audible motor noise, they dramatically increase bearing damage from shaft currents and can interfere with BAS communications. UCSB specs cap carrier frequency at 10 kHz.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-elec-016",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD-to-Motor Cable Installation",
+    "components": [
+      { "id": 1, "name": "VFD output rated for motor horsepower", "correct": true },
+      { "id": 2, "name": "VFD-to-motor cable run measuring 40 feet without engineer approval", "correct": false, "violation": "UCSB specifications limit VFD output cable length to a maximum of 20 feet without specific engineer approval and additional mitigation. Long cable runs cause voltage reflections (reflected wave phenomenon) that can double the peak voltage at motor terminals, destroying motor winding insulation.", "codeReference": "UCSB VFD Specification / NEMA MG-1 Part 31" },
+      { "id": 3, "name": "Shielded VFD-rated cable (XLPE insulation) used", "correct": true },
+      { "id": 4, "name": "Cable shield grounded at both VFD and motor ends", "correct": true },
+      { "id": 5, "name": "Motor nameplate data matches VFD configuration", "correct": true },
+      { "id": 6, "name": "VFD total harmonic distortion measured at 4%", "correct": false, "violation": "IEEE 519 and UCSB specifications require total harmonic distortion (THD) at the point of common coupling to remain below 3%. A 4% THD measurement indicates insufficient harmonic filtering, which can overheat transformers, trip breakers, and damage sensitive electronics on the same bus.", "codeReference": "IEEE 519-2022 / UCSB Electrical Specification" },
+      { "id": 7, "name": "Output dV/dt filter installed at VFD", "correct": true }
+    ],
+    "explanation": "VFD installations require careful attention to cable length, harmonic distortion, and reflected wave voltage. UCSB specs are more stringent than general practice, limiting cable runs to 20 feet and THD to 3% to protect motors and building electrical systems.",
+    "xpReward": 70
+  },
+  {
+    "id": "ww-elec-017",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "VFD Harmonic Distortion Compliance",
+    "components": [
+      { "id": 1, "name": "Active front-end VFD with regenerative capability", "correct": true },
+      { "id": 2, "name": "Power quality meter showing 4% total harmonic distortion at PCC", "correct": false, "violation": "IEEE 519-2022 and UCSB specifications mandate that total harmonic distortion (THD) at the point of common coupling shall not exceed 3%. At 4%, the installation is non-compliant. An active harmonic filter or multi-pulse drive configuration is required to bring THD into compliance.", "codeReference": "IEEE 519-2022 Table 2 / UCSB Electrical Specification" },
+      { "id": 3, "name": "Disconnect switch within sight of VFD", "correct": true },
+      { "id": 4, "name": "Surge protective device at VFD input", "correct": true },
+      { "id": 5, "name": "5% impedance input reactor on VFD", "correct": true },
+      { "id": 6, "name": "Power factor correction capacitors on VFD output", "correct": false, "violation": "Power factor correction capacitors must never be installed on the output side of a VFD. The capacitors resonate with the VFD's PWM switching frequency, causing destructive overcurrents that will fail the capacitors and potentially damage the drive. Capacitors go on the input side only.", "codeReference": "NEC 460.8 / VFD Manufacturer Guidelines" },
+      { "id": 7, "name": "Properly ventilated VFD room with ambient below 104°F", "correct": true }
+    ],
+    "explanation": "VFD harmonic compliance per IEEE 519 is a UCSB specification requirement. THD must stay below 3% at the PCC, and capacitor placement is critical — output-side capacitors create dangerous resonance with the PWM waveform. These are journeyman-level power quality concepts.",
+    "xpReward": 75
+  }
+]

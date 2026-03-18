@@ -1,0 +1,471 @@
+[
+  {
+    "id": "wm-plmb-001",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Gas Water Heater Installation",
+    "description": "A 50-gallon gas water heater has been installed in a residential utility closet. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "50-gallon gas water heater on stand",
+      "Cold water supply with shutoff valve",
+      "Hot water outlet pipe",
+      "Gas supply line with shutoff valve",
+      "B-vent flue pipe through roof"
+    ],
+    "missingItems": [
+      {
+        "name": "T&P (Temperature & Pressure) relief valve discharge pipe",
+        "explanation": "The T&P relief valve must have a discharge pipe that terminates within 6 inches of the floor or to an approved indirect waste receptor. Without the discharge pipe, scalding water sprays at head level if the valve activates. Required by IPC 504.6."
+      },
+      {
+        "name": "Sediment trap (drip leg) on gas line",
+        "explanation": "A sediment trap must be installed upstream of the appliance gas valve to capture moisture and debris. Typically a tee with a capped nipple extending down at least 3 inches. Required by IFGC 408.4."
+      }
+    ],
+    "distractors": [
+      "Condensate neutralizer kit",
+      "Recirculation pump",
+      "Timer control on gas valve",
+      "Anode rod inspection port"
+    ],
+    "explanation": "Gas water heater installations require a T&P discharge pipe for safety and a sediment trap to protect the gas valve. Both are commonly cited violations during inspections.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-plmb-002",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Bathroom Rough-In",
+    "description": "A full bathroom has been roughed in with toilet, lavatory, and tub/shower. Check for missing components.",
+    "presentItems": [
+      "3\" closet flange for toilet",
+      "2\" shower drain with P-trap",
+      "1-1/2\" lavatory drain with P-trap",
+      "Hot and cold supply lines stubbed out",
+      "2\" vent pipe through roof"
+    ],
+    "missingItems": [
+      {
+        "name": "Shower valve with pressure-balancing or thermostatic protection",
+        "explanation": "All shower and tub/shower valves must be pressure-balancing or thermostatic type per ASSE 1016 to prevent scalding. This is a life-safety requirement that must be installed during rough-in. Required by IPC 424.3."
+      },
+      {
+        "name": "Closet bend (toilet drain elbow) with proper orientation",
+        "explanation": "The toilet rough-in requires a closet bend (3\" or 4\" 90-degree bend) connecting the closet flange to the horizontal drain. Without it, the toilet cannot properly connect to the DWV system. Required by IPC 405.3."
+      }
+    ],
+    "distractors": [
+      "Bidet sprayer connection",
+      "Floor heating thermostat",
+      "Exhaust fan duct connection",
+      "Towel warmer supply valves"
+    ],
+    "explanation": "Bathroom rough-ins must include anti-scald valve protection and proper toilet drainage connections. Both are inspected before walls are closed up and are nearly impossible to fix after finishing.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-plmb-003",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Service Entry",
+    "description": "A residential water service has been connected from the water meter to the house. Check for missing components.",
+    "presentItems": [
+      "1\" Type K copper from meter to house",
+      "Corporation stop at water main",
+      "Curb stop at property line",
+      "Pipe sleeved through foundation wall",
+      "Main shutoff valve inside house"
+    ],
+    "missingItems": [
+      {
+        "name": "Pressure reducing valve (PRV)",
+        "explanation": "If the incoming water pressure exceeds 80 PSI, a pressure reducing valve is required to reduce pressure to a safe level (typically 50-70 PSI). High pressure damages fixtures, causes water hammer, and wastes water. Required by IPC 604.8."
+      },
+      {
+        "name": "Backflow preventer or dual check valve",
+        "explanation": "Many jurisdictions require a backflow prevention device at the water service entry to protect the public water supply from contamination. This creates a closed system. Required by IPC 608.16.1."
+      }
+    ],
+    "distractors": [
+      "Water softener",
+      "Whole-house filter",
+      "Recirculation return line",
+      "Hose bibb at entry point"
+    ],
+    "explanation": "Water service entry must include pressure regulation when supply pressure exceeds limits and backflow prevention to protect the municipal water supply. These are public health requirements.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-plmb-004",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Kitchen Sink Installation",
+    "description": "A double-bowl kitchen sink with garbage disposal has been installed. Review the installation for missing items.",
+    "presentItems": [
+      "Double-bowl stainless steel sink mounted",
+      "Garbage disposal on left bowl",
+      "1-1/2\" P-trap and trap arm",
+      "Hot and cold supply with angle stops",
+      "Dishwasher drain hose to disposal"
+    ],
+    "missingItems": [
+      {
+        "name": "Dishwasher air gap or high loop",
+        "explanation": "The dishwasher drain must have an air gap device (mounted at the countertop) or a high loop (secured to the underside of the countertop) to prevent dirty sink water from siphoning back into the dishwasher. Required by IPC 807.4."
+      },
+      {
+        "name": "Continuous waste from non-disposal bowl to disposal or trap",
+        "explanation": "The second bowl must be connected with a continuous waste pipe to the disposal or to the common trap. Without it, the second bowl has no drain path. Required by IPC 706.1."
+      }
+    ],
+    "distractors": [
+      "Instant hot water dispenser",
+      "Water filtration system",
+      "Grease trap"
+    ],
+    "explanation": "Kitchen sink installations require proper dishwasher backflow protection (air gap or high loop) and connection of all bowls to the drain system. The air gap requirement is strictly enforced in many jurisdictions.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-plmb-005",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Laundry Hookup Installation",
+    "description": "A washer hookup box has been installed in a residential laundry room. Check for missing items.",
+    "presentItems": [
+      "Hot and cold supply valves (quarter-turn)",
+      "2\" standpipe for washer drain",
+      "P-trap at base of standpipe",
+      "110V outlet for washer",
+      "Dryer vent to exterior"
+    ],
+    "missingItems": [
+      {
+        "name": "Water hammer arrestors on supply valves",
+        "explanation": "Washing machines have quick-closing solenoid valves that create water hammer (pressure surges) when they shut off. Water hammer arrestors must be installed at the supply valves to absorb these shocks and prevent pipe damage. Required by IPC 604.9."
+      },
+      {
+        "name": "Standpipe air gap (minimum height)",
+        "explanation": "The standpipe must extend between 18 and 30 inches above the trap weir to prevent the washer discharge hose from being submerged, which would create a cross-connection. Required by IPC 802.4."
+      }
+    ],
+    "distractors": [
+      "Condensate drain for dryer",
+      "Floor drain with trap primer",
+      "Water softener loop"
+    ],
+    "explanation": "Laundry hookups require water hammer arrestors to protect piping from washing machine valve shock and properly sized standpipes to prevent backflow through the drain hose.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-plmb-006",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Softener Installation",
+    "description": "A whole-house water softener has been installed in a residential utility room. Check for missing components.",
+    "presentItems": [
+      "Water softener tank and brine tank",
+      "Bypass valve assembly",
+      "1\" copper supply and outlet piping",
+      "Brine drain line to floor drain",
+      "Electrical connection for controller"
+    ],
+    "missingItems": [
+      {
+        "name": "Unsoftened supply line to outdoor hose bibbs and irrigation",
+        "explanation": "Softened water should not be used for outdoor irrigation as the sodium damages plants and soil. A branch line before the softener must supply outdoor connections with unsoftened water. Required by many local codes and UPC guidelines."
+      },
+      {
+        "name": "Air gap or indirect waste on brine drain",
+        "explanation": "The brine discharge must drain through an air gap (minimum 2x pipe diameter) to prevent sewer gases and waste from back-siphoning into the softener. Direct connections to the sewer are prohibited. Required by IPC 608.15.1."
+      }
+    ],
+    "distractors": [
+      "UV sterilization unit",
+      "Whole-house sediment filter",
+      "Demand controller",
+      "Salt delivery alarm"
+    ],
+    "explanation": "Water softener installations require an air gap on the brine drain to prevent cross-connections and should provide unsoftened water to outdoor fixtures. These protect both the plumbing system and landscaping.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-plmb-007",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Sump Pump Installation",
+    "description": "A sump pump has been installed in a residential basement to handle groundwater. Check for missing components.",
+    "presentItems": [
+      "Submersible sump pump in pit",
+      "1-1/2\" PVC discharge pipe through rim joist",
+      "Check valve on discharge pipe",
+      "Sealed sump pit cover",
+      "GFCI-protected electrical outlet"
+    ],
+    "missingItems": [
+      {
+        "name": "Discharge pipe termination away from foundation",
+        "explanation": "The sump pump discharge must terminate at least 10 feet from the building foundation (or per local code) and be directed away so water does not flow back toward the building. Without proper termination, pumped water re-enters the sump creating a continuous cycle. Required by IPC 713.2."
+      },
+      {
+        "name": "Battery backup pump or water-powered backup",
+        "explanation": "A backup pump system ensures the sump continues operating during power outages when storms typically produce the most groundwater. This prevents basement flooding during the most critical times. Recommended by IPC and required by many local codes."
+      }
+    ],
+    "distractors": [
+      "Dehumidifier connection",
+      "French drain piping inside pit",
+      "Alarm float switch",
+      "Pit drain to sewer"
+    ],
+    "explanation": "Sump pump installations need proper discharge termination away from the building and backup pump capability for power outages. A sump pump that discharges near the foundation defeats its own purpose.",
+    "xpReward": 55
+  },
+  {
+    "id": "wm-plmb-008",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Backflow Prevention Assembly",
+    "description": "A reduced pressure zone (RPZ) backflow preventer has been installed on a commercial fire sprinkler connection. Check for missing components.",
+    "presentItems": [
+      "RPZ assembly with two check valves and relief port",
+      "Upstream and downstream shutoff valves",
+      "Test cocks for annual testing",
+      "Pipe support and proper height",
+      "Relief port piped to drain"
+    ],
+    "missingItems": [
+      {
+        "name": "Strainer upstream of RPZ assembly",
+        "explanation": "A strainer must be installed upstream of the RPZ to prevent debris from fouling the check valve seats. Debris causes the check valves to fail, which triggers the relief valve to discharge continuously. Required by ASSE 1013 installation guidelines."
+      },
+      {
+        "name": "Air gap on relief port discharge",
+        "explanation": "The RPZ relief port discharge must terminate with an air gap above the flood-level rim of the drain receptor. A direct connection to the sewer could allow waste to contaminate the relief port and potentially the water supply. Required by IPC 608.16.4."
+      }
+    ],
+    "distractors": [
+      "Pressure gauge on supply side",
+      "Alarm flow switch",
+      "Fire department connection",
+      "Post indicator valve"
+    ],
+    "explanation": "RPZ assemblies are the highest level of backflow protection. Proper strainer protection and air gap on the relief port are critical to maintaining their function and preventing cross-contamination.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-plmb-009",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Tankless Water Heater Installation",
+    "description": "A gas-fired tankless water heater has been installed on an exterior wall. Check for missing components.",
+    "presentItems": [
+      "Tankless unit mounted on wall bracket",
+      "3/4\" gas supply line with shutoff valve",
+      "Cold water supply with isolation valve",
+      "Hot water outlet with isolation valve",
+      "Stainless steel venting through wall"
+    ],
+    "missingItems": [
+      {
+        "name": "Condensate drain line with neutralizer",
+        "explanation": "High-efficiency condensing tankless units produce acidic condensate (pH 3-4) that must be neutralized before entering the drainage system. A condensate neutralizer kit with calcium carbonate media protects drain pipes from corrosion. Required by IPC 307.3."
+      },
+      {
+        "name": "Service valves with full-port isolation and flushing ports",
+        "explanation": "Tankless water heaters require isolation valves with service ports for periodic descaling (flushing with vinegar or deliming solution). Without them, the heat exchanger will scale up and lose efficiency. Required by manufacturer installation instructions."
+      },
+      {
+        "name": "Sediment trap (drip leg) on gas line",
+        "explanation": "A sediment trap must be installed before the unit's gas valve to capture debris and moisture from the gas line. Required by IFGC 408.4."
+      }
+    ],
+    "distractors": [
+      "Recirculation pump",
+      "Buffer tank",
+      "Solar preheat connection"
+    ],
+    "explanation": "Tankless water heaters require condensate handling, service/flushing ports for maintenance, and gas line sediment traps. These are frequently missed during installation but critical for long-term performance.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-plmb-010",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Filtration System",
+    "description": "A whole-house water filtration system has been installed after the main shutoff. Check for missing components.",
+    "presentItems": [
+      "Sediment pre-filter housing",
+      "Carbon block main filter",
+      "Filter housings with mounting bracket",
+      "Inlet and outlet connections to main supply",
+      "Filter wrench stored nearby"
+    ],
+    "missingItems": [
+      {
+        "name": "Bypass valve assembly",
+        "explanation": "A bypass valve allows water to flow around the filter system during filter changes or maintenance. Without it, the entire house water supply must be shut off during any filter service. This is required by manufacturer guidelines and standard plumbing practice."
+      },
+      {
+        "name": "Pressure gauges on inlet and outlet",
+        "explanation": "Pressure gauges before and after the filter monitor pressure differential. When the differential exceeds 15 PSI (typical), the filters are clogged and need replacement. Without gauges, there is no way to know when filters need changing. Recommended by ASSE and filter manufacturers."
+      }
+    ],
+    "distractors": [
+      "UV sterilization stage",
+      "Reverse osmosis membrane",
+      "Water quality monitor",
+      "Automatic flush valve"
+    ],
+    "explanation": "Whole-house filtration systems need bypass valves for maintenance access and pressure gauges to monitor filter condition. These practical components ensure the system is maintainable and effective.",
+    "xpReward": 55
+  },
+  {
+    "id": "wm-plmb-011",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Irrigation System Backflow Prevention",
+    "description": "A commercial irrigation system has been connected to the potable water supply. Review the installation for missing components.",
+    "presentItems": [
+      "Reduced pressure zone (RPZ) backflow preventer",
+      "Upstream shutoff valve",
+      "Downstream shutoff valve",
+      "Test cocks on RPZ assembly",
+      "1-1/2\" supply line to irrigation manifold",
+      "Zone valves with timer controller"
+    ],
+    "missingItems": [
+      {
+        "name": "Enclosure with freeze protection",
+        "explanation": "RPZ assemblies installed outdoors must be in a protective enclosure with freeze protection (heat tape or insulated box) in climates where temperatures drop below 32 degrees F. Frozen RPZ assemblies fail catastrophically and compromise backflow protection. Required by local codes and ASSE 1013."
+      },
+      {
+        "name": "Air gap on relief port drainage",
+        "explanation": "The RPZ relief port must discharge through a visible air gap to an approved drainage receptor. The air gap must be at least two pipe diameters above the flood rim of the receptor. Without the air gap, contaminated irrigation water could back up into the relief port. Required by IPC 608.16.4."
+      },
+      {
+        "name": "Annual testing certification tag",
+        "explanation": "RPZ assemblies must be tested annually by a certified backflow tester and the test results reported to the water purveyor. A current certification tag must be attached to the assembly. Required by IPC 312.10 and most water utility regulations."
+      }
+    ],
+    "distractors": [
+      "Master valve at manifold",
+      "Rain sensor override",
+      "Flow meter on supply"
+    ],
+    "explanation": "Commercial irrigation backflow prevention requires freeze protection, proper air gap drainage, and annual certification. These installations protect the public water supply from contamination by fertilizers, pesticides, and bacteria in irrigation systems.",
+    "xpReward": 80
+  },
+  {
+    "id": "wm-plmb-012",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Commercial Gas Water Heater with Storage",
+    "description": "A 199,000 BTU commercial gas water heater with a 120-gallon storage tank has been installed in a mechanical room. Check for missing components.",
+    "presentItems": [
+      "Commercial gas water heater unit",
+      "120-gallon storage tank",
+      "Recirculation pump with check valve",
+      "Gas supply with manual shutoff",
+      "Power vent assembly through roof",
+      "Cold water supply with shutoff"
+    ],
+    "missingItems": [
+      {
+        "name": "Seismic strapping on tank and water heater",
+        "explanation": "In seismic zones, water heaters and storage tanks must be anchored with listed seismic straps or bracing to prevent toppling during an earthquake. A falling water heater can rupture gas lines, causing fires. Required by IPC 501.2 and local seismic codes."
+      },
+      {
+        "name": "Expansion tank on cold water supply",
+        "explanation": "When a check valve or backflow preventer exists on the water supply (creating a closed system), a thermal expansion tank is required to absorb water volume increase as it heats. Without it, pressure builds dangerously. Required by IPC 607.3.2."
+      },
+      {
+        "name": "Thermostatic mixing valve (TMV) on outlet",
+        "explanation": "Commercial water heaters often store water at 140 degrees F or higher to prevent Legionella bacteria growth, but distribution temperature must be limited to 120 degrees F to prevent scalding. A TMV is required to blend hot and cold water to a safe distribution temperature. Required by ASSE 1017."
+      }
+    ],
+    "distractors": [
+      "Point-of-use water heater",
+      "Water treatment system",
+      "Flow switch alarm"
+    ],
+    "explanation": "Commercial water heater installations require seismic restraint, thermal expansion protection, and thermostatic mixing valves. These protect both the building structure and occupants from the unique hazards of large-volume hot water systems.",
+    "xpReward": 85
+  },
+  {
+    "id": "wm-plmb-013",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Closed-Loop Hydronic Heating System",
+    "description": "A closed-loop hydronic heating system has been installed in a commercial building. Review the installation for missing components per UCSB specifications.",
+    "presentItems": [
+      "Hot water boiler with circulator pump",
+      "Supply and return piping to heating coils",
+      "Expansion tank on system return",
+      "Air separator with automatic vent",
+      "Isolation and balancing valves at each coil"
+    ],
+    "missingItems": [
+      {
+        "name": "Pressure relief valve",
+        "explanation": "Every closed hydronic system must have a pressure relief valve sized to relieve the full boiler output without exceeding system design pressure. The relief valve is the last line of defense against catastrophic overpressure from boiler malfunction or expansion tank failure. It must be piped to a safe, visible discharge point. Required per ASME and IPC 1002.2."
+      },
+      {
+        "name": "Chemical pot feeder on hydronic loop",
+        "explanation": "UCSB specifications require a chemical treatment bypass pot feeder on all closed hydronic loops. Without ongoing chemical treatment (corrosion inhibitors and biocides), internal piping corrodes, biological growth fouls heat exchangers, and system efficiency degrades. The pot feeder allows treatment without draining the system."
+      }
+    ],
+    "distractors": [
+      "Glycol mixing station",
+      "Sidestream sand filter",
+      "Differential pressure transmitter"
+    ],
+    "explanation": "Pressure relief and chemical treatment are essential for hydronic system safety and longevity. The relief valve prevents overpressure damage, and the chemical pot feeder enables ongoing water treatment. Both are UCSB specification requirements verified during commissioning.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-plmb-014",
+    "type": "whats-missing",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Commercial Water Heater with Recirculation",
+    "description": "A commercial domestic hot water system with recirculation has been installed. Check for missing components per UCSB specifications.",
+    "presentItems": [
+      "Commercial gas water heater (199,000 BTU)",
+      "Hot water supply piping to fixtures",
+      "Recirculation pump and return piping",
+      "Thermostatic mixing valve at heater outlet",
+      "Expansion tank on cold water supply"
+    ],
+    "missingItems": [
+      {
+        "name": "Temperature and pressure (T&P) relief valve with discharge piping",
+        "explanation": "A T&P relief valve must be installed in the top 6 inches of the water heater tank and piped to discharge within 6 inches of the floor or to an approved indirect waste receptor. Without it, a thermostat failure can cause the tank to overpressurize and rupture explosively. Required per IPC 504.6 and UCSB specifications."
+      },
+      {
+        "name": "Check valve and balancing valve on recirculation return",
+        "explanation": "The recirculation return line requires a check valve to prevent reverse thermosiphon flow and a balancing valve to set the proper recirculation flow rate. Without these, hot water can short-circuit through the return line instead of reaching remote fixtures, and thermosiphon can overheat piping during off-cycles."
+      }
+    ],
+    "distractors": [
+      "Water softener system",
+      "UV disinfection unit",
+      "Point-of-use tankless heater"
+    ],
+    "explanation": "Commercial hot water systems require T&P relief for explosion prevention and proper recirculation circuit controls for system performance. The check valve prevents reverse flow and the balancing valve ensures proper recirculation rate to maintain hot water temperature at fixtures.",
+    "xpReward": 50
+  }
+]

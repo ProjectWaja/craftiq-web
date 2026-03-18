@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ww-hr-001",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Standpipe System Installation Errors",
+    "components": [
+      { "id": 1, "name": "6-inch standpipe riser in enclosed stairwell", "correct": true },
+      { "id": 2, "name": "2-1/2 inch hose valve obstructed by stair stringer", "correct": false, "violation": "NFPA 14 Section 7.3.2 requires standpipe hose connections to be located so they are accessible and usable by firefighters wearing full turnout gear without obstruction. The stair stringer blocking access to the valve prevents firefighters from quickly connecting hose lines during an emergency, delaying suppression operations on the fire floor.", "codeReference": "NFPA 14 Section 7.3.2" },
+      { "id": 3, "name": "No pressure-restricting device at lower floors of 30-story building", "correct": false, "violation": "In high-rise buildings, static pressure at lower floors can exceed 175 psi at the hose connection. NFPA 14 Section 7.3.3 requires pressure-restricting devices (PRDs) where residual pressure exceeds 175 psi. Without PRDs, firefighters cannot safely control the hose stream, and fittings may fail under excessive pressure.", "codeReference": "NFPA 14 Section 7.3.3" },
+      { "id": 4, "name": "Standpipe system not interconnected to automatic sprinkler system", "correct": false, "violation": "IBC Section 905.3.4 requires that in buildings equipped with both standpipe and automatic sprinkler systems, the standpipe system shall be interconnected. Separate risers waste space and water supply capacity. Combined systems allow sprinklers to be supplied through the standpipe riser, improving hydraulic efficiency.", "codeReference": "IBC 905.3.4 / NFPA 14 Section 7.8" },
+      { "id": 5, "name": "Fire department connection (FDC) at street level with Storz fittings", "correct": true },
+      { "id": 6, "name": "Class I standpipe with 2-1/2 inch connections at each landing", "correct": true }
+    ],
+    "explanation": "Standpipe systems are the lifeline for firefighting operations in high-rise buildings. NFPA 14 governs standpipe installation and requires accessible hose connections, pressure-restricting devices at lower floors where static pressure exceeds 175 psi, and interconnection with sprinkler systems per IBC 905.3.4. These requirements ensure firefighters can safely and effectively operate in buildings where ladder trucks cannot reach upper floors.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hr-002",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Stairwell Pressurization Fan Issues",
+    "components": [
+      { "id": 1, "name": "Supply fan sized for stairwell volume and leakage", "correct": true },
+      { "id": 2, "name": "Single injection point at top of 40-story stairwell", "correct": false, "violation": "NFPA 92 Section 4.4.2.1 requires multiple injection points for stairwells exceeding 8 stories in height. A single injection point creates excessive pressure at the top and insufficient pressure at the bottom, resulting in inability to open doors at upper floors and inadequate pressurization at lower floors. Multiple injection points every 2-3 floors are required for tall stairwells.", "codeReference": "NFPA 92 Section 4.4.2.1" },
+      { "id": 3, "name": "No barometric relief damper installed", "correct": false, "violation": "NFPA 92 Section 4.4.2.2 requires a means of pressure relief when all stairwell doors are closed. Without a barometric relief damper, the stairwell overpressurizes, making doors impossible to open (exceeding the 30 lbf maximum door-opening force per IBC 1010.1.3). Relief dampers maintain pressure within the required 0.05 to 0.10 inches w.c. differential.", "codeReference": "NFPA 92 Section 4.4.2.2 / IBC 1010.1.3" },
+      { "id": 4, "name": "Pressurization fan not connected to emergency power", "correct": false, "violation": "IBC Section 403.4.7 requires stairwell pressurization systems to be connected to emergency or standby power. If the fan loses power during a fire, the stairwell loses its smoke-free status, trapping occupants in a smoke-filled egress path. The fan must operate for the duration of the fire event on emergency power per NEC Article 700.", "codeReference": "IBC 403.4.7 / NEC Article 700" },
+      { "id": 5, "name": "Dedicated ductwork from fan to stairwell injection points", "correct": true },
+      { "id": 6, "name": "Stairwell doors with self-closing hardware", "correct": true }
+    ],
+    "explanation": "Stairwell pressurization is a critical life-safety system in high-rise buildings, maintaining a tenable atmosphere for occupant evacuation. NFPA 92 requires multiple injection points for tall stairwells to maintain uniform pressure distribution, barometric relief to prevent overpressurization, and IBC 403 mandates emergency power connection. A failed pressurization system during a high-rise fire can be catastrophic.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hr-003",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise Plumbing PRV Installation",
+    "components": [
+      { "id": 1, "name": "Domestic water booster pump system in basement", "correct": true },
+      { "id": 2, "name": "Pressure reducing valve installed without strainer upstream", "correct": false, "violation": "IPC Section 604.8 and manufacturer requirements mandate a strainer upstream of every PRV to prevent debris from fouling the valve seat. Without a strainer, particulate in the water supply causes the PRV to fail — either stuck open (allowing dangerously high pressure downstream) or stuck closed (cutting off water supply to the zone).", "codeReference": "IPC 604.8 / Manufacturer installation requirements" },
+      { "id": 3, "name": "No pressure relief valve downstream of PRV", "correct": false, "violation": "IPC Section 604.8 requires a relief valve downstream of each PRV to protect against thermal expansion and PRV failure. If the PRV fails open, downstream piping and fixtures designed for 80 psi could be exposed to 150+ psi supply pressure, causing pipe failures, fixture damage, and potential flooding on occupied floors.", "codeReference": "IPC 604.8" },
+      { "id": 4, "name": "Single PRV serving residential floors with no bypass", "correct": false, "violation": "High-rise plumbing best practice per IPC commentary requires duplex PRV stations (two PRVs in parallel with isolation valves) for zones serving occupied floors. A single PRV without bypass means the entire zone loses water during PRV maintenance or failure. Duplex arrangements allow one valve to be serviced while the other maintains supply.", "codeReference": "IPC 604.8 / ASME A112.26" },
+      { "id": 5, "name": "Pressure zones limited to 80 psi maximum at lowest fixture", "correct": true },
+      { "id": 6, "name": "Isolation valves at each floor branch connection", "correct": true }
+    ],
+    "explanation": "High-rise buildings require pressure zones with PRVs because water pressure increases approximately 0.433 psi per foot of elevation. A 30-story building could see 130+ psi at the lowest fixtures without pressure management. IPC 604.8 governs PRV installations and requires strainers, relief valves, and provisions for maintenance access. Proper PRV installation prevents pipe failures, fixture damage, and water damage to occupied spaces.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hr-004",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Fire Pump Room Violations",
+    "components": [
+      { "id": 1, "name": "Horizontal split-case fire pump rated for building demand", "correct": true },
+      { "id": 2, "name": "Fire pump room used for general building storage", "correct": false, "violation": "NFPA 20 Section 4.12.1.1 requires that fire pump rooms be dedicated to fire pump equipment and shall not be used for any other purpose. Storage in the fire pump room creates fire load, obstructs access to equipment, and can interfere with pump operation or maintenance. The room must be kept clear at all times.", "codeReference": "NFPA 20 Section 4.12.1.1" },
+      { "id": 3, "name": "Fire pump controller not visible from pump", "correct": false, "violation": "NFPA 20 Section 10.3.1 requires the fire pump controller to be located within sight of the fire pump motor. This allows operators to observe pump operation while making controller adjustments and provides a safe means of emergency shutdown. Controllers located in separate rooms or behind walls violate this line-of-sight requirement.", "codeReference": "NFPA 20 Section 10.3.1" },
+      { "id": 4, "name": "No automatic transfer switch for backup power to fire pump", "correct": false, "violation": "IBC Section 403.4.8.1 requires fire pumps in high-rise buildings to have a reliable secondary power source. Where emergency generators are provided, an automatic transfer switch (ATS) must be installed to transfer fire pump power within 10 seconds of primary power loss per NFPA 20 Section 9.6. Without backup power, the fire suppression system fails during a power outage.", "codeReference": "NFPA 20 Section 9.6 / IBC 403.4.8.1" },
+      { "id": 5, "name": "2-hour fire-rated separation for pump room walls", "correct": true },
+      { "id": 6, "name": "Floor drain in fire pump room for test water discharge", "correct": true }
+    ],
+    "explanation": "The fire pump room is one of the most critical spaces in a high-rise building. NFPA 20 strictly governs fire pump installations, requiring dedicated rooms free of storage, line-of-sight between controller and pump, and redundant power sources. In a high-rise fire scenario, the fire pump must operate reliably to supply standpipes and sprinklers at upper floors against significant elevation head pressure.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hr-005",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Elevator Machine Room Ventilation",
+    "components": [
+      { "id": 1, "name": "Traction elevator machine with gearless drive motor", "correct": true },
+      { "id": 2, "name": "Machine room temperature exceeding 104 degrees F with no cooling system", "correct": false, "violation": "ASME A17.1 Section 2.8.1 and IMC require elevator machine rooms to maintain ambient temperature at or below 104 degrees F (40 degrees C). Excessive heat causes motor overheating, drive failure, and lubricant breakdown. A dedicated cooling system (split system, chilled water unit, or ventilation fan) is required to maintain temperature within limits.", "codeReference": "ASME A17.1 Section 2.8.1 / IMC 401.2" },
+      { "id": 3, "name": "No smoke detector in elevator machine room", "correct": false, "violation": "NFPA 72 Section 21.3.5 and IBC 607.1 require smoke detection in elevator machine rooms, hoistways, and lobbies to initiate elevator recall (Phase I). Without a smoke detector, the elevator recall system cannot activate automatically, potentially sending cars to a fire floor and trapping occupants in a smoke-filled hoistway.", "codeReference": "NFPA 72 Section 21.3.5 / IBC 607.1" },
+      { "id": 4, "name": "Supply air duct from adjacent space routed through elevator machine room", "correct": false, "violation": "NEC 620.37 and IMC 602.2 prohibit using elevator machine rooms as supply, return, or exhaust air plenums for other building spaces. Ductwork from adjacent spaces introduces contaminants, fire risk, and smoke migration paths into the machine room. The machine room must have its own dedicated ventilation system.", "codeReference": "NEC 620.37 / IMC 602.2" },
+      { "id": 5, "name": "Dedicated electrical panel for elevator equipment", "correct": true },
+      { "id": 6, "name": "Fire-rated door with self-closing hardware at machine room entry", "correct": true }
+    ],
+    "explanation": "Elevator machine rooms house critical life-safety equipment and must be properly ventilated and protected. ASME A17.1 sets temperature limits, NFPA 72 requires smoke detection for elevator recall, and NEC 620 prohibits shared ventilation with other spaces. In a high-rise building, elevator failure during a fire event prevents firefighter access to upper floors and disrupts evacuation for mobility-impaired occupants.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hr-006",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Smoke Control Damper Wiring",
+    "components": [
+      { "id": 1, "name": "Combination fire/smoke dampers at rated shaft penetrations", "correct": true },
+      { "id": 2, "name": "Smoke damper actuator wired to normal power only with no emergency circuit", "correct": false, "violation": "IBC Section 909.11 requires smoke control systems to be connected to both normal and emergency power. Smoke damper actuators that fail during a power outage cannot reposition, rendering the smoke control system non-functional. All smoke control components, including damper actuators, must be on emergency power per IBC 403.4.7.", "codeReference": "IBC 909.11 / IBC 403.4.7" },
+      { "id": 3, "name": "Smoke damper end-switch wiring not supervised by fire alarm panel", "correct": false, "violation": "NFPA 92 Section 4.5.1 requires verification (position feedback) for all smoke control dampers. The fire alarm panel must receive confirmed open/closed position from each damper via end switches. Without supervision, the system cannot verify that dampers have actually repositioned during a smoke event, creating a false sense of protection.", "codeReference": "NFPA 92 Section 4.5.1" },
+      { "id": 4, "name": "Fire alarm wiring to smoke dampers using non-fire-rated cable", "correct": false, "violation": "NEC 760.49 and IBC 909.11 require fire alarm circuits serving smoke control functions to use fire-rated wiring (2-hour rated CI cable or wiring in 2-hour rated enclosures). Standard fire alarm cable that burns through in the first minutes of a fire will disable smoke damper control precisely when it is needed most.", "codeReference": "NEC 760.49 / IBC 909.11" },
+      { "id": 5, "name": "Dampers installed with access panels for inspection and testing", "correct": true },
+      { "id": 6, "name": "Smoke dampers listed and labeled for the specific application", "correct": true }
+    ],
+    "explanation": "Smoke control dampers in high-rise buildings are life-safety components that must function during fire events. Proper wiring requires emergency power connections, supervised position feedback to the fire alarm panel, and fire-rated cabling that survives the fire environment. IBC Section 909 and NFPA 92 establish comprehensive requirements for smoke control system reliability, including wiring integrity.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-hr-007",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise Electrical Riser Errors",
+    "components": [
+      { "id": 1, "name": "Electrical riser in dedicated shaft with 2-hour fire-rated walls", "correct": true },
+      { "id": 2, "name": "Bus duct riser penetrations through floors not firestopped", "correct": false, "violation": "IBC Section 714.4 requires all penetrations through fire-resistance-rated floor assemblies to be firestopped with a listed through-penetration firestop system. Unsealed bus duct penetrations create vertical smoke and fire migration paths through the entire building, defeating the purpose of rated floor/ceiling assemblies.", "codeReference": "IBC 714.4 / ASTM E814" },
+      { "id": 3, "name": "Emergency and normal power conductors in the same raceway", "correct": false, "violation": "NEC 700.10(B)(1) requires emergency circuit wiring to be kept entirely independent of all other wiring and equipment. Routing emergency and normal power in the same raceway means a single fire or physical damage event can disable both systems simultaneously, eliminating the redundancy that emergency power provides.", "codeReference": "NEC 700.10(B)(1)" },
+      { "id": 4, "name": "No ground-fault protection on 480V riser feeding floor panels", "correct": false, "violation": "NEC 230.95 requires ground-fault protection for equipment (GFPE) on services rated 1,000A or more at 480V. In a high-rise electrical riser, a ground fault without GFPE can cause an arcing fault that escalates into a fire within the riser shaft, potentially disabling power to multiple floors before being detected.", "codeReference": "NEC 230.95" },
+      { "id": 5, "name": "Electrical closets on each floor accessible for maintenance", "correct": true },
+      { "id": 6, "name": "Proper working clearances maintained per NEC 110.26", "correct": true }
+    ],
+    "explanation": "High-rise electrical risers serve as the building's power backbone and must be installed with strict attention to fire safety and system separation. IBC requires firestopping at all floor penetrations, NEC mandates separation of emergency and normal circuits, and ground-fault protection prevents arcing faults from becoming riser fires. A failure in the electrical riser can affect every floor above the fault point.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-hr-008",
+    "type": "whats-wrong",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Emergency Generator Exhaust Routing",
+    "components": [
+      { "id": 1, "name": "Diesel generator rated for building emergency loads", "correct": true },
+      { "id": 2, "name": "Generator exhaust terminating 6 feet from building fresh air intake", "correct": false, "violation": "IMC Section 501.3.1 requires engine exhaust outlets to be located at least 10 feet from any building opening (door, window, or air intake). In high-rise buildings with rooftop generators, exhaust must be positioned to prevent re-entrainment of diesel exhaust into the building HVAC system. Carbon monoxide and diesel particulate entering the building during a fire emergency creates a secondary life-safety hazard.", "codeReference": "IMC 501.3.1 / NFPA 110 Section 7.8" },
+      { "id": 3, "name": "Exhaust piping not supported with seismic bracing in Seismic Design Category D", "correct": false, "violation": "IBC Section 1613 and ASCE 7 require non-structural components (including mechanical piping) in high-rise buildings to be seismically braced. Generator exhaust piping that separates during a seismic event will flood the generator room with hot exhaust gases and carbon monoxide, disabling emergency power and creating immediate life-safety risks.", "codeReference": "IBC 1613 / ASCE 7 Chapter 13" },
+      { "id": 4, "name": "Exhaust thimble through rated wall without fire-rated penetration seal", "correct": false, "violation": "The generator room typically has a 2-hour fire-rated enclosure per NFPA 110 Section 7.2.2. Any penetration through rated walls or floors, including exhaust piping, must maintain the fire-resistance rating using a listed through-penetration firestop system per IBC 714.4. An unsealed exhaust penetration creates a path for fire and smoke to spread beyond the generator room.", "codeReference": "IBC 714.4 / NFPA 110 Section 7.2.2" },
+      { "id": 5, "name": "Flexible exhaust connector at engine connection point", "correct": true },
+      { "id": 6, "name": "Exhaust piping wrapped with thermal insulation to prevent contact burns", "correct": true }
+    ],
+    "explanation": "Emergency generator exhaust routing in high-rise buildings involves mechanical, structural, and fire protection disciplines. IMC requires adequate separation from air intakes, IBC mandates seismic bracing for non-structural components, and fire-rated penetration seals must be maintained through all rated assemblies. Generator rooms in high-rise buildings are typically located on the roof or in the basement, both of which present unique exhaust routing challenges.",
+    "xpReward": 100
+  }
+]

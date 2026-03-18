@@ -1,0 +1,335 @@
+[
+  {
+    "id": "seq-ctrl-001",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "DDC Controller Commissioning",
+    "description": "Put the DDC controller commissioning steps in the correct order.",
+    "steps": [
+      { "id": 1, "text": "Verify controller is powered and communication LED is active", "order": 1 },
+      { "id": 2, "text": "Confirm controller MAC address and device instance match the network plan", "order": 2 },
+      { "id": 3, "text": "Download the application program to the controller", "order": 3 },
+      { "id": 4, "text": "Verify all physical I/O points read correctly (sensor values, status)", "order": 4 },
+      { "id": 5, "text": "Command each output and verify field device responds (valves, dampers)", "order": 5 },
+      { "id": 6, "text": "Test alarm and safety interlock functions", "order": 6 },
+      { "id": 7, "text": "Document all point values and commissioning results", "order": 7 }
+    ],
+    "explanation": "DDC commissioning follows a logical sequence: power, network, program, inputs, outputs, safety, documentation. Testing outputs before verifying inputs can cause unexpected equipment operation. Always verify inputs (sensors) read correctly before commanding outputs.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-ctrl-002",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Temperature Sensor Calibration",
+    "description": "Order the steps for calibrating a space temperature sensor.",
+    "steps": [
+      { "id": 1, "text": "Allow the sensor to stabilize in the space for at least 15 minutes", "order": 1 },
+      { "id": 2, "text": "Place a NIST-traceable reference thermometer next to the sensor", "order": 2 },
+      { "id": 3, "text": "Read the sensor value from the BAS workstation", "order": 3 },
+      { "id": 4, "text": "Compare the BAS reading to the reference thermometer", "order": 4 },
+      { "id": 5, "text": "If deviation exceeds tolerance (+/- 1 degree F), apply a calibration offset in the controller", "order": 5 },
+      { "id": 6, "text": "Verify the corrected BAS reading matches the reference", "order": 6 },
+      { "id": 7, "text": "Record the calibration date, offset, and reference instrument serial number", "order": 7 }
+    ],
+    "explanation": "Sensor calibration ensures accurate readings. Stabilization time prevents false readings from handling the sensor. A NIST-traceable reference is required to have a known-accurate baseline. Recording the calibration data creates an audit trail per ASHRAE Guideline 36.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-ctrl-003",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "BAS System Startup",
+    "description": "Order the steps for the initial startup of a building automation system.",
+    "steps": [
+      { "id": 1, "text": "Verify all network wiring and termination is complete per drawings", "order": 1 },
+      { "id": 2, "text": "Power on controllers one at a time and verify communication", "order": 2 },
+      { "id": 3, "text": "Download programs and network configurations to all controllers", "order": 3 },
+      { "id": 4, "text": "Verify all I/O points on each controller match the point list", "order": 4 },
+      { "id": 5, "text": "Start each HVAC system manually and verify BAS monitoring", "order": 5 },
+      { "id": 6, "text": "Enable automatic control sequences one system at a time", "order": 6 },
+      { "id": 7, "text": "Test all alarms, safeties, and interlocks", "order": 7 },
+      { "id": 8, "text": "Enable trending and verify data logging is operational", "order": 8 }
+    ],
+    "explanation": "BAS startup is methodical: network first, then programming, then verification, then automatic control. Enabling automatic control before verifying I/O points can cause dampers and valves to drive to incorrect positions. Never energize everything at once.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-ctrl-004",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "AHU Sequence of Operations Programming",
+    "description": "Order the steps for programming an AHU sequence of operations into a DDC controller.",
+    "steps": [
+      { "id": 1, "text": "Review the mechanical engineer's sequence of operations document", "order": 1 },
+      { "id": 2, "text": "Create the I/O point map matching hardware wiring to software objects", "order": 2 },
+      { "id": 3, "text": "Program the occupied/unoccupied scheduling logic", "order": 3 },
+      { "id": 4, "text": "Program the supply air temperature PID control loop", "order": 4 },
+      { "id": 5, "text": "Program the economizer sequence with high-limit lockout", "order": 5 },
+      { "id": 6, "text": "Program the duct static pressure control loop for fan speed", "order": 6 },
+      { "id": 7, "text": "Program all safety interlocks (freeze stat, smoke, high static)", "order": 7 },
+      { "id": 8, "text": "Simulate inputs to verify each sequence step responds correctly", "order": 8 }
+    ],
+    "explanation": "Programming follows a logical hierarchy: I/O mapping first, then scheduling (when the system runs), then cascading control loops (temperature, pressure), then safeties. Simulating before going live catches programming errors safely per ASHRAE Guideline 36.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-ctrl-005",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "VAV System Commissioning",
+    "description": "Order the steps for commissioning a VAV system with multiple zone boxes.",
+    "steps": [
+      { "id": 1, "text": "Verify AHU is operational and maintaining duct static pressure setpoint", "order": 1 },
+      { "id": 2, "text": "Commission each VAV box controller: verify sensor, damper, and reheat operation", "order": 2 },
+      { "id": 3, "text": "Set minimum airflow setpoints per ASHRAE 62.1 ventilation calculations", "order": 3 },
+      { "id": 4, "text": "Set maximum airflow setpoints per cooling load design", "order": 4 },
+      { "id": 5, "text": "Verify zone temperature control: cooling mode, deadband, and heating mode", "order": 5 },
+      { "id": 6, "text": "Perform air balance and adjust airflow calibration factors", "order": 6 },
+      { "id": 7, "text": "Verify system diversity — all boxes calling simultaneously", "order": 7 },
+      { "id": 8, "text": "Document final setpoints, airflows, and controller configurations", "order": 8 }
+    ],
+    "explanation": "VAV commissioning starts at the AHU (upstream) and works downstream to zone boxes. Minimum airflow per ASHRAE 62.1 must be set before testing cooling operation. Diversity testing verifies the system handles peak load conditions per ASHRAE Guideline 36.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-ctrl-006",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Chiller Staging Sequence",
+    "description": "Order the control sequence steps for staging on a lag (second) chiller in a two-chiller plant.",
+    "steps": [
+      { "id": 1, "text": "Lead chiller reaches sustained high load (over 90% capacity for 15 minutes)", "order": 1 },
+      { "id": 2, "text": "Plant controller commands lag chiller isolation valve to open", "order": 2 },
+      { "id": 3, "text": "Verify chilled water flow through lag chiller evaporator", "order": 3 },
+      { "id": 4, "text": "Start lag chiller condenser water pump and verify flow", "order": 4 },
+      { "id": 5, "text": "Enable lag chiller compressor and ramp to load", "order": 5 },
+      { "id": 6, "text": "Rebalance chilled water supply temperature setpoint across both chillers", "order": 6 },
+      { "id": 7, "text": "Monitor lag chiller operating parameters for 30 minutes", "order": 7 }
+    ],
+    "explanation": "Chiller staging requires flow verification before compressor start. Starting a chiller without confirmed evaporator flow causes ice formation (freeze-up). ASHRAE Guideline 36 specifies time delays and load confirmation criteria to prevent unnecessary staging.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-ctrl-007",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet Network Setup and Verification",
+    "description": "Order the steps for setting up and verifying a BACnet MS/TP network trunk.",
+    "steps": [
+      { "id": 1, "text": "Install shielded twisted-pair trunk cable in daisy-chain topology", "order": 1 },
+      { "id": 2, "text": "Ground the cable shield at one end only", "order": 2 },
+      { "id": 3, "text": "Install 120-ohm termination resistors at both physical ends of the trunk", "order": 3 },
+      { "id": 4, "text": "Assign unique MAC addresses (0-127) to each controller on the trunk", "order": 4 },
+      { "id": 5, "text": "Set the baud rate to the same value on all devices (typically 76800)", "order": 5 },
+      { "id": 6, "text": "Power on devices and verify token passing using a network analyzer", "order": 6 },
+      { "id": 7, "text": "Perform a Who-Is/I-Am broadcast to discover all devices", "order": 7 }
+    ],
+    "explanation": "BACnet MS/TP network setup follows the physical layer first (wiring, shielding, termination), then the data link layer (MAC addresses, baud rate), then verification. ASHRAE 135 defines these requirements. Communication problems almost always trace back to physical-layer issues.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-ctrl-008",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Point-to-Point Checkout Procedure",
+    "description": "Order the steps for performing a point-to-point checkout on a DDC controller's I/O.",
+    "steps": [
+      { "id": 1, "text": "Obtain the controller I/O point schedule from the controls drawings", "order": 1 },
+      { "id": 2, "text": "Verify each input point: disconnect the sensor wire and check for fault reading on BAS", "order": 2 },
+      { "id": 3, "text": "Reconnect sensors and compare BAS readings to field measurements", "order": 3 },
+      { "id": 4, "text": "Command each analog output from 0% to 100% and verify actuator movement", "order": 4 },
+      { "id": 5, "text": "Command each binary output on/off and verify equipment starts/stops", "order": 5 },
+      { "id": 6, "text": "Verify all feedback status points match actual equipment state", "order": 6 },
+      { "id": 7, "text": "Record all results on the point-to-point checkout form and sign off", "order": 7 }
+    ],
+    "explanation": "Point-to-point checkout verifies every physical connection between field devices and the controller. Disconnecting sensors tests wiring integrity (should show fault). Commanding outputs verifies actuators work. This is the foundation of commissioning — no shortcuts allowed.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-ctrl-009",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Trending Verification and Analysis",
+    "description": "Order the steps for verifying and analyzing trend data from a newly commissioned AHU.",
+    "steps": [
+      { "id": 1, "text": "Configure trend logs for all critical points (SAT, MAT, OAT, damper/valve positions, fan speed)", "order": 1 },
+      { "id": 2, "text": "Set appropriate sample intervals (1-5 min for analog, COV for binary)", "order": 2 },
+      { "id": 3, "text": "Allow the system to operate through at least one full occupied/unoccupied cycle", "order": 3 },
+      { "id": 4, "text": "Export trend data and plot time-series graphs of related points together", "order": 4 },
+      { "id": 5, "text": "Verify control loops are stable (no oscillation or hunting in valve/damper positions)", "order": 5 },
+      { "id": 6, "text": "Confirm setpoint tracking (actual temperature follows setpoint within tolerance)", "order": 6 },
+      { "id": 7, "text": "Identify and correct any control issues discovered in the trend data", "order": 7 }
+    ],
+    "explanation": "Trend data verification is essential for proving control sequences work correctly over time. A single snapshot cannot reveal hunting, cycling, or scheduling issues. ASHRAE Guideline 36 requires trend-based verification during commissioning.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-ctrl-010",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Alarm Setup and Testing",
+    "description": "Order the steps for configuring and testing alarms in a BAS.",
+    "steps": [
+      { "id": 1, "text": "Review the alarm matrix from the controls specification", "order": 1 },
+      { "id": 2, "text": "Configure alarm setpoints, deadbands, and time delays for each point", "order": 2 },
+      { "id": 3, "text": "Assign priority levels to each alarm (life-safety, critical, maintenance, informational)", "order": 3 },
+      { "id": 4, "text": "Configure alarm notification routing (email, text, BAS pop-up, audible)", "order": 4 },
+      { "id": 5, "text": "Simulate each alarm condition by forcing input values beyond limits", "order": 5 },
+      { "id": 6, "text": "Verify correct alarm message, priority, and notification delivery", "order": 6 },
+      { "id": 7, "text": "Document all alarm settings and test results", "order": 7 }
+    ],
+    "explanation": "Alarm configuration requires prioritization per ASHRAE Guideline 13 to prevent alarm flooding. Every alarm must be tested by simulation — never assume alarms work until proven. Time delays and deadbands prevent nuisance alarms from rapid fluctuations.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-ctrl-011",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "System Integration Testing",
+    "description": "Order the steps for performing full system integration testing between the BAS, fire alarm, and lighting control systems.",
+    "steps": [
+      { "id": 1, "text": "Verify all integration interfaces are online (BACnet gateways, hardwired interlocks)", "order": 1 },
+      { "id": 2, "text": "Test fire alarm signal: verify AHU shutdown, smoke damper closure, and stairwell pressurization", "order": 2 },
+      { "id": 3, "text": "Verify BAS correctly displays fire alarm status without controlling life-safety devices", "order": 3 },
+      { "id": 4, "text": "Test duct smoke detector: verify AHU fan shutdown via hardwired interlock", "order": 4 },
+      { "id": 5, "text": "Test lighting override: verify emergency lighting is unaffected by BAS commands", "order": 5 },
+      { "id": 6, "text": "Test elevator recall interface with fire alarm panel", "order": 6 },
+      { "id": 7, "text": "Restore all systems to normal and verify automatic return to normal operation", "order": 7 },
+      { "id": 8, "text": "Document all integration test results with pass/fail for each function", "order": 8 }
+    ],
+    "explanation": "System integration testing verifies all building systems work together during emergency and normal conditions. Life-safety interlocks must operate independently of the BAS. This testing is required before building occupancy per IBC and NFPA standards.",
+    "xpReward": 90
+  },
+  {
+    "id": "seq-ctrl-012",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Boiler Safety Chain Commissioning",
+    "description": "Order the steps for commissioning the safety chain on a hot water boiler controlled by the BAS.",
+    "steps": [
+      { "id": 1, "text": "Verify all hardwired safety devices are in the boiler safety chain (high limit, low water, flame failure)", "order": 1 },
+      { "id": 2, "text": "Confirm safety chain is independent of BAS software — hardwired relay logic only", "order": 2 },
+      { "id": 3, "text": "Test high-temperature limit: simulate over-temperature and verify boiler lockout", "order": 3 },
+      { "id": 4, "text": "Test low-water cutoff: simulate low water level and verify boiler lockout", "order": 4 },
+      { "id": 5, "text": "Test flame failure: interrupt flame signal and verify safe shutdown and pre-purge before restart", "order": 5 },
+      { "id": 6, "text": "Verify BAS receives alarm notification for each safety condition", "order": 6 },
+      { "id": 7, "text": "Confirm manual reset is required after safety lockout (no automatic restart)", "order": 7 },
+      { "id": 8, "text": "Document all safety test results and obtain authority having jurisdiction sign-off", "order": 8 }
+    ],
+    "explanation": "Boiler safety chains protect against explosion and scalding. All safety devices must be hardwired and independent of BAS software. Each safety must be individually tested under simulated fault conditions. Manual reset after lockout is required per ASME and NFPA 85.",
+    "xpReward": 95
+  },
+  {
+    "id": "seq-ctrl-013",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Union Training: DDC Controller Commissioning",
+    "description": "As taught at the IBEW hall — put the DDC controller commissioning steps in the correct order from initial field wiring verification through final documentation.",
+    "steps": [
+      { "id": 1, "text": "Verify all field wiring point-to-point against the controls drawings", "order": 1 },
+      { "id": 2, "text": "Power up the controller and confirm communication on the network", "order": 2 },
+      { "id": 3, "text": "Download the application program to the controller", "order": 3 },
+      { "id": 4, "text": "Verify input readings against independent field measurements (handheld sensors)", "order": 4 },
+      { "id": 5, "text": "Manually command each output and verify field device operation (valves, dampers, relays)", "order": 5 },
+      { "id": 6, "text": "Test all safety interlocks and verify alarm notifications are received", "order": 6 },
+      { "id": 7, "text": "Enable automatic control sequences and observe system response", "order": 7 },
+      { "id": 8, "text": "Document all setpoints, calibration offsets, and verify trend logging is operational", "order": 8 }
+    ],
+    "explanation": "IBEW union hall training emphasizes a disciplined commissioning sequence: wiring first, then power, then program, then verify inputs before ever commanding outputs. Skipping the field wiring check risks damaging equipment when outputs are commanded. Verifying inputs with independent instruments catches sensor wiring errors. Safety interlocks must be proven before enabling automatic control. This sequence prevents the most common commissioning accidents and ensures a complete documentation package for the building owner.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-ctrl-014",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Union Training: Building Automation Network Setup",
+    "description": "Order the steps for commissioning a BACnet IP building automation network from IP addressing through head-end verification.",
+    "steps": [
+      { "id": 1, "text": "Assign IP addresses to all controllers per the network addressing plan", "order": 1 },
+      { "id": 2, "text": "Configure subnet masks and default gateways on each controller", "order": 2 },
+      { "id": 3, "text": "Verify physical network connectivity by pinging each controller from the head-end", "order": 3 },
+      { "id": 4, "text": "Set BACnet device instance numbers (globally unique) on each controller", "order": 4 },
+      { "id": 5, "text": "Configure BACnet routing between subnets (BACnet/IP to MS/TP where applicable)", "order": 5 },
+      { "id": 6, "text": "Discover all devices from the head-end workstation using Who-Is broadcast", "order": 6 },
+      { "id": 7, "text": "Map all points and verify object naming matches the point schedule", "order": 7 },
+      { "id": 8, "text": "Test global commands: time synchronization, schedule downloads, and alarm routing", "order": 8 }
+    ],
+    "explanation": "BACnet IP network commissioning follows the OSI model from bottom to top: physical/network layer (IP addressing, subnet, gateway) must work before the application layer (BACnet device instances, routing, point mapping). Pinging verifies IP connectivity before attempting BACnet communication — this saves hours of troubleshooting. Device instance numbers must be globally unique across the entire BACnet internetwork per ASHRAE 135. Global commands (time sync, schedules) are tested last because they depend on all devices being discovered and mapped correctly.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-ctrl-015",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BAS Point-to-Point Checkout",
+    "description": "Order the steps for performing a comprehensive BAS point-to-point checkout on all I/O per ASHRAE 135-2016.",
+    "steps": [
+      { "id": 1, "text": "Verify 24VAC power to the controller and confirm the power LED is active", "order": 1 },
+      { "id": 2, "text": "Check sensor wiring continuity from field device to controller terminal for every input point", "order": 2 },
+      { "id": 3, "text": "Calibrate all temperature sensors against a NIST-traceable reference thermometer", "order": 3 },
+      { "id": 4, "text": "Verify each analog input reads correctly on the BAS workstation (compare to field measurement)", "order": 4 },
+      { "id": 5, "text": "Command each digital output on/off and verify the associated equipment starts and stops", "order": 5 },
+      { "id": 6, "text": "Confirm BACnet communication by performing a Read-Property request on every object", "order": 6 },
+      { "id": 7, "text": "Tune PID control loops by observing system response and adjusting proportional, integral, and derivative gains", "order": 7 },
+      { "id": 8, "text": "Document all point names, calibration offsets, PID settings, and checkout results on the commissioning form", "order": 8 }
+    ],
+    "explanation": "Point-to-point checkout per ASHRAE 135-2016 verifies every connection between the field and the BAS. Power verification comes first — a controller without power shows all zeros, masking wiring errors. Sensor calibration before input verification ensures any offset is applied before comparing readings. Digital outputs are tested after inputs are verified because commanding an output with a faulty feedback input can cause control instability. PID tuning is the final step because it requires accurate I/O to be meaningful.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-ctrl-016",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Outdoor Air CO2 Sensor Installation",
+    "description": "Order the steps for installing an outdoor air CO2 reference sensor for demand-controlled ventilation per ASHRAE 62.1.",
+    "steps": [
+      { "id": 1, "text": "Select a mounting location on the building exterior away from exhaust fans, cooling towers, and loading docks", "order": 1 },
+      { "id": 2, "text": "Mount the sensor at the manufacturer-recommended height with a weather-protective housing", "order": 2 },
+      { "id": 3, "text": "Wire the 4-20mA analog output from the sensor to the BAS controller input", "order": 3 },
+      { "id": 4, "text": "Configure the controller input scaling for 0-2000 ppm CO2 range", "order": 4 },
+      { "id": 5, "text": "Calibrate the sensor using a certified reference gas at a known CO2 concentration", "order": 5 },
+      { "id": 6, "text": "Verify the BAS trending shows a stable outdoor CO2 reading (typically 400-420 ppm baseline)", "order": 6 },
+      { "id": 7, "text": "Set a high CO2 alarm threshold to detect sensor failure or unusual outdoor conditions", "order": 7 },
+      { "id": 8, "text": "Commission the demand-controlled ventilation sequence using the outdoor CO2 reading as the reference baseline", "order": 8 }
+    ],
+    "explanation": "ASHRAE 62.1 allows demand-controlled ventilation (DCV) using CO2 as a proxy for occupancy. The outdoor CO2 sensor provides the baseline reference — indoor CO2 above outdoor indicates occupant-generated CO2. Sensor placement away from exhaust sources prevents false high readings that would cause over-ventilation. Calibration with reference gas is essential because NDIR CO2 sensors drift over time. The 0-2000 ppm range covers normal outdoor (~400 ppm) through high-occupancy indoor conditions.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-ctrl-017",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "VRF Fan Coil Unit Commissioning",
+    "description": "Order the steps for commissioning a VRF indoor fan coil unit on a multi-split system per Spec 23 81 58.",
+    "steps": [
+      { "id": 1, "text": "Verify power connection to the indoor unit and confirm the correct voltage", "order": 1 },
+      { "id": 2, "text": "Confirm refrigerant piping connections are leak-tested and the outdoor unit is charged", "order": 2 },
+      { "id": 3, "text": "Start the outdoor (condensing) unit and verify it reaches normal operating pressures", "order": 3 },
+      { "id": 4, "text": "Address the indoor unit on the VRF communication network with a unique unit number", "order": 4 },
+      { "id": 5, "text": "Test heating mode — verify supply air temperature rises to the setpoint", "order": 5 },
+      { "id": 6, "text": "Test cooling mode — verify supply air temperature drops to the setpoint", "order": 6 },
+      { "id": 7, "text": "Verify BACnet gateway integration — confirm the unit appears on the BAS with correct point mapping", "order": 7 },
+      { "id": 8, "text": "Balance airflow by adjusting fan speed and louver position to match the design CFM", "order": 8 }
+    ],
+    "explanation": "VRF fan coil commissioning per Spec 23 81 58 requires verifying the refrigerant system is operational before testing the indoor unit. Network addressing must be done before mode testing because the outdoor unit needs to recognize the indoor unit to allow refrigerant flow. Both heating and cooling modes must be tested independently. BACnet integration through the VRF gateway is verified after confirming the unit operates correctly on its native protocol to isolate any integration issues from mechanical problems.",
+    "xpReward": 60
+  }
+]

@@ -1,0 +1,333 @@
+[
+  {
+    "id": "seq-elec-001",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Residential Panel Installation",
+    "description": "Put the steps for installing a residential electrical panel in the correct order.",
+    "steps": [
+      { "id": 1, "text": "Mount the panel box on the wall at proper height and secure to framing", "order": 1 },
+      { "id": 2, "text": "Pull service entrance conductors and branch circuit cables into the panel", "order": 2 },
+      { "id": 3, "text": "Connect the grounding electrode conductor to the grounding bus", "order": 3 },
+      { "id": 4, "text": "Install the main bonding jumper between neutral and ground buses", "order": 4 },
+      { "id": 5, "text": "Terminate service entrance conductors on main breaker and neutral bus", "order": 5 },
+      { "id": 6, "text": "Install branch circuit breakers and terminate hot conductors", "order": 6 },
+      { "id": 7, "text": "Connect neutral and ground wires to their respective buses", "order": 7 },
+      { "id": 8, "text": "Install panel cover, label all circuits, and verify torque on all connections", "order": 8 }
+    ],
+    "explanation": "Panel installation sequence ensures grounding is established before energizing. The grounding electrode and bonding jumper must be connected first so the system is grounded before any live conductors are terminated. Labeling and torque verification are the final QC steps per NEC 408.4 and 110.14(D).",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-elec-002",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Circuit Rough-In for a Room",
+    "description": "Order the steps for roughing in the electrical circuits in a new bedroom during construction.",
+    "steps": [
+      { "id": 1, "text": "Review the electrical blueprint and mark box locations on studs", "order": 1 },
+      { "id": 2, "text": "Install single-gang boxes at receptacle and switch locations per NEC spacing", "order": 2 },
+      { "id": 3, "text": "Install ceiling box for lighting fixture", "order": 3 },
+      { "id": 4, "text": "Drill holes through studs and top plates for cable routing", "order": 4 },
+      { "id": 5, "text": "Pull NM-B cable from the panel location to each box", "order": 5 },
+      { "id": 6, "text": "Staple cables within 12 inches of each box and every 4.5 feet", "order": 6 },
+      { "id": 7, "text": "Leave 6 inches minimum of free conductor at each box", "order": 7 }
+    ],
+    "explanation": "Rough-in follows a logical sequence: plan, install boxes, route cables, secure cables. NEC 314.17 requires cables secured within 12 inches of boxes, and NEC 300.14 requires at least 6 inches of free conductor for making connections. Planning box locations first prevents wasted material.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-elec-003",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Service Upgrade from 100A to 200A",
+    "description": "Order the steps for upgrading a residential electrical service from 100A to 200A.",
+    "steps": [
+      { "id": 1, "text": "Contact the utility company and apply for service upgrade permit", "order": 1 },
+      { "id": 2, "text": "Schedule utility disconnect of existing service", "order": 2 },
+      { "id": 3, "text": "Remove old meter socket and service entrance cable", "order": 3 },
+      { "id": 4, "text": "Install new 200A meter socket and service entrance conductors", "order": 4 },
+      { "id": 5, "text": "Install new 200A main breaker panel and grounding electrode system", "order": 5 },
+      { "id": 6, "text": "Transfer all existing branch circuits to new panel", "order": 6 },
+      { "id": 7, "text": "Install AFCI and GFCI breakers as required by current code", "order": 7 },
+      { "id": 8, "text": "Request inspection, then utility reconnection and meter installation", "order": 8 }
+    ],
+    "explanation": "Service upgrades require utility coordination before any work begins. The utility must disconnect power before the meter socket is changed. AFCI/GFCI upgrades are typically required when doing a panel change per NEC 210.12 and the local AHJ. Inspection must occur before the utility energizes the new service.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-elec-004",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Motor Starter Installation",
+    "description": "Order the steps for installing a magnetic motor starter for a 3-phase HVAC compressor.",
+    "steps": [
+      { "id": 1, "text": "Verify motor nameplate data: FLA, voltage, horsepower, and service factor", "order": 1 },
+      { "id": 2, "text": "Size the branch circuit conductors at 125% of motor FLA per NEC Table 430.250", "order": 2 },
+      { "id": 3, "text": "Select and install overcurrent protection device (breaker/fuses) per NEC 430.52", "order": 3 },
+      { "id": 4, "text": "Mount the motor starter enclosure and wire power conductors", "order": 4 },
+      { "id": 5, "text": "Set overload relay heaters to motor FLA rating", "order": 5 },
+      { "id": 6, "text": "Wire control circuit (start/stop station, safety interlocks)", "order": 6 },
+      { "id": 7, "text": "Connect motor leads and verify rotation direction", "order": 7 }
+    ],
+    "explanation": "Motor starter installation begins with nameplate data because everything else is sized from it. Conductor sizing at 125% FLA per NEC 430.22, OCPD per 430.52, and overloads per 430.32 all reference the nameplate full-load amps. Rotation is checked last to avoid running the motor backward under load.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-elec-005",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Standby Generator Hookup",
+    "description": "Order the steps for connecting a standby generator with an automatic transfer switch.",
+    "steps": [
+      { "id": 1, "text": "Install the generator on a level concrete pad with required clearances", "order": 1 },
+      { "id": 2, "text": "Run conduit and conductors from generator to automatic transfer switch (ATS)", "order": 2 },
+      { "id": 3, "text": "Install the ATS adjacent to the main panel", "order": 3 },
+      { "id": 4, "text": "Connect utility (normal) power to ATS line side", "order": 4 },
+      { "id": 5, "text": "Connect generator output to ATS generator side", "order": 5 },
+      { "id": 6, "text": "Connect ATS load side to emergency panel or selected circuits", "order": 6 },
+      { "id": 7, "text": "Program ATS for transfer settings and exercise schedule", "order": 7 },
+      { "id": 8, "text": "Simulate power outage and verify automatic start, transfer, and retransfer", "order": 8 }
+    ],
+    "explanation": "Generator installations follow a systematic sequence per NEC Article 702 for optional standby. The ATS is the critical link between utility and generator power. It must be wired so that utility and generator can never be connected simultaneously (anti-paralleling). Testing verifies the entire sequence works.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-elec-006",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Receptacle Installation",
+    "description": "Order the steps for installing a duplex receptacle in a residential wall box.",
+    "steps": [
+      { "id": 1, "text": "Turn off the circuit breaker and verify power is off with a voltage tester", "order": 1 },
+      { "id": 2, "text": "Strip NM-B cable sheath and individual conductors to proper length", "order": 2 },
+      { "id": 3, "text": "Connect the bare copper ground wire to the green screw on the receptacle", "order": 3 },
+      { "id": 4, "text": "Connect the white neutral wire to the silver screw terminal", "order": 4 },
+      { "id": 5, "text": "Connect the black hot wire to the brass screw terminal", "order": 5 },
+      { "id": 6, "text": "Fold wires into box, mount receptacle, and install cover plate", "order": 6 },
+      { "id": 7, "text": "Energize circuit and verify correct wiring with a receptacle tester", "order": 7 }
+    ],
+    "explanation": "The ground wire is connected first as a safety practice — if power is accidentally restored during installation, the device is grounded. Silver screws are always neutral (white), brass screws are always hot (black). Verification with a tester catches wiring errors before they become hazards per NEC 406.4.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-elec-007",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "EMT Conduit Bending",
+    "description": "Order the steps for bending a 90-degree stub-up in 3/4\" EMT conduit.",
+    "steps": [
+      { "id": 1, "text": "Measure the desired stub-up height from the floor", "order": 1 },
+      { "id": 2, "text": "Subtract the take-up amount for 3/4\" EMT (6 inches) from the stub height", "order": 2 },
+      { "id": 3, "text": "Mark the conduit at the calculated distance from the end", "order": 3 },
+      { "id": 4, "text": "Align the mark with the arrow on the bender shoe", "order": 4 },
+      { "id": 5, "text": "Apply steady foot pressure while pulling the handle to 90 degrees", "order": 5 },
+      { "id": 6, "text": "Check the bend angle with a level or protractor and adjust if needed", "order": 6 }
+    ],
+    "explanation": "Conduit bending is a fundamental electrical skill. The take-up value (the distance the bender 'takes up' during the bend) varies by conduit size: 5\" for 1/2\" EMT, 6\" for 3/4\" EMT, and 8\" for 1\" EMT. Subtracting this value ensures the stub-up ends at the correct height.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-elec-008",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Wire Pulling in Conduit",
+    "description": "Order the steps for pulling conductors through a conduit raceway system.",
+    "steps": [
+      { "id": 1, "text": "Verify conduit system is complete, all fittings tight, and pull boxes accessible", "order": 1 },
+      { "id": 2, "text": "Push fish tape or pull line through the conduit from one end", "order": 2 },
+      { "id": 3, "text": "Attach conductors to the pull line with a proper pulling grip", "order": 3 },
+      { "id": 4, "text": "Apply UL-listed wire pulling lubricant to the conductors", "order": 4 },
+      { "id": 5, "text": "Pull conductors through the conduit with steady, even tension", "order": 5 },
+      { "id": 6, "text": "Leave sufficient conductor length at each end for terminations", "order": 6 },
+      { "id": 7, "text": "Label conductors at each pull point and verify conductor count", "order": 7 }
+    ],
+    "explanation": "Wire pulling requires preparation to avoid damaging conductor insulation. Lubricant reduces friction and pulling tension per NEC 300.17. The total pulling tension must not exceed the conductor's tensile limit. Conductors are labeled to prevent wiring errors per NEC 200.6 and 210.5.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-elec-009",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Ground Rod Installation",
+    "description": "Order the steps for installing a grounding electrode (ground rod) at a residential service.",
+    "steps": [
+      { "id": 1, "text": "Select a location near the service entrance, clear of underground utilities", "order": 1 },
+      { "id": 2, "text": "Drive the first 8-foot ground rod until flush with or below grade", "order": 2 },
+      { "id": 3, "text": "Measure the resistance to earth using a ground resistance tester", "order": 3 },
+      { "id": 4, "text": "If resistance exceeds 25 ohms, install a second rod at least 6 feet away", "order": 4 },
+      { "id": 5, "text": "Connect the grounding electrode conductor with a listed clamp or exothermic weld", "order": 5 },
+      { "id": 6, "text": "Run the grounding electrode conductor to the panel neutral/ground bus without splices", "order": 6 }
+    ],
+    "explanation": "NEC 250.53(A)(2) requires a supplemental ground rod if a single rod exceeds 25 ohms resistance. Two rods are standard practice. The GEC must be continuous from the electrode to the panel per NEC 250.64(C), and connections must use listed clamps per NEC 250.70.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-elec-010",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Breaker Replacement",
+    "description": "Order the steps for safely replacing a faulty circuit breaker in a residential panel.",
+    "steps": [
+      { "id": 1, "text": "Turn off the main breaker to de-energize the panel bus bars", "order": 1 },
+      { "id": 2, "text": "Verify the bus bars are de-energized with a voltage tester (note: service entrance terminals remain hot)", "order": 2 },
+      { "id": 3, "text": "Remove the panel cover to access the breakers", "order": 3 },
+      { "id": 4, "text": "Disconnect the wire from the faulty breaker terminal", "order": 4 },
+      { "id": 5, "text": "Rock the faulty breaker off the bus bar and remove it from the panel", "order": 5 },
+      { "id": 6, "text": "Install the replacement breaker (same type and amperage) onto the bus bar", "order": 6 },
+      { "id": 7, "text": "Reconnect the conductor, torque to specification, replace cover, and energize", "order": 7 }
+    ],
+    "explanation": "Breaker replacement requires de-energizing the panel first. CRITICAL: the service entrance terminals above the main breaker remain energized even with the main off. Only the utility can de-energize those. Always use appropriate PPE per NFPA 70E and verify de-energization before working.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-elec-011",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "EV Charger Installation",
+    "description": "Order the steps for installing a Level 2 EV charger in a residential garage.",
+    "steps": [
+      { "id": 1, "text": "Verify the panel has capacity for a new 50A double-pole breaker", "order": 1 },
+      { "id": 2, "text": "Run conduit from the panel to the charger mounting location", "order": 2 },
+      { "id": 3, "text": "Pull 6 AWG THHN conductors (2 hots, 1 neutral, 1 ground) through conduit", "order": 3 },
+      { "id": 4, "text": "Mount the EVSE unit or NEMA 14-50 receptacle at proper height", "order": 4 },
+      { "id": 5, "text": "Terminate conductors at the EVSE or receptacle", "order": 5 },
+      { "id": 6, "text": "Install 50A double-pole breaker and terminate conductors at panel", "order": 6 },
+      { "id": 7, "text": "Verify GFCI protection, energize circuit, and test charger operation", "order": 7 }
+    ],
+    "explanation": "EV charger installation per NEC Article 625 requires verifying panel capacity first — many older homes need a panel upgrade. The circuit is typically 50A for a 40A continuous load (80% rule per NEC 210.20). GFCI protection is required per NEC 625.54 for garage installations.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-elec-012",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Troubleshooting a Dead Circuit",
+    "description": "Order the steps for systematically troubleshooting a dead 120V branch circuit.",
+    "steps": [
+      { "id": 1, "text": "Verify the problem: test the receptacle/device with a known working tool or tester", "order": 1 },
+      { "id": 2, "text": "Check the circuit breaker at the panel — reset if tripped", "order": 2 },
+      { "id": 3, "text": "If breaker trips again, check for short circuit by disconnecting all loads", "order": 3 },
+      { "id": 4, "text": "Test voltage at the panel breaker output terminals (line and load side)", "order": 4 },
+      { "id": 5, "text": "Check for voltage at the first accessible junction box in the circuit", "order": 5 },
+      { "id": 6, "text": "Perform continuity test on conductors between the panel and first box", "order": 6 },
+      { "id": 7, "text": "Isolate the fault to a specific segment and inspect for damage, loose connections, or open neutrals", "order": 7 },
+      { "id": 8, "text": "Repair the fault, restore connections, energize, and verify operation at all outlets", "order": 8 }
+    ],
+    "explanation": "Systematic troubleshooting starts at the device (confirm the problem), moves to the panel (power source), then follows the circuit downstream to isolate the fault. Methodical half-splitting — testing at the midpoint to narrow which half has the fault — is the most efficient approach. Per NFPA 70E, always use proper PPE when testing energized circuits.",
+    "xpReward": 80
+  },
+  {
+    "id": "seq-elec-013",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Union Certification: Lockout/Tagout Procedure",
+    "description": "Order the OSHA-compliant lockout/tagout procedure steps as taught in IBEW apprenticeship training.",
+    "steps": [
+      { "id": 1, "text": "Notify all affected employees that a lockout/tagout is about to begin", "order": 1 },
+      { "id": 2, "text": "Identify all energy sources using the equipment's energy control procedure", "order": 2 },
+      { "id": 3, "text": "Shut down the equipment using normal operating controls", "order": 3 },
+      { "id": 4, "text": "Isolate energy sources by opening disconnects, closing valves, and blocking mechanical energy", "order": 4 },
+      { "id": 5, "text": "Apply individual lockout devices and tags to each energy isolation device", "order": 5 },
+      { "id": 6, "text": "Release or restrain all stored energy (capacitors, springs, elevated loads, pressure)", "order": 6 },
+      { "id": 7, "text": "Attempt to restart the equipment to verify zero energy state", "order": 7 },
+      { "id": 8, "text": "Perform the authorized maintenance or repair work", "order": 8 },
+      { "id": 9, "text": "Remove locks and tags in reverse order — only the person who applied each lock may remove it", "order": 9 }
+    ],
+    "explanation": "OSHA 29 CFR 1910.147 (The Control of Hazardous Energy) defines the lockout/tagout procedure that every IBEW apprentice must master. The sequence is critical: notification first ensures no one is surprised, identification ensures all sources are found, and the restart attempt verifies zero energy before work begins. The rule that only the lock owner can remove their lock prevents accidental energization — this principle has saved countless lives in the trade.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-elec-014",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Union Training: Ground Electrode System Installation",
+    "description": "Order the steps for installing a complete grounding electrode system per NEC Article 250, as taught at the IBEW training hall.",
+    "steps": [
+      { "id": 1, "text": "Drive the first ground rod a minimum of 8 feet deep into the earth", "order": 1 },
+      { "id": 2, "text": "Measure earth resistance using a fall-of-potential ground resistance tester", "order": 2 },
+      { "id": 3, "text": "If resistance exceeds 25 ohms, install a supplemental ground rod at least 6 feet away", "order": 3 },
+      { "id": 4, "text": "Bond the grounding electrode conductor to the metal water pipe within 5 feet of the building entry point", "order": 4 },
+      { "id": 5, "text": "Connect the grounding electrode conductor from the rods to the service equipment using listed connectors", "order": 5 },
+      { "id": 6, "text": "Bond the grounding electrode conductor to the service enclosure neutral/ground bus", "order": 6 },
+      { "id": 7, "text": "Test continuity of the entire grounding electrode system from service to earth", "order": 7 },
+      { "id": 8, "text": "Document all resistance readings, connections, and photograph the installation before backfill", "order": 8 }
+    ],
+    "explanation": "NEC Article 250 Part III covers grounding electrode systems. NEC 250.53(G) requires ground rods to be driven at least 8 feet. NEC 250.56 requires a supplemental electrode if a single rod exceeds 25 ohms. NEC 250.52(A)(1) requires bonding to the metal water pipe within 5 feet of entry as a grounding electrode. IBEW training emphasizes testing and documentation because once the ground rods are buried, they cannot be visually inspected — the photographs and readings become the permanent record for the inspector and future electricians.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-elec-015",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "VFD Startup and Commissioning",
+    "description": "Order the steps for commissioning a Variable Frequency Drive (VFD) on a 3-phase motor per NEC 430 and IEEE 519.",
+    "steps": [
+      { "id": 1, "text": "Verify incoming voltage at the VFD matches the nameplate rating and is within tolerance", "order": 1 },
+      { "id": 2, "text": "Check motor nameplate data — FLA, HP, RPM, voltage, and service factor", "order": 2 },
+      { "id": 3, "text": "Program VFD parameters: motor nameplate data, acceleration/deceleration ramps, and speed limits", "order": 3 },
+      { "id": 4, "text": "Set carrier frequency to 2 kHz as the initial default setting", "order": 4 },
+      { "id": 5, "text": "Jog the motor briefly and verify correct rotation direction", "order": 5 },
+      { "id": 6, "text": "Adjust carrier frequency upward if audible motor noise is objectionable", "order": 6 },
+      { "id": 7, "text": "Verify motor overload protection settings match the motor FLA per NEC 430.32", "order": 7 },
+      { "id": 8, "text": "Run the motor at full speed under load and measure current draw on all three phases", "order": 8 }
+    ],
+    "explanation": "VFD commissioning per NEC Article 430 requires verifying supply voltage before powering the drive — voltage outside tolerance damages IGBTs. Carrier frequency starts at 2 kHz to minimize harmonic distortion per IEEE 519, then is adjusted upward only if motor noise is unacceptable (higher carrier frequency increases drive heating). Motor rotation must be confirmed before running at full speed to prevent equipment damage.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-elec-016",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Bypass Contactor Startup",
+    "description": "Order the steps for commissioning a VFD with a bypass contactor assembly per NEC 430.120 and UL 508.",
+    "steps": [
+      { "id": 1, "text": "Verify the VFD bypass assembly is UL 508 listed as a complete unit", "order": 1 },
+      { "id": 2, "text": "Check the short-circuit current rating (SCCR) is adequate for the available fault current", "order": 2 },
+      { "id": 3, "text": "Start the motor in drive mode and verify normal VFD operation", "order": 3 },
+      { "id": 4, "text": "Transfer to bypass mode using the selector switch and verify the motor runs across-the-line", "order": 4 },
+      { "id": 5, "text": "Verify the motor continues to run at full speed in bypass mode", "order": 5 },
+      { "id": 6, "text": "Simulate a VFD fault and verify automatic transfer to bypass (if auto-bypass is specified)", "order": 6 },
+      { "id": 7, "text": "Verify single-phase protection is active in bypass mode to prevent single-phasing the motor", "order": 7 },
+      { "id": 8, "text": "Document drive mode operation, bypass mode operation, and fault transfer test results", "order": 8 }
+    ],
+    "explanation": "VFD bypass commissioning per NEC 430.120 verifies that the motor can operate either through the drive or across-the-line via the bypass contactor. UL 508 listing ensures the assembly has been tested as a system. SCCR verification is critical — an undersized assembly can explode during a fault. Single-phase protection in bypass mode prevents motor burnout if one phase is lost.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-elec-017",
+    "type": "sequence",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Refrigerant Detection System Installation",
+    "description": "Order the steps for installing a refrigerant leak detection and alarm system per ASHRAE 15 and Spec 23 09 03.",
+    "steps": [
+      { "id": 1, "text": "Identify the refrigerant type used in the system to select the correct sensor technology", "order": 1 },
+      { "id": 2, "text": "Determine sensor mounting locations per ASHRAE 15 based on refrigerant density and room layout", "order": 2 },
+      { "id": 3, "text": "Mount sensors at the proper height — low for heavier-than-air refrigerants, high for lighter-than-air", "order": 3 },
+      { "id": 4, "text": "Wire sensors to the refrigerant alarm panel using shielded cable per manufacturer requirements", "order": 4 },
+      { "id": 5, "text": "Set alarm threshold at the refrigerant's TLV-TWA concentration per ASHRAE 15", "order": 5 },
+      { "id": 6, "text": "Test each sensor's response using calibrated reference gas at the alarm setpoint", "order": 6 },
+      { "id": 7, "text": "Verify mechanical ventilation interlock activates when the alarm threshold is reached", "order": 7 },
+      { "id": 8, "text": "Commission the complete system and document sensor locations, setpoints, and test results", "order": 8 }
+    ],
+    "explanation": "ASHRAE Standard 15 requires refrigerant detection in mechanical rooms where the refrigerant charge exceeds certain limits. Sensor height depends on refrigerant vapor density — most common refrigerants (R-410A, R-134a) are heavier than air and sensors mount low. The ventilation interlock is the key safety function: when refrigerant concentration reaches the TLV-TWA, the exhaust fan must start automatically to prevent an oxygen-deficient atmosphere.",
+    "xpReward": 65
+  }
+]

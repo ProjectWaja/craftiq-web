@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cc-dc-001",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "NEC 645 — IT Room Disconnecting Means",
+    "scenario": "A data center IT equipment room has a clearly labeled Emergency Power Off (EPO) button installed at the principal exit door, within sight of the IT equipment racks. The EPO is wired to disconnect all electronic equipment and the dedicated HVAC system serving the room. A protective flip cover is installed over the button to prevent accidental activation.",
+    "isUpToCode": true,
+    "codeReference": "NEC 645.10",
+    "explanation": "This installation meets NEC 645.10 requirements. The disconnecting means must be located at the principal exit door(s) and within sight of the IT equipment. It must be capable of disconnecting power to all electronic equipment and the dedicated HVAC system serving the room. The protective cover is a best practice that prevents accidental activation, which is one of the most common causes of unplanned data center outages. The installation as described satisfies all code requirements for the disconnecting means.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-002",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "NFPA 75 — Clean Agent Without Pre-Discharge Alarm",
+    "scenario": "A new data center server room has a clean agent (Novec 1230) fire suppression system installed with dual cross-zoned smoke detection and automatic release capability. However, no pre-discharge audible alarm or visible strobe notification devices are installed in the room, and there is no manual abort switch to cancel a pending discharge. The design team assumed the room would always be unoccupied.",
+    "isUpToCode": false,
+    "codeReference": "NFPA 75 Section 8.5 / NFPA 2001 Section 4.2.4",
+    "explanation": "This fails code. NFPA 75 Section 8.5 and NFPA 2001 Section 4.2.4 require pre-discharge notification in occupied or occupiable spaces before clean agent release. Audible alarms and visible strobes must activate to provide adequate warning time for personnel to evacuate. A manual abort switch must also be provided so that a pending discharge can be cancelled if the alarm is determined to be false. Even rooms that are typically unoccupied still require these safeguards because maintenance personnel may be present at any time. Without pre-discharge alarms, personnel could be exposed to reduced oxygen concentrations during discharge.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-003",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "TIA-942 Tier III — Single Utility Feed",
+    "scenario": "A facility claims to meet TIA-942 Tier III (Concurrently Maintainable) requirements. It has a single utility feed from the local power company and N+1 redundant diesel generators on site. Power distribution uses redundant UPS modules, but the single utility feed is the sole normal power source with the generators serving only as standby backup.",
+    "isUpToCode": false,
+    "codeReference": "TIA-942 / Uptime Institute Tier III",
+    "explanation": "This fails Tier III requirements. TIA-942 Tier III (Concurrently Maintainable) mandates multiple independent distribution paths serving the IT equipment, so that any single path can be shut down for planned maintenance without affecting the IT load. A single utility feed means the facility cannot perform maintenance on the incoming power infrastructure without relying entirely on generator backup, which does not satisfy the concurrent maintainability requirement. Tier III requires at least two active power distribution paths — typically dual utility feeds or a configuration where any single element from utility entrance to rack can be removed from service without impacting operations.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-004",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "ASHRAE TC 9.9 — Server Inlet Temperature at 80.6°F",
+    "scenario": "A data center operations team measures server inlet temperatures at 80.6°F (27°C) at the top of the cold aisle in their facility. The facility exclusively uses ASHRAE Class A1 equipment, which has a recommended inlet temperature envelope of 64.4°F to 80.6°F (18°C to 27°C). The operations team runs at this upper boundary to reduce cooling energy costs.",
+    "isUpToCode": true,
+    "codeReference": "ASHRAE TC 9.9 Thermal Guidelines for Data Processing Environments",
+    "explanation": "This passes. The server inlet temperature of 80.6°F (27°C) is at the upper boundary of the ASHRAE A1 recommended envelope, which specifies a range of 64.4°F to 80.6°F (18°C to 27°C). While operating at the boundary is aggressive, it is within the compliant range. The ASHRAE A1 allowable envelope actually extends up to 89.6°F (32°C) for short durations, providing additional headroom beyond the recommended range. Running at higher inlet temperatures significantly reduces mechanical cooling energy and is an industry-accepted practice for improving Power Usage Effectiveness (PUE), though operators should monitor closely for hot spots that could push individual servers above the recommended limit.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-005",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "NEC 645 — Non-Plenum Cabling Under Raised Floor",
+    "scenario": "A data center routes IT equipment power cables under a raised floor that serves as a cold air supply plenum for cooling. The power cables installed are standard NM-B (Romex) type, which are not plenum-rated. The cables are neatly organized on cable trays above the concrete slab beneath the raised floor tiles.",
+    "isUpToCode": false,
+    "codeReference": "NEC 645.5 / NEC 300.22",
+    "explanation": "This fails code. When the space under a raised floor is used as an air-handling plenum — which is the standard cooling configuration in data centers — NEC 300.22 and NEC 645.5 restrict the types of wiring methods permitted. Standard NM-B cable is not rated for plenum use because its PVC jacket produces toxic smoke and fumes when exposed to fire. Only plenum-rated cables (such as Type DP), wiring enclosed in metal conduit, or other listed wiring methods specifically approved for plenum spaces are permitted. This requirement exists because toxic smoke spread through the air distribution plenum could rapidly contaminate the entire data center and endanger personnel.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-006",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "NFPA 76 — Telecom Room Without Fire Detection",
+    "scenario": "A telecommunications equipment room houses network switches, patch panels, and fiber optic distribution frames serving a commercial office building. The room has no automatic fire detection system installed — no smoke detectors, no heat detectors, and no connection to the building fire alarm system. A portable ABC fire extinguisher is mounted next to the door as the only fire protection measure.",
+    "isUpToCode": false,
+    "codeReference": "NFPA 76 Section 6.4",
+    "explanation": "This fails code. NFPA 76 (Standard for the Fire Protection of Telecommunications Facilities) Section 6.4 requires automatic fire detection in telecommunications equipment rooms. A portable extinguisher alone is wholly insufficient because these rooms are often unoccupied for extended periods, meaning a fire could grow undetected before anyone notices. Automatic smoke detection connected to the building fire alarm system is required to provide early warning and enable rapid response. The high value of telecommunications equipment and the critical nature of the communications services it supports make early detection essential for minimizing both property damage and service disruption.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-007",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "ASHRAE 90.1 — No Economizer in Climate Zone 5",
+    "scenario": "A newly constructed 2 MW data center in Chicago, Illinois (ASHRAE Climate Zone 5A) operates with a Power Usage Effectiveness (PUE) of 1.8. The cooling system relies entirely on chilled water with water-cooled chillers running year-round. No air-side or water-side economizer is installed. The design engineer determined that the added complexity and cost of economizer systems was not justified for this project.",
+    "isUpToCode": false,
+    "codeReference": "ASHRAE 90.1 Section 6.5.1",
+    "explanation": "This fails ASHRAE 90.1 requirements. ASHRAE Standard 90.1 Section 6.5.1 requires economizer systems for cooling equipment above certain capacity thresholds in climate zones with sufficient free cooling hours, and Climate Zone 5A (Chicago) easily qualifies with thousands of annual hours where outdoor conditions can provide free or assisted cooling. A PUE of 1.8 indicates that 44% of total facility energy is consumed by non-IT overhead, which is very poor by modern standards. With a properly designed air-side or water-side economizer, this facility could achieve a PUE in the 1.2 to 1.4 range, saving hundreds of thousands of dollars in annual energy costs. The economizer requirement is not optional regardless of cost justification arguments.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-dc-008",
+    "type": "code-check",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "NEC 708 — COPS Facility Without 96-Hour Fuel Supply",
+    "scenario": "A data center designated as a Critical Operations Power System (COPS) facility under NEC Article 708 has standby diesel generators with only 24 hours of on-site fuel storage in sub-base tanks. The facility is located in a suburban area where fuel delivery companies can typically respond within 8 to 12 hours. Management decided the shorter fuel supply was acceptable given the reliable local fuel delivery infrastructure.",
+    "isUpToCode": false,
+    "codeReference": "NEC 708.24",
+    "explanation": "This fails code. NEC Article 708 (Critical Operations Power Systems) Section 708.24 requires a minimum of 96 hours (4 days) of on-site fuel storage for COPS-designated facilities. The 24-hour supply provides only 25% of the required minimum. The 96-hour requirement exists because during major disasters such as hurricanes, earthquakes, or ice storms, fuel delivery infrastructure can be disrupted for days or even weeks. A COPS facility must be capable of sustaining critical operations independently during extended emergencies, regardless of assumptions about local fuel delivery availability. Management convenience or cost considerations do not override this code requirement.",
+    "xpReward": 60
+  }
+]

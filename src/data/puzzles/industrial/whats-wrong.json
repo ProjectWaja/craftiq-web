@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ww-in-001",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Process Piping Installation Errors",
+    "components": [
+      { "id": 1, "name": "304 stainless steel pipe used for corrosive chemical service", "correct": true },
+      { "id": 2, "name": "Socket-weld fittings used on 4-inch NPS process piping", "correct": false, "violation": "ASME B31.3 limits socket-weld fittings to NPS 2 and smaller for process piping. For 4-inch and larger, butt-weld fittings are required to ensure full-penetration welds with adequate strength and inspectability for hazardous fluid service.", "codeReference": "ASME B31.3 Section 328.2.2" },
+      { "id": 3, "name": "Carbon steel pipe used downstream of a sulfuric acid transfer pump", "correct": false, "violation": "Carbon steel is not suitable for concentrated sulfuric acid service at elevated temperatures. The acid will cause rapid corrosion and thinning, leading to catastrophic failure. Material selection must follow ASME B31.3 Table A-1 and NACE MR0175 guidelines for corrosive service.", "codeReference": "ASME B31.3 Table A-1 / NACE MR0175" },
+      { "id": 4, "name": "No spring-type pipe supports on high-temperature steam line", "correct": false, "violation": "High-temperature piping (above 400°F) experiences significant thermal expansion. Without spring supports, thermal movement creates excessive stress at anchors, branch connections, and equipment nozzles. ASME B31.3 requires stress analysis to account for thermal loads, and spring hangers are the standard solution for absorbing vertical movement.", "codeReference": "ASME B31.3 Section 321 / MSS SP-58" },
+      { "id": 5, "name": "Flanged connections with proper gaskets and bolt torque sequence", "correct": true },
+      { "id": 6, "name": "Pipe identification labels per ASME A13.1 color coding", "correct": true }
+    ],
+    "explanation": "Process piping under ASME B31.3 has strict requirements for fitting types, material compatibility, and support design. Socket-weld fittings are limited to small bore sizes, material selection must match the process fluid chemistry, and thermal movement must be accommodated by proper spring-type supports to prevent stress failures in high-temperature service.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-in-002",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Hazardous Area Electrical Classification Violations",
+    "components": [
+      { "id": 1, "name": "Explosionproof junction box in Class I, Division 1 area", "correct": true },
+      { "id": 2, "name": "Standard (non-rated) conduit fitting used in Class I, Division 2 zone near solvent tank", "correct": false, "violation": "All conduit fittings in Class I, Division 2 locations must be listed for the specific hazardous classification. Standard fittings can allow ignitable concentrations of gas to migrate through the conduit system. NEC 501.10(B) requires conduit seals and listed fittings to prevent gas migration and potential ignition.", "codeReference": "NEC 501.10(B) / NEC 501.15" },
+      { "id": 3, "name": "Non-explosionproof disconnect switch within 10 feet of flammable liquid dispensing point", "correct": false, "violation": "Disconnect switches within the classified hazardous area boundary of a flammable liquid dispensing point must be rated for the area classification. NEC Table 514.3 and NFPA 497 define the extent of classified areas around dispensing points. A non-rated switch can produce arcs that ignite flammable vapors.", "codeReference": "NEC 500.8 / NFPA 497 Chapter 5" },
+      { "id": 4, "name": "Missing conduit seal at boundary between classified and unclassified area", "correct": false, "violation": "NEC 501.15(A) requires conduit seals at every point where conduit passes from a Class I, Division 1 or 2 area into an unclassified area. Without the seal, flammable gases or vapors can migrate through the conduit system into unclassified areas, creating an explosion hazard in spaces not designed for it.", "codeReference": "NEC 501.15(A)" },
+      { "id": 5, "name": "Intrinsically safe instrument wiring in blue-colored conduit", "correct": true },
+      { "id": 6, "name": "Equipment grounding conductor sized per NEC 250.122", "correct": true }
+    ],
+    "explanation": "Hazardous area electrical installations per NEC Articles 500-503 require meticulous attention to equipment ratings, conduit sealing, and area classification boundaries. Every component must be listed for the specific Class, Division (or Zone), and Group. Conduit seals prevent gas migration between classified and unclassified areas, and all switching devices must be rated to contain any internal arc or spark.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-in-003",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Ventilation Deficiencies",
+    "components": [
+      { "id": 1, "name": "Local exhaust ventilation (LEV) hood positioned at welding station", "correct": true },
+      { "id": 2, "name": "Exhaust duct velocity at 1,800 FPM for metallic dust collection", "correct": false, "violation": "ACGIH Industrial Ventilation Manual specifies minimum transport velocities of 3,500 to 4,500 FPM for metallic dust to prevent settling in ductwork. At 1,800 FPM, heavy metal particulate will accumulate in horizontal runs, reducing system effectiveness and creating a fire/explosion hazard from combustible dust buildup.", "codeReference": "ACGIH Industrial Ventilation Manual Table 5-1 / NFPA 652" },
+      { "id": 3, "name": "Makeup air supply damper locked in closed position", "correct": false, "violation": "Industrial exhaust systems require adequate makeup air to replace the exhausted volume. A closed makeup air damper creates negative building pressure, reducing exhaust hood capture velocity and potentially causing backdrafting of combustion appliances. ASHRAE 62.1 and OSHA require balanced ventilation in industrial facilities.", "codeReference": "ASHRAE 62.1 Section 5.9 / OSHA 1910.94" },
+      { "id": 4, "name": "No explosion relief vent on dust collector handling aluminum dust", "correct": false, "violation": "Aluminum dust is highly combustible and explosive. Dust collectors handling combustible metals must have explosion relief vents sized per NFPA 68 to safely relieve deflagration pressure. Without relief venting, an internal dust explosion can rupture the collector, sending shrapnel and flame into the facility.", "codeReference": "NFPA 68 / NFPA 484 / OSHA 1910.94" },
+      { "id": 5, "name": "Fire damper installed at duct penetration through fire-rated wall", "correct": true },
+      { "id": 6, "name": "Exhaust stack termination above roofline with weather cap", "correct": true }
+    ],
+    "explanation": "Industrial ventilation systems must maintain proper transport velocities to prevent dust accumulation, provide adequate makeup air to maintain system effectiveness, and include explosion protection on dust collectors handling combustible materials. The ACGIH Industrial Ventilation Manual and NFPA 652/484 provide the design criteria for safe industrial exhaust systems.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-in-004",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam System Safety Issues",
+    "components": [
+      { "id": 1, "name": "Steam header with proper drip legs at low points", "correct": true },
+      { "id": 2, "name": "Pressure relief valve discharge piped directly into occupied walkway", "correct": false, "violation": "ASME BPVC Section I and ASME B31.1 require PRV discharge to be piped to a safe location where released steam cannot endanger personnel. Discharge into an occupied walkway creates severe burn and scalding hazards. PRV outlets must be directed vertically upward or to a safe discharge point away from personnel areas.", "codeReference": "ASME BPVC Section I PG-71 / ASME B31.1" },
+      { "id": 3, "name": "Block valve installed between boiler and pressure relief valve", "correct": false, "violation": "ASME BPVC Section I strictly prohibits any intervening stop valve between a boiler and its pressure relief valve. A closed block valve renders the PRV inoperable, allowing boiler pressure to exceed the maximum allowable working pressure (MAWP) and potentially causing a catastrophic boiler explosion.", "codeReference": "ASME BPVC Section I PG-71.2" },
+      { "id": 4, "name": "Missing condensate return trap on steam heat exchanger outlet", "correct": false, "violation": "Steam heat exchangers must have properly functioning steam traps on the condensate outlet to remove condensate and prevent water hammer. Water hammer in steam systems generates pressure shocks up to 10 times operating pressure, which can rupture piping, damage equipment, and cause severe personnel injuries.", "codeReference": "ASME B31.1 / Steam trap selection per Armstrong/Spirax Sarco" },
+      { "id": 5, "name": "Steam pipe insulated with fiberglass jacketing and vapor barrier", "correct": true },
+      { "id": 6, "name": "Gauge glass with isolation valves on steam drum", "correct": true }
+    ],
+    "explanation": "Steam systems operate at high pressure and temperature, making safety violations potentially catastrophic. PRV discharge must be directed away from personnel, block valves between boilers and PRVs are absolutely prohibited by ASME code, and proper condensate removal via steam traps prevents dangerous water hammer events that can rupture piping.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-in-005",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air System Problems",
+    "components": [
+      { "id": 1, "name": "Rotary screw compressor with inlet air filter", "correct": true },
+      { "id": 2, "name": "Compressed air receiver tank missing ASME nameplate and NB registration", "correct": false, "violation": "All pressure vessels including compressed air receivers must bear an ASME Section VIII nameplate with National Board (NB) registration number, MAWP, manufacturer data, and serial number. An unregistered vessel cannot be legally operated and may not have been properly designed, fabricated, or tested per ASME code.", "codeReference": "ASME BPVC Section VIII Div. 1 / OSHA 1910.169" },
+      { "id": 3, "name": "No automatic drain valve on compressed air aftercooler moisture separator", "correct": false, "violation": "Aftercoolers condense large volumes of moisture from compressed air. Without an automatic drain, condensate accumulates and carries over into the distribution system, causing corrosion, instrument malfunction, and product contamination. Automatic drains are required for reliable moisture removal.", "codeReference": "Compressed Air & Gas Institute (CAGI) Best Practices / OSHA 1910.169" },
+      { "id": 4, "name": "Receiver tank pressure relief valve set above vessel MAWP", "correct": false, "violation": "ASME Section VIII requires the pressure relief device on a vessel to be set at or below the vessel's maximum allowable working pressure (MAWP). A PRV set above MAWP provides no overpressure protection, risking catastrophic vessel failure. The PRV set pressure must never exceed the MAWP stamped on the nameplate.", "codeReference": "ASME BPVC Section VIII UG-134 / OSHA 1910.169(b)" },
+      { "id": 5, "name": "Piping system sloped toward drip legs for moisture drainage", "correct": true },
+      { "id": 6, "name": "Pressure gauges installed at compressor outlet and receiver tank", "correct": true }
+    ],
+    "explanation": "Compressed air systems involve pressurized vessels and piping regulated by ASME and OSHA. Receiver tanks must carry proper ASME certification, moisture management requires automatic drains at all separation points, and pressure relief valves must be set at or below the vessel MAWP to prevent overpressure failures.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-in-006",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Chemical Storage HVAC Failures",
+    "components": [
+      { "id": 1, "name": "Secondary containment dike around chemical storage tanks", "correct": true },
+      { "id": 2, "name": "Ventilation system recirculating chemical storage room air back into the room", "correct": false, "violation": "Chemical storage rooms require 100% exhaust (no recirculation) to prevent accumulation of toxic or flammable vapors. IFC Section 5003.8.4 and OSHA 1910.106 require continuous mechanical ventilation at a minimum rate of 1 CFM per square foot of floor area, exhausted directly to the outdoors.", "codeReference": "IFC 5003.8.4 / OSHA 1910.106(d)(4)" },
+      { "id": 3, "name": "Exhaust air intake located at ceiling level only", "correct": false, "violation": "Many hazardous chemicals produce vapors heavier than air (vapor density > 1.0) that settle to floor level. Exhaust intakes must be positioned at both floor level (for heavy vapors) and ceiling level (for light vapors) based on the chemicals stored. Floor-level exhaust is critical for solvents, acids, and most flammable liquids.", "codeReference": "NFPA 30 Section 6.4.2 / ASHRAE 62.1" },
+      { "id": 4, "name": "No emergency exhaust override tied to gas detection system", "correct": false, "violation": "Chemical storage areas must have gas detection systems that trigger emergency exhaust ventilation rates when vapor concentrations reach alarm thresholds (typically 10-25% of LEL or PEL). Without automatic emergency ventilation override, dangerous concentrations can build up during a spill before anyone manually activates increased exhaust.", "codeReference": "IFC 5003.8.5 / NFPA 30 Section 6.4" },
+      { "id": 5, "name": "Explosion-proof exhaust fan motor in classified area", "correct": true },
+      { "id": 6, "name": "Chemical safety data sheets (SDS) posted at room entrance", "correct": true }
+    ],
+    "explanation": "Chemical storage room HVAC must provide continuous, non-recirculated exhaust ventilation with intake points matched to the vapor density of stored chemicals. Emergency exhaust override tied to gas detection provides automatic response to spill events. These requirements come from IFC, NFPA 30, and OSHA chemical storage regulations.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-in-007",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Welding and Hot Work Area Violations",
+    "components": [
+      { "id": 1, "name": "Welding machine properly grounded to building steel", "correct": true },
+      { "id": 2, "name": "Hot work permit area with flammable materials stored within 20 feet", "correct": false, "violation": "NFPA 51B (Standard for Fire Prevention During Welding, Cutting, and Other Hot Work) requires all combustible and flammable materials to be removed at least 35 feet from the hot work operation. If materials cannot be moved, they must be protected with fire-resistant covers. A 20-foot clearance is insufficient and creates a direct fire ignition risk.", "codeReference": "NFPA 51B Section 9.3 / OSHA 1910.252(a)" },
+      { "id": 3, "name": "No fire watch assigned during hot work in the area", "correct": false, "violation": "OSHA 1910.252(a)(2)(iii)(B) and NFPA 51B require a fire watch when hot work is performed in locations where other than minor fires might develop or where combustible materials are closer than 35 feet. The fire watch must continue for at least 30 minutes after hot work ceases and must have fire extinguishing equipment immediately available.", "codeReference": "NFPA 51B Section 9.5 / OSHA 1910.252(a)(2)(iii)(B)" },
+      { "id": 4, "name": "Welding fume exhaust ventilation not operating during active welding", "correct": false, "violation": "OSHA 1910.252(c) requires adequate ventilation for all welding operations. In confined or enclosed spaces, mechanical ventilation must provide a minimum of 2,000 CFM per welder. Welding fumes contain hexavalent chromium, manganese, and other toxic metals that exceed OSHA PELs without proper exhaust ventilation.", "codeReference": "OSHA 1910.252(c) / ACGIH TLV Guidelines" },
+      { "id": 5, "name": "Welding curtain screen isolating work area from adjacent operations", "correct": true },
+      { "id": 6, "name": "ABC fire extinguisher within 25 feet of hot work operation", "correct": true }
+    ],
+    "explanation": "Hot work operations in industrial facilities require strict adherence to NFPA 51B and OSHA welding standards. The 35-foot clearance from combustibles, mandatory fire watch with post-work monitoring, and continuous fume exhaust ventilation are non-negotiable safety requirements that prevent fire, explosion, and toxic exposure incidents.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-in-008",
+    "type": "whats-wrong",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial Exhaust System Errors",
+    "components": [
+      { "id": 1, "name": "Exhaust ductwork fabricated from appropriate gauge sheet metal", "correct": true },
+      { "id": 2, "name": "Multiple branch duct connections entering collector at same point without balancing", "correct": false, "violation": "Branch duct connections entering a main collector must be properly balanced with blast gates or dampers to ensure each hood receives its design capture velocity. Unbalanced branches cause some hoods to starve while others receive excessive airflow, resulting in worker exposure to contaminants at underperforming hoods.", "codeReference": "ACGIH Industrial Ventilation Manual Chapter 5 / OSHA 1910.94" },
+      { "id": 3, "name": "Exhaust fan located upstream of dust collector (dirty-air side)", "correct": false, "violation": "The exhaust fan must be located downstream of the dust collector (clean-air side) to prevent abrasive particulate from eroding fan blades and housing. Fan erosion causes imbalance, vibration, premature failure, and potential spark generation in explosive dust environments. NFPA 652 and ACGIH guidelines require clean-air-side fan placement.", "codeReference": "NFPA 652 / ACGIH Industrial Ventilation Manual Chapter 7" },
+      { "id": 4, "name": "No spark detection or suppression system on duct feeding combustible dust collector", "correct": false, "violation": "Ductwork carrying combustible dust to a collector must have spark detection and/or suppression systems to intercept incendiary sparks before they reach the collector. NFPA 652 (Standard on the Fundamentals of Combustible Dust) and NFPA 69 require spark mitigation for processes that generate sparks, such as grinding, cutting, or welding operations.", "codeReference": "NFPA 652 / NFPA 69 / OSHA 1910.22" },
+      { "id": 5, "name": "Ductwork properly grounded to prevent static charge buildup", "correct": true },
+      { "id": 6, "name": "Clean-out access doors installed at direction changes and low points", "correct": true }
+    ],
+    "explanation": "Industrial exhaust systems must be properly designed with balanced airflow at all branches, clean-air-side fan placement to prevent erosion, and spark detection/suppression to prevent combustible dust explosions. These requirements from ACGIH, NFPA 652, and OSHA protect workers from contaminant exposure and explosion hazards.",
+    "xpReward": 100
+  }
+]

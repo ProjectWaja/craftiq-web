@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ww-dc-001",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Hot/Cold Aisle Mixing",
+    "components": [
+      { "id": 1, "name": "Server racks aligned in hot/cold aisle layout", "correct": true },
+      { "id": 2, "name": "Blanking panels missing from empty U-spaces in rack", "correct": false, "violation": "Empty U-spaces allow hot exhaust air to recirculate into the cold aisle, creating hot spots and reducing cooling efficiency. Blanking panels are required per ASHRAE TC 9.9 best practices to maintain airflow separation.", "codeReference": "ASHRAE TC 9.9 Thermal Guidelines" },
+      { "id": 3, "name": "Containment door propped open with doorstop", "correct": false, "violation": "Propping open hot aisle containment doors defeats the purpose of airflow separation. Containment doors must remain closed and self-closing to maintain the pressure differential between hot and cold aisles.", "codeReference": "ASHRAE TC 9.9 / TIA-942 Annex G" },
+      { "id": 4, "name": "Perforated floor tile placed in hot aisle", "correct": false, "violation": "Perforated tiles must only be placed in cold aisles to deliver conditioned air to server inlets. A perforated tile in the hot aisle short-circuits cooling by dumping cold air directly into the return path, wasting cooling capacity.", "codeReference": "ASHRAE TC 9.9 Thermal Guidelines" },
+      { "id": 5, "name": "CRAH unit positioned at row end", "correct": true },
+      { "id": 6, "name": "Overhead cable trays routed perpendicular to racks", "correct": true }
+    ],
+    "explanation": "Hot/cold aisle separation is the foundation of data center cooling efficiency. Blanking panels, sealed containment, and correct perforated tile placement can improve cooling effectiveness by 20-30%. These are the most common and easily corrected violations in operating data centers.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-dc-002",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "UPS Room Hazards",
+    "components": [
+      { "id": 1, "name": "UPS modules installed in rated electrical room", "correct": true },
+      { "id": 2, "name": "Water pipe routed directly above battery racks", "correct": false, "violation": "Water piping must not be routed above or through battery rooms. A leak could cause short circuits, thermal runaway, or electrocution. NEC 480.9(A) requires protection of battery installations from environmental hazards.", "codeReference": "NEC 480.9(A) / NFPA 1 11.1.7" },
+      { "id": 3, "name": "No hydrogen ventilation system installed", "correct": false, "violation": "VRLA and flooded lead-acid batteries emit hydrogen gas during charging. Without dedicated ventilation, hydrogen can accumulate to explosive concentrations (4% LEL). Mechanical ventilation is required per NEC 480.9(B) and NFPA 1 52.3.3.", "codeReference": "NEC 480.9(B) / NFPA 1 52.3.3" },
+      { "id": 4, "name": "Battery cabinet door left open and unsecured", "correct": false, "violation": "Battery cabinets must remain closed to prevent accidental contact with live DC bus bars and to contain any thermal event. Open cabinets also violate NEC 110.27 regarding guarding of live parts and create arc flash hazards.", "codeReference": "NEC 110.27 / NFPA 70E" },
+      { "id": 5, "name": "Emergency lighting with battery backup", "correct": true },
+      { "id": 6, "name": "Spill containment beneath battery racks", "correct": true }
+    ],
+    "explanation": "UPS and battery rooms present unique hazards including hydrogen gas accumulation, acid spills, DC arc flash, and water damage. Proper ventilation, piping exclusion zones, and secured enclosures are code-mandated safety requirements.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-dc-003",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Cable Management Violations",
+    "components": [
+      { "id": 1, "name": "Structured cabling run through overhead ladder tray", "correct": true },
+      { "id": 2, "name": "Cables blocking perforated floor tiles", "correct": false, "violation": "Cables routed across perforated floor tiles obstruct cold air delivery to server inlets. Under-floor cable routing must maintain clear pathways around perforated tiles. Cable obstruction can reduce tile airflow by 50% or more.", "codeReference": "ASHRAE TC 9.9 / TIA-942 5.3.5" },
+      { "id": 3, "name": "Fiber optic cables with bend radius below minimum", "correct": false, "violation": "Fiber optic cables bent below the minimum bend radius (typically 10x cable diameter for multimode, 15x for singlemode under load) suffer increased attenuation, signal loss, and potential fiber breakage. This violates TIA-568 installation standards.", "codeReference": "TIA-568.3-D / Manufacturer specifications" },
+      { "id": 4, "name": "Missing cable labels on patch panel connections", "correct": false, "violation": "All cabling must be labeled at both ends per TIA-606 administration standard. Missing labels lead to incorrect patching, extended troubleshooting times, and accidental disconnections during maintenance.", "codeReference": "TIA-606-C" },
+      { "id": 5, "name": "Copper patch cables properly dressed in vertical cable manager", "correct": true },
+      { "id": 6, "name": "Power cables separated from data cables by barrier", "correct": true }
+    ],
+    "explanation": "Cable management directly impacts cooling efficiency, signal integrity, and operational reliability. Blocked floor tiles create hot spots, bend radius violations cause network errors, and missing labels increase mean time to repair (MTTR) during outages.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-dc-004",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "PDU Installation Errors",
+    "components": [
+      { "id": 1, "name": "Floor-mount PDU with input breaker and transformer", "correct": true },
+      { "id": 2, "name": "Branch circuit loaded to 95% of breaker rating", "correct": false, "violation": "NEC 210.20(A) requires that continuous loads (3+ hours, which applies to IT equipment) not exceed 80% of the branch circuit breaker rating. Loading to 95% will cause nuisance tripping and violates the continuous load derating requirement.", "codeReference": "NEC 210.20(A)" },
+      { "id": 3, "name": "Single-corded server on redundant A+B power feed", "correct": false, "violation": "A single-corded server connected to only one PDU feed negates the redundancy of the A+B power architecture. If that PDU undergoes maintenance, the server loses power. All critical loads must have dual-corded power supplies or use a static transfer switch (STS).", "codeReference": "TIA-942 / Uptime Institute Tier III+" },
+      { "id": 4, "name": "No branch circuit monitoring system (BCMS) installed", "correct": false, "violation": "Branch circuit monitoring is required for capacity planning and to detect load imbalances. ASHRAE 90.4 mandates metering of electrical distribution in data centers, and most Tier III+ designs require per-circuit monitoring.", "codeReference": "ASHRAE 90.4 / TIA-942" },
+      { "id": 5, "name": "PDU output panelboard with proper arc flash labels", "correct": true },
+      { "id": 6, "name": "Color-coded A and B power whips to racks", "correct": true }
+    ],
+    "explanation": "PDU installation in data centers requires careful attention to load management, redundancy architecture, and monitoring. Overloaded circuits cause outages, single-corded loads create single points of failure, and without monitoring you cannot manage capacity proactively.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-dc-005",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "CRAH Unit Issues",
+    "components": [
+      { "id": 1, "name": "CRAH unit positioned on raised floor with supply underneath", "correct": true },
+      { "id": 2, "name": "Coils visibly dirty with dust and debris buildup", "correct": false, "violation": "Dirty CRAH coils reduce heat transfer efficiency significantly, potentially losing 20-40% of cooling capacity. Regular coil cleaning is required per ASHRAE maintenance guidelines. Reduced capacity leads to higher server inlet temperatures and potential thermal shutdowns.", "codeReference": "ASHRAE Guideline 36 / Manufacturer maintenance requirements" },
+      { "id": 3, "name": "Return air path blocked by stored equipment", "correct": false, "violation": "Blocking the CRAH return air path forces the unit to recirculate already-cooled air or starve for airflow, reducing capacity and creating hot spots. Return air must have an unobstructed path from the hot aisle per ASHRAE TC 9.9 best practices.", "codeReference": "ASHRAE TC 9.9 Thermal Guidelines" },
+      { "id": 4, "name": "Condensate drain line without P-trap", "correct": false, "violation": "CRAH condensate drains must have a P-trap to prevent pressurized under-floor air from blowing back through the drain line. Without a trap, the raised floor plenum pressure will force air through the drain, preventing condensate from draining and potentially causing water damage.", "codeReference": "IMC 307.2 / ASHRAE" },
+      { "id": 5, "name": "Variable frequency drive (VFD) on fan motor", "correct": true },
+      { "id": 6, "name": "Chilled water supply and return valves with isolation", "correct": true }
+    ],
+    "explanation": "CRAH units are the workhorses of data center cooling. Dirty coils, blocked return air, and improper condensate drainage are the three most common maintenance failures that lead to thermal events and water damage in data centers.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-dc-006",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Fire Suppression Deficiencies",
+    "components": [
+      { "id": 1, "name": "Clean agent (FM-200/Novec 1230) suppression system installed", "correct": true },
+      { "id": 2, "name": "Agent cylinder pressure gauge reading in yellow (low) zone", "correct": false, "violation": "Clean agent cylinders must maintain proper pressure to ensure adequate agent discharge. A low-pressure reading indicates a slow leak or environmental issue. The system will not achieve design concentration if discharged, leaving the room unprotected. Semi-annual inspection is required per NFPA 2001.", "codeReference": "NFPA 2001 Chapter 8" },
+      { "id": 3, "name": "Discharge nozzle blocked by cable tray installed too close", "correct": false, "violation": "Clean agent discharge nozzles must have unobstructed spray patterns to achieve uniform concentration throughout the protected space. A cable tray blocking the nozzle will create shadow zones where agent concentration is below the design minimum, potentially allowing fire to persist.", "codeReference": "NFPA 2001 5.4" },
+      { "id": 4, "name": "No pre-discharge alarm or strobe installed in server room", "correct": false, "violation": "NFPA 2001 requires audible and visible pre-discharge notification in occupied spaces to allow personnel evacuation before agent release. Without pre-discharge alarms, occupants may be trapped during discharge, creating a life safety hazard due to reduced oxygen levels.", "codeReference": "NFPA 2001 4.2.4 / NFPA 75 8.5" },
+      { "id": 5, "name": "Room integrity maintained with sealed penetrations", "correct": true },
+      { "id": 6, "name": "Agent concentration calculation posted at control panel", "correct": true }
+    ],
+    "explanation": "Clean agent fire suppression systems are life-safety systems that require meticulous maintenance and unobstructed installation. Low cylinder pressure, blocked nozzles, and missing pre-discharge alarms can each independently render the system ineffective or dangerous.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-dc-007",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Generator Room Violations",
+    "components": [
+      { "id": 1, "name": "Diesel generator with sub-base fuel tank", "correct": true },
+      { "id": 2, "name": "Day tank overflow not piped to secondary containment", "correct": false, "violation": "Fuel day tank overflow must discharge to a secondary containment area to prevent environmental contamination. Uncontained fuel overflow creates fire hazard and environmental code violations. Secondary containment must hold 110% of the largest tank volume per EPA 40 CFR 112.", "codeReference": "NFPA 110 7.9 / EPA 40 CFR 112" },
+      { "id": 3, "name": "Exhaust stack termination 8 feet from building fresh air intake", "correct": false, "violation": "Generator exhaust must be routed away from building air intakes to prevent carbon monoxide and diesel particulate from entering the building. Most codes require a minimum separation of 15-25 feet between exhaust discharge and any air intake opening.", "codeReference": "IMC 501.3 / NFPA 110 7.8" },
+      { "id": 4, "name": "No emergency stop button located outside the generator room", "correct": false, "violation": "An emergency stop accessible from outside the generator room is required so operators can shut down the generator without entering a potentially hazardous space (fire, fuel leak, or excessive noise). NEC 445.18 requires a readily accessible disconnecting means.", "codeReference": "NEC 445.18 / NFPA 110 7.2" },
+      { "id": 5, "name": "Block heater maintaining engine coolant temperature", "correct": true },
+      { "id": 6, "name": "Automatic transfer switch (ATS) rated for generator capacity", "correct": true }
+    ],
+    "explanation": "Generator rooms are high-hazard spaces with fuel, exhaust, noise, and high-voltage risks. Proper fuel containment, exhaust routing, and external emergency stops are critical safety requirements that protect both personnel and the facility.",
+    "xpReward": 100
+  },
+  {
+    "id": "ww-dc-008",
+    "type": "whats-wrong",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Grounding and Bonding Deficiencies",
+    "components": [
+      { "id": 1, "name": "Main electrical service grounding electrode system", "correct": true },
+      { "id": 2, "name": "Server rack not bonded to data center ground grid", "correct": false, "violation": "Every server rack must be bonded to the data center grounding grid to provide a low-impedance path for fault currents and to equalize ground potential. Unbonded racks create shock hazards, increase electromagnetic interference (EMI), and can damage sensitive IT equipment.", "codeReference": "TIA-607-D / NEC 250.4" },
+      { "id": 3, "name": "Missing telecommunications bonding busbar (TBB)", "correct": false, "violation": "TIA-607 requires a telecommunications bonding busbar (TBB) in each telecom room to serve as the central bonding point for all telecom infrastructure. Without a TBB, there is no organized bonding system for racks, cable trays, and other telecom infrastructure.", "codeReference": "TIA-607-D 6.3" },
+      { "id": 4, "name": "Raised floor pedestal bonded to ground grid", "correct": true },
+      { "id": 5, "name": "Cable tray bonded to ground per NEC 392", "correct": true },
+      { "id": 6, "name": "PDU equipment grounding conductor properly sized", "correct": true }
+    ],
+    "explanation": "Grounding and bonding in data centers serves three purposes: personnel safety, equipment protection from ground potential differences, and EMI reduction. TIA-607 provides the telecommunications-specific grounding standard that supplements NEC Article 250 requirements.",
+    "xpReward": 75
+  }
+]

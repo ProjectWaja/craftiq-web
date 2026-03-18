@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ba-cp-001",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chiller Plant Piping",
+    "description": "Assemble the primary-secondary chilled water piping loop in the correct order from the chiller evaporator through the building distribution and back.",
+    "parts": [
+      { "id": 1, "name": "Chiller evaporator barrel outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Primary chilled water pump", "correctPosition": 2 },
+      { "id": 3, "name": "Decoupler (bypass) pipe", "correctPosition": 3 },
+      { "id": 4, "name": "Secondary distribution pump", "correctPosition": 4 },
+      { "id": 5, "name": "AHU cooling coil", "correctPosition": 5 },
+      { "id": 6, "name": "Return header to chiller", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam-to-water heat exchanger" },
+      { "id": 102, "name": "Condenser water pump" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Chiller outlet" },
+      { "id": 2, "label": "Position 2: Primary loop circulation" },
+      { "id": 3, "label": "Position 3: Loop separation point" },
+      { "id": 4, "label": "Position 4: Secondary loop circulation" },
+      { "id": 5, "label": "Position 5: Building load" },
+      { "id": 6, "label": "Position 6: Return to plant" }
+    ],
+    "explanation": "Primary-secondary chilled water systems use a decoupler pipe to hydraulically separate the constant-flow primary loop (chiller protection) from the variable-flow secondary loop (building load). The decoupler must be between the two pumping systems so each loop operates independently. This arrangement follows ASHRAE Handbook — HVAC Systems and Equipment recommendations for central chiller plants.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-002",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Cascade System",
+    "description": "Assemble the hot water boiler cascade piping from the lead boiler through the distribution system and back to the return header.",
+    "parts": [
+      { "id": 1, "name": "Lead boiler outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Common supply header", "correctPosition": 2 },
+      { "id": 3, "name": "Three-way mixing valve", "correctPosition": 3 },
+      { "id": 4, "name": "System supply pipe", "correctPosition": 4 },
+      { "id": 5, "name": "Building heating loop", "correctPosition": 5 },
+      { "id": 6, "name": "Return header", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Steam PRV station" },
+      { "id": 102, "name": "Condensate receiver tank" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Heat source" },
+      { "id": 2, "label": "Position 2: Plant header" },
+      { "id": 3, "label": "Position 3: Temperature control" },
+      { "id": 4, "label": "Position 4: Distribution supply" },
+      { "id": 5, "label": "Position 5: Building load" },
+      { "id": 6, "label": "Position 6: Return to plant" }
+    ],
+    "explanation": "In a cascade boiler system, the lead boiler fires first and feeds a common header shared with lag boilers. The three-way mixing valve blends hot supply water with return water to deliver the correct supply temperature to the building loop, protecting condensing boilers from thermal shock and enabling outdoor air reset control per ASHRAE 90.1 requirements.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-003",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Cooling Tower Circuit",
+    "description": "Assemble the condenser water circuit from the condenser water pump through the cooling tower and back to the chiller condenser bundle.",
+    "parts": [
+      { "id": 1, "name": "Condenser water pump", "correctPosition": 1 },
+      { "id": 2, "name": "Cooling tower fill media", "correctPosition": 2 },
+      { "id": 3, "name": "Collection basin", "correctPosition": 3 },
+      { "id": 4, "name": "Basin strainer", "correctPosition": 4 },
+      { "id": 5, "name": "Chiller condenser bundle", "correctPosition": 5 },
+      { "id": 6, "name": "Return pipe to pump suction", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Chilled water expansion tank" },
+      { "id": 102, "name": "Evaporator barrel" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Pump discharge" },
+      { "id": 2, "label": "Position 2: Heat rejection" },
+      { "id": 3, "label": "Position 3: Water collection" },
+      { "id": 4, "label": "Position 4: Debris removal" },
+      { "id": 5, "label": "Position 5: Condenser heat exchange" },
+      { "id": 6, "label": "Position 6: Return to pump" }
+    ],
+    "explanation": "The condenser water circuit pumps warm water from the chiller condenser up to the cooling tower, where evaporative cooling rejects heat to atmosphere. Water collects in the basin, passes through a strainer to remove debris (protecting the chiller tubes), flows through the condenser bundle to absorb heat, then returns to the pump suction. The basin strainer is critical for preventing tube fouling per CTI and ASHRAE guidelines.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-004",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Steam Distribution System",
+    "description": "Assemble the complete steam distribution path from the boiler through the process load and condensate return back to the boiler.",
+    "parts": [
+      { "id": 1, "name": "Steam boiler outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Steam header with drip legs", "correctPosition": 2 },
+      { "id": 3, "name": "PRV (pressure reducing valve) station", "correctPosition": 3 },
+      { "id": 4, "name": "Process heating coil", "correctPosition": 4 },
+      { "id": 5, "name": "Steam trap", "correctPosition": 5 },
+      { "id": 6, "name": "Condensate receiver tank", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Cooling tower blowdown valve" },
+      { "id": 102, "name": "Chilled water balancing valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Steam generation" },
+      { "id": 2, "label": "Position 2: High-pressure distribution" },
+      { "id": 3, "label": "Position 3: Pressure reduction" },
+      { "id": 4, "label": "Position 4: Process load" },
+      { "id": 5, "label": "Position 5: Condensate removal" },
+      { "id": 6, "label": "Position 6: Condensate collection" }
+    ],
+    "explanation": "Steam systems distribute high-pressure steam from the boiler through a main header with drip legs to remove condensate. A PRV station reduces pressure for downstream equipment. After the steam gives up its latent heat at the process coil, the steam trap removes condensate while blocking live steam, directing it to a condensate receiver for return to the boiler. Proper trap selection and placement are critical per ASME and ASHRAE standards.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-005",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chemical Feed System",
+    "description": "Assemble the condenser water chemical treatment system from the chemical storage tank through the injection point and blowdown path.",
+    "parts": [
+      { "id": 1, "name": "Chemical storage tank", "correctPosition": 1 },
+      { "id": 2, "name": "Metering pump", "correctPosition": 2 },
+      { "id": 3, "name": "Injection quill", "correctPosition": 3 },
+      { "id": 4, "name": "Sample port with coupon rack", "correctPosition": 4 },
+      { "id": 5, "name": "Blowdown valve", "correctPosition": 5 },
+      { "id": 6, "name": "Floor drain with air gap", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Refrigerant sight glass" },
+      { "id": 102, "name": "Steam pressure gauge" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Chemical source" },
+      { "id": 2, "label": "Position 2: Chemical dosing" },
+      { "id": 3, "label": "Position 3: System injection" },
+      { "id": 4, "label": "Position 4: Water quality monitoring" },
+      { "id": 5, "label": "Position 5: Concentration control" },
+      { "id": 6, "label": "Position 6: Waste discharge" }
+    ],
+    "explanation": "Chemical treatment for condenser water systems starts at the storage tank, where a metering pump precisely doses chemicals through an injection quill inserted into the pipe. A sample port with corrosion coupon rack allows water quality monitoring. The blowdown valve controls cycles of concentration by discharging high-TDS water to a floor drain with an air gap to prevent cross-contamination, per ASHRAE Guideline 12 and local plumbing codes.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-006",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "VFD-Driven Pump Assembly",
+    "description": "Assemble the VFD-driven chilled water pump installation from the electrical disconnect through to the system header.",
+    "parts": [
+      { "id": 1, "name": "Fused main disconnect switch", "correctPosition": 1 },
+      { "id": 2, "name": "Variable frequency drive (VFD)", "correctPosition": 2 },
+      { "id": 3, "name": "Motor with shaft grounding ring", "correctPosition": 3 },
+      { "id": 4, "name": "Flexible coupling", "correctPosition": 4 },
+      { "id": 5, "name": "Centrifugal pump", "correctPosition": 5 },
+      { "id": 6, "name": "Check valve and system header", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pneumatic actuator" },
+      { "id": 102, "name": "Steam pressure regulator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source" },
+      { "id": 2, "label": "Position 2: Speed control" },
+      { "id": 3, "label": "Position 3: Mechanical drive" },
+      { "id": 4, "label": "Position 4: Vibration isolation" },
+      { "id": 5, "label": "Position 5: Fluid mover" },
+      { "id": 6, "label": "Position 6: System connection" }
+    ],
+    "explanation": "A VFD-driven pump assembly starts with a fused disconnect for lockout/tagout safety (NEC 430), then the VFD for variable speed control. The motor includes a shaft grounding ring to prevent bearing damage from VFD-induced stray currents. A flexible coupling between motor and pump absorbs misalignment and vibration. The check valve on the pump discharge prevents reverse flow when the pump is off. This sequence follows NEC, ASHRAE 90.1, and Hydraulic Institute standards.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-007",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Air Separator System",
+    "description": "Assemble the hydronic air separation and expansion system in the correct order from the system pump through the building loop and return.",
+    "parts": [
+      { "id": 1, "name": "System circulation pump", "correctPosition": 1 },
+      { "id": 2, "name": "Air separator with vent", "correctPosition": 2 },
+      { "id": 3, "name": "Compression (expansion) tank connection", "correctPosition": 3 },
+      { "id": 4, "name": "System supply main", "correctPosition": 4 },
+      { "id": 5, "name": "Building heating/cooling loop", "correctPosition": 5 },
+      { "id": 6, "name": "Return main to pump suction", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Condenser water strainer" },
+      { "id": 102, "name": "Steam trap" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Flow source" },
+      { "id": 2, "label": "Position 2: Air removal" },
+      { "id": 3, "label": "Position 3: Pressure control" },
+      { "id": 4, "label": "Position 4: Distribution supply" },
+      { "id": 5, "label": "Position 5: Building load" },
+      { "id": 6, "label": "Position 6: Return to plant" }
+    ],
+    "explanation": "The air separator must be located at the point of lowest solubility — the pump discharge where water is at its highest temperature and lowest pressure relative to the system. The expansion tank connects at or near the air separator, establishing the system's point of no pressure change. This placement ensures maximum air removal efficiency and proper system pressurization per ASHRAE Handbook — HVAC Systems and Equipment.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-cp-008",
+    "type": "build-assembly",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Boiler Heat Recovery System",
+    "description": "Assemble the boiler flue gas heat recovery system from the boiler exhaust through the feedwater preheat path and back to the boiler.",
+    "parts": [
+      { "id": 1, "name": "Boiler exhaust flue outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Economizer coil (flue gas heat exchanger)", "correctPosition": 2 },
+      { "id": 3, "name": "Feedwater preheater", "correctPosition": 3 },
+      { "id": 4, "name": "Deaerator (oxygen removal)", "correctPosition": 4 },
+      { "id": 5, "name": "Boiler feed pump", "correctPosition": 5 },
+      { "id": 6, "name": "Boiler feedwater inlet", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Cooling tower fan motor" },
+      { "id": 102, "name": "Chiller compressor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Waste heat source" },
+      { "id": 2, "label": "Position 2: Primary heat recovery" },
+      { "id": 3, "label": "Position 3: Water preheating" },
+      { "id": 4, "label": "Position 4: Dissolved gas removal" },
+      { "id": 5, "label": "Position 5: Feedwater pressurization" },
+      { "id": 6, "label": "Position 6: Boiler return" }
+    ],
+    "explanation": "Boiler heat recovery captures waste heat from flue gases using an economizer coil, which preheats the feedwater before it enters the boiler. The deaerator removes dissolved oxygen and CO2 that cause corrosion, operating at elevated temperature from the recovered heat. The boiler feed pump then pressurizes the treated water above boiler operating pressure for injection. This arrangement can improve overall boiler plant efficiency by 5-10% per ASHRAE 90.1 and ASME guidelines.",
+    "xpReward": 70
+  }
+]

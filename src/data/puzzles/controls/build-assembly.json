@@ -1,0 +1,348 @@
+[
+  {
+    "id": "ba-ctrl-001",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "DDC Controller Panel Wiring",
+    "description": "Assemble the DDC controller panel wiring components in the correct order from the power source to a fully operational controller.",
+    "parts": [
+      { "id": 1, "name": "120VAC circuit breaker at panel disconnect", "correctPosition": 1 },
+      { "id": 2, "name": "24VAC control transformer (120V primary to 24V secondary)", "correctPosition": 2 },
+      { "id": 3, "name": "24VAC power to DDC controller power terminals", "correctPosition": 3 },
+      { "id": 4, "name": "Field sensor wiring terminated at controller I/O terminals", "correctPosition": 4 },
+      { "id": 5, "name": "BACnet MS/TP network cable connected to comm port", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "480VAC motor starter" },
+      { "id": 102, "name": "Ethernet media converter" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source" },
+      { "id": 2, "label": "Position 2: Voltage conversion" },
+      { "id": 3, "label": "Position 3: Controller power" },
+      { "id": 4, "label": "Position 4: Field connections" },
+      { "id": 5, "label": "Position 5: Network connection" }
+    ],
+    "explanation": "DDC panel wiring follows a power-first sequence: line power through a disconnect, transformer to 24VAC, controller power, field wiring, then network. Never energize the controller before all power connections are verified per NEC Article 725 and manufacturer installation guides.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-ctrl-002",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Duct Temperature Sensor Installation",
+    "description": "Assemble the components for installing a duct-mounted temperature sensor in a supply air duct.",
+    "parts": [
+      { "id": 1, "name": "Drill pilot hole in duct wall at sensor location", "correctPosition": 1 },
+      { "id": 2, "name": "Install sensor mounting flange with gasket on duct exterior", "correctPosition": 2 },
+      { "id": 3, "name": "Insert averaging sensor element through flange into airstream", "correctPosition": 3 },
+      { "id": 4, "name": "Connect shielded sensor cable to sensor head terminal block", "correctPosition": 4 },
+      { "id": 5, "name": "Route sensor cable to DDC controller and terminate at AI terminal", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure tap with tubing" },
+      { "id": 102, "name": "Damper actuator bracket" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Duct penetration" },
+      { "id": 2, "label": "Position 2: Mounting hardware" },
+      { "id": 3, "label": "Position 3: Sensor placement" },
+      { "id": 4, "label": "Position 4: Local wiring" },
+      { "id": 5, "label": "Position 5: Controller connection" }
+    ],
+    "explanation": "Duct temperature sensor installation requires a sealed penetration (gasket prevents air leaks), proper insertion depth (sensor element must be in the airstream, not against the duct wall), and shielded cable to prevent electrical interference per ASHRAE Guideline 36.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-ctrl-003",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Duct Static Pressure Sensor Piping",
+    "description": "Assemble the components for installing a duct static pressure sensor, from the sensing point in the duct to the controller.",
+    "parts": [
+      { "id": 1, "name": "Static pressure probe inserted into duct (perpendicular to airflow)", "correctPosition": 1 },
+      { "id": 2, "name": "1/4-inch copper or polyethylene tubing from probe to sensor", "correctPosition": 2 },
+      { "id": 3, "name": "Differential pressure transducer mounted near the duct", "correctPosition": 3 },
+      { "id": 4, "name": "Reference port on transducer open to plenum space (or piped to outdoor reference)", "correctPosition": 4 },
+      { "id": 5, "name": "Analog signal wire (0-10VDC) from transducer to controller AI", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Flow measuring pitot tube array" },
+      { "id": 102, "name": "Temperature well with thermowell" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: In-duct sensing point" },
+      { "id": 2, "label": "Position 2: Tubing run" },
+      { "id": 3, "label": "Position 3: Transducer location" },
+      { "id": 4, "label": "Position 4: Reference pressure" },
+      { "id": 5, "label": "Position 5: Signal to controller" }
+    ],
+    "explanation": "Duct static pressure sensing requires a clean probe perpendicular to airflow, leak-free tubing, and a properly referenced transducer. The reference port must sense the same space as the duct serves (typically the plenum above ceiling) for accurate readings per ASHRAE Guideline 36.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-ctrl-004",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Control Valve Assembly on Heating Coil",
+    "description": "Assemble the control valve and associated components on a hot water heating coil from the supply pipe to the return pipe.",
+    "parts": [
+      { "id": 1, "name": "Supply isolation valve (ball valve)", "correctPosition": 1 },
+      { "id": 2, "name": "Two-way modulating control valve with actuator", "correctPosition": 2 },
+      { "id": 3, "name": "Heating coil supply and return connections", "correctPosition": 3 },
+      { "id": 4, "name": "Return isolation valve with balancing port", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Three-way mixing valve" },
+      { "id": 102, "name": "Pressure relief valve" },
+      { "id": 103, "name": "Steam trap" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From hot water supply main" },
+      { "id": 2, "label": "Position 2: Flow modulation" },
+      { "id": 3, "label": "Position 3: Through coil" },
+      { "id": 4, "label": "Position 4: To hot water return main" }
+    ],
+    "explanation": "Heating coil control valve assemblies place the control valve on the supply side for proper authority, with isolation valves for service access. The balancing valve on the return allows hydronic balancing during commissioning. Heating valves are set to fail-open (spring return to open) per ASHRAE Guideline 36.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-ctrl-005",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet MS/TP Network Trunk",
+    "description": "Assemble the components for a BACnet MS/TP network trunk connecting multiple DDC controllers.",
+    "parts": [
+      { "id": 1, "name": "120-ohm end-of-line termination resistor at first device", "correctPosition": 1 },
+      { "id": 2, "name": "Shielded twisted-pair cable daisy-chained from controller to controller", "correctPosition": 2 },
+      { "id": 3, "name": "Shield drain wire grounded at one end only (typically at router)", "correctPosition": 3 },
+      { "id": 4, "name": "BACnet router connecting MS/TP trunk to BACnet/IP backbone", "correctPosition": 4 },
+      { "id": 5, "name": "120-ohm end-of-line termination resistor at last device", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Ethernet network switch" },
+      { "id": 102, "name": "RS-232 to USB converter" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Bus start" },
+      { "id": 2, "label": "Position 2: Trunk wiring" },
+      { "id": 3, "label": "Position 3: Shield grounding" },
+      { "id": 4, "label": "Position 4: Network gateway" },
+      { "id": 5, "label": "Position 5: Bus end" }
+    ],
+    "explanation": "BACnet MS/TP trunks require termination resistors at both ends to prevent signal reflections, daisy-chain (not star) topology, and single-point shield grounding to prevent ground loops. The router bridges the field bus to the building IP network per ASHRAE 135.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-ctrl-006",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "AHU Controls — Outdoor Air to Discharge",
+    "description": "Assemble the control points for an AHU in order from the outdoor air intake to the supply fan discharge.",
+    "parts": [
+      { "id": 1, "name": "Outdoor air temperature/humidity sensor at intake", "correctPosition": 1 },
+      { "id": 2, "name": "Outdoor air damper with modulating actuator", "correctPosition": 2 },
+      { "id": 3, "name": "Mixed air temperature sensor (downstream of mixing plenum)", "correctPosition": 3 },
+      { "id": 4, "name": "Filter differential pressure switch across filter bank", "correctPosition": 4 },
+      { "id": 5, "name": "Cooling coil with chilled water control valve", "correctPosition": 5 },
+      { "id": 6, "name": "Supply air temperature sensor and duct static pressure sensor at discharge", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Exhaust air damper actuator" },
+      { "id": 102, "name": "Condensate flow switch" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Outdoor air intake" },
+      { "id": 2, "label": "Position 2: Air entry control" },
+      { "id": 3, "label": "Position 3: After mixing" },
+      { "id": 4, "label": "Position 4: Pre-coil filtration" },
+      { "id": 5, "label": "Position 5: Temperature conditioning" },
+      { "id": 6, "label": "Position 6: Fan discharge" }
+    ],
+    "explanation": "AHU control points follow the air path: outdoor sensing at intake, damper control at entry, mixed air sensing after blending, filter monitoring, coil control for conditioning, and discharge sensing for closed-loop control. This sequence is defined by ASHRAE Guideline 36.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-ctrl-007",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "VAV Box Controller Installation",
+    "description": "Assemble the components for installing a DDC VAV box controller, from mounting to operational verification.",
+    "parts": [
+      { "id": 1, "name": "Mount DDC controller on VAV box housing using manufacturer bracket", "correctPosition": 1 },
+      { "id": 2, "name": "Wire 24VAC power from transformer to controller power terminals", "correctPosition": 2 },
+      { "id": 3, "name": "Connect damper actuator cable to controller output terminal", "correctPosition": 3 },
+      { "id": 4, "name": "Connect zone temperature sensor cable to controller input terminal", "correctPosition": 4 },
+      { "id": 5, "name": "Connect airflow sensor tubing to controller differential pressure input", "correctPosition": 5 },
+      { "id": 6, "name": "Connect BACnet MS/TP trunk cable to controller comm port", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "VFD parameter programming cable" },
+      { "id": 102, "name": "Fire alarm relay module" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Physical mounting" },
+      { "id": 2, "label": "Position 2: Power connection" },
+      { "id": 3, "label": "Position 3: Output wiring" },
+      { "id": 4, "label": "Position 4: Temperature input" },
+      { "id": 5, "label": "Position 5: Airflow input" },
+      { "id": 6, "label": "Position 6: Network connection" }
+    ],
+    "explanation": "VAV controller installation follows: mount, power, outputs, inputs, then network. Powering the controller before wiring outputs prevents unexpected actuator movement. The airflow sensor connects via pneumatic tubing, not wire, to the controller's built-in differential pressure transducer.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-ctrl-008",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Chiller Plant Control Sequence Assembly",
+    "description": "Assemble the control sequence steps for starting a water-cooled chiller from the plant controller's perspective.",
+    "parts": [
+      { "id": 1, "name": "Open chiller isolation valves (CHW supply and return)", "correctPosition": 1 },
+      { "id": 2, "name": "Start condenser water pump and verify flow", "correctPosition": 2 },
+      { "id": 3, "name": "Start primary chilled water pump and verify flow", "correctPosition": 3 },
+      { "id": 4, "name": "Start cooling tower fan to establish condenser water temperature", "correctPosition": 4 },
+      { "id": 5, "name": "Send chiller enable command and verify compressor starts", "correctPosition": 5 },
+      { "id": 6, "name": "Monitor chiller operating parameters (pressures, temps, amps) for stability", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Enable heat recovery mode" },
+      { "id": 102, "name": "Start building exhaust fans" },
+      { "id": 103, "name": "Open economizer dampers" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Valve pre-position" },
+      { "id": 2, "label": "Position 2: Condenser side" },
+      { "id": 3, "label": "Position 3: Evaporator side" },
+      { "id": 4, "label": "Position 4: Heat rejection" },
+      { "id": 5, "label": "Position 5: Compressor start" },
+      { "id": 6, "label": "Position 6: Verification" }
+    ],
+    "explanation": "Chiller startup sequence is critical: water flow must be established on BOTH condenser and evaporator sides BEFORE the compressor starts. Starting a chiller without water flow causes evaporator freeze-up or condenser high-pressure lockout per ASHRAE Guideline 36 and chiller manufacturer requirements.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-ctrl-009",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Boiler Safety Chain Wiring",
+    "description": "Assemble the boiler safety chain components in the correct wiring order from the safety circuit power supply to the gas valve.",
+    "parts": [
+      { "id": 1, "name": "Safety circuit 24VAC power supply (R terminal)", "correctPosition": 1 },
+      { "id": 2, "name": "High-limit temperature switch (manual reset, normally closed)", "correctPosition": 2 },
+      { "id": 3, "name": "Low-water cutoff switch (manual reset, normally closed)", "correctPosition": 3 },
+      { "id": 4, "name": "Flame rollout switch (manual reset, normally closed)", "correctPosition": 4 },
+      { "id": 5, "name": "BAS enable relay contact (normally open, closes on call for heat)", "correctPosition": 5 },
+      { "id": 6, "name": "Gas valve solenoid coil (energizes to open gas)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Variable frequency drive" },
+      { "id": 102, "name": "CO detector relay" },
+      { "id": 103, "name": "Outdoor reset sensor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source" },
+      { "id": 2, "label": "Position 2: First safety" },
+      { "id": 3, "label": "Position 3: Second safety" },
+      { "id": 4, "label": "Position 4: Third safety" },
+      { "id": 5, "label": "Position 5: BAS enable" },
+      { "id": 6, "label": "Position 6: Gas valve" }
+    ],
+    "explanation": "The boiler safety chain is a series circuit: all safety switches must be closed AND the BAS must call for heat before the gas valve can open. If any safety trips, the circuit breaks and the gas valve de-energizes. Safety devices are wired in series BEFORE the BAS enable relay, ensuring safeties cannot be overridden by the BAS per NFPA 85 and ASME CSD-1.",
+    "xpReward": 85
+  },
+  {
+    "id": "ba-ctrl-010",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Economizer Damper Controls Assembly",
+    "description": "Assemble the economizer damper control components from outdoor air intake to the AHU mixing plenum.",
+    "parts": [
+      { "id": 1, "name": "Outdoor air temperature and enthalpy sensor at intake", "correctPosition": 1 },
+      { "id": 2, "name": "Outdoor air damper with spring-return modulating actuator", "correctPosition": 2 },
+      { "id": 3, "name": "Return air damper with modulating actuator (linked to OA damper)", "correctPosition": 3 },
+      { "id": 4, "name": "Mixed air temperature sensor downstream of mixing plenum", "correctPosition": 4 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Exhaust fan speed controller" },
+      { "id": 102, "name": "Refrigerant pressure transducer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Outdoor sensing" },
+      { "id": 2, "label": "Position 2: Outdoor air entry" },
+      { "id": 3, "label": "Position 3: Return air control" },
+      { "id": 4, "label": "Position 4: Downstream verification" }
+    ],
+    "explanation": "Economizer control requires outdoor sensing to determine free-cooling availability, coordinated outdoor and return dampers for air mixing, and mixed air sensing for closed-loop temperature control. The OA damper must have spring-return to minimum position on power failure per ASHRAE Guideline 36 and 90.1.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-ctrl-011",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Occupancy Sensor Installation for DCV",
+    "description": "Assemble the components for installing a CO2-based occupancy/demand-controlled ventilation sensor in a conference room.",
+    "parts": [
+      { "id": 1, "name": "Mount CO2 sensor housing on interior wall at 3-6 feet height", "correctPosition": 1 },
+      { "id": 2, "name": "Wire sensor signal cable (0-10VDC or BACnet) to DDC controller", "correctPosition": 2 },
+      { "id": 3, "name": "Configure CO2 setpoint in controller (typically 800-1000 ppm)", "correctPosition": 3 },
+      { "id": 4, "name": "Program DCV sequence: modulate OA damper based on CO2 level", "correctPosition": 4 },
+      { "id": 5, "name": "Calibrate sensor against reference CO2 meter in occupied conditions", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "PIR motion sensor" },
+      { "id": 102, "name": "Light level sensor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Physical installation" },
+      { "id": 2, "label": "Position 2: Electrical connection" },
+      { "id": 3, "label": "Position 3: Setpoint configuration" },
+      { "id": 4, "label": "Position 4: Sequence programming" },
+      { "id": 5, "label": "Position 5: Verification" }
+    ],
+    "explanation": "CO2-based demand-controlled ventilation reduces energy by matching outdoor air to actual occupancy. The sensor must be at breathing height on an interior wall, properly calibrated, and programmed per ASHRAE 62.1 Section 6.2.7 and ASHRAE 90.1 requirements.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-ctrl-012",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Energy Meter Pulse Output to BAS",
+    "description": "Assemble the components for connecting an electrical energy meter's pulse output to the BAS for energy monitoring.",
+    "parts": [
+      { "id": 1, "name": "Install current transformers on each phase conductor at the electrical panel", "correctPosition": 1 },
+      { "id": 2, "name": "Connect CT secondary wires to the energy meter sensing inputs", "correctPosition": 2 },
+      { "id": 3, "name": "Connect meter voltage sensing leads to each phase and neutral", "correctPosition": 3 },
+      { "id": 4, "name": "Wire pulse output (dry contact) from meter to DDC controller binary input", "correctPosition": 4 },
+      { "id": 5, "name": "Configure controller to accumulate pulses and convert to kWh using meter K-factor", "correctPosition": 5 },
+      { "id": 6, "name": "Verify BAS kWh reading matches meter display after 24-hour test period", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Power quality harmonic analyzer" },
+      { "id": 102, "name": "Ground fault relay" },
+      { "id": 103, "name": "Surge protector" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Current sensing" },
+      { "id": 2, "label": "Position 2: CT connections" },
+      { "id": 3, "label": "Position 3: Voltage sensing" },
+      { "id": 4, "label": "Position 4: Pulse output wiring" },
+      { "id": 5, "label": "Position 5: BAS configuration" },
+      { "id": 6, "label": "Position 6: Verification" }
+    ],
+    "explanation": "Energy metering integration requires proper CT installation (correct ratio and orientation), voltage sensing for power factor calculation, and accurate pulse counting in the BAS. The meter K-factor (pulses per kWh) must be correctly configured. Verification against the meter display confirms accuracy per ASHRAE 90.1 Section 8.",
+    "xpReward": 80
+  }
+]

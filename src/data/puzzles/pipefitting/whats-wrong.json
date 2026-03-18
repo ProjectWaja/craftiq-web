@@ -1,0 +1,286 @@
+[
+  {
+    "id": "ww-pipe-001",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Steam Boiler Near Piping",
+    "components": [
+      { "id": 1, "name": "Low-pressure steam header with proper pitch", "correct": true },
+      { "id": 2, "name": "Steam piping pitched away from boiler (back-graded)", "correct": false, "violation": "Steam supply piping must pitch downward in the direction of flow (away from boiler) to prevent condensate from pooling and causing water hammer. The piping here is back-graded, trapping condensate.", "codeReference": "ASME B31.1 — Power Piping" },
+      { "id": 3, "name": "Gate valve on steam header", "correct": true },
+      { "id": 4, "name": "Threaded fittings on 3-inch steam line", "correct": false, "violation": "ASME B31.1 requires welded or flanged connections for steam piping 2-1/2 inches and larger. Threaded connections on larger steam lines are prone to leaks under thermal expansion.", "codeReference": "ASME B31.1 Section 114" },
+      { "id": 5, "name": "Pressure gauge at boiler outlet", "correct": true },
+      { "id": 6, "name": "Safety relief valve piped to safe discharge point", "correct": true }
+    ],
+    "explanation": "Steam boiler near piping must be properly pitched for condensate drainage and use appropriate connection methods based on pipe size. These are fundamental safety requirements for any steam system.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-pipe-002",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hydronic Heating Loop",
+    "components": [
+      { "id": 1, "name": "Circulator pump with isolation valves", "correct": true },
+      { "id": 2, "name": "Expansion tank on system return", "correct": true },
+      { "id": 3, "name": "No air separator in the system", "correct": false, "violation": "Hydronic heating systems require an air separator to remove entrained air. Air in the system causes noise, corrosion, reduced heat transfer, and pump cavitation.", "codeReference": "ASME B31.9 — Building Services Piping" },
+      { "id": 4, "name": "Copper supply connected directly to steel return", "correct": false, "violation": "Dissimilar metals (copper to steel) require a dielectric union or insulating coupling to prevent galvanic corrosion. Without it, the joint will corrode and fail within a few years.", "codeReference": "ASME B31.9 / IMC 1203.4" },
+      { "id": 5, "name": "Balancing valves at each terminal unit", "correct": true },
+      { "id": 6, "name": "Pressure relief valve at boiler", "correct": true }
+    ],
+    "explanation": "Hydronic systems must address air removal and dissimilar metal protection. Both are common oversights that lead to premature system failure and costly repairs.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-pipe-003",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Pipe Hanger Installation",
+    "components": [
+      { "id": 1, "name": "Clevis hangers on horizontal pipe run", "correct": true },
+      { "id": 2, "name": "Hanger spacing at 15 feet for 2-inch steel pipe", "correct": false, "violation": "ASME B31.1 and MSS SP-69 require hanger spacing no greater than 10 feet for 2-inch steel pipe. 15-foot spacing causes excessive sag, stress on joints, and potential pipe failure.", "codeReference": "MSS SP-69 / ASME B31.1 Table 121.5" },
+      { "id": 3, "name": "All-thread rod properly sized for load", "correct": true },
+      { "id": 4, "name": "Hanger resting directly on pipe insulation", "correct": false, "violation": "Hangers on insulated pipe must use insulation protection saddles or shields to prevent the hanger from crushing the insulation and creating a thermal bridge and condensation point.", "codeReference": "MSS SP-69 / ASME B31.1" },
+      { "id": 5, "name": "Spring hanger at equipment connection", "correct": true }
+    ],
+    "explanation": "Proper pipe support is critical for system longevity. Hanger spacing must follow MSS SP-69 tables, and insulation must be protected at all hanger points to maintain thermal integrity.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-pipe-004",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Welded Pipe Joint Inspection",
+    "components": [
+      { "id": 1, "name": "Butt weld with full penetration", "correct": true },
+      { "id": 2, "name": "Weld with visible undercut exceeding 1/32 inch", "correct": false, "violation": "Undercut exceeding 1/32 inch (0.8 mm) on any weld is a rejectable defect per ASME B31.1 and AWS D10.9. Undercut creates a stress riser that can initiate fatigue cracking under thermal cycling.", "codeReference": "ASME B31.1 Section 127.4 / AWS D10.9" },
+      { "id": 3, "name": "Proper root pass with back purge", "correct": true },
+      { "id": 4, "name": "No preheat on P-1 material over 1 inch thick", "correct": false, "violation": "Carbon steel (P-1 group) over 1 inch wall thickness requires preheat to minimum 200°F before welding per ASME B31.1. Failure to preheat risks hydrogen cracking in the heat-affected zone.", "codeReference": "ASME B31.1 Section 131 / ASME BPVC Section IX" },
+      { "id": 5, "name": "Weld identification markings present", "correct": true },
+      { "id": 6, "name": "Post-weld heat treatment completed and documented", "correct": true }
+    ],
+    "explanation": "Welding quality directly impacts piping system safety. Undercut and lack of preheat are two of the most common rejectable conditions found during NDE (non-destructive examination).",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-pipe-005",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Expansion Joint Installation",
+    "components": [
+      { "id": 1, "name": "Bellows expansion joint in hot water line", "correct": true },
+      { "id": 2, "name": "No pipe guides near expansion joint", "correct": false, "violation": "Bellows expansion joints require pipe guides on both sides to ensure axial movement only. Without guides, lateral forces can distort the bellows and cause premature failure.", "codeReference": "EJMA Standards / ASME B31.1 Section 119" },
+      { "id": 3, "name": "Main anchors at each end of pipe run", "correct": true },
+      { "id": 4, "name": "Expansion joint installed with shipping rods still in place", "correct": false, "violation": "Shipping restraint bars/rods must be removed after installation and before system operation. Leaving them in prevents the joint from absorbing expansion, transferring all stress to anchors and equipment.", "codeReference": "EJMA Standards / Manufacturer Installation Guide" },
+      { "id": 5, "name": "Properly sized for calculated thermal growth", "correct": true }
+    ],
+    "explanation": "Expansion joints require proper guiding and removal of shipping restraints to function correctly. These are two of the most common installation errors that lead to joint failure and potentially dangerous piping rupture.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-pipe-006",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Valve Installation on Steam System",
+    "components": [
+      { "id": 1, "name": "Globe valve for throttling service", "correct": true },
+      { "id": 2, "name": "Gate valve installed in vertical pipe with stem horizontal", "correct": false, "violation": "Gate valves in vertical piping with the stem horizontal can allow the disc to sag open or closed due to gravity, causing unreliable shutoff and accelerated wear on the seat.", "codeReference": "ASME B31.1 Section 107 / MSS SP-92" },
+      { "id": 3, "name": "Check valve on pump discharge", "correct": true },
+      { "id": 4, "name": "Non-return valve (NRV) installed backwards", "correct": false, "violation": "A check valve installed backwards blocks forward flow and allows reverse flow — the exact opposite of its purpose. Flow direction arrow must match the piping flow direction.", "codeReference": "ASME B31.1 Section 107.2" },
+      { "id": 5, "name": "Isolation valve with chain operator at high location", "correct": true },
+      { "id": 6, "name": "Pressure reducing valve with downstream gauge", "correct": true }
+    ],
+    "explanation": "Valve installation orientation and direction are critical. Incorrect valve positioning leads to unreliable operation and potential safety hazards, especially in steam and high-pressure systems.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-pipe-007",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Insulated Chilled Water Piping",
+    "components": [
+      { "id": 1, "name": "Chilled water pipe properly sized", "correct": true },
+      { "id": 2, "name": "Fiberglass insulation without vapor barrier", "correct": false, "violation": "Chilled water piping insulation must have a continuous vapor barrier (vapor retarder) on the exterior to prevent moisture from migrating through the insulation and condensing on the cold pipe surface.", "codeReference": "ASHRAE 90.1 / ASME B31.9" },
+      { "id": 3, "name": "Insulation jacket sealed at all joints", "correct": true },
+      { "id": 4, "name": "Valve stems insulated over", "correct": false, "violation": "Valve stems and packing glands must not be insulated over. Covering valve operators prevents maintenance access and traps moisture that accelerates stem corrosion and packing failure.", "codeReference": "ASHRAE Handbook — HVAC Systems / ASME B31.9" },
+      { "id": 5, "name": "Pipe supports with insulation saddles", "correct": true }
+    ],
+    "explanation": "Chilled water insulation requires a continuous vapor barrier to prevent condensation damage. Valve components must remain accessible for maintenance and to prevent moisture-related corrosion.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-pipe-008",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Hydrostatic Pressure Test Setup",
+    "components": [
+      { "id": 1, "name": "System filled with clean water", "correct": true },
+      { "id": 2, "name": "All air vented from high points", "correct": true },
+      { "id": 3, "name": "Test pressure at 1.25 times design pressure", "correct": false, "violation": "ASME B31.1 requires hydrostatic test pressure of 1.5 times the design pressure (not 1.25). Testing at 1.25x may not reveal defects that would fail under operating conditions plus safety margin.", "codeReference": "ASME B31.1 Section 137.4" },
+      { "id": 4, "name": "Pressure gauge calibrated and in range", "correct": true },
+      { "id": 5, "name": "Expansion joints included in test section without restraint", "correct": false, "violation": "Expansion joints must be restrained or isolated during hydrostatic testing. Test pressure can cause unrestrained bellows to over-extend, permanently damaging the joint.", "codeReference": "ASME B31.1 Section 137 / EJMA Standards" },
+      { "id": 6, "name": "Test duration documented at 10 minutes minimum", "correct": true }
+    ],
+    "explanation": "Hydrostatic testing verifies system integrity before operation. The correct test pressure (1.5x design) and proper protection of sensitive components like expansion joints are critical for a valid test.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-pipe-009",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Condensate Return Piping",
+    "components": [
+      { "id": 1, "name": "Condensate receiver tank", "correct": true },
+      { "id": 2, "name": "Condensate return pipe with no slope (level)", "correct": false, "violation": "Gravity condensate return piping must be sloped minimum 1/4 inch per foot toward the receiver/boiler to ensure proper drainage. Level pipe traps condensate and causes water hammer.", "codeReference": "ASME B31.1 / ASHRAE Handbook — HVAC Systems" },
+      { "id": 3, "name": "Condensate pump with check valve", "correct": true },
+      { "id": 4, "name": "Carbon steel pipe for condensate service", "correct": false, "violation": "Condensate is highly corrosive (carbonic acid from CO2). Condensate return piping should be stainless steel, copper, or use Schedule 80 carbon steel with corrosion allowance. Standard weight carbon steel corrodes rapidly.", "codeReference": "ASME B31.1 Section 122 / ASHRAE Handbook" },
+      { "id": 5, "name": "Properly sized for flash steam volume", "correct": true }
+    ],
+    "explanation": "Condensate return piping faces unique challenges: it must be properly sloped for gravity flow and resist corrosion from carbonic acid. Material selection and slope are the two most common issues.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-pipe-010",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Threaded Pipe Assembly",
+    "components": [
+      { "id": 1, "name": "NPT threads cut to proper length", "correct": true },
+      { "id": 2, "name": "PTFE tape applied counter-clockwise on male threads", "correct": false, "violation": "PTFE tape must be applied clockwise (when looking at the thread end) so it wraps tighter as the fitting is threaded on. Counter-clockwise application causes the tape to unwrap and bunch, creating leaks.", "codeReference": "ASME B1.20.1 / Industry Best Practice" },
+      { "id": 3, "name": "Pipe dope applied to female threads only", "correct": false, "violation": "Thread sealant (pipe dope) should be applied to male threads, not female threads. Applying to female threads pushes excess sealant into the system where it can clog strainers, valves, and control devices.", "codeReference": "ASME B1.20.1 / Manufacturer Guidelines" },
+      { "id": 4, "name": "Proper thread engagement per pipe size", "correct": true },
+      { "id": 5, "name": "Reamed pipe ends after cutting", "correct": true }
+    ],
+    "explanation": "Threaded pipe connections are fundamental to pipefitting. Proper PTFE tape direction and correct sealant application location are basic skills that directly affect joint integrity.",
+    "xpReward": 55
+  },
+  {
+    "id": "ww-pipe-011",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Flange Connection Assembly",
+    "components": [
+      { "id": 1, "name": "Weld neck flanges on high-pressure line", "correct": true },
+      { "id": 2, "name": "Spiral wound gasket properly centered", "correct": true },
+      { "id": 3, "name": "Bolts tightened in circular pattern", "correct": false, "violation": "Flange bolts must be tightened in a star (cross) pattern to ensure even gasket compression. Circular tightening causes uneven loading, gasket distortion, and leaks.", "codeReference": "ASME PCC-1 — Guidelines for Pressure Boundary Bolted Flange Joint Assembly" },
+      { "id": 4, "name": "150# flange used on 300 PSI system", "correct": false, "violation": "A Class 150 flange is rated for approximately 275 PSI at ambient temperature (and less at elevated temperatures). Using it on a 300 PSI system exceeds its pressure-temperature rating, risking catastrophic failure.", "codeReference": "ASME B16.5 — Pipe Flanges and Flanged Fittings" },
+      { "id": 5, "name": "Flange faces aligned within tolerance", "correct": true },
+      { "id": 6, "name": "All bolt holes straddling centerline", "correct": true }
+    ],
+    "explanation": "Flange connections require proper bolting sequence and correct pressure class selection. Incorrect bolt tightening causes leaks, and under-rated flanges pose serious safety hazards in high-pressure service.",
+    "xpReward": 85
+  },
+  {
+    "id": "ww-pipe-012",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Medical Gas Piping System",
+    "components": [
+      { "id": 1, "name": "Type K or L copper tube for oxygen service", "correct": true },
+      { "id": 2, "name": "Silver brazed joints with BCuP-5 filler", "correct": false, "violation": "BCuP (copper-phosphorus) filler metals are prohibited for medical gas systems. NFPA 99 requires BAg (silver) series filler metals with a minimum 45% silver content because phosphorus-bearing alloys are brittle and not rated for medical gas pressures.", "codeReference": "NFPA 99 Section 5.1.10.6.3" },
+      { "id": 3, "name": "Nitrogen purge during brazing", "correct": true },
+      { "id": 4, "name": "System labeled 'OXYGEN' with green markers", "correct": true },
+      { "id": 5, "name": "Standard plumbing solder used on one joint", "correct": false, "violation": "Solder (tin-lead or tin-silver) is prohibited on medical gas piping. Only brazing with approved filler metals is permitted. Soldered joints cannot withstand the pressures and cannot be verified by the required cross-section test.", "codeReference": "NFPA 99 Section 5.1.10.6" },
+      { "id": 6, "name": "Zone valve boxes at each floor", "correct": true }
+    ],
+    "explanation": "Medical gas piping has the most stringent requirements in pipefitting. Using incorrect filler metals or soldering on med gas systems creates joints that can fail, potentially delivering contaminated or no gas to patients — a life-threatening situation.",
+    "xpReward": 90
+  },
+  {
+    "id": "ww-pipe-013",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Union Hall Training: Orbital Weld Inspection",
+    "components": [
+      { "id": 1, "name": "Weld width consistent across full circumference", "correct": true },
+      { "id": 2, "name": "Weld coupon shows sugaring (oxidation) on root side", "correct": false, "violation": "Sugaring (granular oxidation on the root side) indicates insufficient argon purge gas during welding. The weld root must be shielded with inert gas to prevent oxidation on high-purity stainless steel systems. A sugared weld is structurally compromised and a contamination source.", "codeReference": "ASME B31.3 / AWS D18.1 — Stainless Steel Welding" },
+      { "id": 3, "name": "Visible undercut exceeding 1/32\" on weld cap", "correct": false, "violation": "Undercut exceeding 1/32 inch (0.8 mm) is a rejectable defect per ASME B31.3 and AWS D18.1. On high-purity systems, undercut creates crevices where contaminants accumulate and bacteria can harbor, compromising system purity.", "codeReference": "ASME B31.3 Section 341.3.2 / AWS D18.1" },
+      { "id": 4, "name": "Weld ID color is straw/blue instead of silver", "correct": false, "violation": "On stainless steel orbital welds, the internal weld color indicates purge quality. Silver/light straw is acceptable; dark straw, blue, or purple indicates excessive heat or oxygen contamination. Blue/straw discoloration means the passive chromium oxide layer is damaged, leading to corrosion in service.", "codeReference": "AWS D18.1 / ASME BPE (Bioprocessing Equipment)" },
+      { "id": 5, "name": "Proper bead profile with smooth tie-ins", "correct": true }
+    ],
+    "explanation": "Orbital weld inspection is a core UA apprentice skill for pharmaceutical, semiconductor, and food-grade piping. The three key visual checks are purge quality (no sugaring), weld geometry (no undercut), and heat tint color (silver is ideal). These are pass/fail criteria on every high-purity weld coupon test at the union hall.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-pipe-014",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Union Hall Training: Rigging and Hoisting",
+    "components": [
+      { "id": 1, "name": "Certified rigger directing the lift", "correct": true },
+      { "id": 2, "name": "Nylon sling touching sharp edge without softener/corner protector", "correct": false, "violation": "Nylon slings in contact with sharp edges must have corner protectors (softeners) to prevent the sling from being cut under load. A sling failure under a 2,000 lb load is a fatal hazard. OSHA and ASME B30.9 require edge protection whenever a sling contacts a sharp radius.", "codeReference": "OSHA 1926.251 / ASME B30.9 — Slings" },
+      { "id": 3, "name": "Load rated for 3,000 lbs but using 2-ton chain hoist with no safety factor consideration", "correct": false, "violation": "A 2-ton (4,000 lb) chain hoist lifting a 3,000 lb rated load leaves only a 1.33:1 ratio. ASME B30.16 and UA rigging training require a minimum 5:1 design factor for hoisting equipment. The hoist capacity should be selected so the load does not exceed 20% of the equipment's rated capacity for normal lifts.", "codeReference": "ASME B30.16 / OSHA 1926.550" },
+      { "id": 4, "name": "No tag line attached to load for directional control", "correct": false, "violation": "Suspended loads must have a tag line to allow workers to guide the load without placing hands on it. Without a tag line, workers must physically push/pull the suspended load, putting them in the fall zone — a leading cause of rigging fatalities.", "codeReference": "OSHA 1926.753 / ASME B30.5" },
+      { "id": 5, "name": "All personnel in lift zone wearing hard hats", "correct": true }
+    ],
+    "explanation": "Rigging and hoisting is taught at every UA local hall because pipefitters regularly lift heavy equipment (chillers, boilers, pipe spools). The three violations here — no edge protection, inadequate safety factor, and no tag line — are the most common rigging errors that lead to serious injuries on jobsites.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-pipe-015",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Hydronic Pressure Piping Material",
+    "components": [
+      { "id": 1, "name": "Type L copper used for above-ground supply piping", "correct": true },
+      { "id": 2, "name": "Type M copper used for hydronic pressure piping", "correct": false, "violation": "UCSB specifications and ASTM B88 requirements do not permit Type M copper for hydronic pressure piping. Type M has the thinnest wall of the three copper tube types and is inadequate for the pressures, temperatures, and longevity required in commercial hydronic systems. Type L or Type K must be used.", "codeReference": "ASTM B88 / UCSB Piping Specification" },
+      { "id": 3, "name": "Dielectric unions at copper-to-steel transitions", "correct": true },
+      { "id": 4, "name": "Isolation valves at all equipment connections", "correct": true },
+      { "id": 5, "name": "Pressure gauge and thermometer wells installed", "correct": true },
+      { "id": 6, "name": "Proper brazing with nitrogen purge on copper joints", "correct": true }
+    ],
+    "explanation": "Copper tube types matter for hydronic systems. Type M is only acceptable for low-pressure DWV and limited residential applications. UCSB specs require Type L minimum for all hydronic pressure piping to ensure adequate wall thickness for system longevity and pressure ratings.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-pipe-016",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pipe Insulation Surface Temperature",
+    "components": [
+      { "id": 1, "name": "Fiberglass pipe insulation with ASJ jacket", "correct": true },
+      { "id": 2, "name": "Insulation surface temperature measured at 155°F", "correct": false, "violation": "ASHRAE 90.1 and UCSB specifications require that the outer surface temperature of pipe insulation not exceed 140°F to prevent personnel burns on contact. A surface temperature of 155°F indicates insufficient insulation thickness for the pipe temperature and presents a burn hazard.", "codeReference": "ASHRAE 90.1 / UCSB Mechanical Specification" },
+      { "id": 3, "name": "PVC jacket used on outdoor piping insulation", "correct": false, "violation": "PVC jacketing is not permitted on outdoor pipe insulation per UCSB specifications. PVC degrades under UV exposure, becomes brittle, and cracks, allowing moisture infiltration that destroys the insulation. Aluminum or stainless steel jacketing is required for outdoor applications.", "codeReference": "UCSB Mechanical Specification / ASTM C1136" },
+      { "id": 4, "name": "Insulation continuous through pipe hangers with protection saddles", "correct": true },
+      { "id": 5, "name": "Vapor barrier intact on cold piping insulation", "correct": true },
+      { "id": 6, "name": "Insulation thickness matching specification schedule", "correct": true },
+      { "id": 7, "name": "All joints sealed with matching jacket tape", "correct": true }
+    ],
+    "explanation": "Pipe insulation must limit surface temperature to 140°F maximum per ASHRAE 90.1 to prevent personnel burns. Additionally, UCSB specs prohibit PVC jacketing outdoors due to UV degradation. These are common spec compliance issues caught during commissioning.",
+    "xpReward": 70
+  },
+  {
+    "id": "ww-pipe-017",
+    "type": "whats-wrong",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Grooved Coupling on Steam Line",
+    "components": [
+      { "id": 1, "name": "Schedule 40 carbon steel pipe for steam distribution", "correct": true },
+      { "id": 2, "name": "Grooved coupling with EPDM gasket on 300°F steam line", "correct": false, "violation": "EPDM gaskets are rated to a maximum of 250°F. Using an EPDM gasket on a 300°F steam line exceeds its temperature rating, causing gasket failure, steam leaks, and a serious burn hazard. High-temperature silicone or Grade T gaskets rated for the service temperature are required.", "codeReference": "ASTM D2000 / Victaulic/Gruvlok Temperature Rating Tables" },
+      { "id": 3, "name": "Spring hangers at vertical risers", "correct": true },
+      { "id": 4, "name": "Drip legs at every low point and end of main", "correct": true },
+      { "id": 5, "name": "Steam traps properly selected for operating pressure", "correct": true },
+      { "id": 6, "name": "Proper expansion loops sized for thermal growth", "correct": true },
+      { "id": 7, "name": "Safety relief valve at each isolated section", "correct": true }
+    ],
+    "explanation": "Gasket material selection is critical for steam systems. EPDM is an excellent general-purpose gasket but has a 250°F temperature limit. Exceeding the gasket rating on a steam line creates an immediate failure risk with potential for severe steam burns. Always verify gasket temperature ratings match the service conditions.",
+    "xpReward": 75
+  }
+]

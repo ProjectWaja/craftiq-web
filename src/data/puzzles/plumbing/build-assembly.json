@@ -1,0 +1,348 @@
+[
+  {
+    "id": "ba-plmb-001",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "DWV Stack Assembly",
+    "description": "Assemble the DWV (drain-waste-vent) stack components in the correct order from the building drain to the roof vent terminal.",
+    "parts": [
+      { "id": 1, "name": "Building drain connection (wye fitting)", "correctPosition": 1 },
+      { "id": 2, "name": "Cleanout tee at base of stack", "correctPosition": 2 },
+      { "id": 3, "name": "Vertical soil stack (3\" or 4\" pipe)", "correctPosition": 3 },
+      { "id": 4, "name": "Branch connections with sanitary tees", "correctPosition": 4 },
+      { "id": 5, "name": "Stack vent extending through roof", "correctPosition": 5 },
+      { "id": 6, "name": "Roof flashing and vent terminal (min 6\" above roof)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Check valve" },
+      { "id": 102, "name": "Pressure reducing valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Building drain" },
+      { "id": 2, "label": "Position 2: Stack base" },
+      { "id": 3, "label": "Position 3: Vertical run" },
+      { "id": 4, "label": "Position 4: Floor connections" },
+      { "id": 5, "label": "Position 5: Through roof" },
+      { "id": 6, "label": "Position 6: Roof termination" }
+    ],
+    "explanation": "DWV stacks are assembled from the bottom up: building drain connection, cleanout at base for maintenance access, vertical stack with branch connections at each floor, then the vent terminal through the roof at least 6 inches above the roof surface per IPC 903.1.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-plmb-002",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Heater Piping Assembly",
+    "description": "Assemble the water piping components for a residential tank water heater from the cold supply to the hot water distribution.",
+    "parts": [
+      { "id": 1, "name": "Cold water shutoff valve", "correctPosition": 1 },
+      { "id": 2, "name": "Dielectric union (if dissimilar metals)", "correctPosition": 2 },
+      { "id": 3, "name": "Cold water dip tube connection to tank", "correctPosition": 3 },
+      { "id": 4, "name": "T&P relief valve with discharge pipe to 6\" above floor", "correctPosition": 4 },
+      { "id": 5, "name": "Hot water outlet with dielectric union", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Backflow preventer on hot side" },
+      { "id": 102, "name": "Condensate neutralizer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Incoming cold supply" },
+      { "id": 2, "label": "Position 2: Transition fitting" },
+      { "id": 3, "label": "Position 3: Tank inlet" },
+      { "id": 4, "label": "Position 4: Safety device" },
+      { "id": 5, "label": "Position 5: Hot distribution" }
+    ],
+    "explanation": "Water heater piping follows a specific order: cold supply with shutoff, dielectric unions to prevent galvanic corrosion between copper supply and steel tank, the T&P relief valve with its discharge pipe, and then the hot water outlet. The T&P valve is the primary safety device per IPC 504.6.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-plmb-003",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "P-Trap to Stack Connection",
+    "description": "Assemble the drain components from a lavatory tailpiece through the P-trap to the vent stack connection.",
+    "parts": [
+      { "id": 1, "name": "Fixture tailpiece (1-1/4\")", "correctPosition": 1 },
+      { "id": 2, "name": "P-trap (inlet side)", "correctPosition": 2 },
+      { "id": 3, "name": "Trap arm (horizontal to vent)", "correctPosition": 3 },
+      { "id": 4, "name": "Vent tee connection (vent up, drain down)", "correctPosition": 4 },
+      { "id": 5, "name": "Drain continuation to stack or branch", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Air admittance valve below trap" },
+      { "id": 102, "name": "Double trap" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At fixture" },
+      { "id": 2, "label": "Position 2: Trap" },
+      { "id": 3, "label": "Position 3: Horizontal run" },
+      { "id": 4, "label": "Position 4: Vent junction" },
+      { "id": 5, "label": "Position 5: To drainage stack" }
+    ],
+    "explanation": "The P-trap creates a water seal preventing sewer gas entry. The trap arm connects the trap to the vent, which must be within the maximum developed length (5 feet for 1-1/4\" pipe per IPC Table 906.1). The vent tee allows air in while the drain continues to the stack. Double-trapping is prohibited per IPC 1002.1.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-plmb-004",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Service Entry Assembly",
+    "description": "Assemble the water service components from the water main to the interior distribution system.",
+    "parts": [
+      { "id": 1, "name": "Corporation stop at water main", "correctPosition": 1 },
+      { "id": 2, "name": "Service pipe (Type K copper, below frost line)", "correctPosition": 2 },
+      { "id": 3, "name": "Curb stop with curb box at property line", "correctPosition": 3 },
+      { "id": 4, "name": "Pipe sleeve through foundation wall", "correctPosition": 4 },
+      { "id": 5, "name": "Main shutoff valve and water meter inside building", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion tank at meter" },
+      { "id": 102, "name": "Sump pump connection" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At water main" },
+      { "id": 2, "label": "Position 2: Underground run" },
+      { "id": 3, "label": "Position 3: Property boundary" },
+      { "id": 4, "label": "Position 4: Building penetration" },
+      { "id": 5, "label": "Position 5: Inside building" }
+    ],
+    "explanation": "Water service entry follows a logical path from the municipal main: corporation stop (utility shutoff), service pipe buried below frost line, curb stop (owner shutoff accessible from ground level), foundation sleeve to prevent pipe damage from settlement, and interior shutoff with meter per IPC 606.1.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-plmb-005",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Gas Line to Water Heater Assembly",
+    "description": "Assemble the gas piping components from the gas branch line to the water heater gas valve.",
+    "parts": [
+      { "id": 1, "name": "Tee connection from gas branch line", "correctPosition": 1 },
+      { "id": 2, "name": "Manual gas shutoff valve (within 6 feet)", "correctPosition": 2 },
+      { "id": 3, "name": "Sediment trap (drip leg) — tee and capped nipple", "correctPosition": 3 },
+      { "id": 4, "name": "Union fitting for service disconnect", "correctPosition": 4 },
+      { "id": 5, "name": "Flex connector to water heater gas valve", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure relief valve" },
+      { "id": 102, "name": "Check valve" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At branch line" },
+      { "id": 2, "label": "Position 2: Shutoff" },
+      { "id": 3, "label": "Position 3: Debris protection" },
+      { "id": 4, "label": "Position 4: Service connection" },
+      { "id": 5, "label": "Position 5: At appliance" }
+    ],
+    "explanation": "Gas connections to water heaters require a shutoff valve, sediment trap to protect the gas valve from debris, a union for service access, and a listed flex connector for the final connection. The sediment trap must be between the shutoff and the appliance per IFGC 408.4.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-plmb-006",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Bathroom Lavatory Drain Assembly",
+    "description": "Assemble the complete drain system for a bathroom lavatory from the sink to the building drain.",
+    "parts": [
+      { "id": 1, "name": "Pop-up drain assembly with overflow", "correctPosition": 1 },
+      { "id": 2, "name": "1-1/4\" tailpiece", "correctPosition": 2 },
+      { "id": 3, "name": "1-1/4\" P-trap", "correctPosition": 3 },
+      { "id": 4, "name": "Trap arm to vent connection (within 5 feet)", "correctPosition": 4 },
+      { "id": 5, "name": "Sanitary tee to vertical drain (vent continues up)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Drum trap" },
+      { "id": 102, "name": "Running trap" },
+      { "id": 103, "name": "S-trap" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At sink bowl" },
+      { "id": 2, "label": "Position 2: Below sink" },
+      { "id": 3, "label": "Position 3: Water seal" },
+      { "id": 4, "label": "Position 4: Horizontal run to vent" },
+      { "id": 5, "label": "Position 5: Junction with stack" }
+    ],
+    "explanation": "Lavatory drain assembly follows a strict sequence: drain body in sink, tailpiece, P-trap (never S-trap, drum trap, or running trap per IPC 1002), trap arm within maximum distance to vent (5 feet for 1-1/4\"), then the sanitary tee where the vent continues up and the drain continues down per IPC 906.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-plmb-007",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Kitchen Sink Drain with Disposal",
+    "description": "Assemble the drain system for a double-bowl kitchen sink with garbage disposal from the fixtures to the trap arm.",
+    "parts": [
+      { "id": 1, "name": "Basket strainer on right bowl", "correctPosition": 1 },
+      { "id": 2, "name": "Garbage disposal on left bowl", "correctPosition": 2 },
+      { "id": 3, "name": "Continuous waste tee connecting both sides", "correctPosition": 3 },
+      { "id": 4, "name": "Dishwasher drain with high loop or air gap", "correctPosition": 4 },
+      { "id": 5, "name": "1-1/2\" P-trap and trap arm", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Grease trap" },
+      { "id": 102, "name": "S-trap" },
+      { "id": 103, "name": "Drum trap" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Right bowl drain" },
+      { "id": 2, "label": "Position 2: Left bowl drain" },
+      { "id": 3, "label": "Position 3: Joining point" },
+      { "id": 4, "label": "Position 4: Appliance connection" },
+      { "id": 5, "label": "Position 5: Trap and exit" }
+    ],
+    "explanation": "Kitchen sink drain assemblies with disposals must connect both bowls with a continuous waste to a single P-trap. The dishwasher drain connects to the disposal or tailpiece with a high loop (above flood rim) to prevent backflow per IPC 807.4. Only one trap is allowed — double-trapping is prohibited per IPC 1002.1.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-plmb-008",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Hose Bibb Assembly with Backflow Protection",
+    "description": "Assemble the components for an exterior frost-proof hose bibb installation from the supply line to the exterior wall.",
+    "parts": [
+      { "id": 1, "name": "Branch tee from cold water supply line", "correctPosition": 1 },
+      { "id": 2, "name": "Shutoff valve (accessible inside)", "correctPosition": 2 },
+      { "id": 3, "name": "1/2\" supply pipe through exterior wall", "correctPosition": 3 },
+      { "id": 4, "name": "Frost-proof hose bibb (stem slopes for drainage)", "correctPosition": 4 },
+      { "id": 5, "name": "Vacuum breaker (integral or add-on ASSE 1011)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Hot water supply line" },
+      { "id": 102, "name": "Expansion tank" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Water supply branch" },
+      { "id": 2, "label": "Position 2: Interior shutoff" },
+      { "id": 3, "label": "Position 3: Wall penetration" },
+      { "id": 4, "label": "Position 4: Exterior bibb" },
+      { "id": 5, "label": "Position 5: Backflow protection" }
+    ],
+    "explanation": "Hose bibb assemblies require an interior shutoff for winterizing, a frost-proof design that slopes inward for self-draining, and a vacuum breaker for backflow protection. The vacuum breaker prevents garden hose backflow from contaminating the potable supply per IPC 608.15.4.2.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-plmb-009",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Softener Installation Assembly",
+    "description": "Assemble the water softener components from the main water supply through the softener to the distribution system.",
+    "parts": [
+      { "id": 1, "name": "Main water supply line after meter", "correctPosition": 1 },
+      { "id": 2, "name": "Bypass valve assembly (3-valve or integral)", "correctPosition": 2 },
+      { "id": 3, "name": "Softener inlet connection with sediment pre-filter", "correctPosition": 3 },
+      { "id": 4, "name": "Softener outlet to interior distribution", "correctPosition": 4 },
+      { "id": 5, "name": "Brine drain line with air gap to floor drain", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Hot water recirculation pump" },
+      { "id": 102, "name": "Pressure tank" },
+      { "id": 103, "name": "UV sterilization unit" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Water supply" },
+      { "id": 2, "label": "Position 2: Bypass for service" },
+      { "id": 3, "label": "Position 3: Softener input" },
+      { "id": 4, "label": "Position 4: Softener output" },
+      { "id": 5, "label": "Position 5: Waste discharge" }
+    ],
+    "explanation": "Water softener installation requires a bypass valve for service and emergencies, a sediment pre-filter to protect the softener resin, and a brine drain with an air gap to prevent cross-contamination. The bypass must allow unsoftened water flow during regeneration and maintenance per manufacturer requirements and IPC 608.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-plmb-010",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Sump Pump Discharge Assembly",
+    "description": "Assemble the sump pump discharge piping from the pump in the pit to the exterior termination point.",
+    "parts": [
+      { "id": 1, "name": "Sump pump discharge connection", "correctPosition": 1 },
+      { "id": 2, "name": "Check valve (prevents backflow when pump stops)", "correctPosition": 2 },
+      { "id": 3, "name": "1-1/2\" PVC discharge pipe (vertical rise)", "correctPosition": 3 },
+      { "id": 4, "name": "Horizontal pipe through rim joist with slope", "correctPosition": 4 },
+      { "id": 5, "name": "Exterior termination with splash block (10+ feet from foundation)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "P-trap on discharge" },
+      { "id": 102, "name": "Backflow preventer" },
+      { "id": 103, "name": "Connection to sanitary sewer" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At pump" },
+      { "id": 2, "label": "Position 2: Above pump" },
+      { "id": 3, "label": "Position 3: Vertical run" },
+      { "id": 4, "label": "Position 4: Through wall" },
+      { "id": 5, "label": "Position 5: Exterior discharge" }
+    ],
+    "explanation": "Sump pump discharge must include a check valve near the pump to prevent water from draining back into the pit (which causes short-cycling). Discharge must NEVER connect to the sanitary sewer — it must discharge to the exterior away from the building foundation per IPC 713.2. No P-trap is needed on the discharge.",
+    "xpReward": 55
+  },
+  {
+    "id": "ba-plmb-011",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "PRV (Pressure Reducing Valve) Station",
+    "description": "Assemble a complete pressure reducing valve station for a commercial water service entry.",
+    "parts": [
+      { "id": 1, "name": "Inlet shutoff valve (full port)", "correctPosition": 1 },
+      { "id": 2, "name": "Strainer (Y-pattern) to protect PRV", "correctPosition": 2 },
+      { "id": 3, "name": "Pressure reducing valve (set to 60 PSI)", "correctPosition": 3 },
+      { "id": 4, "name": "Pressure gauge on outlet (downstream)", "correctPosition": 4 },
+      { "id": 5, "name": "Outlet shutoff valve", "correctPosition": 5 },
+      { "id": 6, "name": "Bypass with shutoff valve for emergencies", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Backflow preventer" },
+      { "id": 102, "name": "Water meter" },
+      { "id": 103, "name": "Expansion joint" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Incoming supply" },
+      { "id": 2, "label": "Position 2: Debris protection" },
+      { "id": 3, "label": "Position 3: Pressure regulation" },
+      { "id": 4, "label": "Position 4: Pressure verification" },
+      { "id": 5, "label": "Position 5: Outlet isolation" },
+      { "id": 6, "label": "Position 6: Emergency bypass" }
+    ],
+    "explanation": "A commercial PRV station includes isolation valves for service, a strainer to protect the PRV seat from debris, the PRV itself, a downstream gauge to verify set pressure, and a bypass for emergency use during PRV maintenance. The strainer MUST be upstream of the PRV per manufacturer requirements and IPC 604.8.",
+    "xpReward": 80
+  },
+  {
+    "id": "ba-plmb-012",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Expansion Tank Piping for Closed System",
+    "description": "Assemble the thermal expansion protection components for a domestic water system with a backflow preventer (closed system).",
+    "parts": [
+      { "id": 1, "name": "Water service with backflow preventer (creates closed system)", "correctPosition": 1 },
+      { "id": 2, "name": "Cold water distribution tee", "correctPosition": 2 },
+      { "id": 3, "name": "Expansion tank connection (tee on cold supply near water heater)", "correctPosition": 3 },
+      { "id": 4, "name": "Thermal expansion tank (pre-charged to match supply pressure)", "correctPosition": 4 },
+      { "id": 5, "name": "Water heater cold inlet with shutoff valve", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Check valve on hot side" },
+      { "id": 102, "name": "Recirculation pump" },
+      { "id": 103, "name": "Pressure relief valve on cold line" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Water service entry" },
+      { "id": 2, "label": "Position 2: Distribution branch" },
+      { "id": 3, "label": "Position 3: Expansion connection" },
+      { "id": 4, "label": "Position 4: Expansion device" },
+      { "id": 5, "label": "Position 5: Water heater connection" }
+    ],
+    "explanation": "When a backflow preventer creates a closed system, thermal expansion from the water heater has no relief path. The expansion tank must be installed on the cold water supply near the water heater and pre-charged to match the incoming supply pressure. Without it, the T&P relief valve activates repeatedly or piping can fail per IPC 607.3.2.",
+    "xpReward": 85
+  }
+]

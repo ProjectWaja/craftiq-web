@@ -1,0 +1,288 @@
+[
+  {
+    "id": "ww-ctrl-001",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Room Temperature Sensor Placement",
+    "components": [
+      { "id": 1, "name": "Temperature sensor mounted at 5 feet on interior wall", "correct": true },
+      { "id": 2, "name": "Sensor located directly above a supply air diffuser", "correct": false, "violation": "Temperature sensors must not be placed in direct airflow from supply diffusers. The supply air temperature causes false readings, making the controller unable to maintain proper space temperature setpoint.", "codeReference": "ASHRAE Guideline 36 — Sensor Placement" },
+      { "id": 3, "name": "Sensor wired with shielded plenum-rated cable", "correct": true },
+      { "id": 4, "name": "Sensor mounted on an exterior wall next to a window", "correct": false, "violation": "Sensors on exterior walls are influenced by solar gain and outdoor temperature conducted through the wall, producing inaccurate space readings. Mount sensors on interior walls per ASHRAE guidelines.", "codeReference": "ASHRAE Guideline 36 — Section 5.18" },
+      { "id": 5, "name": "Sensor connected to correct DDC controller input", "correct": true },
+      { "id": 6, "name": "Sensor cover plate installed flush to wall", "correct": true }
+    ],
+    "explanation": "Proper sensor placement is foundational to accurate building controls. Sensors near supply diffusers or on exterior walls give false readings, causing energy waste and comfort complaints. ASHRAE Guideline 36 specifies placement on interior walls, away from direct airflow.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-ctrl-002",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "DDC Controller Wiring Panel",
+    "components": [
+      { "id": 1, "name": "Controller mounted in NEMA 1 enclosure", "correct": true },
+      { "id": 2, "name": "24VAC power supply wired correctly", "correct": true },
+      { "id": 3, "name": "Sensor wiring run in same conduit as 120VAC power", "correct": false, "violation": "Low-voltage signal wiring (Class 2) must be separated from line-voltage power wiring. Running them together induces electromagnetic interference that corrupts sensor readings and can damage controller inputs.", "codeReference": "NEC Article 725.136(A)" },
+      { "id": 4, "name": "All field wiring labeled at terminal strips", "correct": true },
+      { "id": 5, "name": "Analog output wired to binary input terminal", "correct": false, "violation": "Connecting a 0-10VDC analog output signal to a binary (digital) input terminal will not control the device properly. Binary inputs only read on/off states. Analog signals must connect to analog input terminals for proportional control.", "codeReference": "ASHRAE 135 (BACnet) — Object Types" },
+      { "id": 6, "name": "End-of-line resistor installed on supervised input", "correct": true }
+    ],
+    "explanation": "DDC controller wiring requires careful attention to signal separation per NEC and correct terminal assignments per the controller's I/O map. Mixing signal types or running low-voltage with line-voltage are common apprentice mistakes.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-ctrl-003",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "BACnet Network Wiring",
+    "components": [
+      { "id": 1, "name": "MS/TP trunk cable using 22 AWG shielded twisted pair", "correct": true },
+      { "id": 2, "name": "Daisy-chain topology from controller to controller", "correct": true },
+      { "id": 3, "name": "Star topology with home runs to a central hub", "correct": false, "violation": "BACnet MS/TP requires a daisy-chain (bus) topology, not star topology. Star wiring creates signal reflections and communication failures. Each device must connect in series on the bus.", "codeReference": "ASHRAE 135 (BACnet) — MS/TP Physical Layer" },
+      { "id": 4, "name": "Network shield grounded at both ends of the trunk", "correct": false, "violation": "The shield on a BACnet MS/TP trunk must be grounded at one end only to prevent ground loops. Grounding at both ends creates circulating currents that introduce noise and cause intermittent communication failures.", "codeReference": "ASHRAE 135 (BACnet) — Annex J" },
+      { "id": 5, "name": "End-of-line termination resistor installed", "correct": true }
+    ],
+    "explanation": "BACnet MS/TP is an RS-485 based network that requires proper bus topology, single-point shield grounding, and end-of-line termination. Incorrect wiring is the leading cause of BAS communication problems.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-ctrl-004",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Thermostat Installation in Office",
+    "components": [
+      { "id": 1, "name": "Programmable thermostat at 4.5 feet height", "correct": true },
+      { "id": 2, "name": "Thermostat mounted on a wall shared with a kitchen", "correct": false, "violation": "Mounting a thermostat on a wall adjacent to a heat-producing space (kitchen, server room, boiler room) causes conducted heat to affect readings. Sensors must be on walls away from abnormal heat sources.", "codeReference": "ASHRAE Guideline 36 — Sensor Placement" },
+      { "id": 3, "name": "Setpoint adjustment limited to +/- 3 degrees F", "correct": true },
+      { "id": 4, "name": "Thermostat located behind an open door", "correct": false, "violation": "A thermostat behind a door that is typically held open will be in stagnant air and will not sense the true space temperature. It must be in an area with representative airflow of the occupied zone.", "codeReference": "ASHRAE Handbook — Fundamentals, Chapter 7" },
+      { "id": 5, "name": "Wiring connected per color code on controller diagram", "correct": true }
+    ],
+    "explanation": "Thermostat and space sensor location dramatically affects comfort and energy use. Even a correctly calibrated sensor in the wrong location produces poor control. ASHRAE specifies interior walls with representative air circulation.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-ctrl-005",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Control Valve Actuator Setup",
+    "components": [
+      { "id": 1, "name": "Two-way control valve sized to match coil flow", "correct": true },
+      { "id": 2, "name": "Valve actuator installed on the valve body", "correct": true },
+      { "id": 3, "name": "Actuator spring return set to fail-open on a cooling coil", "correct": false, "violation": "Cooling coil control valves should fail closed (spring return to closed) on loss of signal or power. Failing open causes uncontrolled cooling and potential freezing of downstream coils or spaces.", "codeReference": "ASHRAE Guideline 36 — Cooling Coil Control" },
+      { "id": 4, "name": "Valve installed with flow arrow matching piping direction", "correct": true },
+      { "id": 5, "name": "Actuator 0-10VDC signal wired to analog output", "correct": true },
+      { "id": 6, "name": "Valve body installed on the return side of the coil", "correct": false, "violation": "Control valves should be installed on the supply (entering) side of the coil for proper authority and control. Return-side installation reduces valve authority and causes sluggish temperature response.", "codeReference": "ASHRAE Handbook — HVAC Systems and Equipment" }
+    ],
+    "explanation": "Control valve installation requires attention to fail-safe position and piping location. Cooling valves fail closed, heating valves fail open. Valve placement on the supply side ensures better control authority per ASHRAE standards.",
+    "xpReward": 50
+  },
+  {
+    "id": "ww-ctrl-006",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "AHU Economizer Control Sequence",
+    "components": [
+      { "id": 1, "name": "Outdoor air temperature sensor installed in weather-protected housing", "correct": true },
+      { "id": 2, "name": "Mixed air temperature sensor downstream of mixing plenum", "correct": true },
+      { "id": 3, "name": "Economizer enabled based on outdoor dry-bulb temperature only", "correct": false, "violation": "In humid climates, dry-bulb economizer control can introduce excessive moisture. ASHRAE 90.1 and Guideline 36 require differential enthalpy or fixed-enthalpy control for climate zones where humidity is a factor.", "codeReference": "ASHRAE 90.1-2019, Section 6.5.1.1" },
+      { "id": 4, "name": "Minimum outdoor air damper position set to 0% during unoccupied", "correct": false, "violation": "Minimum outdoor air position must meet ventilation requirements per ASHRAE 62.1 during occupied modes. Setting to 0% is acceptable during unoccupied periods only if the sequence properly distinguishes occupied vs. unoccupied modes and ensures pre-occupancy purge.", "codeReference": "ASHRAE 62.1 / Guideline 36" },
+      { "id": 5, "name": "Return air CO2 sensor for demand-controlled ventilation", "correct": true },
+      { "id": 6, "name": "Outdoor air damper actuator with spring-return to minimum", "correct": true }
+    ],
+    "explanation": "Economizer control is one of the most impactful energy-saving sequences. Using dry-bulb only in humid climates wastes energy by bringing in moisture that must be removed. Proper occupied/unoccupied ventilation switching is essential for energy code compliance.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-ctrl-007",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "VAV Box Controller Configuration",
+    "components": [
+      { "id": 1, "name": "Zone temperature sensor connected to controller", "correct": true },
+      { "id": 2, "name": "Airflow sensor ring calibrated for velocity range", "correct": true },
+      { "id": 3, "name": "Minimum airflow setpoint set to 0 CFM", "correct": false, "violation": "VAV box minimum airflow must never be 0 CFM in occupied mode. ASHRAE 62.1 requires minimum ventilation airflow to each zone at all times during occupancy. Setting minimum to 0 causes ventilation code violation and poor indoor air quality.", "codeReference": "ASHRAE 62.1 — Section 6.2.5" },
+      { "id": 4, "name": "Damper actuator mechanically linked to damper blade", "correct": true },
+      { "id": 5, "name": "Heating setpoint programmed 5 degrees below cooling setpoint", "correct": false, "violation": "A 5-degree deadband between heating and cooling setpoints is too wide for most comfort standards but the issue is this is below the ASHRAE 55 recommended range. Per ASHRAE Guideline 36, the typical deadband should be 2-4 degrees F to prevent simultaneous heating and cooling while maintaining comfort.", "codeReference": "ASHRAE Guideline 36 — Zone Control" },
+      { "id": 6, "name": "Hot water reheat valve connected to controller output", "correct": true }
+    ],
+    "explanation": "VAV controller configuration directly affects comfort and energy. Zero minimum airflow violates ventilation code, and excessive deadband causes occupant complaints. ASHRAE Guideline 36 provides standard sequences for VAV zone control.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-ctrl-008",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet Device Addressing",
+    "components": [
+      { "id": 1, "name": "Each controller assigned a unique MAC address on the MS/TP trunk", "correct": true },
+      { "id": 2, "name": "Two devices on different trunks sharing the same device instance number", "correct": false, "violation": "BACnet device instance numbers must be globally unique across the entire BACnet internetwork, not just per trunk. Duplicate device instances cause routing conflicts and make one or both devices unreachable from the operator workstation.", "codeReference": "ASHRAE 135 (BACnet) — Clause 12.2" },
+      { "id": 3, "name": "MS/TP MAC addresses set between 0 and 127", "correct": true },
+      { "id": 4, "name": "BACnet router configured between MS/TP and IP networks", "correct": true },
+      { "id": 5, "name": "Network number set to 0 on a routed network segment", "correct": false, "violation": "Network number 0 is reserved and means 'local network only' in BACnet. A routed segment must have a unique non-zero network number (1-65534) assigned. Using 0 prevents the router from forwarding messages to and from this segment.", "codeReference": "ASHRAE 135 (BACnet) — Clause 6.1" },
+      { "id": 6, "name": "Device object name set descriptively (e.g., AHU-1-Controller)", "correct": true }
+    ],
+    "explanation": "BACnet addressing errors are one of the most common commissioning issues. Device instances must be globally unique, and network numbers must be non-zero on routed segments. These rules are defined in ASHRAE 135 and must be coordinated across the entire building.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-ctrl-009",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Alarm Configuration for AHU",
+    "components": [
+      { "id": 1, "name": "High discharge air temperature alarm at 130 degrees F", "correct": true },
+      { "id": 2, "name": "Low mixed air temperature alarm at 40 degrees F", "correct": true },
+      { "id": 3, "name": "Filter differential pressure alarm configured", "correct": true },
+      { "id": 4, "name": "All alarms set to the same priority level", "correct": false, "violation": "Alarms must be prioritized based on severity. A freeze stat alarm (life-safety) should be higher priority than a dirty filter alarm (maintenance). Without prioritization, critical alarms get lost in nuisance alarms, a condition called 'alarm flooding'.", "codeReference": "ASHRAE Guideline 13 — Alarm Management" },
+      { "id": 5, "name": "Freeze stat alarm with no automatic equipment shutdown", "correct": false, "violation": "A freeze stat alarm must automatically shut down the AHU fan, close the outdoor air damper, and open the heating valve. An alarm-only response without automatic action risks coil freeze-up and catastrophic water damage.", "codeReference": "ASHRAE Guideline 36 — Freeze Protection" },
+      { "id": 6, "name": "Supply fan status feedback configured", "correct": true }
+    ],
+    "explanation": "Alarm management is critical for building operations. ASHRAE Guideline 13 addresses alarm prioritization, and Guideline 36 requires automatic protective actions for critical conditions like freeze protection. Poorly configured alarms lead to ignored warnings and equipment damage.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-ctrl-010",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Trending and Data Logging Setup",
+    "components": [
+      { "id": 1, "name": "Key analog points trended at 15-minute intervals", "correct": true },
+      { "id": 2, "name": "Trend logs stored only in the field controller memory", "correct": false, "violation": "Storing trend data only in field controllers risks data loss when controllers are reset or lose power. Trend data should be archived to the BAS server or a dedicated historian. Controller memory is limited and will overwrite oldest data.", "codeReference": "ASHRAE Guideline 13 — Data Management" },
+      { "id": 3, "name": "Binary status points (fan on/off) trended on change-of-value", "correct": true },
+      { "id": 4, "name": "Trend data resolution set to whole numbers only for temperatures", "correct": false, "violation": "Temperature trend data should have at least 0.1 degree resolution. Whole-number-only resolution (e.g., 72 vs. 72.3) loses critical information needed for analyzing control loop performance, setpoint drift, and energy optimization.", "codeReference": "ASHRAE Guideline 36 — Monitoring Requirements" },
+      { "id": 5, "name": "Outdoor air temperature and humidity trended for energy analysis", "correct": true }
+    ],
+    "explanation": "Trend data is essential for commissioning, fault detection, and energy management. Data must be archived off the controller, and resolution must be sufficient for meaningful analysis. ASHRAE Guideline 13 provides data management best practices.",
+    "xpReward": 55
+  },
+  {
+    "id": "ww-ctrl-011",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Chiller Plant Staging Sequence",
+    "components": [
+      { "id": 1, "name": "Lead chiller starts on rising chilled water return temperature", "correct": true },
+      { "id": 2, "name": "Chilled water supply temperature reset based on outdoor air", "correct": true },
+      { "id": 3, "name": "Lag chiller stages on immediately when lead reaches 100% capacity", "correct": false, "violation": "Staging a lag chiller immediately at 100% lead capacity causes hunting and instability. A time delay (typically 10-15 minutes) and sustained load confirmation are required to prevent short-cycling. ASHRAE Guideline 36 specifies staging criteria with time delays and load verification.", "codeReference": "ASHRAE Guideline 36 — Chiller Staging" },
+      { "id": 4, "name": "Condenser water pumps and tower fans start before chiller", "correct": true },
+      { "id": 5, "name": "No minimum runtime enforced between chiller starts", "correct": false, "violation": "Chillers require a minimum runtime (typically 15-30 minutes) and minimum off-time (typically 15 minutes) to prevent compressor short-cycling. Frequent starts damage the compressor motor and reduce equipment life.", "codeReference": "ASHRAE Guideline 36 / Manufacturer Requirements" },
+      { "id": 6, "name": "Chiller isolation valves open before chiller enable", "correct": true }
+    ],
+    "explanation": "Chiller plant staging is among the most complex control sequences. Proper time delays, minimum runtimes, and load verification prevent compressor damage and optimize energy efficiency. ASHRAE Guideline 36 provides standardized chiller plant sequences.",
+    "xpReward": 85
+  },
+  {
+    "id": "ww-ctrl-012",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Smoke Control System Integration",
+    "components": [
+      { "id": 1, "name": "Smoke detectors hardwired to fire alarm panel", "correct": true },
+      { "id": 2, "name": "BAS receives fire alarm signal via network interface", "correct": true },
+      { "id": 3, "name": "BAS software controls smoke damper positions during fire event", "correct": false, "violation": "Smoke control and fire safety functions must NOT rely on BAS software for execution. Smoke dampers must be directly controlled by the fire alarm panel through hardwired connections. BAS can monitor status but cannot be the primary controller for life-safety functions.", "codeReference": "NFPA 92 / IBC Section 909" },
+      { "id": 4, "name": "Stairwell pressurization fan starts on fire alarm", "correct": true },
+      { "id": 5, "name": "AHU shutdown on duct smoke detector uses BAS command only", "correct": false, "violation": "Duct smoke detector shutdown must be hardwired directly to the AHU disconnect or starter, independent of the BAS. A BAS software command alone is not acceptable for life-safety shutdown because software can fail or be overridden.", "codeReference": "NFPA 90A / NEC 725.3" },
+      { "id": 6, "name": "Smoke control status displayed on BAS operator workstation", "correct": true }
+    ],
+    "explanation": "Fire and smoke control integration is the most critical controls application. Life-safety functions must be hardwired and independent of BAS software. The BAS can monitor and display status but must never be the sole means of controlling life-safety equipment per NFPA 92 and IBC 909.",
+    "xpReward": 95
+  },
+  {
+    "id": "ww-ctrl-013",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Union Hall Training: BACnet Network Troubleshooting",
+    "components": [
+      { "id": 1, "name": "Shielded twisted pair cable used for MS/TP trunk", "correct": true },
+      { "id": 2, "name": "Consistent baud rate (76800) set on all devices", "correct": true },
+      { "id": 3, "name": "No end-of-line termination resistor on last device in the daisy chain", "correct": false, "violation": "Every BACnet MS/TP trunk requires a 120-ohm termination resistor at both physical ends of the bus. Missing the end-of-line resistor causes signal reflections that corrupt data frames, leading to intermittent communication failures and token-passing errors across the entire trunk.", "codeReference": "ASHRAE 135 (BACnet) — Annex J, MS/TP Physical Layer" },
+      { "id": 4, "name": "Daisy-chain wiring has a stub/tee connection to a branch device", "correct": false, "violation": "BACnet MS/TP requires a strict daisy-chain (bus) topology with no stubs or tees. A stub creates an impedance mismatch that causes signal reflections, corrupting communications for all devices on the trunk. Branch devices must be wired in-line on the bus, not teed off.", "codeReference": "ASHRAE 135 (BACnet) — Annex J, Wiring Topology" },
+      { "id": 5, "name": "Device address 127 assigned to a field controller", "correct": false, "violation": "MAC address 127 is reserved for broadcast messages on BACnet MS/TP networks. Assigning address 127 to a device causes it to interpret all broadcast traffic as addressed to itself, disrupting token passing and network communication for every device on the trunk.", "codeReference": "ASHRAE 135 (BACnet) — Clause 9.3, MS/TP Addressing" }
+    ],
+    "explanation": "BACnet MS/TP troubleshooting is a core IBEW controls apprentice skill taught at the union hall. The three most common wiring mistakes — missing termination, stub/tee branches, and reserved address usage — account for the majority of field communication problems. Proper RS-485 bus discipline (termination at both ends, daisy-chain only, valid MAC addresses 0-126) is essential for reliable building automation networks.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-ctrl-014",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Union Hall Training: Pneumatic-to-DDC Conversion",
+    "components": [
+      { "id": 1, "name": "New DDC controller mounted in NEMA 1 enclosure", "correct": true },
+      { "id": 2, "name": "Proper labeling on all points at the controller terminal strip", "correct": true },
+      { "id": 3, "name": "EP (electro-pneumatic) transducer mounted above the pneumatic actuator", "correct": false, "violation": "EP transducers must be mounted below or at the same level as the pneumatic actuator they serve. Mounting above causes condensation from compressed air to drain down into the actuator valve body, causing corrosion, sticking, and eventual valve failure. Condensate should drain back toward the air supply where it is caught by drip legs and filters.", "codeReference": "SMACNA HVAC Controls Guidelines / Manufacturer Installation Instructions" },
+      { "id": 4, "name": "Pneumatic tubing kinked at a 90-degree bend", "correct": false, "violation": "Pneumatic tubing must use proper bend fittings or gradual sweeps at direction changes. A kinked 90-degree bend restricts airflow through the tubing, causing sluggish actuator response or complete loss of pneumatic signal. The actuator may not reach full stroke, resulting in poor temperature control and comfort complaints.", "codeReference": "SMACNA HVAC Controls Guidelines — Pneumatic Tubing Installation" },
+      { "id": 5, "name": "Sensor wire run in the same conduit as 120VAC power wiring", "correct": false, "violation": "Low-voltage sensor wiring (Class 2) must be run in separate conduit from line-voltage power wiring per NEC Article 725.136(A). Electromagnetic interference from the 120V power induces noise on the sensor signal, causing erratic readings and unstable control loops on the new DDC system.", "codeReference": "NEC Article 725.136(A)" }
+    ],
+    "explanation": "Pneumatic-to-DDC conversion is a common retrofit project for IBEW/NECA controls apprentices. Union hall training emphasizes the three critical mistakes: EP transducer orientation (condensation management), pneumatic tubing handling (no kinks), and wiring separation (NEC Class 2 vs. line voltage). These conversions require understanding both legacy pneumatic systems and modern DDC to ensure the retrofit performs better than the original installation.",
+    "xpReward": 75
+  },
+  {
+    "id": "ww-ctrl-015",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet/IP Network Cable Installation",
+    "components": [
+      { "id": 1, "name": "Cat6A cable used for BACnet/IP network", "correct": true },
+      { "id": 2, "name": "BACnet/IP cable run measuring 105 meters total", "correct": false, "violation": "TIA-568-D limits horizontal cable runs to a maximum of 100 meters (328 feet) total including patch cables. A 105-meter run exceeds this limit and will cause signal attenuation, packet loss, and intermittent communication failures on the BACnet/IP network.", "codeReference": "TIA-568-D / ASHRAE 135 BACnet/IP" },
+      { "id": 3, "name": "Proper cable termination at RJ-45 jacks", "correct": true },
+      { "id": 4, "name": "Network switch with PoE capability for IP controllers", "correct": true },
+      { "id": 5, "name": "Cable pathway separated from power conductors", "correct": true },
+      { "id": 6, "name": "Cable tested and certified with Fluke tester", "correct": true }
+    ],
+    "explanation": "BACnet/IP runs on standard Ethernet infrastructure governed by TIA-568-D. The 100-meter maximum includes all patch cables and horizontal cabling. Exceeding this distance is a common issue in large buildings and causes unreliable BAS communication.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-ctrl-016",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Duct Temperature Sensor Installation",
+    "components": [
+      { "id": 1, "name": "Averaging temperature sensor across AHU discharge", "correct": true },
+      { "id": 2, "name": "Single-point duct temperature probe inserted only 10% into duct width", "correct": false, "violation": "Duct temperature probes must be inserted 25-50% of the duct width to obtain a representative reading. Inserting only 10% places the sensor in the boundary layer near the duct wall where temperature is not representative of the airstream, causing inaccurate control.", "codeReference": "ASHRAE Guideline 36 / UCSB Controls Specification" },
+      { "id": 3, "name": "Sensor wired with shielded twisted pair cable", "correct": true },
+      { "id": 4, "name": "Sensor calibration verified at commissioning", "correct": true },
+      { "id": 5, "name": "Proprietary control system installed instead of open-protocol BACnet", "correct": false, "violation": "UCSB specifications require all building automation systems to comply with ASHRAE Standard 135-2016 (BACnet). Proprietary, closed-protocol systems lock the owner into a single vendor and prevent competitive service and integration. Open-protocol BACnet is mandatory for all new installations.", "codeReference": "ASHRAE 135-2016 / UCSB BAS Specification" },
+      { "id": 6, "name": "All sensor points trended in BAS for commissioning verification", "correct": true },
+      { "id": 7, "name": "Sensor location accessible for future maintenance", "correct": true }
+    ],
+    "explanation": "Duct sensor insertion depth directly affects control accuracy. The boundary layer near duct walls does not represent true airstream temperature. UCSB specs also mandate open-protocol BACnet systems to protect the owner from vendor lock-in and ensure competitive maintenance.",
+    "xpReward": 70
+  },
+  {
+    "id": "ww-ctrl-017",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Proprietary BAS System Compliance",
+    "components": [
+      { "id": 1, "name": "DDC controllers with BACnet/IP communication", "correct": true },
+      { "id": 2, "name": "Proprietary software requiring vendor-specific license for any changes", "correct": false, "violation": "UCSB specifications and ASHRAE 135-2016 require that all BAS programming, graphics, and configurations be accessible using standard BACnet tools. Proprietary software that locks out the owner or third-party service providers violates the open-protocol requirement.", "codeReference": "ASHRAE 135-2016 / UCSB BAS Specification" },
+      { "id": 3, "name": "All points properly mapped in BACnet object database", "correct": true },
+      { "id": 4, "name": "Operator workstation with web-based interface", "correct": true },
+      { "id": 5, "name": "Trend logs configured for all critical points", "correct": true },
+      { "id": 6, "name": "Alarm notification routing configured and tested", "correct": true },
+      { "id": 7, "name": "Controller firmware not upgradable by owner without vendor involvement", "correct": false, "violation": "UCSB specifications require that the building owner have full access to update, modify, and maintain all BAS components including controller firmware. Systems that require vendor involvement for routine maintenance violate the owner-access requirements of the specification.", "codeReference": "UCSB BAS Specification / ASHRAE Guideline 13" }
+    ],
+    "explanation": "Open-protocol BACnet compliance per ASHRAE 135-2016 is a core UCSB requirement. Both proprietary software licensing and vendor-locked firmware prevent the owner from competitively maintaining their own building systems, which drives up lifecycle costs and reduces operational flexibility.",
+    "xpReward": 75
+  }
+]

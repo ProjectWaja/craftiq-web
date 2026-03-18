@@ -1,0 +1,138 @@
+[
+  {
+    "id": "si-cp-001",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chiller Plant N+1 Configuration",
+    "scenario": "A commercial office building has a peak cooling load of 800 tons. The design engineer specifies N+1 redundancy so the plant can handle full load even if one chiller goes down. What chiller configuration should you install?",
+    "hint": "N+1 means you need enough total capacity from the remaining chillers to cover the full 800-ton load if one unit fails. Divide the load evenly among N chillers, then add one more of the same size.",
+    "options": [
+      { "text": "2 × 400-ton chillers", "value": "a", "correct": false, "feedback": "Two 400-ton chillers provide exactly 800 tons total, but if one fails you only have 400 tons — that's N+0, not N+1. No redundancy." },
+      { "text": "3 × 400-ton chillers", "value": "b", "correct": true, "feedback": "Correct! With 3 × 400-ton chillers, any two can carry the full 800-ton load. If one chiller fails, the remaining two still meet 100% of peak demand — true N+1 redundancy." },
+      { "text": "2 × 800-ton chillers", "value": "c", "correct": false, "feedback": "Two 800-ton chillers provide 1,600 tons total capacity — massive overkill. This is N+1 by definition, but grossly oversized, wasting capital cost and floor space." },
+      { "text": "4 × 200-ton chillers", "value": "d", "correct": false, "feedback": "Four 200-ton chillers total 800 tons. If one fails, you only have 600 tons — not enough for the 800-ton peak. You would need 5 × 200-ton for true N+1." }
+    ],
+    "explanation": "N+1 redundancy means installing one more unit than needed to carry full load. For 800 tons, two 400-ton chillers handle the load, so a third identical unit provides backup. This is standard practice in mission-critical facilities per ASHRAE Handbook — HVAC Applications.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-002",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Cooling Tower Approach & Flow Rate",
+    "scenario": "A cooling tower serves a 400-ton chiller plant. Design conditions specify 95°F condenser water leaving the tower with a local design wet-bulb temperature of 78°F. The system uses 3 GPM per ton. What is the tower approach temperature, and what is the required condenser water flow rate?",
+    "hint": "Approach = leaving water temperature minus the ambient wet-bulb temperature. Flow rate = tons × GPM per ton. Standard condenser water design is 3 GPM/ton per ARI/AHRI 550.",
+    "options": [
+      { "text": "10°F approach, 800 GPM", "value": "a", "correct": false, "feedback": "10°F approach would mean a wet-bulb of 85°F (95 − 85 = 10), not 78°F. And 800 GPM only covers about 267 tons at 3 GPM/ton." },
+      { "text": "17°F approach, 1,200 GPM", "value": "b", "correct": true, "feedback": "Correct! Approach = 95°F − 78°F = 17°F. Flow = 400 tons × 3 GPM/ton = 1,200 GPM. This is a standard calculation for condenser water system design." },
+      { "text": "17°F approach, 1,600 GPM", "value": "c", "correct": false, "feedback": "The 17°F approach is correct (95 − 78), but 1,600 GPM implies 4 GPM/ton, which is higher than the specified 3 GPM/ton design rate." },
+      { "text": "12°F approach, 1,200 GPM", "value": "d", "correct": false, "feedback": "1,200 GPM is correct (400 × 3), but a 12°F approach would mean the wet-bulb is 83°F (95 − 12). The given wet-bulb is 78°F, making the approach 17°F." }
+    ],
+    "explanation": "Cooling tower approach is the difference between the leaving condenser water temperature and the ambient wet-bulb temperature. Lower approach requires a larger, more expensive tower. Condenser water flow is typically 3 GPM/ton per AHRI 550/590. These are fundamental central plant design calculations.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-003",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Pump Total Dynamic Head",
+    "scenario": "You are sizing a chilled water pump for a central plant. The system has: 30 feet of straight pipe friction loss, 15 feet equivalent length for fittings, a chiller evaporator pressure drop of 20 feet, an AHU coil pressure drop of 15 feet, and a static head of 5 feet (open system). What is the total dynamic head (TDH) the pump must overcome?",
+    "hint": "TDH = pipe friction + fitting losses + equipment pressure drops + static head. Add all components together. Make sure all values are in the same units (feet of head).",
+    "options": [
+      { "text": "65 feet", "value": "a", "correct": false, "feedback": "65 feet only accounts for the pipe friction (30), fittings (15), and one equipment drop (20). You're missing the AHU coil drop and static head." },
+      { "text": "85 feet", "value": "b", "correct": true, "feedback": "Correct! TDH = 30 (pipe) + 15 (fittings) + 20 (chiller evaporator) + 15 (AHU coil) + 5 (static head) = 85 feet. This is the total head the pump must develop." },
+      { "text": "80 feet", "value": "c", "correct": false, "feedback": "80 feet is close but misses the 5-foot static head component. In an open system, static head must be included in TDH calculations." },
+      { "text": "100 feet", "value": "d", "correct": false, "feedback": "100 feet is too high. Double-check your addition: 30 + 15 + 20 + 15 + 5 = 85 feet, not 100. Oversizing pump head wastes energy and creates control problems." }
+    ],
+    "explanation": "Total Dynamic Head (TDH) is the sum of all pressure losses the pump must overcome: pipe friction, fitting losses, equipment drops (chillers, coils, valves), and static head. Accurate TDH calculation is critical — oversizing wastes energy, undersizing starves flow. Per ASHRAE Handbook — HVAC Systems and Equipment, always include a 10-15% safety factor in final pump selection.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-004",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Expansion Tank Sizing",
+    "scenario": "A closed hot water heating system holds 2,000 gallons total. The system operates from a fill temperature of 40°F to a maximum operating temperature of 180°F. Using a water expansion factor of 0.0396 at 180°F (relative to 40°F), what is the minimum expansion tank size required, including a standard safety margin?",
+    "hint": "Expansion volume = system volume × expansion factor. Then add a safety margin — industry practice is to account for the air charge acceptance factor in a diaphragm tank, which typically increases the required size by about 25% beyond the raw expansion volume.",
+    "options": [
+      { "text": "40 gallons", "value": "a", "correct": false, "feedback": "40 gallons is only about half the net expansion volume (2,000 × 0.0396 = 79.2 gallons). The tank would be completely overwhelmed and blow the relief valve." },
+      { "text": "80 gallons", "value": "b", "correct": false, "feedback": "80 gallons covers just the raw expansion (79.2 gal), but a diaphragm tank needs additional volume for the air charge acceptance factor. Without margin, the tank hits max pressure and the relief valve opens." },
+      { "text": "100 gallons", "value": "c", "correct": true, "feedback": "Correct! Net expansion = 2,000 × 0.0396 = 79.2 gallons. With the acceptance factor for the air-side pre-charge in a diaphragm tank, you need roughly 100 gallons. This accounts for the pressure differential between fill and relief settings." },
+      { "text": "200 gallons", "value": "d", "correct": false, "feedback": "200 gallons is significantly oversized for this system. While a larger tank isn't harmful, it wastes space and money. Proper engineering sizes the tank to match the system pressures and expansion volume." }
+    ],
+    "explanation": "Expansion tank sizing accounts for the volumetric expansion of water as it heats. The expansion factor at 180°F relative to 40°F is approximately 0.0396. For diaphragm tanks, the acceptance factor (based on fill pressure and max system pressure) means the tank must be larger than the raw expansion volume. Per ASHRAE Handbook — HVAC Systems and Equipment, always calculate based on actual system pressures.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-005",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Input Sizing",
+    "scenario": "A building has a calculated heating load of 3,000 MBH (3,000,000 BTU/h). The design calls for a high-efficiency condensing boiler rated at 85% thermal efficiency. What minimum boiler input rating should you specify?",
+    "hint": "Boiler output = input × efficiency. To find required input: input = output (load) ÷ efficiency. Then select the next standard boiler size above the calculated value.",
+    "options": [
+      { "text": "3,000 MBH input", "value": "a", "correct": false, "feedback": "3,000 MBH input at 85% efficiency only delivers 2,550 MBH output (3,000 × 0.85). That's 450 MBH short of the building load." },
+      { "text": "3,530 MBH input — select a 4,000 MBH boiler", "value": "b", "correct": true, "feedback": "Correct! Required input = 3,000 ÷ 0.85 = 3,529 MBH. The next standard boiler size up is 4,000 MBH, which provides 3,400 MBH output at 85% efficiency — meeting the load with margin." },
+      { "text": "2,550 MBH input", "value": "c", "correct": false, "feedback": "2,550 MBH is the boiler output at 85% efficiency if the input were 3,000 MBH. You've applied the efficiency backwards — you need to divide by 0.85, not multiply." },
+      { "text": "3,530 MBH input — select a 3,500 MBH boiler", "value": "d", "correct": false, "feedback": "The calculation of 3,530 MBH is correct, but selecting a 3,500 MBH boiler would be undersized by 30 MBH. Always round up to the next available standard size to ensure capacity." }
+    ],
+    "explanation": "Boiler sizing requires dividing the building load by the boiler's thermal efficiency to determine the required fuel input. At 85% efficiency: 3,000 ÷ 0.85 = 3,529 MBH input. Standard practice per ASHRAE 90.1 is to select the next standard size up, which is typically 4,000 MBH. Never select a boiler smaller than the calculated input.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-006",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "VFD Frame Sizing for Pump Motor",
+    "scenario": "A central plant chilled water pump uses a 100 HP motor rated at 460V, 3-phase. The motor nameplate shows a full-load amperage (FLA) of 124A. You need to select a variable frequency drive (VFD). What VFD frame size should you specify?",
+    "hint": "VFD sizing is based on motor FLA, not just HP. Always select a VFD rated for the next size up to provide service factor and handle motor inrush. A 100 HP VFD at 460V is typically rated for ~124A, but best practice is to go one frame up.",
+    "options": [
+      { "text": "75 HP VFD frame (96A rated)", "value": "a", "correct": false, "feedback": "A 75 HP VFD is only rated for about 96A continuous — well below the motor's 124A FLA. The VFD would trip on overcurrent during normal operation." },
+      { "text": "100 HP VFD frame (124A rated)", "value": "b", "correct": false, "feedback": "While 100 HP matches the motor, the VFD's continuous rating of 124A leaves zero margin. Transient loads, power quality issues, or slight overloads would trip the drive." },
+      { "text": "150 HP VFD frame (180A rated)", "value": "c", "correct": true, "feedback": "Correct! Upsizing to a 150 HP frame provides ~180A continuous capacity, giving a healthy service factor above the motor's 124A FLA. This handles transients, harmonics, and ensures reliable long-term operation." },
+      { "text": "200 HP VFD frame (248A rated)", "value": "d", "correct": false, "feedback": "A 200 HP VFD is excessively oversized for a 100 HP motor. While it would work, the additional cost and physical size are not justified. One frame up (150 HP) is the standard practice." }
+    ],
+    "explanation": "VFD sizing should always provide margin above the motor's full-load amperage. Industry best practice is to select one frame size up from the motor HP rating to account for service factor, power quality variations, and transient overloads. Per NEMA MG-1, the VFD continuous current rating must exceed the motor FLA with adequate margin for the application.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-007",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chilled Water Main Pipe Sizing",
+    "scenario": "A central plant chilled water distribution main must carry 1,200 GPM to the building. The design engineer specifies a maximum water velocity of 8 feet per second (fps) to limit noise and erosion. Using standard pipe velocity tables, what nominal pipe diameter is required?",
+    "hint": "Use the pipe velocity formula: GPM = (pipe area in sq ft) × velocity (fps) × 448.8. Or reference ASHRAE pipe sizing tables — at 1,200 GPM, check where the velocity falls below 8 fps for standard pipe sizes.",
+    "options": [
+      { "text": "8\" pipe", "value": "a", "correct": false, "feedback": "An 8\" pipe at 1,200 GPM produces approximately 7.6 fps velocity in Schedule 40 pipe — that's right at the limit. But the internal diameter of 8\" Schedule 40 is 7.981\", giving about 7.7 fps. Too close to the limit with no margin, and actually exceeds 8 fps in some pipe schedules." },
+      { "text": "10\" pipe", "value": "b", "correct": true, "feedback": "Correct! A 10\" pipe (10.02\" ID for Schedule 40) at 1,200 GPM yields approximately 4.9 fps — well within the 8 fps maximum. This provides good margin for future capacity and keeps noise and erosion in check." },
+      { "text": "6\" pipe", "value": "c", "correct": false, "feedback": "A 6\" pipe at 1,200 GPM would produce approximately 13.6 fps — far exceeding the 8 fps limit. This causes pipe erosion, water hammer, noise, and excessive pressure drop." },
+      { "text": "12\" pipe", "value": "d", "correct": false, "feedback": "A 12\" pipe at 1,200 GPM gives approximately 3.4 fps — well within limits but oversized. The extra cost and space for 12\" pipe and fittings is not justified when 10\" meets the velocity requirement." }
+    ],
+    "explanation": "Chilled water pipe sizing is governed by maximum velocity limits per ASHRAE guidelines: typically 4-8 fps for mains (higher velocities cause noise, erosion, and water hammer). At 1,200 GPM, a 10\" Schedule 40 pipe keeps velocity around 4.9 fps. Always verify with pipe friction loss tables to confirm the total system pressure drop is acceptable.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-cp-008",
+    "type": "size-it",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Heat Exchanger LMTD Calculation",
+    "scenario": "A counterflow plate-and-frame heat exchanger transfers heat between a hot water loop and a cold water loop. Hot side: 180°F entering, 140°F leaving. Cold side: 60°F entering, 120°F leaving. What is the Log Mean Temperature Difference (LMTD)?",
+    "hint": "For counterflow: ΔT1 = hot inlet − cold outlet = 180 − 120 = 60°F. ΔT2 = hot outlet − cold inlet = 140 − 60 = 80°F. LMTD = (ΔT2 − ΔT1) / ln(ΔT2 / ΔT1) when ΔT2 > ΔT1.",
+    "options": [
+      { "text": "60°F", "value": "a", "correct": false, "feedback": "60°F is just the smaller temperature difference (ΔT1 = 180 − 120). LMTD is not the arithmetic minimum — it's the logarithmic mean of both terminal differences." },
+      { "text": "69.7°F", "value": "b", "correct": true, "feedback": "Correct! ΔT1 = 180 − 120 = 60°F, ΔT2 = 140 − 60 = 80°F. LMTD = (80 − 60) / ln(80/60) = 20 / ln(1.333) = 20 / 0.2877 = 69.5°F ≈ 69.7°F." },
+      { "text": "70°F", "value": "c", "correct": false, "feedback": "70°F is the simple arithmetic mean of 60 and 80, i.e., (60 + 80)/2. The LMTD uses the logarithmic mean, which is always slightly less than the arithmetic mean: 69.7°F, not 70°F." },
+      { "text": "80°F", "value": "d", "correct": false, "feedback": "80°F is just the larger temperature difference (ΔT2 = 140 − 60). LMTD accounts for the logarithmic relationship between both terminal temperature differences." }
+    ],
+    "explanation": "The Log Mean Temperature Difference (LMTD) is the driving force for heat transfer in an exchanger. For counterflow: LMTD = (ΔT2 − ΔT1) / ln(ΔT2/ΔT1) where ΔT1 and ΔT2 are the temperature differences at each end. LMTD is always between the two terminal differences and slightly less than their arithmetic mean. This is a fundamental calculation per ASHRAE Handbook — HVAC Systems and Equipment for sizing heat exchangers.",
+    "xpReward": 60
+  }
+]

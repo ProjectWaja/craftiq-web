@@ -1,0 +1,138 @@
+[
+  {
+    "id": "si-hr-001",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Standpipe Flow and Pressure Calculation",
+    "scenario": "A Class I standpipe system in a 30-story high-rise (300 feet tall) must deliver water to the topmost 2-1/2 inch hose connection. The required residual pressure at the top outlet is 100 psi per NFPA 14. Static head for 300 feet of elevation equals 130 psi (300 ft x 0.433 psi/ft). Friction loss through the riser piping is estimated at 15 psi. What is the minimum pump discharge pressure required?",
+    "hint": "Total pump pressure = residual pressure required at top outlet + static head pressure (elevation) + friction losses through piping. Add all three components together.",
+    "options": [
+      { "text": "215 psi", "value": "a", "correct": false, "feedback": "215 psi is the sum of just the residual pressure (100) and friction loss (15) plus 100 psi — you may be double-counting or miscalculating the static head." },
+      { "text": "245 psi", "value": "b", "correct": true, "feedback": "Correct. Pump discharge pressure = 100 psi (required residual) + 130 psi (static head for 300 ft) + 15 psi (friction loss) = 245 psi. This is the minimum pressure the fire pump must produce at rated flow." },
+      { "text": "195 psi", "value": "c", "correct": false, "feedback": "195 psi subtracts friction loss instead of adding it. Friction loss always adds to the required pump pressure because the pump must overcome friction to move water through the piping." },
+      { "text": "275 psi", "value": "d", "correct": false, "feedback": "275 psi significantly oversizes the pump. The correct calculation is 100 + 130 + 15 = 245 psi. Over-pressurizing the system requires more expensive piping rated for higher pressures and wastes energy." }
+    ],
+    "explanation": "Fire pump sizing for high-rise standpipes is a fundamental hydraulic calculation per NFPA 14 and NFPA 20. The pump must overcome three pressure demands: the residual pressure needed at the most remote hose connection (100 psi for Class I per NFPA 14), the static head created by the building height (0.433 psi per foot of water column), and friction losses through the piping system. For a 300-foot building: 100 + (300 x 0.433) + 15 = 245 psi. This calculation determines the fire pump rating that protects every floor of the building.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hr-002",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Fire Pump Sizing",
+    "scenario": "A 40-story high-rise has a combined standpipe/sprinkler system. The hydraulic design requires 750 GPM for the most demanding sprinkler system plus 250 GPM for one standpipe hose stream operating simultaneously per NFPA 14 Section 7.10. The total system demand is 1,000 GPM. What is the minimum fire pump rating required, considering NFPA 20 requires the pump to deliver 150% of rated flow at not less than 65% of rated pressure?",
+    "hint": "The fire pump rated flow must meet or exceed the total system demand. Standard fire pump sizes per NFPA 20 are 250, 500, 750, 1000, 1250, 1500 GPM. Select the first standard size that meets or exceeds the demand.",
+    "options": [
+      { "text": "750 GPM", "value": "a", "correct": false, "feedback": "750 GPM is less than the total 1,000 GPM system demand. Even though 750 GPM at 150% equals 1,125 GPM, fire pump rating must meet the demand at 100% rated flow, not at the overload point. NFPA 20 does not allow relying on the 150% overload capacity for design demand." },
+      { "text": "1,000 GPM", "value": "b", "correct": true, "feedback": "Correct. The system demand is 1,000 GPM. A 1,000 GPM rated pump is the minimum standard size per NFPA 20 that meets the demand. At 150% (1,500 GPM), it delivers at least 65% of rated pressure, providing margin for high-demand scenarios." },
+      { "text": "1,250 GPM", "value": "c", "correct": false, "feedback": "1,250 GPM exceeds the 1,000 GPM demand unnecessarily. While additional capacity provides margin, NFPA 20 does not require oversizing beyond the calculated hydraulic demand. The 150% overload capability of a 1,000 GPM pump already provides the required safety margin." },
+      { "text": "500 GPM", "value": "d", "correct": false, "feedback": "500 GPM is half the required 1,000 GPM demand. This pump would be completely inadequate — sprinklers and standpipes would not receive sufficient flow or pressure during a fire event." }
+    ],
+    "explanation": "Fire pump sizing per NFPA 20 starts with calculating the total system demand — the simultaneous flow required for the most demanding combination of sprinklers and standpipes. NFPA 14 Section 7.10 defines the combined demand for systems with both standpipes and sprinklers. The fire pump is selected from standard sizes (NFPA 20 Table 4.8.1) at 100% rated flow to meet the calculated demand. The 150% performance point at 65% pressure is a pump curve characteristic that ensures the pump does not overload or stall at high flows, not a design point for system demand.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hr-003",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Stairwell Pressurization Fan CFM",
+    "scenario": "A stairwell pressurization system must maintain a minimum pressure differential of 0.05 inches w.c. across closed doors in a 25-story stairwell. The design assumes 3 doors open simultaneously during evacuation, each door measuring 3 feet wide by 7 feet tall (21 sq ft opening). The required minimum air velocity through each open door is 200 feet per minute to prevent smoke infiltration. Leakage through the closed stairwell envelope adds an additional 3,000 CFM. What is the minimum fan capacity required?",
+    "hint": "Calculate airflow through open doors: number of open doors x door area x required velocity. Then add the leakage airflow for the closed envelope. Total CFM = open door flow + leakage flow.",
+    "options": [
+      { "text": "9,600 CFM", "value": "a", "correct": false, "feedback": "9,600 CFM accounts for open doors (3 x 21 x 200 = 12,600) minus 3,000 for leakage. You must ADD leakage, not subtract it — the fan must supply air for both open doors and envelope leakage simultaneously." },
+      { "text": "12,600 CFM", "value": "b", "correct": false, "feedback": "12,600 CFM covers only the open door airflow (3 x 21 x 200 = 12,600) without adding envelope leakage. The fan must also compensate for air leaking through door gaps, wall joints, and elevator shaft connections." },
+      { "text": "15,600 CFM", "value": "c", "correct": true, "feedback": "Correct. Open door flow: 3 doors x 21 sq ft x 200 fpm = 12,600 CFM. Leakage: 3,000 CFM. Total: 12,600 + 3,000 = 15,600 CFM minimum fan capacity." },
+      { "text": "18,000 CFM", "value": "d", "correct": false, "feedback": "18,000 CFM oversizes the fan beyond the calculated requirement of 15,600 CFM. While some safety factor is appropriate, this represents a 15% oversize that increases equipment cost, duct size, and energy consumption unnecessarily." }
+    ],
+    "explanation": "Stairwell pressurization fan sizing per NFPA 92 must account for two simultaneous airflow demands: (1) maintaining velocity through open doors during evacuation and (2) compensating for air leaking through the building envelope. Open door flow: 3 doors x 21 sq ft x 200 fpm = 12,600 CFM. Envelope leakage is calculated from the stairwell perimeter, door gaps, and construction quality, adding 3,000 CFM in this case. Total: 15,600 CFM. This calculation ensures the stairwell remains smoke-free even with multiple doors open during a full-building evacuation.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hr-004",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "PRV Sizing for Water Pressure Zones",
+    "scenario": "A high-rise building has a domestic water booster pump delivering 180 psi to the main riser. A pressure zone serves floors 15 through 24 (10 floors). The PRV station is located at floor 15, which is 150 feet above the booster pump. The static head reduction at floor 15 is 65 psi (150 ft x 0.433 psi/ft). What should the PRV outlet pressure be set to, if the maximum allowable pressure at any fixture is 80 psi per IPC 604.8?",
+    "hint": "The pressure at floor 15 (the PRV location) before the PRV is: booster pressure minus static head to that floor. The PRV outlet must be set so the pressure at the LOWEST fixture in the zone (floor 15) does not exceed 80 psi. Since floor 15 IS the lowest fixture, set the PRV outlet to 80 psi or less.",
+    "options": [
+      { "text": "115 psi", "value": "a", "correct": false, "feedback": "115 psi is the inlet pressure at the PRV (180 - 65 = 115 psi). Setting the outlet to 115 psi defeats the purpose of the PRV — fixtures on floor 15 would receive 115 psi, far exceeding the 80 psi IPC limit." },
+      { "text": "80 psi", "value": "b", "correct": true, "feedback": "Correct. The PRV outlet is set to 80 psi (or slightly lower, 75 psi is common practice) to ensure the lowest fixture in the zone (floor 15) does not exceed 80 psi per IPC 604.8. Higher floors in the zone will have progressively lower pressure due to elevation, which is acceptable." },
+      { "text": "65 psi", "value": "c", "correct": false, "feedback": "65 psi at floor 15 means floor 24 (the top of the zone, approximately 90 feet higher) would only receive about 26 psi (65 - 39 = 26 psi). This is below the 15-20 psi minimum needed for adequate fixture operation." },
+      { "text": "100 psi", "value": "d", "correct": false, "feedback": "100 psi at floor 15 exceeds the IPC 604.8 maximum of 80 psi at any fixture. Fixtures on floor 15 would receive 100 psi, potentially causing fixture failure, water hammer, and excessive noise." }
+    ],
+    "explanation": "PRV outlet pressure in high-rise buildings must be set based on the lowest fixture in the zone, where pressure is highest. IPC 604.8 limits maximum fixture pressure to 80 psi. The inlet pressure at the PRV is the booster pressure minus the static head to the PRV location: 180 - 65 = 115 psi. The PRV reduces this to 80 psi maximum. Floors above the PRV have progressively lower pressure (losing 0.433 psi per foot of rise), so the top floor of the zone (floor 24) sees approximately 80 - 39 = 41 psi, which is adequate for fixture operation.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hr-005",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Emergency Generator Capacity",
+    "scenario": "A high-rise building has the following emergency loads: fire pump at 125 HP (93 kW), two stairwell pressurization fans at 30 HP each (45 kW total), smoke exhaust fans at 50 HP (37 kW), emergency lighting and exit signs at 25 kW, fire alarm and communications at 10 kW, one elevator for firefighter service at 50 HP (37 kW), and fire command center at 5 kW. The generator must include a 25% derating factor for altitude and temperature. What minimum generator rating is required?",
+    "hint": "Sum all emergency loads in kW. Then divide by the derating factor (0.75 for 25% derating) to find the nameplate generator rating. Round up to the next standard generator size.",
+    "options": [
+      { "text": "250 kW", "value": "a", "correct": false, "feedback": "Total emergency load = 93 + 45 + 37 + 25 + 10 + 37 + 5 = 252 kW. 250 kW is below the raw load total — before any derating is applied. The generator cannot carry even the unadjusted load." },
+      { "text": "300 kW", "value": "b", "correct": false, "feedback": "300 kW derated by 25% provides only 225 kW of usable capacity. The total load of 252 kW exceeds this derated capacity by 27 kW." },
+      { "text": "350 kW", "value": "c", "correct": true, "feedback": "Correct. Total load = 252 kW. With 25% derating: 252 / 0.75 = 336 kW. The next standard generator size is 350 kW, which provides 262.5 kW of usable capacity after derating — adequate for the 252 kW load." },
+      { "text": "500 kW", "value": "d", "correct": false, "feedback": "500 kW is significantly oversized. The calculated requirement is 336 kW, making 350 kW the appropriate standard size. A 500 kW generator costs more, takes more space, and burns more fuel than necessary." }
+    ],
+    "explanation": "Emergency generator sizing for high-rise buildings per NEC 700 and NFPA 110 requires summing all life-safety loads defined by IBC 403. Total: 93 (fire pump) + 45 (stair pressurization) + 37 (smoke exhaust) + 25 (emergency lighting) + 10 (fire alarm) + 37 (elevator) + 5 (command center) = 252 kW. Generators must be derated for altitude, temperature, and transient loading — a 25% derating means: 252 / 0.75 = 336 kW nameplate required. Standard sizes are 200, 250, 300, 350, 400, 500 kW. The 350 kW generator is the minimum standard size that provides adequate derated capacity.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hr-006",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Smoke Exhaust Fan Sizing",
+    "scenario": "A high-rise floor plan measures 150 feet by 100 feet with a 12-foot floor-to-ceiling height. The smoke control system must provide 6 air changes per hour (ACH) for the fire floor per NFPA 92. What is the required smoke exhaust fan capacity in CFM for a single floor?",
+    "hint": "Volume = length x width x height. CFM = (volume x air changes per hour) / 60 minutes per hour.",
+    "options": [
+      { "text": "12,000 CFM", "value": "a", "correct": false, "feedback": "12,000 CFM provides only about 4 ACH for this floor (12,000 x 60 / 180,000 = 4 ACH). This is below the required 6 ACH and may not adequately clear smoke from the floor." },
+      { "text": "18,000 CFM", "value": "b", "correct": true, "feedback": "Correct. Floor volume = 150 x 100 x 12 = 180,000 cu ft. CFM = 180,000 x 6 / 60 = 18,000 CFM. This provides exactly 6 air changes per hour for the fire floor." },
+      { "text": "24,000 CFM", "value": "c", "correct": false, "feedback": "24,000 CFM provides 8 ACH (24,000 x 60 / 180,000 = 8). While more exhaust is generally better, this oversizes the fan and ductwork by 33%, increasing cost and requiring larger shaft space." },
+      { "text": "10,800 CFM", "value": "d", "correct": false, "feedback": "10,800 CFM appears to use incorrect floor dimensions or calculation. The correct volume is 180,000 cu ft, requiring 18,000 CFM at 6 ACH." }
+    ],
+    "explanation": "Smoke exhaust fan sizing per NFPA 92 is based on the required air changes per hour for the protected space. First, calculate floor volume: 150 ft x 100 ft x 12 ft = 180,000 cubic feet. Then apply the ACH requirement: 180,000 cu ft x 6 ACH / 60 min = 18,000 CFM. This fan capacity clears smoke from the fire floor while the floor-by-floor smoke control system maintains the fire floor at negative pressure relative to adjacent floors. The 6 ACH rate is a common design standard that provides effective smoke removal while being achievable with reasonable duct and shaft sizes.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-hr-007",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Elevator Machine Room Cooling",
+    "scenario": "An elevator machine room on the roof of a high-rise contains 6 gearless traction machines, each dissipating 15 kW of heat under normal operation, plus 6 VFD controllers adding 3 kW each. The machine room is on the roof and solar heat gain through the roof adds 12,000 BTU/hr (3.5 kW). ASME A17.1 requires the room to be maintained below 104 degrees F. What is the minimum cooling capacity required in tons?",
+    "hint": "Sum all heat loads in kW (machines + VFDs + solar gain). Convert kW to tons of cooling: 1 ton = 3.517 kW.",
+    "options": [
+      { "text": "24 tons", "value": "a", "correct": false, "feedback": "24 tons = 84.4 kW, which only covers the machine heat (90 kW minus some). It does not account for VFD heat or solar gain, and actually falls short of even the machine heat alone." },
+      { "text": "30 tons", "value": "b", "correct": true, "feedback": "Correct. Machine heat: 6 x 15 = 90 kW. VFD heat: 6 x 3 = 18 kW. Solar gain: 3.5 kW. Total: 111.5 kW. Tons = 111.5 / 3.517 = 31.7 tons. The closest standard unit size is 30 tons, though a 35-ton unit would provide margin." },
+      { "text": "20 tons", "value": "c", "correct": false, "feedback": "20 tons = 70.3 kW. Total heat load is 111.5 kW — this unit provides only 63% of the required cooling capacity. The room would overheat rapidly, causing elevator shutdowns." },
+      { "text": "45 tons", "value": "d", "correct": false, "feedback": "45 tons = 158.3 kW, which significantly oversizes the system for a 111.5 kW heat load. This wastes capital cost and floor space in the machine room." }
+    ],
+    "explanation": "Elevator machine room cooling must remove all heat sources to maintain temperature below ASME A17.1 limits. Total heat: 6 machines x 15 kW = 90 kW, plus 6 VFDs x 3 kW = 18 kW, plus 3.5 kW solar gain = 111.5 kW total. Converting: 111.5 kW / 3.517 kW per ton = 31.7 tons. In practice, a 30-ton unit would be the closest standard size for a packaged or split system, though specifying a 35-ton unit provides operational margin for peak conditions. Modern gearless machines with regenerative drives produce significant heat that must be continuously removed to prevent drive faults and elevator shutdowns.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-hr-008",
+    "type": "size-it",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Domestic Water Booster Pump Sizing",
+    "scenario": "A 35-story residential high-rise (350 feet tall) needs a domestic water booster pump. The city water main provides 45 psi at the building entrance. The topmost fixture requires 15 psi minimum residual pressure. Static head for 350 feet is 152 psi (350 x 0.433). Friction losses through piping total 18 psi. What minimum booster pump discharge pressure is needed?",
+    "hint": "Total pump pressure = minimum residual at top fixture + static head (elevation) + friction losses - incoming city pressure. The city pressure helps push water up, reducing what the booster pump must add.",
+    "options": [
+      { "text": "140 psi", "value": "a", "correct": true, "feedback": "Correct. Required pressure = 15 (residual) + 152 (static head) + 18 (friction) - 45 (city pressure) = 140 psi. The booster pump adds 140 psi to the 45 psi city pressure for a total of 185 psi at the pump discharge." },
+      { "text": "185 psi", "value": "b", "correct": false, "feedback": "185 psi is the total system pressure needed at the pump discharge (15 + 152 + 18 = 185), but this does not credit the 45 psi already provided by the city water main. The booster pump only needs to ADD 140 psi to boost from 45 to 185 psi." },
+      { "text": "120 psi", "value": "c", "correct": false, "feedback": "120 psi added to city pressure gives only 165 psi total, which is 20 psi short of the 185 psi required. Fixtures on the top floors would have inadequate water pressure." },
+      { "text": "167 psi", "value": "d", "correct": false, "feedback": "167 psi appears to subtract only residual pressure from the total requirement (185 - 18 = 167), omitting the city pressure credit. The city pressure of 45 psi significantly reduces the pump requirement." }
+    ],
+    "explanation": "Domestic water booster pump sizing for high-rise buildings follows the same hydraulic principles as fire pump sizing but serves the plumbing system. The pump must overcome static head (building height), friction losses, and deliver minimum residual pressure at the highest fixture. The city water main pressure provides a 'head start' that reduces the pump requirement: 15 + 152 + 18 - 45 = 140 psi boost needed. The pump discharge pressure will be 45 + 140 = 185 psi. This total discharge pressure determines the pressure rating required for the main riser piping and influences where PRV zones must be established.",
+    "xpReward": 75
+  }
+]

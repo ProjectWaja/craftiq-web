@@ -1,0 +1,495 @@
+[
+  {
+    "id": "si-plmb-001",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Kitchen Sink Drain Pipe Sizing",
+    "scenario": "A residential kitchen sink with a garbage disposal needs a drain pipe from the P-trap to the vertical stack. What is the minimum drain pipe size for a kitchen sink?",
+    "hint": "IPC Table 709.1 lists the minimum trap and drain sizes for each fixture type. Kitchen sinks have specific minimum requirements different from bathroom sinks.",
+    "options": [
+      { "text": "1-1/4\" pipe", "value": "1.25", "correct": false, "feedback": "1-1/4\" is the minimum for a lavatory (bathroom sink) only. Kitchen sinks produce more waste including food particles and grease, requiring a larger drain." },
+      { "text": "1-1/2\" pipe", "value": "1.5", "correct": true, "feedback": "Correct! IPC Table 709.1 requires a minimum 1-1/2\" drain for kitchen sinks. This size handles the higher volume of water and food waste from kitchen use." },
+      { "text": "2\" pipe", "value": "2.0", "correct": false, "feedback": "2\" is the minimum for shower/tub drains and floor drains. While it would work for a kitchen sink, it exceeds the minimum requirement and wastes material." },
+      { "text": "3\" pipe", "value": "3.0", "correct": false, "feedback": "3\" is used for water closets (toilets) and building drains. Far oversized for a kitchen sink drain." }
+    ],
+    "explanation": "Drain pipe sizing is based on the fixture type and expected flow. Kitchen sinks require 1-1/2\" minimum per IPC Table 709.1 because they handle food waste, grease, and higher flow volumes than bathroom lavatories.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-plmb-002",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Supply Pipe to Bathroom Group",
+    "scenario": "A new bathroom with a toilet, lavatory, and tub/shower is being added to a home. The bathroom supply branches off the 3/4\" main. What is the minimum hot and cold branch pipe size to serve all three fixtures?",
+    "hint": "IPC Table 604.3 and Appendix E provide water supply pipe sizing based on fixture count and type. A bathroom group typically totals about 6-8 water supply fixture units (WSFU).",
+    "options": [
+      { "text": "3/8\" pipe", "value": "0.375", "correct": false, "feedback": "3/8\" is only adequate for individual fixture connections (a single faucet). It cannot supply an entire bathroom group." },
+      { "text": "1/2\" pipe", "value": "0.5", "correct": true, "feedback": "Correct! A 1/2\" supply line can serve a bathroom group in most residential applications per IPC Table E103.3. Individual fixture connections can be 3/8\" from the 1/2\" branch." },
+      { "text": "3/4\" pipe", "value": "0.75", "correct": false, "feedback": "3/4\" is the typical main supply line size. Using it for a single bathroom branch is oversized and adds unnecessary cost." },
+      { "text": "1\" pipe", "value": "1.0", "correct": false, "feedback": "1\" is the building water service size. Far too large for a single bathroom branch line." }
+    ],
+    "explanation": "Water supply branch sizing depends on the total fixture units served. A single bathroom group can typically be served by 1/2\" branches per IPC Appendix E sizing tables, with 3/8\" risers to individual fixtures.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-plmb-003",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Vent Pipe Sizing for Water Closet",
+    "scenario": "A water closet (toilet) has a 3\" drain connection. An individual vent pipe needs to be installed. What is the minimum vent pipe size for this toilet?",
+    "hint": "IPC Table 906.1 requires the vent to be at least one-half the diameter of the drain served, with a minimum size of 1-1/4 inches.",
+    "options": [
+      { "text": "1-1/4\" vent", "value": "1.25", "correct": false, "feedback": "1-1/4\" is the absolute minimum vent size but is only adequate for fixtures with 1-1/4\" to 2\" drains. A 3\" drain requires a larger vent." },
+      { "text": "1-1/2\" vent", "value": "1.5", "correct": true, "feedback": "Correct! The vent must be at least half the drain diameter: 3\" / 2 = 1-1/2\". This is the minimum vent size for a fixture with a 3\" drain per IPC Table 906.1." },
+      { "text": "2\" vent", "value": "2.0", "correct": false, "feedback": "2\" would work but exceeds the minimum required. This size is typically used for circuit vents or vent stacks serving multiple fixtures." },
+      { "text": "3\" vent", "value": "3.0", "correct": false, "feedback": "A vent the same size as the drain is unnecessary for an individual fixture vent. This wastes material and labor." }
+    ],
+    "explanation": "Vent pipe sizing is based on the drain it serves. IPC Table 906.1 requires the vent to be at least one-half the drain diameter (minimum 1-1/4\"). For a 3\" toilet drain, the minimum vent is 1-1/2\".",
+    "xpReward": 45
+  },
+  {
+    "id": "si-plmb-004",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Heater BTU Sizing",
+    "scenario": "A family of four needs a new gas water heater. They use an average of 60 gallons during the peak hour (morning showers, dishwasher). The incoming cold water is 50 degrees F and they want 120 degrees F hot water. What is the minimum BTU input needed for a tank water heater with 70% recovery efficiency?",
+    "hint": "Recovery formula: BTU = gallons x 8.33 x temperature rise / efficiency. Temperature rise = 120 - 50 = 70 degrees F. One gallon of water weighs 8.33 pounds.",
+    "options": [
+      { "text": "30,000 BTU", "value": "30000", "correct": false, "feedback": "30,000 BTU only recovers about 36 GPH at a 70-degree rise. This would leave the family without hot water during peak demand." },
+      { "text": "40,000 BTU", "value": "40000", "correct": false, "feedback": "40,000 BTU recovers about 48 GPH at a 70-degree rise. Still falls short of the 60 GPH peak demand." },
+      { "text": "50,000 BTU", "value": "50000", "correct": true, "feedback": "Correct! 60 gal x 8.33 x 70 / 0.70 = 49,980 BTU. A 50,000 BTU unit provides the needed 60 GPH first-hour recovery at 70% efficiency." },
+      { "text": "75,000 BTU", "value": "75000", "correct": false, "feedback": "75,000 BTU provides about 90 GPH recovery. Oversized for this application, resulting in higher standby losses and unnecessary cost." }
+    ],
+    "explanation": "Water heater sizing uses the BTU recovery formula based on gallons needed, temperature rise, and appliance efficiency. Undersizing causes cold showers; oversizing wastes energy on standby losses. The formula is BTU = GPH x 8.33 x delta-T / efficiency.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-plmb-005",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Fixture Unit Calculation for Branch Drain",
+    "scenario": "A horizontal branch drain serves the following fixtures: 1 water closet (6 DFU), 1 lavatory (1 DFU), and 1 bathtub (2 DFU). What is the minimum branch drain size?",
+    "hint": "Total the drainage fixture units (DFU) and use IPC Table 710.1(2) for horizontal branches. Remember that any branch receiving a water closet must be at least 3 inches.",
+    "options": [
+      { "text": "2\" pipe", "value": "2.0", "correct": false, "feedback": "2\" pipe can handle up to 6 DFU on a horizontal branch but CANNOT receive a water closet (toilet). Any branch with a water closet must be at least 3 inches." },
+      { "text": "3\" pipe", "value": "3.0", "correct": true, "feedback": "Correct! A 3\" horizontal branch can handle up to 20 DFU and is the minimum size that can receive a water closet discharge. 9 DFU total is well within capacity." },
+      { "text": "4\" pipe", "value": "4.0", "correct": false, "feedback": "4\" handles up to 160 DFU on a horizontal branch. Far oversized for 9 DFU, though it would work." },
+      { "text": "1-1/2\" pipe", "value": "1.5", "correct": false, "feedback": "1-1/2\" can only handle 3 DFU on a horizontal branch. Both undersized and prohibited from receiving a toilet connection." }
+    ],
+    "explanation": "Branch drain sizing considers both total DFU and fixture types. Water closets always require a minimum 3\" drain, regardless of total DFU. This is one of the most fundamental plumbing code rules per IPC Table 710.1.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-plmb-006",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Gas Pipe Sizing for Water Heater",
+    "scenario": "A 75,000 BTU gas water heater is located 30 feet from the gas meter. Using natural gas at 0.5 PSI with a 0.5\" W.C. allowable pressure drop, what minimum gas pipe size is required?",
+    "hint": "Refer to IFGC Table 402.4 for semi-rigid tubing or Table 402.4(2) for iron pipe. Find the column for 30-foot equivalent length and the row that exceeds 75,000 BTU/h.",
+    "options": [
+      { "text": "1/2\" iron pipe", "value": "0.5", "correct": false, "feedback": "1/2\" pipe at 30 feet delivers only about 60,000 BTU/h at 0.5\" W.C. pressure drop. This is 15,000 BTU short of the requirement." },
+      { "text": "3/4\" iron pipe", "value": "0.75", "correct": true, "feedback": "Correct! Per IFGC Table 402.4, 3/4\" iron pipe at 30 feet delivers approximately 150,000 BTU/h — more than adequate for the 75,000 BTU water heater." },
+      { "text": "1\" iron pipe", "value": "1.0", "correct": false, "feedback": "1\" handles up to about 360,000 BTU/h at 30 feet. Functional but oversized for a single 75,000 BTU appliance." },
+      { "text": "3/8\" CSST", "value": "0.375", "correct": false, "feedback": "3/8\" CSST at 30 feet only delivers about 39,000 BTU/h. Severely undersized, causing dangerous low gas pressure at the appliance." }
+    ],
+    "explanation": "Gas pipe sizing uses capacity tables based on pipe material, size, length, and allowable pressure drop. Undersized gas piping causes incomplete combustion, sooting, and potentially dangerous carbon monoxide production per IFGC 402.4.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-plmb-007",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Meter Sizing",
+    "scenario": "A commercial building has a peak water demand of 120 GPM based on fixture unit calculations. What size water meter is needed to supply this demand without excessive pressure loss?",
+    "hint": "Water meters should be sized to handle peak flow without exceeding the recommended maximum flow rate. Oversizing causes inaccurate readings; undersizing causes excessive pressure drop.",
+    "options": [
+      { "text": "1\" meter", "value": "1.0", "correct": false, "feedback": "A 1\" meter has a maximum safe continuous flow of about 50 GPM. At 120 GPM, the pressure loss would be extreme and the meter would be damaged." },
+      { "text": "1-1/2\" meter", "value": "1.5", "correct": false, "feedback": "A 1-1/2\" meter handles about 100 GPM maximum. Still undersized for the 120 GPM peak demand." },
+      { "text": "2\" meter", "value": "2.0", "correct": true, "feedback": "Correct! A 2\" displacement meter handles up to approximately 160 GPM. This provides adequate capacity for 120 GPM peak demand with reasonable pressure loss." },
+      { "text": "3\" meter", "value": "3.0", "correct": false, "feedback": "A 3\" meter handles up to 300+ GPM. Oversized meters under-register low flows, leading to inaccurate billing and lost revenue for the utility." }
+    ],
+    "explanation": "Water meter sizing must handle peak demand without excessive pressure loss while not being so oversized that it under-registers normal flow. The meter must be sized between the minimum and maximum flow rates per AWWA standards and IPC 604.3.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-plmb-008",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Expansion Tank Sizing",
+    "scenario": "A residential water heater system has a total system volume of 50 gallons (40-gallon tank + 10 gallons in piping). The water temperature rises from 40 degrees F (cold fill) to 140 degrees F (operating). The system has a backflow preventer (closed system). Supply pressure is 50 PSI and the T&P relief valve is set at 150 PSI. What expansion tank size is needed?",
+    "hint": "Water expands about 2.5% when heated from 40 degrees F to 140 degrees F. Tank size = expansion volume / acceptance factor. Acceptance factor = 1 - (supply pressure / relief pressure).",
+    "options": [
+      { "text": "1 gallon", "value": "1", "correct": false, "feedback": "1 gallon does not account for the pressure acceptance factor. Expansion volume alone is 1.25 gallons, and the tank must be larger to accommodate the pressure differential." },
+      { "text": "2 gallons", "value": "2", "correct": true, "feedback": "Correct! Expansion = 50 gal x 0.025 = 1.25 gal. Acceptance factor = 1 - (50/150) = 0.667. Tank = 1.25 / 0.667 = 1.9 gallons. A 2-gallon tank is the correct selection." },
+      { "text": "5 gallons", "value": "5", "correct": false, "feedback": "5 gallons is oversized for a 50-gallon residential system. While not harmful, it adds unnecessary cost and takes up more space." },
+      { "text": "10 gallons", "value": "10", "correct": false, "feedback": "10 gallons is far oversized. This size would be used for much larger commercial systems." }
+    ],
+    "explanation": "Expansion tank sizing for closed plumbing systems accounts for thermal expansion of water and the pressure differential between supply and relief valve settings. Without an expansion tank on a closed system, the T&P relief valve will weep as water heats and expands per IPC 607.3.2.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-plmb-009",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "P-Trap Size for Shower",
+    "scenario": "A residential shower stall has a 2-inch drain opening in the floor. What is the minimum P-trap size for this shower?",
+    "hint": "IPC Table 709.1 specifies the minimum trap size for each fixture type. Showers have a specific minimum that relates to their drain pipe size.",
+    "options": [
+      { "text": "1-1/4\" P-trap", "value": "1.25", "correct": false, "feedback": "1-1/4\" is only for lavatories. Far too small for a shower, it would back up immediately under normal shower flow." },
+      { "text": "1-1/2\" P-trap", "value": "1.5", "correct": false, "feedback": "1-1/2\" is undersized for a shower. This size is appropriate for bathtubs and kitchen sinks but not shower stalls." },
+      { "text": "2\" P-trap", "value": "2.0", "correct": true, "feedback": "Correct! IPC Table 709.1 requires a minimum 2\" trap for shower stalls. The trap must match the minimum drain size for the fixture." },
+      { "text": "3\" P-trap", "value": "3.0", "correct": false, "feedback": "3\" is used for water closets (toilets). Oversized for a shower drain and unnecessarily expensive." }
+    ],
+    "explanation": "Shower traps must be at least 2 inches per IPC Table 709.1. The trap must also have a minimum 2-inch water seal depth. Undersized traps cause slow drainage and standing water, while the proper size handles the 2.5 GPM shower flow rate effectively.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plmb-010",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Water Pressure Requirement at Top Floor",
+    "scenario": "A 4-story apartment building has a water supply pressure of 65 PSI at the street level. The top-floor fixtures are 40 feet above the water meter. Friction losses in the piping are estimated at 10 PSI. What is the available pressure at the top floor, and is it adequate?",
+    "hint": "Static pressure loss due to elevation is 0.433 PSI per foot of height. Minimum pressure at any fixture must be 8 PSI per IPC 604.5. Calculate: available pressure = street pressure - elevation loss - friction loss.",
+    "options": [
+      { "text": "37.7 PSI — adequate", "value": "37.7", "correct": true, "feedback": "Correct! 65 PSI - (40 ft x 0.433 PSI/ft) - 10 PSI = 65 - 17.3 - 10 = 37.7 PSI. This exceeds the 8 PSI minimum required at any fixture per IPC 604.5." },
+      { "text": "45 PSI — adequate", "value": "45", "correct": false, "feedback": "This calculation neglects the friction losses. You must subtract both elevation pressure loss (17.3 PSI) AND piping friction losses (10 PSI)." },
+      { "text": "55 PSI — adequate", "value": "55", "correct": false, "feedback": "This only subtracts the friction losses and ignores the elevation pressure loss. Elevation is the largest pressure reduction factor in multi-story buildings." },
+      { "text": "5 PSI — not adequate", "value": "5", "correct": false, "feedback": "This is incorrect. While you accounted for elevation, the math is wrong. The correct elevation loss for 40 feet is 17.3 PSI, not 50 PSI." }
+    ],
+    "explanation": "Water pressure calculations for multi-story buildings must account for elevation loss (0.433 PSI per foot of height) and friction losses in piping. IPC 604.5 requires a minimum of 8 PSI at any fixture. When pressure is insufficient, a booster pump system is required.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-plmb-011",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "T&P Relief Valve Discharge Pipe Sizing",
+    "scenario": "A commercial water heater has a T&P relief valve rated at 210 degrees F and 150 PSI with a discharge capacity of 500,000 BTU/h. The discharge pipe must run 20 feet from the valve to the drain receptor. What is the minimum discharge pipe size?",
+    "hint": "IPC Table 504.6.1 sizes T&P discharge pipes based on the relief valve capacity (BTU/h) and pipe length. The pipe must not be smaller than the valve outlet.",
+    "options": [
+      { "text": "3/4\" pipe", "value": "0.75", "correct": false, "feedback": "3/4\" is the minimum for most residential relief valves but cannot handle 500,000 BTU/h discharge capacity over 20 feet. The flow restriction could cause dangerous pressure buildup." },
+      { "text": "1\" pipe", "value": "1.0", "correct": true, "feedback": "Correct! Per IPC Table 504.6.1, a 1\" discharge pipe can handle up to approximately 500,000 BTU/h at 20 feet of equivalent length. This matches the relief valve capacity." },
+      { "text": "1-1/4\" pipe", "value": "1.25", "correct": false, "feedback": "1-1/4\" can handle higher capacities but exceeds the minimum for this application. While acceptable, it is not the minimum required." },
+      { "text": "1/2\" pipe", "value": "0.5", "correct": false, "feedback": "1/2\" is never permitted for T&P discharge pipes. The minimum is 3/4\" and must never be reduced below the valve outlet size per IPC 504.6.2." }
+    ],
+    "explanation": "T&P discharge pipe sizing depends on the relief valve capacity and pipe length per IPC Table 504.6.1. Undersized discharge pipes restrict flow and prevent the relief valve from protecting the water heater. The pipe must never be smaller than the valve outlet.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-plmb-012",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Building Sewer Lateral Sizing",
+    "scenario": "A single-family residence has a total of 30 drainage fixture units (DFU) discharging into the building sewer. The sewer lateral connects to the municipal sewer in the street. What minimum pipe size is required for the building sewer?",
+    "hint": "IPC Table 710.1(1) provides sizing for building drains and sewers based on DFU and slope. Most residential building sewers use 1/8\" per foot minimum slope.",
+    "options": [
+      { "text": "3\" pipe", "value": "3.0", "correct": false, "feedback": "A 3\" building sewer at 1/8\" per foot slope handles only 42 DFU but some jurisdictions require 4\" minimum for building sewers regardless. Check your local amendment." },
+      { "text": "4\" pipe", "value": "4.0", "correct": true, "feedback": "Correct! A 4\" building sewer at 1/8\" per foot slope handles up to 216 DFU. Most codes require a 4\" minimum for building sewers, and it provides ample capacity for 30 DFU." },
+      { "text": "6\" pipe", "value": "6.0", "correct": false, "feedback": "6\" is used for commercial or multi-family building sewers with very high DFU counts. Oversized for a single-family home." },
+      { "text": "2\" pipe", "value": "2.0", "correct": false, "feedback": "2\" is far too small for a building sewer. This size handles only 6 DFU on a horizontal branch and cannot receive water closet drainage." }
+    ],
+    "explanation": "Building sewer sizing per IPC Table 710.1(1) is based on total DFU and pipe slope. Most jurisdictions mandate a 4\" minimum building sewer for residential construction. The sewer must maintain continuous slope and not have any sags that trap solids.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plumb-013",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Domestic Hot Water Pipe Insulation",
+    "scenario": "A 1-inch copper domestic hot water supply pipe runs through an unheated basement in a residential building. The water heater is set to 120°F. Per IECC, what minimum insulation thickness is required?",
+    "hint": "IECC Section R403.4.2 requires insulation on hot water piping in unconditioned spaces. The requirement is based on achieving a minimum R-value, which translates to a specific thickness depending on the insulation material.",
+    "options": [
+      { "text": "No insulation required for residential", "value": "0", "correct": false, "feedback": "IECC requires insulation on hot water pipes in unconditioned spaces regardless of residential or commercial use. Uninsulated pipes lose 2-4°F per 10 feet, wasting energy and increasing hot water wait times." },
+      { "text": "3/4\" insulation", "value": "0.75", "correct": true, "feedback": "Correct! IECC requires minimum R-3 insulation on domestic hot water pipes in unconditioned spaces. For 1\" pipe, 3/4\" thick fiberglass or foam rubber insulation achieves this R-3 minimum." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": false, "feedback": "1-1/2\" exceeds the residential minimum requirement. While more insulation is always beneficial for energy savings, this thickness is difficult to install on 1\" pipe and not code-required." },
+      { "text": "2\" insulation", "value": "2", "correct": false, "feedback": "2\" is significant overkill for residential domestic hot water. This thickness is reserved for high-temperature commercial applications. The cost increase is not justified." }
+    ],
+    "explanation": "Domestic hot water pipe insulation in unconditioned spaces is a simple but impactful energy measure. IECC R403.4.2 requires R-3 minimum insulation, which prevents standby losses and reduces the time to deliver hot water at fixtures. All hot water piping from the water heater to kitchen outlets must also be insulated for the first 8 feet minimum.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-plumb-014",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Freeze Protection Pipe Insulation",
+    "scenario": "A 2-inch domestic cold water supply pipe runs through an exterior wall cavity in Climate Zone 6 (design temp -10°F). The pipe carries 50°F water. What minimum insulation thickness is needed to provide reasonable freeze protection per IPC?",
+    "hint": "IPC Section 305.6 requires protection of water pipes from freezing. In exterior wall cavities, insulation must be installed between the pipe and the exterior sheathing. The pipe must be on the warm side of the insulation.",
+    "options": [
+      { "text": "1/2\" pipe insulation on pipe", "value": "0.5", "correct": false, "feedback": "1/2\" on the pipe alone doesn't address the real problem. IPC requires the pipe be on the warm side of the wall insulation — pipe insulation alone in an exterior wall cavity is insufficient for -10°F conditions." },
+      { "text": "1\" pipe insulation, warm side of wall insulation", "value": "1-warm", "correct": true, "feedback": "Correct! IPC 305.6 requires pipes be protected from freezing. Best practice is 1\" pipe insulation AND locating the pipe on the warm side of the wall insulation cavity. The wall's R-19+ cavity insulation goes between the pipe and the exterior sheathing." },
+      { "text": "2\" pipe insulation only", "value": "2", "correct": false, "feedback": "2\" insulation on the pipe without addressing its position in the wall cavity is not a complete solution. In -10°F conditions, even 2\" insulation fails if the pipe is on the cold side of the wall insulation." },
+      { "text": "No insulation — heat trace only", "value": "ht", "correct": false, "feedback": "Heat trace alone without insulation is energy-wasteful and not code-compliant. IPC requires pipe protection from freezing through proper insulation and pipe placement. Heat trace supplements insulation but doesn't replace it." }
+    ],
+    "explanation": "Freeze protection in exterior walls is primarily about pipe placement — the pipe must be on the warm (interior) side of the wall insulation per IPC 305.6. Pipe insulation adds a secondary layer of protection. In extremely cold climates, electric heat trace may supplement insulation but should never be the sole protection method.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-plumb-015",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Recirculation Loop Insulation",
+    "scenario": "A commercial building has a domestic hot water recirculation loop with 1-1/2\" supply and 3/4\" return piping running through conditioned corridors. The system maintains 140°F at all fixtures. Per IECC/ASHRAE 90.1, what insulation is required on the recirculation return piping?",
+    "hint": "IECC and ASHRAE 90.1 require insulation on ALL hot water recirculation piping — both supply and return — even in conditioned spaces, because recirculation loops run 24/7 and represent significant energy loss.",
+    "options": [
+      { "text": "No insulation — it's in conditioned space", "value": "0", "correct": false, "feedback": "Recirculation piping MUST be insulated even in conditioned spaces per IECC C404.4. A bare 3/4\" recirc return at 140°F loses roughly 30 BTU/hr per linear foot — adding unwanted heat in cooling season." },
+      { "text": "1/2\" insulation", "value": "0.5", "correct": false, "feedback": "1/2\" is below the minimum R-3 requirement. On a continuous recirc loop running 8,760 hours per year, this under-insulation results in hundreds of dollars in wasted energy annually." },
+      { "text": "3/4\" insulation (R-3 minimum)", "value": "0.75", "correct": true, "feedback": "Correct! IECC C404.4 requires minimum R-3 insulation on all hot water recirculation piping including returns, even in conditioned spaces. 3/4\" of fiberglass or elastomeric insulation meets R-3 on 3/4\" pipe." },
+      { "text": "1-1/2\" insulation", "value": "1.5", "correct": false, "feedback": "1-1/2\" exceeds the code minimum for 3/4\" recirculation return piping. While beneficial for energy savings, this thickness is difficult to install and not required by IECC." }
+    ],
+    "explanation": "Recirculation loop insulation is one of the most cost-effective energy measures in commercial plumbing. The return line runs continuously and is often forgotten. IECC C404.4 specifically requires insulation on all recirculation piping because the annual energy loss from bare recirc piping is substantial — often 10-20% of total water heating energy.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-plumb-016",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Medical Gas Pipe Insulation",
+    "scenario": "A 1-inch medical oxygen supply pipe runs from a bulk storage system through an unconditioned mechanical space to a hospital patient floor. The oxygen is at 50 PSI and ambient temperature. Per NFPA 99 and facility requirements, what insulation is required?",
+    "hint": "Medical gas piping has unique requirements beyond thermal insulation. NFPA 99 Health Care Facilities Code governs medical gas installations. Consider both thermal protection and condensation prevention on piping that may carry gas below dew point.",
+    "options": [
+      { "text": "No insulation required — gas is at ambient temp", "value": "0", "correct": false, "feedback": "Even at ambient temperature, medical gas piping in unconditioned spaces needs insulation. Temperature swings can cause condensation inside the pipe, and NFPA 99 requires protection of medical gas piping from physical damage and temperature extremes." },
+      { "text": "1/2\" fiberglass insulation", "value": "0.5-fg", "correct": false, "feedback": "Fiberglass insulation is NOT permitted on medical gas piping. Fiberglass fibers can contaminate the pipe system during installation or maintenance. Only closed-cell insulation materials are acceptable per NFPA 99." },
+      { "text": "1\" closed-cell elastomeric insulation", "value": "1-cc", "correct": true, "feedback": "Correct! Medical gas piping requires closed-cell elastomeric insulation (e.g., Armaflex) to prevent internal condensation and protect against temperature extremes. 1\" provides adequate thermal protection per NFPA 99 and ASSE 6010. Fiberglass is prohibited due to fiber contamination risk." },
+      { "text": "2\" mineral wool insulation", "value": "2-mw", "correct": false, "feedback": "Mineral wool, like fiberglass, is a fibrous insulation that poses contamination risk to medical gas systems. NFPA 99 requires non-fibrous, closed-cell insulation on medical gas piping." }
+    ],
+    "explanation": "Medical gas pipe insulation per NFPA 99 serves multiple purposes: preventing condensation inside the pipe (which could carry water to patient delivery points), protecting against temperature extremes, and preventing physical damage. Only closed-cell insulation is acceptable — fibrous materials (fiberglass, mineral wool) are prohibited because fibers can enter the gas stream during maintenance.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-plumb-017",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Hydronic System Pressure Rating",
+    "scenario": "You are selecting components for a standard closed-loop hydronic heating system in a 3-story commercial building. Per UCSB spec, what is the normal operating pressure rating for standard hydronic systems?",
+    "hint": "UCSB spec defines two pressure tiers for hydronic systems: normal and high pressure. Most commercial heating and cooling systems operate at the normal tier.",
+    "options": [
+      { "text": "50 psig", "value": "50", "correct": false, "feedback": "50 psig is below the UCSB spec normal rating. While some residential systems operate at this pressure, commercial hydronic systems are rated higher to handle taller buildings and longer piping runs." },
+      { "text": "125 psig", "value": "125", "correct": true, "feedback": "Correct! Per UCSB spec, standard hydronic systems are rated at 125 psig normal operating pressure. All valves, fittings, and equipment in the loop must be rated to meet or exceed this pressure." },
+      { "text": "250 psig", "value": "250", "correct": false, "feedback": "250 psig is the UCSB spec high-pressure rating for special applications like high-rise buildings or high-temperature hot water systems. Standard commercial hydronic systems use the 125 psig rating." },
+      { "text": "400 psig", "value": "400", "correct": false, "feedback": "400 psig far exceeds standard hydronic system requirements. This pressure level is typical for steam systems or industrial process piping, not HVAC hydronic loops." }
+    ],
+    "explanation": "UCSB spec hydronic pressure ratings: 125 psig normal, 250 psig high pressure. The normal 125 psig rating covers most commercial buildings up to about 20 stories. High-pressure (250 psig) is used for tall buildings where static head exceeds normal system ratings. All loop components — valves, strainers, coils, and pipe — must meet the system pressure rating.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-plumb-018",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Butterfly Valve Operator Type",
+    "scenario": "You are selecting butterfly valves for a chilled water system. The spec calls for several sizes: 3-inch, 4-inch, 6-inch, and 8-inch. Per UCSB spec, at what valve size does the operator type change from lever handle to gear operator?",
+    "hint": "UCSB spec defines a size threshold where butterfly valves must switch from lever (quarter-turn) handles to gear operators. Larger valves require gear operators because the disc force exceeds safe manual lever operation.",
+    "options": [
+      { "text": "4-inch and larger require gear operator", "value": "4", "correct": false, "feedback": "4-inch and 5-inch butterfly valves can still be operated with a lever handle per UCSB spec. The gear operator requirement starts at a larger size." },
+      { "text": "6-inch and larger require gear operator", "value": "6", "correct": true, "feedback": "Correct! Per UCSB spec, butterfly valves through 5 inches use lever handles, and 6 inches and larger require gear operators. The disc force on a 6-inch valve under system pressure exceeds safe manual lever operation." },
+      { "text": "8-inch and larger require gear operator", "value": "8", "correct": false, "feedback": "8 inches is too high a threshold. A 6-inch butterfly valve under full system pressure requires significant force to operate — more than a lever handle can safely provide. UCSB spec requires gear operator starting at 6 inches." },
+      { "text": "All sizes require gear operators", "value": "all", "correct": false, "feedback": "Gear operators on small valves (2-4 inch) are unnecessary and make operation slower. UCSB spec allows lever handles through 5 inches where the disc forces are manageable by hand." }
+    ],
+    "explanation": "Butterfly valve operator selection per UCSB spec: lever handle through 5 inches, gear operator for 6 inches and larger. The torque required to operate a butterfly valve increases with the square of the disc diameter. A 6-inch disc under 125 PSI creates substantial closing force that exceeds safe manual lever operation, requiring the mechanical advantage of a gear operator.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-plumb-019",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Automatic Flow Control Valve Specifications",
+    "scenario": "You are specifying automatic flow control valves for a hydronic system to maintain constant flow through each branch regardless of system pressure fluctuations. Per UCSB spec, what flow accuracy and maximum pressure loss are required?",
+    "hint": "UCSB spec defines both the flow accuracy percentage and the maximum allowable pressure drop across the automatic flow control valve at design flow.",
+    "options": [
+      { "text": "±5% accuracy, max 1 psi loss", "value": "5-1", "correct": false, "feedback": "±5% accuracy is tighter than UCSB spec requires, and 1 psi maximum loss is more restrictive than specified. While these are excellent specs, they would significantly increase valve cost without proportional benefit." },
+      { "text": "±10% accuracy, max 3 psi loss", "value": "10-3", "correct": true, "feedback": "Correct! Per UCSB spec, automatic flow control valves must maintain flow within ±10% of the setpoint with a maximum pressure loss of 3 psi at design flow. This provides adequate flow balancing without excessive system pressure drop." },
+      { "text": "±15% accuracy, max 5 psi loss", "value": "15-5", "correct": false, "feedback": "±15% accuracy is too loose for effective flow balancing. A 100 GPM branch could swing between 85-115 GPM, causing significant coil performance variation. UCSB spec requires ±10%." },
+      { "text": "±20% accuracy, max 10 psi loss", "value": "20-10", "correct": false, "feedback": "±20% accuracy provides almost no flow control benefit, and 10 psi loss wastes significant pump energy. UCSB spec calls for ±10% accuracy with a maximum of 3 psi loss." }
+    ],
+    "explanation": "Automatic flow control valve specs per UCSB: ±10% flow accuracy, 3 psi maximum pressure loss. These valves use a spring-loaded cartridge that automatically adjusts to maintain constant flow as system pressure varies. They eliminate the need for manual balancing valves on each branch, saving commissioning time while ensuring proper coil performance.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plumb-020",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Copper Pipe Joining Method by Size",
+    "scenario": "You are joining copper tubing on a hydronic piping system. Per UCSB spec, the joining method changes based on pipe size. For a 2-inch copper joint, what solder alloy is required, and at what size must you switch to brazing?",
+    "hint": "UCSB spec specifies 95-5 tin-antimony solder for smaller copper joints and sil-fos brazing for larger sizes. There is a specific size breakpoint where the joining method must change.",
+    "options": [
+      { "text": "95-5 solder for all sizes, no brazing required", "value": "all-solder", "correct": false, "feedback": "Solder is not adequate for larger copper pipe joints. As pipe diameter increases, the joint area and pressure forces increase, requiring the stronger silver-bearing brazed joint per UCSB spec." },
+      { "text": "95-5 solder through 2\", sil-fos brazing for 2.5\" and larger", "value": "2-solder", "correct": true, "feedback": "Correct! Per UCSB spec, 95-5 tin-antimony solder is used for copper joints 2 inches and smaller. Joints 2-1/2 inches and larger require sil-fos (silver-phosphorus-copper) brazing for the stronger joint needed on larger pipe." },
+      { "text": "95-5 solder through 1\", sil-fos brazing for 1.5\" and larger", "value": "1-solder", "correct": false, "feedback": "The breakpoint is higher than 1 inch. UCSB spec allows 95-5 solder through 2 inches. Requiring brazing at 1-1/2\" would significantly increase labor costs on common residential and light commercial pipe sizes." },
+      { "text": "Lead-free solder for all sizes", "value": "lead-free", "correct": false, "feedback": "While all solder on potable water systems must be lead-free, UCSB spec specifically calls for 95-5 tin-antimony (which is lead-free) for sizes through 2 inches and sil-fos brazing for larger sizes. The joining method matters, not just the solder type." }
+    ],
+    "explanation": "Copper joining per UCSB spec: 95-5 tin-antimony solder for 2\" and smaller, sil-fos brazing for 2-1/2\" and larger. Solder joints rely on capillary action and are adequate for smaller diameters. Larger pipes need the higher strength of brazed joints (melting above 1100°F vs. 450°F for solder) to handle greater pressure forces on the larger joint surface area.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plumb-021",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Chilled Water Pipe Insulation — Small Pipe, Cold",
+    "scenario": "A 3/4-inch chilled water branch pipe operates at 42°F in an interior ceiling space. Per California T-24 Table 120.3-A, what insulation thickness is required for a pipe under 1 inch in the 40-60°F cooling range?",
+    "hint": "T-24 Table 120.3-A has a column for pipes smaller than 1 inch. Look up the 40-60°F space cooling row for the smallest pipe size column.",
+    "options": [
+      { "text": "0.5 inch", "value": "0.5", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, space cooling piping at 40-60°F on pipes smaller than 1 inch requires 0.5 inch of insulation. For small branch pipes in the chilled water range, this is the minimum thickness." },
+      { "text": "0.75 inch", "value": "0.75", "correct": false, "feedback": "0.75 inch is the residential requirement for 40-60°F pipes smaller than 1 inch. The non-residential table calls for 0.5 inch for this pipe size and temperature range." },
+      { "text": "1.0 inch", "value": "1.0", "correct": false, "feedback": "1.0 inch is the requirement for larger pipes (1.5-3 inch and above) at 40-60°F, or for pipes below 40°F in the smallest size category. The small-pipe column requires only 0.5 inch at 40-60°F." },
+      { "text": "1.5 inches", "value": "1.5", "correct": false, "feedback": "1.5 inches is for heating water at 105-140°F on 1-1.25 inch pipes, or for piping below 40°F on larger pipes. The 40-60°F range on pipes under 1 inch needs only 0.5 inch." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, the smallest pipes (under 1 inch) at 40-60°F require only 0.5 inch of insulation for non-residential cooling service. Elastomeric (PI-B) insulation is typically used on chilled water pipes because its closed-cell structure acts as its own vapor barrier, preventing condensation. If routed outdoors, add 0.5 inch for 1.0 inch total.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-plumb-022",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Heating Water Pipe Insulation — Low Temperature",
+    "scenario": "A 1-inch heating water pipe operates at 120°F, serving a radiant floor system in an interior mechanical closet. Per T-24 Table 120.3-A, what insulation thickness is required for a 1-1.25 inch pipe in the 105-140°F range?",
+    "hint": "T-24 Table 120.3-A has specific values for the 105-140°F heating range. This is the lowest heating temperature range in the table, so the insulation requirement is less than higher-temperature ranges.",
+    "options": [
+      { "text": "0.5 inch", "value": "0.5", "correct": false, "feedback": "0.5 inch is too thin for heating water pipes, even at the lowest temperature range. That thickness is only appropriate for chilled water on the smallest pipes." },
+      { "text": "1.0 inch", "value": "1.0", "correct": false, "feedback": "1.0 inch is the value for pipes smaller than 1 inch at 105-140°F. The 1-1.25 inch pipe column requires slightly more insulation." },
+      { "text": "1.5 inches", "value": "1.5", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, pipes in the 1-1.25 inch range at 105-140°F require 1.5 inches of insulation. This applies to radiant heating, low-temperature hot water, and condensate return piping in this temperature range." },
+      { "text": "2.0 inches", "value": "2.0", "correct": false, "feedback": "2.0 inches is the requirement for the 141-200°F range on 1.5-3 inch pipes. At 120°F on a 1-inch pipe, the table calls for 1.5 inches." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, a 1-inch pipe (1-1.25 inch column) at 120°F (105-140°F row) requires 1.5 inches of insulation. Acceptable insulation types for heating water up to 200°F include PI-A (mineral wool), PI-B (elastomeric), PI-E (calcium silicate), and PI-H (aerogel). The 105-140°F range is common for radiant heating, heat pump systems, and condensing boiler return lines.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-plumb-023",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Butterfly Valve Pressure Rating",
+    "scenario": "You are selecting butterfly valves for a hydronic system. Per UCSB spec, butterfly valves are used for sizes 2.5 to 12 inches. What is the rated working pressure for butterfly valves, and what operator type is required for a 4-inch valve?",
+    "hint": "UCSB spec defines the pressure rating for all butterfly valves and specifies different operator types based on a size breakpoint. Valves below the breakpoint get one type, and valves at or above get another.",
+    "options": [
+      { "text": "125 PSI, gear operator", "value": "125-gear", "correct": false, "feedback": "The pressure rating is correct at 125 PSI (per gate/butterfly working pressure), but a 4-inch valve does not require a gear operator. Gear operators are required at 6 inches and larger." },
+      { "text": "200 PSI, lever handle", "value": "200-lever", "correct": true, "feedback": "Correct! Per UCSB spec, butterfly valves are rated at 200 PSI with lug-type body. At 4 inches, a lever handle is appropriate (gear operators required at 6 inches and larger). The lug-type design allows downstream piping removal without draining the system." },
+      { "text": "600 PSI, lever handle", "value": "600-lever", "correct": false, "feedback": "600 PSI is the rating for ball valves 2 inches and smaller. Butterfly valves are rated at 200 PSI per UCSB spec." },
+      { "text": "200 PSI, gear operator", "value": "200-gear", "correct": false, "feedback": "The 200 PSI rating is correct, but a 4-inch valve uses a lever handle. Gear operators are mandatory starting at 6 inches per UCSB spec, where the disc force exceeds safe manual operation." }
+    ],
+    "explanation": "Butterfly valve specs per UCSB: 200 PSI rated, lug-type body, lever operator through 5 inches, gear operator for 6 inches and larger. The lug design has threaded inserts that allow one flange side to be removed while the valve holds pressure on the other side — essential for maintenance without full system drain. PTFE seat material is standard for HVAC hydronic service.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-plumb-024",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Piping Below 40°F — Large Pipe Insulation",
+    "scenario": "An 8-inch glycol pipe for an ice storage system operates at 28°F. Per T-24 Table 120.3-A, what insulation thickness is required for pipes 8 inches and larger in the 'Below 40°F' temperature range?",
+    "hint": "The 'Below 40°F' row in T-24 Table 120.3-A has the same values as the corresponding pipe size column. For large pipes (8 inches and above), check the rightmost column.",
+    "options": [
+      { "text": "1.0 inch", "value": "1.0", "correct": false, "feedback": "1.0 inch is the requirement for large pipes (8 inches+) in the 40-60°F range. Below 40°F, the greater temperature differential and condensation risk requires thicker insulation." },
+      { "text": "1.5 inches", "value": "1.5", "correct": true, "feedback": "Correct! Per T-24 Table 120.3-A, piping below 40°F on pipes 8 inches and larger requires 1.5 inches of insulation. The vapor barrier is critical at sub-40°F temperatures to prevent moisture migration and ice formation on the pipe surface." },
+      { "text": "2.0 inches", "value": "2.0", "correct": false, "feedback": "2.0 inches is the requirement for heating water at 141-200°F on 4-6 inch and 8 inch+ pipes. Below-40°F cooling piping on large pipes requires 1.5 inches." },
+      { "text": "2.5 inches", "value": "2.5", "correct": false, "feedback": "2.5 inches is the requirement for high-temperature heating piping (201-250°F) on medium pipes. For sub-40°F cooling service on 8-inch+ pipes, 1.5 inches is the correct value." }
+    ],
+    "explanation": "Per T-24 Table 120.3-A, pipes 8 inches and larger below 40°F require 1.5 inches of insulation. At these temperatures, elastomeric (PI-B) insulation is strongly preferred because its closed-cell structure provides an integral vapor barrier. Without a proper vapor barrier, moisture migrates through the insulation, condenses on the cold pipe, and can freeze — expanding and destroying the insulation from the inside out.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plumb-025",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "UCSB Electric Boiler Delta-T",
+    "scenario": "On the UCSB San Benito Student Housing project, the electric boiler B-1 (Fulton EZE-480) produces 1,633 MBH output at 165 GPM flow rate. The entering water temperature is 100°F. What is the leaving water temperature, and what is the delta-T across the boiler?",
+    "hint": "Use the hydronic formula: BTU/hr = GPM x 500 x delta-T. Solve for delta-T: delta-T = BTU/hr / (GPM x 500). Then add the delta-T to the entering water temperature to find the leaving temperature.",
+    "options": [
+      { "text": "110°F leaving, 10°F delta-T", "value": "10", "correct": false, "feedback": "At 10°F delta-T: 165 x 500 x 10 = 825 MBH — only about half the boiler's 1,633 MBH output. The delta-T must be higher to deliver the full rated capacity at 165 GPM." },
+      { "text": "120°F leaving, 20°F delta-T", "value": "20", "correct": true, "feedback": "Correct! Per the UCSB schedule, EWT is 100°F and LWT is 120°F, giving a 20°F delta-T. Check: 165 GPM x 500 x 20°F = 1,650 MBH, which closely matches the scheduled 1,633 MBH output." },
+      { "text": "140°F leaving, 40°F delta-T", "value": "40", "correct": false, "feedback": "40°F delta-T at 165 GPM would produce 3,300 MBH — double the boiler's rated capacity. A 140°F LWT would also exceed the low-temperature design intent for the heat pump system." },
+      { "text": "130°F leaving, 30°F delta-T", "value": "30", "correct": false, "feedback": "30°F delta-T at 165 GPM would require 2,475 MBH — more than the boiler's 1,633 MBH rating. The schedule confirms 100°F to 120°F (20°F delta-T)." }
+    ],
+    "explanation": "The Fulton EZE-480 electric boiler at UCSB operates at 100°F EWT to 120°F LWT, giving a 20°F delta-T at 165 GPM. Verification: 165 x 500 x 20 = 1,650,000 BTU/hr (1,650 MBH), closely matching the scheduled 1,633 MBH. The low 120°F supply temperature is designed to complement the air-to-water heat pumps (AWHP-1/2/3/4) which also produce 120°F LWT. The boiler provides backup heating capacity when ambient temperatures are too low for efficient heat pump operation.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-plumb-026",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "UCSB Expansion Tank Pressure Rating",
+    "scenario": "On the UCSB San Benito project, the expansion tanks ET-1 through ET-4 are Taco CA-10000-125 bladder-type tanks for a 20,000-gallon heating hot water system. What is the maximum pressure rating of these tanks?",
+    "hint": "The model number often contains the pressure rating. The tank must be rated above the system's maximum operating pressure, including any pressure spikes from pump operation or thermal expansion.",
+    "options": [
+      { "text": "30 PSIG", "value": "30", "correct": false, "feedback": "30 PSIG is the fill pressure (air pre-charge), not the maximum pressure rating. The fill pressure sets the initial bladder position — the tank must be rated much higher than this to handle system pressure increases during operation." },
+      { "text": "75 PSIG", "value": "75", "correct": false, "feedback": "75 PSIG would be insufficient for a commercial heating system. The UCSB system with its 150 PSIG boiler rating needs expansion tanks rated above the boiler's working pressure." },
+      { "text": "125 PSIG", "value": "125", "correct": true, "feedback": "Correct! Per the UCSB schedule, the Taco CA-10000-125 tanks are rated at 125 PSIG (the '125' in the model number). This provides adequate margin — the fill pressure is 30 PSIG, and the system operates well below the 125 PSIG maximum." },
+      { "text": "150 PSIG", "value": "150", "correct": false, "feedback": "150 PSIG is the boiler's rated working pressure, not the expansion tank rating. The tanks are rated at 125 PSIG per the schedule. In practice, the relief valve setting (typically 30 PSIG above fill) prevents the system from reaching either rating." }
+    ],
+    "explanation": "The Taco CA-10000-125 expansion tanks at UCSB are rated at 125 PSIG maximum working pressure, as indicated by the '125' suffix in the model number. Each tank holds 2,640 gallons total volume with 1,710 gallons acceptance capacity. The 30 PSIG fill pressure pre-charges the bladder, and the system normally operates between 30-60 PSIG — well below the 125 PSIG rating. The tanks serve a 20,000-gallon system, requiring four tanks for adequate expansion volume.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-plumb-027",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "UCSB Electric Boiler Pressure Drop",
+    "scenario": "On the UCSB San Benito project, the electric boiler B-1 (Fulton EZE-480) handles 165 GPM flow through its heat exchanger. What is the water-side pressure drop through this boiler?",
+    "hint": "Boiler pressure drop affects pump sizing — the pump must overcome the friction losses through the boiler plus all piping, fittings, and valves in the circuit. Check the equipment schedule for the exact pressure drop value.",
+    "options": [
+      { "text": "1.0 ft WG", "value": "1.0", "correct": false, "feedback": "1.0 ft WG would be extremely low for a boiler at 165 GPM. Even small residential boilers typically have more pressure drop than this. The schedule shows a higher value." },
+      { "text": "2.5 ft WG", "value": "2.5", "correct": true, "feedback": "Correct! Per the UCSB schedule, the Fulton EZE-480 has only 2.5 ft WG pressure drop at 165 GPM. Electric boilers have relatively low pressure drops because the heating elements are immersed directly in the water — no fire-tube or water-tube heat exchanger creating flow restrictions." },
+      { "text": "10 ft WG", "value": "10", "correct": false, "feedback": "10 ft WG would be typical for a fire-tube gas boiler with multiple pass tubes. Electric boilers have much lower pressure drops because they use immersion elements rather than tube bundles." },
+      { "text": "16 ft WG", "value": "16", "correct": false, "feedback": "16 ft WG is the total pump head for PHWP-5, the boiler circulating pump. The pump overcomes all circuit losses including the boiler (2.5 ft), piping, fittings, and valves — not just the boiler alone." }
+    ],
+    "explanation": "The Fulton EZE-480 at UCSB has a water-side pressure drop of only 2.5 ft WG at 165 GPM. Electric boilers have inherently low pressure drops compared to gas-fired boilers because the electric heating elements are immersed directly in the water vessel — there are no fire tubes or baffles creating flow restrictions. This low pressure drop is one reason PHWP-5 needs only 16 ft WG total head compared to the 35 ft WG required by the ASHP primary pumps (PHWP-1/2/3/4), which must overcome the outdoor heat pump coil pressure drop.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plumb-028",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "UCSB Residential Kitchen Range Hood Exhaust",
+    "scenario": "On the UCSB San Benito student housing plans, each residential unit has a kitchen with a range hood. What exhaust CFM is specified for each kitchen range hood?",
+    "hint": "Kitchen range hoods in residential units must exhaust cooking fumes, grease-laden air, and heat from the cooktop. The CFM is specified per unit on the mechanical plans and must meet IMC requirements for residential cooking equipment.",
+    "options": [
+      { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust rate for a full bathroom, not a kitchen range hood. Kitchen cooking generates significantly more heat, moisture, and grease-laden air than a bathroom, requiring much higher exhaust rates." },
+      { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM is below the UCSB specification for kitchen range hoods. At 200 CFM, a range hood would not adequately capture cooking fumes from a standard residential cooktop, allowing grease and odors to spread through the unit." },
+      { "text": "270 CFM", "value": "270", "correct": true, "feedback": "Correct! Per the UCSB plans, each residential kitchen range hood exhausts 270 CFM. This rate provides adequate capture velocity at the hood face to contain cooking fumes, grease, and heat from a standard residential cooktop." },
+      { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM exceeds the UCSB specification. While some high-performance residential range hoods operate at 400+ CFM, the UCSB plans specify 270 CFM per unit. Higher CFM also requires more makeup air, increasing energy costs." }
+    ],
+    "explanation": "The UCSB plans specify 270 CFM for each residential kitchen range hood. This rate meets IMC requirements for residential cooking ventilation and provides adequate capture at the hood face. Each kitchen also has a 300 CFM makeup air shaft to replace the exhausted air and prevent negative pressure in the unit. The range hood exhaust is separate from bathroom exhaust — each system has its own ductwork and fan.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-plumb-029",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "UCSB Trickle Vent Fresh Air Rate",
+    "scenario": "On the UCSB San Benito student housing plans, each residential unit has trickle vents installed in the window frames to provide passive fresh air ventilation. How much fresh air does each trickle vent provide per unit?",
+    "hint": "Trickle vents are small openings in window frames that allow a controlled amount of outside air into the unit without opening the window. They provide continuous background ventilation to maintain indoor air quality in tightly sealed buildings.",
+    "options": [
+      { "text": "10-20 CFM", "value": "15", "correct": false, "feedback": "10-20 CFM is too low for a residential unit trickle vent. This amount of fresh air would not meet ASHRAE 62.2 minimum ventilation requirements for a multi-bedroom student housing unit." },
+      { "text": "40-50 CFM", "value": "45", "correct": true, "feedback": "Correct! Per the UCSB plans, trickle vents provide 40-50 CFM of fresh air per unit. This meets ASHRAE 62.2 minimum ventilation requirements for residential dwelling units and provides continuous background ventilation without mechanical systems." },
+      { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust rate for a full bathroom. Trickle vents provide much less airflow — they are passive devices relying on wind and stack effect, not powered fans." },
+      { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM far exceeds what a passive trickle vent can provide. That airflow rate would require a mechanical ventilation system, not a small window-frame opening." }
+    ],
+    "explanation": "Trickle vents at UCSB provide 40-50 CFM of fresh air per residential unit. These passive ventilation devices are part of the building's overall ventilation strategy: trickle vents bring in fresh outside air, transfer air grilles (100-200 CFM) move air between rooms, and exhaust fans in bathrooms and kitchens remove stale air. This creates a controlled airflow path through the unit from clean spaces (bedrooms) to wet spaces (bathrooms, kitchen) per ASHRAE 62.2.",
+    "xpReward": 35
+  }
+]

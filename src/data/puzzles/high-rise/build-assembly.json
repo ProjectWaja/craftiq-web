@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ba-hr-001",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Fire Pump Assembly",
+    "description": "Assemble the fire pump system components in the correct order from water supply through the discharge to the standpipe riser.",
+    "parts": [
+      { "id": 1, "name": "Water supply (city main or storage tank)", "correctPosition": 1 },
+      { "id": 2, "name": "Backflow preventer (double check valve)", "correctPosition": 2 },
+      { "id": 3, "name": "OS&Y gate valve on pump suction", "correctPosition": 3 },
+      { "id": 4, "name": "Fire pump (horizontal split-case)", "correctPosition": 4 },
+      { "id": 5, "name": "Check valve and OS&Y gate valve on discharge", "correctPosition": 5 },
+      { "id": 6, "name": "Standpipe/sprinkler system header", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve on suction" },
+      { "id": 102, "name": "Expansion tank on discharge" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Water source" },
+      { "id": 2, "label": "Position 2: Cross-connection protection" },
+      { "id": 3, "label": "Position 3: Suction isolation" },
+      { "id": 4, "label": "Position 4: Pressure boost" },
+      { "id": 5, "label": "Position 5: Discharge protection and isolation" },
+      { "id": 6, "label": "Position 6: System distribution" }
+    ],
+    "explanation": "The fire pump assembly per NFPA 20 follows a specific piping sequence. The water supply feeds through a backflow preventer to protect the city main from contamination. The OS&Y gate valve on suction allows pump isolation for maintenance (and must be supervised per NFPA 20 Section 4.14). The pump boosts pressure, and the discharge has both a check valve (prevents backflow when pump stops) and an OS&Y gate valve (isolation). Water then enters the building header serving standpipes and sprinklers. A PRV on suction is a distractor — you never restrict flow to a fire pump. An expansion tank is unnecessary on a fire system.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hr-002",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Standpipe Riser Components",
+    "description": "Assemble the standpipe riser components in the correct vertical order from the base connection in the basement to the roof manifold.",
+    "parts": [
+      { "id": 1, "name": "Riser check valve and base connection from fire pump header", "correctPosition": 1 },
+      { "id": 2, "name": "Vertical 6-inch riser pipe through stairwell shaft", "correctPosition": 2 },
+      { "id": 3, "name": "2-1/2 inch hose valve connections at each floor landing", "correctPosition": 3 },
+      { "id": 4, "name": "Pressure-restricting devices (PRDs) at lower-floor connections", "correctPosition": 4 },
+      { "id": 5, "name": "Expansion loops or flexible couplings for thermal movement", "correctPosition": 5 },
+      { "id": 6, "name": "Roof manifold with test connections and hose valves", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve at roof level" },
+      { "id": 102, "name": "Fire department connection at mid-height" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Base of riser" },
+      { "id": 2, "label": "Position 2: Vertical distribution" },
+      { "id": 3, "label": "Position 3: Floor connections" },
+      { "id": 4, "label": "Position 4: Pressure management" },
+      { "id": 5, "label": "Position 5: Movement accommodation" },
+      { "id": 6, "label": "Position 6: Top termination" }
+    ],
+    "explanation": "The standpipe riser per NFPA 14 starts with a check valve at the base preventing backflow to other risers. The 6-inch riser extends vertically through the stairwell, with 2-1/2 inch hose valve connections at each floor landing for firefighter use. PRDs at lower floors limit pressure to safe hose-handling levels (below 175 psi residual). Expansion accommodations handle thermal expansion of the water-filled riser. The roof manifold provides test connections and additional hose valves for rooftop firefighting. A PRV at roof level is unnecessary — pressure is lowest at the top. The FDC is at street level, not mid-height.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hr-003",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Stairwell Pressurization System",
+    "description": "Assemble the stairwell pressurization system components in the correct order from the supply fan through the air delivery path to the stairwell.",
+    "parts": [
+      { "id": 1, "name": "Centrifugal supply fan on roof (connected to emergency power)", "correctPosition": 1 },
+      { "id": 2, "name": "Outdoor air intake with bird screen and weather louver", "correctPosition": 2 },
+      { "id": 3, "name": "Vertical supply duct from fan to stairwell injection points", "correctPosition": 3 },
+      { "id": 4, "name": "Multiple injection points distributed every 2-3 floors", "correctPosition": 4 },
+      { "id": 5, "name": "Barometric relief dampers at stairwell exterior wall", "correctPosition": 5 },
+      { "id": 6, "name": "Differential pressure sensor with fan speed controller", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Return air duct from stairwell to fan" },
+      { "id": 102, "name": "Heating coil in supply duct" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Air supply source" },
+      { "id": 2, "label": "Position 2: Intake protection" },
+      { "id": 3, "label": "Position 3: Air distribution" },
+      { "id": 4, "label": "Position 4: Stairwell delivery" },
+      { "id": 5, "label": "Position 5: Overpressure protection" },
+      { "id": 6, "label": "Position 6: Active pressure control" }
+    ],
+    "explanation": "The stairwell pressurization system per NFPA 92 is a once-through supply system — air is pushed into the stairwell and exits through door gaps, relief dampers, and leakage paths. There is no return air (distractor). The fan draws outdoor air through a protected intake, distributes it through ductwork to multiple injection points per NFPA 92 Section 4.4.2.1. Barometric relief dampers prevent overpressurization when doors are closed. The differential pressure sensor and fan speed controller form the feedback loop that maintains the required 0.05 to 0.10 inches w.c. regardless of how many doors are open or closed.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hr-004",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "High-Rise Water Pressure Zone",
+    "description": "Assemble the domestic water pressure zone components in the correct order from the booster pump to the fixtures within the zone.",
+    "parts": [
+      { "id": 1, "name": "Booster pump system discharge header", "correctPosition": 1 },
+      { "id": 2, "name": "Main water riser to zone elevation", "correctPosition": 2 },
+      { "id": 3, "name": "Duplex PRV station with isolation valves", "correctPosition": 3 },
+      { "id": 4, "name": "Strainer (upstream) and relief valve (downstream) at PRV", "correctPosition": 4 },
+      { "id": 5, "name": "Zone distribution piping with floor branches", "correctPosition": 5 },
+      { "id": 6, "name": "Individual fixture shut-off valves and connections", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Gravity tank at top of zone" },
+      { "id": 102, "name": "Check valve at each fixture branch" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Pressure source" },
+      { "id": 2, "label": "Position 2: Vertical transport" },
+      { "id": 3, "label": "Position 3: Pressure reduction" },
+      { "id": 4, "label": "Position 4: PRV protection" },
+      { "id": 5, "label": "Position 5: Horizontal distribution" },
+      { "id": 6, "label": "Position 6: End use" }
+    ],
+    "explanation": "A high-rise water pressure zone per IPC 604.8 is built from the booster pump outward. The main riser carries high-pressure water to the zone elevation. The duplex PRV station (two PRVs in parallel) reduces pressure to below 80 psi for the zone while providing redundancy for maintenance. Strainers protect the PRV from debris, and relief valves protect downstream piping from PRV failure. Zone piping distributes to floor branches and individual fixtures. A gravity tank is outdated technology replaced by booster pumps. Check valves at each fixture branch are unnecessary — backflow prevention is at the service entrance.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hr-005",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Fire Command Center Components",
+    "description": "Assemble the fire command center systems in the correct priority order, from most critical life-safety interface to supporting systems.",
+    "parts": [
+      { "id": 1, "name": "Fire alarm control panel (FACP) with annunciator", "correctPosition": 1 },
+      { "id": 2, "name": "Voice evacuation and emergency communication system", "correctPosition": 2 },
+      { "id": 3, "name": "Smoke control system panel with damper/fan status", "correctPosition": 3 },
+      { "id": 4, "name": "Elevator status display and recall controls", "correctPosition": 4 },
+      { "id": 5, "name": "Sprinkler and standpipe system status indicators", "correctPosition": 5 },
+      { "id": 6, "name": "Emergency generator and ATS status panel", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Building security camera monitors" },
+      { "id": 102, "name": "HVAC building management system terminal" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Primary detection and alarm" },
+      { "id": 2, "label": "Position 2: Occupant notification" },
+      { "id": 3, "label": "Position 3: Smoke management" },
+      { "id": 4, "label": "Position 4: Vertical transportation" },
+      { "id": 5, "label": "Position 5: Suppression status" },
+      { "id": 6, "label": "Position 6: Power infrastructure" }
+    ],
+    "explanation": "The fire command center per IBC 403.4.6 is the nerve center for fire department operations in a high-rise building. Systems are prioritized: the FACP provides fire detection and zone identification, voice evacuation directs occupant movement, smoke control manages tenable conditions, elevator controls enable firefighter access, suppression status shows sprinkler and standpipe operation, and generator status confirms backup power. Security cameras and BMS are distractors — while useful, they are building operations tools, not life-safety fire command interfaces required by IBC 403.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hr-006",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Smoke Control System Architecture",
+    "description": "Assemble the floor-by-floor smoke control system components in the correct functional order from detection through smoke removal.",
+    "parts": [
+      { "id": 1, "name": "Smoke detector activation on fire floor", "correctPosition": 1 },
+      { "id": 2, "name": "Fire alarm panel sends smoke control signal", "correctPosition": 2 },
+      { "id": 3, "name": "Smoke exhaust damper opens on fire floor only", "correctPosition": 3 },
+      { "id": 4, "name": "Roof exhaust fan starts at full speed", "correctPosition": 4 },
+      { "id": 5, "name": "Make-up air enters fire floor from adjacent floors", "correctPosition": 5 },
+      { "id": 6, "name": "Fire floor achieves negative pressure relative to adjacent floors", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "All floor dampers open simultaneously" },
+      { "id": 102, "name": "Return air fan reverses to exhaust mode" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Detection trigger" },
+      { "id": 2, "label": "Position 2: System activation" },
+      { "id": 3, "label": "Position 3: Exhaust path creation" },
+      { "id": 4, "label": "Position 4: Exhaust motive force" },
+      { "id": 5, "label": "Position 5: Replacement air" },
+      { "id": 6, "label": "Position 6: Pressure result" }
+    ],
+    "explanation": "Floor-by-floor smoke control per IBC 909 and NFPA 92 is a targeted system that exhausts smoke only from the fire floor while maintaining positive pressure on adjacent floors. The sequence starts with smoke detection, which triggers the fire alarm panel to activate the smoke control mode. Only the fire floor damper opens — opening all dampers (distractor) would spread smoke to unaffected floors. The exhaust fan removes smoke, and make-up air enters at low velocity from stairwells and adjacent floors. The result is negative pressure on the fire floor that prevents smoke from migrating to other floors. Reversing the return air fan (distractor) is not the correct approach for dedicated smoke control systems.",
+    "xpReward": 100
+  },
+  {
+    "id": "ba-hr-007",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 2,
+    "title": "Emergency Power Distribution Chain",
+    "description": "Assemble the emergency power distribution components in the correct order from generator output to life-safety loads on each floor.",
+    "parts": [
+      { "id": 1, "name": "Emergency generator with voltage regulator", "correctPosition": 1 },
+      { "id": 2, "name": "Generator output breaker and paralleling switchgear", "correctPosition": 2 },
+      { "id": 3, "name": "Automatic transfer switch (ATS)", "correctPosition": 3 },
+      { "id": 4, "name": "Emergency distribution switchboard", "correctPosition": 4 },
+      { "id": 5, "name": "2-hour fire-rated emergency riser (NEC 700.10)", "correctPosition": 5 },
+      { "id": 6, "name": "Floor emergency panelboards for life-safety loads", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "UPS battery backup on each floor" },
+      { "id": 102, "name": "Power factor correction capacitors" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power generation" },
+      { "id": 2, "label": "Position 2: Generator output protection" },
+      { "id": 3, "label": "Position 3: Source switching" },
+      { "id": 4, "label": "Position 4: Central distribution" },
+      { "id": 5, "label": "Position 5: Vertical distribution (fire-rated)" },
+      { "id": 6, "label": "Position 6: Floor-level loads" }
+    ],
+    "explanation": "The emergency power chain per NEC 700 and IBC 403 follows a strict hierarchy from generation to load. The generator produces power, which flows through output breakers (and paralleling gear if multiple generators) to the ATS. The ATS switches between normal utility and emergency generator sources. The emergency switchboard distributes to floor panels through a 2-hour fire-rated riser per NEC 700.10(D) — this fire rating ensures emergency power survives a fire on any floor. Floor panelboards feed exit signs, emergency lighting, fire alarms, and other life-safety loads. UPS systems are a distractor — they serve IT and other sensitive loads, not building life-safety systems.",
+    "xpReward": 75
+  },
+  {
+    "id": "ba-hr-008",
+    "type": "build-assembly",
+    "trade": "high-rise",
+    "difficulty": 3,
+    "title": "Rooftop Mechanical Penthouse",
+    "description": "Assemble the rooftop mechanical penthouse systems in the correct installation priority order, from structural support through final commissioning.",
+    "parts": [
+      { "id": 1, "name": "Structural steel penthouse frame with seismic bracing", "correctPosition": 1 },
+      { "id": 2, "name": "Weather-tight enclosure with acoustical panels", "correctPosition": 2 },
+      { "id": 3, "name": "Mechanical equipment on vibration-isolated housekeeping pads", "correctPosition": 3 },
+      { "id": 4, "name": "Piping connections (chilled water, condenser water, gas, drain)", "correctPosition": 4 },
+      { "id": 5, "name": "Electrical power and control wiring to all equipment", "correctPosition": 5 },
+      { "id": 6, "name": "BMS integration, startup, and commissioning", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Rooftop helipad structure" },
+      { "id": 102, "name": "Decorative architectural screening" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Structure" },
+      { "id": 2, "label": "Position 2: Enclosure" },
+      { "id": 3, "label": "Position 3: Equipment setting" },
+      { "id": 4, "label": "Position 4: Piping connections" },
+      { "id": 5, "label": "Position 5: Electrical connections" },
+      { "id": 6, "label": "Position 6: Controls and startup" }
+    ],
+    "explanation": "Rooftop mechanical penthouse construction follows a logical sequence per IBC, IMC, and general construction practice. Structural steel with seismic bracing (IBC 1613 / ASCE 7) goes first to support all subsequent work. The weather-tight enclosure protects equipment and reduces noise per local ordinances. Equipment is set on vibration-isolated pads (IMC 302.1) to prevent structure-borne noise to floors below. Piping runs connect to the building's hydronic systems. Electrical and controls follow piping because they require equipment to be in final position. BMS commissioning comes last because all systems must be operational before integrated testing. The helipad and screening are architectural elements, not mechanical penthouse components.",
+    "xpReward": 100
+  }
+]

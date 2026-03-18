@@ -1,0 +1,393 @@
+[
+  {
+    "id": "si-elec-001",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Wire Gauge for 20A Circuit",
+    "scenario": "You need to wire a 20-ampere, 120V branch circuit for kitchen countertop receptacles using NM-B cable. What is the minimum copper conductor size required?",
+    "hint": "NEC Table 310.16 lists the ampacity of conductors. NM-B cable uses the 60°C column for termination purposes.",
+    "options": [
+      { "text": "14 AWG", "value": "14", "correct": false, "feedback": "14 AWG copper is rated for only 15 amperes at 60°C. Using it on a 20A circuit is a code violation and a fire hazard due to overheating." },
+      { "text": "12 AWG", "value": "12", "correct": true, "feedback": "Correct! 12 AWG copper at 60°C is rated for 20 amperes per NEC Table 310.16. This is the standard minimum for all 20A branch circuits." },
+      { "text": "10 AWG", "value": "10", "correct": false, "feedback": "10 AWG is rated for 30A. While it would work electrically, it is oversized and more expensive. It also makes terminations difficult at device terminals." },
+      { "text": "8 AWG", "value": "8", "correct": false, "feedback": "8 AWG is rated for 40A and is far oversized for a 20A circuit. It would be very difficult to terminate at standard receptacle and switch devices." }
+    ],
+    "explanation": "Wire sizing is one of the most fundamental electrical skills. NEC Table 310.16 is the primary reference. For NM-B cable, the 60°C column applies: 14 AWG = 15A, 12 AWG = 20A, 10 AWG = 30A, 8 AWG = 40A.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-elec-002",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Conduit Size for Wire Count",
+    "scenario": "You need to pull six #12 AWG THHN conductors through an EMT conduit. Each #12 THHN has an area of 0.0133 sq in. What is the minimum conduit trade size for three or more conductors (40% fill)?",
+    "hint": "For 3+ conductors, maximum fill is 40%. Total wire area = 6 x 0.0133 = 0.0798 sq in. Compare to the 40% fill area in NEC Chapter 9, Table 4.",
+    "options": [
+      { "text": "1/2\" EMT", "value": "0.5", "correct": false, "feedback": "1/2\" EMT has only 0.122 sq in at 40% fill. While 0.0798 fits, derating for 6 current-carrying conductors and practical pull difficulty make this a poor choice. Actually, 0.0798 < 0.122, so it technically fits — but check the math carefully." },
+      { "text": "3/4\" EMT", "value": "0.75", "correct": true, "feedback": "Correct! 3/4\" EMT has 0.213 sq in at 40% fill. Six #12 THHN at 0.0798 sq in total fits comfortably with room for pulling. This is the practical and recommended choice." },
+      { "text": "1\" EMT", "value": "1.0", "correct": false, "feedback": "1\" EMT has 0.346 sq in at 40% fill. While it works, it is larger than necessary for six #12 conductors and adds unnecessary material cost." },
+      { "text": "1-1/4\" EMT", "value": "1.25", "correct": false, "feedback": "1-1/4\" EMT is significantly oversized for six #12 conductors. This size is typically used for larger conductor counts or bigger wire gauges." }
+    ],
+    "explanation": "Conduit fill calculations per NEC Chapter 9, Table 1 limit conductor area to 40% of the conduit internal area for three or more conductors. This prevents overheating from reduced heat dissipation and makes wire pulling possible.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-elec-003",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Breaker Sizing for Continuous Load",
+    "scenario": "A commercial lighting circuit has a continuous load of 16 amperes (lights on for more than 3 hours). What is the minimum circuit breaker size required?",
+    "hint": "NEC 210.20(A) requires that the overcurrent device rating be not less than 125% of the continuous load. 16A x 1.25 = 20A.",
+    "options": [
+      { "text": "15A breaker", "value": "15", "correct": false, "feedback": "15A is less than the 16A load itself, and far below the 125% continuous load requirement of 20A. The breaker would trip under normal operation." },
+      { "text": "20A breaker", "value": "20", "correct": true, "feedback": "Correct! 16A x 125% = 20A. A 20A breaker is the minimum for a 16A continuous load per NEC 210.20(A). Conductors must also be rated for 20A minimum." },
+      { "text": "25A breaker", "value": "25", "correct": false, "feedback": "25A exceeds the minimum requirement. While not a code violation, oversizing protection can mask problems and may not protect the conductors properly." },
+      { "text": "30A breaker", "value": "30", "correct": false, "feedback": "30A is oversized. This could allow conductor overheating before the breaker trips, especially with #12 AWG wire rated for 20A." }
+    ],
+    "explanation": "For continuous loads (expected to run 3+ hours), NEC 210.20(A) requires the overcurrent device to be rated at 125% of the continuous load. This 25% derating accounts for heat buildup in breakers during sustained loading. Both the breaker AND the conductors must be sized at 125%.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-elec-004",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Voltage Drop Calculation",
+    "scenario": "A 120V, 20A circuit runs 100 feet (one way) to a workshop. Using 12 AWG copper (resistance of 1.93 ohms per 1,000 feet), what is the approximate voltage drop at full load? The NEC recommends maximum 3% drop for branch circuits.",
+    "hint": "Voltage drop formula: Vd = 2 x I x R x L / 1000, where I = current, R = resistance per 1,000 ft, L = one-way length. Then calculate percentage: (Vd / 120) x 100.",
+    "options": [
+      { "text": "2.3V (1.9%)", "value": "2.3", "correct": false, "feedback": "This calculation used the wrong formula. Double-check: Vd = 2 x 20 x 1.93 x 100 / 1000 = 7.72V, which is 6.4%." },
+      { "text": "3.9V (3.2%)", "value": "3.9", "correct": false, "feedback": "This underestimates the drop. The correct calculation: Vd = 2 x 20A x 1.93 x 100 / 1000 = 7.72V, which is 6.4% — well over the 3% recommendation." },
+      { "text": "7.7V (6.4%)", "value": "7.7", "correct": true, "feedback": "Correct! Vd = 2 x 20 x 1.93 x 100 / 1000 = 7.72V. That is 6.4% voltage drop, which exceeds the NEC recommended 3% maximum for branch circuits. You should upsize to 10 AWG." },
+      { "text": "15.4V (12.8%)", "value": "15.4", "correct": false, "feedback": "This doubles the correct answer. The formula already accounts for the round-trip distance with the factor of 2. The correct drop is 7.72V (6.4%)." }
+    ],
+    "explanation": "Voltage drop is a critical calculation for long circuit runs. NEC 210.19(A) Informational Note 4 recommends max 3% for branch circuits and 5% total (feeder + branch). For this 100-foot run at 20A, 12 AWG drops too much voltage — upsize to 10 AWG to bring the drop under 3%.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-elec-005",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Box Size for Conductor Count",
+    "scenario": "A junction box will contain four #12 AWG conductors, two #12 AWG equipment grounds, and one cable clamp (internal). Per NEC 314.16(B), each #12 conductor requires 2.25 cu in. What minimum box volume is needed?",
+    "hint": "Count: 4 conductors at 2.25 each, all grounds count as 1 conductor (2.25), clamps count as 1 conductor (2.25). Total = (4 + 1 + 1) x 2.25.",
+    "options": [
+      { "text": "10.0 cu in", "value": "10.0", "correct": false, "feedback": "10 cu in is too small. You need to count all conductors, grounds (as one), and clamps (as one): (4 + 1 + 1) x 2.25 = 13.5 cu in." },
+      { "text": "13.5 cu in", "value": "13.5", "correct": true, "feedback": "Correct! 4 conductors + 1 for all grounds + 1 for clamps = 6 conductor equivalents. 6 x 2.25 = 13.5 cu in minimum. A 4\" square x 1-1/4\" deep box (18 cu in) would work." },
+      { "text": "18.0 cu in", "value": "18.0", "correct": false, "feedback": "18 cu in exceeds the minimum requirement. While a box this size would work (and provides margin), the minimum is 13.5 cu in." },
+      { "text": "9.0 cu in", "value": "9.0", "correct": false, "feedback": "9 cu in only accounts for 4 conductors and ignores the grounds and clamps. All elements in the box must be counted per NEC 314.16(B)." }
+    ],
+    "explanation": "Box fill calculations per NEC 314.16(B) are essential for safe installations. Every conductor, ground (all count as one), clamp (all count as one), and device (counts as two) must be accounted for. Overfilled boxes cause conductor damage, overheating, and difficulty making connections.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-006",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Grounding Electrode Conductor Size",
+    "scenario": "A residential service has 2/0 AWG copper service entrance conductors. Per NEC Table 250.66, what is the minimum grounding electrode conductor (GEC) size required?",
+    "hint": "NEC Table 250.66 sizes the GEC based on the size of the largest ungrounded service entrance conductor. Find 2/0 AWG copper in the table.",
+    "options": [
+      { "text": "#8 AWG copper", "value": "8", "correct": false, "feedback": "#8 AWG is the minimum GEC for service entrance conductors up to #2 AWG. For 2/0 service entrance conductors, a larger GEC is required." },
+      { "text": "#6 AWG copper", "value": "6", "correct": false, "feedback": "#6 AWG GEC is used for service entrance conductors of #2 AWG or #1 AWG copper. 2/0 AWG requires a larger grounding electrode conductor." },
+      { "text": "#4 AWG copper", "value": "4", "correct": true, "feedback": "Correct! Per NEC Table 250.66, service entrance conductors of 1/0 AWG through 3/0 AWG copper require a minimum #4 AWG copper grounding electrode conductor." },
+      { "text": "#2 AWG copper", "value": "2", "correct": false, "feedback": "#2 AWG GEC is required for service entrance conductors of 4/0 AWG or larger. For 2/0 AWG SE conductors, #4 AWG GEC is sufficient." }
+    ],
+    "explanation": "The grounding electrode conductor is sized per NEC Table 250.66 based on the service entrance conductor size. This table is on every journeyman exam. Key values: up to #2 SE = #8 GEC, 1/0-3/0 SE = #4 GEC, 4/0-350 SE = #2 GEC.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-elec-007",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Service Entrance Conductor Size",
+    "scenario": "A new single-family dwelling has a calculated demand load of 180 amperes. What is the minimum service entrance conductor size in copper per NEC Table 310.16 (75°C column)?",
+    "hint": "NEC Table 310.16 at the 75°C column: 2/0 AWG copper = 175A, 3/0 AWG copper = 200A. The conductors must have ampacity equal to or greater than the calculated load.",
+    "options": [
+      { "text": "1/0 AWG copper", "value": "1/0", "correct": false, "feedback": "1/0 AWG copper at 75°C is rated for 150A per NEC Table 310.16. This is insufficient for a 180A calculated load." },
+      { "text": "2/0 AWG copper", "value": "2/0", "correct": false, "feedback": "2/0 AWG copper at 75°C is rated for 175A. Since the calculated load is 180A, the conductors must be rated for at least 180A. 175A is not sufficient." },
+      { "text": "3/0 AWG copper", "value": "3/0", "correct": true, "feedback": "Correct! 3/0 AWG copper at 75°C is rated for 200A per NEC Table 310.16. This is the first standard size that meets or exceeds the 180A calculated demand load." },
+      { "text": "4/0 AWG copper", "value": "4/0", "correct": false, "feedback": "4/0 AWG copper at 75°C is rated for 230A. While it would work, it exceeds the requirement and adds unnecessary cost. 3/0 at 200A is sufficient." }
+    ],
+    "explanation": "Service entrance conductors must be sized to carry the calculated demand load per NEC 230.42. Use NEC Table 310.16 at the 75°C column (matching the terminal rating of most equipment). The conductor ampacity must meet or exceed the calculated load — never round down.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-elec-008",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Transformer KVA Sizing",
+    "scenario": "A commercial building needs a dry-type transformer to supply a 208/120V panelboard. The calculated demand load on the panelboard is 72 kVA. What is the minimum standard transformer size?",
+    "hint": "Standard dry-type transformer sizes: 15, 25, 37.5, 45, 75, 112.5, 150, 225, 300, 500 kVA. The transformer must be rated to carry the full demand load.",
+    "options": [
+      { "text": "45 kVA", "value": "45", "correct": false, "feedback": "45 kVA is far below the 72 kVA demand load. The transformer would be severely overloaded, causing overheating and premature failure." },
+      { "text": "75 kVA", "value": "75", "correct": true, "feedback": "Correct! 75 kVA is the next standard size above the 72 kVA demand load. It provides the required capacity with a small margin for load growth." },
+      { "text": "112.5 kVA", "value": "112.5", "correct": false, "feedback": "112.5 kVA would work but is oversized for a 72 kVA load. Oversizing increases cost, physical size, and losses (no-load losses are higher on larger transformers)." },
+      { "text": "150 kVA", "value": "150", "correct": false, "feedback": "150 kVA is significantly oversized. The transformer would operate at less than 50% capacity, wasting money and space." }
+    ],
+    "explanation": "Transformer sizing uses standard kVA ratings per manufacturer offerings. Select the next standard size at or above the calculated demand load. Per NEC 450.3(B), overcurrent protection is then sized based on the transformer's rated current, not the load.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-elec-009",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Motor Circuit Conductor Sizing",
+    "scenario": "A 10 HP, 230V, 3-phase motor has a full-load current (FLC) of 28 amperes per NEC Table 430.250. What is the minimum branch circuit conductor size in copper (THHN, 75°C column)?",
+    "hint": "NEC 430.22 requires motor branch circuit conductors to be sized at 125% of motor FLC: 28A x 1.25 = 35A. Then find the conductor with ampacity of at least 35A.",
+    "options": [
+      { "text": "12 AWG (20A)", "value": "12", "correct": false, "feedback": "12 AWG at 75°C is rated for only 25A. Motor branch circuit conductors must carry at least 125% of FLC (35A). Far too small." },
+      { "text": "10 AWG (35A)", "value": "10", "correct": true, "feedback": "Correct! 10 AWG copper at 75°C is rated for 35A per NEC Table 310.16. Motor branch circuits require 125% of FLC: 28A x 1.25 = 35A. 10 AWG meets this exactly." },
+      { "text": "8 AWG (50A)", "value": "8", "correct": false, "feedback": "8 AWG at 75°C is rated for 50A. While this would work, it exceeds the minimum requirement. 10 AWG at 35A meets the 125% requirement." },
+      { "text": "6 AWG (65A)", "value": "6", "correct": false, "feedback": "6 AWG is significantly oversized for a 28A motor. This would waste material and be difficult to terminate in the motor junction box." }
+    ],
+    "explanation": "Motor branch circuit conductors per NEC 430.22 must have an ampacity of at least 125% of the motor full-load current from NEC Table 430.250 (not the nameplate). This extra capacity handles motor starting surge and ensures conductors do not overheat during continuous operation.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-elec-010",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Raceway Fill Percentage",
+    "scenario": "You need to pull two #10 THHN conductors through a short piece of 1/2\" EMT conduit (nipple under 24 inches). What is the maximum fill percentage allowed for two conductors in a raceway?",
+    "hint": "NEC Chapter 9, Table 1 specifies different fill percentages based on the number of conductors: 1 conductor = 53%, 2 conductors = 31%, 3+ conductors = 40%.",
+    "options": [
+      { "text": "25%", "value": "25", "correct": false, "feedback": "25% is not a standard NEC fill percentage. The table specifies 31% for two conductors, 40% for three or more, and 53% for one conductor." },
+      { "text": "31%", "value": "31", "correct": true, "feedback": "Correct! NEC Chapter 9, Table 1 limits fill to 31% for exactly two conductors in a raceway. This accounts for heat dissipation and the jamming ratio between two wires." },
+      { "text": "40%", "value": "40", "correct": false, "feedback": "40% applies to three or more conductors, not two. The 31% limit for two conductors prevents wire jamming during pulling — two round conductors can lock together in a conduit." },
+      { "text": "53%", "value": "53", "correct": false, "feedback": "53% applies to a single conductor only. With two conductors, the fill is limited to 31% to prevent jamming during installation." }
+    ],
+    "explanation": "NEC Chapter 9, Table 1 fill percentages exist for good reasons: one conductor at 53% allows a single wire to move freely; two conductors at 31% prevents jamming; three or more at 40% balances heat dissipation with practical use. Nipples under 24\" may use 60% fill per NEC Note 4.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-elec-011",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Receptacle Circuit Capacity",
+    "scenario": "A 20A, 120V branch circuit in a commercial office supplies general-purpose receptacles. Per NEC, receptacle loads are calculated at 180 VA per receptacle outlet. What is the maximum number of receptacle outlets permitted on this circuit?",
+    "hint": "Total circuit capacity = 20A x 120V = 2,400 VA. Each receptacle = 180 VA. Maximum outlets = 2,400 / 180 = 13.3. Round down to whole number.",
+    "options": [
+      { "text": "8 receptacles", "value": "8", "correct": false, "feedback": "8 receptacles is a common rule-of-thumb but is more conservative than the NEC calculation allows. 8 x 180 = 1,440 VA, well below the circuit capacity." },
+      { "text": "10 receptacles", "value": "10", "correct": false, "feedback": "10 receptacles uses 1,800 VA of the 2,400 VA capacity. While conservative and acceptable, the NEC permits more on this circuit." },
+      { "text": "13 receptacles", "value": "13", "correct": true, "feedback": "Correct! 20A x 120V = 2,400 VA. At 180 VA per receptacle per NEC 220.14(I), maximum = 2,400 / 180 = 13.3, rounded down to 13 receptacle outlets." },
+      { "text": "16 receptacles", "value": "16", "correct": false, "feedback": "16 receptacles would require 2,880 VA (16 x 180), which exceeds the 2,400 VA circuit capacity. This is a code violation." }
+    ],
+    "explanation": "Commercial receptacle circuit loading per NEC 220.14(I) assigns 180 VA per general-purpose receptacle outlet. The total cannot exceed the circuit VA rating (amps x volts). Note: local jurisdictions may limit this further, and many design engineers use a more conservative 8-10 per circuit for practical purposes.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-elec-012",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Demand Calculation for Dwelling",
+    "scenario": "A dwelling has a 10 kW electric range. Per NEC Table 220.55, what demand load should be used for this single range in the service calculation?",
+    "hint": "NEC Table 220.55, Column C for one range: the maximum demand for a single household electric range not exceeding 12 kW is 8 kW.",
+    "options": [
+      { "text": "6 kW", "value": "6", "correct": false, "feedback": "6 kW is too low. Column C of NEC Table 220.55 for a single range up to 12 kW specifies 8 kW as the demand factor, not 60% of the nameplate." },
+      { "text": "8 kW", "value": "8", "correct": true, "feedback": "Correct! Per NEC Table 220.55, Column C, the maximum demand for a single household electric range rated up to 12 kW is 8 kW. This demand factor recognizes that all heating elements are rarely used simultaneously at full power." },
+      { "text": "10 kW", "value": "10", "correct": false, "feedback": "10 kW is the nameplate rating, not the demand load. NEC Table 220.55 allows a demand factor because the full nameplate rating is rarely used continuously." },
+      { "text": "12 kW", "value": "12", "correct": false, "feedback": "12 kW is the maximum range rating for Column C of Table 220.55 to apply, not the demand value. The demand for a single range up to 12 kW is 8 kW." }
+    ],
+    "explanation": "NEC Table 220.55 is critical for dwelling service calculations. For a single range up to 12 kW, the demand is 8 kW. For ranges over 12 kW, the 8 kW base is increased by 5% for each additional kW above 12 kW. This demand factor prevents oversizing the service entrance.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-elec-013",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Overload Rating — Short Duration",
+    "scenario": "You are commissioning a VFD on a 50 HP supply fan motor. During startup, the motor briefly draws 130% of rated current for about 1.5 seconds. Per UCSB spec, what is the maximum duration the VFD must sustain 130% overload without faulting?",
+    "hint": "UCSB spec defines two VFD overload tiers: a moderate overload sustained for a longer period, and a heavy overload sustained for a shorter burst. The 130% rating has a specific time limit.",
+    "options": [
+      { "text": "1 second", "value": "1", "correct": false, "feedback": "1 second is shorter than the spec requires. The VFD must handle 130% for at least 2 seconds per UCSB spec. A 1-second rating would cause nuisance faults during normal motor acceleration." },
+      { "text": "2 seconds", "value": "2", "correct": true, "feedback": "Correct! Per UCSB spec, the VFD must sustain 130% of rated output current for a minimum of 2 seconds. This handles motor acceleration and brief overload transients without nuisance tripping." },
+      { "text": "10 seconds", "value": "10", "correct": false, "feedback": "10 seconds at 130% exceeds the UCSB spec requirement. While a more robust drive, this rating is not what the spec calls for. The 110% overload tier has the longer duration at 1 minute." },
+      { "text": "1 minute", "value": "60", "correct": false, "feedback": "1 minute is the required duration for 110% overload per UCSB spec, not 130%. The two overload tiers are: 110% for 1 minute and 130% for 2 seconds." }
+    ],
+    "explanation": "UCSB spec VFD overload requirements: 110% for 1 minute (sustained moderate overload) and 130% for 2 seconds (short-duration heavy overload). These two tiers ensure the VFD handles both motor acceleration transients and brief mechanical load spikes without nuisance tripping.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-elec-014",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Temperature Derating",
+    "scenario": "A VFD rated at 100 HP is installed in a rooftop mechanical room where summer temperatures regularly reach 45°C (113°F). Per UCSB spec, the VFD is rated for full output up to 40°C. What is the derated output capacity?",
+    "hint": "UCSB spec requires VFDs to operate at full capacity from -15°C to 40°C. Above 40°C, the drive must be derated. The derating factor is specified per degree above the threshold.",
+    "options": [
+      { "text": "100 HP — no derating needed", "value": "100", "correct": false, "feedback": "Derating IS required above 40°C per UCSB spec. Operating at full load above the rated temperature causes the drive's power semiconductors to overheat, shortening lifespan and risking thermal shutdown." },
+      { "text": "90 HP (10% derating)", "value": "90", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must be derated 10% above 40°C ambient temperature. At 45°C, the 100 HP drive should only be loaded to 90 HP to prevent thermal stress on the IGBT modules." },
+      { "text": "75 HP (25% derating)", "value": "75", "correct": false, "feedback": "25% derating is excessive for 5°C above the threshold. UCSB spec calls for 10% derating above 40°C, not a linear per-degree calculation." },
+      { "text": "50 HP (50% derating)", "value": "50", "correct": false, "feedback": "50% derating would only apply in extreme temperature conditions far beyond 40°C. At 45°C, the UCSB spec requires only a 10% derating." }
+    ],
+    "explanation": "VFD temperature derating per UCSB spec: full rated output from -15°C to 40°C, derate 10% above 40°C. In hot mechanical rooms, either upsize the VFD or improve ventilation to keep ambient below 40°C. IGBT junction temperature is the limiting factor — every degree above rating accelerates semiconductor degradation.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-elec-015",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "VFD Altitude Derating",
+    "scenario": "A project at 5,000 feet elevation requires a 75 HP VFD for a chilled water pump. Per UCSB spec, VFDs are rated at full capacity from 0 to 3,300 feet, with derating required above that up to 6,600 feet. What is the derated capacity at 5,000 feet?",
+    "hint": "UCSB spec requires 10% derating for VFDs installed between 3,300 and 6,600 feet elevation. At high altitude, thinner air reduces the cooling effectiveness of the drive's heat sinks.",
+    "options": [
+      { "text": "75 HP — no derating at 5,000 feet", "value": "75", "correct": false, "feedback": "Derating IS required at 5,000 feet because it exceeds the 3,300-foot threshold. Reduced air density at altitude means less convective cooling for the VFD's power electronics." },
+      { "text": "67.5 HP (10% derating)", "value": "67.5", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must be derated 10% when installed between 3,300 and 6,600 feet elevation. A 75 HP drive at 5,000 feet should be loaded to no more than 67.5 HP, or an 80+ HP drive should be specified." },
+      { "text": "56.25 HP (25% derating)", "value": "56.25", "correct": false, "feedback": "25% derating is excessive. UCSB spec calls for a flat 10% derating in the 3,300 to 6,600-foot range, not a proportional calculation based on exact altitude." },
+      { "text": "70 HP (7% derating)", "value": "70", "correct": false, "feedback": "There is no 7% intermediate derating calculation in the UCSB spec. The spec uses a single 10% derating step for the entire 3,300 to 6,600-foot altitude band." }
+    ],
+    "explanation": "VFD altitude derating per UCSB spec: full capacity 0–3,300 ft, derate 10% from 3,300–6,600 ft. Thinner air at altitude reduces heat dissipation from the drive's heat sinks, causing higher junction temperatures. For projects above 3,300 feet, either derate the existing drive or upsize to the next frame to maintain required motor horsepower.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-elec-016",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Carrier Frequency Setting",
+    "scenario": "You are setting up a new VFD for an AHU supply fan in an occupied office space. The default carrier frequency is 2 kHz, but occupants can hear a high-pitched whine from the motor. Per UCSB spec, what is the maximum carrier frequency you can increase to for noise reduction?",
+    "hint": "UCSB spec defines the starting carrier frequency and the maximum allowable carrier frequency. Higher frequencies reduce audible motor noise but increase drive heating and may require derating.",
+    "options": [
+      { "text": "4 kHz", "value": "4", "correct": false, "feedback": "4 kHz is better than 2 kHz for noise but still produces audible whine in quiet spaces. The UCSB spec allows increasing up to a higher maximum for noise-sensitive applications." },
+      { "text": "6 kHz", "value": "6", "correct": false, "feedback": "6 kHz further reduces motor noise but is not the maximum allowed by UCSB spec. You have room to go higher if the application demands quieter operation." },
+      { "text": "10 kHz", "value": "10", "correct": true, "feedback": "Correct! Per UCSB spec, the maximum carrier frequency is 10 kHz, with 2 kHz as the starting (default) frequency. At 10 kHz, most motor whine is above human hearing threshold, but the VFD may need derating due to increased switching losses." },
+      { "text": "20 kHz", "value": "20", "correct": false, "feedback": "20 kHz exceeds the UCSB spec maximum of 10 kHz. While 20 kHz would be inaudible, the switching losses at this frequency would cause severe VFD overheating and potential IGBT failure." }
+    ],
+    "explanation": "VFD carrier frequency per UCSB spec: start at 2 kHz, maximum 10 kHz. Higher carrier frequency reduces audible motor noise by pushing the switching harmonics above the human hearing range (~15-18 kHz). Trade-off: higher carrier frequency increases IGBT switching losses, generating more heat in the drive. Above 4-6 kHz, most VFDs require 5-10% current derating.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-017",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Input Voltage Tolerance — Full Output",
+    "scenario": "A building experiences periodic voltage sags during peak utility demand. Per UCSB spec, what is the minimum input voltage at which a VFD must still deliver full rated output to the motor?",
+    "hint": "UCSB spec defines two voltage thresholds: one where the VFD must maintain full output, and a lower one where it must continue operating (possibly at reduced output).",
+    "options": [
+      { "text": "100% of nominal — no voltage tolerance", "value": "100", "correct": false, "feedback": "All VFDs have some input voltage tolerance. Requiring exactly 100% nominal would mean any voltage sag shuts down the drive, which is unacceptable for critical HVAC equipment." },
+      { "text": "95% of nominal voltage", "value": "95", "correct": false, "feedback": "95% is too conservative. UCSB spec requires VFDs to maintain full output at a lower voltage threshold, providing greater ride-through capability during utility voltage sags." },
+      { "text": "90% of nominal voltage", "value": "90", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must deliver full rated output at 90% of nominal input voltage. At 480V nominal, that means full output down to 432V. The drive must also continue operating (at reduced output) down to 70% of nominal." },
+      { "text": "80% of nominal voltage", "value": "80", "correct": false, "feedback": "80% is between the two UCSB spec thresholds. Full output is required at 90%, and continued operation (not full output) is required down to 70%. At 80%, the VFD runs but may need to reduce motor speed." }
+    ],
+    "explanation": "VFD input voltage tolerance per UCSB spec: full rated output at 90% nominal, continued operation at 70% nominal. This two-tier approach ensures critical equipment stays running during voltage sags. At 480V nominal: full output down to 432V, continued operation down to 336V. Below 70%, the drive may trip on undervoltage to protect itself and the motor.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-018",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "VFD Overload Rating — Short Duration",
+    "scenario": "A VFD must handle momentary overload conditions during motor starting and sudden load changes. Per UCSB spec, what is the required short-duration overload capacity (2-second burst)?",
+    "hint": "UCSB spec defines two overload ratings: a sustained overload (1 minute per 10 minutes) and a short-duration transient overload (2 seconds per minute). The short-duration rating is higher.",
+    "options": [
+      { "text": "105% for 2 seconds", "value": "105", "correct": false, "feedback": "105% is barely above rated current and would not handle the transient torque demands of sudden load changes or valve position shifts. UCSB spec requires a higher short-duration overload." },
+      { "text": "110% for 2 seconds", "value": "110", "correct": false, "feedback": "110% is the sustained overload rating (1 minute per 10 minutes). The 2-second transient overload rating is higher to handle sudden load spikes." },
+      { "text": "130% for 2 seconds", "value": "130", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must handle 130% of rated current for 2 seconds every minute. This handles transient load spikes from sudden valve movements, fan blade loading, or pump cavitation events." },
+      { "text": "150% for 2 seconds", "value": "150", "correct": false, "feedback": "150% exceeds the UCSB spec requirement of 130% for 2-second transients. While some premium drives offer 150%, the spec baseline is 130%." }
+    ],
+    "explanation": "VFD overload ratings per UCSB spec: 110% for 1 minute every 10 minutes (sustained), and 130% for 2 seconds every minute (transient). The sustained rating handles gradual overloads like dirty filters increasing fan load. The transient rating handles sudden spikes like a chilled water valve snapping open. Both ratings protect the IGBT power modules from thermal damage.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-elec-019",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Maximum THD Requirement",
+    "scenario": "You are reviewing VFD submittals for a new building. Per UCSB spec, what is the maximum total harmonic distortion (THD) allowed at the VFD output?",
+    "hint": "UCSB spec limits both THD (total harmonic distortion at the VFD output) and TDD (total demand distortion at the point of common coupling). THD is the stricter of the two limits.",
+    "options": [
+      { "text": "Less than 3%", "value": "3", "correct": true, "feedback": "Correct! Per UCSB spec, VFD output THD must be less than 3%. Low THD protects downstream equipment from harmonic heating and reduces interference with sensitive building systems." },
+      { "text": "Less than 5%", "value": "5", "correct": false, "feedback": "5% is the TDD (Total Demand Distortion) limit at the point of common coupling per IEEE 519. The THD limit at the VFD output itself is stricter at less than 3%." },
+      { "text": "Less than 8%", "value": "8", "correct": false, "feedback": "8% THD would cause significant harmonic heating in transformers, cables, and motors. UCSB spec is much more restrictive at less than 3% to protect building electrical infrastructure." },
+      { "text": "Less than 10%", "value": "10", "correct": false, "feedback": "10% THD is extremely high and would cause overheating of transformers, nuisance breaker tripping, and interference with IT equipment. UCSB spec limits THD to less than 3%." }
+    ],
+    "explanation": "VFD harmonic limits per UCSB spec: THD less than 3% at the drive output, TDD less than 5% at the point of common coupling (per IEEE 519). THD measures voltage distortion from the ideal sine wave. Harmonics cause transformer overheating, increased neutral current, and interference with sensitive equipment. Multi-pulse drives (12 or 18 pulse) or active front-end drives are typically needed to meet the 3% THD limit.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-020",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "VFD Combined Derating — Heat and Altitude",
+    "scenario": "A VFD rated at 100 HP is installed at 4,500 feet elevation in a mechanical penthouse where summer ambient reaches 45°C. Per UCSB spec, what is the maximum load this VFD can safely deliver considering both altitude and temperature derating?",
+    "hint": "UCSB spec requires 10% derating above 3,300 feet altitude AND 10% derating above 40°C ambient temperature. When both conditions exist simultaneously, the derating factors compound.",
+    "options": [
+      { "text": "90 HP (10% total derating)", "value": "90", "correct": false, "feedback": "10% only accounts for one derating factor. Both altitude (above 3,300 ft) and temperature (above 40°C) require independent derating. You must apply both." },
+      { "text": "81 HP (19% total derating)", "value": "81", "correct": true, "feedback": "Correct! The derating factors compound: 100 HP x 0.90 (altitude) x 0.90 (temperature) = 81 HP. Both conditions reduce cooling effectiveness — thin air AND high ambient temperature independently reduce the drive's ability to dissipate heat from the IGBT modules." },
+      { "text": "80 HP (20% total derating)", "value": "80", "correct": false, "feedback": "Close, but the derating is multiplicative, not additive. 10% + 10% = 20% additive would give 80 HP, but the correct method is 0.90 x 0.90 = 0.81, giving 81 HP." },
+      { "text": "75 HP (25% total derating)", "value": "75", "correct": false, "feedback": "25% derating is too aggressive. Each condition requires only 10% derating, and they compound multiplicatively to 19% total (0.90 x 0.90 = 0.81), not 25%." }
+    ],
+    "explanation": "When multiple VFD derating factors apply simultaneously, they compound multiplicatively: 0.90 (altitude above 3,300 ft) x 0.90 (temperature above 40°C) = 0.81 = 81 HP from a 100 HP drive. In practice, you should specify a 100 HP drive for an 81 HP load, or a 125 HP drive for a 100 HP load under these conditions. Both altitude and temperature reduce cooling air effectiveness independently.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-elec-021",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "UCSB VRF Outdoor Unit Heating COP",
+    "scenario": "On the UCSB San Benito Student Housing project, the VRF heat recovery outdoor unit HR-B2-R-01 is a Daikin REYQ408AAYDB rated at 34 tons. At 47°F outdoor ambient, what is its heating coefficient of performance (COP)?",
+    "hint": "COP measures heating efficiency — how many BTUs of heat output per BTU of electrical input. Higher COP means more efficient. Heat pump COP drops as outdoor temperature decreases.",
+    "options": [
+      { "text": "2.0", "value": "2.0", "correct": false, "feedback": "COP of 2.0 would be typical at much lower outdoor temperatures (around 17°F). At 47°F, the standard ARI rating condition, the COP should be significantly higher." },
+      { "text": "3.0", "value": "3.0", "correct": true, "feedback": "Correct! Per the UCSB schedule, HR-B2-R-01 has a heating COP of 3.0 at 47°F outdoor ambient, producing 337.8 MBH of heating. This means for every 1 kW of electrical input, the unit delivers 3 kW of heating energy." },
+      { "text": "4.5", "value": "4.5", "correct": false, "feedback": "COP of 4.5 would be exceptional for a VRF system at 47°F. While some systems achieve this at higher ambient temperatures, the UCSB schedule rates this unit at 3.0 COP at the standard 47°F condition." },
+      { "text": "10.0", "value": "10.0", "correct": false, "feedback": "10.0 is the cooling EER (Energy Efficiency Ratio) for this unit, not the heating COP. EER is measured in BTU/Wh while COP is a unitless ratio. Do not confuse the two ratings." }
+    ],
+    "explanation": "The Daikin REYQ408AAYDB at UCSB has a heating COP of 3.0 at 47°F (the AHRI standard rating condition). This means for every 112.6 MBH of electrical input, it produces 337.8 MBH of heat output. The cooling EER of 10.0 is a separate metric. COP drops as outdoor temperature decreases because the heat pump must work harder to extract heat from colder air — at 17°F ambient, the COP might drop to 2.0 or lower.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-022",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "UCSB Split System SEER Rating",
+    "scenario": "On the UCSB San Benito project, split system outdoor unit SOU-B1-1-3 is a Daikin RZQ48TBVJUA rated at 4 tons using R-32 refrigerant at 208V. What is its SEER rating?",
+    "hint": "SEER (Seasonal Energy Efficiency Ratio) measures cooling efficiency over a full season. Federal minimum for split systems above 45,000 BTU/h is SEER 14 (as of 2023 in the South/Southwest, SEER2 15 equivalent). Check the equipment schedule.",
+    "options": [
+      { "text": "10.5", "value": "10.5", "correct": false, "feedback": "10.5 is the EER (instantaneous efficiency at peak conditions) for the smaller SOU-B1-1-1 unit, not the SEER for SOU-B1-1-3. SEER is always higher than EER because it includes part-load operation." },
+      { "text": "13.0", "value": "13.0", "correct": false, "feedback": "SEER 13 would not meet current federal minimums for this capacity range. The Department of Energy requires higher SEER ratings for new equipment." },
+      { "text": "15.3", "value": "15.3", "correct": true, "feedback": "Correct! Per the UCSB schedule, SOU-B1-1-3 has a SEER of 15.3. This exceeds the federal minimum and uses R-32 refrigerant, which has a lower GWP (675) than the older R-410A (2,088) it replaces." },
+      { "text": "18.0", "value": "18.0", "correct": false, "feedback": "SEER 18 is the rating for the smaller SOU-B1-1-1 (2-ton unit). Larger capacity units typically have slightly lower SEER ratings due to compressor sizing. The 4-ton SOU-B1-1-3 is rated at 15.3." }
+    ],
+    "explanation": "Per the UCSB schedule, the 4-ton Daikin RZQ48TBVJUA has SEER 15.3 and EER 8.3. Note the smaller 2-ton SOU-B1-1-1 (RXC24AXVJU) achieves SEER 18 and EER 10.5 — smaller units often have higher efficiency ratings. Both units use R-32 refrigerant at 208V. R-32 is a single-component refrigerant with 68% lower GWP than R-410A, aligning with California's HFC phase-down regulations.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-elec-023",
+    "type": "size-it",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "UCSB Generator Room Unit Heater Voltage",
+    "scenario": "On the UCSB San Benito project, the generator room has electric unit heaters EH-B3-1-1 and EH-B3-1-2 (Marley IUH, industrial type) rated at 5 KW each with 270 CFM airflow. What voltage and phase are these heaters wired for?",
+    "hint": "Generator rooms are typically served by building power, not generator backup. Industrial unit heaters in mechanical spaces are often wired at the building's primary voltage to minimize amperage on the circuit.",
+    "options": [
+      { "text": "120V / 1-phase", "value": "120-1", "correct": false, "feedback": "120V/1ph at 5 KW would draw over 41 amps — far too much for a 120V circuit. That is the voltage for the smaller 0.5 KW wall heater EH-B3-1-3 in the water softener room." },
+      { "text": "208V / 1-phase", "value": "208-1", "correct": false, "feedback": "208V/1ph at 5 KW draws about 24 amps. While possible, the schedule specifies a higher voltage to reduce amperage and use standard 3-phase building power available in mechanical rooms." },
+      { "text": "460V / 3-phase", "value": "460-3", "correct": true, "feedback": "Correct! Per the UCSB schedule, the generator room unit heaters are 460V/3-phase. At 5 KW on 460V/3ph, each heater draws only about 6.3 amps — a much smaller wire size and breaker than lower voltage options." },
+      { "text": "277V / 1-phase", "value": "277-1", "correct": false, "feedback": "277V/1ph is common for lighting in commercial buildings, but the UCSB schedule specifies 460V/3-phase for these industrial unit heaters to take advantage of the 3-phase power available in the generator room." }
+    ],
+    "explanation": "The Marley IUH industrial unit heaters in the UCSB generator room are wired at 460V/3-phase per the equipment schedule. At this voltage, a 5 KW heater draws only 6.3 amps (5,000 / (460 x 1.732) = 6.3A), allowing smaller wire and breaker sizes. Compare to the water softener room heater EH-B3-1-3 at only 0.5 KW, which is 120V/1-phase (4.2 amps) — appropriate for a small wall-mount unit.",
+    "xpReward": 40
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "seq-plmb-001",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Heater Replacement",
+    "description": "Put the steps for replacing a residential gas water heater in the correct order.",
+    "steps": [
+      { "id": 1, "text": "Turn off gas supply at shutoff valve and close cold water inlet", "order": 1 },
+      { "id": 2, "text": "Connect a garden hose and drain the old water heater", "order": 2 },
+      { "id": 3, "text": "Disconnect gas line, water connections, and vent pipe", "order": 3 },
+      { "id": 4, "text": "Remove old water heater and clean area", "order": 4 },
+      { "id": 5, "text": "Set new water heater in place (elevated in garage) and level it", "order": 5 },
+      { "id": 6, "text": "Connect cold and hot water piping with dielectric fittings", "order": 6 },
+      { "id": 7, "text": "Install T&P relief valve and discharge pipe to within 6\" of floor", "order": 7 },
+      { "id": 8, "text": "Connect gas line with sediment trap and test all joints for leaks", "order": 8 },
+      { "id": 9, "text": "Connect vent pipe, fill tank with water, then light pilot and verify operation", "order": 9 }
+    ],
+    "explanation": "Always drain before disconnecting, install T&P discharge pipe before gas, and NEVER light the pilot until the tank is full of water. Firing an empty tank will damage the glass lining and void the warranty. Gas connections must be leak-tested before operation per IFGC 406.4.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-plmb-002",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "DWV Rough-In for Bathroom",
+    "description": "Order the steps for roughing in the DWV (drain-waste-vent) system for a bathroom.",
+    "steps": [
+      { "id": 1, "text": "Review plans for fixture locations and pipe sizing", "order": 1 },
+      { "id": 2, "text": "Cut and install the building drain and main stack", "order": 2 },
+      { "id": 3, "text": "Install closet bend and flange for toilet (12\" rough-in)", "order": 3 },
+      { "id": 4, "text": "Run horizontal branch drains for shower and lavatory", "order": 4 },
+      { "id": 5, "text": "Install P-traps at proper height for each fixture", "order": 5 },
+      { "id": 6, "text": "Install vent piping from trap arms up through roof", "order": 6 },
+      { "id": 7, "text": "Pressure test entire DWV system at 5 PSI for 15 minutes", "order": 7 }
+    ],
+    "explanation": "DWV rough-in works from the main drain outward: establish the main stack first, then branch drains, then traps, and finally vents. Always test the system before closing walls. IPC 312.2 requires a 5 PSI air test or 10-foot head water test.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-plmb-003",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Fixture Trim-Out",
+    "description": "Order the steps for trimming out (finishing) a bathroom after walls and flooring are complete.",
+    "steps": [
+      { "id": 1, "text": "Install water closet wax ring and set toilet on closet flange", "order": 1 },
+      { "id": 2, "text": "Secure toilet with closet bolts and connect water supply", "order": 2 },
+      { "id": 3, "text": "Install lavatory faucet and drain body on sink", "order": 3 },
+      { "id": 4, "text": "Mount sink to vanity and connect supply tubes and P-trap", "order": 4 },
+      { "id": 5, "text": "Install shower trim plate, handle, and shower head", "order": 5 },
+      { "id": 6, "text": "Turn on water supply and check all connections for leaks", "order": 6 },
+      { "id": 7, "text": "Test all fixtures for proper operation and drainage", "order": 7 }
+    ],
+    "explanation": "Trim-out sequence matters: install faucets on sinks BEFORE mounting (much easier), set toilets on wax rings carefully (one shot — rocking breaks the seal), and always test every connection before leaving the job.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-plmb-004",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Water Service Installation",
+    "description": "Order the steps for installing a new residential water service from the main to the house.",
+    "steps": [
+      { "id": 1, "text": "Obtain permit and call 811 for utility locates", "order": 1 },
+      { "id": 2, "text": "Excavate trench from main to building (below frost line)", "order": 2 },
+      { "id": 3, "text": "Install corporation stop at water main with wet tap", "order": 3 },
+      { "id": 4, "text": "Run service pipe (Type K copper or approved material) in trench", "order": 4 },
+      { "id": 5, "text": "Install curb stop and curb box at property line", "order": 5 },
+      { "id": 6, "text": "Sleeve pipe through foundation wall and install main shutoff inside", "order": 6 },
+      { "id": 7, "text": "Pressure test service line at 1.5x working pressure for 2 hours", "order": 7 },
+      { "id": 8, "text": "Backfill trench in lifts and restore surface", "order": 8 }
+    ],
+    "explanation": "Water service installation starts with utility locates (811) — hitting a gas or electric line is life-threatening. The trench must be below frost line to prevent freezing. Always pressure test before backfilling per IPC 312.5.",
+    "xpReward": 50
+  },
+  {
+    "id": "seq-plmb-005",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Drain Cleaning with Cable Machine",
+    "description": "Order the steps for clearing a clogged drain using a drain cable (snake) machine.",
+    "steps": [
+      { "id": 1, "text": "Identify the clog location and select the nearest cleanout access", "order": 1 },
+      { "id": 2, "text": "Set up drain cable machine near cleanout and select proper cable size", "order": 2 },
+      { "id": 3, "text": "Remove cleanout plug and insert cable into drain slowly", "order": 3 },
+      { "id": 4, "text": "Run machine forward while feeding cable until resistance is felt", "order": 4 },
+      { "id": 5, "text": "Work cable back and forth through the blockage until it breaks free", "order": 5 },
+      { "id": 6, "text": "Retract cable while running machine and clean cable as it comes out", "order": 6 },
+      { "id": 7, "text": "Run water through the drain to verify flow and clear debris", "order": 7 }
+    ],
+    "explanation": "Always identify the closest access point first to minimize cable length needed. Feed cable slowly — forcing it can kink the cable or damage the pipe. Clean the cable during retraction to prevent mess. Wear gloves and eye protection at all times.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-plmb-006",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Copper Pipe Soldering (Sweat Joints)",
+    "description": "Order the steps for making a soldered copper pipe joint.",
+    "steps": [
+      { "id": 1, "text": "Cut pipe square using a tubing cutter and ream the inside edge", "order": 1 },
+      { "id": 2, "text": "Clean the pipe end with emery cloth (1\" beyond insertion depth)", "order": 2 },
+      { "id": 3, "text": "Clean inside of fitting socket with fitting brush", "order": 3 },
+      { "id": 4, "text": "Apply lead-free flux to pipe end and fitting socket", "order": 4 },
+      { "id": 5, "text": "Assemble joint and rotate fitting to distribute flux evenly", "order": 5 },
+      { "id": 6, "text": "Apply heat to fitting body (not the pipe) with torch", "order": 6 },
+      { "id": 7, "text": "Touch solder to joint — when it melts and wicks in, the joint is ready", "order": 7 },
+      { "id": 8, "text": "Wipe excess solder with a damp rag and allow to cool", "order": 8 }
+    ],
+    "explanation": "Proper soldering technique is critical: clean surfaces allow capillary action to draw solder into the joint. Heat the fitting (not the pipe) so solder flows toward the heat source. Always use lead-free solder on potable water per IPC 605.11.2.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-plmb-007",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Main Tap and Connection",
+    "description": "Order the steps for making a wet tap on a municipal water main for a new service connection.",
+    "steps": [
+      { "id": 1, "text": "Verify permits and coordinate with water utility for shutdown or wet tap", "order": 1 },
+      { "id": 2, "text": "Excavate around the water main and expose the pipe", "order": 2 },
+      { "id": 3, "text": "Clean the main pipe surface and install the tapping saddle or sleeve", "order": 3 },
+      { "id": 4, "text": "Install the corporation stop on the tapping saddle", "order": 4 },
+      { "id": 5, "text": "Drill through the main using the tapping machine through the corp stop", "order": 5 },
+      { "id": 6, "text": "Close the corporation stop and remove the tapping machine", "order": 6 },
+      { "id": 7, "text": "Connect service pipe to corporation stop and run to curb stop", "order": 7 },
+      { "id": 8, "text": "Flush and pressure test the new service line", "order": 8 }
+    ],
+    "explanation": "Wet tapping allows connection to a live water main without shutting down service. The corporation stop must be installed and operational before drilling — it is the only shutoff once the main is tapped. This work often requires a licensed utility contractor.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-plmb-008",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Bathroom Remodel Plumbing",
+    "description": "Order the steps for replumbing a full bathroom remodel where fixture locations are changing.",
+    "steps": [
+      { "id": 1, "text": "Shut off water supply and drain the existing system", "order": 1 },
+      { "id": 2, "text": "Demo existing fixtures, piping, and open walls/floor as needed", "order": 2 },
+      { "id": 3, "text": "Install new drain and vent piping to new fixture locations", "order": 3 },
+      { "id": 4, "text": "Install new water supply piping (hot and cold) to new locations", "order": 4 },
+      { "id": 5, "text": "Pressure test drain system (5 PSI air) and supply system (working pressure)", "order": 5 },
+      { "id": 6, "text": "Call for rough-in inspection before closing walls", "order": 6 },
+      { "id": 7, "text": "Close walls, install tile/flooring, then trim out fixtures", "order": 7 },
+      { "id": 8, "text": "Call for final inspection after all fixtures are operational", "order": 8 }
+    ],
+    "explanation": "The rough-in inspection MUST happen before walls are closed — inspectors need to see all piping, slopes, venting, and test results. Closing walls before inspection means tearing them back open. Two inspections are required: rough and final per IPC 107.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-plmb-009",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Sump Pump Installation",
+    "description": "Order the steps for installing a new sump pump system in a basement.",
+    "steps": [
+      { "id": 1, "text": "Excavate sump pit location and install pre-formed sump basin", "order": 1 },
+      { "id": 2, "text": "Route perimeter drain tile into sump pit", "order": 2 },
+      { "id": 3, "text": "Set submersible pump in pit and adjust float switch level", "order": 3 },
+      { "id": 4, "text": "Install check valve on discharge pipe above pump", "order": 4 },
+      { "id": 5, "text": "Run discharge pipe through rim joist to exterior, maintaining slope", "order": 5 },
+      { "id": 6, "text": "Terminate discharge at least 10 feet from foundation with splash block", "order": 6 },
+      { "id": 7, "text": "Install sealed pit cover and connect to GFCI outlet", "order": 7 },
+      { "id": 8, "text": "Fill pit with water and test pump operation and check valve function", "order": 8 }
+    ],
+    "explanation": "The check valve must be installed on the discharge before running the pipe — it prevents water in the discharge line from flowing back into the pit when the pump shuts off. Without it, the pump cycles constantly. Test by filling with water, never dry-run a pump per IPC 713.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-plmb-010",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Gas Line Pressure Test",
+    "description": "Order the steps for pressure testing a new gas piping system before placing it in service.",
+    "steps": [
+      { "id": 1, "text": "Verify all joints are complete and all open ends are capped or plugged", "order": 1 },
+      { "id": 2, "text": "Close the main gas shutoff valve (system isolated from supply)", "order": 2 },
+      { "id": 3, "text": "Connect a test gauge and air/nitrogen source to a test port", "order": 3 },
+      { "id": 4, "text": "Pressurize the system to the required test pressure (typically 3 PSI for low-pressure systems)", "order": 4 },
+      { "id": 5, "text": "Disconnect the pressure source and hold for minimum test duration (varies by code, often 10-30 minutes)", "order": 5 },
+      { "id": 6, "text": "Verify no pressure drop on the test gauge", "order": 6 },
+      { "id": 7, "text": "If pressure holds, apply leak detection solution to every joint for final verification", "order": 7 },
+      { "id": 8, "text": "Document test results, pressure, duration, and submit to inspector", "order": 8 }
+    ],
+    "explanation": "Gas line pressure testing is a life-safety requirement. The system must hold at test pressure with NO drop. Even a tiny leak can cause a gas explosion. Never use a flame to test for leaks — always use approved leak detection solution or electronic detectors per IFGC 406.4.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-plmb-011",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Water Heater Flush and Maintenance",
+    "description": "Order the steps for performing annual maintenance on a tank-type gas water heater.",
+    "steps": [
+      { "id": 1, "text": "Turn off gas supply and set thermostat to pilot or vacation mode", "order": 1 },
+      { "id": 2, "text": "Connect garden hose to drain valve and route to floor drain", "order": 2 },
+      { "id": 3, "text": "Close cold water inlet valve and open drain valve", "order": 3 },
+      { "id": 4, "text": "Open a nearby hot water faucet to break vacuum and allow draining", "order": 4 },
+      { "id": 5, "text": "After draining several gallons, briefly open cold inlet to stir sediment", "order": 5 },
+      { "id": 6, "text": "Close drain valve, remove hose, close the hot faucet", "order": 6 },
+      { "id": 7, "text": "Open cold water inlet and refill tank completely (water runs clear from faucet)", "order": 7 },
+      { "id": 8, "text": "Test T&P relief valve by lifting the lever briefly and verify it reseats", "order": 8 },
+      { "id": 9, "text": "Restore gas supply, relight if needed, and verify proper operation", "order": 9 }
+    ],
+    "explanation": "Annual flushing removes sediment that reduces efficiency and causes premature tank failure. Opening a hot faucet breaks the vacuum so water actually flows out of the drain valve. Always test the T&P valve during maintenance — it is the primary safety device per IPC 504.6.",
+    "xpReward": 75
+  },
+  {
+    "id": "seq-plmb-012",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Backflow Preventer Testing",
+    "description": "Order the steps for performing an annual test on a Reduced Pressure Zone (RPZ) backflow preventer.",
+    "steps": [
+      { "id": 1, "text": "Verify the RPZ is accessible, identify test cocks, and record serial number", "order": 1 },
+      { "id": 2, "text": "Install the differential pressure test gauge kit on the test cocks", "order": 2 },
+      { "id": 3, "text": "Close the downstream shutoff valve to test the second check valve", "order": 3 },
+      { "id": 4, "text": "Record the pressure differential across the second check valve (minimum 1 PSI)", "order": 4 },
+      { "id": 5, "text": "Test the relief valve by creating a condition where it must open", "order": 5 },
+      { "id": 6, "text": "Record the relief valve opening point (must open before back pressure equals supply)", "order": 6 },
+      { "id": 7, "text": "Test the first check valve differential pressure (minimum 1 PSI)", "order": 7 },
+      { "id": 8, "text": "Remove test equipment, restore valves to normal operation", "order": 8 },
+      { "id": 9, "text": "Complete test report and submit to water purveyor within required timeframe", "order": 9 }
+    ],
+    "explanation": "RPZ testing must be performed by a certified backflow tester using calibrated equipment. Testing the second check first is critical — if you test the first check first, you cannot verify the second independently. Results must be reported to the water utility per IPC 312.10 and ASSE 5110.",
+    "xpReward": 85
+  },
+  {
+    "id": "seq-plmb-013",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Union Certification: Backflow Tester Certification",
+    "description": "Order the steps for performing a field test on an RPZ backflow preventer as taught for ASSE 5110 certification at the UA union hall.",
+    "steps": [
+      { "id": 1, "text": "Close the downstream shutoff valve to isolate the assembly", "order": 1 },
+      { "id": 2, "text": "Install differential pressure test gauge kit on the test cocks", "order": 2 },
+      { "id": 3, "text": "Test check valve #2 by reading the differential pressure across it (minimum 1 PSI)", "order": 3 },
+      { "id": 4, "text": "Test the differential pressure relief valve by verifying it opens before back pressure equals supply pressure", "order": 4 },
+      { "id": 5, "text": "Test check valve #1 by reading the differential pressure across it (minimum 1 PSI)", "order": 5 },
+      { "id": 6, "text": "Record all pressure readings on the certified test form", "order": 6 },
+      { "id": 7, "text": "Open the downstream shutoff valve and restore normal flow", "order": 7 },
+      { "id": 8, "text": "Complete the test report and submit to the water purveyor within the required timeframe", "order": 8 }
+    ],
+    "explanation": "The ASSE 5110 backflow tester certification is a key UA credential. The test sequence is critical: check valve #2 must be tested first because testing #1 first would equalize pressure and make it impossible to independently verify #2. The relief valve must open before backpressure can reach the supply side. All readings are recorded and submitted to the water purveyor — this protects the public water supply from contamination.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-plmb-014",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Union Training: Cast Iron Soil Pipe Assembly",
+    "description": "Order the steps for joining traditional cast iron hub-and-spigot soil pipe as taught at the UA union hall.",
+    "steps": [
+      { "id": 1, "text": "Measure and mark the cast iron pipe to the required length", "order": 1 },
+      { "id": 2, "text": "Cut the pipe using a snap cutter at the marked location", "order": 2 },
+      { "id": 3, "text": "Dry-fit the spigot end into the hub to verify proper alignment and gap", "order": 3 },
+      { "id": 4, "text": "Pack oakum into the hub around the spigot end using a yarning iron", "order": 4 },
+      { "id": 5, "text": "Pour molten lead into the hub joint to fill the remaining depth", "order": 5 },
+      { "id": 6, "text": "Caulk the lead tight against the hub and spigot using a caulking iron", "order": 6 },
+      { "id": 7, "text": "Test the joint for leaks under water pressure", "order": 7 },
+      { "id": 8, "text": "Secure the pipe run with proper hangers at the required intervals", "order": 8 }
+    ],
+    "explanation": "Cast iron hub-and-spigot joining with molten lead is a traditional plumbing skill still taught at UA halls. Oakum is packed first to create a base seal and prevent lead from entering the pipe bore. Molten lead is poured (never in the rain — moisture causes dangerous splatter) and then caulked for a watertight joint. While no-hub couplings have largely replaced leaded joints, understanding this technique is part of UA journeyman knowledge and is still encountered in repair work on older buildings.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-plmb-015",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Hydronic Expansion Tank Installation",
+    "description": "Order the steps for sizing and installing a bladder-type expansion tank on a closed-loop hydronic system per Spec 23 21 13.",
+    "steps": [
+      { "id": 1, "text": "Calculate the total system water volume including piping, coils, and equipment", "order": 1 },
+      { "id": 2, "text": "Size the expansion tank based on system volume, temperature range, and fill pressure", "order": 2 },
+      { "id": 3, "text": "Mount the expansion tank vertically with an isolation valve at the connection point", "order": 3 },
+      { "id": 4, "text": "Connect the tank to the system return piping near the pump suction (point of no pressure change)", "order": 4 },
+      { "id": 5, "text": "Pre-charge the bladder with dry nitrogen to match the system cold fill pressure", "order": 5 },
+      { "id": 6, "text": "Verify the tank pressure gauge reads correctly and matches the pre-charge pressure", "order": 6 },
+      { "id": 7, "text": "Test the system pressure relief valve to ensure it opens at the rated set pressure", "order": 7 },
+      { "id": 8, "text": "Document tank size, pre-charge pressure, system fill pressure, and relief valve set pressure", "order": 8 }
+    ],
+    "explanation": "Expansion tank installation per Spec 23 21 13 requires proper sizing before selection — an undersized tank causes the relief valve to open during heating. Location at the pump suction (point of no pressure change) is critical per ASHRAE: this ensures pump pressure adds to system pressure everywhere, preventing cavitation and negative pressure zones. Pre-charging with dry nitrogen (not air, which contains moisture) to the cold fill pressure prevents the bladder from being compressed before the system heats up.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-plmb-016",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Copper Pipe Brazing (2.5\" and Larger)",
+    "description": "Order the steps for brazing a large-diameter copper pipe joint (2.5\" and above) using sil-fos brazing alloy per ANSI B16.22.",
+    "steps": [
+      { "id": 1, "text": "Clean the pipe end and fitting socket to bright copper using emery cloth or abrasive pad", "order": 1 },
+      { "id": 2, "text": "Apply brazing flux evenly to the pipe end (not inside the fitting socket)", "order": 2 },
+      { "id": 3, "text": "Assemble the joint ensuring full insertion depth per ANSI B16.22 fitting specifications", "order": 3 },
+      { "id": 4, "text": "Apply heat evenly around the entire joint using an oxy-acetylene torch with a rosebud tip", "order": 4 },
+      { "id": 5, "text": "Feed sil-fos brazing alloy into the joint when the flux becomes clear and liquid", "order": 5 },
+      { "id": 6, "text": "Allow the joint to cool naturally to room temperature — never quench with water", "order": 6 },
+      { "id": 7, "text": "Clean flux residue from the joint exterior with a damp cloth", "order": 7 },
+      { "id": 8, "text": "Pressure test the completed joint at 1.5 times design working pressure", "order": 8 }
+    ],
+    "explanation": "Brazing large-diameter copper per ANSI B16.22 requires even heat distribution — on 2.5\" and larger joints, uneven heating causes the alloy to flow to the hot side and leave voids on the cold side. A rosebud tip provides the wider flame pattern needed. Sil-fos (silver-phosphorus-copper) alloy is self-fluxing on copper-to-copper joints, but flux is still applied for better wetting. Never quench — thermal shock on large joints causes micro-cracks that fail under pressure cycling.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-plmb-017",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Automatic Balancing Valve Installation",
+    "description": "Order the steps for installing a pressure-independent automatic balancing valve on a hydronic branch circuit per Spec 23 21 13.",
+    "steps": [
+      { "id": 1, "text": "Verify the pipe size and look up the design flow rate (GPM) from the mechanical drawings", "order": 1 },
+      { "id": 2, "text": "Install the valve in the correct flow direction as indicated by the arrow on the valve body", "order": 2 },
+      { "id": 3, "text": "Install pressure/temperature test ports upstream and downstream of the valve", "order": 3 },
+      { "id": 4, "text": "Set the design flow rate on the valve cartridge using the manufacturer's adjustment tool", "order": 4 },
+      { "id": 5, "text": "Start the system and verify the actual flow reading matches the design GPM", "order": 5 },
+      { "id": 6, "text": "Lock the valve setting with the tamper-proof locking mechanism", "order": 6 },
+      { "id": 7, "text": "Label the valve with the design GPM, circuit served, and date of commissioning", "order": 7 },
+      { "id": 8, "text": "Document the valve setting, measured flow, and differential pressure on the commissioning report", "order": 8 }
+    ],
+    "explanation": "Automatic balancing valves per Spec 23 21 13 maintain a constant flow rate regardless of system pressure fluctuations — unlike manual balancing valves which drift as other zones open and close. Installing in the correct flow direction is critical; reverse installation causes the valve to shut. P/T test ports allow future flow verification without removing the valve. Locking and labeling prevent unauthorized adjustment that would unbalance the system.",
+    "xpReward": 60
+  }
+]

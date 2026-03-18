@@ -24,17 +24,17 @@ export default function Header() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+          <Link href="/play" className="text-sm font-semibold text-accent hover:text-accent/80 transition-colors">
+            Play Now
+          </Link>
+          <a href="/#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
             Features
           </a>
-          <a href="#trades" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+          <a href="/#trades" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
             Trades
           </a>
-          <a href="#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+          <a href="/#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
             Pricing
-          </a>
-          <a href="#enterprise" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
-            Enterprise
           </a>
           <a
             href="#download"
@@ -60,10 +60,10 @@ export default function Header() {
       {menuOpen && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-4 px-6 py-6">
-            <a href="#features" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Features</a>
-            <a href="#trades" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Trades</a>
-            <a href="#pricing" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Pricing</a>
-            <a href="#enterprise" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Enterprise</a>
+            <Link href="/play" onClick={() => setMenuOpen(false)} className="font-semibold text-accent">Play Now</Link>
+            <a href="/#features" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Features</a>
+            <a href="/#trades" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Trades</a>
+            <a href="/#pricing" onClick={() => setMenuOpen(false)} className="text-text-secondary hover:text-text-primary">Pricing</a>
             <a
               href="#download"
               onClick={() => setMenuOpen(false)}

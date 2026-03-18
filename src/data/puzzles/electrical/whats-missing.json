@@ -1,0 +1,467 @@
+[
+  {
+    "id": "wm-elec-001",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Residential Panel Installation",
+    "description": "A 200A residential electrical panel has been installed in the garage. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "200A main breaker panel mounted on wall",
+      "Service entrance conductors terminated",
+      "Branch circuit breakers installed",
+      "Neutral bus bar with neutral conductors",
+      "Panel cover with directory card"
+    ],
+    "missingItems": [
+      {
+        "name": "Panel circuit directory (completed and legible)",
+        "explanation": "Every circuit must be legibly identified as to its purpose. A blank or illegible directory card fails inspection and makes troubleshooting dangerous. Required by NEC 408.4."
+      },
+      {
+        "name": "Working space clearance of 36 inches maintained",
+        "explanation": "A minimum of 36 inches of clear working space must be maintained in front of the panel, 30 inches wide and from floor to a height of 6.5 feet. This is a safety requirement for electricians. Required by NEC 110.26(A)."
+      }
+    ],
+    "distractors": [
+      "Surge protective device (SPD)",
+      "Whole-house generator interlock",
+      "Sub-panel bonding screw",
+      "Copper bus bar upgrade"
+    ],
+    "explanation": "Residential panels require a completed circuit directory for safety and a clear working space for maintenance access. These are the two most commonly cited deficiencies during home inspections.",
+    "xpReward": 40
+  },
+  {
+    "id": "wm-elec-002",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Receptacle Rough-In",
+    "description": "A bedroom receptacle circuit has been roughed in during new construction. Identify what's missing from the installation.",
+    "presentItems": [
+      "14/2 NM-B cable run from panel",
+      "Single-gang plastic boxes nailed to studs",
+      "Cables stapled within 12 inches of each box",
+      "Cables supported every 4.5 feet along run",
+      "Ground wires connected in each box"
+    ],
+    "missingItems": [
+      {
+        "name": "AFCI protection at the panel or first outlet",
+        "explanation": "All 120V, 15A and 20A branch circuits supplying outlets in dwelling unit bedrooms require arc-fault circuit interrupter protection. This can be a breaker-type or outlet-type AFCI. Required by NEC 210.12(A)."
+      },
+      {
+        "name": "Receptacle within 6 feet of each doorway",
+        "explanation": "Receptacles must be placed so that no point along the floor line of any wall space is more than 6 feet from a receptacle outlet. A doorway resets the measurement. Required by NEC 210.52(A)."
+      }
+    ],
+    "distractors": [
+      "Dedicated circuit for each receptacle",
+      "Metal boxes instead of plastic",
+      "Conduit protection for NM cable"
+    ],
+    "explanation": "Bedroom circuits require AFCI protection to detect dangerous arcing faults in wiring and cords. Proper receptacle spacing eliminates the need for extension cords, which are a leading cause of electrical fires.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-elec-003",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Service Entrance Installation",
+    "description": "A residential 200A overhead service entrance has been installed. Check for missing components.",
+    "presentItems": [
+      "Weather head (service head) at top of mast",
+      "Service entrance cable to meter socket",
+      "Meter socket mounted on exterior wall",
+      "Service entrance conductors to main panel",
+      "200A main breaker panel inside"
+    ],
+    "missingItems": [
+      {
+        "name": "Grounding electrode system (ground rods)",
+        "explanation": "The service entrance must be connected to a grounding electrode system. Typically two ground rods minimum 8 feet long, driven at least 6 feet apart, or a concrete-encased electrode (Ufer ground). Required by NEC 250.50 and 250.53."
+      },
+      {
+        "name": "Grounding electrode conductor from panel to ground rods",
+        "explanation": "A properly sized grounding electrode conductor (GEC) must connect the neutral bus in the main panel to the grounding electrode system. For 200A service, a minimum #4 AWG copper GEC is required. Required by NEC 250.66, Table 250.66."
+      }
+    ],
+    "distractors": [
+      "Whole-house surge protector",
+      "Load management system",
+      "Utility disconnect switch"
+    ],
+    "explanation": "The grounding electrode system is the foundation of electrical safety. It provides a path for lightning and fault currents to dissipate into the earth. Without it, the entire electrical system is ungrounded and dangerous.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-elec-004",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Commercial Lighting Installation",
+    "description": "Fluorescent troffer lighting has been installed in a new commercial office space. Identify what's missing.",
+    "presentItems": [
+      "2x4 LED troffer fixtures in drop ceiling",
+      "277V branch circuits from lighting panel",
+      "Occupancy sensors in each room",
+      "Emergency battery packs in select fixtures",
+      "All fixtures properly supported from structure above"
+    ],
+    "missingItems": [
+      {
+        "name": "Daylight harvesting controls near windows",
+        "explanation": "Energy codes (IECC/ASHRAE 90.1) require daylight-responsive controls for general lighting in primary sidelit zones (within 15 feet of windows). These controls dim artificial lights when natural daylight is sufficient. Required by ASHRAE 90.1-2019 Section 9.4.1.1."
+      },
+      {
+        "name": "Exit signs at required egress points",
+        "explanation": "Illuminated exit signs are required at all exits and where the path of egress is not immediately apparent. They must be connected to the emergency circuit and have 90-minute battery backup. Required by NEC 700.16 and IBC 1013."
+      }
+    ],
+    "distractors": [
+      "Dimmer switches at every fixture",
+      "Dedicated neutral for each lighting circuit",
+      "Photocell on interior fixtures",
+      "Lightning protection for fixtures"
+    ],
+    "explanation": "Commercial lighting requires energy code compliance with daylight harvesting controls and life-safety exit illumination. Both are code requirements that are often overlooked during installation.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-elec-005",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Motor Control Center",
+    "description": "A motor control center (MCC) has been installed in an industrial facility mechanical room. Check for missing components.",
+    "presentItems": [
+      "MCC lineup with vertical bus rated at 600A",
+      "Individual motor starter buckets with overloads",
+      "Disconnect switches in each bucket",
+      "Control power transformer for 120V control circuit",
+      "Phase and ground bus connections"
+    ],
+    "missingItems": [
+      {
+        "name": "Arc-flash hazard labels on each section",
+        "explanation": "NFPA 70E and NEC 110.16 require arc-flash warning labels on equipment likely to require examination, adjustment, servicing, or maintenance while energized. Labels must include incident energy level or PPE category. Required by NEC 110.16 and NFPA 70E 130.5."
+      },
+      {
+        "name": "Surge protective device (SPD) at MCC",
+        "explanation": "The NEC requires a surge protective device (Type 1 or Type 2 SPD) at the service equipment and has expanded this requirement. For motor control centers fed from the service, surge protection prevents damage to sensitive motor starters and VFDs. Required by NEC 242.24."
+      },
+      {
+        "name": "Equipment grounding conductor termination bar",
+        "explanation": "Each motor circuit requires an equipment grounding conductor properly terminated at the MCC grounding bus. The MCC must have an adequately sized grounding bus bonded to the enclosure. Required by NEC 250.118 and 430.245."
+      }
+    ],
+    "distractors": [
+      "Power factor correction capacitors",
+      "Harmonic filter",
+      "Remote monitoring system",
+      "Redundant feed switch"
+    ],
+    "explanation": "Motor control centers are the hub of industrial electrical systems. Arc-flash labeling, surge protection, and proper grounding are all NEC requirements that protect both equipment and electricians working on the MCC.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-elec-006",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Generator Transfer Switch Installation",
+    "description": "A standby generator with automatic transfer switch has been installed at a commercial building. Identify missing components.",
+    "presentItems": [
+      "50kW natural gas standby generator on concrete pad",
+      "Automatic transfer switch (ATS) in main electrical room",
+      "Generator output conductors to ATS",
+      "ATS output to emergency panel",
+      "Weekly exercise timer programmed"
+    ],
+    "missingItems": [
+      {
+        "name": "Remote annunciator panel at a constantly attended location",
+        "explanation": "For legally required standby systems, a remote annunciator panel must be installed at a location readily observed by personnel on duty. It must indicate generator status, fault conditions, and transfer switch position. Required by NEC 701.26."
+      },
+      {
+        "name": "Battery charger and block heater for generator",
+        "explanation": "Standby generators must have a battery charger to maintain starting batteries and a block heater to keep the engine warm for reliable starting. Without these, the generator may fail to start when needed most. Required by NFPA 110 Section 5.6."
+      }
+    ],
+    "distractors": [
+      "Sound-attenuating enclosure",
+      "Fuel polishing system",
+      "Paralleling switchgear",
+      "Load bank for testing"
+    ],
+    "explanation": "Emergency and standby generator systems require remote monitoring and engine maintenance accessories to ensure reliability. When the power goes out, the generator must start within 10 seconds every time.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-elec-007",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "EV Charger Installation",
+    "description": "A Level 2 (240V, 50A) electric vehicle charger has been installed in a residential garage. Check for missing components.",
+    "presentItems": [
+      "Level 2 EVSE unit mounted on wall",
+      "50A double-pole breaker in panel",
+      "6 AWG copper conductors in conduit to charger",
+      "NEMA 14-50 receptacle or hardwired connection"
+    ],
+    "missingItems": [
+      {
+        "name": "GFCI protection for the EV charging circuit",
+        "explanation": "Receptacles installed in garages require GFCI protection. For EV charging equipment, the EVSE typically has built-in GFCI, but if using a receptacle, it must be GFCI protected. Required by NEC 210.8(A)(2) and 625.54."
+      },
+      {
+        "name": "Ventilation consideration for battery charging",
+        "explanation": "While modern EVs have sealed battery systems, the NEC still requires that the electrical installation comply with manufacturer requirements. Adequate ventilation must be verified per the EVSE listing and installation instructions. Required by NEC 625.52."
+      }
+    ],
+    "distractors": [
+      "Dedicated sub-panel for EV charger",
+      "Smart load management device",
+      "Battery storage system"
+    ],
+    "explanation": "EV charger installations combine standard electrical requirements (GFCI in garages) with specific NEC Article 625 requirements. As EV adoption grows, IBEW electricians must master these installations.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-elec-008",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Fire Alarm System",
+    "description": "A new fire alarm system has been installed in a commercial building. Review the installation for missing components.",
+    "presentItems": [
+      "Fire alarm control panel (FACP) in lobby",
+      "Smoke detectors in corridors and rooms",
+      "Manual pull stations at exits",
+      "Horn/strobe notification appliances",
+      "Fire alarm wiring in red conduit"
+    ],
+    "missingItems": [
+      {
+        "name": "Duct smoke detectors at air handling units over 2,000 CFM",
+        "explanation": "Duct smoke detectors are required in the supply duct of air handling systems over 2,000 CFM. They shut down the HVAC system upon detecting smoke to prevent smoke spread throughout the building. Required by NFPA 72 and IMC 606.4."
+      },
+      {
+        "name": "Secondary power supply (batteries) at the FACP",
+        "explanation": "The fire alarm control panel must have a secondary power supply (standby batteries) capable of operating the system for 24 hours in standby mode plus 5 minutes of alarm. Required by NFPA 72 Section 10.6.7."
+      }
+    ],
+    "distractors": [
+      "Voice evacuation system",
+      "Elevator recall interface",
+      "Firefighter phone system",
+      "Mass notification integration"
+    ],
+    "explanation": "Fire alarm systems are life-safety installations that must function during power outages and HVAC emergencies. Duct smoke detectors and backup batteries are critical code requirements.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-elec-009",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Emergency Lighting Installation",
+    "description": "Emergency lighting has been installed in a commercial building corridor. Identify what's missing.",
+    "presentItems": [
+      "Emergency light units with battery packs in corridors",
+      "Illuminated exit signs at exit doors",
+      "Emergency lighting on dedicated emergency circuit",
+      "Exit signs connected to generator backup"
+    ],
+    "missingItems": [
+      {
+        "name": "90-minute battery backup for emergency lights",
+        "explanation": "Emergency lighting must provide illumination for at least 90 minutes after a loss of normal power. Battery units must be tested monthly (30-second test) and annually (90-minute test). Required by NEC 700.12 and IBC 1008.3."
+      },
+      {
+        "name": "Minimum 1 foot-candle illumination along egress path",
+        "explanation": "Emergency lighting must provide a minimum of 1 foot-candle of illumination at the floor level along the path of egress. Illumination must be measured at the darkest point along the route. Required by IBC 1008.3.4."
+      }
+    ],
+    "distractors": [
+      "Photoluminescent exit path markings",
+      "Emergency lighting in storage rooms",
+      "Addressable emergency lighting controls"
+    ],
+    "explanation": "Emergency lighting is a life-safety system that must provide adequate illumination for safe building evacuation. Duration, illumination levels, and regular testing are all code requirements.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-elec-010",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Transformer Installation",
+    "description": "A 75 kVA dry-type transformer has been installed in a commercial electrical room to step down 480V to 208/120V. Check for missing components.",
+    "presentItems": [
+      "75 kVA dry-type transformer mounted on wall brackets",
+      "480V primary conductors in conduit",
+      "208/120V secondary conductors to panelboard",
+      "Primary overcurrent protection sized per NEC 450.3",
+      "Transformer grounded per NEC 250.30"
+    ],
+    "missingItems": [
+      {
+        "name": "Secondary overcurrent protection",
+        "explanation": "When the primary overcurrent device is sized larger than 125% of the rated primary current (common with standard breaker sizes), secondary overcurrent protection is required at no more than 125% of the rated secondary current. Required by NEC 450.3(B)."
+      },
+      {
+        "name": "Separately derived system grounding electrode conductor",
+        "explanation": "A separately derived system (transformer secondary) requires its own grounding electrode conductor connected to the nearest grounding electrode. The neutral must be bonded to ground at the transformer or first disconnect only. Required by NEC 250.30(A)."
+      }
+    ],
+    "distractors": [
+      "Power factor correction capacitor",
+      "Harmonic mitigating transformer",
+      "Thermal overload relay",
+      "Oil containment pan"
+    ],
+    "explanation": "Transformer installations create separately derived systems that require independent grounding and proper overcurrent protection on both primary and secondary sides per NEC 450 and 250.30.",
+    "xpReward": 70
+  },
+  {
+    "id": "wm-elec-011",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Data/Communications Room",
+    "description": "An electrical and data communications room has been built out in a new commercial building. Identify what's missing.",
+    "presentItems": [
+      "Dedicated 20A circuits for equipment",
+      "Overhead cable tray for data cables",
+      "Equipment racks bolted to floor",
+      "HVAC cooling for equipment heat load",
+      "UPS system for critical equipment",
+      "Fire suppression system installed"
+    ],
+    "missingItems": [
+      {
+        "name": "Dedicated panelboard with isolated ground bus",
+        "explanation": "Data rooms require clean power with isolated grounding to prevent electromagnetic interference. A dedicated panelboard with an insulated equipment grounding conductor bus reduces noise on sensitive electronic equipment. Required by NEC 250.146(D) and TIA-607."
+      },
+      {
+        "name": "Telecommunications bonding backbone (TBB)",
+        "explanation": "A telecommunications bonding backbone must connect all telecommunications grounding busbars to the main grounding busbar. This equalizes potential across all data equipment and prevents ground loops. Required by TIA-607-C and NEC 250.94."
+      },
+      {
+        "name": "Electrical protection for power over ethernet (PoE) circuits",
+        "explanation": "PoE circuits delivering power over data cables must comply with NEC Article 725 and 840 for proper conductor ampacity, bundle derating, and fire resistance of cables in plenums and risers. Required by NEC 725.144 and 840.160."
+      }
+    ],
+    "distractors": [
+      "Faraday cage shielding",
+      "Raised access floor system",
+      "Redundant utility feeds"
+    ],
+    "explanation": "Data/communications rooms require specialized electrical installations including isolated grounding, telecommunications bonding, and proper PoE circuit considerations. These are increasingly critical as buildings become more connected.",
+    "xpReward": 85
+  },
+  {
+    "id": "wm-elec-012",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Solar PV System Installation",
+    "description": "A 10 kW rooftop solar photovoltaic system has been installed on a commercial building. Check for missing components.",
+    "presentItems": [
+      "PV modules mounted on racking system",
+      "String inverter mounted near main panel",
+      "DC conductors in metallic conduit on roof",
+      "AC disconnect at inverter output",
+      "PV system connected to main panel with backfeed breaker"
+    ],
+    "missingItems": [
+      {
+        "name": "Rapid shutdown system",
+        "explanation": "NEC 690.12 requires a rapid shutdown system that reduces PV system voltage to 80V or less within 30 seconds outside the array boundary when initiated. This protects firefighters working on the roof from DC shock hazards. Required by NEC 690.12."
+      },
+      {
+        "name": "DC arc-fault circuit protection",
+        "explanation": "PV systems operating at 80V DC or greater must have DC arc-fault protection to detect and interrupt dangerous arcing in the DC wiring. DC arcs burn hotter and longer than AC arcs and are a significant fire risk on rooftops. Required by NEC 690.11."
+      },
+      {
+        "name": "PV system warning labels and signage",
+        "explanation": "Multiple warning labels are required: at the main service disconnect (indicating PV power source), at all disconnects, at the inverter, and on the roof near the array. Labels must indicate maximum voltage and the presence of dual power sources. Required by NEC 690.56 and 705.10."
+      }
+    ],
+    "distractors": [
+      "Battery energy storage system",
+      "Production monitoring system",
+      "Anti-islanding relay"
+    ],
+    "explanation": "Solar PV installations have specific NEC Article 690 requirements for safety. Rapid shutdown protects firefighters, arc-fault protection prevents rooftop fires, and warning labels alert utility workers and first responders to the presence of dual power sources.",
+    "xpReward": 90
+  },
+  {
+    "id": "wm-elec-013",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "VFD Bypass Installation",
+    "description": "A variable frequency drive has been installed on an HVAC supply fan motor. Review the installation for missing components per UCSB specifications.",
+    "presentItems": [
+      "VFD properly sized for motor horsepower",
+      "Input line reactor for harmonic mitigation",
+      "Shielded VFD-rated cable to motor",
+      "VFD programmed with motor nameplate data",
+      "Control wiring from BAS to VFD"
+    ],
+    "missingItems": [
+      {
+        "name": "VFD bypass disconnect switch",
+        "explanation": "UCSB specifications require a bypass disconnect that allows the motor to run directly across the line if the VFD fails. For critical HVAC equipment, the bypass ensures continued building ventilation during VFD maintenance or failure. The bypass must include a manual motor starter with overload protection."
+      },
+      {
+        "name": "Earth fault protection in bypass circuit",
+        "explanation": "The bypass circuit must include ground fault (earth fault) protection to detect insulation failure in the motor or cabling when operating in bypass mode. Without VFD monitoring, the bypass circuit relies on this dedicated protection to prevent equipment damage and electrical hazards."
+      }
+    ],
+    "distractors": [
+      "Harmonic trap filter",
+      "Power factor correction capacitor bank",
+      "Motor space heater circuit"
+    ],
+    "explanation": "VFD bypass arrangements are required by UCSB specs for critical HVAC equipment to maintain ventilation during drive failures. The bypass must include its own protective devices since the VFD's built-in protections are not active in bypass mode.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-elec-014",
+    "type": "whats-missing",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "VFD Power Quality Compliance",
+    "description": "A large VFD installation on a chilled water pump has been commissioned. Check for missing power quality components per UCSB and IEEE 519 requirements.",
+    "presentItems": [
+      "18-pulse VFD with phase-shifting transformer",
+      "Output dV/dt filter for motor protection",
+      "Shielded cable with grounding at both ends",
+      "VFD configured for sensorless vector control",
+      "BACnet communication module installed"
+    ],
+    "missingItems": [
+      {
+        "name": "Power quality meter for THD monitoring at point of common coupling",
+        "explanation": "IEEE 519-2022 and UCSB specifications require total harmonic distortion to remain below 3% at the point of common coupling. A permanently installed power quality meter is needed to verify compliance and monitor ongoing harmonic levels. Without it, THD violations go undetected and can damage other equipment on the electrical bus."
+      },
+      {
+        "name": "Active harmonic filter or additional harmonic mitigation",
+        "explanation": "UCSB specifications mandate IEEE 519 compliance at 3% THD maximum. Even with an 18-pulse drive, system conditions may push THD above the limit. An active harmonic filter provides real-time harmonic cancellation to ensure continuous compliance under all operating conditions."
+      }
+    ],
+    "distractors": [
+      "Isolation transformer",
+      "Automatic transfer switch",
+      "Motor bearing insulation kit"
+    ],
+    "explanation": "UCSB specifications enforce strict IEEE 519 harmonic compliance at 3% THD. Large VFD installations require ongoing power quality monitoring and may need active harmonic filtering beyond the base drive configuration to maintain compliance under varying load conditions.",
+    "xpReward": 50
+  }
+]

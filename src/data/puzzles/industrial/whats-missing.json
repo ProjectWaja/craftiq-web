@@ -1,0 +1,294 @@
+[
+  {
+    "id": "wm-in-001",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Process Piping Installation",
+    "description": "A new ASME B31.3 process piping system has been fabricated and installed in a chemical plant. Review the installation and identify what critical components are missing before the system can be placed in service.",
+    "presentItems": [
+      "Schedule 40 stainless steel pipe with butt-weld fittings",
+      "Flanged connections with spiral-wound gaskets",
+      "Pipe supports at calculated intervals",
+      "Isolation gate valves at equipment connections",
+      "Pipe identification labels per ASME A13.1"
+    ],
+    "missingItems": [
+      {
+        "name": "Pressure relief valve on closed system between two block valves",
+        "explanation": "ASME B31.3 Section 301.2.2 requires overpressure protection for any piping section that can be isolated (blocked in) and is subject to thermal expansion or pressure buildup. Without a PRV or thermal relief valve, liquid trapped between two closed valves can generate hydrostatic pressure exceeding the pipe design pressure as the liquid warms, causing a catastrophic rupture."
+      },
+      {
+        "name": "Hydrostatic test records and documentation",
+        "explanation": "ASME B31.3 Section 345 requires all process piping to pass a hydrostatic pressure test at 1.5 times the design pressure before being placed in service. Test documentation including test pressure, hold duration, and inspector sign-off must be completed and filed. Without a successful pressure test, the piping cannot be commissioned."
+      },
+      {
+        "name": "Weld examination records (radiographic or ultrasonic testing)",
+        "explanation": "ASME B31.3 Chapter VI requires nondestructive examination (NDE) of welds based on the fluid service category. Normal fluid service requires spot examination, while Category M (lethal) and high-pressure service require 100% radiographic or ultrasonic examination. Weld NDE records must be completed before pressure testing."
+      }
+    ],
+    "distractors": [
+      "Expansion bellows at every direction change",
+      "Double-walled piping throughout the system",
+      "Cathodic protection system for above-ground piping",
+      "Flow orifice plates at each branch connection"
+    ],
+    "explanation": "ASME B31.3 process piping commissioning requires overpressure protection for any section that can be trapped, completed weld examination records per the specified NDE requirements, and successful hydrostatic testing with documented results. These are mandatory code requirements that must be satisfied before placing the system in hazardous fluid service.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-in-002",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Hazardous Area Electrical Setup",
+    "description": "A Class I, Division 1 electrical installation has been completed at a petrochemical tank farm. Review the installation and identify what is missing from the hazardous area electrical system.",
+    "presentItems": [
+      "Explosionproof motor for pump drive",
+      "Explosionproof junction boxes and fittings",
+      "Rigid metal conduit throughout classified area",
+      "Intrinsically safe instrument circuits in blue conduit",
+      "Equipment grounding conductors per NEC 250"
+    ],
+    "missingItems": [
+      {
+        "name": "Conduit sealing fittings at classified/unclassified area boundaries",
+        "explanation": "NEC 501.15(A)(4) requires conduit seals within 18 inches of the boundary where conduit passes from a Class I, Division 1 area into an unclassified area. Seals prevent flammable gases or vapors from migrating through the conduit system into non-hazardous spaces where standard electrical equipment could ignite them. The seal must be accessible and filled with an approved sealing compound."
+      },
+      {
+        "name": "Drain seals at low points in conduit runs",
+        "explanation": "NEC 501.15(F) requires drain seals at low points in conduit systems in Class I areas where condensation or process liquid may accumulate. Trapped liquids can compromise the integrity of conduit seals, degrade conductor insulation, and create conductive paths that bypass the explosion containment design of the raceway system."
+      }
+    ],
+    "distractors": [
+      "Fiber optic cabling instead of copper conductors",
+      "Purged and pressurized Type X enclosures",
+      "Redundant grounding electrode system",
+      "Armored cable (MC-HL) throughout classified area"
+    ],
+    "explanation": "Hazardous area electrical installations under NEC Article 501 require conduit seals at every boundary between classified and unclassified areas to prevent gas migration, and drain seals at low points to prevent liquid accumulation that could compromise the system's explosion-containment integrity. These are often overlooked but are mandatory code requirements.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-in-003",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Exhaust / LEV System",
+    "description": "A local exhaust ventilation (LEV) system has been installed for a grinding and polishing operation generating metallic dust. Review the installation and identify missing components.",
+    "presentItems": [
+      "Capture hoods at each grinding station with adjustable flanges",
+      "Galvanized steel ductwork sized for design velocities",
+      "Centrifugal exhaust fan with belt drive",
+      "Dust collector (baghouse) with automatic pulse-jet cleaning",
+      "Exhaust stack with weather cap above roofline"
+    ],
+    "missingItems": [
+      {
+        "name": "Explosion venting panels on the dust collector",
+        "explanation": "Metallic dust (aluminum, magnesium, titanium, iron) is combustible and explosive. NFPA 68 (Standard on Explosion Protection by Deflagration Venting) requires explosion relief venting on dust collectors handling combustible dust. Vent panels must be sized to relieve deflagration pressure before the collector structure fails, and must discharge to a safe area away from personnel."
+      },
+      {
+        "name": "Spark detection and extinguishing system in ductwork",
+        "explanation": "Grinding operations generate hot sparks that can travel through ductwork to the dust collector, igniting accumulated dust. NFPA 652 and NFPA 69 require spark detection systems with automatic extinguishing (water spray or chemical suppression) in the duct upstream of the collector to intercept sparks before they reach the combustible dust concentration inside the collector."
+      },
+      {
+        "name": "Static grounding bonding on all ductwork sections",
+        "explanation": "Dust-laden air flowing through ductwork generates static electricity through tribocharging. Without continuous bonding and grounding of all duct sections, flanges, and the collector body, static discharge can ignite combustible dust. NFPA 77 (Recommended Practice on Static Electricity) requires all components to be bonded to a common ground."
+      }
+    ],
+    "distractors": [
+      "HEPA filter downstream of baghouse",
+      "Variable frequency drive on exhaust fan",
+      "Carbon monoxide detector in ductwork",
+      "Acoustic silencer at fan discharge"
+    ],
+    "explanation": "Industrial LEV systems handling combustible metallic dust must include explosion venting on the collector, spark detection/suppression in the ductwork, and complete static bonding/grounding. These three protection layers address the combustible dust triangle: ignition source control (spark detection, static grounding) and explosion mitigation (venting). NFPA 652 requires a dust hazard analysis (DHA) for all facilities handling combustible dust.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-in-004",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam Boiler Room",
+    "description": "A new industrial steam boiler room with a 200 HP fire-tube boiler has been installed and piped. Review the installation and identify what critical components are missing.",
+    "presentItems": [
+      "200 HP fire-tube boiler with ASME stamp",
+      "Feedwater pump with check valve and shutoff valve",
+      "Steam header with main steam valve",
+      "Boiler blowdown piping to flash tank",
+      "Low-water cutoff control (McDonnell & Miller)"
+    ],
+    "missingItems": [
+      {
+        "name": "Combustion air intake sized for boiler BTU input",
+        "explanation": "NFPA 54 (National Fuel Gas Code) Section 9.3 requires combustion air openings sized to provide adequate air for complete combustion. A 200 HP boiler requires approximately 8,370 CFM of combustion air. Without properly sized combustion air intakes, incomplete combustion produces carbon monoxide, flame instability, and potential furnace explosions from accumulated unburned fuel."
+      },
+      {
+        "name": "Boiler room ventilation for heat dissipation",
+        "explanation": "Boiler rooms generate significant radiant heat and must have ventilation to maintain ambient temperatures below 104°F per OSHA guidelines. ASME CSD-1 (Controls and Safety Devices for Automatically Fired Boilers) and local mechanical codes require ventilation to prevent overheating of controls, operator heat stress, and fire hazard from elevated room temperatures."
+      },
+      {
+        "name": "Second pressure relief valve or adequate total relief capacity",
+        "explanation": "ASME BPVC Section I requires the total pressure relief valve capacity to exceed the maximum boiler steaming capacity. For boilers over 500,000 BTU/hr, two or more relief valves are required per ASME Section I PG-67.2, with the total relieving capacity at least equal to the maximum steaming output. A single undersized PRV cannot safely relieve a full-fire overpressure condition."
+      }
+    ],
+    "distractors": [
+      "Economizer on boiler exhaust stack",
+      "Condensate polishing system",
+      "Backup natural gas/oil dual-fuel burner",
+      "Steam accumulator tank"
+    ],
+    "explanation": "Industrial boiler rooms require properly sized combustion air intakes for safe burner operation, adequate ventilation for heat dissipation and personnel safety, and sufficient pressure relief capacity per ASME Section I. These are fundamental life-safety requirements that prevent carbon monoxide poisoning, overpressure explosions, and heat-related hazards.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-in-005",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air System",
+    "description": "An industrial compressed air system has been installed with a 100 HP rotary screw compressor. Review the installation and identify what components are missing for a complete, code-compliant system.",
+    "presentItems": [
+      "100 HP rotary screw compressor with inlet filter",
+      "Air-cooled aftercooler on compressor discharge",
+      "ASME-stamped receiver tank (400 gallon)",
+      "Distribution piping with isolation valves",
+      "Pressure regulator at each point-of-use station"
+    ],
+    "missingItems": [
+      {
+        "name": "Compressed air dryer (refrigerated or desiccant type)",
+        "explanation": "The aftercooler removes only about 70% of moisture from compressed air. A dedicated air dryer is essential to achieve the required dewpoint for instrument air (typically -40°F dewpoint per ISA-7.0.01) and to prevent moisture-related corrosion in piping, instrument malfunction, and product contamination. Without a dryer, condensation forms throughout the distribution system."
+      },
+      {
+        "name": "Automatic condensate drains on receiver tank and low points",
+        "explanation": "Moisture collected in the receiver tank and at low points in the distribution piping must be automatically drained. Manual drains are frequently neglected, allowing condensate to accumulate and carry over into the air stream. Automatic timer drains or zero-loss demand drains are required at the receiver, aftercooler separator, dryer pre-filter, and all distribution low points."
+      },
+      {
+        "name": "Particulate and coalescing filters downstream of dryer",
+        "explanation": "Compressed air for instrument and process use requires particulate filtration (typically 1 micron or less) and oil aerosol removal (coalescing filter to 0.01 ppm). Without proper filtration, compressor oil carryover and pipe scale contaminate instruments, pneumatic valves, and products. ISO 8573-1 defines air quality classes for various applications."
+      }
+    ],
+    "distractors": [
+      "Nitrogen generator for inerting",
+      "Variable speed drive on compressor motor",
+      "Carbon dioxide removal system",
+      "Ultrasonic leak detection system"
+    ],
+    "explanation": "A complete industrial compressed air system requires air treatment beyond just compression and cooling. Air drying prevents moisture condensation in the distribution system, automatic drains remove collected condensate reliably, and filtration removes particulate and oil aerosols. These components are essential for instrument air quality per ISA-7.0.01 and process air cleanliness per ISO 8573-1.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-in-006",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Chemical Handling Area",
+    "description": "A chemical mixing and handling area has been set up in an industrial facility for batch processing with corrosive and flammable liquids. Review the installation and identify what safety systems are missing.",
+    "presentItems": [
+      "Chemical-resistant epoxy floor coating with integral cove base",
+      "Secondary containment dike sized for 110% of largest container",
+      "Explosion-proof electrical equipment throughout area",
+      "Safety data sheets (SDS) posted at entrance",
+      "PPE storage station with chemical-resistant gloves and goggles"
+    ],
+    "missingItems": [
+      {
+        "name": "Emergency eyewash and safety shower within 10 seconds travel",
+        "explanation": "ANSI Z358.1 requires emergency eyewash stations and drench showers within 10 seconds of unobstructed travel (approximately 55 feet) from any location where employees may be exposed to corrosive chemicals. The units must deliver tepid water (60-100°F) for a minimum of 15 minutes and must be tested weekly. This is also an OSHA 1910.151(c) requirement."
+      },
+      {
+        "name": "Continuous mechanical exhaust ventilation at 1 CFM/sq ft minimum",
+        "explanation": "IFC Section 5003.8.4 requires continuous mechanical ventilation for chemical handling areas at a minimum rate of 1 CFM per square foot of floor area. The system must exhaust directly to the outdoors with no recirculation to prevent vapor accumulation above PEL or LEL thresholds. Makeup air must be provided to prevent negative pressure that reduces exhaust effectiveness."
+      },
+      {
+        "name": "Gas detection system with audible/visible alarm",
+        "explanation": "Areas handling flammable and toxic chemicals must have fixed gas detection systems that monitor vapor concentrations continuously. Detectors must alarm at 10% LEL for flammable vapors and at the OSHA PEL for toxic substances. Alarms must activate emergency exhaust ventilation and alert personnel per NFPA 30 and OSHA 1910.119 requirements."
+      }
+    ],
+    "distractors": [
+      "Automatic fire sprinkler system with chemical-rated heads",
+      "Closed-circuit camera monitoring system",
+      "Ultrasonic level sensors on all containers",
+      "Automated chemical dispensing robots"
+    ],
+    "explanation": "Chemical handling areas require immediate access to emergency decontamination (eyewash/shower per ANSI Z358.1), continuous mechanical ventilation to prevent vapor accumulation (IFC 5003.8.4), and gas detection to alert personnel to dangerous concentrations. These systems protect workers from chemical burns, toxic inhalation, and explosion hazards during routine and emergency conditions.",
+    "xpReward": 75
+  },
+  {
+    "id": "wm-in-007",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial Control Panel",
+    "description": "An industrial motor control center (MCC) has been installed in a process facility to control pumps, fans, and conveyor drives. Review the installation and identify what is missing.",
+    "presentItems": [
+      "NEMA 12 rated MCC lineup with main breaker",
+      "Individual motor starters with thermal overload protection",
+      "Variable frequency drives (VFDs) for process fan motors",
+      "PLC rack with I/O modules for process control",
+      "120V control power transformer for each bucket"
+    ],
+    "missingItems": [
+      {
+        "name": "Arc flash hazard labels per NFPA 70E on each section",
+        "explanation": "NFPA 70E Section 130.5(H) requires arc flash warning labels on all electrical equipment likely to require examination, adjustment, servicing, or maintenance while energized. Labels must include incident energy level (cal/cm²), arc flash boundary, required PPE category, and nominal system voltage. NEC 110.16 also requires the label. Without labels, workers cannot select appropriate PPE and risk severe arc flash burns."
+      },
+      {
+        "name": "Emergency stop (E-stop) circuit with safety relay monitoring",
+        "explanation": "NFPA 79 (Electrical Standard for Industrial Machinery) and OSHA 1910.217 require hardwired emergency stop circuits on industrial machinery control systems. E-stop buttons must be wired through safety-rated relays or safety PLCs that monitor the circuit for faults. A simple PLC software stop is not acceptable because software faults could prevent the stop function. The E-stop circuit must be a Category 0 or Category 1 stop per IEC 60204-1."
+      },
+      {
+        "name": "Lockout/tagout provisions at each disconnect",
+        "explanation": "OSHA 1910.147 (Control of Hazardous Energy) requires that each energy isolating device be capable of being locked in the off position. MCC bucket disconnect handles must accept a padlock, or a lockout hasp must be provided. Without lockout provisions, maintenance personnel cannot safely de-energize and verify zero energy before working on motor-driven equipment."
+      }
+    ],
+    "distractors": [
+      "Harmonic filter on VFD outputs",
+      "Redundant PLC processor module",
+      "Ethernet connectivity for remote monitoring",
+      "Battery backup for PLC memory retention"
+    ],
+    "explanation": "Industrial control panels require arc flash labeling per NFPA 70E for worker safety, hardwired emergency stop circuits with safety-rated monitoring per NFPA 79, and lockout/tagout provisions per OSHA 1910.147. These are fundamental safety requirements that protect electrical workers during maintenance and provide emergency shutdown capability for process equipment.",
+    "xpReward": 100
+  },
+  {
+    "id": "wm-in-008",
+    "type": "whats-missing",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Process Cooling Water System",
+    "description": "A process cooling water system has been installed to serve heat exchangers and jacketed reactor vessels in a chemical plant. Review the installation and identify what is missing.",
+    "presentItems": [
+      "Induced-draft cooling tower with basin",
+      "Cooling water circulation pumps (duplex with auto changeover)",
+      "Shell-and-tube heat exchangers at process loads",
+      "Butterfly isolation valves on supply and return headers",
+      "Temperature and pressure gauges at key monitoring points"
+    ],
+    "missingItems": [
+      {
+        "name": "Chemical water treatment system (biocide, scale inhibitor, corrosion inhibitor)",
+        "explanation": "Open-loop cooling tower water systems are breeding grounds for biological growth (Legionella, algae), scale formation (calcium carbonate), and corrosion. ASHRAE 188 (Legionellosis: Risk Management for Building Water Systems) requires a water management program including biocide treatment, and ASME guidelines require scale and corrosion chemical treatment to maintain heat transfer efficiency and piping integrity."
+      },
+      {
+        "name": "Blowdown control valve with conductivity-based controller",
+        "explanation": "Evaporative cooling towers concentrate dissolved minerals as water evaporates. Without controlled blowdown (draining a portion of concentrated water), scale builds up on heat exchanger surfaces, reducing efficiency and eventually causing tube failure. Conductivity-based automatic blowdown maintains cycles of concentration within design limits, typically 3-6 cycles for most cooling tower applications."
+      },
+      {
+        "name": "Basin low-level and high-level controls with makeup water valve",
+        "explanation": "Cooling tower basins lose water through evaporation, drift, and blowdown. Without automatic makeup water control with low-level and high-level float or electronic sensors, the basin can run dry (causing pump cavitation and overheating) or overflow (wasting water and chemicals). Basin level controls are essential for reliable unattended operation."
+      }
+    ],
+    "distractors": [
+      "Plate-and-frame heat exchanger for free cooling",
+      "Variable speed drives on cooling tower fans",
+      "Glycol injection system for freeze protection",
+      "UV disinfection system on tower basin"
+    ],
+    "explanation": "Process cooling water systems require chemical water treatment to prevent biological growth (including deadly Legionella per ASHRAE 188), automatic blowdown control to manage mineral concentration, and basin level controls for reliable water inventory management. Without these systems, heat exchanger fouling, corrosion, and biological contamination will rapidly degrade system performance and create health hazards.",
+    "xpReward": 100
+  }
+]

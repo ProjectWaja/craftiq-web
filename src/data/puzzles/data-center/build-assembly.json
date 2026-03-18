@@ -1,0 +1,234 @@
+[
+  {
+    "id": "ba-dc-001",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Hot Aisle Containment",
+    "description": "Assemble the hot aisle containment system components in the correct order, from rack installation through full containment closure.",
+    "parts": [
+      { "id": 1, "name": "Server racks (facing hot aisle)", "correctPosition": 1 },
+      { "id": 2, "name": "Blanking panels in unused rack U-spaces", "correctPosition": 2 },
+      { "id": 3, "name": "End walls with gasket seals", "correctPosition": 3 },
+      { "id": 4, "name": "Roof panels above hot aisle", "correctPosition": 4 },
+      { "id": 5, "name": "Containment doors with brush strips", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "In-row cooling unit" },
+      { "id": 102, "name": "Raised floor grommets" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Base infrastructure" },
+      { "id": 2, "label": "Position 2: Rack-level sealing" },
+      { "id": 3, "label": "Position 3: Aisle boundaries" },
+      { "id": 4, "label": "Position 4: Overhead enclosure" },
+      { "id": 5, "label": "Position 5: Access control" }
+    ],
+    "explanation": "Hot aisle containment must start with properly oriented racks forming the aisle, then blanking panels to prevent bypass airflow at the rack level. End walls seal the aisle boundaries before roof panels enclose the top. Containment doors with brush strips are installed last to allow personnel access while maintaining the pressure boundary. Per ASHRAE TC 9.9, blanking panels alone can improve cooling efficiency by 10-15%, and full containment enables return air temperatures of 95-105\u00b0F for optimal CRAH performance.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-002",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "PDU Power Chain",
+    "description": "Assemble the complete power distribution chain from utility service entrance to server power supply in the correct sequence.",
+    "parts": [
+      { "id": 1, "name": "Utility transformer (medium to low voltage)", "correctPosition": 1 },
+      { "id": 2, "name": "Automatic transfer switch (ATS)", "correctPosition": 2 },
+      { "id": 3, "name": "Uninterruptible power supply (UPS)", "correctPosition": 3 },
+      { "id": 4, "name": "Power distribution unit (PDU)", "correctPosition": 4 },
+      { "id": 5, "name": "Rack busway / overhead bus duct", "correctPosition": 5 },
+      { "id": 6, "name": "Server power supply unit (PSU)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Power factor correction capacitor bank" },
+      { "id": 102, "name": "Surge protective device (SPD)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Utility service entrance" },
+      { "id": 2, "label": "Position 2: Source switching" },
+      { "id": 3, "label": "Position 3: Power conditioning" },
+      { "id": 4, "label": "Position 4: Floor-level distribution" },
+      { "id": 5, "label": "Position 5: Row-level distribution" },
+      { "id": 6, "label": "Position 6: Equipment load" }
+    ],
+    "explanation": "The data center power chain follows a strict hierarchy per the Uptime Institute Tier topology. The utility transformer steps down medium voltage (13.8kV typical) to usable facility voltage (480V). The ATS sits upstream of the UPS to switch between utility and generator sources. The UPS provides conditioned, uninterruptible power to the PDU, which further steps down and distributes to rack busways or whips. The server PSU is the final conversion point (AC to DC). Each stage provides a level of redundancy and power conditioning per NFPA 70 Article 708 and TIA-942.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-003",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Clean Agent Fire Suppression",
+    "description": "Assemble the clean agent fire suppression system components in the correct activation sequence from detection to discharge.",
+    "parts": [
+      { "id": 1, "name": "Smoke detector (VESDA or spot-type)", "correctPosition": 1 },
+      { "id": 2, "name": "Fire alarm control panel (FACP)", "correctPosition": 2 },
+      { "id": 3, "name": "Abort station / manual pull station", "correctPosition": 3 },
+      { "id": 4, "name": "Solenoid release valve on agent cylinder", "correctPosition": 4 },
+      { "id": 5, "name": "Discharge nozzles in protected space", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Wet-pipe sprinkler head" },
+      { "id": 102, "name": "Post-indicator valve (PIV)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Detection" },
+      { "id": 2, "label": "Position 2: Signal processing" },
+      { "id": 3, "label": "Position 3: Countdown / override" },
+      { "id": 4, "label": "Position 4: Agent release" },
+      { "id": 5, "label": "Position 5: Discharge into space" }
+    ],
+    "explanation": "Clean agent suppression (FM-200 or Novec 1230) follows a cross-zoned detection sequence per NFPA 2001. The first detector (typically VESDA very early smoke detection) triggers an alert. The FACP processes the signal and initiates a pre-discharge countdown (typically 30-60 seconds). During this countdown, the abort station allows personnel to cancel discharge and evacuate. If not aborted, the solenoid release opens the agent cylinder, and agent flows through piping to discharge nozzles that flood the protected space to design concentration (7-9% for FM-200). Wet-pipe sprinklers are a distractor because clean agent systems protect IT equipment without water damage.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-004",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "Rack Power Setup",
+    "description": "Assemble the rack-level power distribution from the branch circuit panel to the server, including redundant power feeds.",
+    "parts": [
+      { "id": 1, "name": "Branch circuit whip from floor PDU", "correctPosition": 1 },
+      { "id": 2, "name": "Rack-mount PDU (intelligent, metered)", "correctPosition": 2 },
+      { "id": 3, "name": "Branch circuit breaker on rack PDU", "correctPosition": 3 },
+      { "id": 4, "name": "C13/C19 power cord to server", "correctPosition": 4 },
+      { "id": 5, "name": "Server PSU (A feed connected)", "correctPosition": 5 },
+      { "id": 6, "name": "Redundant B-feed rack PDU and cord", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "UPS bypass switch" },
+      { "id": 102, "name": "Panelboard main breaker" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source to rack" },
+      { "id": 2, "label": "Position 2: Rack-level distribution" },
+      { "id": 3, "label": "Position 3: Circuit protection" },
+      { "id": 4, "label": "Position 4: Equipment connection" },
+      { "id": 5, "label": "Position 5: Primary power supply" },
+      { "id": 6, "label": "Position 6: Redundant path" }
+    ],
+    "explanation": "Rack power follows a cascading distribution model. The branch circuit whip connects the floor PDU output to the rack-mount PDU, which provides metered, managed power. Each outlet group on the rack PDU has its own circuit breaker for overcurrent protection per NEC Article 210. C13 cords (10A/15A) or C19 cords (16A/20A) connect to server PSUs based on load requirements. After the A-feed path is complete, a redundant B-feed from a separate PDU and UPS provides 2N redundancy, ensuring no single point of failure in the power chain. This dual-corded approach is standard for Tier III+ facilities per Uptime Institute requirements.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-005",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Cooling System",
+    "description": "Assemble the data center chilled water cooling system from the chiller plant through the air delivery path to the hot aisle return.",
+    "parts": [
+      { "id": 1, "name": "Chiller (water-cooled or air-cooled)", "correctPosition": 1 },
+      { "id": 2, "name": "Primary chilled water pump", "correctPosition": 2 },
+      { "id": 3, "name": "CRAH unit cooling coil", "correctPosition": 3 },
+      { "id": 4, "name": "Raised floor supply plenum", "correctPosition": 4 },
+      { "id": 5, "name": "Perforated tile at rack intake", "correctPosition": 5 },
+      { "id": 6, "name": "Hot aisle return to CRAH intake", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "DX condensing unit" },
+      { "id": 102, "name": "Glycol heat exchanger" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Cooling generation" },
+      { "id": 2, "label": "Position 2: Fluid transport" },
+      { "id": 3, "label": "Position 3: Heat exchange" },
+      { "id": 4, "label": "Position 4: Air distribution" },
+      { "id": 5, "label": "Position 5: Cold air delivery" },
+      { "id": 6, "label": "Position 6: Warm air return" }
+    ],
+    "explanation": "The chilled water cooling loop starts at the chiller producing 42-45\u00b0F water. The primary pump circulates chilled water through piping to CRAH (Computer Room Air Handler) coils on the data hall floor. CRAHs blow cooled air into the raised floor plenum (typically 18-36 inches deep), which acts as a pressurized air distribution chamber. Perforated tiles (typically 25% open area) deliver cold air at server rack intakes in the cold aisle. Servers draw cold air, reject heat, and exhaust into the hot aisle at 95-105\u00b0F per ASHRAE A1 envelope. Hot air returns to CRAH intakes, completing the cycle. DX condensing units are a distractor as they represent a different cooling architecture.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-006",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 2,
+    "title": "BMS/DCIM Sensor Chain",
+    "description": "Assemble the building management and data center infrastructure management monitoring chain from physical sensor to operator dashboard.",
+    "parts": [
+      { "id": 1, "name": "Environmental sensor (temp/humidity/leak)", "correctPosition": 1 },
+      { "id": 2, "name": "DDC controller (direct digital control)", "correctPosition": 2 },
+      { "id": 3, "name": "Network switch (BMS VLAN)", "correctPosition": 3 },
+      { "id": 4, "name": "Head-end BMS/DCIM server", "correctPosition": 4 },
+      { "id": 5, "name": "DCIM dashboard and alerting interface", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Variable frequency drive (VFD)" },
+      { "id": 102, "name": "Programmable logic controller (PLC)" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Physical measurement" },
+      { "id": 2, "label": "Position 2: Local processing" },
+      { "id": 3, "label": "Position 3: Network transport" },
+      { "id": 4, "label": "Position 4: Central aggregation" },
+      { "id": 5, "label": "Position 5: Operator interface" }
+    ],
+    "explanation": "The DCIM monitoring chain follows a hierarchical architecture. Environmental sensors (temperature, humidity, water leak detection) provide analog or digital signals to DDC controllers via BACnet, Modbus, or SNMP protocols. DDC controllers perform local processing, alarm evaluation, and communicate over the BMS network VLAN through managed switches. The head-end server aggregates data from all controllers, performs trending, analytics, and capacity planning. The DCIM dashboard provides the operator interface for real-time monitoring, alerting, and reporting. VFDs are a distractor because they are controlled devices, not part of the monitoring chain. PLCs are typically used in industrial rather than building automation contexts.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-007",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "Generator Backup Sequence",
+    "description": "Assemble the emergency generator backup power sequence from utility power loss through full load pickup.",
+    "parts": [
+      { "id": 1, "name": "Utility loss detection (voltage/frequency monitor)", "correctPosition": 1 },
+      { "id": 2, "name": "ATS transfer signal to generator", "correctPosition": 2 },
+      { "id": 3, "name": "Generator cranks and reaches rated speed", "correctPosition": 3 },
+      { "id": 4, "name": "Load pickup (block loading or ramped)", "correctPosition": 4 },
+      { "id": 5, "name": "Paralleling switchgear synchronization", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Static UPS bypass engagement" },
+      { "id": 102, "name": "Utility demand response curtailment" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Event detection" },
+      { "id": 2, "label": "Position 2: Start command" },
+      { "id": 3, "label": "Position 3: Generator run-up" },
+      { "id": 4, "label": "Position 4: Load transfer" },
+      { "id": 5, "label": "Position 5: Multi-unit coordination" }
+    ],
+    "explanation": "The generator backup sequence is time-critical and follows NFPA 110 requirements for Level 1 emergency power. Utility loss is detected when voltage drops below threshold (typically 85% for >1 second per NFPA 70 Article 700). The ATS sends a start signal to the generator(s). Diesel generators must crank, start, and reach rated voltage and frequency within 10 seconds per NFPA 110 Type 10 classification. Load pickup can be block-loaded (immediate full transfer) or ramped to prevent generator instability. For multi-generator installations (common in large data centers), paralleling switchgear synchronizes multiple generators to a common bus, matching voltage, frequency, and phase angle before closing tie breakers. The UPS bridges the gap during the 10-second generator start window.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-dc-008",
+    "type": "build-assembly",
+    "trade": "data-center",
+    "difficulty": 3,
+    "title": "UPS Installation",
+    "description": "Assemble the uninterruptible power supply system components in the correct order from utility input to protected load output.",
+    "parts": [
+      { "id": 1, "name": "Input breaker (utility AC feed)", "correctPosition": 1 },
+      { "id": 2, "name": "Rectifier/charger (AC-to-DC conversion)", "correctPosition": 2 },
+      { "id": 3, "name": "Battery string (DC energy storage)", "correctPosition": 3 },
+      { "id": 4, "name": "Inverter (DC-to-AC conversion)", "correctPosition": 4 },
+      { "id": 5, "name": "Static bypass switch", "correctPosition": 5 },
+      { "id": 6, "name": "Output breaker (to downstream PDU)", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Flywheel energy storage module" },
+      { "id": 102, "name": "Harmonic filter reactor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Utility input" },
+      { "id": 2, "label": "Position 2: Power conversion (AC\u2192DC)" },
+      { "id": 3, "label": "Position 3: Energy storage" },
+      { "id": 4, "label": "Position 4: Power conversion (DC\u2192AC)" },
+      { "id": 5, "label": "Position 5: Bypass path" },
+      { "id": 6, "label": "Position 6: Protected output" }
+    ],
+    "explanation": "A double-conversion online UPS follows a specific power path per IEEE 946 and NFPA 111. Utility AC enters through the input breaker and is converted to DC by the rectifier/charger, which simultaneously charges the battery string and feeds the inverter. The battery string (typically VRLA, lithium-ion, or NiCd) provides DC energy storage for 5-30 minutes of runtime. The inverter converts DC back to clean, regulated AC power. The static bypass switch provides an alternate power path that can transfer the load in less than 4 milliseconds if the UPS electronics fail or require maintenance. The output breaker feeds downstream PDUs. Flywheel storage is a distractor representing an alternative to chemical batteries, not a component of a standard battery-based UPS topology.",
+    "xpReward": 70
+  }
+]

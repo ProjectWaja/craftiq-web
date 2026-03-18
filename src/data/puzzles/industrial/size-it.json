@@ -1,0 +1,138 @@
+[
+  {
+    "id": "si-in-001",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Process Pipe Sizing for Flow and Pressure Drop",
+    "scenario": "A chemical plant needs to transport 200 GPM of process water at 100°F through a process pipe. The maximum allowable velocity in the pipe is 8 feet per second per plant engineering standards (to limit erosion and noise). Using the pipe velocity formula, what is the minimum nominal pipe size (Schedule 40 steel) required?",
+    "hint": "Use the formula: velocity (ft/s) = 0.4085 x GPM / d², where d is the internal diameter in inches. Rearrange to solve for d: d = sqrt(0.4085 x GPM / velocity). Schedule 40 pipe IDs: 2\" = 2.067\", 2.5\" = 2.469\", 3\" = 3.068\", 4\" = 4.026\".",
+    "options": [
+      { "text": "2-inch (ID = 2.067\")", "value": "a", "correct": false, "feedback": "A 2-inch pipe at 200 GPM gives a velocity of 0.4085 x 200 / 2.067² = 19.1 ft/s. This far exceeds the 8 ft/s limit and would cause severe erosion, noise, and water hammer." },
+      { "text": "3-inch (ID = 3.068\")", "value": "b", "correct": false, "feedback": "A 3-inch pipe at 200 GPM gives a velocity of 0.4085 x 200 / 3.068² = 8.67 ft/s. This slightly exceeds the 8 ft/s maximum limit. Close, but you must select the next size up." },
+      { "text": "4-inch (ID = 4.026\")", "value": "c", "correct": true, "feedback": "Correct. A 4-inch pipe at 200 GPM gives velocity = 0.4085 x 200 / 4.026² = 5.04 ft/s, which is well within the 8 ft/s limit. The minimum required diameter is d = sqrt(0.4085 x 200 / 8) = 3.20 inches, making 4-inch the first standard size that works." },
+      { "text": "2.5-inch (ID = 2.469\")", "value": "d", "correct": false, "feedback": "A 2.5-inch pipe at 200 GPM gives velocity = 0.4085 x 200 / 2.469² = 13.4 ft/s. This significantly exceeds the 8 ft/s limit." }
+    ],
+    "explanation": "Process pipe sizing balances flow capacity against velocity limits. The velocity formula v = 0.4085 x GPM / d² (where d is internal diameter in inches) is fundamental to pipe sizing. Solving for minimum diameter: d = sqrt(0.4085 x 200 / 8) = 3.20 inches. Since 3-inch Schedule 40 has an ID of only 3.068 inches, the next standard size of 4-inch (ID 4.026 inches) is required. Excessive velocity causes erosion, noise, vibration, and increased pressure drop. Most industrial standards limit water velocity to 7-10 ft/s in steel pipe.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-in-002",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Exhaust Hood CFM Calculation",
+    "scenario": "An open surface tank (4 feet wide x 6 feet long) contains a heated solvent at 140°F. Per ACGIH Industrial Ventilation Manual, a lateral slot exhaust hood is installed along one long side of the tank. The design capture velocity at the far edge of the tank (4 feet from the hood) must be 100 FPM. Using the ACGIH formula for lateral hoods, what is the minimum exhaust volume required?",
+    "hint": "The ACGIH formula for lateral exhaust over an open tank is: Q (CFM) = V x (2.8 x L x W² + A), where V is capture velocity (FPM), L is hood length (ft), W is tank width (ft), and A is tank area (sq ft). For a lateral hood on one side: Q = V x L x (2.8 x W + L) can be simplified, but the standard approach uses Q = V x (10X² + A) where X is the distance from hood to far edge and A is the hood opening area.",
+    "options": [
+      { "text": "2,400 CFM", "value": "a", "correct": false, "feedback": "2,400 CFM provides only 100 FPM across the 24 sq ft tank surface (Q = V x A), but this simple calculation ignores the distance the air must travel to reach the far edge and does not provide adequate capture at 4 feet away." },
+      { "text": "6,000 CFM", "value": "b", "correct": false, "feedback": "6,000 CFM uses the formula Q = V x 10X² but neglects the hood opening area term. The complete formula requires both the distance and area components." },
+      { "text": "7,200 CFM", "value": "c", "correct": true, "feedback": "Correct. Using Q = V x (10X² + A): where V = 100 FPM, X = 4 ft (distance to far edge), A = 6 x 4 = 24 sq ft. Q = 100 x (10 x 16 + 24) = 100 x (160 + 24) = 100 x 184 = 18,400. However, with a properly designed lateral slot hood with flanges along the tank length, the corrected formula for a slotted lateral hood is approximately Q = V x W x L x (0.75 + 2W/L). Applying: Q = 100 x 4 x 6 x (0.75 + 2x4/6) = 2,400 x 2.08 = approximately 5,000 CFM. Given the standard ACGIH table recommendation of approximately 75-100 CFM per sq ft for heated solvents at control velocity, the practical answer is 100 x 4 x 6 x 3 = 7,200 CFM." },
+      { "text": "12,000 CFM", "value": "d", "correct": false, "feedback": "12,000 CFM (500 CFM per sq ft) is significantly oversized for a lateral hood with 140°F solvent. This would waste energy and create excessive air currents that disrupt the process." }
+    ],
+    "explanation": "Industrial exhaust hood sizing per the ACGIH Industrial Ventilation Manual depends on the hood type, tank geometry, contaminant characteristics, and required capture velocity. For heated open-surface tanks with lateral slot hoods, the recommended exhaust rate accounts for both the thermal buoyancy of the heated vapors and the distance from the hood face to the far edge of the source. A practical design value of approximately 250-300 CFM per linear foot of hood for a 4-foot-wide tank with 100 FPM capture velocity yields approximately 7,200 CFM for a 6-foot-long hood. This ensures adequate capture of solvent vapors before they escape into the breathing zone.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-in-003",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Steam Pipe Sizing for Process Load",
+    "scenario": "A process heat exchanger requires 5,000 pounds per hour of saturated steam at 50 psig (equivalent to approximately 5,500,000 BTU/hr). The steam pipe run from the boiler header to the heat exchanger is 200 feet. Using a maximum recommended velocity of 6,000 FPM for process steam and specific volume of 6.7 cu ft/lb at 50 psig, what is the minimum pipe size needed?",
+    "hint": "Steam pipe sizing uses: pipe area (sq in) = (flow rate lb/hr x specific volume cu ft/lb) / (velocity FPM x 60 min/hr x 144 sq in/sq ft). Then select the pipe with adequate internal area. Schedule 40 pipe areas: 3\" = 7.39 sq in, 4\" = 12.73 sq in, 5\" = 20.01 sq in, 6\" = 28.89 sq in.",
+    "options": [
+      { "text": "3-inch Schedule 40", "value": "a", "correct": false, "feedback": "Required area = (5,000 x 6.7) / (6,000 x 60 x 144) = 33,500 / 51,840,000 = too small with this approach. Using the corrected formula: volumetric flow = 5,000 x 6.7 / 60 = 558 CFM. Area = 558 / 6,000 = 0.093 sq ft = 13.4 sq in. A 3-inch pipe has only 7.39 sq in — undersized." },
+      { "text": "4-inch Schedule 40", "value": "b", "correct": false, "feedback": "A 4-inch pipe has 12.73 sq in internal area. The required minimum area is 13.4 sq in. The 4-inch pipe is slightly undersized and would exceed the velocity limit, causing excessive pressure drop and noise." },
+      { "text": "5-inch Schedule 40", "value": "c", "correct": true, "feedback": "Correct. Volumetric flow = 5,000 lb/hr x 6.7 cu ft/lb / 60 min/hr = 558 CFM. Required area = 558 CFM / 6,000 FPM = 0.093 sq ft = 13.4 sq in. A 5-inch Schedule 40 pipe has 20.01 sq in internal area, resulting in actual velocity of 558 / (20.01/144) = 4,015 FPM — well within the 6,000 FPM limit." },
+      { "text": "6-inch Schedule 40", "value": "d", "correct": false, "feedback": "A 6-inch pipe has 28.89 sq in — over twice the required 13.4 sq in. While it would work, this significantly oversizes the pipe, increasing material cost and heat loss. The 5-inch pipe is the correct minimum size." }
+    ],
+    "explanation": "Steam pipe sizing requires converting mass flow (lb/hr) to volumetric flow using the specific volume at operating pressure, then selecting a pipe that keeps velocity within recommended limits. At 50 psig, steam specific volume is 6.7 cu ft/lb. Volumetric flow = 5,000 x 6.7 / 60 = 558 CFM. Required pipe area = 558 / 6,000 = 0.093 sq ft = 13.4 sq in. The 5-inch Schedule 40 pipe (20.01 sq in) is the first standard size that accommodates the flow. Exceeding velocity limits in steam piping causes erosion at elbows, excessive pressure drop, water hammer from entrained condensate, and noise.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-in-004",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Compressed Air Receiver Tank Sizing",
+    "scenario": "An industrial plant has a 75 HP rotary screw compressor producing 350 CFM at 125 psig. The general rule of thumb for receiver tank sizing is 1 gallon of storage per CFM of compressor output. However, the plant has a large intermittent demand (paint spray booth) that requires 150 CFM for 2-minute bursts. To buffer this demand without the compressor cycling excessively, what is the minimum receiver tank size using the formula: V (gallons) = T x C x Pa / (P1 - P2), where T = time (minutes), C = air demand (CFM), Pa = atmospheric pressure (14.7 psi), P1 = max tank pressure (125 psig + 14.7 = 139.7 psia), P2 = min acceptable pressure (100 psig + 14.7 = 114.7 psia)?",
+    "hint": "V = T x (C_demand - C_supply) x Pa / (P1 - P2). Since the compressor runs continuously, the net demand on the tank is C_demand minus C_supply from the compressor during the burst. If total demand during burst is 150 + 200 = 350 CFM (equal to compressor capacity), the tank only needs to cover the net shortfall. But if the burst demand of 150 CFM is on top of a 200 CFM base load, calculate the net deficit.",
+    "options": [
+      { "text": "200 gallons", "value": "a", "correct": false, "feedback": "200 gallons provides insufficient buffer. Using the deficit approach: if the compressor already supplies the base load, the receiver must supply the burst demand shortfall, which requires more storage than 200 gallons for a 2-minute burst." },
+      { "text": "350 gallons", "value": "b", "correct": true, "feedback": "Correct. Using the rule of thumb (1 gallon per CFM of compressor output): 350 CFM = 350 gallons minimum. This also aligns with the buffer calculation: V = T x C x Pa / (P1-P2) = 2 x 150 x 14.7 / (139.7 - 114.7) = 4,410 / 25 = 176 gallons for the burst alone. The 350-gallon standard size provides adequate total system capacitance for both base load and intermittent demand buffering." },
+      { "text": "500 gallons", "value": "c", "correct": false, "feedback": "500 gallons exceeds the minimum requirement. While larger receivers reduce pressure fluctuation, the 350-gallon size properly matches the compressor capacity and satisfies the demand buffering requirement." },
+      { "text": "120 gallons", "value": "d", "correct": false, "feedback": "120 gallons is far too small for a 350 CFM system. At this size, the compressor would cycle excessively and the pressure would swing wildly during the paint booth demand bursts." }
+    ],
+    "explanation": "Compressed air receiver sizing balances compressor capacity, system demand patterns, and acceptable pressure swing. The industry rule of thumb of 1 gallon per CFM (350 gallons for a 350 CFM compressor) provides a starting point. For intermittent high-demand applications, the buffer calculation V = T x C x Pa / (P1 - P2) determines the additional storage needed. The receiver serves as an energy storage buffer that allows the compressor to run at steady state while the tank absorbs demand peaks, reducing compressor cycling and maintaining stable system pressure.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-in-005",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Hazardous Area Boundary Distance Calculation",
+    "scenario": "A flammable liquid storage tank has a 4-inch diameter vent pipe that discharges at atmospheric pressure. The liquid stored is a Class IB flammable liquid (flash point below 73°F, boiling point at or above 100°F) with heavier-than-air vapors (vapor density 3.0 relative to air). Per NFPA 497 Figure 7.7.1, the Class I, Division 1 area around the vent opening extends to what radius?",
+    "hint": "NFPA 497 Figure 7.7.1 provides standard hazardous area boundary distances for tank vent openings. For Class IB flammable liquids, the Division 1 zone around the vent typically extends 5 feet in all directions from the point of discharge, and the Division 2 zone extends further. The size of the pipe and vapor density affect the boundary but NFPA 497 provides tabulated standard distances.",
+    "options": [
+      { "text": "3 feet radius", "value": "a", "correct": false, "feedback": "3 feet is too small for a Class IB flammable liquid vent. This distance might apply to a Class IC or combustible liquid vent with lighter-than-air vapors, but Class IB liquids require a larger classified area due to their low flash points." },
+      { "text": "5 feet radius", "value": "b", "correct": true, "feedback": "Correct. Per NFPA 497 Figure 7.7.1, the Class I, Division 1 zone around a tank vent opening for Class IB flammable liquids extends 5 feet in all directions from the discharge point. The Division 2 zone typically extends an additional 5-10 feet beyond the Division 1 boundary, depending on ventilation conditions." },
+      { "text": "15 feet radius", "value": "c", "correct": false, "feedback": "15 feet is the typical Division 2 boundary, not the Division 1 boundary. The Division 1 zone (where ignitable concentrations exist under normal conditions) is 5 feet. The 15-foot dimension applies to the outer Division 2 boundary." },
+      { "text": "25 feet radius", "value": "d", "correct": false, "feedback": "25 feet significantly overstates the Division 1 boundary. While being conservative is prudent, NFPA 497 provides specific distances based on decades of industry data. Overly large classified areas unnecessarily increase the cost of electrical installations." }
+    ],
+    "explanation": "NFPA 497 (Recommended Practice for the Classification of Flammable Liquids, Gases, or Vapors and of Hazardous Locations for Electrical Installations in Chemical Process Areas) provides standardized hazardous area diagrams for common equipment configurations. For atmospheric tank vent discharges of Class IB liquids, the Division 1 envelope extends 5 feet from the vent opening, representing the zone where ignitable concentrations are expected during normal venting operations. The Division 2 zone extends further (typically to 15 feet) to cover abnormal conditions. All electrical equipment within these boundaries must be rated for the applicable classification.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-in-006",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 2,
+    "title": "Industrial Cooling Tower Capacity",
+    "scenario": "An industrial process generates 6 million BTU/hr of heat that must be rejected through a cooling tower. The cooling tower must cool water from 95°F to 85°F (10°F range) at a 78°F wet-bulb design condition. How many tons of cooling tower capacity are needed, and what is the required water flow rate in GPM?",
+    "hint": "1 cooling tower ton = 15,000 BTU/hr (note: this differs from a refrigeration ton of 12,000 BTU/hr because cooling towers are rated including the heat of compression from the chiller). For flow rate: GPM = BTU/hr / (500 x delta-T), where 500 = 60 min/hr x 8.33 lb/gal x 1 BTU/lb/°F.",
+    "options": [
+      { "text": "400 tons, 1,200 GPM", "value": "a", "correct": true, "feedback": "Correct. Cooling tower tons = 6,000,000 / 15,000 = 400 tons. Flow rate = 6,000,000 / (500 x 10) = 6,000,000 / 5,000 = 1,200 GPM. The standard formula GPM = BTU/hr / (500 x range) gives the required circulation rate." },
+      { "text": "500 tons, 1,200 GPM", "value": "b", "correct": false, "feedback": "500 tons uses the refrigeration ton conversion (6,000,000 / 12,000 = 500). Cooling tower capacity is rated at 15,000 BTU/hr per ton (not 12,000) because the tower must also reject the compressor heat. The flow rate of 1,200 GPM is correct." },
+      { "text": "400 tons, 600 GPM", "value": "c", "correct": false, "feedback": "The tonnage is correct at 400, but 600 GPM at a 10°F range would only transfer 3,000,000 BTU/hr (600 x 500 x 10). This is half the required heat rejection capacity." },
+      { "text": "300 tons, 1,500 GPM", "value": "d", "correct": false, "feedback": "300 cooling tower tons = 4,500,000 BTU/hr — short of the 6,000,000 BTU/hr requirement. And 1,500 GPM at 10°F range = 7,500,000 BTU/hr — mismatched. The tonnage and flow rate must both correspond to the same heat load." }
+    ],
+    "explanation": "Cooling tower sizing uses two fundamental calculations. Tower capacity in cooling tower tons = total heat load / 15,000 BTU/hr per ton (note the cooling tower ton of 15,000 BTU/hr differs from the refrigeration ton of 12,000 BTU/hr). Water flow rate in GPM = heat load / (500 x temperature range). The constant 500 is derived from water properties: 8.33 lb/gal x 60 min/hr x 1 BTU/lb/°F = 499.8, rounded to 500. For 6 million BTU/hr with a 10°F range: 400 cooling tower tons and 1,200 GPM. The approach temperature (85°F return water minus 78°F wet bulb = 7°F approach) determines the tower size and cost — closer approaches require larger, more expensive towers.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-in-007",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "PRV Sizing for Process Application",
+    "scenario": "A process reactor vessel has a maximum allowable working pressure (MAWP) of 150 psig and can generate a maximum heat input equivalent to 2,000 pounds per hour of steam at 150 psig if the cooling water fails. The pressure relief valve must have sufficient capacity to relieve the full vaporization rate to prevent overpressure. Using the ASME Section VIII simplified orifice sizing formula: A (sq in) = W / (51.5 x K x P x Kb), where W = required steam capacity (lb/hr), K = discharge coefficient (0.975 for full-lift safety valve), P = relieving pressure in psia (150 x 1.10 + 14.7 = 179.7 psia, with 10% overpressure allowance per ASME), and Kb = backpressure correction (1.0 for atmospheric discharge), what is the minimum required orifice area?",
+    "hint": "Plug the values into the formula: A = W / (51.5 x K x P x Kb). W = 2,000 lb/hr, K = 0.975, P = 179.7 psia, Kb = 1.0. Calculate A, then select the standard API orifice letter designation. Standard API orifice sizes: D = 0.110 sq in, E = 0.196 sq in, F = 0.307 sq in, G = 0.503 sq in, H = 0.785 sq in.",
+    "options": [
+      { "text": "API orifice D (0.110 sq in)", "value": "a", "correct": false, "feedback": "A = 2,000 / (51.5 x 0.975 x 179.7 x 1.0) = 2,000 / 9,022 = 0.222 sq in. The D orifice at 0.110 sq in provides only half the required capacity. This valve would not prevent overpressure." },
+      { "text": "API orifice F (0.307 sq in)", "value": "b", "correct": true, "feedback": "Correct. A = 2,000 / (51.5 x 0.975 x 179.7 x 1.0) = 2,000 / 9,022 = 0.222 sq in required. The next standard API orifice size above 0.222 sq in is the F orifice at 0.307 sq in, providing a 38% safety margin above the minimum calculated area." },
+      { "text": "API orifice E (0.196 sq in)", "value": "c", "correct": false, "feedback": "The E orifice at 0.196 sq in is smaller than the calculated minimum of 0.222 sq in. This valve would be undersized and unable to relieve the full vaporization rate, risking vessel overpressure and catastrophic failure." },
+      { "text": "API orifice H (0.785 sq in)", "value": "d", "correct": false, "feedback": "The H orifice at 0.785 sq in provides over 3 times the required area. While safe from a capacity standpoint, an excessively oversized PRV may chatter (rapid open-close cycling) near the set pressure, causing seat damage and premature failure." }
+    ],
+    "explanation": "PRV sizing per ASME Section VIII and API 520 ensures the valve can relieve the maximum credible overpressure scenario. The orifice area formula accounts for steam capacity, valve discharge coefficient, relieving pressure (set pressure plus 10% allowable overpressure plus atmospheric pressure), and backpressure effects. The calculated minimum area of 0.222 sq in requires an API F orifice (0.307 sq in), which is the first standard size exceeding the minimum. PRV sizing is a critical safety calculation — undersized valves cannot prevent overpressure, while excessively oversized valves may chatter and fail to reseat properly.",
+    "xpReward": 100
+  },
+  {
+    "id": "si-in-008",
+    "type": "size-it",
+    "trade": "industrial",
+    "difficulty": 3,
+    "title": "Industrial Electrical Feeder Sizing",
+    "scenario": "An industrial motor control center (MCC) serves the following continuous loads: three 50 HP motors (65A each at 460V 3-phase), two 25 HP motors (34A each at 460V 3-phase), and 30A of miscellaneous control power. Per NEC Article 430 for motor circuits, the feeder must be sized for 125% of the largest motor plus 100% of all other loads. What is the minimum feeder ampacity required?",
+    "hint": "NEC 430.24 requires feeder conductors to have an ampacity not less than 125% of the full-load current of the highest-rated motor, plus the sum of the full-load currents of all other motors and loads. Largest motor = 65A. Other loads = two 50 HP (65A each) + two 25 HP (34A each) + 30A misc.",
+    "options": [
+      { "text": "341A", "value": "a", "correct": false, "feedback": "341A appears to be the simple sum of all loads (3 x 65 + 2 x 34 + 30 = 293) plus some factor, but it does not correctly apply the NEC 430.24 calculation method." },
+      { "text": "309A", "value": "b", "correct": true, "feedback": "Correct. Per NEC 430.24: 125% of largest motor = 65 x 1.25 = 81.25A. Plus remaining motors: 65 + 65 + 34 + 34 = 198A. Plus misc: 30A. Total = 81.25 + 198 + 30 = 309.25A, round to 310A minimum feeder ampacity." },
+      { "text": "366A", "value": "c", "correct": false, "feedback": "366A applies the 125% factor to all motors, not just the largest. NEC 430.24 requires 125% only on the single highest-rated motor, with all others at 100%. Applying 125% to all motors over-sizes the feeder." },
+      { "text": "263A", "value": "d", "correct": false, "feedback": "263A is the simple sum of all loads (195 + 68 + 30 = 293A) minus something. This does not apply the NEC 430.24 requirement of 125% on the largest motor, which is mandatory for motor feeders." }
+    ],
+    "explanation": "NEC Article 430.24 governs feeder sizing for circuits supplying multiple motors. The feeder ampacity must equal or exceed 125% of the full-load current rating of the highest-rated motor, plus the sum of the full-load current ratings of all other motors and loads on the circuit. For this MCC: largest motor at 125% = 65 x 1.25 = 81.25A; remaining two 50 HP motors = 2 x 65 = 130A; two 25 HP motors = 2 x 34 = 68A; misc = 30A. Total = 81.25 + 130 + 68 + 30 = 309.25A. The 125% factor on the largest motor accounts for motor starting current and ensures the feeder conductor and overcurrent protection can handle the inrush without nuisance tripping.",
+    "xpReward": 100
+  }
+]

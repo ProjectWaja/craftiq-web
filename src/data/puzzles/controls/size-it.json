@@ -1,0 +1,427 @@
+[
+  {
+    "id": "si-ctrl-001",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Temperature Sensor Range Selection",
+    "scenario": "You need to select a duct-mounted temperature sensor for a supply air duct that typically operates between 50 degrees F and 130 degrees F. What sensor range is appropriate?",
+    "hint": "Select a sensor range that covers the expected operating range with some margin, but not so wide that resolution is lost. ASHRAE Guideline 36 recommends sensors matched to the application range.",
+    "options": [
+      { "text": "0 to 100 degrees F", "value": "0-100", "correct": false, "feedback": "This range does not cover the full operating range. A 130-degree supply air temperature (possible with reheat) would be out of range, giving a false maximum reading." },
+      { "text": "32 to 150 degrees F", "value": "32-150", "correct": true, "feedback": "Correct! A 32-150 degree F range covers the full operating range with margin for extremes while maintaining good resolution. This is the standard range for supply air temperature sensors." },
+      { "text": "-40 to 250 degrees F", "value": "-40-250", "correct": false, "feedback": "This range is far too wide for supply air. A 290-degree span reduces the sensor's effective resolution, making it less accurate in the 50-130 degree operating range." },
+      { "text": "50 to 90 degrees F", "value": "50-90", "correct": false, "feedback": "This range is too narrow. It does not cover the hot deck temperature from reheat coils (up to 130 degrees F) or potential freeze conditions below 50 degrees." }
+    ],
+    "explanation": "Sensor range selection balances coverage and resolution. ASHRAE Guideline 36 recommends matching sensor range to the application. Too narrow misses extremes; too wide loses accuracy. Standard supply air sensors typically cover 32-150 degrees F.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-002",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Control Valve Cv Sizing",
+    "scenario": "A chilled water coil requires 12 GPM at a design pressure drop of 4 PSI across the control valve. Using the valve sizing formula Cv = Flow / sqrt(delta-P), what is the required valve Cv?",
+    "hint": "The Cv formula for water is: Cv = GPM / sqrt(pressure drop in PSI). Calculate and select the closest standard valve size.",
+    "options": [
+      { "text": "Cv = 3", "value": "3", "correct": false, "feedback": "Cv of 3 is undersized. At 4 PSI, a Cv of 3 would only pass 6 GPM (3 x sqrt(4) = 6). This would starve the coil of water." },
+      { "text": "Cv = 6", "value": "6", "correct": true, "feedback": "Correct! Cv = 12 / sqrt(4) = 12 / 2 = 6. A valve with Cv of 6 delivers 12 GPM at 4 PSI drop. Select the next standard size that meets or slightly exceeds this value." },
+      { "text": "Cv = 12", "value": "12", "correct": false, "feedback": "Cv of 12 is oversized. It would only need 1 PSI to pass 12 GPM, resulting in poor valve authority and unstable control (the valve would operate in a very narrow range)." },
+      { "text": "Cv = 24", "value": "24", "correct": false, "feedback": "Cv of 24 is significantly oversized. The valve would operate near its seat at less than 5% open, causing hunting, noise, and poor controllability." }
+    ],
+    "explanation": "Control valve Cv sizing is critical for stable control. An oversized valve (high Cv) operates near the seat with poor controllability. An undersized valve cannot deliver required flow. The formula Cv = GPM / sqrt(delta-P) is fundamental to building controls per ASHRAE Handbook.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-ctrl-003",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Damper Actuator Torque Selection",
+    "scenario": "A 24-inch by 24-inch outdoor air damper requires an actuator. The damper manufacturer specifies 7 in-lb per square foot of damper area for modulating service. What minimum actuator torque is needed?",
+    "hint": "Calculate damper area in square feet, then multiply by the manufacturer's torque requirement per square foot. Add 25% safety factor for spring-return applications.",
+    "options": [
+      { "text": "20 in-lb", "value": "20", "correct": false, "feedback": "20 in-lb is far too low. The damper area is 4 sq ft (24x24/144), requiring 28 in-lb minimum (4 x 7). This actuator would stall and not fully close the damper." },
+      { "text": "28 in-lb", "value": "28", "correct": false, "feedback": "28 in-lb is the bare minimum (4 sq ft x 7 in-lb/sq ft). For an outdoor air damper requiring spring-return fail-safe, you need 25% additional torque for the spring return, bringing it to 35 in-lb." },
+      { "text": "35 in-lb", "value": "35", "correct": true, "feedback": "Correct! Base torque: 4 sq ft x 7 in-lb/sq ft = 28 in-lb. With 25% safety factor for spring-return: 28 x 1.25 = 35 in-lb. Select the next standard size at or above 35 in-lb." },
+      { "text": "80 in-lb", "value": "80", "correct": false, "feedback": "80 in-lb is significantly oversized. While it would work, it wastes money and adds unnecessary weight to the damper linkage." }
+    ],
+    "explanation": "Actuator torque sizing must account for damper area, manufacturer torque requirements, and spring-return safety factor. Undersized actuators cannot fully close dampers — a common cause of energy waste and comfort complaints. Per ASHRAE and damper manufacturer guidelines.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-ctrl-004",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BACnet Network Bandwidth — Number of Devices",
+    "scenario": "A BACnet MS/TP trunk operates at 76800 baud. The specification limits trunk length to 4000 feet. Considering polling overhead and token-passing delays, what is the practical maximum number of controllers on a single MS/TP trunk?",
+    "hint": "ASHRAE 135 allows MAC addresses 0-127 on MS/TP, but practical limits are much lower due to token-passing overhead. Industry best practice limits devices per trunk based on response time requirements.",
+    "options": [
+      { "text": "10 devices", "value": "10", "correct": false, "feedback": "10 devices is overly conservative. Modern controllers at 76800 baud can handle more devices while maintaining acceptable response times." },
+      { "text": "30 devices", "value": "30", "correct": true, "feedback": "Correct! At 76800 baud, approximately 30 devices per trunk is the practical maximum that maintains acceptable token-passing cycle times (under 10 seconds). More devices increase response latency beyond acceptable limits." },
+      { "text": "60 devices", "value": "60", "correct": false, "feedback": "60 devices would cause excessive token-passing delays. The poll cycle would exceed 20 seconds, making the system feel sluggish and causing timeout errors on the operator workstation." },
+      { "text": "127 devices", "value": "127", "correct": false, "feedback": "While 127 is the maximum MAC address, loading a single trunk this heavily would cause unacceptable communication delays of over a minute per poll cycle. The system would be unusable." }
+    ],
+    "explanation": "BACnet MS/TP network design requires balancing device count against response time. Industry best practice per ASHRAE 135 implementation guides limits a 76800-baud trunk to approximately 30 devices to maintain acceptable operator response times.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-ctrl-005",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "DDC Controller I/O Capacity",
+    "scenario": "An AHU controls application requires: 8 analog inputs (temperatures, pressures), 4 analog outputs (valve and damper actuators), 6 binary inputs (status, safeties), and 4 binary outputs (fan starts, alarms). What minimum controller I/O count is needed?",
+    "hint": "Add up each I/O type. Then add 20% spare capacity for future expansion — a standard controls specification requirement.",
+    "options": [
+      { "text": "8 AI, 4 AO, 6 BI, 4 BO (22 total — exact match)", "value": "22", "correct": false, "feedback": "Exact-match I/O leaves zero spare capacity. When a new sensor or actuator is added during commissioning or future modifications, the entire controller must be replaced. Always include spares." },
+      { "text": "10 AI, 5 AO, 8 BI, 5 BO (28 total — 20% spare)", "value": "28", "correct": true, "feedback": "Correct! Adding approximately 20% spare I/O (rounding up to next available size) provides capacity for field changes and future expansion. This is standard practice per controls specifications." },
+      { "text": "16 AI, 8 AO, 16 BI, 8 BO (48 total)", "value": "48", "correct": false, "feedback": "48 points is more than double the requirement. While having spares is good, this much excess wastes money on a larger controller and unused terminal blocks." },
+      { "text": "4 AI, 4 AO, 4 BI, 4 BO (16 total)", "value": "16", "correct": false, "feedback": "16 points is insufficient. This cannot even cover the 8 analog inputs required, let alone the other I/O types. The application cannot function with this controller." }
+    ],
+    "explanation": "Controller I/O sizing follows the application requirements plus 20% spare capacity as standard practice. Running out of I/O during commissioning is costly and time-consuming. Spare points are an inexpensive investment per standard controls specifications.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-006",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Sensor Wire Gauge for Long Run",
+    "scenario": "A 10K thermistor temperature sensor needs to be wired 500 feet from the controller. The controller specification allows a maximum loop resistance of 50 ohms. What wire gauge is needed?",
+    "hint": "Calculate total wire length (both conductors = 1000 feet). Look up resistance per 1000 feet for standard wire gauges: 22 AWG = 16.1 ohms, 20 AWG = 10.2 ohms, 18 AWG = 6.4 ohms.",
+    "options": [
+      { "text": "22 AWG", "value": "22", "correct": false, "feedback": "22 AWG has 16.1 ohms per 1000 feet. For 1000 feet total (500 ft x 2 conductors): 16.1 ohms. While under 50 ohms, this leaves minimal margin. The resistance adds directly to the thermistor reading, causing a temperature error." },
+      { "text": "20 AWG", "value": "20", "correct": false, "feedback": "20 AWG has 10.2 ohms per 1000 feet total — within the 50-ohm limit. However, for a 10K thermistor at 500 feet, 18 AWG provides better accuracy by minimizing wire resistance error." },
+      { "text": "18 AWG", "value": "18", "correct": true, "feedback": "Correct! 18 AWG has 6.4 ohms per 1000 feet total. This keeps wire resistance low enough that the temperature reading error is minimal (less than 0.1 degrees F error). Standard practice for long sensor runs." },
+      { "text": "14 AWG", "value": "14", "correct": false, "feedback": "14 AWG would work electrically but is unnecessary for sensor wiring. It is expensive, difficult to terminate on sensor terminal blocks, and physically too large for standard sensor connectors." }
+    ],
+    "explanation": "Wire gauge for analog sensors must account for the total loop resistance (both conductors). For thermistor sensors, wire resistance adds to the measured resistance, directly causing temperature reading error. Use 18 AWG for long runs per NEC Article 725 and manufacturer guidelines.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-ctrl-007",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "PID Loop Sample Time",
+    "scenario": "A supply air temperature PID control loop modulates a chilled water valve. The cooling coil has a thermal response time (time constant) of approximately 60 seconds. What is the appropriate PID loop sample time?",
+    "hint": "The PID sample time should be 1/4 to 1/10 of the process time constant for stable control. Too fast causes noisy output; too slow causes sluggish response.",
+    "options": [
+      { "text": "1 second", "value": "1", "correct": false, "feedback": "1-second sampling is 60x faster than the process time constant. This causes the controller to react to noise and sensor fluctuations, producing rapid valve oscillation that wears the actuator." },
+      { "text": "10 seconds", "value": "10", "correct": true, "feedback": "Correct! 10 seconds is 1/6 of the 60-second time constant — within the recommended 1/4 to 1/10 ratio. This provides responsive control without reacting to noise. Standard for HVAC temperature loops." },
+      { "text": "60 seconds", "value": "60", "correct": false, "feedback": "60 seconds equals the process time constant, which is too slow. The controller would always be one time-constant behind the process, causing temperature overshoots and poor control." },
+      { "text": "300 seconds (5 minutes)", "value": "300", "correct": false, "feedback": "5 minutes is far too slow for an active control loop. Temperature could swing several degrees between samples, causing occupant comfort complaints and energy waste." }
+    ],
+    "explanation": "PID loop timing must match the process dynamics. The sample time should be 1/4 to 1/10 of the process time constant per control theory best practices. For HVAC temperature loops with 30-120 second time constants, 5-15 second sample times are standard per ASHRAE Guideline 36.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-ctrl-008",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Trend Log Storage Calculation",
+    "scenario": "An AHU has 20 analog points trended at 5-minute intervals and 10 binary points trended on change-of-value (averaging 50 changes per day). How many data records per day does this generate?",
+    "hint": "Analog records: (points) x (samples per day). At 5-minute intervals, there are 288 samples per day per point. Binary COV records are estimated at 50 per day per point.",
+    "options": [
+      { "text": "1,000 records/day", "value": "1000", "correct": false, "feedback": "1,000 records is far too low. Just the 20 analog points at 5-minute intervals generate 5,760 records per day alone." },
+      { "text": "6,260 records/day", "value": "6260", "correct": true, "feedback": "Correct! Analog: 20 points x 288 samples/day = 5,760. Binary COV: 10 points x 50 changes/day = 500. Total: 5,760 + 500 = 6,260 records per day. Plan storage accordingly." },
+      { "text": "20,000 records/day", "value": "20000", "correct": false, "feedback": "20,000 is too high. At 5-minute intervals (not 1-minute), the analog logging generates fewer records. Check your math on samples per day at 5-minute intervals." },
+      { "text": "288 records/day", "value": "288", "correct": false, "feedback": "288 is the number of samples per day for just ONE point at 5-minute intervals. You need to multiply by the number of points being trended." }
+    ],
+    "explanation": "Understanding trend data volume is essential for sizing BAS server storage and network bandwidth. At 5-minute intervals, each analog point generates 288 records per day. Multiply by the number of trended points and plan storage per ASHRAE Guideline 13 data management recommendations.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-ctrl-009",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "BACnet Device Instance Number Range",
+    "scenario": "A multi-building campus has 5 buildings with approximately 100 BACnet devices per building. What device instance numbering scheme is appropriate?",
+    "hint": "BACnet device instances range from 0 to 4,194,303. Using a structured numbering scheme (e.g., building number x 10,000 + device number) simplifies troubleshooting and expansion.",
+    "options": [
+      { "text": "Sequential 1-500 across all buildings", "value": "1-500", "correct": false, "feedback": "Sequential numbering works but provides no structure. You cannot tell which building a device belongs to from its instance number. This makes troubleshooting difficult on a large campus." },
+      { "text": "Building 1: 10001-10999, Building 2: 20001-20999, etc.", "value": "structured", "correct": true, "feedback": "Correct! A structured scheme using building prefix (10000, 20000, etc.) with device numbers allows easy identification and leaves room for growth. Each building can hold up to 999 devices." },
+      { "text": "Random numbers between 1 and 4,194,303", "value": "random", "correct": false, "feedback": "Random numbering is chaotic. There is no way to identify which building or system a device belongs to without looking up a cross-reference. This makes troubleshooting nearly impossible on a large campus." },
+      { "text": "All devices set to instance 1", "value": "all-1", "correct": false, "feedback": "Device instances must be globally unique across the entire BACnet internetwork. Duplicate instances cause routing conflicts and make devices unreachable. This violates ASHRAE 135." }
+    ],
+    "explanation": "BACnet device instance planning is a critical part of BAS design. Structured numbering schemes make devices identifiable by building and system, simplifying operations and troubleshooting. ASHRAE 135 requires unique instances across the entire network.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-010",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Outdoor Air Damper Sizing for Minimum Ventilation",
+    "scenario": "An AHU handles 10,000 CFM total supply air. ASHRAE 62.1 calculations require 2,000 CFM minimum outdoor air. The available duct static at the damper location is 0.5 inches W.C. What is the correct minimum outdoor air damper size?",
+    "hint": "For controllability, size the minimum OA damper to create 0.2-0.5 inches W.C. pressure drop at design minimum airflow. Use velocity = CFM / Area and target 1500-2500 FPM for good mixing.",
+    "options": [
+      { "text": "12 inches x 12 inches (1 sq ft)", "value": "1sqft", "correct": false, "feedback": "1 sq ft at 2,000 CFM creates 2,000 FPM velocity and approximately 0.25 inches W.C. drop. While velocity is acceptable, the damper may be too small for proper mixing and modulation." },
+      { "text": "16 inches x 16 inches (1.78 sq ft)", "value": "1.78sqft", "correct": true, "feedback": "Correct! 1.78 sq ft gives approximately 1,125 FPM at 2,000 CFM with about 0.1 inches W.C. drop. This provides good control authority while allowing proper air mixing. Select a standard damper size close to this value." },
+      { "text": "24 inches x 24 inches (4 sq ft)", "value": "4sqft", "correct": false, "feedback": "4 sq ft at 2,000 CFM creates only 500 FPM velocity. The damper operates nearly closed at minimum OA, providing poor controllability and inaccurate minimum airflow delivery." },
+      { "text": "36 inches x 36 inches (9 sq ft)", "value": "9sqft", "correct": false, "feedback": "9 sq ft is drastically oversized. At 2,000 CFM the damper operates at less than 10% open, making accurate minimum outdoor air control impossible." }
+    ],
+    "explanation": "Minimum outdoor air damper sizing is critical for energy and IAQ. Oversized dampers cannot accurately control minimum ventilation. Dedicated minimum OA dampers, sized separately from the economizer damper, provide better control per ASHRAE Guideline 36.",
+    "xpReward": 65
+  },
+  {
+    "id": "si-ctrl-011",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "VFD Speed Range for Fan Application",
+    "scenario": "A supply fan VFD must modulate from design airflow (10,000 CFM) down to minimum airflow (3,000 CFM) for a VAV system. Using the fan affinity laws (flow is proportional to speed), what minimum VFD speed percentage is required?",
+    "hint": "Fan affinity law: Flow1/Flow2 = Speed1/Speed2. If design is 100% speed at 10,000 CFM, solve for speed at 3,000 CFM.",
+    "options": [
+      { "text": "10% speed", "value": "10", "correct": false, "feedback": "10% speed would deliver approximately 1,000 CFM — far below the 3,000 CFM minimum required. The system would not meet minimum ventilation requirements." },
+      { "text": "20% speed", "value": "20", "correct": false, "feedback": "20% speed delivers approximately 2,000 CFM — still below the required 3,000 CFM minimum. The fan would not maintain adequate duct static pressure." },
+      { "text": "30% speed", "value": "30", "correct": true, "feedback": "Correct! 3,000/10,000 = 0.30 = 30% speed. Per the fan affinity law, flow is directly proportional to speed. The VFD minimum speed should be set to 30% to deliver minimum required airflow." },
+      { "text": "50% speed", "value": "50", "correct": false, "feedback": "50% speed delivers 5,000 CFM. While the system would work, it wastes significant fan energy because the speed is higher than necessary for minimum airflow." }
+    ],
+    "explanation": "VFD minimum speed must be calculated using fan affinity laws to deliver minimum required airflow. Setting it too low risks ventilation code violations; too high wastes energy. ASHRAE 90.1 requires VFD control for VAV fans, and Guideline 36 specifies minimum speed based on airflow requirements.",
+    "xpReward": 75
+  },
+  {
+    "id": "si-ctrl-012",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Control Panel Power Supply Sizing",
+    "scenario": "A DDC control panel contains: 1 controller drawing 15 watts, 4 valve actuators at 10 watts each, 2 damper actuators at 15 watts each, and 6 sensors at 0.5 watts each. The 24VAC power supply must handle this load with a 25% safety factor. What minimum VA rating is needed?",
+    "hint": "Sum all loads in watts. For 24VAC systems, watts approximately equals VA for resistive loads. Apply 25% safety factor: required VA = total watts x 1.25.",
+    "options": [
+      { "text": "75 VA", "value": "75", "correct": false, "feedback": "75 VA is insufficient. Total load alone is 88 watts (15 + 40 + 30 + 3). Without safety factor, this already exceeds 75 VA and would cause the transformer to overheat." },
+      { "text": "100 VA", "value": "100", "correct": false, "feedback": "100 VA is close but does not include the 25% safety factor. Total load: 88W x 1.25 = 110 VA required. Running at 88% capacity risks thermal issues and does not leave room for expansion." },
+      { "text": "110 VA", "value": "110", "correct": true, "feedback": "Correct! Total load: 15 + (4x10) + (2x15) + (6x0.5) = 88 watts. With 25% safety: 88 x 1.25 = 110 VA. Select a standard 120 VA transformer as the nearest available size." },
+      { "text": "200 VA", "value": "200", "correct": false, "feedback": "200 VA is significantly oversized for an 88-watt load. While not harmful, it wastes money and panel space. The 25% safety factor provides adequate margin." }
+    ],
+    "explanation": "Power supply sizing must account for all connected loads plus a safety factor for inrush current and future expansion. Undersized transformers overheat and fail, taking down the entire control panel. 25% safety factor is standard practice per UL and NEC requirements.",
+    "xpReward": 80
+  },
+  {
+    "id": "si-ctrl-013",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "BACnet/IP Cable Maximum Length",
+    "scenario": "You are pulling Cat6 cable from a BACnet/IP controller in a mechanical room to a network switch in the IDF closet. Per UCSB spec and TIA-568 standards, what is the maximum total channel length including patch cords at both ends?",
+    "hint": "UCSB spec follows TIA-568 structured cabling standards. The total channel includes the permanent link (horizontal cable) plus patch cords at each end. The permanent link has a 90-meter limit.",
+    "options": [
+      { "text": "90 meters (295 feet)", "value": "90", "correct": false, "feedback": "90 meters is the maximum for the permanent horizontal link only. You must also account for patch cords at the controller end and the switch end, which adds up to 10 meters." },
+      { "text": "100 meters (328 feet)", "value": "100", "correct": true, "feedback": "Correct! Per UCSB spec and TIA-568, the total channel length is 100 meters maximum: 90 meters of permanent horizontal cable plus up to 10 meters of patch cords (combined at both ends)." },
+      { "text": "150 meters (492 feet)", "value": "150", "correct": false, "feedback": "150 meters exceeds the maximum channel length. Beyond 100 meters, signal attenuation and crosstalk cause communication errors, dropped packets, and unreliable BACnet/IP operation." },
+      { "text": "300 meters (984 feet)", "value": "300", "correct": false, "feedback": "300 meters is three times the maximum allowed. Ethernet signals cannot reliably reach this distance on copper cable. For distances over 100m, fiber optic cable or network switches are required." }
+    ],
+    "explanation": "BACnet/IP cabling per UCSB spec follows TIA-568: 90m permanent link + 10m patch cords = 100m total channel maximum. This applies to Cat5e, Cat6, and Cat6A. For runs exceeding 100m, use fiber optic cable or add an intermediate network switch. Always test installed cable with a certification tester to verify performance.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-ctrl-014",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "CO2 Sensor Accuracy and Range",
+    "scenario": "You are specifying a CO2 sensor for demand-controlled ventilation in a conference room per ASHRAE 62.1 and UCSB spec. The sensor must measure indoor CO2 levels to modulate outdoor air dampers. What sensor range and accuracy does the UCSB spec require?",
+    "hint": "UCSB spec defines both the measurement range and accuracy tolerance for CO2 sensors used in DCV applications. Normal indoor CO2 ranges from 400-1200 ppm, but the sensor range must be wider.",
+    "options": [
+      { "text": "0-1000 ppm, ±50 ppm accuracy", "value": "0-1000-50", "correct": false, "feedback": "0-1000 ppm range is too narrow. Crowded conference rooms can exceed 1000 ppm, and the sensor would max out and lose control authority. Also, ±50 ppm exceeds the UCSB spec accuracy requirement." },
+      { "text": "0-2000 ppm, ±30 ppm accuracy", "value": "0-2000-30", "correct": true, "feedback": "Correct! Per UCSB spec, CO2 sensors must have a 0-2000 ppm range with ±30 ppm accuracy. This range covers all indoor scenarios including heavily occupied spaces, and the accuracy ensures precise DCV control." },
+      { "text": "0-5000 ppm, ±100 ppm accuracy", "value": "0-5000-100", "correct": false, "feedback": "0-5000 ppm range is designed for industrial monitoring, not HVAC DCV. The wider range reduces resolution in the critical 400-1200 ppm control band. ±100 ppm accuracy is too loose for effective ventilation control." },
+      { "text": "400-1200 ppm, ±10 ppm accuracy", "value": "400-1200-10", "correct": false, "feedback": "While ±10 ppm accuracy is excellent, the 400-1200 ppm range is too narrow. A packed room can reach 1500+ ppm, and the sensor would saturate. UCSB spec requires 0-2000 ppm range." }
+    ],
+    "explanation": "CO2 sensor spec per UCSB: 0-2000 ppm range, ±30 ppm accuracy. ASHRAE 62.1 DCV uses the differential between indoor and outdoor CO2 (typically outdoor is ~400 ppm). At ±30 ppm, the sensor can reliably distinguish 100-ppm changes that trigger ventilation adjustments. Sensors should be wall-mounted at breathing height, away from doors and diffusers.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-ctrl-015",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Temperature Sensor Duct Probe Insertion Depth",
+    "scenario": "You are installing a 10K ohm duct-mounted temperature sensor in a 24-inch tall rectangular supply air duct. Per UCSB spec, how far into the duct should the sensing probe extend?",
+    "hint": "UCSB spec specifies the probe insertion depth as a percentage of the duct dimension. The goal is to measure air temperature in the representative flow stream, not in the boundary layer near the duct wall.",
+    "options": [
+      { "text": "2 inches (flush with duct wall)", "value": "2", "correct": false, "feedback": "A probe barely penetrating the duct wall reads the boundary layer temperature, which can be several degrees different from the bulk air stream. This gives inaccurate readings for control." },
+      { "text": "6-12 inches (25-50% of duct height)", "value": "6-12", "correct": true, "feedback": "Correct! Per UCSB spec, the duct temperature probe should extend 25-50% into the duct dimension. For a 24-inch duct, that is 6 to 12 inches. This places the sensor in the representative air stream for accurate temperature measurement." },
+      { "text": "18 inches (75% of duct height)", "value": "18", "correct": false, "feedback": "75% insertion extends the probe too far, approaching the opposite wall's boundary layer. It also creates a longer lever arm that vibrates in high-velocity air streams, potentially causing sensor fatigue failure." },
+      { "text": "24 inches (spanning the full duct)", "value": "24", "correct": false, "feedback": "A full-span probe is an averaging sensor, not a single-point probe. While averaging sensors exist, UCSB spec calls for single-point probes inserted 25-50% for standard duct temperature applications." }
+    ],
+    "explanation": "Duct temperature probe insertion per UCSB spec: 25-50% of the duct dimension. The sensor type is a 10K ohm thermistor. Too shallow reads boundary layer air; too deep risks vibration damage and approaches the opposite boundary layer. For ducts over 36 inches, consider averaging sensors spanning the full cross-section.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-ctrl-016",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Humidity Sensor Accuracy — Indoor vs. Outdoor",
+    "scenario": "You are specifying humidity sensors for a laboratory HVAC system that requires tight humidity control. Per UCSB spec, one sensor is in the conditioned space and one is on the outdoor air intake. What accuracy is required for each location?",
+    "hint": "UCSB spec has different accuracy requirements for indoor sensors versus outdoor and duct-mounted sensors. Indoor spaces typically need tighter control, so sensors must be more accurate.",
+    "options": [
+      { "text": "Indoor: ±1%, Outdoor: ±2%", "value": "1-2", "correct": true, "feedback": "Correct! Per UCSB spec, indoor humidity sensors must be ±1% accuracy, while outdoor and duct-mounted sensors require ±2% accuracy. The tighter indoor spec ensures precise space humidity control." },
+      { "text": "Indoor: ±2%, Outdoor: ±2%", "value": "2-2", "correct": false, "feedback": "±2% for both locations does not meet the UCSB spec for indoor sensors. Indoor spaces requiring humidity control need ±1% accuracy to maintain the tighter tolerance demanded by the controlled environment." },
+      { "text": "Indoor: ±3%, Outdoor: ±5%", "value": "3-5", "correct": false, "feedback": "±3% indoor and ±5% outdoor are far too loose for HVAC humidity control. A ±3% sensor in a lab set to 50% RH could read anywhere from 47% to 53%, making precision control impossible." },
+      { "text": "Indoor: ±0.5%, Outdoor: ±1%", "value": "0.5-1", "correct": false, "feedback": "±0.5% accuracy exceeds the UCSB spec requirement and is typically only found in laboratory-grade instruments. Standard HVAC sensors meeting ±1% indoor per UCSB spec are sufficient for building humidity control." }
+    ],
+    "explanation": "Humidity sensor accuracy per UCSB spec: indoor = ±1%, outdoor/duct = ±2%. Indoor sensors need tighter accuracy because they directly control the occupied space conditions. Outdoor sensors inform economizer and dehumidification algorithms where ±2% is adequate. All humidity sensors should include temperature compensation and be field-calibrated at commissioning.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-ctrl-017",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Acoustic Liner R-Value Near AHU",
+    "scenario": "You are specifying duct acoustic liner for the supply duct leaving an air handling unit. Per UCSB spec, what minimum R-value is required for acoustic liner within 20 feet of the AHU, and what insulation types are acceptable?",
+    "hint": "UCSB spec has specific requirements for acoustic duct liner near air handling units, including a minimum R-value and acceptable insulation types (ADL series). This zone has the highest noise levels.",
+    "options": [
+      { "text": "R-4.2, any DW type", "value": "4.2", "correct": false, "feedback": "R-4.2 is for exposed duct in conditioned spaces. The acoustic zone near an AHU requires higher thermal and acoustic performance than standard duct insulation." },
+      { "text": "R-6, ADL-A or ADL-B only", "value": "6", "correct": false, "feedback": "R-6 is below the UCSB spec minimum for acoustic liner near AHUs. The higher R-value requirement ensures adequate thermal performance alongside the acoustic function." },
+      { "text": "R-8, ADL-A, ADL-B, or ADL-C", "value": "8", "correct": true, "feedback": "Correct! Per UCSB spec, acoustic duct liner within 20 feet of the AHU requires R-8 minimum insulation value, using types ADL-A, ADL-B, or ADL-C. This provides both noise reduction and thermal insulation in the highest-noise zone." },
+      { "text": "R-12, ADL-A only", "value": "12", "correct": false, "feedback": "R-12 is the requirement for exterior ducts in climate zones 5-8, not acoustic liner. R-8 is the correct value for acoustic liner near AHUs, and all three ADL types are acceptable." }
+    ],
+    "explanation": "Acoustic duct liner per UCSB spec: R-8 minimum within 20 feet of AHU discharge, using ADL-A, ADL-B, or ADL-C type insulation. This zone has the highest fan noise and turbulence, requiring both acoustic absorption (NRC 0.70 minimum) and thermal performance. Beyond 20 feet, standard duct insulation (DW types) is acceptable based on the duct location (conditioned vs. unconditioned space).",
+    "xpReward": 50
+  },
+  {
+    "id": "si-ctrl-018",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Pressure-Independent Valve Rangeability",
+    "scenario": "You are specifying pressure-independent control valves (PICVs) for VAV reheat coils. Per UCSB spec, what minimum rangeability and pressure rating must the valves have?",
+    "hint": "UCSB spec defines rangeability as the ratio of maximum to minimum controllable flow. Higher rangeability means the valve can modulate accurately at very low flow rates, which is critical at part-load conditions.",
+    "options": [
+      { "text": "50:1 rangeability, 150 PSI", "value": "50-150", "correct": false, "feedback": "50:1 rangeability is too low for modern HVAC control. At part-load, a 50:1 valve loses control authority at 2% of rated flow, causing temperature hunting in the zone. The pressure rating also falls short." },
+      { "text": "90:1 rangeability, 200 PSI", "value": "90-200", "correct": true, "feedback": "Correct! Per UCSB spec, PICVs must have 90:1 minimum rangeability and 200 PSI minimum pressure rating. The 90:1 ratio means accurate flow control from 100% down to about 1.1% of rated capacity." },
+      { "text": "100:1 rangeability, 300 PSI", "value": "100-300", "correct": false, "feedback": "100:1 rangeability exceeds the 90:1 minimum and 300 PSI exceeds the 200 PSI minimum. While these specs are acceptable, they are not the minimum required by UCSB spec." },
+      { "text": "30:1 rangeability, 125 PSI", "value": "30-125", "correct": false, "feedback": "30:1 rangeability is severely inadequate for modern building controls. This valve loses control authority at 3.3% of rated flow, making precise zone temperature control impossible at low loads." }
+    ],
+    "explanation": "PICV specs per UCSB: 90:1 minimum rangeability, 200 PSI minimum pressure rating. PICVs combine a differential pressure regulator with a control valve, maintaining set flow regardless of system pressure fluctuations. The 90:1 rangeability ensures precise modulation even at very low loads, which is where most buildings operate 80% of the time.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-ctrl-019",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Outside Air Duct Insulation Inside Building",
+    "scenario": "An outside air intake duct runs 40 feet inside a building from the louver to the AHU mixing box. Per UCSB spec, what R-value and insulation type is required for outside air intake ducts routed inside a building?",
+    "hint": "Outside air ducts carry unconditioned air at outdoor temperatures through the building interior. The insulation must prevent condensation in cooling season and heat loss in heating season.",
+    "options": [
+      { "text": "R-4.2, DW-C with black PSK", "value": "4.2", "correct": false, "feedback": "R-4.2 is for supply ducts exposed in conditioned spaces. Outside air ducts carry much colder (or hotter) air than supply ducts, creating a larger temperature differential that requires more insulation." },
+      { "text": "R-8, DW-A or DW-B with FSK/PSK", "value": "8", "correct": true, "feedback": "Correct! Per UCSB spec, outside air intake ducts inside the building require R-8 minimum insulation using DW-A or DW-B type with FSK or PSK vapor barrier jacket. The vapor barrier prevents condensation when carrying cold outside air through warm interior spaces." },
+      { "text": "R-12, DW-B with metal jacket", "value": "12", "correct": false, "feedback": "R-12 with metal jacket is for supply/return ducts located OUTSIDE the building in climate zones 5-8. OA intake ducts inside the building require R-8 with FSK/PSK jacket." },
+      { "text": "No insulation required — it is intake air", "value": "none", "correct": false, "feedback": "Outside air ducts absolutely require insulation. In winter, the cold duct surface would cause condensation and energy loss. In summer, the hot/humid air would sweat the duct exterior, damaging ceilings and promoting mold growth." }
+    ],
+    "explanation": "Outside air intake duct inside building per UCSB spec: R-8 with DW-A or DW-B insulation and FSK/PSK vapor barrier jacket. These ducts carry outdoor air at ambient temperature through conditioned space, creating significant temperature differentials year-round. The vapor barrier is critical — without it, moisture from warm humid indoor air condenses on the cold duct surface in winter, or humid outdoor air condenses on the duct exterior in summer.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-ctrl-020",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Seismic Bracing Exemption — Light Equipment",
+    "scenario": "A controls technician is mounting various equipment to walls and ceilings. Per UCSB spec, equipment below a certain weight is exempt from seismic bracing requirements. What is the weight threshold for equipment seismic bracing exemption?",
+    "hint": "UCSB spec defines a weight below which equipment does not require seismic bracing, regardless of location. There is also a higher weight threshold with a center-of-mass height condition.",
+    "options": [
+      { "text": "10 lbs or less", "value": "10", "correct": false, "feedback": "10 lbs is too conservative. Many standard controllers, sensors, and small devices weigh more than 10 lbs but are still exempt from seismic bracing per UCSB spec." },
+      { "text": "20 lbs or less", "value": "20", "correct": true, "feedback": "Correct! Per UCSB spec, equipment weighing 20 lbs or less is exempt from seismic bracing. Additionally, equipment up to 400 lbs is exempt if its center of mass is 4 feet or less above the floor." },
+      { "text": "50 lbs or less", "value": "50", "correct": false, "feedback": "50 lbs exceeds the unconditional exemption threshold. Equipment between 20 and 400 lbs has a conditional exemption based on center-of-mass height (must be 4 feet or less above floor)." },
+      { "text": "75 lbs or less", "value": "75", "correct": false, "feedback": "75 lbs is the threshold for in-line duct equipment being considered braced by the duct itself. The general equipment exemption is lower at 20 lbs." }
+    ],
+    "explanation": "Equipment seismic bracing per UCSB spec: unconditionally exempt at 20 lbs or less. Equipment up to 400 lbs is conditionally exempt if its center of mass is 4 feet or less above the floor (e.g., floor-mounted equipment). Above 400 lbs, seismic bracing is always required regardless of mounting configuration. This three-tier approach balances safety with practical installation requirements.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-021",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "UCSB Fire Smoke Damper Actuation Type",
+    "scenario": "On the UCSB San Benito Student Housing project, fire smoke dampers (FSD) are Ruskin FSD60 units installed at rated fire/smoke barriers. Per the equipment schedule, what actuation method do these dampers use?",
+    "hint": "Fire smoke dampers (FSD) differ from fire-only dampers (FD) in their actuation method. FSDs must respond to both fire and smoke detection signals from the fire alarm system, requiring active control rather than passive thermal response.",
+    "options": [
+      { "text": "Fusible link only (165°F melt point)", "value": "fusible", "correct": false, "feedback": "Fusible links are used on fire-only dampers (FD), not fire smoke dampers (FSD). FSDs must close on smoke detection signals before heat reaches the damper, which a fusible link cannot do." },
+      { "text": "Motorized actuator, 120V", "value": "motorized-120", "correct": true, "feedback": "Correct! Per the UCSB schedule, FSD dampers use motorized actuators at 120V. The motor drives the damper closed on a signal from the fire alarm system (smoke detection) and can be reset by the BAS after the alarm clears." },
+      { "text": "Pneumatic actuator, 20 PSI", "value": "pneumatic", "correct": false, "feedback": "Pneumatic actuators are used in some older buildings with compressed air control systems, but the UCSB project specifies 120V motorized actuators for the fire smoke dampers. Modern buildings use electric actuators for reliability." },
+      { "text": "Spring-return, no power required", "value": "spring", "correct": false, "feedback": "While FSDs do have spring-return fail-safe mechanisms, they require a motorized actuator (120V per the schedule) to hold open during normal operation. The spring closes the damper on power loss as a fail-safe. But the primary actuation method is motorized." }
+    ],
+    "explanation": "The Ruskin FSD60 fire smoke dampers at UCSB use motorized actuators at 120V with 0.1\" WG pressure drop. Unlike fire-only dampers (FD) that use fusible links, FSDs must actively close on smoke detection signals from the fire alarm system — smoke can travel through ducts long before temperatures reach fusible link melt points. The motorized actuator holds the damper open during normal operation and drives it closed on a fire alarm signal. These dampers also connect to emergency power to ensure operation during a fire event.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-ctrl-022",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "UCSB Air Separator Connection Size",
+    "scenario": "On the UCSB San Benito project, the Spirovent VDT-1400FA air separator (AS-1) serves the main heating hot water loop at 750 GPM. What pipe connection size is specified for this separator?",
+    "hint": "Air separators must be sized for the full system flow rate. The connection size corresponds to the main header pipe size at the point of connection. Undersizing causes excessive pressure drop and reduced air removal efficiency.",
+    "options": [
+      { "text": "10 inches", "value": "10", "correct": false, "feedback": "10 inches would create excessive velocity through the separator at 750 GPM (about 3.0 fps in a 10-inch pipe). Air separators work best at low velocities to allow air bubbles to coalesce and rise." },
+      { "text": "12 inches", "value": "12", "correct": false, "feedback": "12 inches is close but not what the schedule specifies. The separator body is 16\" x 52\" — check the connection size in the equipment schedule, which may differ from the body diameter." },
+      { "text": "14 inches", "value": "14", "correct": true, "feedback": "Correct! Per the UCSB schedule, AS-1 has 14-inch connections on a 16\" x 52\" body. At 750 GPM through 14-inch pipe, the velocity is about 1.6 fps — within the ideal range for air separation effectiveness." },
+      { "text": "16 inches", "value": "16", "correct": false, "feedback": "16 inches is the body diameter, not the connection size. The connections (14 inches) are smaller than the body (16 inches) because the separator body expands to slow the water velocity for better air removal." }
+    ],
+    "explanation": "The Spirovent VDT-1400FA at UCSB has 14-inch flanged connections on a 16\" x 52\" body, handling 750 GPM at 3 ft WG pressure drop. The body is larger than the connections to reduce water velocity inside the separator, giving air bubbles more time to coalesce and rise to the collection chamber. At 750 GPM through 14-inch pipe, velocity is about 1.6 fps — ideal for tangential air separation technology.",
+    "xpReward": 50
+  },
+  {
+    "id": "si-ctrl-023",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "UCSB AWHP Module Configuration",
+    "scenario": "The UCSB San Benito project uses JCI Quantech QTH10035PJP air-to-water heat pumps (AWHP-1/2/3/4). Each unit has multiple compressor modules for capacity staging. Per the equipment schedule, how many modules does each AWHP unit contain?",
+    "hint": "Air-to-water heat pumps use modular compressor sections for efficient part-load operation. More modules means finer capacity staging. The total capacity of 1,670 MBH is divided among the modules.",
+    "options": [
+      { "text": "2 modules", "value": "2", "correct": false, "feedback": "2 modules would limit staging to 50% and 100% capacity. At 1,670 MBH total, each module would be 835 MBH — very large individual stages that reduce efficiency at part load." },
+      { "text": "4 modules", "value": "4", "correct": true, "feedback": "Correct! Per the UCSB schedule, each AWHP unit has 4 compressor modules, enabling capacity staging at approximately 25%, 50%, 75%, and 100%. This allows the BAS to closely match heating output to the building load." },
+      { "text": "6 modules", "value": "6", "correct": false, "feedback": "6 modules would provide finer staging but the UCSB schedule specifies 4 modules per unit. With 4 AWHP units x 4 modules each, the plant has 16 total stages of capacity." },
+      { "text": "8 modules", "value": "8", "correct": false, "feedback": "8 modules per unit would be unusual for this capacity range. The schedule specifies 4 modules, which is the standard configuration for the JCI Quantech QTH10035PJP." }
+    ],
+    "explanation": "Each AWHP unit at UCSB has 4 compressor modules per the equipment schedule, providing 25% capacity increments. With 4 AWHP units (each 1,670 MBH), the total plant has 16 stages of capacity (4 units x 4 modules = 16 steps from ~417 MBH to 6,680 MBH). The BAS sequences the modules across all four units to maintain even runtime hours and optimal efficiency. At 34°F ambient with EWT 100°F / LWT 120°F, each unit produces its rated 1,670 MBH.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-ctrl-024",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "UCSB Return Air Duct Size for 1520 CFM",
+    "scenario": "On the UCSB San Benito plans, a return air system serves a common area requiring 1,520 CFM. Per the duct schedule, what duct size is specified for this return air application?",
+    "hint": "Return air ducts in occupied spaces must keep velocity low to minimize noise. The plans show specific duct sizes for each CFM value — check the RA (Return Air) duct schedule for 1,520 CFM.",
+    "options": [
+      { "text": "14\"x14\" RA", "value": "14x14", "correct": false, "feedback": "A 14\"x14\" duct has 196 sq inches of cross section. At 1,520 CFM, velocity would be approximately 1,117 FPM — acceptable for supply but potentially noisy for a return in an occupied common area." },
+      { "text": "16\"x16\" RA", "value": "16x16", "correct": false, "feedback": "A 16\"x16\" duct has 256 sq inches. At 1,520 CFM, velocity would be approximately 855 FPM — still higher than the 600-800 FPM typical for return air in occupied spaces." },
+      { "text": "22\"x22\" RA", "value": "22x22", "correct": true, "feedback": "Correct! Per the UCSB plans, RA22X22-1520 specifies a 22\"x22\" duct for 1,520 CFM return air. This provides 484 sq inches of cross section, giving approximately 452 FPM velocity — well within the quiet range for occupied-space return air." },
+      { "text": "32\"x32\" RA", "value": "32x32", "correct": false, "feedback": "A 32\"x32\" duct at 1,520 CFM would result in only 213 FPM velocity — unnecessarily oversized. The plans specify 22\"x22\" as the appropriate size for this CFM." }
+    ],
+    "explanation": "The UCSB plans specify RA22X22-1520 — a 22\"x22\" return air duct for 1,520 CFM. Return air ducts are sized larger than supply ducts for the same CFM because return paths must operate at lower velocities (typically 400-600 FPM) to minimize noise in occupied spaces. At 452 FPM through the 22\"x22\" duct, noise generation is well below the NC-35 criteria typical for residential and common spaces.",
+    "xpReward": 45
+  },
+  {
+    "id": "si-ctrl-025",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "UCSB Generator Room Exhaust Height",
+    "scenario": "On the UCSB San Benito project, the generator room exhaust outlet must terminate at a minimum height above grade. Per the mechanical plans, what is this minimum height?",
+    "hint": "Generator exhaust contains carbon monoxide and diesel particulates. The exhaust must terminate high enough above pedestrian level to ensure adequate dilution before reaching breathing zone. The plans also specify a minimum distance from property lines.",
+    "options": [
+      { "text": "5 feet above grade", "value": "5", "correct": false, "feedback": "5 feet is at breathing zone height for most adults. Generator exhaust at this height would create a direct toxic fume exposure risk for anyone walking near the building." },
+      { "text": "8 feet above grade", "value": "8", "correct": false, "feedback": "8 feet is still too low per the UCSB plans. While above head height, 8 feet does not provide adequate dispersion distance for generator exhaust fumes, especially near building entries or operable windows." },
+      { "text": "10 feet above grade", "value": "10", "correct": true, "feedback": "Correct! Per the UCSB mechanical plans, generator room exhaust must terminate a minimum of 10 feet above grade. The plans also require the exhaust to be at least 10 feet from the property line to prevent fume exposure on adjacent properties." },
+      { "text": "15 feet above grade", "value": "15", "correct": false, "feedback": "15 feet exceeds the UCSB minimum requirement. While a higher termination provides better dispersion, the plans specify 10 feet as the minimum height above grade." }
+    ],
+    "explanation": "Generator exhaust at UCSB must terminate a minimum of 10 feet above grade and 10 feet from the property line. Generator exhaust contains carbon monoxide (CO), nitrogen oxides (NOx), and diesel particulate matter — all hazardous at ground level. The 10-foot height ensures exhaust plume dilution before reaching the breathing zone. The generator room itself requires a minimum of 72 sq ft free area opening for combustion and ventilation air.",
+    "xpReward": 40
+  }
+]

@@ -1,0 +1,571 @@
+[
+  {
+    "id": "wm-pipe-001",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Low-Pressure Steam System",
+    "description": "A low-pressure steam heating system has been installed in a commercial building. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "Steam boiler with safety relief valve",
+      "Steam supply header with gate valves",
+      "Steam supply piping to terminal units",
+      "Condensate return piping to receiver",
+      "Condensate pump and receiver tank"
+    ],
+    "missingItems": [
+      {
+        "name": "Steam traps at each terminal unit",
+        "explanation": "Steam traps are essential to remove condensate from the steam space while preventing live steam from passing into the return. Without traps, condensate backs up into steam piping causing water hammer and loss of heating capacity. Required per ASME B31.1."
+      },
+      {
+        "name": "Dirt leg (strainer) ahead of each steam trap",
+        "explanation": "A dirt leg or strainer upstream of each steam trap catches pipe scale, weld slag, and debris that would clog the trap mechanism. Required by ASHRAE and manufacturer installation standards."
+      }
+    ],
+    "distractors": [
+      "Vacuum breaker on supply header",
+      "Desuperheater valve",
+      "Flash tank on condensate return",
+      "Feedwater deaerator"
+    ],
+    "explanation": "Steam traps and dirt legs are critical components in any steam system. Missing traps cause water hammer and heating failure; missing strainers cause trap failure within months of startup.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-pipe-002",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Hydronic Heating Piping",
+    "description": "A two-pipe hydronic heating system has been installed to serve multiple fan coil units. Identify what's missing.",
+    "presentItems": [
+      "Hot water boiler with circulator pump",
+      "Supply and return piping to fan coils",
+      "Isolation valves at each fan coil",
+      "Balancing valves on return branches",
+      "Pressure relief valve at boiler"
+    ],
+    "missingItems": [
+      {
+        "name": "Expansion tank",
+        "explanation": "Hydronic systems are closed loops where water expands as it heats. An expansion tank absorbs this volume change and prevents dangerous pressure buildup that would open the relief valve. Required per ASME B31.9."
+      },
+      {
+        "name": "Air separator or automatic air vent",
+        "explanation": "Dissolved air in hot water comes out of solution as temperature rises. An air separator removes entrained air to prevent noise (gurgling), air-bound circuits, and corrosion from oxygen. Required per ASHRAE Handbook — HVAC Systems."
+      }
+    ],
+    "distractors": [
+      "Variable frequency drive on pump",
+      "Plate heat exchanger",
+      "Differential pressure bypass valve",
+      "Chemical treatment pot feeder"
+    ],
+    "explanation": "Every closed hydronic system needs an expansion tank and air removal device. Without an expansion tank, pressure spikes cause relief valve discharge and water loss. Without air removal, the system becomes noisy, inefficient, and corrodes from within.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-pipe-003",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Medical Gas Oxygen System",
+    "description": "A medical gas oxygen distribution system has been installed in a hospital wing. Check for missing components.",
+    "presentItems": [
+      "Bulk liquid oxygen supply with vaporizer",
+      "Type L copper main supply piping",
+      "Zone valve boxes at each floor",
+      "Outlet stations in patient rooms",
+      "Pressure alarms at nurse stations"
+    ],
+    "missingItems": [
+      {
+        "name": "Line pressure regulator at each zone",
+        "explanation": "Medical gas systems require pressure regulation at each zone to maintain consistent 50 PSI delivery pressure regardless of supply fluctuations. Without zone regulators, pressure variations affect medical equipment operation. Required per NFPA 99 Section 5.1.4."
+      },
+      {
+        "name": "Source valve and reserve supply with automatic switchover",
+        "explanation": "NFPA 99 requires a primary and reserve gas supply with automatic switchover to ensure uninterrupted supply. A single supply source without backup is a life-safety violation. Required per NFPA 99 Section 5.1.3."
+      },
+      {
+        "name": "Area alarm panels in each zone",
+        "explanation": "Area alarm panels must be installed to monitor line pressure in each medical gas zone. These alarms alert staff to pressure drops, high pressure, or changeover events. Required per NFPA 99 Section 5.1.9."
+      }
+    ],
+    "distractors": [
+      "Vacuum pump station",
+      "Medical air compressor",
+      "Nitrogen manifold",
+      "WAGD (waste anesthetic gas disposal) system"
+    ],
+    "explanation": "Medical gas systems have strict redundancy and monitoring requirements under NFPA 99. Every zone needs pressure regulation, the supply must have automatic switchover to a reserve, and alarm panels must be present to alert staff to system issues.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-004",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Boiler Room Piping",
+    "description": "A commercial hot water boiler room has been piped. Review the installation and identify missing components.",
+    "presentItems": [
+      "Two hot water boilers with isolation valves",
+      "Primary pumps piped to each boiler",
+      "Common supply and return headers",
+      "Gas piping with shutoff valves and drip legs",
+      "Combustion air louvers sized for BTU input",
+      "Boiler stack/flue connections"
+    ],
+    "missingItems": [
+      {
+        "name": "Low water cutoff (LWCO) on each boiler",
+        "explanation": "Low water cutoffs prevent boiler operation when water level drops below a safe minimum. Firing a boiler without adequate water causes overheating and potential catastrophic failure. Required per ASME CSD-1 and local boiler codes."
+      },
+      {
+        "name": "Backflow preventer on makeup water line",
+        "explanation": "A backflow preventer on the boiler makeup water connection prevents potentially contaminated boiler water (with treatment chemicals) from back-siphoning into the potable water supply. Required by plumbing codes and ASME B31.9."
+      }
+    ],
+    "distractors": [
+      "Condensate economizer",
+      "Oxygen trim controller",
+      "Blowdown separator tank",
+      "Combustion air preheater"
+    ],
+    "explanation": "Boiler rooms require low water cutoffs for boiler protection and backflow prevention for potable water safety. Both are code-mandated safety devices that protect equipment and building occupants.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-pipe-005",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Chiller Plant Piping",
+    "description": "A water-cooled chiller plant has been piped for a commercial office building. Identify the missing components.",
+    "presentItems": [
+      "Centrifugal chiller with evaporator and condenser",
+      "Chilled water pumps with isolation valves",
+      "Condenser water pumps with isolation valves",
+      "Chilled water supply and return headers",
+      "Condenser water piping to cooling tower",
+      "Pipe insulation with vapor barrier on chilled water"
+    ],
+    "missingItems": [
+      {
+        "name": "Strainer at chiller evaporator inlet",
+        "explanation": "A Y-strainer or basket strainer is required upstream of the chiller evaporator to catch debris that could foul the heat exchanger tubes. Fouled tubes reduce chiller efficiency and can cause tube failure. Required per manufacturer specifications and ASHRAE guidelines."
+      },
+      {
+        "name": "Flow switch or flow meter on evaporator",
+        "explanation": "A flow switch ensures minimum water flow through the evaporator before allowing the chiller to operate. Without flow verification, the evaporator can freeze (form an ice ball), causing catastrophic and expensive damage. Required per chiller manufacturer and ASHRAE guidelines."
+      }
+    ],
+    "distractors": [
+      "Variable primary bypass pipe",
+      "Waterside economizer heat exchanger",
+      "Glycol injection station",
+      "Condenser tube cleaning system"
+    ],
+    "explanation": "Chiller plants require strainers to protect expensive heat exchangers and flow switches to prevent freeze damage. These two components are essential for chiller protection and long equipment life.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-pipe-006",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Cooling Tower Piping",
+    "description": "A cooling tower has been piped for a condenser water system. Check for missing components.",
+    "presentItems": [
+      "Cooling tower basin with float valve for makeup water",
+      "Condenser water supply and return piping",
+      "Condenser water pumps with strainers",
+      "Isolation valves at tower connections",
+      "Tower bypass valve for cold weather operation"
+    ],
+    "missingItems": [
+      {
+        "name": "Chemical treatment system (blowdown controller)",
+        "explanation": "Cooling towers concentrate minerals through evaporation. Without chemical treatment and controlled blowdown, scale builds up on condenser tubes, reducing heat transfer and increasing energy costs dramatically. Required per ASHRAE Guideline 12."
+      },
+      {
+        "name": "Basin drain and overflow piping",
+        "explanation": "The cooling tower basin needs a drain for seasonal shutdown and cleaning, plus an overflow pipe to prevent flooding during high-water events. Required per manufacturer installation guidelines and ASME B31.9."
+      }
+    ],
+    "distractors": [
+      "Variable speed fan drives",
+      "Basin heater for freeze protection",
+      "Side-stream filtration unit",
+      "Vibration isolation for tower fans"
+    ],
+    "explanation": "Cooling tower piping must include water treatment for scale and corrosion control, plus proper basin drain and overflow connections. Untreated condenser water is the leading cause of chiller efficiency loss.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-pipe-007",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Pump Station Assembly",
+    "description": "A base-mounted centrifugal pump station has been installed for a heating hot water system. Identify the missing items.",
+    "presentItems": [
+      "Base-mounted centrifugal pump on concrete pad",
+      "Suction piping with isolation valve",
+      "Discharge piping with isolation valve",
+      "Flexible pipe connectors at pump connections",
+      "Electrical connection to motor"
+    ],
+    "missingItems": [
+      {
+        "name": "Check valve on pump discharge",
+        "explanation": "A check valve on the discharge side prevents reverse flow through the pump when it shuts down. Without it, water flows backward through the idle pump, causing the impeller to spin in reverse and potentially damaging seals. Required per ASHRAE and ASME B31.9."
+      },
+      {
+        "name": "Pressure gauges on suction and discharge",
+        "explanation": "Suction and discharge pressure gauges are essential for monitoring pump performance, verifying head pressure, and diagnosing problems. Without them, pump issues cannot be identified without shutdown. Required per ASHRAE commissioning standards."
+      }
+    ],
+    "distractors": [
+      "Variable frequency drive",
+      "Seal water quench line",
+      "Vibration monitoring sensor",
+      "Automatic air vent at pump casing"
+    ],
+    "explanation": "Pump installations require check valves to prevent backflow and pressure gauges for monitoring performance. These basic accessories are essential for proper pump station operation and maintenance.",
+    "xpReward": 40
+  },
+  {
+    "id": "wm-pipe-008",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Pressure Reducing Valve Station",
+    "description": "A pressure reducing valve station has been installed to step down building water pressure from 125 PSI to 60 PSI. Check for missing components.",
+    "presentItems": [
+      "PRV with upstream and downstream isolation valves",
+      "Upstream strainer to protect PRV internals",
+      "Downstream pressure gauge reading 60 PSI",
+      "Piping properly supported and aligned"
+    ],
+    "missingItems": [
+      {
+        "name": "Pressure relief valve downstream of PRV",
+        "explanation": "A pressure relief valve must be installed downstream to protect against PRV failure. If the PRV fails open, full upstream pressure would be applied to downstream piping and equipment, causing potential rupture. Required per ASME B31.9 and plumbing codes."
+      },
+      {
+        "name": "Bypass line with globe valve",
+        "explanation": "A bypass line with a globe valve allows manual pressure control during PRV maintenance without shutting down the entire system. This is standard practice for any critical PRV station serving occupied buildings."
+      }
+    ],
+    "distractors": [
+      "Expansion tank downstream",
+      "Water hammer arrestor",
+      "Backflow preventer",
+      "Flow meter"
+    ],
+    "explanation": "PRV stations require a relief valve for overpressure protection if the PRV fails, and a bypass for maintenance continuity. These are standard accessories that protect the system and maintain service during maintenance.",
+    "xpReward": 55
+  },
+  {
+    "id": "wm-pipe-009",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Expansion Compensation",
+    "description": "A 200-foot straight run of 4-inch steel hot water piping (180°F operating temperature) has been installed. Identify what's missing.",
+    "presentItems": [
+      "Schedule 40 carbon steel pipe",
+      "Welded fittings and joints throughout",
+      "Pipe hangers at proper spacing",
+      "Pipe insulation with jacket"
+    ],
+    "missingItems": [
+      {
+        "name": "Expansion loop, offset, or expansion joint",
+        "explanation": "A 200-foot steel pipe run at 180°F will expand approximately 1.5 inches from a 70°F installation temperature. Without expansion compensation, thermal forces will stress joints, distort hangers, and potentially crack welds. Required per ASME B31.1 Section 119."
+      },
+      {
+        "name": "Anchors at calculated locations",
+        "explanation": "Pipe anchors are required to direct thermal expansion movement toward the expansion device and prevent uncontrolled movement. Without anchors, the expansion is unpredictable and may damage equipment connections. Required per ASME B31.1."
+      }
+    ],
+    "distractors": [
+      "Vibration isolators",
+      "Seismic bracing",
+      "Pipe roller supports",
+      "Spring hangers"
+    ],
+    "explanation": "Any long straight run of hot piping must have expansion compensation and proper anchoring. Ignoring thermal expansion is one of the most serious design and installation errors in pipefitting — it can cause weld failures and equipment damage.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-010",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Fire Protection Standpipe",
+    "description": "A Class I standpipe system has been installed in a new 6-story commercial building. Identify missing components.",
+    "presentItems": [
+      "6-inch vertical standpipe riser in stairwell",
+      "2-1/2 inch hose connections at each floor landing",
+      "Fire department connection (FDC) at building exterior",
+      "Pipe hangers and clamps on riser",
+      "PRV on lower floor outlets"
+    ],
+    "missingItems": [
+      {
+        "name": "Automatic drain at base of riser (if wet system)",
+        "explanation": "A main drain valve at the base of the riser is required for testing water flow and pressure, and for draining the system for maintenance. Without it, the system cannot be properly tested per NFPA 14 requirements."
+      },
+      {
+        "name": "Inspector's test connection at top of system",
+        "explanation": "An inspector's test valve at the most remote point (top floor) verifies that the water supply can deliver adequate pressure and flow to the highest and most remote connection. Required per NFPA 14 for system acceptance testing."
+      }
+    ],
+    "distractors": [
+      "Jockey pump",
+      "Tamper switch on each valve",
+      "Backflow preventer at FDC",
+      "Pressure sustaining valve"
+    ],
+    "explanation": "Standpipe systems require main drains for testing and maintenance, plus inspector's test connections at the most remote point to verify adequate pressure and flow. Both are required for system commissioning and ongoing inspection per NFPA 14.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-pipe-011",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Process Piping System",
+    "description": "A high-pressure steam process piping system (600 PSI, 750°F) has been installed per ASME B31.3. Check for missing items.",
+    "presentItems": [
+      "Schedule 80 chrome-moly (P-22) piping",
+      "Butt-welded connections throughout",
+      "Weld neck flanges at equipment connections",
+      "Spring hangers for thermal movement",
+      "Post-weld heat treatment completed"
+    ],
+    "missingItems": [
+      {
+        "name": "NDE (non-destructive examination) of welds",
+        "explanation": "ASME B31.3 requires radiographic (RT) or ultrasonic (UT) examination of a percentage of welds based on the fluid service category. For high-pressure high-temperature service, 100% RT or UT of butt welds is typically required. Without NDE, weld integrity cannot be verified."
+      },
+      {
+        "name": "Piping stress analysis documentation",
+        "explanation": "ASME B31.3 requires a documented stress analysis for systems operating above certain temperature and pressure thresholds. The analysis verifies that thermal expansion, sustained loads, and occasional loads are within code allowable stresses."
+      },
+      {
+        "name": "Material test reports (MTRs) for all piping and fittings",
+        "explanation": "ASME B31.3 requires material traceability through mill test reports (MTRs) that certify chemical composition and mechanical properties. Without MTRs, the piping material cannot be verified as code-compliant for the service conditions."
+      }
+    ],
+    "distractors": [
+      "Cathodic protection system",
+      "Heat tracing on all piping",
+      "Inline flow measurement orifice"
+    ],
+    "explanation": "High-pressure process piping requires rigorous quality assurance: NDE of welds, stress analysis documentation, and material traceability through MTRs. These requirements protect against catastrophic failure in severe service conditions.",
+    "xpReward": 85
+  },
+  {
+    "id": "wm-pipe-012",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Compressed Air System",
+    "description": "A compressed air distribution system has been installed for an industrial facility. Identify the missing components.",
+    "presentItems": [
+      "Rotary screw air compressor",
+      "Air receiver tank with safety relief valve",
+      "Main distribution header and branch piping",
+      "Drop legs to point-of-use stations",
+      "Isolation valves at major branches"
+    ],
+    "missingItems": [
+      {
+        "name": "Aftercooler with moisture separator",
+        "explanation": "Compressed air exits the compressor at high temperature and is saturated with moisture. An aftercooler reduces the temperature, and the moisture separator removes the condensed water. Without them, water contaminates downstream equipment and causes corrosion. Required per ASME B31.1."
+      },
+      {
+        "name": "Air dryer (refrigerated or desiccant)",
+        "explanation": "Even after the aftercooler, compressed air contains moisture that will condense in cooler piping. An air dryer reduces the dew point to prevent condensation throughout the distribution system. Required for reliable operation of pneumatic tools and instruments."
+      },
+      {
+        "name": "Automatic drain traps at low points in piping",
+        "explanation": "All low points, drip legs, and filter bowls require automatic drain traps to remove accumulated condensate. Manual drains are frequently neglected, leading to water accumulation and system contamination."
+      }
+    ],
+    "distractors": [
+      "Nitrogen generator",
+      "Dew point monitor",
+      "Oil mist eliminator"
+    ],
+    "explanation": "Compressed air systems require moisture removal at multiple stages: aftercooler at the compressor, air dryer for the system, and drain traps at low points. Moisture is the primary cause of compressed air system problems and downstream equipment damage.",
+    "xpReward": 80
+  },
+  {
+    "id": "wm-pipe-013",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Closed-Loop Hydronic System",
+    "description": "A closed-loop chilled water system has been installed to serve multiple air handling units. Review the installation for missing components.",
+    "presentItems": [
+      "Centrifugal chiller with isolation valves",
+      "Primary and secondary chilled water pumps",
+      "Supply and return piping to AHUs",
+      "Balancing valves at each AHU connection",
+      "Pipe insulation with vapor barrier"
+    ],
+    "missingItems": [
+      {
+        "name": "Expansion tank on closed loop",
+        "explanation": "Every closed hydronic loop requires an expansion tank to absorb the volume change as water temperature fluctuates. Without an expansion tank, thermal expansion causes pressure spikes that open the relief valve, resulting in water loss, air introduction, and eventual system failure. Required per ASME B31.9 and UCSB mechanical specifications."
+      },
+      {
+        "name": "Air separator on hydronic system",
+        "explanation": "A tangential or vortex air separator must be installed at the point of lowest solubility (highest temperature, lowest pressure) in the system. Dissolved air causes pump cavitation, corrosion, noise, and air-bound coils with reduced heat transfer. Required per ASHRAE Handbook and UCSB specifications."
+      }
+    ],
+    "distractors": [
+      "Variable frequency drive on chiller compressor",
+      "Plate heat exchanger for free cooling",
+      "Glycol feed station"
+    ],
+    "explanation": "Expansion tanks and air separators are fundamental components of any closed hydronic system. The expansion tank prevents pressure damage, and the air separator removes dissolved gases that cause corrosion and operational problems. Both are UCSB specification requirements.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-014",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Hot Water Heating System Accessories",
+    "description": "A hot water heating system has been installed with a condensing boiler. Check for missing accessories per UCSB specifications.",
+    "presentItems": [
+      "Condensing hot water boiler with controls",
+      "Circulator pump with check valve",
+      "Supply and return piping to terminal units",
+      "Expansion tank on system return",
+      "Air separator at boiler supply"
+    ],
+    "missingItems": [
+      {
+        "name": "Chemical pot feeder on hydronic loop",
+        "explanation": "UCSB specifications require a chemical treatment pot feeder (bypass feeder) on all closed hydronic systems to allow addition of corrosion inhibitors and biocides. Without chemical treatment, the system suffers internal corrosion, biological growth, and fouled heat transfer surfaces that reduce efficiency and shorten equipment life."
+      },
+      {
+        "name": "Pressure relief valve sized for boiler BTU rating",
+        "explanation": "A pressure relief valve rated for the boiler's full BTU output must be installed and piped to a safe discharge location. The relief valve is the last line of defense against catastrophic overpressure. It must be sized to relieve the full boiler output without exceeding system design pressure. Required per ASME and UCSB specifications."
+      }
+    ],
+    "distractors": [
+      "Condensate neutralizer kit",
+      "Outdoor air reset sensor",
+      "Sidestream filtration unit"
+    ],
+    "explanation": "Chemical treatment and properly sized pressure relief are essential for hydronic system longevity and safety. The pot feeder enables ongoing water treatment, and the relief valve provides overpressure protection. Both are UCSB specification requirements frequently verified during commissioning.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-015",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Underground Hydronic Distribution",
+    "description": "Underground hot water piping is being installed from the UCSB San Benito central plant to Building 3. The piping is 8\" HWS/HWR pre-insulated and buried with 36\" of cover. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "8\" HWS and 8\" HWR pre-insulated carrier pipe",
+      "Pre-insulated fittings (elbows, tees) with factory joints",
+      "Thrust blocks at direction changes",
+      "36\" minimum burial depth maintained",
+      "Pipe rated for 140°F (building-to-building section)"
+    ],
+    "missingItems": [
+      {
+        "name": "Traffic-rated valve boxes at all underground valve locations",
+        "explanation": "Per the UCSB specifications, all underground valves must be installed in traffic-rated valve boxes. These boxes allow valve operation and maintenance from grade level without excavation. Traffic-rated boxes are required because the piping runs through areas subject to vehicle and equipment loading. Without valve boxes, underground valves become inaccessible and cannot be operated for maintenance or emergencies."
+      },
+      {
+        "name": "Gate valves (not ball valves) at all underground locations",
+        "explanation": "The UCSB specifications require gate valves for all underground installations. Gate valves provide full-port flow when open, have clear position indication through the valve box, and are more resistant to debris damage than ball valves in underground environments. Ball valves are prohibited underground per the project specifications."
+      }
+    ],
+    "distractors": [
+      "Cathodic protection anodes",
+      "Concrete pipe encasement",
+      "Tracer wire for pipe location",
+      "Expansion loops every 100 feet"
+    ],
+    "explanation": "Underground hydronic piping at UCSB requires traffic-rated valve boxes and gate valves at all valve locations. These are critical for system operation — without accessible valve boxes, isolation for maintenance or leaks requires excavation. Gate valves are specified over ball valves for reliability in buried service where debris and position verification are concerns.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-016",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "UCSB Hydronic Riser System",
+    "description": "A hydronic hot water riser is being installed in a UCSB San Benito residential building. The 2-1/2\" riser serves 5 floors of wall-mounted radiators with 3/4\" connections at each unit. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "2-1/2\" HWS and HWR copper risers",
+      "Branch piping reducing from 2-1/2\" to 1-1/2\" to 1-1/4\" to 1\" to 3/4\"",
+      "Isolation valves at each radiator unit",
+      "3/4\" HWS and 3/4\" HWR connections at each radiator",
+      "Pipe insulation on all risers and branches"
+    ],
+    "missingItems": [
+      {
+        "name": "Air vents at all high points of the hydronic system",
+        "explanation": "Per the UCSB plans, air vents are required at all high points. In a multi-story riser, air naturally migrates to the highest points and becomes trapped. Without air vents, trapped air causes air-bound circuits (no flow to upper floor radiators), gurgling noise, and accelerated corrosion from dissolved oxygen. Automatic air vents at the top of each riser and at high points in horizontal branches are essential for proper system operation."
+      },
+      {
+        "name": "Automatic balancing valves on each floor branch",
+        "explanation": "The UCSB plans specify automatic balancing valves on each floor. Without balancing, lower floors receive disproportionately more flow due to lower pressure drop, while upper floors are starved. Automatic balancing valves (pressure-independent type) ensure each floor receives its design flow rate regardless of system pressure variations from other floors cycling on and off."
+      }
+    ],
+    "distractors": [
+      "Expansion tank on each floor",
+      "Check valve at each radiator",
+      "Pressure reducing valve at each floor",
+      "Flow meter on riser"
+    ],
+    "explanation": "Air vents and automatic balancing valves are two commonly missed components in multi-story hydronic risers. Air vents prevent air-lock failures on upper floors, and balancing valves ensure even heat distribution. The UCSB plans specifically call for both — they are not optional accessories but required components for proper system performance.",
+    "xpReward": 50
+  },
+  {
+    "id": "wm-pipe-017",
+    "type": "whats-missing",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "UCSB Pre-Insulated Pipe Building Entry",
+    "description": "Pre-insulated underground hot water piping is entering a UCSB San Benito residential building through the foundation wall. The pipe transitions from underground pre-insulated piping to standard building piping inside. Review the listed components and identify what's missing.",
+    "presentItems": [
+      "4\" HWS/HWR pre-insulated underground piping",
+      "Waterproof wall penetration seal at foundation",
+      "Standard copper piping on building side",
+      "Isolation gate valves inside building",
+      "Pipe supports and hangers per SMACNA standards"
+    ],
+    "missingItems": [
+      {
+        "name": "Pre-insulated pipe transition extending minimum 2'-0\" inside building",
+        "explanation": "Per the UCSB specifications, pre-insulated piping must terminate a minimum of 2'-0\" inside the building wall. This ensures the transition joint between pre-insulated and standard piping is fully within the conditioned space, protected from moisture migration, temperature fluctuations, and foundation movement. A transition too close to the wall risks condensation, insulation damage, and joint failure."
+      },
+      {
+        "name": "Insulation transition boot at pre-insulated to standard pipe changeover",
+        "explanation": "The transition from pre-insulated underground pipe to standard building pipe requires a proper insulation transition boot. This boot seals the gap between the factory pre-insulation and the field-applied building pipe insulation, preventing moisture ingress and thermal bridging at the changeover point. Without it, condensation forms at the exposed transition, causing corrosion and insulation degradation."
+      }
+    ],
+    "distractors": [
+      "Underground pipe marker tape",
+      "Concrete thrust block at building entry",
+      "Sacrificial anode inside building",
+      "Seismic bracing at wall penetration"
+    ],
+    "explanation": "Pre-insulated pipe building entries are a critical detail that is frequently installed incorrectly. The UCSB specs require the pre-insulated pipe to extend at least 2'-0\" inside the building and include a proper insulation transition boot. These details prevent the moisture and thermal problems that cause premature pipe failure at building entry points — one of the most common failure locations in district heating systems.",
+    "xpReward": 55
+  }
+]

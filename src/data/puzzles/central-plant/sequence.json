@@ -1,0 +1,160 @@
+[
+  {
+    "id": "seq-cp-001",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Chiller Plant Seasonal Startup",
+    "description": "Put the chiller plant seasonal startup procedure in the correct order to safely bring the plant online after winter shutdown.",
+    "steps": [
+      { "id": 1, "text": "Verify chiller oil levels and confirm oil heater has been energized for 24+ hours", "order": 1 },
+      { "id": 2, "text": "Check refrigerant charge — confirm holding charge and leak-test all connections", "order": 2 },
+      { "id": 3, "text": "Energize chiller controls and verify all safety interlocks are satisfied", "order": 3 },
+      { "id": 4, "text": "Start condenser water pump and verify design flow rate through condenser barrel", "order": 4 },
+      { "id": 5, "text": "Start cooling tower fans and confirm condenser water is rejecting heat to atmosphere", "order": 5 },
+      { "id": 6, "text": "Start chilled water pump and verify evaporator flow rate meets minimum requirement", "order": 6 },
+      { "id": 7, "text": "Start chiller compressor and allow it to load gradually from minimum to design capacity", "order": 7 },
+      { "id": 8, "text": "Verify operation — check approach temperatures, suction/discharge pressures, and amp draw", "order": 8 }
+    ],
+    "explanation": "Chiller startup sequence is critical for equipment protection. Oil must be warm to ensure proper lubrication at compressor start. Refrigerant charge must be verified before energizing to prevent low-charge trips. Water flow on both the condenser and evaporator sides must be proven before compressor start — running without flow causes tube freeze-up on the evaporator or extreme head pressure on the condenser. Gradual loading prevents compressor surge and liquid slugging.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-002",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Boiler Light-Off Procedure",
+    "description": "Sequence the steps for safely lighting off a commercial gas-fired boiler from a cold start per NFPA 85 requirements.",
+    "steps": [
+      { "id": 1, "text": "Verify boiler water level is above the low-water cutoff (LWCO) and feedwater is available", "order": 1 },
+      { "id": 2, "text": "Purge combustion chamber — run combustion air fan for minimum 4 air changes", "order": 2 },
+      { "id": 3, "text": "Verify gas pressure at the train is within manufacturer's specified range", "order": 3 },
+      { "id": 4, "text": "Energize pilot — open pilot gas valve and activate spark igniter", "order": 4 },
+      { "id": 5, "text": "Establish main flame — open main gas valve with burner at low-fire position", "order": 5 },
+      { "id": 6, "text": "Ramp burner gradually to high-fire setpoint, monitoring flame signal strength", "order": 6 },
+      { "id": 7, "text": "Check stack temperature, CO levels, and O2 percentage for proper combustion efficiency", "order": 7 },
+      { "id": 8, "text": "Release boiler to BAS automatic control and verify modulation response", "order": 8 }
+    ],
+    "explanation": "NFPA 85 mandates the pre-purge cycle to clear any accumulated gas from the combustion chamber — skipping this step risks a delayed ignition explosion. Water level must be verified first because firing a dry boiler causes catastrophic pressure vessel failure. Gas pressure verification prevents unstable flame or flame-out conditions. Starting at low fire and ramping gradually prevents thermal shock to the refractory and tubes. Stack analysis confirms the air-fuel ratio is correct before releasing to automatic control.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-003",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Cooling Tower Fan Staging",
+    "description": "Order the steps for properly staging cooling tower fans to efficiently meet the condenser water temperature setpoint.",
+    "steps": [
+      { "id": 1, "text": "Enable lead tower fan at low speed to begin heat rejection", "order": 1 },
+      { "id": 2, "text": "Increase lead tower fan to high speed if condenser water setpoint is not met", "order": 2 },
+      { "id": 3, "text": "Stage lag tower fan to low speed before pushing lead fan harder", "order": 3 },
+      { "id": 4, "text": "Increase lag tower fan to high speed if additional capacity is still needed", "order": 4 },
+      { "id": 5, "text": "Enable VFD speed trim on all running fans to optimize energy use at partial load", "order": 5 },
+      { "id": 6, "text": "Verify approach temperature — condenser water leaving temp vs. outdoor wet-bulb", "order": 6 }
+    ],
+    "explanation": "Cooling tower fan staging follows the cube law of fan power: two fans at 70% speed use less total energy than one fan at 100% speed because power is proportional to the cube of speed. Staging the lag fan at low speed before running any single fan at maximum is the energy-efficient approach. VFD trim allows all fans to run at a balanced, optimized speed rather than cycling on/off. Approach temperature (leaving water temp minus wet-bulb) confirms the tower is performing to its design rating — typically 7-10°F for a well-maintained tower.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-004",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Chilled Water System Fill and Purge",
+    "description": "Sequence the steps for filling and purging a new chilled water piping system before initial startup.",
+    "steps": [
+      { "id": 1, "text": "Close all drain valves throughout the system piping and at equipment connections", "order": 1 },
+      { "id": 2, "text": "Connect city water supply through RPZ backflow preventer to the system fill valve", "order": 2 },
+      { "id": 3, "text": "Open fill valve slowly and begin filling from the lowest point in the system", "order": 3 },
+      { "id": 4, "text": "Purge air at each high point by opening manual air vents as water level rises", "order": 4 },
+      { "id": 5, "text": "Start circulation pumps at low speed to move water through all branches and coils", "order": 5 },
+      { "id": 6, "text": "Verify expansion tank pre-charge pressure matches cold-fill static pressure", "order": 6 },
+      { "id": 7, "text": "Test glycol concentration with refractometer if freeze protection is required", "order": 7 },
+      { "id": 8, "text": "Check system pressure at the pump discharge and verify it holds at design static pressure", "order": 8 }
+    ],
+    "explanation": "Filling from the lowest point and rising slowly pushes air upward to high-point vents, preventing trapped air pockets. Trapped air causes pump cavitation, noise, erratic flow, and accelerated corrosion from dissolved oxygen. The expansion tank pre-charge must match cold-fill pressure to maintain positive pressure throughout the system and prevent air ingestion. Circulating with pumps dislodges remaining air pockets in coils and heat exchangers. Glycol testing ensures freeze protection meets design requirements before the system is operational.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-005",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "Pump Alignment and Commissioning",
+    "description": "Sequence the steps for properly aligning and commissioning a base-mounted centrifugal chilled water pump.",
+    "steps": [
+      { "id": 1, "text": "Verify foundation and grouting are fully cured and level within 0.005 inches per foot", "order": 1 },
+      { "id": 2, "text": "Bump-test motor to check rotation direction matches pump arrow before coupling", "order": 2 },
+      { "id": 3, "text": "Perform soft-foot check — verify all four mounting feet are solidly seated on the base", "order": 3 },
+      { "id": 4, "text": "Perform rough laser alignment to get angular and offset within 5 mils", "order": 4 },
+      { "id": 5, "text": "Perform final laser alignment — correct to within 1-2 mils angular and offset tolerance", "order": 5 },
+      { "id": 6, "text": "Install and check coupling — verify gap and concentricity per manufacturer specs", "order": 6 },
+      { "id": 7, "text": "Run pump at design speed with water flowing through the system", "order": 7 },
+      { "id": 8, "text": "Verify vibration readings at all bearing housings are within acceptable velocity and displacement limits", "order": 8 }
+    ],
+    "explanation": "Pump alignment is the single most important factor in pump reliability and bearing life. Soft-foot (uneven mounting) must be corrected first because it distorts the motor frame and throws off all alignment readings. Checking rotation before coupling prevents impeller damage from running backwards. Laser alignment is done in two passes — rough then final — because adjusting one axis often shifts the other. Vibration readings confirm alignment quality and establish a baseline for predictive maintenance. Misaligned pumps suffer premature seal and bearing failure, excessive vibration, and energy waste.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-006",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Heat Exchanger Cleaning Procedure",
+    "description": "Order the steps for cleaning and servicing a plate-and-frame heat exchanger in a central plant.",
+    "steps": [
+      { "id": 1, "text": "Isolate the heat exchanger from the system — close all four isolation valves", "order": 1 },
+      { "id": 2, "text": "Drain both sides of the heat exchanger completely through drain valves", "order": 2 },
+      { "id": 3, "text": "Remove end plates by loosening frame bolts evenly in a star pattern", "order": 3 },
+      { "id": 4, "text": "Clean all plates with approved chemical wash — use mild acid for mineral scale", "order": 4 },
+      { "id": 5, "text": "Inspect all gaskets for cracking, compression set, or deformation and replace as needed", "order": 5 },
+      { "id": 6, "text": "Reassemble plates in correct herringbone sequence and torque frame bolts to manufacturer specification", "order": 6 },
+      { "id": 7, "text": "Refill both sides and vent air from the high points on each circuit", "order": 7 },
+      { "id": 8, "text": "Leak test at 1.5x operating pressure and verify no cross-contamination between circuits", "order": 8 }
+    ],
+    "explanation": "Plate heat exchanger maintenance follows a strict sequence to prevent plate warping and gasket damage. Frame bolts must be loosened and tightened evenly (star pattern) to distribute load uniformly across the plate pack. Plates must be reinstalled in the correct herringbone alternating pattern to maintain proper flow channels. Chemical cleaning must match the fouling type — acid for mineral scale, alkaline for biological fouling. Pressure testing at 1.5x working pressure per ASME standards confirms gasket integrity before returning to service. Cross-contamination testing ensures no breach between the two fluid circuits.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-007",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 3,
+    "title": "VFD Commissioning",
+    "description": "Sequence the steps for commissioning a variable frequency drive on a central plant pump motor.",
+    "steps": [
+      { "id": 1, "text": "Verify motor nameplate data entry — voltage, FLA, HP, RPM, service factor, and motor type", "order": 1 },
+      { "id": 2, "text": "Set acceleration ramp time (30-60 seconds) and deceleration ramp time to prevent water hammer", "order": 2 },
+      { "id": 3, "text": "Configure minimum frequency — typically 20-30% speed to maintain minimum pump flow", "order": 3 },
+      { "id": 4, "text": "Test at low speed — verify pump rotates smoothly and current draw is proportional", "order": 4 },
+      { "id": 5, "text": "Verify rotation direction is correct — pump impeller must spin per the arrow on the casing", "order": 5 },
+      { "id": 6, "text": "Ramp to full design speed and verify flow rate, discharge pressure, and amps match design", "order": 6 },
+      { "id": 7, "text": "Tune PID loop — set proportional, integral, and derivative gains for stable DP setpoint control", "order": 7 },
+      { "id": 8, "text": "Set fault parameters — overcurrent trip, ground fault, overtemperature, and stall protection", "order": 8 }
+    ],
+    "explanation": "VFD commissioning must be methodical to prevent motor and pump damage. Incorrect motor parameters cause overheating from improper V/Hz ratio or overcurrent faults. Acceleration ramps that are too fast cause water hammer and pressure spikes in the piping system. Minimum frequency must be set above the pump's minimum stable flow point to prevent cavitation and recirculation damage. PID tuning requires patience — aggressive gains cause hunting and oscillation, while sluggish gains cause poor setpoint response. Fault parameters are the last line of defense against equipment damage and must be set before releasing the drive to automatic operation.",
+    "xpReward": 70
+  },
+  {
+    "id": "seq-cp-008",
+    "type": "sequence",
+    "trade": "central-plant",
+    "difficulty": 2,
+    "title": "Glycol System Charging",
+    "description": "Order the steps for charging a hydronic system with propylene glycol for freeze protection.",
+    "steps": [
+      { "id": 1, "text": "Calculate total system volume from piping lengths, equipment capacities, and vessel volumes", "order": 1 },
+      { "id": 2, "text": "Determine required glycol percentage based on lowest expected ambient temperature plus 10°F safety margin", "order": 2 },
+      { "id": 3, "text": "Mix glycol and water to target concentration in a charging drum or mixing tank", "order": 3 },
+      { "id": 4, "text": "Connect charging pump with basket strainer to the system fill connection", "order": 4 },
+      { "id": 5, "text": "Pressurize the system and fill with glycol solution, displacing water through drain valves", "order": 5 },
+      { "id": 6, "text": "Circulate the glycol solution with system pumps and vent air at all high points", "order": 6 },
+      { "id": 7, "text": "Test glycol concentration with a refractometer at multiple sample points to verify uniformity", "order": 7 },
+      { "id": 8, "text": "Verify system pressure is at design static pressure and document glycol type, concentration, and date", "order": 8 }
+    ],
+    "explanation": "Glycol charging requires careful calculation because the concentration directly determines freeze protection level — too little leaves the system vulnerable, while too much (over 50%) drastically reduces heat transfer capacity and increases pumping energy due to higher viscosity. Pre-mixing in a drum ensures uniform concentration rather than injecting concentrate that may not fully blend. A basket strainer on the charging pump prevents debris from entering the system. Refractometer testing at multiple points confirms the glycol is evenly distributed — concentration differences indicate poor mixing or dead legs. Documentation is required for future maintenance, water treatment programs, and warranty compliance.",
+    "xpReward": 70
+  }
+]

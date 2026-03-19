@@ -422,11 +422,11 @@
     "missingItems": [
       {
         "name": "Expansion tank on closed loop",
-        "explanation": "Every closed hydronic loop requires an expansion tank to absorb the volume change as water temperature fluctuates. Without an expansion tank, thermal expansion causes pressure spikes that open the relief valve, resulting in water loss, air introduction, and eventual system failure. Required per ASME B31.9 and UCSB mechanical specifications."
+        "explanation": "Every closed hydronic loop requires an expansion tank to absorb the volume change as water temperature fluctuates. Without an expansion tank, thermal expansion causes pressure spikes that open the relief valve, resulting in water loss, air introduction, and eventual system failure. Required per ASME B31.9 and University mechanical specifications."
       },
       {
         "name": "Air separator on hydronic system",
-        "explanation": "A tangential or vortex air separator must be installed at the point of lowest solubility (highest temperature, lowest pressure) in the system. Dissolved air causes pump cavitation, corrosion, noise, and air-bound coils with reduced heat transfer. Required per ASHRAE Handbook and UCSB specifications."
+        "explanation": "A tangential or vortex air separator must be installed at the point of lowest solubility (highest temperature, lowest pressure) in the system. Dissolved air causes pump cavitation, corrosion, noise, and air-bound coils with reduced heat transfer. Required per ASHRAE Handbook and University specifications."
       }
     ],
     "distractors": [
@@ -434,7 +434,7 @@
       "Plate heat exchanger for free cooling",
       "Glycol feed station"
     ],
-    "explanation": "Expansion tanks and air separators are fundamental components of any closed hydronic system. The expansion tank prevents pressure damage, and the air separator removes dissolved gases that cause corrosion and operational problems. Both are UCSB specification requirements.",
+    "explanation": "Expansion tanks and air separators are fundamental components of any closed hydronic system. The expansion tank prevents pressure damage, and the air separator removes dissolved gases that cause corrosion and operational problems. Both are University specification requirements.",
     "xpReward": 50
   },
   {
@@ -443,7 +443,7 @@
     "trade": "pipefitting",
     "difficulty": 2,
     "title": "Hot Water Heating System Accessories",
-    "description": "A hot water heating system has been installed with a condensing boiler. Check for missing accessories per UCSB specifications.",
+    "description": "A hot water heating system has been installed with a condensing boiler. Check for missing accessories per University specifications.",
     "presentItems": [
       "Condensing hot water boiler with controls",
       "Circulator pump with check valve",
@@ -454,11 +454,11 @@
     "missingItems": [
       {
         "name": "Chemical pot feeder on hydronic loop",
-        "explanation": "UCSB specifications require a chemical treatment pot feeder (bypass feeder) on all closed hydronic systems to allow addition of corrosion inhibitors and biocides. Without chemical treatment, the system suffers internal corrosion, biological growth, and fouled heat transfer surfaces that reduce efficiency and shorten equipment life."
+        "explanation": "University specifications require a chemical treatment pot feeder (bypass feeder) on all closed hydronic systems to allow addition of corrosion inhibitors and biocides. Without chemical treatment, the system suffers internal corrosion, biological growth, and fouled heat transfer surfaces that reduce efficiency and shorten equipment life."
       },
       {
         "name": "Pressure relief valve sized for boiler BTU rating",
-        "explanation": "A pressure relief valve rated for the boiler's full BTU output must be installed and piped to a safe discharge location. The relief valve is the last line of defense against catastrophic overpressure. It must be sized to relieve the full boiler output without exceeding system design pressure. Required per ASME and UCSB specifications."
+        "explanation": "A pressure relief valve rated for the boiler's full BTU output must be installed and piped to a safe discharge location. The relief valve is the last line of defense against catastrophic overpressure. It must be sized to relieve the full boiler output without exceeding system design pressure. Required per ASME and University specifications."
       }
     ],
     "distractors": [
@@ -466,7 +466,7 @@
       "Outdoor air reset sensor",
       "Sidestream filtration unit"
     ],
-    "explanation": "Chemical treatment and properly sized pressure relief are essential for hydronic system longevity and safety. The pot feeder enables ongoing water treatment, and the relief valve provides overpressure protection. Both are UCSB specification requirements frequently verified during commissioning.",
+    "explanation": "Chemical treatment and properly sized pressure relief are essential for hydronic system longevity and safety. The pot feeder enables ongoing water treatment, and the relief valve provides overpressure protection. Both are University specification requirements frequently verified during commissioning.",
     "xpReward": 50
   },
   {
@@ -474,8 +474,8 @@
     "type": "whats-missing",
     "trade": "pipefitting",
     "difficulty": 2,
-    "title": "UCSB Underground Hydronic Distribution",
-    "description": "Underground hot water piping is being installed from the UCSB San Benito central plant to Building 3. The piping is 8\" HWS/HWR pre-insulated and buried with 36\" of cover. Review the listed components and identify what's missing.",
+    "title": "University Underground Hydronic Distribution",
+    "description": "Underground hot water piping is being installed from the University Student Housing central plant to Building 3. The piping is 8\" HWS/HWR pre-insulated and buried with 36\" of cover. Review the listed components and identify what's missing.",
     "presentItems": [
       "8\" HWS and 8\" HWR pre-insulated carrier pipe",
       "Pre-insulated fittings (elbows, tees) with factory joints",
@@ -486,11 +486,11 @@
     "missingItems": [
       {
         "name": "Traffic-rated valve boxes at all underground valve locations",
-        "explanation": "Per the UCSB specifications, all underground valves must be installed in traffic-rated valve boxes. These boxes allow valve operation and maintenance from grade level without excavation. Traffic-rated boxes are required because the piping runs through areas subject to vehicle and equipment loading. Without valve boxes, underground valves become inaccessible and cannot be operated for maintenance or emergencies."
+        "explanation": "Per the University specifications, all underground valves must be installed in traffic-rated valve boxes. These boxes allow valve operation and maintenance from grade level without excavation. Traffic-rated boxes are required because the piping runs through areas subject to vehicle and equipment loading. Without valve boxes, underground valves become inaccessible and cannot be operated for maintenance or emergencies."
       },
       {
         "name": "Gate valves (not ball valves) at all underground locations",
-        "explanation": "The UCSB specifications require gate valves for all underground installations. Gate valves provide full-port flow when open, have clear position indication through the valve box, and are more resistant to debris damage than ball valves in underground environments. Ball valves are prohibited underground per the project specifications."
+        "explanation": "The University specifications require gate valves for all underground installations. Gate valves provide full-port flow when open, have clear position indication through the valve box, and are more resistant to debris damage than ball valves in underground environments. Ball valves are prohibited underground per the project specifications."
       }
     ],
     "distractors": [
@@ -499,7 +499,7 @@
       "Tracer wire for pipe location",
       "Expansion loops every 100 feet"
     ],
-    "explanation": "Underground hydronic piping at UCSB requires traffic-rated valve boxes and gate valves at all valve locations. These are critical for system operation — without accessible valve boxes, isolation for maintenance or leaks requires excavation. Gate valves are specified over ball valves for reliability in buried service where debris and position verification are concerns.",
+    "explanation": "Underground hydronic piping at University requires traffic-rated valve boxes and gate valves at all valve locations. These are critical for system operation — without accessible valve boxes, isolation for maintenance or leaks requires excavation. Gate valves are specified over ball valves for reliability in buried service where debris and position verification are concerns.",
     "xpReward": 50
   },
   {
@@ -507,8 +507,8 @@
     "type": "whats-missing",
     "trade": "pipefitting",
     "difficulty": 2,
-    "title": "UCSB Hydronic Riser System",
-    "description": "A hydronic hot water riser is being installed in a UCSB San Benito residential building. The 2-1/2\" riser serves 5 floors of wall-mounted radiators with 3/4\" connections at each unit. Review the listed components and identify what's missing.",
+    "title": "University Hydronic Riser System",
+    "description": "A hydronic hot water riser is being installed in a University Student Housing residential building. The 2-1/2\" riser serves 5 floors of wall-mounted radiators with 3/4\" connections at each unit. Review the listed components and identify what's missing.",
     "presentItems": [
       "2-1/2\" HWS and HWR copper risers",
       "Branch piping reducing from 2-1/2\" to 1-1/2\" to 1-1/4\" to 1\" to 3/4\"",
@@ -519,11 +519,11 @@
     "missingItems": [
       {
         "name": "Air vents at all high points of the hydronic system",
-        "explanation": "Per the UCSB plans, air vents are required at all high points. In a multi-story riser, air naturally migrates to the highest points and becomes trapped. Without air vents, trapped air causes air-bound circuits (no flow to upper floor radiators), gurgling noise, and accelerated corrosion from dissolved oxygen. Automatic air vents at the top of each riser and at high points in horizontal branches are essential for proper system operation."
+        "explanation": "Per the University plans, air vents are required at all high points. In a multi-story riser, air naturally migrates to the highest points and becomes trapped. Without air vents, trapped air causes air-bound circuits (no flow to upper floor radiators), gurgling noise, and accelerated corrosion from dissolved oxygen. Automatic air vents at the top of each riser and at high points in horizontal branches are essential for proper system operation."
       },
       {
         "name": "Automatic balancing valves on each floor branch",
-        "explanation": "The UCSB plans specify automatic balancing valves on each floor. Without balancing, lower floors receive disproportionately more flow due to lower pressure drop, while upper floors are starved. Automatic balancing valves (pressure-independent type) ensure each floor receives its design flow rate regardless of system pressure variations from other floors cycling on and off."
+        "explanation": "The University plans specify automatic balancing valves on each floor. Without balancing, lower floors receive disproportionately more flow due to lower pressure drop, while upper floors are starved. Automatic balancing valves (pressure-independent type) ensure each floor receives its design flow rate regardless of system pressure variations from other floors cycling on and off."
       }
     ],
     "distractors": [
@@ -532,7 +532,7 @@
       "Pressure reducing valve at each floor",
       "Flow meter on riser"
     ],
-    "explanation": "Air vents and automatic balancing valves are two commonly missed components in multi-story hydronic risers. Air vents prevent air-lock failures on upper floors, and balancing valves ensure even heat distribution. The UCSB plans specifically call for both — they are not optional accessories but required components for proper system performance.",
+    "explanation": "Air vents and automatic balancing valves are two commonly missed components in multi-story hydronic risers. Air vents prevent air-lock failures on upper floors, and balancing valves ensure even heat distribution. The University plans specifically call for both — they are not optional accessories but required components for proper system performance.",
     "xpReward": 50
   },
   {
@@ -540,8 +540,8 @@
     "type": "whats-missing",
     "trade": "pipefitting",
     "difficulty": 3,
-    "title": "UCSB Pre-Insulated Pipe Building Entry",
-    "description": "Pre-insulated underground hot water piping is entering a UCSB San Benito residential building through the foundation wall. The pipe transitions from underground pre-insulated piping to standard building piping inside. Review the listed components and identify what's missing.",
+    "title": "University Pre-Insulated Pipe Building Entry",
+    "description": "Pre-insulated underground hot water piping is entering a University Student Housing residential building through the foundation wall. The pipe transitions from underground pre-insulated piping to standard building piping inside. Review the listed components and identify what's missing.",
     "presentItems": [
       "4\" HWS/HWR pre-insulated underground piping",
       "Waterproof wall penetration seal at foundation",
@@ -552,7 +552,7 @@
     "missingItems": [
       {
         "name": "Pre-insulated pipe transition extending minimum 2'-0\" inside building",
-        "explanation": "Per the UCSB specifications, pre-insulated piping must terminate a minimum of 2'-0\" inside the building wall. This ensures the transition joint between pre-insulated and standard piping is fully within the conditioned space, protected from moisture migration, temperature fluctuations, and foundation movement. A transition too close to the wall risks condensation, insulation damage, and joint failure."
+        "explanation": "Per the University specifications, pre-insulated piping must terminate a minimum of 2'-0\" inside the building wall. This ensures the transition joint between pre-insulated and standard piping is fully within the conditioned space, protected from moisture migration, temperature fluctuations, and foundation movement. A transition too close to the wall risks condensation, insulation damage, and joint failure."
       },
       {
         "name": "Insulation transition boot at pre-insulated to standard pipe changeover",
@@ -565,7 +565,7 @@
       "Sacrificial anode inside building",
       "Seismic bracing at wall penetration"
     ],
-    "explanation": "Pre-insulated pipe building entries are a critical detail that is frequently installed incorrectly. The UCSB specs require the pre-insulated pipe to extend at least 2'-0\" inside the building and include a proper insulation transition boot. These details prevent the moisture and thermal problems that cause premature pipe failure at building entry points — one of the most common failure locations in district heating systems.",
+    "explanation": "Pre-insulated pipe building entries are a critical detail that is frequently installed incorrectly. The University specs require the pre-insulated pipe to extend at least 2'-0\" inside the building and include a proper insulation transition boot. These details prevent the moisture and thermal problems that cause premature pipe failure at building entry points — one of the most common failure locations in district heating systems.",
     "xpReward": 55
   }
 ]

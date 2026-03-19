@@ -277,15 +277,15 @@
     "trade": "plumbing",
     "difficulty": 1,
     "title": "Hydronic System Pressure Rating",
-    "scenario": "You are selecting components for a standard closed-loop hydronic heating system in a 3-story commercial building. Per UCSB spec, what is the normal operating pressure rating for standard hydronic systems?",
-    "hint": "UCSB spec defines two pressure tiers for hydronic systems: normal and high pressure. Most commercial heating and cooling systems operate at the normal tier.",
+    "scenario": "You are selecting components for a standard closed-loop hydronic heating system in a 3-story commercial building. Per University spec, what is the normal operating pressure rating for standard hydronic systems?",
+    "hint": "University spec defines two pressure tiers for hydronic systems: normal and high pressure. Most commercial heating and cooling systems operate at the normal tier.",
     "options": [
-      { "text": "50 psig", "value": "50", "correct": false, "feedback": "50 psig is below the UCSB spec normal rating. While some residential systems operate at this pressure, commercial hydronic systems are rated higher to handle taller buildings and longer piping runs." },
-      { "text": "125 psig", "value": "125", "correct": true, "feedback": "Correct! Per UCSB spec, standard hydronic systems are rated at 125 psig normal operating pressure. All valves, fittings, and equipment in the loop must be rated to meet or exceed this pressure." },
-      { "text": "250 psig", "value": "250", "correct": false, "feedback": "250 psig is the UCSB spec high-pressure rating for special applications like high-rise buildings or high-temperature hot water systems. Standard commercial hydronic systems use the 125 psig rating." },
+      { "text": "50 psig", "value": "50", "correct": false, "feedback": "50 psig is below the University spec normal rating. While some residential systems operate at this pressure, commercial hydronic systems are rated higher to handle taller buildings and longer piping runs." },
+      { "text": "125 psig", "value": "125", "correct": true, "feedback": "Correct! Per University spec, standard hydronic systems are rated at 125 psig normal operating pressure. All valves, fittings, and equipment in the loop must be rated to meet or exceed this pressure." },
+      { "text": "250 psig", "value": "250", "correct": false, "feedback": "250 psig is the University spec high-pressure rating for special applications like high-rise buildings or high-temperature hot water systems. Standard commercial hydronic systems use the 125 psig rating." },
       { "text": "400 psig", "value": "400", "correct": false, "feedback": "400 psig far exceeds standard hydronic system requirements. This pressure level is typical for steam systems or industrial process piping, not HVAC hydronic loops." }
     ],
-    "explanation": "UCSB spec hydronic pressure ratings: 125 psig normal, 250 psig high pressure. The normal 125 psig rating covers most commercial buildings up to about 20 stories. High-pressure (250 psig) is used for tall buildings where static head exceeds normal system ratings. All loop components — valves, strainers, coils, and pipe — must meet the system pressure rating.",
+    "explanation": "University spec hydronic pressure ratings: 125 psig normal, 250 psig high pressure. The normal 125 psig rating covers most commercial buildings up to about 20 stories. High-pressure (250 psig) is used for tall buildings where static head exceeds normal system ratings. All loop components — valves, strainers, coils, and pipe — must meet the system pressure rating.",
     "xpReward": 45
   },
   {
@@ -294,15 +294,15 @@
     "trade": "plumbing",
     "difficulty": 2,
     "title": "Butterfly Valve Operator Type",
-    "scenario": "You are selecting butterfly valves for a chilled water system. The spec calls for several sizes: 3-inch, 4-inch, 6-inch, and 8-inch. Per UCSB spec, at what valve size does the operator type change from lever handle to gear operator?",
-    "hint": "UCSB spec defines a size threshold where butterfly valves must switch from lever (quarter-turn) handles to gear operators. Larger valves require gear operators because the disc force exceeds safe manual lever operation.",
+    "scenario": "You are selecting butterfly valves for a chilled water system. The spec calls for several sizes: 3-inch, 4-inch, 6-inch, and 8-inch. Per University spec, at what valve size does the operator type change from lever handle to gear operator?",
+    "hint": "University spec defines a size threshold where butterfly valves must switch from lever (quarter-turn) handles to gear operators. Larger valves require gear operators because the disc force exceeds safe manual lever operation.",
     "options": [
-      { "text": "4-inch and larger require gear operator", "value": "4", "correct": false, "feedback": "4-inch and 5-inch butterfly valves can still be operated with a lever handle per UCSB spec. The gear operator requirement starts at a larger size." },
-      { "text": "6-inch and larger require gear operator", "value": "6", "correct": true, "feedback": "Correct! Per UCSB spec, butterfly valves through 5 inches use lever handles, and 6 inches and larger require gear operators. The disc force on a 6-inch valve under system pressure exceeds safe manual lever operation." },
-      { "text": "8-inch and larger require gear operator", "value": "8", "correct": false, "feedback": "8 inches is too high a threshold. A 6-inch butterfly valve under full system pressure requires significant force to operate — more than a lever handle can safely provide. UCSB spec requires gear operator starting at 6 inches." },
-      { "text": "All sizes require gear operators", "value": "all", "correct": false, "feedback": "Gear operators on small valves (2-4 inch) are unnecessary and make operation slower. UCSB spec allows lever handles through 5 inches where the disc forces are manageable by hand." }
+      { "text": "4-inch and larger require gear operator", "value": "4", "correct": false, "feedback": "4-inch and 5-inch butterfly valves can still be operated with a lever handle per University spec. The gear operator requirement starts at a larger size." },
+      { "text": "6-inch and larger require gear operator", "value": "6", "correct": true, "feedback": "Correct! Per University spec, butterfly valves through 5 inches use lever handles, and 6 inches and larger require gear operators. The disc force on a 6-inch valve under system pressure exceeds safe manual lever operation." },
+      { "text": "8-inch and larger require gear operator", "value": "8", "correct": false, "feedback": "8 inches is too high a threshold. A 6-inch butterfly valve under full system pressure requires significant force to operate — more than a lever handle can safely provide. University spec requires gear operator starting at 6 inches." },
+      { "text": "All sizes require gear operators", "value": "all", "correct": false, "feedback": "Gear operators on small valves (2-4 inch) are unnecessary and make operation slower. University spec allows lever handles through 5 inches where the disc forces are manageable by hand." }
     ],
-    "explanation": "Butterfly valve operator selection per UCSB spec: lever handle through 5 inches, gear operator for 6 inches and larger. The torque required to operate a butterfly valve increases with the square of the disc diameter. A 6-inch disc under 125 PSI creates substantial closing force that exceeds safe manual lever operation, requiring the mechanical advantage of a gear operator.",
+    "explanation": "Butterfly valve operator selection per University spec: lever handle through 5 inches, gear operator for 6 inches and larger. The torque required to operate a butterfly valve increases with the square of the disc diameter. A 6-inch disc under 125 PSI creates substantial closing force that exceeds safe manual lever operation, requiring the mechanical advantage of a gear operator.",
     "xpReward": 50
   },
   {
@@ -311,15 +311,15 @@
     "trade": "plumbing",
     "difficulty": 2,
     "title": "Automatic Flow Control Valve Specifications",
-    "scenario": "You are specifying automatic flow control valves for a hydronic system to maintain constant flow through each branch regardless of system pressure fluctuations. Per UCSB spec, what flow accuracy and maximum pressure loss are required?",
-    "hint": "UCSB spec defines both the flow accuracy percentage and the maximum allowable pressure drop across the automatic flow control valve at design flow.",
+    "scenario": "You are specifying automatic flow control valves for a hydronic system to maintain constant flow through each branch regardless of system pressure fluctuations. Per University spec, what flow accuracy and maximum pressure loss are required?",
+    "hint": "University spec defines both the flow accuracy percentage and the maximum allowable pressure drop across the automatic flow control valve at design flow.",
     "options": [
-      { "text": "±5% accuracy, max 1 psi loss", "value": "5-1", "correct": false, "feedback": "±5% accuracy is tighter than UCSB spec requires, and 1 psi maximum loss is more restrictive than specified. While these are excellent specs, they would significantly increase valve cost without proportional benefit." },
-      { "text": "±10% accuracy, max 3 psi loss", "value": "10-3", "correct": true, "feedback": "Correct! Per UCSB spec, automatic flow control valves must maintain flow within ±10% of the setpoint with a maximum pressure loss of 3 psi at design flow. This provides adequate flow balancing without excessive system pressure drop." },
-      { "text": "±15% accuracy, max 5 psi loss", "value": "15-5", "correct": false, "feedback": "±15% accuracy is too loose for effective flow balancing. A 100 GPM branch could swing between 85-115 GPM, causing significant coil performance variation. UCSB spec requires ±10%." },
-      { "text": "±20% accuracy, max 10 psi loss", "value": "20-10", "correct": false, "feedback": "±20% accuracy provides almost no flow control benefit, and 10 psi loss wastes significant pump energy. UCSB spec calls for ±10% accuracy with a maximum of 3 psi loss." }
+      { "text": "±5% accuracy, max 1 psi loss", "value": "5-1", "correct": false, "feedback": "±5% accuracy is tighter than University spec requires, and 1 psi maximum loss is more restrictive than specified. While these are excellent specs, they would significantly increase valve cost without proportional benefit." },
+      { "text": "±10% accuracy, max 3 psi loss", "value": "10-3", "correct": true, "feedback": "Correct! Per University spec, automatic flow control valves must maintain flow within ±10% of the setpoint with a maximum pressure loss of 3 psi at design flow. This provides adequate flow balancing without excessive system pressure drop." },
+      { "text": "±15% accuracy, max 5 psi loss", "value": "15-5", "correct": false, "feedback": "±15% accuracy is too loose for effective flow balancing. A 100 GPM branch could swing between 85-115 GPM, causing significant coil performance variation. University spec requires ±10%." },
+      { "text": "±20% accuracy, max 10 psi loss", "value": "20-10", "correct": false, "feedback": "±20% accuracy provides almost no flow control benefit, and 10 psi loss wastes significant pump energy. University spec calls for ±10% accuracy with a maximum of 3 psi loss." }
     ],
-    "explanation": "Automatic flow control valve specs per UCSB: ±10% flow accuracy, 3 psi maximum pressure loss. These valves use a spring-loaded cartridge that automatically adjusts to maintain constant flow as system pressure varies. They eliminate the need for manual balancing valves on each branch, saving commissioning time while ensuring proper coil performance.",
+    "explanation": "Automatic flow control valve specs per University: ±10% flow accuracy, 3 psi maximum pressure loss. These valves use a spring-loaded cartridge that automatically adjusts to maintain constant flow as system pressure varies. They eliminate the need for manual balancing valves on each branch, saving commissioning time while ensuring proper coil performance.",
     "xpReward": 55
   },
   {
@@ -328,15 +328,15 @@
     "trade": "plumbing",
     "difficulty": 2,
     "title": "Copper Pipe Joining Method by Size",
-    "scenario": "You are joining copper tubing on a hydronic piping system. Per UCSB spec, the joining method changes based on pipe size. For a 2-inch copper joint, what solder alloy is required, and at what size must you switch to brazing?",
-    "hint": "UCSB spec specifies 95-5 tin-antimony solder for smaller copper joints and sil-fos brazing for larger sizes. There is a specific size breakpoint where the joining method must change.",
+    "scenario": "You are joining copper tubing on a hydronic piping system. Per University spec, the joining method changes based on pipe size. For a 2-inch copper joint, what solder alloy is required, and at what size must you switch to brazing?",
+    "hint": "University spec specifies 95-5 tin-antimony solder for smaller copper joints and sil-fos brazing for larger sizes. There is a specific size breakpoint where the joining method must change.",
     "options": [
-      { "text": "95-5 solder for all sizes, no brazing required", "value": "all-solder", "correct": false, "feedback": "Solder is not adequate for larger copper pipe joints. As pipe diameter increases, the joint area and pressure forces increase, requiring the stronger silver-bearing brazed joint per UCSB spec." },
-      { "text": "95-5 solder through 2\", sil-fos brazing for 2.5\" and larger", "value": "2-solder", "correct": true, "feedback": "Correct! Per UCSB spec, 95-5 tin-antimony solder is used for copper joints 2 inches and smaller. Joints 2-1/2 inches and larger require sil-fos (silver-phosphorus-copper) brazing for the stronger joint needed on larger pipe." },
-      { "text": "95-5 solder through 1\", sil-fos brazing for 1.5\" and larger", "value": "1-solder", "correct": false, "feedback": "The breakpoint is higher than 1 inch. UCSB spec allows 95-5 solder through 2 inches. Requiring brazing at 1-1/2\" would significantly increase labor costs on common residential and light commercial pipe sizes." },
-      { "text": "Lead-free solder for all sizes", "value": "lead-free", "correct": false, "feedback": "While all solder on potable water systems must be lead-free, UCSB spec specifically calls for 95-5 tin-antimony (which is lead-free) for sizes through 2 inches and sil-fos brazing for larger sizes. The joining method matters, not just the solder type." }
+      { "text": "95-5 solder for all sizes, no brazing required", "value": "all-solder", "correct": false, "feedback": "Solder is not adequate for larger copper pipe joints. As pipe diameter increases, the joint area and pressure forces increase, requiring the stronger silver-bearing brazed joint per University spec." },
+      { "text": "95-5 solder through 2\", sil-fos brazing for 2.5\" and larger", "value": "2-solder", "correct": true, "feedback": "Correct! Per University spec, 95-5 tin-antimony solder is used for copper joints 2 inches and smaller. Joints 2-1/2 inches and larger require sil-fos (silver-phosphorus-copper) brazing for the stronger joint needed on larger pipe." },
+      { "text": "95-5 solder through 1\", sil-fos brazing for 1.5\" and larger", "value": "1-solder", "correct": false, "feedback": "The breakpoint is higher than 1 inch. University spec allows 95-5 solder through 2 inches. Requiring brazing at 1-1/2\" would significantly increase labor costs on common residential and light commercial pipe sizes." },
+      { "text": "Lead-free solder for all sizes", "value": "lead-free", "correct": false, "feedback": "While all solder on potable water systems must be lead-free, University spec specifically calls for 95-5 tin-antimony (which is lead-free) for sizes through 2 inches and sil-fos brazing for larger sizes. The joining method matters, not just the solder type." }
     ],
-    "explanation": "Copper joining per UCSB spec: 95-5 tin-antimony solder for 2\" and smaller, sil-fos brazing for 2-1/2\" and larger. Solder joints rely on capillary action and are adequate for smaller diameters. Larger pipes need the higher strength of brazed joints (melting above 1100°F vs. 450°F for solder) to handle greater pressure forces on the larger joint surface area.",
+    "explanation": "Copper joining per University spec: 95-5 tin-antimony solder for 2\" and smaller, sil-fos brazing for 2-1/2\" and larger. Solder joints rely on capillary action and are adequate for smaller diameters. Larger pipes need the higher strength of brazed joints (melting above 1100°F vs. 450°F for solder) to handle greater pressure forces on the larger joint surface area.",
     "xpReward": 55
   },
   {
@@ -379,15 +379,15 @@
     "trade": "plumbing",
     "difficulty": 1,
     "title": "Butterfly Valve Pressure Rating",
-    "scenario": "You are selecting butterfly valves for a hydronic system. Per UCSB spec, butterfly valves are used for sizes 2.5 to 12 inches. What is the rated working pressure for butterfly valves, and what operator type is required for a 4-inch valve?",
-    "hint": "UCSB spec defines the pressure rating for all butterfly valves and specifies different operator types based on a size breakpoint. Valves below the breakpoint get one type, and valves at or above get another.",
+    "scenario": "You are selecting butterfly valves for a hydronic system. Per University spec, butterfly valves are used for sizes 2.5 to 12 inches. What is the rated working pressure for butterfly valves, and what operator type is required for a 4-inch valve?",
+    "hint": "University spec defines the pressure rating for all butterfly valves and specifies different operator types based on a size breakpoint. Valves below the breakpoint get one type, and valves at or above get another.",
     "options": [
       { "text": "125 PSI, gear operator", "value": "125-gear", "correct": false, "feedback": "The pressure rating is correct at 125 PSI (per gate/butterfly working pressure), but a 4-inch valve does not require a gear operator. Gear operators are required at 6 inches and larger." },
-      { "text": "200 PSI, lever handle", "value": "200-lever", "correct": true, "feedback": "Correct! Per UCSB spec, butterfly valves are rated at 200 PSI with lug-type body. At 4 inches, a lever handle is appropriate (gear operators required at 6 inches and larger). The lug-type design allows downstream piping removal without draining the system." },
-      { "text": "600 PSI, lever handle", "value": "600-lever", "correct": false, "feedback": "600 PSI is the rating for ball valves 2 inches and smaller. Butterfly valves are rated at 200 PSI per UCSB spec." },
-      { "text": "200 PSI, gear operator", "value": "200-gear", "correct": false, "feedback": "The 200 PSI rating is correct, but a 4-inch valve uses a lever handle. Gear operators are mandatory starting at 6 inches per UCSB spec, where the disc force exceeds safe manual operation." }
+      { "text": "200 PSI, lever handle", "value": "200-lever", "correct": true, "feedback": "Correct! Per University spec, butterfly valves are rated at 200 PSI with lug-type body. At 4 inches, a lever handle is appropriate (gear operators required at 6 inches and larger). The lug-type design allows downstream piping removal without draining the system." },
+      { "text": "600 PSI, lever handle", "value": "600-lever", "correct": false, "feedback": "600 PSI is the rating for ball valves 2 inches and smaller. Butterfly valves are rated at 200 PSI per University spec." },
+      { "text": "200 PSI, gear operator", "value": "200-gear", "correct": false, "feedback": "The 200 PSI rating is correct, but a 4-inch valve uses a lever handle. Gear operators are mandatory starting at 6 inches per University spec, where the disc force exceeds safe manual operation." }
     ],
-    "explanation": "Butterfly valve specs per UCSB: 200 PSI rated, lug-type body, lever operator through 5 inches, gear operator for 6 inches and larger. The lug design has threaded inserts that allow one flange side to be removed while the valve holds pressure on the other side — essential for maintenance without full system drain. PTFE seat material is standard for HVAC hydronic service.",
+    "explanation": "Butterfly valve specs per University: 200 PSI rated, lug-type body, lever operator through 5 inches, gear operator for 6 inches and larger. The lug design has threaded inserts that allow one flange side to be removed while the valve holds pressure on the other side — essential for maintenance without full system drain. PTFE seat material is standard for HVAC hydronic service.",
     "xpReward": 45
   },
   {
@@ -412,16 +412,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "UCSB Electric Boiler Delta-T",
-    "scenario": "On the UCSB San Benito Student Housing project, the electric boiler B-1 (Fulton EZE-480) produces 1,633 MBH output at 165 GPM flow rate. The entering water temperature is 100°F. What is the leaving water temperature, and what is the delta-T across the boiler?",
+    "title": "University Electric Boiler Delta-T",
+    "scenario": "On the University Student Housing project, the electric boiler B-1 (Fulton EZE-480) produces 1,633 MBH output at 165 GPM flow rate. The entering water temperature is 100°F. What is the leaving water temperature, and what is the delta-T across the boiler?",
     "hint": "Use the hydronic formula: BTU/hr = GPM x 500 x delta-T. Solve for delta-T: delta-T = BTU/hr / (GPM x 500). Then add the delta-T to the entering water temperature to find the leaving temperature.",
     "options": [
       { "text": "110°F leaving, 10°F delta-T", "value": "10", "correct": false, "feedback": "At 10°F delta-T: 165 x 500 x 10 = 825 MBH — only about half the boiler's 1,633 MBH output. The delta-T must be higher to deliver the full rated capacity at 165 GPM." },
-      { "text": "120°F leaving, 20°F delta-T", "value": "20", "correct": true, "feedback": "Correct! Per the UCSB schedule, EWT is 100°F and LWT is 120°F, giving a 20°F delta-T. Check: 165 GPM x 500 x 20°F = 1,650 MBH, which closely matches the scheduled 1,633 MBH output." },
+      { "text": "120°F leaving, 20°F delta-T", "value": "20", "correct": true, "feedback": "Correct! Per the University schedule, EWT is 100°F and LWT is 120°F, giving a 20°F delta-T. Check: 165 GPM x 500 x 20°F = 1,650 MBH, which closely matches the scheduled 1,633 MBH output." },
       { "text": "140°F leaving, 40°F delta-T", "value": "40", "correct": false, "feedback": "40°F delta-T at 165 GPM would produce 3,300 MBH — double the boiler's rated capacity. A 140°F LWT would also exceed the low-temperature design intent for the heat pump system." },
       { "text": "130°F leaving, 30°F delta-T", "value": "30", "correct": false, "feedback": "30°F delta-T at 165 GPM would require 2,475 MBH — more than the boiler's 1,633 MBH rating. The schedule confirms 100°F to 120°F (20°F delta-T)." }
     ],
-    "explanation": "The Fulton EZE-480 electric boiler at UCSB operates at 100°F EWT to 120°F LWT, giving a 20°F delta-T at 165 GPM. Verification: 165 x 500 x 20 = 1,650,000 BTU/hr (1,650 MBH), closely matching the scheduled 1,633 MBH. The low 120°F supply temperature is designed to complement the air-to-water heat pumps (AWHP-1/2/3/4) which also produce 120°F LWT. The boiler provides backup heating capacity when ambient temperatures are too low for efficient heat pump operation.",
+    "explanation": "The Fulton EZE-480 electric boiler at University operates at 100°F EWT to 120°F LWT, giving a 20°F delta-T at 165 GPM. Verification: 165 x 500 x 20 = 1,650,000 BTU/hr (1,650 MBH), closely matching the scheduled 1,633 MBH. The low 120°F supply temperature is designed to complement the air-to-water heat pumps (AWHP-1/2/3/4) which also produce 120°F LWT. The boiler provides backup heating capacity when ambient temperatures are too low for efficient heat pump operation.",
     "xpReward": 50
   },
   {
@@ -429,16 +429,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "UCSB Expansion Tank Pressure Rating",
-    "scenario": "On the UCSB San Benito project, the expansion tanks ET-1 through ET-4 are Taco CA-10000-125 bladder-type tanks for a 20,000-gallon heating hot water system. What is the maximum pressure rating of these tanks?",
+    "title": "University Expansion Tank Pressure Rating",
+    "scenario": "On the University Student Housing project, the expansion tanks ET-1 through ET-4 are Taco CA-10000-125 bladder-type tanks for a 20,000-gallon heating hot water system. What is the maximum pressure rating of these tanks?",
     "hint": "The model number often contains the pressure rating. The tank must be rated above the system's maximum operating pressure, including any pressure spikes from pump operation or thermal expansion.",
     "options": [
       { "text": "30 PSIG", "value": "30", "correct": false, "feedback": "30 PSIG is the fill pressure (air pre-charge), not the maximum pressure rating. The fill pressure sets the initial bladder position — the tank must be rated much higher than this to handle system pressure increases during operation." },
-      { "text": "75 PSIG", "value": "75", "correct": false, "feedback": "75 PSIG would be insufficient for a commercial heating system. The UCSB system with its 150 PSIG boiler rating needs expansion tanks rated above the boiler's working pressure." },
-      { "text": "125 PSIG", "value": "125", "correct": true, "feedback": "Correct! Per the UCSB schedule, the Taco CA-10000-125 tanks are rated at 125 PSIG (the '125' in the model number). This provides adequate margin — the fill pressure is 30 PSIG, and the system operates well below the 125 PSIG maximum." },
+      { "text": "75 PSIG", "value": "75", "correct": false, "feedback": "75 PSIG would be insufficient for a commercial heating system. The University system with its 150 PSIG boiler rating needs expansion tanks rated above the boiler's working pressure." },
+      { "text": "125 PSIG", "value": "125", "correct": true, "feedback": "Correct! Per the University schedule, the Taco CA-10000-125 tanks are rated at 125 PSIG (the '125' in the model number). This provides adequate margin — the fill pressure is 30 PSIG, and the system operates well below the 125 PSIG maximum." },
       { "text": "150 PSIG", "value": "150", "correct": false, "feedback": "150 PSIG is the boiler's rated working pressure, not the expansion tank rating. The tanks are rated at 125 PSIG per the schedule. In practice, the relief valve setting (typically 30 PSIG above fill) prevents the system from reaching either rating." }
     ],
-    "explanation": "The Taco CA-10000-125 expansion tanks at UCSB are rated at 125 PSIG maximum working pressure, as indicated by the '125' suffix in the model number. Each tank holds 2,640 gallons total volume with 1,710 gallons acceptance capacity. The 30 PSIG fill pressure pre-charges the bladder, and the system normally operates between 30-60 PSIG — well below the 125 PSIG rating. The tanks serve a 20,000-gallon system, requiring four tanks for adequate expansion volume.",
+    "explanation": "The Taco CA-10000-125 expansion tanks at University are rated at 125 PSIG maximum working pressure, as indicated by the '125' suffix in the model number. Each tank holds 2,640 gallons total volume with 1,710 gallons acceptance capacity. The 30 PSIG fill pressure pre-charges the bladder, and the system normally operates between 30-60 PSIG — well below the 125 PSIG rating. The tanks serve a 20,000-gallon system, requiring four tanks for adequate expansion volume.",
     "xpReward": 40
   },
   {
@@ -446,16 +446,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 3,
-    "title": "UCSB Electric Boiler Pressure Drop",
-    "scenario": "On the UCSB San Benito project, the electric boiler B-1 (Fulton EZE-480) handles 165 GPM flow through its heat exchanger. What is the water-side pressure drop through this boiler?",
+    "title": "University Electric Boiler Pressure Drop",
+    "scenario": "On the University Student Housing project, the electric boiler B-1 (Fulton EZE-480) handles 165 GPM flow through its heat exchanger. What is the water-side pressure drop through this boiler?",
     "hint": "Boiler pressure drop affects pump sizing — the pump must overcome the friction losses through the boiler plus all piping, fittings, and valves in the circuit. Check the equipment schedule for the exact pressure drop value.",
     "options": [
       { "text": "1.0 ft WG", "value": "1.0", "correct": false, "feedback": "1.0 ft WG would be extremely low for a boiler at 165 GPM. Even small residential boilers typically have more pressure drop than this. The schedule shows a higher value." },
-      { "text": "2.5 ft WG", "value": "2.5", "correct": true, "feedback": "Correct! Per the UCSB schedule, the Fulton EZE-480 has only 2.5 ft WG pressure drop at 165 GPM. Electric boilers have relatively low pressure drops because the heating elements are immersed directly in the water — no fire-tube or water-tube heat exchanger creating flow restrictions." },
+      { "text": "2.5 ft WG", "value": "2.5", "correct": true, "feedback": "Correct! Per the University schedule, the Fulton EZE-480 has only 2.5 ft WG pressure drop at 165 GPM. Electric boilers have relatively low pressure drops because the heating elements are immersed directly in the water — no fire-tube or water-tube heat exchanger creating flow restrictions." },
       { "text": "10 ft WG", "value": "10", "correct": false, "feedback": "10 ft WG would be typical for a fire-tube gas boiler with multiple pass tubes. Electric boilers have much lower pressure drops because they use immersion elements rather than tube bundles." },
       { "text": "16 ft WG", "value": "16", "correct": false, "feedback": "16 ft WG is the total pump head for PHWP-5, the boiler circulating pump. The pump overcomes all circuit losses including the boiler (2.5 ft), piping, fittings, and valves — not just the boiler alone." }
     ],
-    "explanation": "The Fulton EZE-480 at UCSB has a water-side pressure drop of only 2.5 ft WG at 165 GPM. Electric boilers have inherently low pressure drops compared to gas-fired boilers because the electric heating elements are immersed directly in the water vessel — there are no fire tubes or baffles creating flow restrictions. This low pressure drop is one reason PHWP-5 needs only 16 ft WG total head compared to the 35 ft WG required by the ASHP primary pumps (PHWP-1/2/3/4), which must overcome the outdoor heat pump coil pressure drop.",
+    "explanation": "The Fulton EZE-480 at University has a water-side pressure drop of only 2.5 ft WG at 165 GPM. Electric boilers have inherently low pressure drops compared to gas-fired boilers because the electric heating elements are immersed directly in the water vessel — there are no fire tubes or baffles creating flow restrictions. This low pressure drop is one reason PHWP-5 needs only 16 ft WG total head compared to the 35 ft WG required by the ASHP primary pumps (PHWP-1/2/3/4), which must overcome the outdoor heat pump coil pressure drop.",
     "xpReward": 55
   },
   {
@@ -463,16 +463,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "UCSB Residential Kitchen Range Hood Exhaust",
-    "scenario": "On the UCSB San Benito student housing plans, each residential unit has a kitchen with a range hood. What exhaust CFM is specified for each kitchen range hood?",
+    "title": "University Residential Kitchen Range Hood Exhaust",
+    "scenario": "On the University Student Housing plans, each residential unit has a kitchen with a range hood. What exhaust CFM is specified for each kitchen range hood?",
     "hint": "Kitchen range hoods in residential units must exhaust cooking fumes, grease-laden air, and heat from the cooktop. The CFM is specified per unit on the mechanical plans and must meet IMC requirements for residential cooking equipment.",
     "options": [
       { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust rate for a full bathroom, not a kitchen range hood. Kitchen cooking generates significantly more heat, moisture, and grease-laden air than a bathroom, requiring much higher exhaust rates." },
-      { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM is below the UCSB specification for kitchen range hoods. At 200 CFM, a range hood would not adequately capture cooking fumes from a standard residential cooktop, allowing grease and odors to spread through the unit." },
-      { "text": "270 CFM", "value": "270", "correct": true, "feedback": "Correct! Per the UCSB plans, each residential kitchen range hood exhausts 270 CFM. This rate provides adequate capture velocity at the hood face to contain cooking fumes, grease, and heat from a standard residential cooktop." },
-      { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM exceeds the UCSB specification. While some high-performance residential range hoods operate at 400+ CFM, the UCSB plans specify 270 CFM per unit. Higher CFM also requires more makeup air, increasing energy costs." }
+      { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM is below the University specification for kitchen range hoods. At 200 CFM, a range hood would not adequately capture cooking fumes from a standard residential cooktop, allowing grease and odors to spread through the unit." },
+      { "text": "270 CFM", "value": "270", "correct": true, "feedback": "Correct! Per the University plans, each residential kitchen range hood exhausts 270 CFM. This rate provides adequate capture velocity at the hood face to contain cooking fumes, grease, and heat from a standard residential cooktop." },
+      { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM exceeds the University specification. While some high-performance residential range hoods operate at 400+ CFM, the University plans specify 270 CFM per unit. Higher CFM also requires more makeup air, increasing energy costs." }
     ],
-    "explanation": "The UCSB plans specify 270 CFM for each residential kitchen range hood. This rate meets IMC requirements for residential cooking ventilation and provides adequate capture at the hood face. Each kitchen also has a 300 CFM makeup air shaft to replace the exhausted air and prevent negative pressure in the unit. The range hood exhaust is separate from bathroom exhaust — each system has its own ductwork and fan.",
+    "explanation": "The University plans specify 270 CFM for each residential kitchen range hood. This rate meets IMC requirements for residential cooking ventilation and provides adequate capture at the hood face. Each kitchen also has a 300 CFM makeup air shaft to replace the exhausted air and prevent negative pressure in the unit. The range hood exhaust is separate from bathroom exhaust — each system has its own ductwork and fan.",
     "xpReward": 35
   },
   {
@@ -480,16 +480,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "UCSB Trickle Vent Fresh Air Rate",
-    "scenario": "On the UCSB San Benito student housing plans, each residential unit has trickle vents installed in the window frames to provide passive fresh air ventilation. How much fresh air does each trickle vent provide per unit?",
+    "title": "University Trickle Vent Fresh Air Rate",
+    "scenario": "On the University Student Housing plans, each residential unit has trickle vents installed in the window frames to provide passive fresh air ventilation. How much fresh air does each trickle vent provide per unit?",
     "hint": "Trickle vents are small openings in window frames that allow a controlled amount of outside air into the unit without opening the window. They provide continuous background ventilation to maintain indoor air quality in tightly sealed buildings.",
     "options": [
       { "text": "10-20 CFM", "value": "15", "correct": false, "feedback": "10-20 CFM is too low for a residential unit trickle vent. This amount of fresh air would not meet ASHRAE 62.2 minimum ventilation requirements for a multi-bedroom student housing unit." },
-      { "text": "40-50 CFM", "value": "45", "correct": true, "feedback": "Correct! Per the UCSB plans, trickle vents provide 40-50 CFM of fresh air per unit. This meets ASHRAE 62.2 minimum ventilation requirements for residential dwelling units and provides continuous background ventilation without mechanical systems." },
+      { "text": "40-50 CFM", "value": "45", "correct": true, "feedback": "Correct! Per the University plans, trickle vents provide 40-50 CFM of fresh air per unit. This meets ASHRAE 62.2 minimum ventilation requirements for residential dwelling units and provides continuous background ventilation without mechanical systems." },
       { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust rate for a full bathroom. Trickle vents provide much less airflow — they are passive devices relying on wind and stack effect, not powered fans." },
       { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM far exceeds what a passive trickle vent can provide. That airflow rate would require a mechanical ventilation system, not a small window-frame opening." }
     ],
-    "explanation": "Trickle vents at UCSB provide 40-50 CFM of fresh air per residential unit. These passive ventilation devices are part of the building's overall ventilation strategy: trickle vents bring in fresh outside air, transfer air grilles (100-200 CFM) move air between rooms, and exhaust fans in bathrooms and kitchens remove stale air. This creates a controlled airflow path through the unit from clean spaces (bedrooms) to wet spaces (bathrooms, kitchen) per ASHRAE 62.2.",
+    "explanation": "Trickle vents at University provide 40-50 CFM of fresh air per residential unit. These passive ventilation devices are part of the building's overall ventilation strategy: trickle vents bring in fresh outside air, transfer air grilles (100-200 CFM) move air between rooms, and exhaust fans in bathrooms and kitchens remove stale air. This creates a controlled airflow path through the unit from clean spaces (bedrooms) to wet spaces (bathrooms, kitchen) per ASHRAE 62.2.",
     "xpReward": 35
   },
   {
@@ -497,8 +497,8 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "SACC Non-Residential Lavatory Flow Rate",
-    "scenario": "On the SACC high-rise office TI (Level 31), the plumbing engineer specifies non-residential lavatory faucets for the tenant restrooms. What is the maximum flow rate allowed per CPC 2022 for non-residential lavatory faucets?",
+    "title": "high-rise office Non-Residential Lavatory Flow Rate",
+    "scenario": "On the high-rise commercial office TI (Level 31), the plumbing engineer specifies non-residential lavatory faucets for the tenant restrooms. What is the maximum flow rate allowed per CPC 2022 for non-residential lavatory faucets?",
     "hint": "CPC 2022 sets specific flow rate limits for non-residential lavatory faucets, measured at a standard test pressure. California codes are generally more restrictive than national codes for water conservation.",
     "options": [
       { "text": "0.35 GPM @ 60 PSI", "value": "0.35", "correct": false, "feedback": "0.35 GPM is below the CPC 2022 requirement. While ultra-low-flow faucets exist, they often cannot adequately rinse soap from hands, leading to user complaints and hygiene concerns." },
@@ -506,7 +506,7 @@
       { "text": "1.0 GPM @ 60 PSI", "value": "1.0", "correct": false, "feedback": "1.0 GPM exceeds the CPC 2022 maximum for non-residential lavatories. This rate is closer to what residential kitchen faucets may use. Non-residential restroom faucets need less flow for handwashing." },
       { "text": "2.2 GPM @ 60 PSI", "value": "2.2", "correct": false, "feedback": "2.2 GPM is the old federal maximum for residential faucets. California's CPC 2022 is far more restrictive, especially for non-residential applications. At 2.2 GPM, the project would fail LEED water use calculations." }
     ],
-    "explanation": "CPC 2022 limits non-residential lavatory faucets to 0.5 GPM at 60 PSI. This strict California standard supports water conservation goals and LEED certification. The SACC project uses this rate across all tenant restrooms on Levels 30-32.",
+    "explanation": "CPC 2022 limits non-residential lavatory faucets to 0.5 GPM at 60 PSI. This strict California standard supports water conservation goals and LEED certification. The high-rise commercial office uses this rate across all tenant restrooms on Levels 30-32.",
     "xpReward": 35
   },
   {
@@ -514,8 +514,8 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "SACC Water Closet Flush Volume",
-    "scenario": "The SACC high-rise office TI specifications call for water closets compliant with ASME A112.19.2. What is the maximum flush volume for these fixtures per CPC 2022?",
+    "title": "high-rise office Water Closet Flush Volume",
+    "scenario": "The high-rise commercial office TI specifications call for water closets compliant with ASME A112.19.2. What is the maximum flush volume for these fixtures per CPC 2022?",
     "hint": "Water closet flush volumes have been reduced over the decades — from 5 GPF in the 1980s to 3.5 GPF, then 1.6 GPF, and now even lower. CPC 2022 sets the current California maximum.",
     "options": [
       { "text": "1.0 gallon per flush", "value": "1.0", "correct": false, "feedback": "1.0 GPF is a high-efficiency toilet (HET) level, but CPC 2022 does not mandate this for all water closets. Some LEED projects specify 1.0 or 1.1 GPF for additional water savings, but it is not the code maximum." },
@@ -523,7 +523,7 @@
       { "text": "1.6 gallons per flush", "value": "1.6", "correct": false, "feedback": "1.6 GPF was the old EPAct standard. CPC 2022 has reduced the maximum to 1.28 GPF. Installing 1.6 GPF fixtures in California would violate the plumbing code and waste 25% more water per flush." },
       { "text": "3.5 gallons per flush", "value": "3.5", "correct": false, "feedback": "3.5 GPF toilets have been illegal for new installations since 1994. They use nearly three times the water of current code-compliant fixtures." }
     ],
-    "explanation": "CPC 2022 requires water closets to flush at 1.28 GPF maximum, per ASME A112.19.2. The SACC project specifies this rate for all water closets across the tenant improvement. California's 1.28 GPF requirement is stricter than the older national 1.6 GPF standard.",
+    "explanation": "CPC 2022 requires water closets to flush at 1.28 GPF maximum, per ASME A112.19.2. The high-rise commercial office specifies this rate for all water closets across the tenant improvement. California's 1.28 GPF requirement is stricter than the older national 1.6 GPF standard.",
     "xpReward": 35
   },
   {
@@ -531,16 +531,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "SACC Waste Pipe Slope — 2-Inch Line",
-    "scenario": "A 2-inch waste pipe runs horizontally from a lavatory group on Level 31 of the SACC high-rise office TI to the vertical soil stack. What minimum slope is required per CPC for this 2-inch waste pipe?",
-    "hint": "Waste pipe slope requirements vary by pipe diameter. Smaller pipes need steeper slopes to maintain the minimum flow velocity required to carry waste solids. CPC and SACC specifications both address this.",
+    "title": "high-rise office Waste Pipe Slope — 2-Inch Line",
+    "scenario": "A 2-inch waste pipe runs horizontally from a lavatory group on Level 31 of the high-rise commercial office TI to the vertical soil stack. What minimum slope is required per CPC for this 2-inch waste pipe?",
+    "hint": "Waste pipe slope requirements vary by pipe diameter. Smaller pipes need steeper slopes to maintain the minimum flow velocity required to carry waste solids. CPC and high-rise office specifications both address this.",
     "options": [
       { "text": "1/16 inch per foot (0.5%)", "value": "0.5", "correct": false, "feedback": "1/16 inch per foot is too flat for any waste pipe. At this slope, flow velocity is too low to carry solids, leading to buildup and blockages." },
       { "text": "1/8 inch per foot (1%)", "value": "1.0", "correct": false, "feedback": "1/8 inch per foot (1%) is the minimum for 4-inch and larger pipes. A 2-inch pipe requires a steeper slope because the smaller diameter cannot achieve sufficient velocity at a 1% grade." },
       { "text": "1/4 inch per foot (2%)", "value": "2.0", "correct": true, "feedback": "Correct! CPC requires a minimum slope of 1/4 inch per foot (2%) for 2-inch and smaller waste pipes. This steeper slope ensures adequate flow velocity (2 ft/sec minimum) to carry waste solids through the smaller pipe diameter." },
       { "text": "1/2 inch per foot (4%)", "value": "4.0", "correct": false, "feedback": "1/2 inch per foot is excessively steep. While more slope means faster flow, too much slope causes liquids to outrun solids — the water drains away and leaves solid waste behind in the pipe." }
     ],
-    "explanation": "Waste pipe slope is diameter-dependent: 2-inch and smaller pipes require 1/4 inch per foot (2%), while 4-inch and larger pipes require 1/8 inch per foot (1%). The SACC project follows CPC standards. Getting the slope wrong for the pipe size is a common apprentice mistake — remember: small pipe = steep slope, big pipe = gentle slope.",
+    "explanation": "Waste pipe slope is diameter-dependent: 2-inch and smaller pipes require 1/4 inch per foot (2%), while 4-inch and larger pipes require 1/8 inch per foot (1%). The high-rise commercial office follows CPC standards. Getting the slope wrong for the pipe size is a common apprentice mistake — remember: small pipe = steep slope, big pipe = gentle slope.",
     "xpReward": 55
   },
   {
@@ -548,16 +548,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "SACC Maximum Annular Space at Pipe Sleeve",
-    "scenario": "On the SACC high-rise office TI, a plumber needs to select the correct sleeve size for a 1-1/2 inch Type L copper pipe penetrating a masonry core wall. The SACC specification limits the maximum annular space between the pipe and sleeve. What is the maximum allowable annular space?",
+    "title": "high-rise office Maximum Annular Space at Pipe Sleeve",
+    "scenario": "On the high-rise commercial office TI, a plumber needs to select the correct sleeve size for a 1-1/2 inch Type L copper pipe penetrating a masonry core wall. The high-rise office specification limits the maximum annular space between the pipe and sleeve. What is the maximum allowable annular space?",
     "hint": "The annular space is the gap between the outside of the pipe and the inside of the sleeve. This space must be small enough for firestopping materials to effectively seal, but large enough to allow pipe installation and thermal movement.",
     "options": [
       { "text": "1/4 inch", "value": "0.25", "correct": false, "feedback": "1/4 inch is too tight. While a smaller gap is better for firestopping, 1/4 inch makes pipe installation extremely difficult and does not allow for thermal expansion movement of the copper pipe within the sleeve." },
-      { "text": "1/2 inch", "value": "0.5", "correct": true, "feedback": "Correct! The SACC specification limits annular space to a maximum of 1/2 inch. This provides enough room for pipe installation and thermal movement while keeping the gap small enough for mineral wool packing and Duxseal to effectively seal the penetration." },
-      { "text": "3/4 inch", "value": "0.75", "correct": false, "feedback": "3/4 inch exceeds the SACC maximum. At this gap, mineral wool may not compress sufficiently to fill the space, and Duxseal may sag or fail to bridge the gap, compromising the fire rating of the assembly." },
+      { "text": "1/2 inch", "value": "0.5", "correct": true, "feedback": "Correct! The high-rise office specification limits annular space to a maximum of 1/2 inch. This provides enough room for pipe installation and thermal movement while keeping the gap small enough for mineral wool packing and Duxseal to effectively seal the penetration." },
+      { "text": "3/4 inch", "value": "0.75", "correct": false, "feedback": "3/4 inch exceeds the high-rise office maximum. At this gap, mineral wool may not compress sufficiently to fill the space, and Duxseal may sag or fail to bridge the gap, compromising the fire rating of the assembly." },
       { "text": "1 inch", "value": "1.0", "correct": false, "feedback": "1 inch is far too large. The firestopping system (mineral wool + Duxseal) is not tested or listed for annular spaces this wide. The penetration would fail firestopping inspection and LEED commissioning verification." }
     ],
-    "explanation": "The SACC specification limits annular space to 1/2 inch maximum. This dimension is critical for firestopping effectiveness — the mineral wool and Duxseal are tested and listed for specific gap sizes. Exceeding the maximum means the firestop assembly does not match its UL listing and cannot be relied upon to maintain the fire-resistance rating of the wall or floor assembly.",
+    "explanation": "The high-rise office specification limits annular space to 1/2 inch maximum. This dimension is critical for firestopping effectiveness — the mineral wool and Duxseal are tested and listed for specific gap sizes. Exceeding the maximum means the firestop assembly does not match its UL listing and cannot be relied upon to maintain the fire-resistance rating of the wall or floor assembly.",
     "xpReward": 60
   },
   {
@@ -565,16 +565,16 @@
     "type": "size-it",
     "trade": "plumbing",
     "difficulty": 3,
-    "title": "SACC Condensate Drain Sizing for CRAC Unit",
-    "scenario": "A CRAC unit in the Level 31 server room produces condensate that must be drained to the nearest lavatory tailpiece per SACC specifications. The condensate drain runs approximately 25 feet horizontally with continuous slope. What size condensate drain pipe does the SACC specification require?",
-    "hint": "CRAC condensate drains are sized based on the unit's cooling capacity and condensate production rate. The SACC specification calls out a specific size for the condensate down drain.",
+    "title": "high-rise office Condensate Drain Sizing for CRAC Unit",
+    "scenario": "A CRAC unit in the Level 31 server room produces condensate that must be drained to the nearest lavatory tailpiece per high-rise office specifications. The condensate drain runs approximately 25 feet horizontally with continuous slope. What size condensate drain pipe does the high-rise office specification require?",
+    "hint": "CRAC condensate drains are sized based on the unit's cooling capacity and condensate production rate. The high-rise office specification calls out a specific size for the condensate down drain.",
     "options": [
       { "text": "1/2 inch", "value": "0.5", "correct": false, "feedback": "1/2 inch is too small for a CRAC condensate drain. At this size, the pipe can easily clog with biological growth (algae, mold) that naturally forms in condensate lines, especially over a 25-foot horizontal run." },
-      { "text": "3/4 inch", "value": "0.75", "correct": true, "feedback": "Correct! The SACC specification requires a 3/4-inch condensate drain (CD) for CRAC units. This size provides adequate capacity for the condensate volume, allows for some biological buildup without clogging, and can be effectively cleaned with standard maintenance tools." },
-      { "text": "1 inch", "value": "1.0", "correct": false, "feedback": "1 inch exceeds the SACC specification. While a larger pipe would work, it is unnecessary for CRAC condensate volume and wastes material. The 3/4-inch size is adequate and matches the specification." },
+      { "text": "3/4 inch", "value": "0.75", "correct": true, "feedback": "Correct! The high-rise office specification requires a 3/4-inch condensate drain (CD) for CRAC units. This size provides adequate capacity for the condensate volume, allows for some biological buildup without clogging, and can be effectively cleaned with standard maintenance tools." },
+      { "text": "1 inch", "value": "1.0", "correct": false, "feedback": "1 inch exceeds the high-rise office specification. While a larger pipe would work, it is unnecessary for CRAC condensate volume and wastes material. The 3/4-inch size is adequate and matches the specification." },
       { "text": "1-1/2 inch", "value": "1.5", "correct": false, "feedback": "1-1/2 inch is far oversized for CRAC condensate. This size is used for fixture drains (kitchen sinks, lavatories). The low volume of condensate in a 1-1/2 inch pipe would flow too slowly, allowing stagnant water and biological growth." }
     ],
-    "explanation": "SACC specifies 3/4-inch condensate drains for CRAC units. Condensate drain sizing balances capacity against self-scouring velocity — too small clogs easily, too large allows stagnation. The 3/4-inch drain must maintain continuous slope to the lavatory tailpiece where it discharges as indirect waste. In a high-rise server room, a clogged condensate drain can cause a CRAC unit overflow, potentially flooding critical IT equipment.",
+    "explanation": "high-rise office specifies 3/4-inch condensate drains for CRAC units. Condensate drain sizing balances capacity against self-scouring velocity — too small clogs easily, too large allows stagnation. The 3/4-inch drain must maintain continuous slope to the lavatory tailpiece where it discharges as indirect waste. In a high-rise server room, a clogged condensate drain can cause a CRAC unit overflow, potentially flooding critical IT equipment.",
     "xpReward": 80
   }
 ]

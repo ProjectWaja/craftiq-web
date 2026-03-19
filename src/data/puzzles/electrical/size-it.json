@@ -209,15 +209,15 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Overload Rating — Short Duration",
-    "scenario": "You are commissioning a VFD on a 50 HP supply fan motor. During startup, the motor briefly draws 130% of rated current for about 1.5 seconds. Per UCSB spec, what is the maximum duration the VFD must sustain 130% overload without faulting?",
-    "hint": "UCSB spec defines two VFD overload tiers: a moderate overload sustained for a longer period, and a heavy overload sustained for a shorter burst. The 130% rating has a specific time limit.",
+    "scenario": "You are commissioning a VFD on a 50 HP supply fan motor. During startup, the motor briefly draws 130% of rated current for about 1.5 seconds. Per University spec, what is the maximum duration the VFD must sustain 130% overload without faulting?",
+    "hint": "University spec defines two VFD overload tiers: a moderate overload sustained for a longer period, and a heavy overload sustained for a shorter burst. The 130% rating has a specific time limit.",
     "options": [
-      { "text": "1 second", "value": "1", "correct": false, "feedback": "1 second is shorter than the spec requires. The VFD must handle 130% for at least 2 seconds per UCSB spec. A 1-second rating would cause nuisance faults during normal motor acceleration." },
-      { "text": "2 seconds", "value": "2", "correct": true, "feedback": "Correct! Per UCSB spec, the VFD must sustain 130% of rated output current for a minimum of 2 seconds. This handles motor acceleration and brief overload transients without nuisance tripping." },
-      { "text": "10 seconds", "value": "10", "correct": false, "feedback": "10 seconds at 130% exceeds the UCSB spec requirement. While a more robust drive, this rating is not what the spec calls for. The 110% overload tier has the longer duration at 1 minute." },
-      { "text": "1 minute", "value": "60", "correct": false, "feedback": "1 minute is the required duration for 110% overload per UCSB spec, not 130%. The two overload tiers are: 110% for 1 minute and 130% for 2 seconds." }
+      { "text": "1 second", "value": "1", "correct": false, "feedback": "1 second is shorter than the spec requires. The VFD must handle 130% for at least 2 seconds per University spec. A 1-second rating would cause nuisance faults during normal motor acceleration." },
+      { "text": "2 seconds", "value": "2", "correct": true, "feedback": "Correct! Per University spec, the VFD must sustain 130% of rated output current for a minimum of 2 seconds. This handles motor acceleration and brief overload transients without nuisance tripping." },
+      { "text": "10 seconds", "value": "10", "correct": false, "feedback": "10 seconds at 130% exceeds the University spec requirement. While a more robust drive, this rating is not what the spec calls for. The 110% overload tier has the longer duration at 1 minute." },
+      { "text": "1 minute", "value": "60", "correct": false, "feedback": "1 minute is the required duration for 110% overload per University spec, not 130%. The two overload tiers are: 110% for 1 minute and 130% for 2 seconds." }
     ],
-    "explanation": "UCSB spec VFD overload requirements: 110% for 1 minute (sustained moderate overload) and 130% for 2 seconds (short-duration heavy overload). These two tiers ensure the VFD handles both motor acceleration transients and brief mechanical load spikes without nuisance tripping.",
+    "explanation": "University spec VFD overload requirements: 110% for 1 minute (sustained moderate overload) and 130% for 2 seconds (short-duration heavy overload). These two tiers ensure the VFD handles both motor acceleration transients and brief mechanical load spikes without nuisance tripping.",
     "xpReward": 55
   },
   {
@@ -226,15 +226,15 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Temperature Derating",
-    "scenario": "A VFD rated at 100 HP is installed in a rooftop mechanical room where summer temperatures regularly reach 45°C (113°F). Per UCSB spec, the VFD is rated for full output up to 40°C. What is the derated output capacity?",
-    "hint": "UCSB spec requires VFDs to operate at full capacity from -15°C to 40°C. Above 40°C, the drive must be derated. The derating factor is specified per degree above the threshold.",
+    "scenario": "A VFD rated at 100 HP is installed in a rooftop mechanical room where summer temperatures regularly reach 45°C (113°F). Per University spec, the VFD is rated for full output up to 40°C. What is the derated output capacity?",
+    "hint": "University spec requires VFDs to operate at full capacity from -15°C to 40°C. Above 40°C, the drive must be derated. The derating factor is specified per degree above the threshold.",
     "options": [
-      { "text": "100 HP — no derating needed", "value": "100", "correct": false, "feedback": "Derating IS required above 40°C per UCSB spec. Operating at full load above the rated temperature causes the drive's power semiconductors to overheat, shortening lifespan and risking thermal shutdown." },
-      { "text": "90 HP (10% derating)", "value": "90", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must be derated 10% above 40°C ambient temperature. At 45°C, the 100 HP drive should only be loaded to 90 HP to prevent thermal stress on the IGBT modules." },
-      { "text": "75 HP (25% derating)", "value": "75", "correct": false, "feedback": "25% derating is excessive for 5°C above the threshold. UCSB spec calls for 10% derating above 40°C, not a linear per-degree calculation." },
-      { "text": "50 HP (50% derating)", "value": "50", "correct": false, "feedback": "50% derating would only apply in extreme temperature conditions far beyond 40°C. At 45°C, the UCSB spec requires only a 10% derating." }
+      { "text": "100 HP — no derating needed", "value": "100", "correct": false, "feedback": "Derating IS required above 40°C per University spec. Operating at full load above the rated temperature causes the drive's power semiconductors to overheat, shortening lifespan and risking thermal shutdown." },
+      { "text": "90 HP (10% derating)", "value": "90", "correct": true, "feedback": "Correct! Per University spec, VFDs must be derated 10% above 40°C ambient temperature. At 45°C, the 100 HP drive should only be loaded to 90 HP to prevent thermal stress on the IGBT modules." },
+      { "text": "75 HP (25% derating)", "value": "75", "correct": false, "feedback": "25% derating is excessive for 5°C above the threshold. University spec calls for 10% derating above 40°C, not a linear per-degree calculation." },
+      { "text": "50 HP (50% derating)", "value": "50", "correct": false, "feedback": "50% derating would only apply in extreme temperature conditions far beyond 40°C. At 45°C, the University spec requires only a 10% derating." }
     ],
-    "explanation": "VFD temperature derating per UCSB spec: full rated output from -15°C to 40°C, derate 10% above 40°C. In hot mechanical rooms, either upsize the VFD or improve ventilation to keep ambient below 40°C. IGBT junction temperature is the limiting factor — every degree above rating accelerates semiconductor degradation.",
+    "explanation": "VFD temperature derating per University spec: full rated output from -15°C to 40°C, derate 10% above 40°C. In hot mechanical rooms, either upsize the VFD or improve ventilation to keep ambient below 40°C. IGBT junction temperature is the limiting factor — every degree above rating accelerates semiconductor degradation.",
     "xpReward": 55
   },
   {
@@ -243,15 +243,15 @@
     "trade": "electrical",
     "difficulty": 3,
     "title": "VFD Altitude Derating",
-    "scenario": "A project at 5,000 feet elevation requires a 75 HP VFD for a chilled water pump. Per UCSB spec, VFDs are rated at full capacity from 0 to 3,300 feet, with derating required above that up to 6,600 feet. What is the derated capacity at 5,000 feet?",
-    "hint": "UCSB spec requires 10% derating for VFDs installed between 3,300 and 6,600 feet elevation. At high altitude, thinner air reduces the cooling effectiveness of the drive's heat sinks.",
+    "scenario": "A project at 5,000 feet elevation requires a 75 HP VFD for a chilled water pump. Per University spec, VFDs are rated at full capacity from 0 to 3,300 feet, with derating required above that up to 6,600 feet. What is the derated capacity at 5,000 feet?",
+    "hint": "University spec requires 10% derating for VFDs installed between 3,300 and 6,600 feet elevation. At high altitude, thinner air reduces the cooling effectiveness of the drive's heat sinks.",
     "options": [
       { "text": "75 HP — no derating at 5,000 feet", "value": "75", "correct": false, "feedback": "Derating IS required at 5,000 feet because it exceeds the 3,300-foot threshold. Reduced air density at altitude means less convective cooling for the VFD's power electronics." },
-      { "text": "67.5 HP (10% derating)", "value": "67.5", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must be derated 10% when installed between 3,300 and 6,600 feet elevation. A 75 HP drive at 5,000 feet should be loaded to no more than 67.5 HP, or an 80+ HP drive should be specified." },
-      { "text": "56.25 HP (25% derating)", "value": "56.25", "correct": false, "feedback": "25% derating is excessive. UCSB spec calls for a flat 10% derating in the 3,300 to 6,600-foot range, not a proportional calculation based on exact altitude." },
-      { "text": "70 HP (7% derating)", "value": "70", "correct": false, "feedback": "There is no 7% intermediate derating calculation in the UCSB spec. The spec uses a single 10% derating step for the entire 3,300 to 6,600-foot altitude band." }
+      { "text": "67.5 HP (10% derating)", "value": "67.5", "correct": true, "feedback": "Correct! Per University spec, VFDs must be derated 10% when installed between 3,300 and 6,600 feet elevation. A 75 HP drive at 5,000 feet should be loaded to no more than 67.5 HP, or an 80+ HP drive should be specified." },
+      { "text": "56.25 HP (25% derating)", "value": "56.25", "correct": false, "feedback": "25% derating is excessive. University spec calls for a flat 10% derating in the 3,300 to 6,600-foot range, not a proportional calculation based on exact altitude." },
+      { "text": "70 HP (7% derating)", "value": "70", "correct": false, "feedback": "There is no 7% intermediate derating calculation in the University spec. The spec uses a single 10% derating step for the entire 3,300 to 6,600-foot altitude band." }
     ],
-    "explanation": "VFD altitude derating per UCSB spec: full capacity 0–3,300 ft, derate 10% from 3,300–6,600 ft. Thinner air at altitude reduces heat dissipation from the drive's heat sinks, causing higher junction temperatures. For projects above 3,300 feet, either derate the existing drive or upsize to the next frame to maintain required motor horsepower.",
+    "explanation": "VFD altitude derating per University spec: full capacity 0–3,300 ft, derate 10% from 3,300–6,600 ft. Thinner air at altitude reduces heat dissipation from the drive's heat sinks, causing higher junction temperatures. For projects above 3,300 feet, either derate the existing drive or upsize to the next frame to maintain required motor horsepower.",
     "xpReward": 60
   },
   {
@@ -260,15 +260,15 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Carrier Frequency Setting",
-    "scenario": "You are setting up a new VFD for an AHU supply fan in an occupied office space. The default carrier frequency is 2 kHz, but occupants can hear a high-pitched whine from the motor. Per UCSB spec, what is the maximum carrier frequency you can increase to for noise reduction?",
-    "hint": "UCSB spec defines the starting carrier frequency and the maximum allowable carrier frequency. Higher frequencies reduce audible motor noise but increase drive heating and may require derating.",
+    "scenario": "You are setting up a new VFD for an AHU supply fan in an occupied office space. The default carrier frequency is 2 kHz, but occupants can hear a high-pitched whine from the motor. Per University spec, what is the maximum carrier frequency you can increase to for noise reduction?",
+    "hint": "University spec defines the starting carrier frequency and the maximum allowable carrier frequency. Higher frequencies reduce audible motor noise but increase drive heating and may require derating.",
     "options": [
-      { "text": "4 kHz", "value": "4", "correct": false, "feedback": "4 kHz is better than 2 kHz for noise but still produces audible whine in quiet spaces. The UCSB spec allows increasing up to a higher maximum for noise-sensitive applications." },
-      { "text": "6 kHz", "value": "6", "correct": false, "feedback": "6 kHz further reduces motor noise but is not the maximum allowed by UCSB spec. You have room to go higher if the application demands quieter operation." },
-      { "text": "10 kHz", "value": "10", "correct": true, "feedback": "Correct! Per UCSB spec, the maximum carrier frequency is 10 kHz, with 2 kHz as the starting (default) frequency. At 10 kHz, most motor whine is above human hearing threshold, but the VFD may need derating due to increased switching losses." },
-      { "text": "20 kHz", "value": "20", "correct": false, "feedback": "20 kHz exceeds the UCSB spec maximum of 10 kHz. While 20 kHz would be inaudible, the switching losses at this frequency would cause severe VFD overheating and potential IGBT failure." }
+      { "text": "4 kHz", "value": "4", "correct": false, "feedback": "4 kHz is better than 2 kHz for noise but still produces audible whine in quiet spaces. The University spec allows increasing up to a higher maximum for noise-sensitive applications." },
+      { "text": "6 kHz", "value": "6", "correct": false, "feedback": "6 kHz further reduces motor noise but is not the maximum allowed by University spec. You have room to go higher if the application demands quieter operation." },
+      { "text": "10 kHz", "value": "10", "correct": true, "feedback": "Correct! Per University spec, the maximum carrier frequency is 10 kHz, with 2 kHz as the starting (default) frequency. At 10 kHz, most motor whine is above human hearing threshold, but the VFD may need derating due to increased switching losses." },
+      { "text": "20 kHz", "value": "20", "correct": false, "feedback": "20 kHz exceeds the University spec maximum of 10 kHz. While 20 kHz would be inaudible, the switching losses at this frequency would cause severe VFD overheating and potential IGBT failure." }
     ],
-    "explanation": "VFD carrier frequency per UCSB spec: start at 2 kHz, maximum 10 kHz. Higher carrier frequency reduces audible motor noise by pushing the switching harmonics above the human hearing range (~15-18 kHz). Trade-off: higher carrier frequency increases IGBT switching losses, generating more heat in the drive. Above 4-6 kHz, most VFDs require 5-10% current derating.",
+    "explanation": "VFD carrier frequency per University spec: start at 2 kHz, maximum 10 kHz. Higher carrier frequency reduces audible motor noise by pushing the switching harmonics above the human hearing range (~15-18 kHz). Trade-off: higher carrier frequency increases IGBT switching losses, generating more heat in the drive. Above 4-6 kHz, most VFDs require 5-10% current derating.",
     "xpReward": 50
   },
   {
@@ -277,15 +277,15 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Input Voltage Tolerance — Full Output",
-    "scenario": "A building experiences periodic voltage sags during peak utility demand. Per UCSB spec, what is the minimum input voltage at which a VFD must still deliver full rated output to the motor?",
-    "hint": "UCSB spec defines two voltage thresholds: one where the VFD must maintain full output, and a lower one where it must continue operating (possibly at reduced output).",
+    "scenario": "A building experiences periodic voltage sags during peak utility demand. Per University spec, what is the minimum input voltage at which a VFD must still deliver full rated output to the motor?",
+    "hint": "University spec defines two voltage thresholds: one where the VFD must maintain full output, and a lower one where it must continue operating (possibly at reduced output).",
     "options": [
       { "text": "100% of nominal — no voltage tolerance", "value": "100", "correct": false, "feedback": "All VFDs have some input voltage tolerance. Requiring exactly 100% nominal would mean any voltage sag shuts down the drive, which is unacceptable for critical HVAC equipment." },
-      { "text": "95% of nominal voltage", "value": "95", "correct": false, "feedback": "95% is too conservative. UCSB spec requires VFDs to maintain full output at a lower voltage threshold, providing greater ride-through capability during utility voltage sags." },
-      { "text": "90% of nominal voltage", "value": "90", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must deliver full rated output at 90% of nominal input voltage. At 480V nominal, that means full output down to 432V. The drive must also continue operating (at reduced output) down to 70% of nominal." },
-      { "text": "80% of nominal voltage", "value": "80", "correct": false, "feedback": "80% is between the two UCSB spec thresholds. Full output is required at 90%, and continued operation (not full output) is required down to 70%. At 80%, the VFD runs but may need to reduce motor speed." }
+      { "text": "95% of nominal voltage", "value": "95", "correct": false, "feedback": "95% is too conservative. University spec requires VFDs to maintain full output at a lower voltage threshold, providing greater ride-through capability during utility voltage sags." },
+      { "text": "90% of nominal voltage", "value": "90", "correct": true, "feedback": "Correct! Per University spec, VFDs must deliver full rated output at 90% of nominal input voltage. At 480V nominal, that means full output down to 432V. The drive must also continue operating (at reduced output) down to 70% of nominal." },
+      { "text": "80% of nominal voltage", "value": "80", "correct": false, "feedback": "80% is between the two University spec thresholds. Full output is required at 90%, and continued operation (not full output) is required down to 70%. At 80%, the VFD runs but may need to reduce motor speed." }
     ],
-    "explanation": "VFD input voltage tolerance per UCSB spec: full rated output at 90% nominal, continued operation at 70% nominal. This two-tier approach ensures critical equipment stays running during voltage sags. At 480V nominal: full output down to 432V, continued operation down to 336V. Below 70%, the drive may trip on undervoltage to protect itself and the motor.",
+    "explanation": "VFD input voltage tolerance per University spec: full rated output at 90% nominal, continued operation at 70% nominal. This two-tier approach ensures critical equipment stays running during voltage sags. At 480V nominal: full output down to 432V, continued operation down to 336V. Below 70%, the drive may trip on undervoltage to protect itself and the motor.",
     "xpReward": 50
   },
   {
@@ -294,15 +294,15 @@
     "trade": "electrical",
     "difficulty": 1,
     "title": "VFD Overload Rating — Short Duration",
-    "scenario": "A VFD must handle momentary overload conditions during motor starting and sudden load changes. Per UCSB spec, what is the required short-duration overload capacity (2-second burst)?",
-    "hint": "UCSB spec defines two overload ratings: a sustained overload (1 minute per 10 minutes) and a short-duration transient overload (2 seconds per minute). The short-duration rating is higher.",
+    "scenario": "A VFD must handle momentary overload conditions during motor starting and sudden load changes. Per University spec, what is the required short-duration overload capacity (2-second burst)?",
+    "hint": "University spec defines two overload ratings: a sustained overload (1 minute per 10 minutes) and a short-duration transient overload (2 seconds per minute). The short-duration rating is higher.",
     "options": [
-      { "text": "105% for 2 seconds", "value": "105", "correct": false, "feedback": "105% is barely above rated current and would not handle the transient torque demands of sudden load changes or valve position shifts. UCSB spec requires a higher short-duration overload." },
+      { "text": "105% for 2 seconds", "value": "105", "correct": false, "feedback": "105% is barely above rated current and would not handle the transient torque demands of sudden load changes or valve position shifts. University spec requires a higher short-duration overload." },
       { "text": "110% for 2 seconds", "value": "110", "correct": false, "feedback": "110% is the sustained overload rating (1 minute per 10 minutes). The 2-second transient overload rating is higher to handle sudden load spikes." },
-      { "text": "130% for 2 seconds", "value": "130", "correct": true, "feedback": "Correct! Per UCSB spec, VFDs must handle 130% of rated current for 2 seconds every minute. This handles transient load spikes from sudden valve movements, fan blade loading, or pump cavitation events." },
-      { "text": "150% for 2 seconds", "value": "150", "correct": false, "feedback": "150% exceeds the UCSB spec requirement of 130% for 2-second transients. While some premium drives offer 150%, the spec baseline is 130%." }
+      { "text": "130% for 2 seconds", "value": "130", "correct": true, "feedback": "Correct! Per University spec, VFDs must handle 130% of rated current for 2 seconds every minute. This handles transient load spikes from sudden valve movements, fan blade loading, or pump cavitation events." },
+      { "text": "150% for 2 seconds", "value": "150", "correct": false, "feedback": "150% exceeds the University spec requirement of 130% for 2-second transients. While some premium drives offer 150%, the spec baseline is 130%." }
     ],
-    "explanation": "VFD overload ratings per UCSB spec: 110% for 1 minute every 10 minutes (sustained), and 130% for 2 seconds every minute (transient). The sustained rating handles gradual overloads like dirty filters increasing fan load. The transient rating handles sudden spikes like a chilled water valve snapping open. Both ratings protect the IGBT power modules from thermal damage.",
+    "explanation": "VFD overload ratings per University spec: 110% for 1 minute every 10 minutes (sustained), and 130% for 2 seconds every minute (transient). The sustained rating handles gradual overloads like dirty filters increasing fan load. The transient rating handles sudden spikes like a chilled water valve snapping open. Both ratings protect the IGBT power modules from thermal damage.",
     "xpReward": 45
   },
   {
@@ -311,15 +311,15 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Maximum THD Requirement",
-    "scenario": "You are reviewing VFD submittals for a new building. Per UCSB spec, what is the maximum total harmonic distortion (THD) allowed at the VFD output?",
-    "hint": "UCSB spec limits both THD (total harmonic distortion at the VFD output) and TDD (total demand distortion at the point of common coupling). THD is the stricter of the two limits.",
+    "scenario": "You are reviewing VFD submittals for a new building. Per University spec, what is the maximum total harmonic distortion (THD) allowed at the VFD output?",
+    "hint": "University spec limits both THD (total harmonic distortion at the VFD output) and TDD (total demand distortion at the point of common coupling). THD is the stricter of the two limits.",
     "options": [
-      { "text": "Less than 3%", "value": "3", "correct": true, "feedback": "Correct! Per UCSB spec, VFD output THD must be less than 3%. Low THD protects downstream equipment from harmonic heating and reduces interference with sensitive building systems." },
+      { "text": "Less than 3%", "value": "3", "correct": true, "feedback": "Correct! Per University spec, VFD output THD must be less than 3%. Low THD protects downstream equipment from harmonic heating and reduces interference with sensitive building systems." },
       { "text": "Less than 5%", "value": "5", "correct": false, "feedback": "5% is the TDD (Total Demand Distortion) limit at the point of common coupling per IEEE 519. The THD limit at the VFD output itself is stricter at less than 3%." },
-      { "text": "Less than 8%", "value": "8", "correct": false, "feedback": "8% THD would cause significant harmonic heating in transformers, cables, and motors. UCSB spec is much more restrictive at less than 3% to protect building electrical infrastructure." },
-      { "text": "Less than 10%", "value": "10", "correct": false, "feedback": "10% THD is extremely high and would cause overheating of transformers, nuisance breaker tripping, and interference with IT equipment. UCSB spec limits THD to less than 3%." }
+      { "text": "Less than 8%", "value": "8", "correct": false, "feedback": "8% THD would cause significant harmonic heating in transformers, cables, and motors. University spec is much more restrictive at less than 3% to protect building electrical infrastructure." },
+      { "text": "Less than 10%", "value": "10", "correct": false, "feedback": "10% THD is extremely high and would cause overheating of transformers, nuisance breaker tripping, and interference with IT equipment. University spec limits THD to less than 3%." }
     ],
-    "explanation": "VFD harmonic limits per UCSB spec: THD less than 3% at the drive output, TDD less than 5% at the point of common coupling (per IEEE 519). THD measures voltage distortion from the ideal sine wave. Harmonics cause transformer overheating, increased neutral current, and interference with sensitive equipment. Multi-pulse drives (12 or 18 pulse) or active front-end drives are typically needed to meet the 3% THD limit.",
+    "explanation": "VFD harmonic limits per University spec: THD less than 3% at the drive output, TDD less than 5% at the point of common coupling (per IEEE 519). THD measures voltage distortion from the ideal sine wave. Harmonics cause transformer overheating, increased neutral current, and interference with sensitive equipment. Multi-pulse drives (12 or 18 pulse) or active front-end drives are typically needed to meet the 3% THD limit.",
     "xpReward": 50
   },
   {
@@ -328,8 +328,8 @@
     "trade": "electrical",
     "difficulty": 3,
     "title": "VFD Combined Derating — Heat and Altitude",
-    "scenario": "A VFD rated at 100 HP is installed at 4,500 feet elevation in a mechanical penthouse where summer ambient reaches 45°C. Per UCSB spec, what is the maximum load this VFD can safely deliver considering both altitude and temperature derating?",
-    "hint": "UCSB spec requires 10% derating above 3,300 feet altitude AND 10% derating above 40°C ambient temperature. When both conditions exist simultaneously, the derating factors compound.",
+    "scenario": "A VFD rated at 100 HP is installed at 4,500 feet elevation in a mechanical penthouse where summer ambient reaches 45°C. Per University spec, what is the maximum load this VFD can safely deliver considering both altitude and temperature derating?",
+    "hint": "University spec requires 10% derating above 3,300 feet altitude AND 10% derating above 40°C ambient temperature. When both conditions exist simultaneously, the derating factors compound.",
     "options": [
       { "text": "90 HP (10% total derating)", "value": "90", "correct": false, "feedback": "10% only accounts for one derating factor. Both altitude (above 3,300 ft) and temperature (above 40°C) require independent derating. You must apply both." },
       { "text": "81 HP (19% total derating)", "value": "81", "correct": true, "feedback": "Correct! The derating factors compound: 100 HP x 0.90 (altitude) x 0.90 (temperature) = 81 HP. Both conditions reduce cooling effectiveness — thin air AND high ambient temperature independently reduce the drive's ability to dissipate heat from the IGBT modules." },
@@ -344,16 +344,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "UCSB VRF Outdoor Unit Heating COP",
-    "scenario": "On the UCSB San Benito Student Housing project, the VRF heat recovery outdoor unit HR-B2-R-01 is a Daikin REYQ408AAYDB rated at 34 tons. At 47°F outdoor ambient, what is its heating coefficient of performance (COP)?",
+    "title": "University VRF Outdoor Unit Heating COP",
+    "scenario": "On the University Student Housing project, the VRF heat recovery outdoor unit HR-B2-R-01 is a Daikin REYQ408AAYDB rated at 34 tons. At 47°F outdoor ambient, what is its heating coefficient of performance (COP)?",
     "hint": "COP measures heating efficiency — how many BTUs of heat output per BTU of electrical input. Higher COP means more efficient. Heat pump COP drops as outdoor temperature decreases.",
     "options": [
       { "text": "2.0", "value": "2.0", "correct": false, "feedback": "COP of 2.0 would be typical at much lower outdoor temperatures (around 17°F). At 47°F, the standard ARI rating condition, the COP should be significantly higher." },
-      { "text": "3.0", "value": "3.0", "correct": true, "feedback": "Correct! Per the UCSB schedule, HR-B2-R-01 has a heating COP of 3.0 at 47°F outdoor ambient, producing 337.8 MBH of heating. This means for every 1 kW of electrical input, the unit delivers 3 kW of heating energy." },
-      { "text": "4.5", "value": "4.5", "correct": false, "feedback": "COP of 4.5 would be exceptional for a VRF system at 47°F. While some systems achieve this at higher ambient temperatures, the UCSB schedule rates this unit at 3.0 COP at the standard 47°F condition." },
+      { "text": "3.0", "value": "3.0", "correct": true, "feedback": "Correct! Per the University schedule, HR-B2-R-01 has a heating COP of 3.0 at 47°F outdoor ambient, producing 337.8 MBH of heating. This means for every 1 kW of electrical input, the unit delivers 3 kW of heating energy." },
+      { "text": "4.5", "value": "4.5", "correct": false, "feedback": "COP of 4.5 would be exceptional for a VRF system at 47°F. While some systems achieve this at higher ambient temperatures, the University schedule rates this unit at 3.0 COP at the standard 47°F condition." },
       { "text": "10.0", "value": "10.0", "correct": false, "feedback": "10.0 is the cooling EER (Energy Efficiency Ratio) for this unit, not the heating COP. EER is measured in BTU/Wh while COP is a unitless ratio. Do not confuse the two ratings." }
     ],
-    "explanation": "The Daikin REYQ408AAYDB at UCSB has a heating COP of 3.0 at 47°F (the AHRI standard rating condition). This means for every 112.6 MBH of electrical input, it produces 337.8 MBH of heat output. The cooling EER of 10.0 is a separate metric. COP drops as outdoor temperature decreases because the heat pump must work harder to extract heat from colder air — at 17°F ambient, the COP might drop to 2.0 or lower.",
+    "explanation": "The Daikin REYQ408AAYDB at University has a heating COP of 3.0 at 47°F (the AHRI standard rating condition). This means for every 112.6 MBH of electrical input, it produces 337.8 MBH of heat output. The cooling EER of 10.0 is a separate metric. COP drops as outdoor temperature decreases because the heat pump must work harder to extract heat from colder air — at 17°F ambient, the COP might drop to 2.0 or lower.",
     "xpReward": 50
   },
   {
@@ -361,16 +361,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "UCSB Split System SEER Rating",
-    "scenario": "On the UCSB San Benito project, split system outdoor unit SOU-B1-1-3 is a Daikin RZQ48TBVJUA rated at 4 tons using R-32 refrigerant at 208V. What is its SEER rating?",
+    "title": "University Split System SEER Rating",
+    "scenario": "On the University Student Housing project, split system outdoor unit SOU-B1-1-3 is a Daikin RZQ48TBVJUA rated at 4 tons using R-32 refrigerant at 208V. What is its SEER rating?",
     "hint": "SEER (Seasonal Energy Efficiency Ratio) measures cooling efficiency over a full season. Federal minimum for split systems above 45,000 BTU/h is SEER 14 (as of 2023 in the South/Southwest, SEER2 15 equivalent). Check the equipment schedule.",
     "options": [
       { "text": "10.5", "value": "10.5", "correct": false, "feedback": "10.5 is the EER (instantaneous efficiency at peak conditions) for the smaller SOU-B1-1-1 unit, not the SEER for SOU-B1-1-3. SEER is always higher than EER because it includes part-load operation." },
       { "text": "13.0", "value": "13.0", "correct": false, "feedback": "SEER 13 would not meet current federal minimums for this capacity range. The Department of Energy requires higher SEER ratings for new equipment." },
-      { "text": "15.3", "value": "15.3", "correct": true, "feedback": "Correct! Per the UCSB schedule, SOU-B1-1-3 has a SEER of 15.3. This exceeds the federal minimum and uses R-32 refrigerant, which has a lower GWP (675) than the older R-410A (2,088) it replaces." },
+      { "text": "15.3", "value": "15.3", "correct": true, "feedback": "Correct! Per the University schedule, SOU-B1-1-3 has a SEER of 15.3. This exceeds the federal minimum and uses R-32 refrigerant, which has a lower GWP (675) than the older R-410A (2,088) it replaces." },
       { "text": "18.0", "value": "18.0", "correct": false, "feedback": "SEER 18 is the rating for the smaller SOU-B1-1-1 (2-ton unit). Larger capacity units typically have slightly lower SEER ratings due to compressor sizing. The 4-ton SOU-B1-1-3 is rated at 15.3." }
     ],
-    "explanation": "Per the UCSB schedule, the 4-ton Daikin RZQ48TBVJUA has SEER 15.3 and EER 8.3. Note the smaller 2-ton SOU-B1-1-1 (RXC24AXVJU) achieves SEER 18 and EER 10.5 — smaller units often have higher efficiency ratings. Both units use R-32 refrigerant at 208V. R-32 is a single-component refrigerant with 68% lower GWP than R-410A, aligning with California's HFC phase-down regulations.",
+    "explanation": "Per the University schedule, the 4-ton Daikin RZQ48TBVJUA has SEER 15.3 and EER 8.3. Note the smaller 2-ton SOU-B1-1-1 (RXC24AXVJU) achieves SEER 18 and EER 10.5 — smaller units often have higher efficiency ratings. Both units use R-32 refrigerant at 208V. R-32 is a single-component refrigerant with 68% lower GWP than R-410A, aligning with California's HFC phase-down regulations.",
     "xpReward": 50
   },
   {
@@ -378,16 +378,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "UCSB Generator Room Unit Heater Voltage",
-    "scenario": "On the UCSB San Benito project, the generator room has electric unit heaters EH-B3-1-1 and EH-B3-1-2 (Marley IUH, industrial type) rated at 5 KW each with 270 CFM airflow. What voltage and phase are these heaters wired for?",
+    "title": "University Generator Room Unit Heater Voltage",
+    "scenario": "On the University Student Housing project, the generator room has electric unit heaters EH-B3-1-1 and EH-B3-1-2 (Marley IUH, industrial type) rated at 5 KW each with 270 CFM airflow. What voltage and phase are these heaters wired for?",
     "hint": "Generator rooms are typically served by building power, not generator backup. Industrial unit heaters in mechanical spaces are often wired at the building's primary voltage to minimize amperage on the circuit.",
     "options": [
       { "text": "120V / 1-phase", "value": "120-1", "correct": false, "feedback": "120V/1ph at 5 KW would draw over 41 amps — far too much for a 120V circuit. That is the voltage for the smaller 0.5 KW wall heater EH-B3-1-3 in the water softener room." },
       { "text": "208V / 1-phase", "value": "208-1", "correct": false, "feedback": "208V/1ph at 5 KW draws about 24 amps. While possible, the schedule specifies a higher voltage to reduce amperage and use standard 3-phase building power available in mechanical rooms." },
-      { "text": "460V / 3-phase", "value": "460-3", "correct": true, "feedback": "Correct! Per the UCSB schedule, the generator room unit heaters are 460V/3-phase. At 5 KW on 460V/3ph, each heater draws only about 6.3 amps — a much smaller wire size and breaker than lower voltage options." },
-      { "text": "277V / 1-phase", "value": "277-1", "correct": false, "feedback": "277V/1ph is common for lighting in commercial buildings, but the UCSB schedule specifies 460V/3-phase for these industrial unit heaters to take advantage of the 3-phase power available in the generator room." }
+      { "text": "460V / 3-phase", "value": "460-3", "correct": true, "feedback": "Correct! Per the University schedule, the generator room unit heaters are 460V/3-phase. At 5 KW on 460V/3ph, each heater draws only about 6.3 amps — a much smaller wire size and breaker than lower voltage options." },
+      { "text": "277V / 1-phase", "value": "277-1", "correct": false, "feedback": "277V/1ph is common for lighting in commercial buildings, but the University schedule specifies 460V/3-phase for these industrial unit heaters to take advantage of the 3-phase power available in the generator room." }
     ],
-    "explanation": "The Marley IUH industrial unit heaters in the UCSB generator room are wired at 460V/3-phase per the equipment schedule. At this voltage, a 5 KW heater draws only 6.3 amps (5,000 / (460 x 1.732) = 6.3A), allowing smaller wire and breaker sizes. Compare to the water softener room heater EH-B3-1-3 at only 0.5 KW, which is 120V/1-phase (4.2 amps) — appropriate for a small wall-mount unit.",
+    "explanation": "The Marley IUH industrial unit heaters in the University generator room are wired at 460V/3-phase per the equipment schedule. At this voltage, a 5 KW heater draws only 6.3 amps (5,000 / (460 x 1.732) = 6.3A), allowing smaller wire and breaker sizes. Compare to the water softener room heater EH-B3-1-3 at only 0.5 KW, which is 120V/1-phase (4.2 amps) — appropriate for a small wall-mount unit.",
     "xpReward": 40
   },
   {
@@ -395,16 +395,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Low Voltage Conduit Size",
-    "scenario": "On the SACC high-rise office TI at 555 Flower Street, you need to install conduit for a wall-mounted low voltage equipment junction box. Per SACC specifications, what is the minimum conduit size required?",
-    "hint": "The SACC specification has a specific minimum conduit size for all wall-mounted low voltage equipment junction boxes. This is a project-specific requirement, not a general NEC rule.",
+    "title": "high-rise office Office TI: Low Voltage Conduit Size",
+    "scenario": "On the high-rise commercial office TI at downtown office tower, you need to install conduit for a wall-mounted low voltage equipment junction box. Per high-rise office specifications, what is the minimum conduit size required?",
+    "hint": "The high-rise office specification has a specific minimum conduit size for all wall-mounted low voltage equipment junction boxes. This is a project-specific requirement, not a general NEC rule.",
     "options": [
-      { "text": "1/2 inch", "value": "0.5", "correct": false, "feedback": "1/2 inch is below the SACC minimum. While it may technically fit a few cables, it does not provide adequate capacity for future cable additions or meet the project specification." },
-      { "text": "3/4 inch", "value": "0.75", "correct": false, "feedback": "3/4 inch is still below the SACC specification minimum. The project requires a larger size to accommodate current and future low voltage cabling needs." },
-      { "text": "1 inch", "value": "1.0", "correct": true, "feedback": "Correct! SACC specifications require a minimum 1-inch empty conduit for all wall-mounted low voltage equipment junction boxes. This provides adequate space for data, phone, and control cables plus room for future additions." },
-      { "text": "1-1/2 inch", "value": "1.5", "correct": false, "feedback": "1-1/2 inch exceeds the minimum requirement. While a larger conduit is not a code violation, it adds unnecessary cost and the SACC specification calls for 1-inch minimum." }
+      { "text": "1/2 inch", "value": "0.5", "correct": false, "feedback": "1/2 inch is below the high-rise office minimum. While it may technically fit a few cables, it does not provide adequate capacity for future cable additions or meet the project specification." },
+      { "text": "3/4 inch", "value": "0.75", "correct": false, "feedback": "3/4 inch is still below the high-rise office specification minimum. The project requires a larger size to accommodate current and future low voltage cabling needs." },
+      { "text": "1 inch", "value": "1.0", "correct": true, "feedback": "Correct! high-rise office specifications require a minimum 1-inch empty conduit for all wall-mounted low voltage equipment junction boxes. This provides adequate space for data, phone, and control cables plus room for future additions." },
+      { "text": "1-1/2 inch", "value": "1.5", "correct": false, "feedback": "1-1/2 inch exceeds the minimum requirement. While a larger conduit is not a code violation, it adds unnecessary cost and the high-rise office specification calls for 1-inch minimum." }
     ],
-    "explanation": "The SACC project specifies 1-inch minimum empty conduit for low voltage junction boxes. This conduit must also be stubbed 6 inches above the hung ceiling and turned towards the termination closet. The 1-inch minimum ensures enough capacity for multiple data, phone, and control cables — a lesson learned from years of commercial TI work where undersized conduit prevents future infrastructure upgrades.",
+    "explanation": "The high-rise commercial office specifies 1-inch minimum empty conduit for low voltage junction boxes. This conduit must also be stubbed 6 inches above the hung ceiling and turned towards the termination closet. The 1-inch minimum ensures enough capacity for multiple data, phone, and control cables — a lesson learned from years of commercial TI work where undersized conduit prevents future infrastructure upgrades.",
     "xpReward": 35
   },
   {
@@ -412,16 +412,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Conduit Stub Height Above Ceiling",
-    "scenario": "On the SACC high-rise office TI, you are installing conduit for low voltage junction boxes. Per SACC specifications, what is the minimum height the conduit must be stubbed above the hung ceiling?",
-    "hint": "The SACC specification defines a minimum stub height above the hung ceiling for low voltage conduit. The conduit must also be turned towards a specific location.",
+    "title": "high-rise office Office TI: Conduit Stub Height Above Ceiling",
+    "scenario": "On the high-rise commercial office TI, you are installing conduit for low voltage junction boxes. Per high-rise office specifications, what is the minimum height the conduit must be stubbed above the hung ceiling?",
+    "hint": "The high-rise office specification defines a minimum stub height above the hung ceiling for low voltage conduit. The conduit must also be turned towards a specific location.",
     "options": [
-      { "text": "3 inches above ceiling", "value": "3", "correct": false, "feedback": "3 inches does not provide adequate clearance for cable bending radius above the ceiling tiles. The SACC specification requires a taller stub." },
-      { "text": "6 inches above ceiling", "value": "6", "correct": true, "feedback": "Correct! SACC specifications require conduit to be stubbed a minimum of 6 inches above the hung ceiling and turned towards the termination closet. This height provides adequate room for cable bending radius and routing above the ceiling grid." },
-      { "text": "12 inches above ceiling", "value": "12", "correct": false, "feedback": "12 inches exceeds the SACC minimum requirement. While more height is not harmful, the specification calls for a minimum of 6 inches." },
+      { "text": "3 inches above ceiling", "value": "3", "correct": false, "feedback": "3 inches does not provide adequate clearance for cable bending radius above the ceiling tiles. The high-rise office specification requires a taller stub." },
+      { "text": "6 inches above ceiling", "value": "6", "correct": true, "feedback": "Correct! high-rise office specifications require conduit to be stubbed a minimum of 6 inches above the hung ceiling and turned towards the termination closet. This height provides adequate room for cable bending radius and routing above the ceiling grid." },
+      { "text": "12 inches above ceiling", "value": "12", "correct": false, "feedback": "12 inches exceeds the high-rise office minimum requirement. While more height is not harmful, the specification calls for a minimum of 6 inches." },
       { "text": "Flush with ceiling grid", "value": "0", "correct": false, "feedback": "Flush with the ceiling provides no room for cable routing. Cables exiting a conduit stub need clearance to bend and route to their destination without exceeding the cable's minimum bend radius." }
     ],
-    "explanation": "The 6-inch minimum stub height above the hung ceiling is a SACC project specification that ensures adequate space for cable bending radius above ceiling tiles. Data cables (Cat6/Cat6A) have minimum bend radius requirements — too short a stub forces cables into tight bends that degrade signal quality. The conduit must also be turned towards the termination closet to facilitate efficient cable pulls.",
+    "explanation": "The 6-inch minimum stub height above the hung ceiling is a high-rise commercial office specification that ensures adequate space for cable bending radius above ceiling tiles. Data cables (Cat6/Cat6A) have minimum bend radius requirements — too short a stub forces cables into tight bends that degrade signal quality. The conduit must also be turned towards the termination closet to facilitate efficient cable pulls.",
     "xpReward": 35
   },
   {
@@ -429,8 +429,8 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Branch Circuit Voltage Drop Calculation",
-    "scenario": "On Level 30 of the SACC high-rise office TI, a 20A, 120V branch circuit from panel L30C runs 110 feet to receptacles. Using 12 AWG copper (1.93 ohms/1000ft), the voltage drop at full load calculates to 3.5%. The SACC single-line diagram specifies maximum 3% voltage drop on branch circuits. What is the minimum conductor size needed to bring the voltage drop below 3%?",
+    "title": "high-rise office Office TI: Branch Circuit Voltage Drop Calculation",
+    "scenario": "On Level 30 of the high-rise commercial office TI, a 20A, 120V branch circuit from panel L30C runs 110 feet to receptacles. Using 12 AWG copper (1.93 ohms/1000ft), the voltage drop at full load calculates to 3.5%. The high-rise office single-line diagram specifies maximum 3% voltage drop on branch circuits. What is the minimum conductor size needed to bring the voltage drop below 3%?",
     "hint": "Voltage drop formula: Vd = 2 x I x R x L / 1000. For 10 AWG copper, resistance is 1.21 ohms/1000ft. Calculate the voltage drop with 10 AWG to see if it meets the 3% limit.",
     "options": [
       { "text": "12 AWG copper (1.93 ohms/1000ft)", "value": "12", "correct": false, "feedback": "12 AWG gives Vd = 2 x 20 x 1.93 x 110 / 1000 = 8.49V = 7.1% voltage drop. This far exceeds the 3% maximum. Wait — recalculating for the actual scenario: the question states 3.5%, which is still over 3%." },
@@ -438,7 +438,7 @@
       { "text": "8 AWG copper (0.764 ohms/1000ft)", "value": "8", "correct": false, "feedback": "8 AWG gives Vd = 2 x 20 x 0.764 x 110 / 1000 = 3.36V = 2.8% — under 3% at full load. But this is oversized for a 20A circuit and difficult to terminate at receptacle devices. 10 AWG is the practical choice." },
       { "text": "6 AWG copper (0.491 ohms/1000ft)", "value": "6", "correct": false, "feedback": "6 AWG is significantly oversized for a 20A branch circuit. It cannot be terminated at standard receptacle devices and adds unnecessary cost." }
     ],
-    "explanation": "Voltage drop calculations on the SACC project are based on actual demand loads, not maximum circuit capacity. The engineer's VD% on the single-line diagram accounts for diversity — not every receptacle draws 20A simultaneously. Upsizing from 12 AWG to 10 AWG significantly reduces voltage drop and is the standard solution for long branch circuit runs in high-rise commercial TI projects.",
+    "explanation": "Voltage drop calculations on the high-rise commercial office are based on actual demand loads, not maximum circuit capacity. The engineer's VD% on the single-line diagram accounts for diversity — not every receptacle draws 20A simultaneously. Upsizing from 12 AWG to 10 AWG significantly reduces voltage drop and is the standard solution for long branch circuit runs in high-rise commercial TI projects.",
     "xpReward": 60
   },
   {
@@ -446,16 +446,16 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Service Interruption Notice Period",
-    "scenario": "You are the electrical foreman on the SACC high-rise office TI at 555 Flower Street. You need to shut down power to an existing riser to tie in the new tenant transformer feeds for panels L31B and L31C. Per SACC specifications, what is the minimum advance notice required to building management before a service interruption?",
-    "hint": "The SACC specification defines a specific minimum notice period for service interruptions to existing tenants. This is longer than many contractors expect because of the multi-tenant high-rise environment.",
+    "title": "high-rise office Office TI: Service Interruption Notice Period",
+    "scenario": "You are the electrical foreman on the high-rise commercial office TI at downtown office tower. You need to shut down power to an existing riser to tie in the new tenant transformer feeds for panels L31B and L31C. Per high-rise office specifications, what is the minimum advance notice required to building management before a service interruption?",
+    "hint": "The high-rise office specification defines a specific minimum notice period for service interruptions to existing tenants. This is longer than many contractors expect because of the multi-tenant high-rise environment.",
     "options": [
       { "text": "24 hours (1 day)", "value": "1", "correct": false, "feedback": "24 hours is far too short for a multi-tenant high-rise. Existing tenants need time to prepare for power outages — backing up data, arranging UPS, notifying their own staff." },
-      { "text": "48 hours (2 days)", "value": "2", "correct": false, "feedback": "48 hours is still insufficient per SACC specifications. The multi-tenant environment at 555 Flower Street requires more coordination time for affected tenants." },
-      { "text": "5 days minimum", "value": "5", "correct": true, "feedback": "Correct! SACC specifications require a minimum 5-day advance notice for any service interruptions to existing tenants. This allows tenants to prepare critical systems, arrange IT support, and notify their occupants." },
-      { "text": "10 days minimum", "value": "10", "correct": false, "feedback": "10 days exceeds the SACC minimum requirement. While more notice is always welcome, the specification mandates a minimum of 5 days." }
+      { "text": "48 hours (2 days)", "value": "2", "correct": false, "feedback": "48 hours is still insufficient per high-rise office specifications. The multi-tenant environment at downtown office tower requires more coordination time for affected tenants." },
+      { "text": "5 days minimum", "value": "5", "correct": true, "feedback": "Correct! high-rise office specifications require a minimum 5-day advance notice for any service interruptions to existing tenants. This allows tenants to prepare critical systems, arrange IT support, and notify their occupants." },
+      { "text": "10 days minimum", "value": "10", "correct": false, "feedback": "10 days exceeds the high-rise office minimum requirement. While more notice is always welcome, the specification mandates a minimum of 5 days." }
     ],
-    "explanation": "The 5-day minimum notice for service interruptions is a critical SACC specification for the multi-tenant high-rise at 555 Flower Street, LA. Existing tenants on Levels 30-32 may have servers, security systems, and critical business operations that require orderly shutdown. Combined with the premium time work requirement (nights/weekends to avoid disturbing tenants), service interruptions are among the most coordination-intensive aspects of high-rise TI electrical work.",
+    "explanation": "The 5-day minimum notice for service interruptions is a critical high-rise office specification for the multi-tenant high-rise at downtown office tower, LA. Existing tenants on Levels 30-32 may have servers, security systems, and critical business operations that require orderly shutdown. Combined with the premium time work requirement (nights/weekends to avoid disturbing tenants), service interruptions are among the most coordination-intensive aspects of high-rise TI electrical work.",
     "xpReward": 55
   },
   {
@@ -463,8 +463,8 @@
     "type": "size-it",
     "trade": "electrical",
     "difficulty": 3,
-    "title": "SACC Office TI: Total Voltage Drop Budget",
-    "scenario": "On the SACC high-rise office TI, the feeder from the tenant transformer to panel L32B on Level 32 has a voltage drop of 1.8%. A branch circuit from L32B runs to receptacles at the far end of the floor with a calculated voltage drop of 2.9%. Per NEC 210.19(A) Informational Note, what is the total voltage drop and does it comply with the 5% total maximum?",
+    "title": "high-rise office Office TI: Total Voltage Drop Budget",
+    "scenario": "On the high-rise commercial office TI, the feeder from the tenant transformer to panel L32B on Level 32 has a voltage drop of 1.8%. A branch circuit from L32B runs to receptacles at the far end of the floor with a calculated voltage drop of 2.9%. Per NEC 210.19(A) Informational Note, what is the total voltage drop and does it comply with the 5% total maximum?",
     "hint": "NEC 210.19(A) Informational Note recommends maximum 3% for branch circuits and 5% total (feeder + branch). Add the feeder and branch voltage drops together.",
     "options": [
       { "text": "4.7% total — compliant (under 5%)", "value": "4.7-pass", "correct": true, "feedback": "Correct! Feeder drop (1.8%) + branch circuit drop (2.9%) = 4.7% total. This is under the 5% maximum total voltage drop. Both individual values are also under the 3% branch circuit recommendation, though the branch is close to the limit." },
@@ -472,7 +472,7 @@
       { "text": "2.9% total — only branch circuit counts", "value": "2.9", "correct": false, "feedback": "You must include both the feeder and branch circuit voltage drops for the total. The receptacle sees the combined drop from the transformer all the way to the outlet." },
       { "text": "1.8% total — only feeder counts", "value": "1.8", "correct": false, "feedback": "The feeder drop is only part of the picture. Equipment at the receptacle experiences the total voltage drop from the source (transformer) through both the feeder and branch circuit." }
     ],
-    "explanation": "Total voltage drop is the sum of feeder and branch circuit drops. NEC 210.19(A) Informational Note recommends: max 3% for branch circuits, max 3% for feeders, and max 5% total combined. At 4.7% total (1.8% feeder + 2.9% branch), this SACC installation complies but has little margin. The VD% calculations on the SACC single-line diagram help engineers verify these limits at design time. In high-rise buildings, the long vertical feeder runs make voltage drop a significant design consideration.",
+    "explanation": "Total voltage drop is the sum of feeder and branch circuit drops. NEC 210.19(A) Informational Note recommends: max 3% for branch circuits, max 3% for feeders, and max 5% total combined. At 4.7% total (1.8% feeder + 2.9% branch), this high-rise office installation complies but has little margin. The VD% calculations on the high-rise office single-line diagram help engineers verify these limits at design time. In high-rise buildings, the long vertical feeder runs make voltage drop a significant design consideration.",
     "xpReward": 75
   }
 ]

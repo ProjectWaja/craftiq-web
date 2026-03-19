@@ -257,14 +257,14 @@
     "title": "Duct Temperature Sensor Installation",
     "components": [
       { "id": 1, "name": "Averaging temperature sensor across AHU discharge", "correct": true },
-      { "id": 2, "name": "Single-point duct temperature probe inserted only 10% into duct width", "correct": false, "violation": "Duct temperature probes must be inserted 25-50% of the duct width to obtain a representative reading. Inserting only 10% places the sensor in the boundary layer near the duct wall where temperature is not representative of the airstream, causing inaccurate control.", "codeReference": "ASHRAE Guideline 36 / UCSB Controls Specification" },
+      { "id": 2, "name": "Single-point duct temperature probe inserted only 10% into duct width", "correct": false, "violation": "Duct temperature probes must be inserted 25-50% of the duct width to obtain a representative reading. Inserting only 10% places the sensor in the boundary layer near the duct wall where temperature is not representative of the airstream, causing inaccurate control.", "codeReference": "ASHRAE Guideline 36 / University Controls Specification" },
       { "id": 3, "name": "Sensor wired with shielded twisted pair cable", "correct": true },
       { "id": 4, "name": "Sensor calibration verified at commissioning", "correct": true },
-      { "id": 5, "name": "Proprietary control system installed instead of open-protocol BACnet", "correct": false, "violation": "UCSB specifications require all building automation systems to comply with ASHRAE Standard 135-2016 (BACnet). Proprietary, closed-protocol systems lock the owner into a single vendor and prevent competitive service and integration. Open-protocol BACnet is mandatory for all new installations.", "codeReference": "ASHRAE 135-2016 / UCSB BAS Specification" },
+      { "id": 5, "name": "Proprietary control system installed instead of open-protocol BACnet", "correct": false, "violation": "University specifications require all building automation systems to comply with ASHRAE Standard 135-2016 (BACnet). Proprietary, closed-protocol systems lock the owner into a single vendor and prevent competitive service and integration. Open-protocol BACnet is mandatory for all new installations.", "codeReference": "ASHRAE 135-2016 / University BAS Specification" },
       { "id": 6, "name": "All sensor points trended in BAS for commissioning verification", "correct": true },
       { "id": 7, "name": "Sensor location accessible for future maintenance", "correct": true }
     ],
-    "explanation": "Duct sensor insertion depth directly affects control accuracy. The boundary layer near duct walls does not represent true airstream temperature. UCSB specs also mandate open-protocol BACnet systems to protect the owner from vendor lock-in and ensure competitive maintenance.",
+    "explanation": "Duct sensor insertion depth directly affects control accuracy. The boundary layer near duct walls does not represent true airstream temperature. University specs also mandate open-protocol BACnet systems to protect the owner from vendor lock-in and ensure competitive maintenance.",
     "xpReward": 70
   },
   {
@@ -275,14 +275,14 @@
     "title": "Proprietary BAS System Compliance",
     "components": [
       { "id": 1, "name": "DDC controllers with BACnet/IP communication", "correct": true },
-      { "id": 2, "name": "Proprietary software requiring vendor-specific license for any changes", "correct": false, "violation": "UCSB specifications and ASHRAE 135-2016 require that all BAS programming, graphics, and configurations be accessible using standard BACnet tools. Proprietary software that locks out the owner or third-party service providers violates the open-protocol requirement.", "codeReference": "ASHRAE 135-2016 / UCSB BAS Specification" },
+      { "id": 2, "name": "Proprietary software requiring vendor-specific license for any changes", "correct": false, "violation": "University specifications and ASHRAE 135-2016 require that all BAS programming, graphics, and configurations be accessible using standard BACnet tools. Proprietary software that locks out the owner or third-party service providers violates the open-protocol requirement.", "codeReference": "ASHRAE 135-2016 / University BAS Specification" },
       { "id": 3, "name": "All points properly mapped in BACnet object database", "correct": true },
       { "id": 4, "name": "Operator workstation with web-based interface", "correct": true },
       { "id": 5, "name": "Trend logs configured for all critical points", "correct": true },
       { "id": 6, "name": "Alarm notification routing configured and tested", "correct": true },
-      { "id": 7, "name": "Controller firmware not upgradable by owner without vendor involvement", "correct": false, "violation": "UCSB specifications require that the building owner have full access to update, modify, and maintain all BAS components including controller firmware. Systems that require vendor involvement for routine maintenance violate the owner-access requirements of the specification.", "codeReference": "UCSB BAS Specification / ASHRAE Guideline 13" }
+      { "id": 7, "name": "Controller firmware not upgradable by owner without vendor involvement", "correct": false, "violation": "University specifications require that the building owner have full access to update, modify, and maintain all BAS components including controller firmware. Systems that require vendor involvement for routine maintenance violate the owner-access requirements of the specification.", "codeReference": "University BAS Specification / ASHRAE Guideline 13" }
     ],
-    "explanation": "Open-protocol BACnet compliance per ASHRAE 135-2016 is a core UCSB requirement. Both proprietary software licensing and vendor-locked firmware prevent the owner from competitively maintaining their own building systems, which drives up lifecycle costs and reduces operational flexibility.",
+    "explanation": "Open-protocol BACnet compliance per ASHRAE 135-2016 is a core University requirement. Both proprietary software licensing and vendor-locked firmware prevent the owner from competitively maintaining their own building systems, which drives up lifecycle costs and reduces operational flexibility.",
     "xpReward": 75
   },
   {
@@ -297,7 +297,7 @@
       { "id": 3, "name": "CRAC-32-1 and CRAC-32-2 both set as lead units simultaneously", "correct": false, "violation": "Redundant CRAC units must have one designated as lead and one as lag. Setting both as lead causes both units to run at full capacity simultaneously, wasting energy and eliminating redundancy protection. The Liebert vNSA switch must coordinate lead/lag sequencing so only one unit operates at a time under normal conditions.", "codeReference": "ASHRAE Guideline 36 — Redundant Equipment Staging" },
       { "id": 4, "name": "Temperature and humidity sensors connected to iCOM inputs", "correct": true },
       { "id": 5, "name": "Leak detector at CRAC drip pan connected to iCOM alarm input", "correct": true },
-      { "id": 6, "name": "iCOM controller not connected to base building BMS for remote monitoring", "correct": false, "violation": "The SACC project requires CRAC unit controls to integrate with the base building BMS for centralized monitoring and alarm notification. An isolated iCOM controller prevents the building engineer from seeing CRAC status, alarms, or performance data from the central workstation.", "codeReference": "ASHRAE 135 (BACnet) — BMS Integration Requirements" }
+      { "id": 6, "name": "iCOM controller not connected to base building BMS for remote monitoring", "correct": false, "violation": "The high-rise commercial office requires CRAC unit controls to integrate with the base building BMS for centralized monitoring and alarm notification. An isolated iCOM controller prevents the building engineer from seeing CRAC status, alarms, or performance data from the central workstation.", "codeReference": "ASHRAE 135 (BACnet) — BMS Integration Requirements" }
     ],
     "explanation": "CRAC unit controls in high-rise commercial TI spaces require proper lead/lag sequencing via the Liebert vNSA network switch and integration with the base building BMS. The iCOM controller manages local CRAC operation, but remote monitoring through BACnet integration is essential for facilities management per ASHRAE 135.",
     "xpReward": 45
@@ -311,11 +311,11 @@
     "components": [
       { "id": 1, "name": "Transfer fan installed to move air between zones", "correct": true },
       { "id": 2, "name": "Wall-mounted thermostat controlling the transfer fan", "correct": true },
-      { "id": 3, "name": "Thermostat setpoint set to 90 degrees F instead of 80 degrees F", "correct": false, "violation": "The SACC specification requires transfer fan thermostats to be set at 80 degrees F (adjustable). A 90-degree setpoint means the fan will not activate until the space is dangerously overheated, defeating the purpose of the transfer fan for comfort cooling. The adjustable setpoint must start at the design value of 80 degrees F.", "codeReference": "SACC Mechanical Specification — Transfer Fan Controls" },
+      { "id": 3, "name": "Thermostat setpoint set to 90 degrees F instead of 80 degrees F", "correct": false, "violation": "The high-rise office specification requires transfer fan thermostats to be set at 80 degrees F (adjustable). A 90-degree setpoint means the fan will not activate until the space is dangerously overheated, defeating the purpose of the transfer fan for comfort cooling. The adjustable setpoint must start at the design value of 80 degrees F.", "codeReference": "high-rise office Mechanical Specification — Transfer Fan Controls" },
       { "id": 4, "name": "Thermostat wired to fan relay for on/off control", "correct": true },
       { "id": 5, "name": "Fan relay powered from correct circuit", "correct": true }
     ],
-    "explanation": "Transfer fans in commercial office TI spaces are controlled by wall-mounted thermostats set to activate at 80 degrees F per the SACC specification. The setpoint is adjustable to allow tuning, but starting at 90 degrees F provides inadequate cooling response and risks occupant discomfort in high-rise office environments.",
+    "explanation": "Transfer fans in commercial office TI spaces are controlled by wall-mounted thermostats set to activate at 80 degrees F per the high-rise office specification. The setpoint is adjustable to allow tuning, but starting at 90 degrees F provides inadequate cooling response and risks occupant discomfort in high-rise office environments.",
     "xpReward": 35
   },
   {
@@ -329,10 +329,10 @@
       { "id": 2, "name": "Smoke detector installed in supply air duct", "correct": true },
       { "id": 3, "name": "Smoke detector alarm routed only to BAS software with no hardwired shutdown", "correct": false, "violation": "Duct smoke detector shutdown must be hardwired directly to the HVAC equipment disconnect, independent of BAS software. A software-only alarm response means the system continues running during a smoke event if the BAS fails or the alarm is dismissed. NFPA 90A requires hardwired shutdown with audio/visual alarm at the control display panel.", "codeReference": "NFPA 90A / NEC Article 725.3" },
       { "id": 4, "name": "Firestat hardwired to system disconnect for automatic shutdown", "correct": true },
-      { "id": 5, "name": "Audio/visual alarm indicator missing from control display panel", "correct": false, "violation": "The SACC specification requires smoke detector activation to trigger an audio/visual alarm at the control display panel in addition to system shutdown. Without the alarm indicator, building personnel may not know a smoke event occurred, delaying emergency response.", "codeReference": "NFPA 90A — Section 6.4 / SACC Mechanical Specification" },
+      { "id": 5, "name": "Audio/visual alarm indicator missing from control display panel", "correct": false, "violation": "The high-rise office specification requires smoke detector activation to trigger an audio/visual alarm at the control display panel in addition to system shutdown. Without the alarm indicator, building personnel may not know a smoke event occurred, delaying emergency response.", "codeReference": "NFPA 90A — Section 6.4 / high-rise office Mechanical Specification" },
       { "id": 6, "name": "Firestat and smoke detector test ports accessible for maintenance", "correct": true }
     ],
-    "explanation": "The SACC high-rise project requires both firestat (>125 degrees F return air) and smoke detector integration with hardwired shutdown and audio/visual alarm at the control display panel. Life-safety functions must never rely solely on BAS software per NFPA 90A. The firestat provides thermal protection while the smoke detector provides particulate detection — both are required for comprehensive protection.",
+    "explanation": "The high-rise commercial project requires both firestat (>125 degrees F return air) and smoke detector integration with hardwired shutdown and audio/visual alarm at the control display panel. Life-safety functions must never rely solely on BAS software per NFPA 90A. The firestat provides thermal protection while the smoke detector provides particulate detection — both are required for comprehensive protection.",
     "xpReward": 65
   },
   {
@@ -344,12 +344,12 @@
     "components": [
       { "id": 1, "name": "Motorized damper installed on outside air intake", "correct": true },
       { "id": 2, "name": "Damper actuator with spring-return to closed position", "correct": true },
-      { "id": 3, "name": "Motorized damper operates independently with no interlock to evaporator fan", "correct": false, "violation": "The SACC specification requires the outside air motorized damper to be interlocked with the evaporator fan operation. The damper must open only when the fan is running and close when the fan stops. Without this interlock, the damper may remain open when the fan is off, allowing unconditioned outdoor air, rain, or insects into the space and potentially causing freeze damage.", "codeReference": "IMC Section 403.2 / SACC Mechanical Specification" },
+      { "id": 3, "name": "Motorized damper operates independently with no interlock to evaporator fan", "correct": false, "violation": "The high-rise office specification requires the outside air motorized damper to be interlocked with the evaporator fan operation. The damper must open only when the fan is running and close when the fan stops. Without this interlock, the damper may remain open when the fan is off, allowing unconditioned outdoor air, rain, or insects into the space and potentially causing freeze damage.", "codeReference": "IMC Section 403.2 / high-rise office Mechanical Specification" },
       { "id": 4, "name": "Damper sealed with gaskets for low-leakage rating", "correct": true },
       { "id": 5, "name": "Damper position feedback wired to BMS for monitoring", "correct": true },
       { "id": 6, "name": "No end switch to confirm damper fully open before fan starts", "correct": false, "violation": "An end switch or position feedback must confirm the motorized outside air damper is fully open before the evaporator fan is allowed to start. Starting the fan with the damper closed creates high negative pressure in the ductwork and starves the unit of ventilation air, potentially damaging ductwork and causing inadequate outdoor air delivery.", "codeReference": "ASHRAE Guideline 36 — Damper/Fan Interlocks" }
     ],
-    "explanation": "The SACC project requires motorized outside air dampers to be interlocked with evaporator fan operation. The damper must open before the fan starts and close when the fan stops. This interlock protects the space from uncontrolled outdoor air infiltration and prevents ductwork damage from operating against a closed damper.",
+    "explanation": "The high-rise commercial office requires motorized outside air dampers to be interlocked with evaporator fan operation. The damper must open before the fan starts and close when the fan stops. This interlock protects the space from uncontrolled outdoor air infiltration and prevents ductwork damage from operating against a closed damper.",
     "xpReward": 60
   },
   {
@@ -367,7 +367,7 @@
       { "id": 6, "name": "Trend data not configured for post-occupancy performance verification", "correct": false, "violation": "Enhanced LEED commissioning requires post-occupancy trend data collection to verify systems continue to operate as designed after the building is occupied. Without trend data, there is no evidence that control sequences are performing correctly under actual load conditions. A minimum of 10 months of seasonal performance data is required.", "codeReference": "LEED v4 EAc1 — Enhanced Commissioning / ASHRAE Guideline 36" },
       { "id": 7, "name": "Motorized shades integrated with BMS for daylight harvesting", "correct": true }
     ],
-    "explanation": "The SACC project requires enhanced LEED commissioning, which goes beyond standard commissioning by requiring an independent commissioning authority and post-occupancy performance verification. BTU meters tied to the BMS, lighting controls per Title 24, motorized shades, and trend data collection are all part of the integrated systems that must be verified to meet the Owner's Project Requirements per ASHRAE Guideline 0.",
+    "explanation": "The high-rise commercial office requires enhanced LEED commissioning, which goes beyond standard commissioning by requiring an independent commissioning authority and post-occupancy performance verification. BTU meters tied to the BMS, lighting controls per Title 24, motorized shades, and trend data collection are all part of the integrated systems that must be verified to meet the Owner's Project Requirements per ASHRAE Guideline 0.",
     "xpReward": 90
   }
 ]

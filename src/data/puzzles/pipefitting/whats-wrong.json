@@ -238,13 +238,13 @@
     "title": "Hydronic Pressure Piping Material",
     "components": [
       { "id": 1, "name": "Type L copper used for above-ground supply piping", "correct": true },
-      { "id": 2, "name": "Type M copper used for hydronic pressure piping", "correct": false, "violation": "UCSB specifications and ASTM B88 requirements do not permit Type M copper for hydronic pressure piping. Type M has the thinnest wall of the three copper tube types and is inadequate for the pressures, temperatures, and longevity required in commercial hydronic systems. Type L or Type K must be used.", "codeReference": "ASTM B88 / UCSB Piping Specification" },
+      { "id": 2, "name": "Type M copper used for hydronic pressure piping", "correct": false, "violation": "University specifications and ASTM B88 requirements do not permit Type M copper for hydronic pressure piping. Type M has the thinnest wall of the three copper tube types and is inadequate for the pressures, temperatures, and longevity required in commercial hydronic systems. Type L or Type K must be used.", "codeReference": "ASTM B88 / University Piping Specification" },
       { "id": 3, "name": "Dielectric unions at copper-to-steel transitions", "correct": true },
       { "id": 4, "name": "Isolation valves at all equipment connections", "correct": true },
       { "id": 5, "name": "Pressure gauge and thermometer wells installed", "correct": true },
       { "id": 6, "name": "Proper brazing with nitrogen purge on copper joints", "correct": true }
     ],
-    "explanation": "Copper tube types matter for hydronic systems. Type M is only acceptable for low-pressure DWV and limited residential applications. UCSB specs require Type L minimum for all hydronic pressure piping to ensure adequate wall thickness for system longevity and pressure ratings.",
+    "explanation": "Copper tube types matter for hydronic systems. Type M is only acceptable for low-pressure DWV and limited residential applications. University specs require Type L minimum for all hydronic pressure piping to ensure adequate wall thickness for system longevity and pressure ratings.",
     "xpReward": 65
   },
   {
@@ -255,14 +255,14 @@
     "title": "Pipe Insulation Surface Temperature",
     "components": [
       { "id": 1, "name": "Fiberglass pipe insulation with ASJ jacket", "correct": true },
-      { "id": 2, "name": "Insulation surface temperature measured at 155°F", "correct": false, "violation": "ASHRAE 90.1 and UCSB specifications require that the outer surface temperature of pipe insulation not exceed 140°F to prevent personnel burns on contact. A surface temperature of 155°F indicates insufficient insulation thickness for the pipe temperature and presents a burn hazard.", "codeReference": "ASHRAE 90.1 / UCSB Mechanical Specification" },
-      { "id": 3, "name": "PVC jacket used on outdoor piping insulation", "correct": false, "violation": "PVC jacketing is not permitted on outdoor pipe insulation per UCSB specifications. PVC degrades under UV exposure, becomes brittle, and cracks, allowing moisture infiltration that destroys the insulation. Aluminum or stainless steel jacketing is required for outdoor applications.", "codeReference": "UCSB Mechanical Specification / ASTM C1136" },
+      { "id": 2, "name": "Insulation surface temperature measured at 155°F", "correct": false, "violation": "ASHRAE 90.1 and University specifications require that the outer surface temperature of pipe insulation not exceed 140°F to prevent personnel burns on contact. A surface temperature of 155°F indicates insufficient insulation thickness for the pipe temperature and presents a burn hazard.", "codeReference": "ASHRAE 90.1 / University Mechanical Specification" },
+      { "id": 3, "name": "PVC jacket used on outdoor piping insulation", "correct": false, "violation": "PVC jacketing is not permitted on outdoor pipe insulation per University specifications. PVC degrades under UV exposure, becomes brittle, and cracks, allowing moisture infiltration that destroys the insulation. Aluminum or stainless steel jacketing is required for outdoor applications.", "codeReference": "University Mechanical Specification / ASTM C1136" },
       { "id": 4, "name": "Insulation continuous through pipe hangers with protection saddles", "correct": true },
       { "id": 5, "name": "Vapor barrier intact on cold piping insulation", "correct": true },
       { "id": 6, "name": "Insulation thickness matching specification schedule", "correct": true },
       { "id": 7, "name": "All joints sealed with matching jacket tape", "correct": true }
     ],
-    "explanation": "Pipe insulation must limit surface temperature to 140°F maximum per ASHRAE 90.1 to prevent personnel burns. Additionally, UCSB specs prohibit PVC jacketing outdoors due to UV degradation. These are common spec compliance issues caught during commissioning.",
+    "explanation": "Pipe insulation must limit surface temperature to 140°F maximum per ASHRAE 90.1 to prevent personnel burns. Additionally, University specs prohibit PVC jacketing outdoors due to UV degradation. These are common spec compliance issues caught during commissioning.",
     "xpReward": 70
   },
   {

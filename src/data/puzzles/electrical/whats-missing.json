@@ -406,7 +406,7 @@
     "trade": "electrical",
     "difficulty": 2,
     "title": "VFD Bypass Installation",
-    "description": "A variable frequency drive has been installed on an HVAC supply fan motor. Review the installation for missing components per UCSB specifications.",
+    "description": "A variable frequency drive has been installed on an HVAC supply fan motor. Review the installation for missing components per University specifications.",
     "presentItems": [
       "VFD properly sized for motor horsepower",
       "Input line reactor for harmonic mitigation",
@@ -417,7 +417,7 @@
     "missingItems": [
       {
         "name": "VFD bypass disconnect switch",
-        "explanation": "UCSB specifications require a bypass disconnect that allows the motor to run directly across the line if the VFD fails. For critical HVAC equipment, the bypass ensures continued building ventilation during VFD maintenance or failure. The bypass must include a manual motor starter with overload protection."
+        "explanation": "University specifications require a bypass disconnect that allows the motor to run directly across the line if the VFD fails. For critical HVAC equipment, the bypass ensures continued building ventilation during VFD maintenance or failure. The bypass must include a manual motor starter with overload protection."
       },
       {
         "name": "Earth fault protection in bypass circuit",
@@ -429,7 +429,7 @@
       "Power factor correction capacitor bank",
       "Motor space heater circuit"
     ],
-    "explanation": "VFD bypass arrangements are required by UCSB specs for critical HVAC equipment to maintain ventilation during drive failures. The bypass must include its own protective devices since the VFD's built-in protections are not active in bypass mode.",
+    "explanation": "VFD bypass arrangements are required by University specs for critical HVAC equipment to maintain ventilation during drive failures. The bypass must include its own protective devices since the VFD's built-in protections are not active in bypass mode.",
     "xpReward": 50
   },
   {
@@ -438,7 +438,7 @@
     "trade": "electrical",
     "difficulty": 3,
     "title": "VFD Power Quality Compliance",
-    "description": "A large VFD installation on a chilled water pump has been commissioned. Check for missing power quality components per UCSB and IEEE 519 requirements.",
+    "description": "A large VFD installation on a chilled water pump has been commissioned. Check for missing power quality components per University and IEEE 519 requirements.",
     "presentItems": [
       "18-pulse VFD with phase-shifting transformer",
       "Output dV/dt filter for motor protection",
@@ -449,11 +449,11 @@
     "missingItems": [
       {
         "name": "Power quality meter for THD monitoring at point of common coupling",
-        "explanation": "IEEE 519-2022 and UCSB specifications require total harmonic distortion to remain below 3% at the point of common coupling. A permanently installed power quality meter is needed to verify compliance and monitor ongoing harmonic levels. Without it, THD violations go undetected and can damage other equipment on the electrical bus."
+        "explanation": "IEEE 519-2022 and University specifications require total harmonic distortion to remain below 3% at the point of common coupling. A permanently installed power quality meter is needed to verify compliance and monitor ongoing harmonic levels. Without it, THD violations go undetected and can damage other equipment on the electrical bus."
       },
       {
         "name": "Active harmonic filter or additional harmonic mitigation",
-        "explanation": "UCSB specifications mandate IEEE 519 compliance at 3% THD maximum. Even with an 18-pulse drive, system conditions may push THD above the limit. An active harmonic filter provides real-time harmonic cancellation to ensure continuous compliance under all operating conditions."
+        "explanation": "University specifications mandate IEEE 519 compliance at 3% THD maximum. Even with an 18-pulse drive, system conditions may push THD above the limit. An active harmonic filter provides real-time harmonic cancellation to ensure continuous compliance under all operating conditions."
       }
     ],
     "distractors": [
@@ -461,7 +461,7 @@
       "Automatic transfer switch",
       "Motor bearing insulation kit"
     ],
-    "explanation": "UCSB specifications enforce strict IEEE 519 harmonic compliance at 3% THD. Large VFD installations require ongoing power quality monitoring and may need active harmonic filtering beyond the base drive configuration to maintain compliance under varying load conditions.",
+    "explanation": "University specifications enforce strict IEEE 519 harmonic compliance at 3% THD. Large VFD installations require ongoing power quality monitoring and may need active harmonic filtering beyond the base drive configuration to maintain compliance under varying load conditions.",
     "xpReward": 50
   },
   {
@@ -469,8 +469,8 @@
     "type": "whats-missing",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Tenant Panel Installation",
-    "description": "A new tenant panelboard L30B has been installed on Level 30 of the SACC commercial office TI at 555 Flower Street, LA. The panel is fed from the tenant transformer (/TR-T suffix). Review the installation for missing components.",
+    "title": "high-rise office Office TI: Tenant Panel Installation",
+    "description": "A new tenant panelboard L30B has been installed on Level 30 of the high-rise commercial office TI at downtown office tower, LA. The panel is fed from the tenant transformer (/TR-T suffix). Review the installation for missing components.",
     "presentItems": [
       "Panel L30B/TR-T mounted and secured in electrical room",
       "Branch circuit breakers installed per panel schedule",
@@ -481,11 +481,11 @@
     "missingItems": [
       {
         "name": "TVSS (Transient Voltage Surge Suppressor) at panel",
-        "explanation": "The SACC electrical plans show TVSS at tenant panels to protect sensitive office equipment from voltage transients. In a high-rise building, lightning strikes, utility switching, and elevator motor starts generate transients that travel through the electrical system. NEC 242.24 requires Type 1 or Type 2 SPDs at service equipment, and the SACC spec extends this to tenant panels."
+        "explanation": "The high-rise office electrical plans show TVSS at tenant panels to protect sensitive office equipment from voltage transients. In a high-rise building, lightning strikes, utility switching, and elevator motor starts generate transients that travel through the electrical system. NEC 242.24 requires Type 1 or Type 2 SPDs at service equipment, and the high-rise office spec extends this to tenant panels."
       },
       {
         "name": "Completed and legible circuit directory identifying all circuits",
-        "explanation": "NEC 408.4(A) requires every circuit to be legibly identified as to its clear, evident, and specific purpose. In a multi-tenant high-rise, accurate panel schedules are critical for safe isolation during maintenance and for coordinating the 5-day service interruption notices required by SACC specifications."
+        "explanation": "NEC 408.4(A) requires every circuit to be legibly identified as to its clear, evident, and specific purpose. In a multi-tenant high-rise, accurate panel schedules are critical for safe isolation during maintenance and for coordinating the 5-day service interruption notices required by high-rise office specifications."
       }
     ],
     "distractors": [
@@ -493,7 +493,7 @@
       "Power factor correction capacitor bank",
       "Harmonic filter at panel input"
     ],
-    "explanation": "Tenant panels in high-rise commercial TI projects require both NEC-mandated components (circuit directory per 408.4) and project-specific equipment (TVSS per SACC plans). Surge protection is especially important in high-rise buildings where the long vertical electrical risers are susceptible to induced transients.",
+    "explanation": "Tenant panels in high-rise commercial TI projects require both NEC-mandated components (circuit directory per 408.4) and project-specific equipment (TVSS per high-rise office plans). Surge protection is especially important in high-rise buildings where the long vertical electrical risers are susceptible to induced transients.",
     "xpReward": 40
   },
   {
@@ -501,8 +501,8 @@
     "type": "whats-missing",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Temporary Power Setup",
-    "description": "Temporary power has been set up for construction on Level 31 of the SACC high-rise commercial office TI. Review the installation for missing components required by the project specification.",
+    "title": "high-rise office Office TI: Temporary Power Setup",
+    "description": "Temporary power has been set up for construction on Level 31 of the high-rise commercial commercial office TI. Review the installation for missing components required by the project specification.",
     "presentItems": [
       "Temporary panel connected to construction power source",
       "Temporary outlets installed at regular intervals",
@@ -513,11 +513,11 @@
     "missingItems": [
       {
         "name": "Temporary lighting with lamps at adequate foot-candle levels",
-        "explanation": "SACC specifications require the contractor to furnish temporary stringers, lamps, outlets, breakers, and fusing for construction lighting. Workers need adequate illumination for safe work in the TI space, especially above the ceiling grid where conduit and wiring work occurs. OSHA 1926.56 requires minimum 5 foot-candles for general construction areas."
+        "explanation": "high-rise office specifications require the contractor to furnish temporary stringers, lamps, outlets, breakers, and fusing for construction lighting. Workers need adequate illumination for safe work in the TI space, especially above the ceiling grid where conduit and wiring work occurs. OSHA 1926.56 requires minimum 5 foot-candles for general construction areas."
       },
       {
         "name": "Clear labeling on panels and breakers used for temporary lighting",
-        "explanation": "SACC project specifications require all panels and breakers serving temporary lighting to be clearly labeled. This identification is essential so temporary power can be systematically removed at project completion and not confused with permanent circuits during turnover."
+        "explanation": "high-rise commercial office specifications require all panels and breakers serving temporary lighting to be clearly labeled. This identification is essential so temporary power can be systematically removed at project completion and not confused with permanent circuits during turnover."
       }
     ],
     "distractors": [
@@ -525,7 +525,7 @@
       "Fire alarm system connection",
       "UPS battery backup for temporary power"
     ],
-    "explanation": "Temporary power in commercial TI construction per NEC Article 590 and SACC specifications must provide adequate lighting and be clearly labeled for removal at completion. In a multi-tenant high-rise, leaving temporary power in place creates confusion and potential code violations during final inspection.",
+    "explanation": "Temporary power in commercial TI construction per NEC Article 590 and high-rise office specifications must provide adequate lighting and be clearly labeled for removal at completion. In a multi-tenant high-rise, leaving temporary power in place creates confusion and potential code violations during final inspection.",
     "xpReward": 35
   },
   {
@@ -533,8 +533,8 @@
     "type": "whats-missing",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Data Room Electrical System",
-    "description": "A data room has been built out on Level 32 of the SACC commercial office TI. The room includes server racks, networking equipment, and dedicated cooling. Review the electrical installation for missing components.",
+    "title": "high-rise office Office TI: Data Room Electrical System",
+    "description": "A data room has been built out on Level 32 of the high-rise commercial office TI. The room includes server racks, networking equipment, and dedicated cooling. Review the electrical installation for missing components.",
     "presentItems": [
       "Dedicated panelboard with standard receptacles at server racks",
       "PDU (Power Distribution Unit) installed per plans",
@@ -545,15 +545,15 @@
     "missingItems": [
       {
         "name": "Isolated ground (IG) receptacles with insulated grounding conductor",
-        "explanation": "Data rooms require isolated ground receptacles (orange triangle marking) per NEC 250.146(D) and the SACC electrical plans. The insulated grounding conductor runs separately from the conduit system back to the panel's isolated ground bus, preventing electromagnetic noise from the building's general grounding system from interfering with sensitive data equipment."
+        "explanation": "Data rooms require isolated ground receptacles (orange triangle marking) per NEC 250.146(D) and the high-rise office electrical plans. The insulated grounding conductor runs separately from the conduit system back to the panel's isolated ground bus, preventing electromagnetic noise from the building's general grounding system from interfering with sensitive data equipment."
       },
       {
         "name": "Leak detectors (LD) wired to leak detection panel (LDP)",
-        "explanation": "SACC electrical plans show leak detectors (LD) at strategic locations in data rooms connected to a leak detection panel (LDP). Water intrusion from plumbing, HVAC condensate, or fire sprinkler leaks can destroy data equipment. The LDP provides early warning and can trigger automatic shutdown of affected circuits."
+        "explanation": "high-rise office electrical plans show leak detectors (LD) at strategic locations in data rooms connected to a leak detection panel (LDP). Water intrusion from plumbing, HVAC condensate, or fire sprinkler leaks can destroy data equipment. The LDP provides early warning and can trigger automatic shutdown of affected circuits."
       },
       {
         "name": "Signal reference ground bar (SRG) bonded to building steel",
-        "explanation": "The SACC project requires signal reference ground bars in data rooms to establish a common ground reference for all electronic equipment. The SRG is bonded to building structural steel and provides a low-impedance ground plane that reduces noise and prevents ground loops between interconnected equipment per TIA-607-C."
+        "explanation": "The high-rise commercial office requires signal reference ground bars in data rooms to establish a common ground reference for all electronic equipment. The SRG is bonded to building structural steel and provides a low-impedance ground plane that reduces noise and prevents ground loops between interconnected equipment per TIA-607-C."
       }
     ],
     "distractors": [
@@ -561,7 +561,7 @@
       "Redundant utility service entrance",
       "Raised access floor with underfloor power distribution"
     ],
-    "explanation": "Data rooms in high-rise commercial TI projects require specialized grounding (IG receptacles, SRG), environmental monitoring (leak detection), and clean power infrastructure. The SACC project's data room specifications reflect best practices for protecting sensitive electronic equipment in a multi-tenant building environment.",
+    "explanation": "Data rooms in high-rise commercial TI projects require specialized grounding (IG receptacles, SRG), environmental monitoring (leak detection), and clean power infrastructure. The high-rise commercial office's data room specifications reflect best practices for protecting sensitive electronic equipment in a multi-tenant building environment.",
     "xpReward": 65
   },
   {
@@ -569,8 +569,8 @@
     "type": "whats-missing",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Low Voltage Conduit Infrastructure",
-    "description": "Low voltage infrastructure is being installed on Level 30 of the SACC commercial office TI for data, phone, and building automation systems. Review the conduit installation for missing components per SACC specifications.",
+    "title": "high-rise office Office TI: Low Voltage Conduit Infrastructure",
+    "description": "Low voltage infrastructure is being installed on Level 30 of the high-rise commercial office TI for data, phone, and building automation systems. Review the conduit installation for missing components per high-rise office specifications.",
     "presentItems": [
       "Junction boxes installed at wall-mounted low voltage equipment locations",
       "Conduit routed above the hung ceiling",
@@ -581,11 +581,11 @@
     "missingItems": [
       {
         "name": "1-inch minimum empty conduit at each wall-mounted low voltage junction box",
-        "explanation": "SACC specifications require a minimum 1-inch empty conduit for all wall-mounted low voltage equipment junction boxes. This dedicated conduit provides a clean pathway for low voltage cables separate from power wiring and protects cables from damage during future ceiling work or modifications."
+        "explanation": "high-rise office specifications require a minimum 1-inch empty conduit for all wall-mounted low voltage equipment junction boxes. This dedicated conduit provides a clean pathway for low voltage cables separate from power wiring and protects cables from damage during future ceiling work or modifications."
       },
       {
         "name": "Conduit stubs 6 inches above hung ceiling turned towards termination closet",
-        "explanation": "SACC specifications require conduit to be stubbed a minimum of 6 inches above the hung ceiling and turned towards the termination closet. This ensures adequate height clearance above ceiling tiles for cable routing and directs the conduit pathway toward the termination point for efficient cable pulls."
+        "explanation": "high-rise office specifications require conduit to be stubbed a minimum of 6 inches above the hung ceiling and turned towards the termination closet. This ensures adequate height clearance above ceiling tiles for cable routing and directs the conduit pathway toward the termination point for efficient cable pulls."
       }
     ],
     "distractors": [
@@ -593,7 +593,7 @@
       "Shielded conduit for EMI protection",
       "Innerduct within conduit for cable separation"
     ],
-    "explanation": "The SACC project's low voltage conduit specifications ensure reliable data and communications infrastructure. The 1-inch minimum conduit and 6-inch stub height are practical requirements learned from years of commercial TI experience — insufficient conduit size prevents future cable additions, and short stubs above ceilings make cable routing extremely difficult.",
+    "explanation": "The high-rise commercial office's low voltage conduit specifications ensure reliable data and communications infrastructure. The 1-inch minimum conduit and 6-inch stub height are practical requirements learned from years of commercial TI experience — insufficient conduit size prevents future cable additions, and short stubs above ceilings make cable routing extremely difficult.",
     "xpReward": 55
   },
   {
@@ -601,8 +601,8 @@
     "type": "whats-missing",
     "trade": "electrical",
     "difficulty": 3,
-    "title": "SACC Office TI: Title 24 and Lighting Controls",
-    "description": "Lighting has been installed on Level 31 of the SACC commercial office TI. The perimeter offices have large windows and the open office area has 2x4 LED troffers on 277V circuits. Review the installation for missing code-required components.",
+    "title": "high-rise office Office TI: Title 24 and Lighting Controls",
+    "description": "Lighting has been installed on Level 31 of the high-rise commercial office TI. The perimeter offices have large windows and the open office area has 2x4 LED troffers on 277V circuits. Review the installation for missing code-required components.",
     "presentItems": [
       "LED troffer fixtures installed in lay-in ceiling grid",
       "277V lighting circuits from panels L31B and L31C",
@@ -613,11 +613,11 @@
     "missingItems": [
       {
         "name": "Daylight harvesting controls in perimeter zones per California Title 24",
-        "explanation": "California Title 24 requires automatic daylight responsive controls (daylight harvesting) for general lighting in primary sidelit zones — typically within 15 feet of windows. The SACC project at 555 Flower Street, LA must comply with Title 24, which is more stringent than the base energy code. Daylight sensors must dim artificial lights when natural daylight provides adequate illumination."
+        "explanation": "California Title 24 requires automatic daylight responsive controls (daylight harvesting) for general lighting in primary sidelit zones — typically within 15 feet of windows. The high-rise commercial office at downtown office tower, LA must comply with Title 24, which is more stringent than the base energy code. Daylight sensors must dim artificial lights when natural daylight provides adequate illumination."
       },
       {
         "name": "California Title 24 electrical compliance forms filed with building department",
-        "explanation": "SACC specifications require completion and filing of California Title 24 electrical compliance forms (NRCC-ELC-E and NRCC-LTS-E). These forms document that the lighting power density, lighting controls, and electrical systems meet California's energy efficiency standards. The forms must be signed by the responsible party and available for inspection."
+        "explanation": "high-rise office specifications require completion and filing of California Title 24 electrical compliance forms (NRCC-ELC-E and NRCC-LTS-E). These forms document that the lighting power density, lighting controls, and electrical systems meet California's energy efficiency standards. The forms must be signed by the responsible party and available for inspection."
       },
       {
         "name": "Automatic time-switch controls for lighting circuits",
@@ -629,7 +629,7 @@
       "Color-tunable LED drivers",
       "Wireless mesh lighting controls"
     ],
-    "explanation": "California projects like the SACC high-rise TI at 555 Flower Street must comply with Title 24, which mandates daylight harvesting, automatic scheduling, and documented compliance forms. These requirements go beyond the base NEC and are enforced by the local building department. IBEW electricians working in California must understand Title 24 lighting control requirements.",
+    "explanation": "California projects like the high-rise commercial TI at downtown office tower must comply with Title 24, which mandates daylight harvesting, automatic scheduling, and documented compliance forms. These requirements go beyond the base NEC and are enforced by the local building department. IBEW electricians working in California must understand Title 24 lighting control requirements.",
     "xpReward": 90
   }
 ]

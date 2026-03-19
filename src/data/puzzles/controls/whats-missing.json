@@ -417,7 +417,7 @@
     "missingItems": [
       {
         "name": "CO2 sensor calibration gas port",
-        "explanation": "UCSB specifications require CO2 sensors with an accessible calibration gas port for field verification. CO2 sensors drift over time and must be calibrated against a known reference gas concentration. Without a calibration port, the sensor cannot be properly field-verified, leading to inaccurate ventilation control and potential indoor air quality problems."
+        "explanation": "University specifications require CO2 sensors with an accessible calibration gas port for field verification. CO2 sensors drift over time and must be calibrated against a known reference gas concentration. Without a calibration port, the sensor cannot be properly field-verified, leading to inaccurate ventilation control and potential indoor air quality problems."
       },
       {
         "name": "Outdoor air CO2 reference sensor",
@@ -429,7 +429,7 @@
       "Occupancy sensor for lighting control",
       "Particulate matter sensor"
     ],
-    "explanation": "CO2 demand ventilation requires proper sensor calibration capability and an outdoor reference measurement. UCSB specs mandate calibration ports on all CO2 sensors because sensor drift is a known issue that directly affects indoor air quality and ASHRAE 62.1 ventilation compliance.",
+    "explanation": "CO2 demand ventilation requires proper sensor calibration capability and an outdoor reference measurement. University specs mandate calibration ports on all CO2 sensors because sensor drift is a known issue that directly affects indoor air quality and ASHRAE 62.1 ventilation compliance.",
     "xpReward": 50
   },
   {
@@ -438,7 +438,7 @@
     "trade": "controls",
     "difficulty": 2,
     "title": "BACnet Controller Network Installation",
-    "description": "A new BACnet/IP controller has been installed on the building automation network. Check for missing components per UCSB specifications.",
+    "description": "A new BACnet/IP controller has been installed on the building automation network. Check for missing components per University specifications.",
     "presentItems": [
       "BACnet/IP controller with web interface",
       "Cat6A Ethernet cable to network switch",
@@ -449,11 +449,11 @@
     "missingItems": [
       {
         "name": "BACnet communication card (B-OWS or B-AAC profile)",
-        "explanation": "UCSB specifications require controllers to have a BACnet communication card supporting the appropriate device profile (B-OWS for operator workstations, B-AAC for advanced application controllers). The communication card ensures full BACnet interoperability including read/write property services, COV subscriptions, and alarm/event notification per ASHRAE 135-2016."
+        "explanation": "University specifications require controllers to have a BACnet communication card supporting the appropriate device profile (B-OWS for operator workstations, B-AAC for advanced application controllers). The communication card ensures full BACnet interoperability including read/write property services, COV subscriptions, and alarm/event notification per ASHRAE 135-2016."
       },
       {
         "name": "Network time synchronization configuration",
-        "explanation": "BACnet controllers must be configured for network time synchronization (TimeSynchronization service) to ensure all trend logs, alarms, and events across the BAS have consistent timestamps. Without time sync, troubleshooting becomes extremely difficult when events on different controllers show different times. Required by ASHRAE 135 and UCSB BAS specifications."
+        "explanation": "BACnet controllers must be configured for network time synchronization (TimeSynchronization service) to ensure all trend logs, alarms, and events across the BAS have consistent timestamps. Without time sync, troubleshooting becomes extremely difficult when events on different controllers show different times. Required by ASHRAE 135 and University BAS specifications."
       }
     ],
     "distractors": [
@@ -461,7 +461,7 @@
       "Cellular modem for remote access",
       "GPS antenna for location services"
     ],
-    "explanation": "BACnet interoperability requires proper communication profiles and time synchronization across all controllers. UCSB specs mandate ASHRAE 135-2016 compliance including standardized device profiles and consistent timestamps for effective building operations.",
+    "explanation": "BACnet interoperability requires proper communication profiles and time synchronization across all controllers. University specs mandate ASHRAE 135-2016 compliance including standardized device profiles and consistent timestamps for effective building operations.",
     "xpReward": 50
   },
   {
@@ -470,7 +470,7 @@
     "trade": "controls",
     "difficulty": 1,
     "title": "CRAC Unit Controls Installation",
-    "description": "A Computer Room Air Conditioning (CRAC) unit has been installed on Level 32 of the SACC high-rise TI project with its iCOM controller. Review the installation for missing components.",
+    "description": "A Computer Room Air Conditioning (CRAC) unit has been installed on Level 32 of the high-rise commercial TI project with its iCOM controller. Review the installation for missing components.",
     "presentItems": [
       "Liebert CRAC unit CRAC-32-1 installed and piped",
       "iCOM controller mounted on CRAC unit for monitoring",
@@ -481,7 +481,7 @@
     "missingItems": [
       {
         "name": "Leak detector connected to CRAC drip pan",
-        "explanation": "The SACC specification requires leak detectors at each CRAC unit connected to the drip pans. CRAC units handle refrigerant and condensate — a leak can cause water damage to the server/IDF room equipment below. The leak detector must alarm through the iCOM controller and the base building BMS for immediate response."
+        "explanation": "The high-rise office specification requires leak detectors at each CRAC unit connected to the drip pans. CRAC units handle refrigerant and condensate — a leak can cause water damage to the server/IDF room equipment below. The leak detector must alarm through the iCOM controller and the base building BMS for immediate response."
       },
       {
         "name": "BMS integration for remote monitoring and alarms",
@@ -503,7 +503,7 @@
     "trade": "controls",
     "difficulty": 1,
     "title": "Exhaust Fan Timeclock Control",
-    "description": "Exhaust fans in the SACC high-rise commercial office TI have been installed with timeclock control. Identify missing control components.",
+    "description": "Exhaust fans in the high-rise commercial commercial office TI have been installed with timeclock control. Identify missing control components.",
     "presentItems": [
       "Exhaust fans installed per mechanical plans",
       "7-day programmable timeclock for scheduling",
@@ -535,7 +535,7 @@
     "trade": "controls",
     "difficulty": 2,
     "title": "BTU Metering Installation for Base Building BMS",
-    "description": "BTU meters have been installed on the SACC high-rise TI project per base building standard. Review the installation for missing components.",
+    "description": "BTU meters have been installed on the high-rise commercial TI project per base building standard. Review the installation for missing components.",
     "presentItems": [
       "Ultrasonic flow meter installed on chilled water supply pipe",
       "Supply water temperature sensor installed",
@@ -546,7 +546,7 @@
     "missingItems": [
       {
         "name": "BTU meter data point mapping to base building BMS",
-        "explanation": "The SACC specification requires BTU meters to be tied to the base building BMS for usage monitoring. The BACnet module is installed but the points (total BTU, flow rate, delta-T, supply/return temperatures) must be mapped and trended in the BMS. Without this integration, the building management team cannot track tenant energy usage or allocate costs per the base building standard."
+        "explanation": "The high-rise office specification requires BTU meters to be tied to the base building BMS for usage monitoring. The BACnet module is installed but the points (total BTU, flow rate, delta-T, supply/return temperatures) must be mapped and trended in the BMS. Without this integration, the building management team cannot track tenant energy usage or allocate costs per the base building standard."
       },
       {
         "name": "BTU meter calibration verification certificate",
@@ -559,7 +559,7 @@
       "Power quality meter",
       "Refrigerant charge monitor"
     ],
-    "explanation": "The SACC project requires BTU meters integrated with the base building BMS for tenant energy usage monitoring. Both data point mapping and calibration verification are essential — the meter hardware alone does not satisfy the specification without BMS integration and documented accuracy per ASHRAE 90.1 Section 8.",
+    "explanation": "The high-rise commercial office requires BTU meters integrated with the base building BMS for tenant energy usage monitoring. Both data point mapping and calibration verification are essential — the meter hardware alone does not satisfy the specification without BMS integration and documented accuracy per ASHRAE 90.1 Section 8.",
     "xpReward": 60
   },
   {
@@ -568,7 +568,7 @@
     "trade": "controls",
     "difficulty": 2,
     "title": "California Title 24 Lighting Controls",
-    "description": "Lighting controls for the SACC commercial office TI project have been installed per California Title 24 requirements. Identify missing control components.",
+    "description": "Lighting controls for the high-rise commercial office TI project have been installed per California Title 24 requirements. Identify missing control components.",
     "presentItems": [
       "Occupancy sensors installed in private offices and restrooms",
       "Daylight-responsive controls at perimeter zones within 15 feet of windows",
@@ -601,7 +601,7 @@
     "trade": "controls",
     "difficulty": 3,
     "title": "High-Rise BAS Integration with Base Building Systems",
-    "description": "A tenant improvement BAS has been installed on Levels 30-32 of the SACC high-rise at 555 Flower Street. The TI BAS must integrate with the base building systems. Identify missing integration components.",
+    "description": "A tenant improvement BAS has been installed on Levels 30-32 of the high-rise commercial at downtown office tower. The TI BAS must integrate with the base building systems. Identify missing integration components.",
     "presentItems": [
       "TI DDC controllers installed for VAV systems on Levels 30-32",
       "iCOM controllers on CRAC units with vNSA lead/lag switching",
@@ -612,7 +612,7 @@
     "missingItems": [
       {
         "name": "BACnet gateway between TI BAS and base building BMS",
-        "explanation": "The TI controls must communicate with the base building BMS through a BACnet gateway or IP integration point. Without this gateway, the base building operations team cannot monitor TI HVAC systems, receive alarms, or coordinate energy management between tenant and base building systems. The SACC spec requires all TI systems to be visible on the base building BMS."
+        "explanation": "The TI controls must communicate with the base building BMS through a BACnet gateway or IP integration point. Without this gateway, the base building operations team cannot monitor TI HVAC systems, receive alarms, or coordinate energy management between tenant and base building systems. The high-rise office spec requires all TI systems to be visible on the base building BMS."
       },
       {
         "name": "Base building chilled water valve interlock with TI systems",
@@ -628,7 +628,7 @@
       "Independent emergency generator for TI",
       "Separate fire command center for tenant"
     ],
-    "explanation": "High-rise TI projects at the SACC require comprehensive integration between tenant BAS and base building systems. BACnet gateway communication, chilled water coordination, and fire alarm integration are essential for safe operation and facilities management in a multi-tenant high-rise per ASHRAE 135, NFPA 72, and IBC requirements.",
+    "explanation": "High-rise TI projects at the high-rise office require comprehensive integration between tenant BAS and base building systems. BACnet gateway communication, chilled water coordination, and fire alarm integration are essential for safe operation and facilities management in a multi-tenant high-rise per ASHRAE 135, NFPA 72, and IBC requirements.",
     "xpReward": 85
   }
 ]

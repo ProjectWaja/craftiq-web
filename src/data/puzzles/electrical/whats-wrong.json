@@ -245,13 +245,13 @@
     "title": "VFD Carrier Frequency Setting",
     "components": [
       { "id": 1, "name": "VFD properly mounted in ventilated enclosure", "correct": true },
-      { "id": 2, "name": "VFD carrier frequency set at 14 kHz", "correct": false, "violation": "UCSB specifications limit VFD carrier (switching) frequency to a maximum of 10 kHz. Higher carrier frequencies increase motor bearing currents, accelerate insulation degradation, and generate excessive electromagnetic interference (EMI) that affects nearby sensitive equipment.", "codeReference": "UCSB VFD Specification / IEEE 519" },
+      { "id": 2, "name": "VFD carrier frequency set at 14 kHz", "correct": false, "violation": "University specifications limit VFD carrier (switching) frequency to a maximum of 10 kHz. Higher carrier frequencies increase motor bearing currents, accelerate insulation degradation, and generate excessive electromagnetic interference (EMI) that affects nearby sensitive equipment.", "codeReference": "University VFD Specification / IEEE 519" },
       { "id": 3, "name": "Input line reactor installed", "correct": true },
       { "id": 4, "name": "Motor overload protection properly configured", "correct": true },
       { "id": 5, "name": "Grounding conductor terminated at VFD ground lug", "correct": true },
       { "id": 6, "name": "Control wiring in shielded cable separated from power", "correct": true }
     ],
-    "explanation": "VFD carrier frequency directly affects motor life and EMI. While higher frequencies reduce audible motor noise, they dramatically increase bearing damage from shaft currents and can interfere with BAS communications. UCSB specs cap carrier frequency at 10 kHz.",
+    "explanation": "VFD carrier frequency directly affects motor life and EMI. While higher frequencies reduce audible motor noise, they dramatically increase bearing damage from shaft currents and can interfere with BAS communications. University specs cap carrier frequency at 10 kHz.",
     "xpReward": 65
   },
   {
@@ -262,14 +262,14 @@
     "title": "VFD-to-Motor Cable Installation",
     "components": [
       { "id": 1, "name": "VFD output rated for motor horsepower", "correct": true },
-      { "id": 2, "name": "VFD-to-motor cable run measuring 40 feet without engineer approval", "correct": false, "violation": "UCSB specifications limit VFD output cable length to a maximum of 20 feet without specific engineer approval and additional mitigation. Long cable runs cause voltage reflections (reflected wave phenomenon) that can double the peak voltage at motor terminals, destroying motor winding insulation.", "codeReference": "UCSB VFD Specification / NEMA MG-1 Part 31" },
+      { "id": 2, "name": "VFD-to-motor cable run measuring 40 feet without engineer approval", "correct": false, "violation": "University specifications limit VFD output cable length to a maximum of 20 feet without specific engineer approval and additional mitigation. Long cable runs cause voltage reflections (reflected wave phenomenon) that can double the peak voltage at motor terminals, destroying motor winding insulation.", "codeReference": "University VFD Specification / NEMA MG-1 Part 31" },
       { "id": 3, "name": "Shielded VFD-rated cable (XLPE insulation) used", "correct": true },
       { "id": 4, "name": "Cable shield grounded at both VFD and motor ends", "correct": true },
       { "id": 5, "name": "Motor nameplate data matches VFD configuration", "correct": true },
-      { "id": 6, "name": "VFD total harmonic distortion measured at 4%", "correct": false, "violation": "IEEE 519 and UCSB specifications require total harmonic distortion (THD) at the point of common coupling to remain below 3%. A 4% THD measurement indicates insufficient harmonic filtering, which can overheat transformers, trip breakers, and damage sensitive electronics on the same bus.", "codeReference": "IEEE 519-2022 / UCSB Electrical Specification" },
+      { "id": 6, "name": "VFD total harmonic distortion measured at 4%", "correct": false, "violation": "IEEE 519 and University specifications require total harmonic distortion (THD) at the point of common coupling to remain below 3%. A 4% THD measurement indicates insufficient harmonic filtering, which can overheat transformers, trip breakers, and damage sensitive electronics on the same bus.", "codeReference": "IEEE 519-2022 / University Electrical Specification" },
       { "id": 7, "name": "Output dV/dt filter installed at VFD", "correct": true }
     ],
-    "explanation": "VFD installations require careful attention to cable length, harmonic distortion, and reflected wave voltage. UCSB specs are more stringent than general practice, limiting cable runs to 20 feet and THD to 3% to protect motors and building electrical systems.",
+    "explanation": "VFD installations require careful attention to cable length, harmonic distortion, and reflected wave voltage. University specs are more stringent than general practice, limiting cable runs to 20 feet and THD to 3% to protect motors and building electrical systems.",
     "xpReward": 70
   },
   {
@@ -280,14 +280,14 @@
     "title": "VFD Harmonic Distortion Compliance",
     "components": [
       { "id": 1, "name": "Active front-end VFD with regenerative capability", "correct": true },
-      { "id": 2, "name": "Power quality meter showing 4% total harmonic distortion at PCC", "correct": false, "violation": "IEEE 519-2022 and UCSB specifications mandate that total harmonic distortion (THD) at the point of common coupling shall not exceed 3%. At 4%, the installation is non-compliant. An active harmonic filter or multi-pulse drive configuration is required to bring THD into compliance.", "codeReference": "IEEE 519-2022 Table 2 / UCSB Electrical Specification" },
+      { "id": 2, "name": "Power quality meter showing 4% total harmonic distortion at PCC", "correct": false, "violation": "IEEE 519-2022 and University specifications mandate that total harmonic distortion (THD) at the point of common coupling shall not exceed 3%. At 4%, the installation is non-compliant. An active harmonic filter or multi-pulse drive configuration is required to bring THD into compliance.", "codeReference": "IEEE 519-2022 Table 2 / University Electrical Specification" },
       { "id": 3, "name": "Disconnect switch within sight of VFD", "correct": true },
       { "id": 4, "name": "Surge protective device at VFD input", "correct": true },
       { "id": 5, "name": "5% impedance input reactor on VFD", "correct": true },
       { "id": 6, "name": "Power factor correction capacitors on VFD output", "correct": false, "violation": "Power factor correction capacitors must never be installed on the output side of a VFD. The capacitors resonate with the VFD's PWM switching frequency, causing destructive overcurrents that will fail the capacitors and potentially damage the drive. Capacitors go on the input side only.", "codeReference": "NEC 460.8 / VFD Manufacturer Guidelines" },
       { "id": 7, "name": "Properly ventilated VFD room with ambient below 104°F", "correct": true }
     ],
-    "explanation": "VFD harmonic compliance per IEEE 519 is a UCSB specification requirement. THD must stay below 3% at the PCC, and capacitor placement is critical — output-side capacitors create dangerous resonance with the PWM waveform. These are journeyman-level power quality concepts.",
+    "explanation": "VFD harmonic compliance per IEEE 519 is a University specification requirement. THD must stay below 3% at the PCC, and capacitor placement is critical — output-side capacitors create dangerous resonance with the PWM waveform. These are journeyman-level power quality concepts.",
     "xpReward": 75
   },
   {
@@ -295,16 +295,16 @@
     "type": "whats-wrong",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Tenant Panel Labeling",
+    "title": "high-rise office Office TI: Tenant Panel Labeling",
     "components": [
       { "id": 1, "name": "New panel L30B installed and energized from tenant transformer", "correct": true },
       { "id": 2, "name": "Branch circuits terminated with proper torque specifications", "correct": true },
       { "id": 3, "name": "Panel directory left blank — no circuit identification completed", "correct": false, "violation": "Every panelboard must have a legible circuit directory identifying each circuit. On a commercial TI project, unlabeled panels are an immediate inspection failure and create a safety hazard for other floor tenants and maintenance personnel.", "codeReference": "NEC 408.4(A)", "fixDescription": "Complete the panel directory with legible, permanent markings identifying each circuit's purpose and area served. Include panel designation (L30B/TR-T) matching the single-line diagram." },
       { "id": 4, "name": "TVSS (Transient Voltage Surge Suppressor) installed at panel", "correct": true },
-      { "id": 5, "name": "Temporary power breaker used for construction but not labeled", "correct": false, "violation": "The SACC project specification requires all panels and breakers used for temporary lighting to be clearly labeled. Unlabeled temporary power creates confusion about which circuits are temporary vs. permanent and risks leaving construction power live during turnover.", "codeReference": "NEC 590.4(D) / SACC Specification", "fixDescription": "Clearly label all temporary power breakers and panels with 'TEMPORARY — REMOVE AT COMPLETION' tags. At project completion, remove all temporary stringers, lamps, outlets, and fusing." },
+      { "id": 5, "name": "Temporary power breaker used for construction but not labeled", "correct": false, "violation": "The high-rise commercial office specification requires all panels and breakers used for temporary lighting to be clearly labeled. Unlabeled temporary power creates confusion about which circuits are temporary vs. permanent and risks leaving construction power live during turnover.", "codeReference": "NEC 590.4(D) / high-rise office Specification", "fixDescription": "Clearly label all temporary power breakers and panels with 'TEMPORARY — REMOVE AT COMPLETION' tags. At project completion, remove all temporary stringers, lamps, outlets, and fusing." },
       { "id": 6, "name": "Working clearance of 36 inches maintained in front of panel", "correct": true }
     ],
-    "explanation": "In a commercial office TI, panel labeling is critical both for NEC compliance and for tenant coordination. The SACC project requires clear identification of all permanent and temporary circuits. Unlabeled panels create hazards for other floor tenants during service interruptions and for maintenance electricians who need to quickly identify circuits.",
+    "explanation": "In a commercial office TI, panel labeling is critical both for NEC compliance and for tenant coordination. The high-rise commercial office requires clear identification of all permanent and temporary circuits. Unlabeled panels create hazards for other floor tenants during service interruptions and for maintenance electricians who need to quickly identify circuits.",
     "xpReward": 45
   },
   {
@@ -312,16 +312,16 @@
     "type": "whats-wrong",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: GFCI Receptacle Installation",
+    "title": "high-rise office Office TI: GFCI Receptacle Installation",
     "components": [
       { "id": 1, "name": "20A receptacles installed in open office areas", "correct": true },
       { "id": 2, "name": "Isolated ground (IG) receptacles installed at data room workstations", "correct": true },
       { "id": 3, "name": "Break room receptacle within 6 feet of sink has no GFCI protection", "correct": false, "violation": "All 125V, 15A and 20A receptacles installed within 6 feet of a sink edge in commercial occupancies require GFCI protection. Break room sinks in commercial offices are treated the same as kitchen sinks for GFCI purposes.", "codeReference": "NEC 210.8(B)(7)", "fixDescription": "Replace the standard receptacle with a GFCI receptacle or protect the circuit with a GFCI breaker at panel L30B." },
       { "id": 4, "name": "Receptacles installed at proper height per ADA requirements", "correct": true },
-      { "id": 5, "name": "Conduit stubbed only 3 inches above hung ceiling at low voltage junction box", "correct": false, "violation": "SACC project specifications require 1-inch minimum empty conduit for all wall-mounted low voltage equipment junction boxes, stubbed 6 inches above the hung ceiling and turned towards the termination closet. A 3-inch stub does not meet the specification.", "codeReference": "SACC Electrical Specification", "fixDescription": "Extend the conduit stub to a minimum of 6 inches above the hung ceiling and turn it towards the termination closet per specification." },
+      { "id": 5, "name": "Conduit stubbed only 3 inches above hung ceiling at low voltage junction box", "correct": false, "violation": "high-rise commercial office specifications require 1-inch minimum empty conduit for all wall-mounted low voltage equipment junction boxes, stubbed 6 inches above the hung ceiling and turned towards the termination closet. A 3-inch stub does not meet the specification.", "codeReference": "high-rise office Electrical Specification", "fixDescription": "Extend the conduit stub to a minimum of 6 inches above the hung ceiling and turn it towards the termination closet per specification." },
       { "id": 6, "name": "Proper wire connectors rated for circuit voltage", "correct": true }
     ],
-    "explanation": "Commercial office TI work combines standard NEC requirements like GFCI protection with project-specific specifications for low voltage infrastructure. The SACC project's 6-inch stub requirement above the ceiling ensures adequate room for cable routing to termination closets and prevents damage during ceiling tile work.",
+    "explanation": "Commercial office TI work combines standard NEC requirements like GFCI protection with project-specific specifications for low voltage infrastructure. The high-rise commercial office's 6-inch stub requirement above the ceiling ensures adequate room for cable routing to termination closets and prevents damage during ceiling tile work.",
     "xpReward": 40
   },
   {
@@ -329,16 +329,16 @@
     "type": "whats-wrong",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Voltage Drop on Branch Circuit",
+    "title": "high-rise office Office TI: Voltage Drop on Branch Circuit",
     "components": [
       { "id": 1, "name": "Panel L31C feeding branch circuits on Level 31", "correct": true },
-      { "id": 2, "name": "Branch circuit with 4.2% voltage drop to receptacles at far end of floor", "correct": false, "violation": "NEC 210.19(A) Informational Note recommends a maximum 3% voltage drop on branch circuits, with 5% total for feeder plus branch combined. At 4.2%, this branch circuit exceeds the 3% recommendation. On the SACC project, single-line diagrams include voltage drop calculations (VD%) and the design engineer has specified compliance with these limits.", "codeReference": "NEC 210.19(A) Informational Note / SACC Single Line Diagram", "fixDescription": "Upsize the branch circuit conductors or reroute the circuit to reduce the run length. Recalculate voltage drop to confirm it is at or below 3%." },
+      { "id": 2, "name": "Branch circuit with 4.2% voltage drop to receptacles at far end of floor", "correct": false, "violation": "NEC 210.19(A) Informational Note recommends a maximum 3% voltage drop on branch circuits, with 5% total for feeder plus branch combined. At 4.2%, this branch circuit exceeds the 3% recommendation. On the high-rise commercial office, single-line diagrams include voltage drop calculations (VD%) and the design engineer has specified compliance with these limits.", "codeReference": "NEC 210.19(A) Informational Note / high-rise office Single Line Diagram", "fixDescription": "Upsize the branch circuit conductors or reroute the circuit to reduce the run length. Recalculate voltage drop to confirm it is at or below 3%." },
       { "id": 3, "name": "Circuits properly identified on panel schedule with VD% calculations", "correct": true },
       { "id": 4, "name": "Equipment grounding conductor continuous from panel to devices", "correct": true },
-      { "id": 5, "name": "Series-rated breaker installed in re-utilized existing panel", "correct": false, "violation": "The SACC specification explicitly prohibits series rating of overcurrent protective devices. Existing panels being re-utilized must be fully rated — meaning each breaker must be independently rated for the available fault current without relying on upstream devices to limit let-through current.", "codeReference": "NEC 240.86 / SACC Specification", "fixDescription": "Replace the series-rated breaker with a fully rated breaker that has an individual interrupting rating equal to or exceeding the available fault current at the panel." },
+      { "id": 5, "name": "Series-rated breaker installed in re-utilized existing panel", "correct": false, "violation": "The high-rise office specification explicitly prohibits series rating of overcurrent protective devices. Existing panels being re-utilized must be fully rated — meaning each breaker must be independently rated for the available fault current without relying on upstream devices to limit let-through current.", "codeReference": "NEC 240.86 / high-rise office Specification", "fixDescription": "Replace the series-rated breaker with a fully rated breaker that has an individual interrupting rating equal to or exceeding the available fault current at the panel." },
       { "id": 6, "name": "Proper conduit support and routing above hung ceiling", "correct": true }
     ],
-    "explanation": "The SACC high-rise TI project enforces strict voltage drop limits and prohibits series-rated protection. Voltage drop calculations appear on the single-line diagrams as VD% values. Series rating is prohibited because in a multi-tenant high-rise, a fault on one tenant's circuit must never compromise protection coordination for other tenants or the building's main switchgear.",
+    "explanation": "The high-rise commercial TI project enforces strict voltage drop limits and prohibits series-rated protection. Voltage drop calculations appear on the single-line diagrams as VD% values. Series rating is prohibited because in a multi-tenant high-rise, a fault on one tenant's circuit must never compromise protection coordination for other tenants or the building's main switchgear.",
     "xpReward": 65
   },
   {
@@ -346,16 +346,16 @@
     "type": "whats-wrong",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Data Room Electrical Installation",
+    "title": "high-rise office Office TI: Data Room Electrical Installation",
     "components": [
       { "id": 1, "name": "PDU (Power Distribution Unit) properly installed for data equipment", "correct": true },
       { "id": 2, "name": "UPS (Uninterruptible Power Supply) system connected", "correct": true },
-      { "id": 3, "name": "Leak detection panel (LDP) installed but leak detectors (LD) not wired to electrical system", "correct": false, "violation": "Leak detectors in data rooms must be properly connected to the leak detection panel and integrated with the building alarm system. Unconnected leak detectors provide no protection against water intrusion that could destroy data equipment worth hundreds of thousands of dollars.", "codeReference": "SACC Electrical Plans / NEC 645.10", "fixDescription": "Wire all leak detectors (LD) to the leak detection panel (LDP) per the electrical plans. Verify alarm signal reaches the building monitoring system." },
+      { "id": 3, "name": "Leak detection panel (LDP) installed but leak detectors (LD) not wired to electrical system", "correct": false, "violation": "Leak detectors in data rooms must be properly connected to the leak detection panel and integrated with the building alarm system. Unconnected leak detectors provide no protection against water intrusion that could destroy data equipment worth hundreds of thousands of dollars.", "codeReference": "high-rise office Electrical Plans / NEC 645.10", "fixDescription": "Wire all leak detectors (LD) to the leak detection panel (LDP) per the electrical plans. Verify alarm signal reaches the building monitoring system." },
       { "id": 4, "name": "Signal reference ground bar (SRG) properly bonded to building steel", "correct": true },
-      { "id": 5, "name": "Standard receptacles used instead of isolated ground (IG) receptacles at server racks", "correct": false, "violation": "Data rooms require isolated ground (IG) receptacles to prevent electromagnetic interference from the building's general grounding system from affecting sensitive electronic equipment. The SACC plans specifically call out IG receptacles for data room locations.", "codeReference": "NEC 250.146(D) / SACC Electrical Plans", "fixDescription": "Replace standard receptacles with isolated ground (IG) receptacles (orange triangle marking). Run an insulated equipment grounding conductor separate from the conduit back to the panel's isolated ground bus." },
+      { "id": 5, "name": "Standard receptacles used instead of isolated ground (IG) receptacles at server racks", "correct": false, "violation": "Data rooms require isolated ground (IG) receptacles to prevent electromagnetic interference from the building's general grounding system from affecting sensitive electronic equipment. The high-rise office plans specifically call out IG receptacles for data room locations.", "codeReference": "NEC 250.146(D) / high-rise office Electrical Plans", "fixDescription": "Replace standard receptacles with isolated ground (IG) receptacles (orange triangle marking). Run an insulated equipment grounding conductor separate from the conduit back to the panel's isolated ground bus." },
       { "id": 6, "name": "Reference ground bar (RGB) installed in telecom room", "correct": true }
     ],
-    "explanation": "Data rooms in commercial office TI projects require specialized electrical installations including isolated ground receptacles, leak detection systems, and dedicated grounding infrastructure. The SACC project includes PDUs, UPS systems, signal reference ground bars (SRG), and reference ground bars (RGB) — all critical for protecting sensitive electronic equipment in a high-rise environment.",
+    "explanation": "Data rooms in commercial office TI projects require specialized electrical installations including isolated ground receptacles, leak detection systems, and dedicated grounding infrastructure. The high-rise commercial office includes PDUs, UPS systems, signal reference ground bars (SRG), and reference ground bars (RGB) — all critical for protecting sensitive electronic equipment in a high-rise environment.",
     "xpReward": 60
   },
   {
@@ -363,16 +363,16 @@
     "type": "whats-wrong",
     "trade": "electrical",
     "difficulty": 3,
-    "title": "SACC Office TI: Service Interruption and Temporary Power",
+    "title": "high-rise office Office TI: Service Interruption and Temporary Power",
     "components": [
       { "id": 1, "name": "Tenant transformer feeding new panels L32B and L32C", "correct": true },
-      { "id": 2, "name": "Service interruption to existing tenants scheduled with only 2-day notice", "correct": false, "violation": "SACC project specifications require a minimum 5-day notice for any service interruptions to existing tenants. In a multi-tenant high-rise at 555 Flower Street, unannounced or short-notice power outages can disrupt business operations, data systems, and security. The 2-day notice is 3 days short of the requirement.", "codeReference": "SACC General Conditions / Premium Time Work Requirements", "fixDescription": "Resubmit the service interruption request with a minimum 5-day advance notice to all affected tenants. Coordinate with the building management office for scheduling." },
+      { "id": 2, "name": "Service interruption to existing tenants scheduled with only 2-day notice", "correct": false, "violation": "high-rise commercial office specifications require a minimum 5-day notice for any service interruptions to existing tenants. In a multi-tenant high-rise at downtown office tower, unannounced or short-notice power outages can disrupt business operations, data systems, and security. The 2-day notice is 3 days short of the requirement.", "codeReference": "high-rise office General Conditions / Premium Time Work Requirements", "fixDescription": "Resubmit the service interruption request with a minimum 5-day advance notice to all affected tenants. Coordinate with the building management office for scheduling." },
       { "id": 3, "name": "Temporary power stringers and lamps installed per specification", "correct": true },
       { "id": 4, "name": "California Title 24 electrical compliance forms completed and filed", "correct": true },
-      { "id": 5, "name": "Motorized dampers (MD) and motorized shades (MS) not connected to electrical system", "correct": false, "violation": "Motorized dampers and motorized shades shown on the SACC electrical plans must be connected to the appropriate branch circuits with proper control wiring. Unconnected motorized dampers can prevent proper smoke control in a high-rise fire event, creating a life-safety hazard.", "codeReference": "NEC 430.1 / NFPA 90A / SACC Electrical Plans", "fixDescription": "Connect all motorized dampers (MD) to fire alarm interlocks and motorized shades (MS) to their control circuits per the electrical plans. Verify fire alarm sequences with the fire alarm contractor." },
+      { "id": 5, "name": "Motorized dampers (MD) and motorized shades (MS) not connected to electrical system", "correct": false, "violation": "Motorized dampers and motorized shades shown on the high-rise office electrical plans must be connected to the appropriate branch circuits with proper control wiring. Unconnected motorized dampers can prevent proper smoke control in a high-rise fire event, creating a life-safety hazard.", "codeReference": "NEC 430.1 / NFPA 90A / high-rise office Electrical Plans", "fixDescription": "Connect all motorized dampers (MD) to fire alarm interlocks and motorized shades (MS) to their control circuits per the electrical plans. Verify fire alarm sequences with the fire alarm contractor." },
       { "id": 6, "name": "Premium time work scheduled to avoid disturbing other floor tenants", "correct": true }
     ],
-    "explanation": "High-rise commercial TI projects like the SACC 555 Flower Street project have complex coordination requirements. The 5-day minimum notice for service interruptions protects existing tenants. Motorized dampers are life-safety devices that must be connected to fire alarm systems. Premium time work (nights/weekends) is required when construction noise or vibration would disturb occupied floors — a significant cost factor in high-rise TI projects.",
+    "explanation": "High-rise commercial TI projects like the high-rise office downtown office tower project have complex coordination requirements. The 5-day minimum notice for service interruptions protects existing tenants. Motorized dampers are life-safety devices that must be connected to fire alarm systems. Premium time work (nights/weekends) is required when construction noise or vibration would disturb occupied floors — a significant cost factor in high-rise TI projects.",
     "xpReward": 85
   }
 ]

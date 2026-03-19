@@ -252,7 +252,7 @@
       { "id": 6, "name": "Proper clamp connections at both ends", "correct": true },
       { "id": 7, "name": "Return air grille with filter rack", "correct": true }
     ],
-    "explanation": "NFPA 90A strictly limits flex duct to 5-foot maximum lengths and prohibits penetration through fire-rated assemblies. These are UCSB spec requirements that protect building compartmentalization during a fire.",
+    "explanation": "NFPA 90A strictly limits flex duct to 5-foot maximum lengths and prohibits penetration through fire-rated assemblies. These are University spec requirements that protect building compartmentalization during a fire.",
     "xpReward": 65
   },
   {
@@ -287,7 +287,7 @@
       { "id": 6, "name": "Fire suppression system nozzles in hood", "correct": true },
       { "id": 7, "name": "Minimum 18-inch clearance to combustibles maintained", "correct": true }
     ],
-    "explanation": "Kitchen exhaust grease ducts are a significant fire hazard. UCSB specs require fire barrier wrap to meet ASTM E2336 testing at a minimum 1.5-inch thickness. Inadequate wrap thickness will not contain a grease fire within the duct, allowing it to spread to the building structure.",
+    "explanation": "Kitchen exhaust grease ducts are a significant fire hazard. University specs require fire barrier wrap to meet ASTM E2336 testing at a minimum 1.5-inch thickness. Inadequate wrap thickness will not contain a grease fire within the duct, allowing it to spread to the building structure.",
     "xpReward": 75
   },
   {
@@ -295,12 +295,12 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Residential Unit Diffuser Installation",
+    "title": "University Residential Unit Diffuser Installation",
     "components": [
       { "id": 1, "name": "Supply diffuser SA12X8-375 in living room ceiling", "correct": true },
       { "id": 2, "name": "Supply diffuser SA12X4-200 in bedroom", "correct": true },
-      { "id": 3, "name": "EA6X6-100 exhaust grille serving full bathroom (100 CFM required)", "correct": false, "violation": "The EA6X6 grille is rated for only 100 CFM, which matches the requirement. However, the 6x6 grille is at its absolute maximum capacity with zero margin. Per the UCSB diffuser schedule, the EA6X6-100 operates at 0.15\" WG pressure drop at 100 CFM — any duct restriction will cause underperformance.", "codeReference": "UCSB Diffuser Schedule" },
-      { "id": 4, "name": "EA6X6-100 exhaust grille serving kitchen (270 CFM range hood required)", "correct": false, "violation": "The EA6X6 is rated for only 100 CFM maximum, but the kitchen range hood requires 270 CFM exhaust per the UCSB plans. This grille is massively undersized — it should be at minimum an EA10X10-400 or dedicated range hood exhaust connection.", "codeReference": "UCSB Mechanical Plans / IMC 505" },
+      { "id": 3, "name": "EA6X6-100 exhaust grille serving full bathroom (100 CFM required)", "correct": false, "violation": "The EA6X6 grille is rated for only 100 CFM, which matches the requirement. However, the 6x6 grille is at its absolute maximum capacity with zero margin. Per the University diffuser schedule, the EA6X6-100 operates at 0.15\" WG pressure drop at 100 CFM — any duct restriction will cause underperformance.", "codeReference": "University Diffuser Schedule" },
+      { "id": 4, "name": "EA6X6-100 exhaust grille serving kitchen (270 CFM range hood required)", "correct": false, "violation": "The EA6X6 is rated for only 100 CFM maximum, but the kitchen range hood requires 270 CFM exhaust per the University plans. This grille is massively undersized — it should be at minimum an EA10X10-400 or dedicated range hood exhaust connection.", "codeReference": "University Mechanical Plans / IMC 505" },
       { "id": 5, "name": "Return air grille RA22X22-1520 in hallway ceiling", "correct": true },
       { "id": 6, "name": "Diffuser pressure drop measured at 0.12\" WG", "correct": true },
       { "id": 7, "name": "Trickle vent providing 45 CFM fresh air", "correct": true }
@@ -313,13 +313,13 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Mechanical Room Ventilation",
+    "title": "University Mechanical Room Ventilation",
     "components": [
       { "id": 1, "name": "14\"x44\" EA duct for mechanical room exhaust", "correct": true },
       { "id": 2, "name": "38\"x18\" OA duct for outside air intake", "correct": true },
-      { "id": 3, "name": "Exhaust louver with 2.0 sq ft free area serving 3,000 CFM", "correct": false, "violation": "Per the UCSB louver schedule, 3,000 CFM requires a minimum of 6 sq ft free area. A 2.0 sq ft louver at 3,000 CFM creates 1,500 FPM face velocity — three times the 500 FPM maximum. This causes rain entrainment, excessive noise, and the exhaust fan cannot overcome the louver resistance.", "codeReference": "UCSB Louver Schedule / AMCA 550" },
+      { "id": 3, "name": "Exhaust louver with 2.0 sq ft free area serving 3,000 CFM", "correct": false, "violation": "Per the University louver schedule, 3,000 CFM requires a minimum of 6 sq ft free area. A 2.0 sq ft louver at 3,000 CFM creates 1,500 FPM face velocity — three times the 500 FPM maximum. This causes rain entrainment, excessive noise, and the exhaust fan cannot overcome the louver resistance.", "codeReference": "University Louver Schedule / AMCA 550" },
       { "id": 4, "name": "C6x8.2 structural channel supports for duct hangers", "correct": true },
-      { "id": 5, "name": "Generator room exhaust outlet 8 feet above grade", "correct": false, "violation": "Generator room exhaust must terminate a minimum of 10 feet above grade per the UCSB mechanical plans. At 8 feet, exhaust fumes containing carbon monoxide and diesel particulates are too close to pedestrian level and can be drawn into adjacent building openings.", "codeReference": "UCSB Mechanical Plans / IMC 401.4" },
+      { "id": 5, "name": "Generator room exhaust outlet 8 feet above grade", "correct": false, "violation": "Generator room exhaust must terminate a minimum of 10 feet above grade per the University mechanical plans. At 8 feet, exhaust fumes containing carbon monoxide and diesel particulates are too close to pedestrian level and can be drawn into adjacent building openings.", "codeReference": "University Mechanical Plans / IMC 401.4" },
       { "id": 6, "name": "Generator room with 72 sq ft free area opening", "correct": true },
       { "id": 7, "name": "Generator exhaust outlet 12 feet from property line", "correct": true }
     ],
@@ -331,16 +331,16 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "UCSB Student Housing Duct Sizing",
+    "title": "university student housing Duct Sizing",
     "components": [
       { "id": 1, "name": "Main supply trunk 32\"x32\" SA duct serving corridor", "correct": true },
       { "id": 2, "name": "Branch SA duct 12\"x8\" to unit delivering 375 CFM", "correct": true },
-      { "id": 3, "name": "EA duct 8\"x8\" serving shared bathroom at 150 CFM", "correct": false, "violation": "The EA8X8 grille is rated for 200 CFM per the schedule, but a shared bathroom requires 150 CFM. While the grille capacity is sufficient, the 8x8 duct size is acceptable. The actual violation is using this for a shared bathroom — shared bathrooms serving 3+ students need 150 CFM, and the duct/grille must be verified for this flow. However, the grille connection at the duct is actually correct here.", "codeReference": "UCSB Diffuser Schedule" },
-      { "id": 4, "name": "Return air duct 10\"x10\" serving 1,520 CFM common area", "correct": false, "violation": "A 10\"x10\" duct has only 100 sq inches of cross section. At 1,520 CFM, duct velocity would be approximately 2,190 FPM — far exceeding the 1,200 FPM maximum for occupied-space return ducts. The plans call for a 22\"x22\" RA duct (RA22X22-1520) with 484 sq inches providing approximately 450 FPM velocity.", "codeReference": "UCSB Mechanical Plans / SMACNA" },
+      { "id": 3, "name": "EA duct 8\"x8\" serving shared bathroom at 150 CFM", "correct": false, "violation": "The EA8X8 grille is rated for 200 CFM per the schedule, but a shared bathroom requires 150 CFM. While the grille capacity is sufficient, the 8x8 duct size is acceptable. The actual violation is using this for a shared bathroom — shared bathrooms serving 3+ students need 150 CFM, and the duct/grille must be verified for this flow. However, the grille connection at the duct is actually correct here.", "codeReference": "University Diffuser Schedule" },
+      { "id": 4, "name": "Return air duct 10\"x10\" serving 1,520 CFM common area", "correct": false, "violation": "A 10\"x10\" duct has only 100 sq inches of cross section. At 1,520 CFM, duct velocity would be approximately 2,190 FPM — far exceeding the 1,200 FPM maximum for occupied-space return ducts. The plans call for a 22\"x22\" RA duct (RA22X22-1520) with 484 sq inches providing approximately 450 FPM velocity.", "codeReference": "University Mechanical Plans / SMACNA" },
       { "id": 5, "name": "Kitchen makeup air shaft providing 300 CFM", "correct": true },
       { "id": 6, "name": "Transfer air grille between bedroom and hallway at 150 CFM", "correct": true },
       { "id": 7, "name": "EA16X16-1150 exhaust grille serving laundry room at 1,150 CFM", "correct": true },
-      { "id": 8, "name": "Exhaust riser 6\"x6\" serving 1,900 CFM from lower floors", "correct": false, "violation": "A 6\"x6\" duct has only 36 sq inches. At 1,900 CFM, velocity would be approximately 7,600 FPM — catastrophically high. The plans show EA60X16-1900 for this application, requiring a 60\"x16\" duct (960 sq inches) to maintain acceptable velocity around 285 FPM.", "codeReference": "UCSB Mechanical Plans / SMACNA" }
+      { "id": 8, "name": "Exhaust riser 6\"x6\" serving 1,900 CFM from lower floors", "correct": false, "violation": "A 6\"x6\" duct has only 36 sq inches. At 1,900 CFM, velocity would be approximately 7,600 FPM — catastrophically high. The plans show EA60X16-1900 for this application, requiring a 60\"x16\" duct (960 sq inches) to maintain acceptable velocity around 285 FPM.", "codeReference": "University Mechanical Plans / SMACNA" }
     ],
     "explanation": "This student housing duct installation has two critical sizing errors: a return air duct undersized by a factor of nearly 5x (10x10 vs. 22x22), and an exhaust riser undersized by a factor of over 25x (6x6 vs. 60x16). Both would create extreme noise, air starvation, and fan failure. Duct sizing must always match the plans — cross-referencing duct dimensions with CFM requirements catches these errors before installation.",
     "xpReward": 65
@@ -350,14 +350,14 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC IDF Room CRAC Unit Setup",
+    "title": "high-rise office IDF Room CRAC Unit Setup",
     "components": [
       { "id": 1, "name": "Liebert MM40C CRAC unit delivering 1000 CFM", "correct": true },
-      { "id": 2, "name": "CRAC mounted directly on raised floor without vibration isolation", "correct": false, "violation": "CRAC units require minimum 1-inch spring-neoprene vibration isolation mounts with 2-inch static deflection per the SACC specification. Direct mounting transmits compressor vibration through the floor structure, causing noise complaints in the high-rise office below.", "codeReference": "SACC Mechanical Specification / ASHRAE Handbook — HVAC Applications Ch. 48" },
+      { "id": 2, "name": "CRAC mounted directly on raised floor without vibration isolation", "correct": false, "violation": "CRAC units require minimum 1-inch spring-neoprene vibration isolation mounts with 2-inch static deflection per the high-rise office specification. Direct mounting transmits compressor vibration through the floor structure, causing noise complaints in the high-rise office below.", "codeReference": "high-rise office Mechanical Specification / ASHRAE Handbook — HVAC Applications Ch. 48" },
       { "id": 3, "name": "iCOM controller monitoring unit status", "correct": true },
       { "id": 4, "name": "Condensate drain with P-trap", "correct": true },
       { "id": 5, "name": "Supply air discharge into IDF room", "correct": true },
-      { "id": 6, "name": "Return air grille face velocity at 550 FPM", "correct": false, "violation": "Return air grille face velocity exceeds the 400 FPM maximum specified in the SACC project documents. At 550 FPM, the grille generates excessive noise and turbulence in the IDF room, which can interfere with sensitive network equipment cooling patterns.", "codeReference": "SACC Mechanical Specification / SMACNA HVAC Systems Testing, Adjusting and Balancing" }
+      { "id": 6, "name": "Return air grille face velocity at 550 FPM", "correct": false, "violation": "Return air grille face velocity exceeds the 400 FPM maximum specified in the high-rise commercial office documents. At 550 FPM, the grille generates excessive noise and turbulence in the IDF room, which can interfere with sensitive network equipment cooling patterns.", "codeReference": "high-rise office Mechanical Specification / SMACNA HVAC Systems Testing, Adjusting and Balancing" }
     ],
     "explanation": "IDF room CRAC installations in high-rise commercial offices require attention to vibration isolation and return air velocity limits. The Liebert MM40C at 1000 CFM / 32.2 MBH is sized for the IDF heat load, but improper mounting and excessive grille velocity compromise the installation.",
     "xpReward": 45
@@ -367,16 +367,16 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC Office Flex Duct Connection",
+    "title": "high-rise office Office Flex Duct Connection",
     "components": [
       { "id": 1, "name": "Rigid sheet metal branch duct from trunk line", "correct": true },
-      { "id": 2, "name": "Flex duct run measuring 7 feet to diffuser", "correct": false, "violation": "Flex duct is limited to a maximum of 5 feet per the SACC specification and NFPA 90A. A 7-foot run exceeds this limit, increases pressure drop, and reduces airflow to the diffuser serving the office space.", "codeReference": "NFPA 90A Section 4.3.10 / SACC Mechanical Specification" },
+      { "id": 2, "name": "Flex duct run measuring 7 feet to diffuser", "correct": false, "violation": "Flex duct is limited to a maximum of 5 feet per the high-rise office specification and NFPA 90A. A 7-foot run exceeds this limit, increases pressure drop, and reduces airflow to the diffuser serving the office space.", "codeReference": "NFPA 90A Section 4.3.10 / high-rise office Mechanical Specification" },
       { "id": 3, "name": "Linear diffuser delivering 60 CFM per linear foot", "correct": true },
-      { "id": 4, "name": "Flex duct secured with zip ties at connections", "correct": false, "violation": "The SACC specification requires stainless steel worm-drive clamps and UL-listed mastic at all flex duct connections. Zip ties do not provide adequate compression to prevent air leakage and can loosen over time due to thermal cycling in the plenum.", "codeReference": "SACC Mechanical Specification / SMACNA Duct Construction Standards" },
+      { "id": 4, "name": "Flex duct secured with zip ties at connections", "correct": false, "violation": "The high-rise office specification requires stainless steel worm-drive clamps and UL-listed mastic at all flex duct connections. Zip ties do not provide adequate compression to prevent air leakage and can loosen over time due to thermal cycling in the plenum.", "codeReference": "high-rise office Mechanical Specification / SMACNA Duct Construction Standards" },
       { "id": 5, "name": "Duct hanger supporting 45 lbs of ductwork", "correct": true },
       { "id": 6, "name": "Balancing damper at branch takeoff", "correct": true }
     ],
-    "explanation": "The SACC high-rise TI project specifies strict flex duct requirements: 5 ft max length, SS worm clamps, and UL mastic. These are tighter than some residential standards because commercial office HVAC systems operate at higher static pressures where poorly connected flex ducts leak significantly.",
+    "explanation": "The high-rise commercial TI project specifies strict flex duct requirements: 5 ft max length, SS worm clamps, and UL mastic. These are tighter than some residential standards because commercial office HVAC systems operate at higher static pressures where poorly connected flex ducts leak significantly.",
     "xpReward": 40
   },
   {
@@ -384,17 +384,17 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC MDF Room Cooling System",
+    "title": "high-rise office MDF Room Cooling System",
     "components": [
       { "id": 1, "name": "Liebert MM92C CRAC unit delivering 2500 CFM", "correct": true },
       { "id": 2, "name": "Sensible cooling capacity rated at 62.9 MBH", "correct": true },
-      { "id": 3, "name": "No BTU meter installed on CRAC chilled water circuit", "correct": false, "violation": "The SACC specification requires a BTU meter on each CRAC unit per base building standard, tied to the building management system (BMS). Without a BTU meter, the tenant cannot be accurately billed for cooling energy consumption, and the base building owner has no visibility into the MDF cooling load for capacity planning.", "codeReference": "SACC Base Building Standard / ASHRAE 90.1 Energy Metering" },
+      { "id": 3, "name": "No BTU meter installed on CRAC chilled water circuit", "correct": false, "violation": "The high-rise office specification requires a BTU meter on each CRAC unit per base building standard, tied to the building management system (BMS). Without a BTU meter, the tenant cannot be accurately billed for cooling energy consumption, and the base building owner has no visibility into the MDF cooling load for capacity planning.", "codeReference": "high-rise office Base Building Standard / ASHRAE 90.1 Energy Metering" },
       { "id": 4, "name": "Spring-neoprene isolation mounts with 2\" deflection", "correct": true },
-      { "id": 5, "name": "Firestat set to shut down unit at 135°F return air", "correct": false, "violation": "The SACC specification requires the firestat to shut down the CRAC unit when return air temperature exceeds 125°F, not 135°F. A 135°F setpoint delays shutdown by critical seconds during a fire event, allowing the unit to continue circulating smoke-laden air through the MDF room.", "codeReference": "SACC Mechanical Specification / IMC 606.4" },
+      { "id": 5, "name": "Firestat set to shut down unit at 135°F return air", "correct": false, "violation": "The high-rise office specification requires the firestat to shut down the CRAC unit when return air temperature exceeds 125°F, not 135°F. A 135°F setpoint delays shutdown by critical seconds during a fire event, allowing the unit to continue circulating smoke-laden air through the MDF room.", "codeReference": "high-rise office Mechanical Specification / IMC 606.4" },
       { "id": 6, "name": "iCOM controller with BMS integration", "correct": true },
       { "id": 7, "name": "Condensate pump with overflow switch", "correct": true }
     ],
-    "explanation": "MDF room CRAC installations on the SACC project have specific requirements beyond standard equipment installation. BTU metering is mandatory for tenant billing and base building load tracking. The firestat must be set to 125°F per the spec — even 10°F too high compromises fire safety in a room full of critical IT equipment.",
+    "explanation": "MDF room CRAC installations on the high-rise commercial office have specific requirements beyond standard equipment installation. BTU metering is mandatory for tenant billing and base building load tracking. The firestat must be set to 125°F per the spec — even 10°F too high compromises fire safety in a room full of critical IT equipment.",
     "xpReward": 65
   },
   {
@@ -402,16 +402,16 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Duct Hanger and Turning Vane Installation",
+    "title": "high-rise office Duct Hanger and Turning Vane Installation",
     "components": [
       { "id": 1, "name": "Rectangular duct elbow with double-thickness turning vanes", "correct": true },
-      { "id": 2, "name": "Turning vane runner span of 54 inches without intermediate support", "correct": false, "violation": "Turning vane runners must not exceed 48 inches unsupported per the SACC specification. A 54-inch span will cause the vanes to deflect under airflow pressure, creating turbulence, noise, and reduced turning efficiency. An intermediate support bracket is required.", "codeReference": "SACC Mechanical Specification / SMACNA HVAC Duct Construction Standards" },
-      { "id": 3, "name": "Duct hanger supporting 55 lbs of ductwork", "correct": false, "violation": "The SACC specification limits duct hangers to a maximum of 50 lbs per hanger. A 55 lb load exceeds this limit and risks hanger failure, especially during a seismic event. The duct run needs an additional hanger to distribute the load below 50 lbs per point.", "codeReference": "SACC Mechanical Specification / SMACNA Duct Construction Standards" },
+      { "id": 2, "name": "Turning vane runner span of 54 inches without intermediate support", "correct": false, "violation": "Turning vane runners must not exceed 48 inches unsupported per the high-rise office specification. A 54-inch span will cause the vanes to deflect under airflow pressure, creating turbulence, noise, and reduced turning efficiency. An intermediate support bracket is required.", "codeReference": "high-rise office Mechanical Specification / SMACNA HVAC Duct Construction Standards" },
+      { "id": 3, "name": "Duct hanger supporting 55 lbs of ductwork", "correct": false, "violation": "The high-rise office specification limits duct hangers to a maximum of 50 lbs per hanger. A 55 lb load exceeds this limit and risks hanger failure, especially during a seismic event. The duct run needs an additional hanger to distribute the load below 50 lbs per point.", "codeReference": "high-rise office Mechanical Specification / SMACNA Duct Construction Standards" },
       { "id": 4, "name": "Duct hangers spaced at 8 feet OC for 3.5 sq ft duct", "correct": true },
       { "id": 5, "name": "Turning vanes constructed from 20-gauge galvanized steel", "correct": true },
       { "id": 6, "name": "Duct sealed with mastic at transverse joints", "correct": true }
     ],
-    "explanation": "The SACC project enforces strict duct support and turning vane requirements for the high-rise commercial TI. The 48-inch maximum unsupported turning vane span and 50 lb per hanger limit are more conservative than general SMACNA minimums because seismic loads in Los Angeles can multiply static loads significantly.",
+    "explanation": "The high-rise commercial office enforces strict duct support and turning vane requirements for the high-rise commercial TI. The 48-inch maximum unsupported turning vane span and 50 lb per hanger limit are more conservative than general SMACNA minimums because seismic loads in Los Angeles can multiply static loads significantly.",
     "xpReward": 60
   },
   {
@@ -419,18 +419,18 @@
     "type": "whats-wrong",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "SACC Exhaust and Transfer Fan System",
+    "title": "high-rise office Exhaust and Transfer Fan System",
     "components": [
       { "id": 1, "name": "Greenheck CSP-A1050-VG exhaust fan rated at 850 CFM", "correct": true },
-      { "id": 2, "name": "Exhaust fan connected to occupancy sensor for control", "correct": false, "violation": "The SACC specification requires exhaust fans to be controlled by a timeclock, not an occupancy sensor. Timeclock control ensures the exhaust system operates during all scheduled building hours regardless of zone occupancy, maintaining building pressurization and code-required ventilation even in temporarily unoccupied areas.", "codeReference": "SACC Mechanical Specification / ASHRAE 62.1" },
+      { "id": 2, "name": "Exhaust fan connected to occupancy sensor for control", "correct": false, "violation": "The high-rise office specification requires exhaust fans to be controlled by a timeclock, not an occupancy sensor. Timeclock control ensures the exhaust system operates during all scheduled building hours regardless of zone occupancy, maintaining building pressurization and code-required ventilation even in temporarily unoccupied areas.", "codeReference": "high-rise office Mechanical Specification / ASHRAE 62.1" },
       { "id": 3, "name": "Transfer fan Greenheck CSP-A510-VG at 300 CFM", "correct": true },
       { "id": 4, "name": "Transfer fan thermostat set to 80°F", "correct": true },
-      { "id": 5, "name": "Exhaust branch duct without backdraft damper", "correct": false, "violation": "Each exhaust branch duct requires a backdraft damper per the SACC specification. Without backdraft dampers, air from pressurized areas can reverse-flow through inactive exhaust branches, short-circuiting the exhaust system and potentially pushing odors or contaminants into adjacent office spaces.", "codeReference": "SACC Mechanical Specification / IMC 501.2" },
+      { "id": 5, "name": "Exhaust branch duct without backdraft damper", "correct": false, "violation": "Each exhaust branch duct requires a backdraft damper per the high-rise office specification. Without backdraft dampers, air from pressurized areas can reverse-flow through inactive exhaust branches, short-circuiting the exhaust system and potentially pushing odors or contaminants into adjacent office spaces.", "codeReference": "high-rise office Mechanical Specification / IMC 501.2" },
       { "id": 6, "name": "OSHPD-approved seismic spring-neoprene mounts", "correct": true },
       { "id": 7, "name": "Exhaust duct with fire damper at rated wall", "correct": true },
       { "id": 8, "name": "Flexible duct connection at fan inlet", "correct": true }
     ],
-    "explanation": "The SACC exhaust and transfer fan system has specific control and accessory requirements. Exhaust fans use timeclock control (not occupancy sensors) to ensure consistent building ventilation during business hours. Backdraft dampers on each exhaust branch prevent reverse airflow when multiple branches connect to a common exhaust riser — a critical detail in high-rise commercial buildings where stack effect can overwhelm fan static pressure.",
+    "explanation": "The high-rise office exhaust and transfer fan system has specific control and accessory requirements. Exhaust fans use timeclock control (not occupancy sensors) to ensure consistent building ventilation during business hours. Backdraft dampers on each exhaust branch prevent reverse airflow when multiple branches connect to a common exhaust riser — a critical detail in high-rise commercial buildings where stack effect can overwhelm fan static pressure.",
     "xpReward": 85
   }
 ]

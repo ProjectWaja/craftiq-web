@@ -427,7 +427,7 @@
       "Smoke detector in duct",
       "Duct access door for cleaning"
     ],
-    "explanation": "Seismic bracing and fire dampers are critical life-safety components in commercial duct installations. UCSB specs mandate seismic restraint per ASCE 7 and fire dampers at every rated penetration. Both are frequently missed during installation and caught during final inspection.",
+    "explanation": "Seismic bracing and fire dampers are critical life-safety components in commercial duct installations. University specs mandate seismic restraint per ASCE 7 and fire dampers at every rated penetration. Both are frequently missed during installation and caught during final inspection.",
     "xpReward": 50
   },
   {
@@ -436,7 +436,7 @@
     "trade": "hvac",
     "difficulty": 2,
     "title": "Kitchen Exhaust System Components",
-    "description": "A Type I commercial kitchen exhaust system has been installed. Check for missing components required by the UCSB specification.",
+    "description": "A Type I commercial kitchen exhaust system has been installed. Check for missing components required by the University specification.",
     "presentItems": [
       "Type I grease hood over cooking appliances",
       "Welded 16-gauge grease duct to roof",
@@ -459,7 +459,7 @@
       "Grease interceptor in drain",
       "UV-C grease destruction system"
     ],
-    "explanation": "Commercial kitchen exhaust systems are high-fire-risk installations. UCSB specs require fire barrier wrap meeting ASTM E2336 at 1.5-inch minimum thickness and cleanout access at every direction change. These protect the building and enable the regular cleaning required to prevent grease fires.",
+    "explanation": "Commercial kitchen exhaust systems are high-fire-risk installations. University specs require fire barrier wrap meeting ASTM E2336 at 1.5-inch minimum thickness and cleanout access at every direction change. These protect the building and enable the regular cleaning required to prevent grease fires.",
     "xpReward": 50
   },
   {
@@ -467,8 +467,8 @@
     "type": "whats-missing",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC IDF Room CRAC Installation",
-    "description": "A Liebert MM40C CRAC unit has been installed in an IDF room on Level 31 of the SACC commercial office TI. Review the listed components and identify what's missing.",
+    "title": "high-rise office IDF Room CRAC Installation",
+    "description": "A Liebert MM40C CRAC unit has been installed in an IDF room on Level 31 of the high-rise commercial office TI. Review the listed components and identify what's missing.",
     "presentItems": [
       "Liebert MM40C CRAC unit (1000 CFM, 32.2 MBH)",
       "Chilled water piping connections with isolation valves",
@@ -479,7 +479,7 @@
     "missingItems": [
       {
         "name": "Spring-neoprene vibration isolation mounts (min 2\" static deflection)",
-        "explanation": "The SACC specification requires CRAC units to be mounted on spring-neoprene isolation mounts with a minimum 2-inch static deflection. Without vibration isolation, compressor vibration transmits through the raised floor structure to adjacent occupied offices, causing noise complaints and potential structural fatigue in the high-rise."
+        "explanation": "The high-rise office specification requires CRAC units to be mounted on spring-neoprene isolation mounts with a minimum 2-inch static deflection. Without vibration isolation, compressor vibration transmits through the raised floor structure to adjacent occupied offices, causing noise complaints and potential structural fatigue in the high-rise."
       },
       {
         "name": "BTU meter tied to BMS per base building standard",
@@ -491,7 +491,7 @@
       "Economizer damper",
       "Sound attenuator on discharge"
     ],
-    "explanation": "IDF room CRAC installations at the SACC project require vibration isolation and BTU metering beyond the standard equipment hookup. The vibration mounts protect occupant comfort in the high-rise, while BTU metering satisfies the base building energy tracking standard for tenant billing.",
+    "explanation": "IDF room CRAC installations at the high-rise commercial office require vibration isolation and BTU metering beyond the standard equipment hookup. The vibration mounts protect occupant comfort in the high-rise, while BTU metering satisfies the base building energy tracking standard for tenant billing.",
     "xpReward": 45
   },
   {
@@ -499,8 +499,8 @@
     "type": "whats-missing",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC Office Exhaust Branch Duct",
-    "description": "An exhaust branch duct has been installed connecting a restroom exhaust grille to the main exhaust riser on Level 32 of the SACC project. Identify what's missing.",
+    "title": "high-rise office Office Exhaust Branch Duct",
+    "description": "An exhaust branch duct has been installed connecting a restroom exhaust grille to the main exhaust riser on Level 32 of the high-rise commercial office. Identify what's missing.",
     "presentItems": [
       "Exhaust grille in restroom ceiling",
       "Sheet metal branch duct to main riser",
@@ -510,7 +510,7 @@
     "missingItems": [
       {
         "name": "Backdraft damper in exhaust branch",
-        "explanation": "The SACC specification requires a backdraft damper in each exhaust branch duct. Without it, when the exhaust fan is off or when stack effect in the high-rise creates reverse pressure, air from the riser can push back through the branch into the restroom. In a 30+ story building, stack effect pressures are significant and backdraft dampers are essential."
+        "explanation": "The high-rise office specification requires a backdraft damper in each exhaust branch duct. Without it, when the exhaust fan is off or when stack effect in the high-rise creates reverse pressure, air from the riser can push back through the branch into the restroom. In a 30+ story building, stack effect pressures are significant and backdraft dampers are essential."
       },
       {
         "name": "Balancing damper for TAB adjustment",
@@ -530,8 +530,8 @@
     "type": "whats-missing",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC MDF Room Cooling System",
-    "description": "A Liebert MM92C CRAC unit has been installed in the MDF room serving Levels 30-32. Review the installation for missing components per the SACC specification.",
+    "title": "high-rise office MDF Room Cooling System",
+    "description": "A Liebert MM92C CRAC unit has been installed in the MDF room serving Levels 30-32. Review the installation for missing components per the high-rise office specification.",
     "presentItems": [
       "Liebert MM92C CRAC unit (2500 CFM, 62.9 MBH sensible)",
       "Chilled water piping with isolation valves and strainer",
@@ -543,11 +543,11 @@
     "missingItems": [
       {
         "name": "Firestat on return air set to 125°F shutdown",
-        "explanation": "The SACC specification requires a firestat in the return air path that shuts down the CRAC unit when return air temperature exceeds 125°F. Without it, the unit could continue circulating smoke-laden air during a fire event, spreading combustion products through the MDF room and potentially feeding oxygen to a fire."
+        "explanation": "The high-rise office specification requires a firestat in the return air path that shuts down the CRAC unit when return air temperature exceeds 125°F. Without it, the unit could continue circulating smoke-laden air during a fire event, spreading combustion products through the MDF room and potentially feeding oxygen to a fire."
       },
       {
         "name": "Seismic restraint bracing (OSHPD approved)",
-        "explanation": "All mechanical equipment in the SACC high-rise must have OSHPD-approved seismic restraints per the project seismic specification. The MM92C weighs over 1,500 lbs — without seismic bracing, the unit could shift or topple during a seismic event, rupturing chilled water connections and flooding the MDF room containing critical IT infrastructure."
+        "explanation": "All mechanical equipment in the high-rise commercial must have OSHPD-approved seismic restraints per the project seismic specification. The MM92C weighs over 1,500 lbs — without seismic bracing, the unit could shift or topple during a seismic event, rupturing chilled water connections and flooding the MDF room containing critical IT infrastructure."
       }
     ],
     "distractors": [
@@ -563,7 +563,7 @@
     "type": "whats-missing",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Transfer Fan Installation",
+    "title": "high-rise office Transfer Fan Installation",
     "description": "A Greenheck CSP-A510-VG transfer fan has been installed to move air from a conditioned office space to an adjacent interior room on Level 30. Identify the missing components.",
     "presentItems": [
       "Greenheck CSP-A510-VG transfer fan (300 CFM)",
@@ -574,7 +574,7 @@
     "missingItems": [
       {
         "name": "Thermostat set to activate at 80°F",
-        "explanation": "The SACC specification requires each transfer fan to be controlled by a thermostat set to 80°F. The transfer fan should only operate when the receiving room temperature rises above 80°F, preventing unnecessary fan operation and noise when the room is adequately cooled by other means."
+        "explanation": "The high-rise office specification requires each transfer fan to be controlled by a thermostat set to 80°F. The transfer fan should only operate when the receiving room temperature rises above 80°F, preventing unnecessary fan operation and noise when the room is adequately cooled by other means."
       },
       {
         "name": "Fire damper at rated wall penetration",
@@ -586,7 +586,7 @@
       "Sound attenuator",
       "Return air temperature sensor"
     ],
-    "explanation": "Transfer fans at the SACC project require thermostat control at 80°F for energy efficiency and fire dampers at wall penetrations for life safety. The 80°F setpoint is specific to this project — it ensures the transfer fan only runs when the receiving room actually needs supplemental airflow from the adjacent conditioned space.",
+    "explanation": "Transfer fans at the high-rise commercial office require thermostat control at 80°F for energy efficiency and fire dampers at wall penetrations for life safety. The 80°F setpoint is specific to this project — it ensures the transfer fan only runs when the receiving room actually needs supplemental airflow from the adjacent conditioned space.",
     "xpReward": 55
   },
   {
@@ -594,8 +594,8 @@
     "type": "whats-missing",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "SACC High-Rise Duct System — Seismic and Fire Protection",
-    "description": "A large rectangular supply duct system has been installed for the tenant improvement on Level 31 of the SACC commercial office building. Check the installation for missing life-safety components.",
+    "title": "high-rise commercial Duct System — Seismic and Fire Protection",
+    "description": "A large rectangular supply duct system has been installed for the tenant improvement on Level 31 of the high-rise commercial office building. Check the installation for missing life-safety components.",
     "presentItems": [
       "Galvanized steel rectangular supply ductwork",
       "Trapeze hangers at proper spacing (8' OC for ducts under 4 sq ft)",
@@ -607,15 +607,15 @@
     "missingItems": [
       {
         "name": "Seismic bracing per ASCE 7 and OSHPD requirements",
-        "explanation": "All ductwork in the SACC high-rise requires seismic bracing per ASCE 7 and OSHPD standards. Lateral and longitudinal bracing prevents duct movement during seismic events. Without bracing, large rectangular duct runs can swing, separate at joints, and collapse — blocking egress corridors and breaching fire-rated assemblies. Los Angeles seismic requirements are among the strictest in the nation."
+        "explanation": "All ductwork in the high-rise commercial requires seismic bracing per ASCE 7 and OSHPD standards. Lateral and longitudinal bracing prevents duct movement during seismic events. Without bracing, large rectangular duct runs can swing, separate at joints, and collapse — blocking egress corridors and breaching fire-rated assemblies. Los Angeles seismic requirements are among the strictest in the nation."
       },
       {
         "name": "Smoke dampers at smoke barrier penetrations",
-        "explanation": "In addition to fire dampers at fire-rated walls, the SACC high-rise requires smoke dampers at all smoke barrier penetrations. Smoke dampers are interlocked with the building fire alarm system for automatic closure upon smoke detection. Fire dampers alone do not prevent smoke migration — they only close on fusible link activation at elevated temperatures."
+        "explanation": "In addition to fire dampers at fire-rated walls, the high-rise commercial requires smoke dampers at all smoke barrier penetrations. Smoke dampers are interlocked with the building fire alarm system for automatic closure upon smoke detection. Fire dampers alone do not prevent smoke migration — they only close on fusible link activation at elevated temperatures."
       },
       {
         "name": "Duct smoke detector on main supply trunk (system over 2,000 CFM)",
-        "explanation": "The SACC supply air system exceeds 2,000 CFM, requiring a duct smoke detector in the supply duct downstream of the air handler per NFPA 90A and IMC 606.4. The detector shuts down the air handler upon smoke detection to prevent smoke distribution throughout the floor."
+        "explanation": "The high-rise office supply air system exceeds 2,000 CFM, requiring a duct smoke detector in the supply duct downstream of the air handler per NFPA 90A and IMC 606.4. The detector shuts down the air handler upon smoke detection to prevent smoke distribution throughout the floor."
       }
     ],
     "distractors": [
@@ -623,7 +623,7 @@
       "Economizer damper",
       "Energy recovery ventilator"
     ],
-    "explanation": "High-rise commercial duct systems in seismic zones require three layers of protection beyond basic duct installation: seismic bracing (structural safety), smoke dampers (smoke containment), and duct smoke detectors (smoke detection and fan shutdown). Missing any one of these on the SACC project would fail inspection by the LA Department of Building and Safety.",
+    "explanation": "High-rise commercial duct systems in seismic zones require three layers of protection beyond basic duct installation: seismic bracing (structural safety), smoke dampers (smoke containment), and duct smoke detectors (smoke detection and fan shutdown). Missing any one of these on the high-rise commercial office would fail inspection by the LA Department of Building and Safety.",
     "xpReward": 90
   }
 ]

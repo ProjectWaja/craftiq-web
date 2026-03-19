@@ -350,8 +350,8 @@
     "type": "build-assembly",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "Office Breakroom Sink Drain Assembly (SACC)",
-    "description": "Assemble the drain components for a Kohler K-3822 pantry sink in a high-rise office breakroom from the sink to the waste stack per SACC specifications.",
+    "title": "Office Breakroom Sink Drain Assembly (high-rise office)",
+    "description": "Assemble the drain components for a Kohler K-3822 pantry sink in a high-rise office breakroom from the sink to the waste stack per high-rise office specifications.",
     "parts": [
       { "id": 1, "name": "Kohler K-3822 basket strainer with putty seal", "correctPosition": 1 },
       { "id": 2, "name": "1-1/2\" tailpiece from sink drain", "correctPosition": 2 },
@@ -370,7 +370,7 @@
       { "id": 4, "label": "Position 4: Wall penetration" },
       { "id": 5, "label": "Position 5: To waste stack" }
     ],
-    "explanation": "The SACC breakroom sink drain follows standard drain assembly order with two SACC-specific details: Link-Seal OS-316 modular seals at breakroom wall penetrations (not caulk), and Husky 4000 no-hub couplings for cast iron connections. S-traps are prohibited by CPC 1002.2, and grease interceptors are not required for office pantry sinks.",
+    "explanation": "The high-rise office breakroom sink drain follows standard drain assembly order with two high-rise office-specific details: Link-Seal OS-316 modular seals at breakroom wall penetrations (not caulk), and Husky 4000 no-hub couplings for cast iron connections. S-traps are prohibited by CPC 1002.2, and grease interceptors are not required for office pantry sinks.",
     "xpReward": 45
   },
   {
@@ -378,8 +378,8 @@
     "type": "build-assembly",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "Pipe Sleeve and Firestop Assembly Through Masonry (SACC)",
-    "description": "Assemble the components for a pipe penetration through a masonry core wall in the correct order per SACC firestopping specifications.",
+    "title": "Pipe Sleeve and Firestop Assembly Through Masonry (high-rise office)",
+    "description": "Assemble the components for a pipe penetration through a masonry core wall in the correct order per high-rise office firestopping specifications.",
     "parts": [
       { "id": 1, "name": "Schedule 40 galvanized steel sleeve grouted into masonry opening", "correctPosition": 1 },
       { "id": 2, "name": "Type L copper pipe centered in sleeve (1/2\" max annular space)", "correctPosition": 2 },
@@ -398,7 +398,7 @@
       { "id": 4, "label": "Position 4: Seal both faces" },
       { "id": 5, "label": "Position 5: Documentation" }
     ],
-    "explanation": "The SACC firestop assembly through masonry uses Schedule 40 galvanized steel sleeves (not sheet metal — that is only for framed partitions). Mineral wool provides fire resistance, and Duxseal's non-hardening property accommodates pipe movement. Spray foam is never acceptable for rated fire assemblies. The UL inspection tag documents the installation for LEED enhanced commissioning.",
+    "explanation": "The high-rise office firestop assembly through masonry uses Schedule 40 galvanized steel sleeves (not sheet metal — that is only for framed partitions). Mineral wool provides fire resistance, and Duxseal's non-hardening property accommodates pipe movement. Spray foam is never acceptable for rated fire assemblies. The UL inspection tag documents the installation for LEED enhanced commissioning.",
     "xpReward": 50
   },
   {
@@ -406,8 +406,8 @@
     "type": "build-assembly",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "CRAC Condensate Drain Assembly (SACC)",
-    "description": "Assemble the condensate drain system for a CRAC unit in the Level 31 server room, from the unit drain pan to the discharge point, per SACC specifications.",
+    "title": "CRAC Condensate Drain Assembly (high-rise office)",
+    "description": "Assemble the condensate drain system for a CRAC unit in the Level 31 server room, from the unit drain pan to the discharge point, per high-rise office specifications.",
     "parts": [
       { "id": 1, "name": "CRAC unit drain pan with 3/4\" outlet", "correctPosition": 1 },
       { "id": 2, "name": "Leak detector pad beneath CRAC unit wired to solenoid valve", "correctPosition": 2 },
@@ -435,8 +435,8 @@
     "type": "build-assembly",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "Water Heater with Leak Detection Assembly (SACC)",
-    "description": "Assemble the water heater supply piping and safety components for a commercial water heater in a Level 32 mechanical closet per SACC specifications.",
+    "title": "Water Heater with Leak Detection Assembly (high-rise office)",
+    "description": "Assemble the water heater supply piping and safety components for a commercial water heater in a Level 32 mechanical closet per high-rise office specifications.",
     "parts": [
       { "id": 1, "name": "Type L copper cold water supply from riser", "correctPosition": 1 },
       { "id": 2, "name": "Solenoid valve interlocked with leak detector pad", "correctPosition": 2 },
@@ -457,7 +457,7 @@
       { "id": 5, "label": "Position 5: Water heater connection" },
       { "id": 6, "label": "Position 6: Safety relief" }
     ],
-    "explanation": "The SACC water heater assembly adds leak detection with solenoid shutoff upstream of the manual valve — so the automatic system can protect the space even when no one is present. The solenoid must be upstream of the manual valve so it can cut supply regardless of manual valve position. The expansion tank connects on the cold side near the heater. Seismic strapping is required in Los Angeles (Seismic Design Category D). The T&P relief valve is the last line of defense per CPC 504.6.",
+    "explanation": "The high-rise office water heater assembly adds leak detection with solenoid shutoff upstream of the manual valve — so the automatic system can protect the space even when no one is present. The solenoid must be upstream of the manual valve so it can cut supply regardless of manual valve position. The expansion tank connects on the cold side near the heater. Seismic strapping is required in Los Angeles (Seismic Design Category D). The T&P relief valve is the last line of defense per CPC 504.6.",
     "xpReward": 60
   },
   {
@@ -465,8 +465,8 @@
     "type": "build-assembly",
     "trade": "plumbing",
     "difficulty": 3,
-    "title": "High-Rise Cast Iron Riser Through Rated Floor (SACC)",
-    "description": "Assemble the complete cast iron soil pipe riser assembly through a 2-hour rated floor between Levels 30 and 31, including all supports, couplings, and firestopping per SACC specifications.",
+    "title": "High-Rise Cast Iron Riser Through Rated Floor (high-rise office)",
+    "description": "Assemble the complete cast iron soil pipe riser assembly through a 2-hour rated floor between Levels 30 and 31, including all supports, couplings, and firestopping per high-rise office specifications.",
     "parts": [
       { "id": 1, "name": "Schedule 40 galvanized steel sleeve grouted into floor opening", "correctPosition": 1 },
       { "id": 2, "name": "Cast iron soil pipe riser through sleeve with Husky 4000 no-hub coupling below floor", "correctPosition": 2 },
@@ -490,7 +490,7 @@
       { "id": 6, "label": "Position 6: Upper floor connections" },
       { "id": 7, "label": "Position 7: Documentation" }
     ],
-    "explanation": "High-rise cast iron riser assemblies through rated floors require a precise sequence: sleeve first, then pipe with Husky 4000 coupling (never PVC in a rated assembly), riser clamp for structural support, mineral wool for fire resistance, and Duxseal for a flexible permanent seal. PVC couplings, intumescent wrap, and silicone caulk are not part of the specified SACC firestop system. Every penetration must be documented for LEED enhanced commissioning — undocumented firestops must be opened, inspected, and redone.",
+    "explanation": "High-rise cast iron riser assemblies through rated floors require a precise sequence: sleeve first, then pipe with Husky 4000 coupling (never PVC in a rated assembly), riser clamp for structural support, mineral wool for fire resistance, and Duxseal for a flexible permanent seal. PVC couplings, intumescent wrap, and silicone caulk are not part of the specified high-rise office firestop system. Every penetration must be documented for LEED enhanced commissioning — undocumented firestops must be opened, inspected, and redone.",
     "xpReward": 95
   }
 ]

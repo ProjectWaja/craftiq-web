@@ -277,15 +277,15 @@
     "trade": "hvac",
     "difficulty": 2,
     "title": "Seismic Bracing — Pipe Transverse Spacing",
-    "scenario": "You are installing 4-inch chilled water piping in a Seismic Design Category D building. Per UCSB spec and SMACNA seismic guidelines, what is the maximum spacing for transverse seismic braces on the piping?",
-    "hint": "UCSB specifications and SMACNA Seismic Restraint Manual define maximum brace intervals for pipe systems. Transverse braces resist side-to-side movement perpendicular to the pipe run.",
+    "scenario": "You are installing 4-inch chilled water piping in a Seismic Design Category D building. Per University spec and SMACNA seismic guidelines, what is the maximum spacing for transverse seismic braces on the piping?",
+    "hint": "University specifications and SMACNA Seismic Restraint Manual define maximum brace intervals for pipe systems. Transverse braces resist side-to-side movement perpendicular to the pipe run.",
     "options": [
-      { "text": "20 feet", "value": "20", "correct": false, "feedback": "20 feet is more conservative than required. While closer spacing increases restraint, the standard maximum for pipe transverse bracing is 40 feet per SMACNA/UCSB spec." },
-      { "text": "40 feet", "value": "40", "correct": true, "feedback": "Correct! Per UCSB spec and SMACNA seismic guidelines, transverse seismic braces on piping must be spaced at a maximum of 40 feet. Longitudinal braces are allowed at 80-foot intervals." },
+      { "text": "20 feet", "value": "20", "correct": false, "feedback": "20 feet is more conservative than required. While closer spacing increases restraint, the standard maximum for pipe transverse bracing is 40 feet per SMACNA/University spec." },
+      { "text": "40 feet", "value": "40", "correct": true, "feedback": "Correct! Per University spec and SMACNA seismic guidelines, transverse seismic braces on piping must be spaced at a maximum of 40 feet. Longitudinal braces are allowed at 80-foot intervals." },
       { "text": "60 feet", "value": "60", "correct": false, "feedback": "60 feet is the maximum interval for duct longitudinal bracing, not pipe transverse bracing. Pipe transverse bracing is required every 40 feet maximum." },
       { "text": "80 feet", "value": "80", "correct": false, "feedback": "80 feet is the maximum for pipe longitudinal bracing, not transverse. Transverse braces resist lateral motion and must be closer together — every 40 feet." }
     ],
-    "explanation": "Seismic bracing intervals per UCSB spec: pipe transverse = 40 ft max, pipe longitudinal = 80 ft max, duct transverse = 30 ft max, duct longitudinal = 60 ft max. Transverse braces are always closer together because lateral forces during an earthquake are the primary concern for pipe and duct systems.",
+    "explanation": "Seismic bracing intervals per University spec: pipe transverse = 40 ft max, pipe longitudinal = 80 ft max, duct transverse = 30 ft max, duct longitudinal = 60 ft max. Transverse braces are always closer together because lateral forces during an earthquake are the primary concern for pipe and duct systems.",
     "xpReward": 55
   },
   {
@@ -294,15 +294,15 @@
     "trade": "hvac",
     "difficulty": 2,
     "title": "Seismic Bracing — Duct Transverse Spacing",
-    "scenario": "A rectangular supply duct runs 120 feet through a seismically braced mechanical room. Per UCSB spec and SMACNA seismic guidelines, how many transverse seismic braces are required along this duct run?",
-    "hint": "UCSB spec requires transverse seismic braces on ductwork at a maximum of 30-foot intervals. Calculate the number of braces needed for 120 feet of duct.",
+    "scenario": "A rectangular supply duct runs 120 feet through a seismically braced mechanical room. Per University spec and SMACNA seismic guidelines, how many transverse seismic braces are required along this duct run?",
+    "hint": "University spec requires transverse seismic braces on ductwork at a maximum of 30-foot intervals. Calculate the number of braces needed for 120 feet of duct.",
     "options": [
       { "text": "2 braces", "value": "2", "correct": false, "feedback": "2 braces at 120 feet means 60-foot spacing — double the allowed 30-foot maximum for duct transverse bracing. This leaves large sections unrestrained during seismic events." },
-      { "text": "3 braces", "value": "3", "correct": false, "feedback": "3 braces creates 40-foot spacing, which exceeds the 30-foot maximum for duct transverse bracing per UCSB spec. You need at least one more brace." },
+      { "text": "3 braces", "value": "3", "correct": false, "feedback": "3 braces creates 40-foot spacing, which exceeds the 30-foot maximum for duct transverse bracing per University spec. You need at least one more brace." },
       { "text": "4 braces", "value": "4", "correct": true, "feedback": "Correct! 120 ft / 30 ft max spacing = 4 braces minimum. Place them at approximately 30-foot intervals along the duct run. Additionally, a brace is needed within 12 feet of each end." },
-      { "text": "6 braces", "value": "6", "correct": false, "feedback": "6 braces at 20-foot spacing is more conservative than required. While not wrong, the minimum per UCSB spec is 4 braces at 30-foot intervals for a 120-foot run." }
+      { "text": "6 braces", "value": "6", "correct": false, "feedback": "6 braces at 20-foot spacing is more conservative than required. While not wrong, the minimum per University spec is 4 braces at 30-foot intervals for a 120-foot run." }
     ],
-    "explanation": "Duct seismic bracing per UCSB spec follows SMACNA guidelines: transverse braces at 30 ft max, longitudinal at 60 ft max. For a 120-foot run, minimum 4 transverse braces are needed. Always add a brace within 12 feet of each end and at any change of direction.",
+    "explanation": "Duct seismic bracing per University spec follows SMACNA guidelines: transverse braces at 30 ft max, longitudinal at 60 ft max. For a 120-foot run, minimum 4 transverse braces are needed. Always add a brace within 12 feet of each end and at any change of direction.",
     "xpReward": 55
   },
   {
@@ -311,15 +311,15 @@
     "trade": "hvac",
     "difficulty": 3,
     "title": "Kitchen Exhaust Duct Fire Barrier Insulation",
-    "scenario": "A Type I kitchen exhaust duct passes through a 2-hour fire-rated wall assembly. Per UCSB spec, the fire barrier wrap on the duct requires specific insulation properties. What minimum insulation thickness and density is required?",
-    "hint": "UCSB spec references fire barrier requirements for kitchen exhaust ductwork penetrating rated assemblies. The insulation must withstand high temperatures from grease fires without melting or combusting.",
+    "scenario": "A Type I kitchen exhaust duct passes through a 2-hour fire-rated wall assembly. Per University spec, the fire barrier wrap on the duct requires specific insulation properties. What minimum insulation thickness and density is required?",
+    "hint": "University spec references fire barrier requirements for kitchen exhaust ductwork penetrating rated assemblies. The insulation must withstand high temperatures from grease fires without melting or combusting.",
     "options": [
       { "text": "1\" thick, 3 lb/cu.ft density", "value": "1-3", "correct": false, "feedback": "1\" at 3 lb/cu.ft is too thin and too light. Kitchen exhaust can reach extremely high temperatures during a grease fire, and this wrap would fail to maintain the fire barrier rating." },
-      { "text": "1.5\" thick, 6 lb/cu.ft density", "value": "1.5-6", "correct": true, "feedback": "Correct! Per UCSB spec, fire barrier insulation on kitchen exhaust ductwork must be a minimum of 1.5 inches thick with a density of 6 lb/cu.ft. This provides adequate fire resistance for the rated assembly penetration." },
+      { "text": "1.5\" thick, 6 lb/cu.ft density", "value": "1.5-6", "correct": true, "feedback": "Correct! Per University spec, fire barrier insulation on kitchen exhaust ductwork must be a minimum of 1.5 inches thick with a density of 6 lb/cu.ft. This provides adequate fire resistance for the rated assembly penetration." },
       { "text": "2\" thick, 4 lb/cu.ft density", "value": "2-4", "correct": false, "feedback": "While 2\" thickness exceeds the minimum, the 4 lb/cu.ft density is below the required 6 lb/cu.ft. Density is critical because higher-density insulation resists heat transfer and maintains structural integrity under fire conditions." },
-      { "text": "1\" thick, 8 lb/cu.ft density", "value": "1-8", "correct": false, "feedback": "The density exceeds the minimum, but at only 1\" thick, the insulation does not meet the 1.5-inch minimum thickness required per UCSB spec for kitchen exhaust fire barrier applications." }
+      { "text": "1\" thick, 8 lb/cu.ft density", "value": "1-8", "correct": false, "feedback": "The density exceeds the minimum, but at only 1\" thick, the insulation does not meet the 1.5-inch minimum thickness required per University spec for kitchen exhaust fire barrier applications." }
     ],
-    "explanation": "Kitchen exhaust fire barrier insulation per UCSB spec must be minimum 1.5\" thick at 6 lb/cu.ft density. This combination ensures the fire barrier maintains its rating during a grease fire event, which can exceed 2000°F. Both thickness and density must be met — one cannot compensate for the other.",
+    "explanation": "Kitchen exhaust fire barrier insulation per University spec must be minimum 1.5\" thick at 6 lb/cu.ft density. This combination ensures the fire barrier maintains its rating during a grease fire event, which can exceed 2000°F. Both thickness and density must be met — one cannot compensate for the other.",
     "xpReward": 60
   },
   {
@@ -328,15 +328,15 @@
     "trade": "hvac",
     "difficulty": 1,
     "title": "Tie Rod Sizing for Wide Ductwork",
-    "scenario": "You are fabricating a 48-inch wide rectangular supply duct that requires internal tie rods to prevent the duct walls from bowing outward under positive pressure. Per UCSB spec and SMACNA standards, what minimum tie rod diameter is required?",
-    "hint": "UCSB spec references SMACNA tie rod requirements based on duct width. The threshold for tie rod size changes at 36 inches of duct width.",
+    "scenario": "You are fabricating a 48-inch wide rectangular supply duct that requires internal tie rods to prevent the duct walls from bowing outward under positive pressure. Per University spec and SMACNA standards, what minimum tie rod diameter is required?",
+    "hint": "University spec references SMACNA tie rod requirements based on duct width. The threshold for tie rod size changes at 36 inches of duct width.",
     "options": [
       { "text": "1/8\" diameter", "value": "0.125", "correct": false, "feedback": "1/8\" tie rods are not used for any duct application. They lack the tensile strength to resist the pressure forces acting on duct walls, even on narrow ducts." },
-      { "text": "1/4\" diameter", "value": "0.25", "correct": false, "feedback": "1/4\" tie rods are only adequate for ducts 36 inches or less in width per UCSB spec. At 48 inches, the larger surface area creates greater pressure loads that require a larger rod." },
-      { "text": "3/8\" diameter", "value": "0.375", "correct": true, "feedback": "Correct! Per UCSB spec, ducts wider than 36 inches require a minimum 3/8\" diameter tie rod. Ducts 36 inches or less can use 1/4\" minimum. The larger rod handles the increased pressure force on the wider panel." },
-      { "text": "1/2\" diameter", "value": "0.5", "correct": false, "feedback": "1/2\" exceeds the minimum requirement for 48-inch duct. While stronger, the added material cost and installation difficulty are not justified. 3/8\" is the correct minimum per UCSB spec." }
+      { "text": "1/4\" diameter", "value": "0.25", "correct": false, "feedback": "1/4\" tie rods are only adequate for ducts 36 inches or less in width per University spec. At 48 inches, the larger surface area creates greater pressure loads that require a larger rod." },
+      { "text": "3/8\" diameter", "value": "0.375", "correct": true, "feedback": "Correct! Per University spec, ducts wider than 36 inches require a minimum 3/8\" diameter tie rod. Ducts 36 inches or less can use 1/4\" minimum. The larger rod handles the increased pressure force on the wider panel." },
+      { "text": "1/2\" diameter", "value": "0.5", "correct": false, "feedback": "1/2\" exceeds the minimum requirement for 48-inch duct. While stronger, the added material cost and installation difficulty are not justified. 3/8\" is the correct minimum per University spec." }
     ],
-    "explanation": "Tie rod sizing per UCSB spec and SMACNA: 1/4\" minimum for ducts 36\" or narrower, 3/8\" minimum for ducts wider than 36\". Tie rods prevent wall deflection under operating pressure, which causes air leakage, noise, and premature joint failure. Spacing and pattern must also follow SMACNA tables.",
+    "explanation": "Tie rod sizing per University spec and SMACNA: 1/4\" minimum for ducts 36\" or narrower, 3/8\" minimum for ducts wider than 36\". Tie rods prevent wall deflection under operating pressure, which causes air leakage, noise, and premature joint failure. Spacing and pattern must also follow SMACNA tables.",
     "xpReward": 45
   },
   {
@@ -362,15 +362,15 @@
     "trade": "hvac",
     "difficulty": 2,
     "title": "Supply Duct R-Value — Unconditioned Space",
-    "scenario": "A supply duct runs through an unconditioned attic space to serve a second-floor office. The duct is entirely inside the building but not in conditioned space. Per UCSB spec, what minimum R-value insulation is required?",
-    "hint": "UCSB spec differentiates between ducts outside the building, in unconditioned interior spaces, and in exposed conditioned spaces. Each location has a different R-value requirement.",
+    "scenario": "A supply duct runs through an unconditioned attic space to serve a second-floor office. The duct is entirely inside the building but not in conditioned space. Per University spec, what minimum R-value insulation is required?",
+    "hint": "University spec differentiates between ducts outside the building, in unconditioned interior spaces, and in exposed conditioned spaces. Each location has a different R-value requirement.",
     "options": [
       { "text": "R-4.2", "value": "4.2", "correct": false, "feedback": "R-4.2 is for supply ducts exposed in conditioned spaces where the temperature differential is small. An unconditioned attic has much greater temperature swings and needs higher insulation." },
-      { "text": "R-6", "value": "6", "correct": false, "feedback": "R-6 is not a standard threshold in the UCSB duct insulation table. The spec uses R-4.2, R-8, and R-12 as the primary R-value levels for different duct locations." },
-      { "text": "R-8", "value": "8", "correct": true, "feedback": "Correct! Per UCSB spec, supply and return ducts in unconditioned interior spaces require R-8 minimum insulation. Use DW-A, DW-B, or DW-C with FSK or PSK jacket." },
-      { "text": "R-12", "value": "12", "correct": false, "feedback": "R-12 is required for supply/return ducts outside the building in climate zones 5-8. Interior unconditioned spaces only require R-8 per UCSB spec." }
+      { "text": "R-6", "value": "6", "correct": false, "feedback": "R-6 is not a standard threshold in the University duct insulation table. The spec uses R-4.2, R-8, and R-12 as the primary R-value levels for different duct locations." },
+      { "text": "R-8", "value": "8", "correct": true, "feedback": "Correct! Per University spec, supply and return ducts in unconditioned interior spaces require R-8 minimum insulation. Use DW-A, DW-B, or DW-C with FSK or PSK jacket." },
+      { "text": "R-12", "value": "12", "correct": false, "feedback": "R-12 is required for supply/return ducts outside the building in climate zones 5-8. Interior unconditioned spaces only require R-8 per University spec." }
     ],
-    "explanation": "Duct insulation per UCSB spec: R-8 for supply/return in unconditioned interior spaces, R-4.2 for exposed conditioned spaces, and R-8 to R-12 for exterior ducts depending on climate zone. The insulation types allowed are DW-A, DW-B, or DW-C with FSK (foil-scrim-kraft) or PSK (polypropylene-scrim-kraft) jacket facing.",
+    "explanation": "Duct insulation per University spec: R-8 for supply/return in unconditioned interior spaces, R-4.2 for exposed conditioned spaces, and R-8 to R-12 for exterior ducts depending on climate zone. The insulation types allowed are DW-A, DW-B, or DW-C with FSK (foil-scrim-kraft) or PSK (polypropylene-scrim-kraft) jacket facing.",
     "xpReward": 50
   },
   {
@@ -379,7 +379,7 @@
     "trade": "hvac",
     "difficulty": 1,
     "title": "Duct Seismic Brace Exemption — Small Duct",
-    "scenario": "A round exhaust duct is 24 inches in diameter with hangers spaced at 10-foot intervals. Per UCSB seismic bracing requirements, is this duct exempt from seismic bracing?",
+    "scenario": "A round exhaust duct is 24 inches in diameter with hangers spaced at 10-foot intervals. Per University seismic bracing requirements, is this duct exempt from seismic bracing?",
     "hint": "The seismic bracing exemption for ductwork depends on the duct cross-sectional area (for rectangular) or diameter (for round), combined with the hanger length.",
     "options": [
       { "text": "Exempt — under 32-inch diameter with hangers under 12 inches", "value": "exempt", "correct": false, "feedback": "While the 24-inch diameter is under the 32-inch threshold, you must verify the hanger length is 12 inches or less. The exemption requires BOTH conditions to be met." },
@@ -387,7 +387,7 @@
       { "text": "Not enough information — need to know hanger length", "value": "need-info", "correct": true, "feedback": "Correct! The exemption requires the duct to be under 6 sq ft area OR under 32-inch diameter AND hangers must be 12 inches or less. The problem states 10-foot hanger intervals but does not specify hanger drop length, which is critical for the exemption." },
       { "text": "Not exempt — 24 inches exceeds the limit", "value": "not-exempt", "correct": false, "feedback": "24 inches does NOT exceed the 32-inch diameter limit. The question is whether the hanger drop lengths are 12 inches or less, which determines if the exemption applies." }
     ],
-    "explanation": "Duct seismic bracing exemptions per UCSB spec: ducts with 6 sq ft or less cross-sectional area OR 32-inch or less diameter are exempt only if hanger drop lengths are 12 inches or less. Both the size criterion and the hanger length criterion must be met. Long hangers allow more swing during seismic events, negating the small-duct exemption.",
+    "explanation": "Duct seismic bracing exemptions per University spec: ducts with 6 sq ft or less cross-sectional area OR 32-inch or less diameter are exempt only if hanger drop lengths are 12 inches or less. Both the size criterion and the hanger length criterion must be met. Long hangers allow more swing during seismic events, negating the small-duct exemption.",
     "xpReward": 45
   },
   {
@@ -412,16 +412,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Kitchen MAU Motor Sizing",
-    "scenario": "On the UCSB San Benito Student Housing project, make-up air unit MAU-B2-R-1 (AAON RNA-020-C-A-3) serves the kitchen at 5,800 CFM with a calculated brake horsepower of 4.4 BHP. Per NEMA standard motor sizes, what motor HP should be specified?",
+    "title": "University Kitchen MAU Motor Sizing",
+    "scenario": "On the University Student Housing project, make-up air unit MAU-B2-R-1 (AAON RNA-020-C-A-3) serves the kitchen at 5,800 CFM with a calculated brake horsepower of 4.4 BHP. Per NEMA standard motor sizes, what motor HP should be specified?",
     "hint": "Motors must be the next standard NEMA size above the calculated BHP. Standard NEMA sizes include 1, 1.5, 2, 3, 5, 7.5, 10, 15, 20 HP. The motor must never be smaller than the BHP.",
     "options": [
       { "text": "5 HP", "value": "5", "correct": false, "feedback": "5 HP is only 12% above the 4.4 BHP. With dirty filters increasing static pressure, the motor could overload. The equipment schedule confirms a larger motor is specified." },
-      { "text": "7.5 HP", "value": "7.5", "correct": true, "feedback": "Correct! Per the UCSB schedule, MAU-B2-R-1 uses a 7.5 HP motor with VFD. At 4.4 BHP, the 7.5 HP motor provides 70% margin for filter loading and system effects, and runs efficiently at partial load via the VFD." },
+      { "text": "7.5 HP", "value": "7.5", "correct": true, "feedback": "Correct! Per the University schedule, MAU-B2-R-1 uses a 7.5 HP motor with VFD. At 4.4 BHP, the 7.5 HP motor provides 70% margin for filter loading and system effects, and runs efficiently at partial load via the VFD." },
       { "text": "10 HP", "value": "10", "correct": false, "feedback": "10 HP would work but is oversized. The equipment schedule specifies 7.5 HP — oversizing wastes money and reduces motor efficiency at the typical operating point." },
       { "text": "4.5 HP", "value": "4.5", "correct": false, "feedback": "4.5 HP is not a standard NEMA motor size. Standard sizes jump from 3 to 5 to 7.5 HP. Always select from standard NEMA frame sizes." }
     ],
-    "explanation": "Per the UCSB San Benito schedule, MAU-B2-R-1 is specified with a 7.5 HP motor for 4.4 BHP at 5,800 CFM and 2.0\" ESP (3.2\" TSP total). The 7.5 HP provides margin for filter loading — as filters get dirty, static pressure increases and the fan draws more power. The unit operates with a VFD for variable airflow control in the kitchen hood makeup application.",
+    "explanation": "Per the University Student Housing schedule, MAU-B2-R-1 is specified with a 7.5 HP motor for 4.4 BHP at 5,800 CFM and 2.0\" ESP (3.2\" TSP total). The 7.5 HP provides margin for filter loading — as filters get dirty, static pressure increases and the fan draws more power. The unit operates with a VFD for variable airflow control in the kitchen hood makeup application.",
     "xpReward": 50
   },
   {
@@ -429,16 +429,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Electrical Room AHU Sensible Cooling",
-    "scenario": "AHU-B1-1-4 on the UCSB San Benito project is an AAON H3-ERB-3 serving the electrical room at 4,000 CFM. The total cooling capacity is 143.6 MBH. What is the sensible cooling load for this electrical room AHU?",
+    "title": "University Electrical Room AHU Sensible Cooling",
+    "scenario": "AHU-B1-1-4 on the University Student Housing project is an AAON H3-ERB-3 serving the electrical room at 4,000 CFM. The total cooling capacity is 143.6 MBH. What is the sensible cooling load for this electrical room AHU?",
     "hint": "Electrical rooms generate almost entirely sensible heat from transformers, switchgear, and panels — very little latent (moisture) load. The sensible heat ratio should be high.",
     "options": [
       { "text": "100.5 MBH", "value": "100.5", "correct": false, "feedback": "100.5 MBH would give a sensible heat ratio of only 0.70, typical of a humid space like a kitchen. Electrical rooms have much higher SHR because the heat is almost entirely from electrical equipment." },
-      { "text": "121.8 MBH", "value": "121.8", "correct": true, "feedback": "Correct! Per the UCSB schedule, AHU-B1-1-4 has 121.8 MBH sensible out of 143.6 MBH total — an SHR of 0.85. The high ratio reflects the electrical room's dry heat profile from transformers and switchgear." },
+      { "text": "121.8 MBH", "value": "121.8", "correct": true, "feedback": "Correct! Per the University schedule, AHU-B1-1-4 has 121.8 MBH sensible out of 143.6 MBH total — an SHR of 0.85. The high ratio reflects the electrical room's dry heat profile from transformers and switchgear." },
       { "text": "143.6 MBH", "value": "143.6", "correct": false, "feedback": "143.6 MBH is the total cooling capacity, not the sensible portion. Total cooling includes both sensible (temperature change) and latent (moisture removal) components." },
       { "text": "69.7 MBH", "value": "69.7", "correct": false, "feedback": "69.7 MBH is the sensible capacity for AHU-B1-1-1, a different unit serving occupied spaces. Always verify you are reading the correct row on the equipment schedule." }
     ],
-    "explanation": "The UCSB schedule shows AHU-B1-1-4 at 121.8 MBH sensible out of 143.6 MBH total (SHR = 0.85). Electrical rooms have high sensible heat ratios because loads are almost entirely from equipment dissipating dry heat. Compare to AHU-B1-1-1 at 69.7/95.4 MBH (SHR = 0.73), serving occupied spaces with more latent load from people and infiltration.",
+    "explanation": "The University schedule shows AHU-B1-1-4 at 121.8 MBH sensible out of 143.6 MBH total (SHR = 0.85). Electrical rooms have high sensible heat ratios because loads are almost entirely from equipment dissipating dry heat. Compare to AHU-B1-1-1 at 69.7/95.4 MBH (SHR = 0.73), serving occupied spaces with more latent load from people and infiltration.",
     "xpReward": 50
   },
   {
@@ -446,16 +446,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "UCSB Dryer Exhaust Fan Static Pressure",
-    "scenario": "On the UCSB San Benito project, dryer exhaust fan DEF-1-1-1 is an Enervex MBES500x serving the laundry room at 3,300 CFM. What external static pressure must this fan overcome?",
+    "title": "University Dryer Exhaust Fan Static Pressure",
+    "scenario": "On the University Student Housing project, dryer exhaust fan DEF-1-1-1 is an Enervex MBES500x serving the laundry room at 3,300 CFM. What external static pressure must this fan overcome?",
     "hint": "Dryer exhaust systems have higher static pressure than typical building exhaust due to lint screen resistance, long duct runs, and code-required minimum duct velocities to transport lint.",
     "options": [
       { "text": "0.5\" WG", "value": "0.5", "correct": false, "feedback": "0.5\" WG is the ESP for a standard bathroom exhaust fan like EF-B1-1-1 at 1,100 CFM. Dryer exhaust systems need significantly more static pressure due to lint accumulation and higher duct velocities." },
       { "text": "0.729\" WG", "value": "0.729", "correct": false, "feedback": "0.729\" WG is the ESP for general exhaust fan EF-250 at 250 CFM. Dryer exhaust at 3,300 CFM requires more static pressure than general building exhaust." },
-      { "text": "0.982\" WG", "value": "0.982", "correct": true, "feedback": "Correct! Per the UCSB schedule, DEF-1-1-1 is rated at 0.982\" ESP. Dryer exhaust systems operate at higher static because IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint buildup." },
-      { "text": "1.5\" WG", "value": "1.5", "correct": false, "feedback": "1.5\" WG exceeds the scheduled ESP. While some dryer exhaust systems with very long runs reach this level, the UCSB schedule specifies 0.982\" WG for this application." }
+      { "text": "0.982\" WG", "value": "0.982", "correct": true, "feedback": "Correct! Per the University schedule, DEF-1-1-1 is rated at 0.982\" ESP. Dryer exhaust systems operate at higher static because IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint buildup." },
+      { "text": "1.5\" WG", "value": "1.5", "correct": false, "feedback": "1.5\" WG exceeds the scheduled ESP. While some dryer exhaust systems with very long runs reach this level, the University schedule specifies 0.982\" WG for this application." }
     ],
-    "explanation": "Per the UCSB San Benito schedule, DEF-1-1-1 operates at 3,300 CFM and 0.982\" ESP. Dryer exhaust is a specialized system — IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint accumulation, smooth interior duct surfaces, and accessible cleanouts. The Enervex MBES500x is an inline fan designed specifically for dryer exhaust with lint-resistant construction.",
+    "explanation": "Per the University Student Housing schedule, DEF-1-1-1 operates at 3,300 CFM and 0.982\" ESP. Dryer exhaust is a specialized system — IMC Section 504 requires minimum 1,500 FPM duct velocity to prevent lint accumulation, smooth interior duct surfaces, and accessible cleanouts. The Enervex MBES500x is an inline fan designed specifically for dryer exhaust with lint-resistant construction.",
     "xpReward": 55
   },
   {
@@ -463,16 +463,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "UCSB Supply Air Diffuser CFM from Tag",
-    "scenario": "On the UCSB San Benito mechanical plans, a supply air diffuser is tagged SA12X8. Using the diffuser schedule tag format (type + neck size + CFM), what airflow does this diffuser deliver?",
-    "hint": "UCSB diffuser tags follow the format: SA = Supply Air, 12X8 = 12\"x8\" neck size, and the CFM is the last number in the full tag. Check the diffuser schedule for SA12X8.",
+    "title": "University Supply Air Diffuser CFM from Tag",
+    "scenario": "On the University Student Housing mechanical plans, a supply air diffuser is tagged SA12X8. Using the diffuser schedule tag format (type + neck size + CFM), what airflow does this diffuser deliver?",
+    "hint": "University diffuser tags follow the format: SA = Supply Air, 12X8 = 12\"x8\" neck size, and the CFM is the last number in the full tag. Check the diffuser schedule for SA12X8.",
     "options": [
       { "text": "200 CFM", "value": "200", "correct": false, "feedback": "200 CFM corresponds to the SA12X4-200 diffuser, which has a smaller 12\"x4\" neck. The SA12X8 has a larger neck area and delivers more airflow." },
-      { "text": "375 CFM", "value": "375", "correct": true, "feedback": "Correct! Per the UCSB diffuser schedule, SA12X8-375 delivers 375 CFM. The 12\"x8\" neck provides 96 sq inches of free area, sized for 375 CFM at the maximum 0.15\" WG pressure drop." },
+      { "text": "375 CFM", "value": "375", "correct": true, "feedback": "Correct! Per the University diffuser schedule, SA12X8-375 delivers 375 CFM. The 12\"x8\" neck provides 96 sq inches of free area, sized for 375 CFM at the maximum 0.15\" WG pressure drop." },
       { "text": "400 CFM", "value": "400", "correct": false, "feedback": "400 CFM is the rating for the EA10X10-400 exhaust grille, not a supply air diffuser. The SA12X8 neck size is rated for 375 CFM per the schedule." },
       { "text": "690 CFM", "value": "690", "correct": false, "feedback": "690 CFM corresponds to the EA12X12-690 exhaust grille. Supply diffusers at this neck size deliver less than exhaust grilles because supply diffusers must control throw pattern and noise." }
     ],
-    "explanation": "The UCSB diffuser tag SA12X8-375 tells the installer everything: SA = Supply Air, 12X8 = 12\"x8\" rectangular neck, 375 = CFM. This tagging convention is standard on commercial plans so installers can verify correct diffuser placement without referencing the schedule. The maximum pressure drop per diffuser is 0.15\" WG including the duct transition.",
+    "explanation": "The University diffuser tag SA12X8-375 tells the installer everything: SA = Supply Air, 12X8 = 12\"x8\" rectangular neck, 375 = CFM. This tagging convention is standard on commercial plans so installers can verify correct diffuser placement without referencing the schedule. The maximum pressure drop per diffuser is 0.15\" WG including the duct transition.",
     "xpReward": 35
   },
   {
@@ -480,16 +480,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Exhaust Grille Neck Size for 400 CFM",
-    "scenario": "On the UCSB San Benito plans, a mechanical room exhaust point requires 400 CFM. What minimum neck size from the exhaust grille schedule should be selected?",
+    "title": "University Exhaust Grille Neck Size for 400 CFM",
+    "scenario": "On the University Student Housing plans, a mechanical room exhaust point requires 400 CFM. What minimum neck size from the exhaust grille schedule should be selected?",
     "hint": "Check the exhaust air (EA) grille schedule. Each grille size has a rated CFM. You need the smallest grille that can handle 400 CFM without exceeding 0.15\" WG pressure drop.",
     "options": [
       { "text": "6\"x6\" (EA6X6)", "value": "6x6", "correct": false, "feedback": "The EA6X6 is rated for only 100 CFM. At 400 CFM through a 6\"x6\" neck, velocity would be approximately 1,600 FPM — creating excessive noise and pressure drop far above the 0.15\" WG limit." },
       { "text": "8\"x8\" (EA8X8)", "value": "8x8", "correct": false, "feedback": "The EA8X8 is rated for 200 CFM. Forcing 400 CFM through an 8\"x8\" grille doubles the design velocity, creating unacceptable noise (NC-40+) and pressure drop exceeding 0.15\" WG." },
-      { "text": "10\"x10\" (EA10X10)", "value": "10x10", "correct": true, "feedback": "Correct! Per the UCSB schedule, EA10X10-400 is rated for exactly 400 CFM. The 10\"x10\" neck provides 100 sq inches of free area, maintaining velocity and pressure drop within the 0.15\" WG limit." },
+      { "text": "10\"x10\" (EA10X10)", "value": "10x10", "correct": true, "feedback": "Correct! Per the University schedule, EA10X10-400 is rated for exactly 400 CFM. The 10\"x10\" neck provides 100 sq inches of free area, maintaining velocity and pressure drop within the 0.15\" WG limit." },
       { "text": "12\"x12\" (EA12X12)", "value": "12x12", "correct": false, "feedback": "The EA12X12 is rated for 690 CFM. While it would work, it is oversized for 400 CFM — the lower velocity would cause poor air distribution and the larger grille wastes wall/ceiling space and costs more." }
     ],
-    "explanation": "Grille selection must match the CFM requirement. The UCSB exhaust grille schedule shows: EA6X6-100, EA8X8-200, EA10X10-400, EA12X12-690, EA16X16-1150. For 400 CFM, the EA10X10 is the correct match. Undersizing creates noise and excessive pressure drop; oversizing wastes money and reduces air velocity below effective levels for proper room air circulation.",
+    "explanation": "Grille selection must match the CFM requirement. The University exhaust grille schedule shows: EA6X6-100, EA8X8-200, EA10X10-400, EA12X12-690, EA16X16-1150. For 400 CFM, the EA10X10 is the correct match. Undersizing creates noise and excessive pressure drop; oversizing wastes money and reduces air velocity below effective levels for proper room air circulation.",
     "xpReward": 40
   },
   {
@@ -497,16 +497,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "UCSB Mechanical Room Exhaust Louver Free Area",
-    "scenario": "On the UCSB San Benito project, a mechanical room exhaust system requires 3,000 CFM. Per the louver schedule, what minimum free area must the exhaust louver provide?",
+    "title": "University Mechanical Room Exhaust Louver Free Area",
+    "scenario": "On the University Student Housing project, a mechanical room exhaust system requires 3,000 CFM. Per the louver schedule, what minimum free area must the exhaust louver provide?",
     "hint": "Louver free area is the actual open area after subtracting the frame, blades, and bird screen. The plans specify minimum free area requirements for each CFM rating. Higher CFM needs more free area to keep face velocity below 500 FPM.",
     "options": [
       { "text": "2 sq ft", "value": "2", "correct": false, "feedback": "2 sq ft is the minimum free area for 1,000 CFM. At 3,000 CFM through 2 sq ft, face velocity would be 1,500 FPM — causing rain entrainment, excessive noise, and pressure drop through the louver blades." },
       { "text": "2.8 sq ft", "value": "2.8", "correct": false, "feedback": "2.8 sq ft is the minimum for approximately 2,000 CFM. At 3,000 CFM, the resulting 1,071 FPM face velocity still exceeds the typical 400-500 FPM maximum for weather-resistant louvers." },
-      { "text": "6 sq ft", "value": "6", "correct": true, "feedback": "Correct! Per the UCSB louver schedule, 3,000 CFM requires a minimum of 6 sq ft free area. This gives a face velocity of 500 FPM (3,000 / 6 = 500), which is the maximum recommended for storm-resistant louvers to prevent rain penetration." },
+      { "text": "6 sq ft", "value": "6", "correct": true, "feedback": "Correct! Per the University louver schedule, 3,000 CFM requires a minimum of 6 sq ft free area. This gives a face velocity of 500 FPM (3,000 / 6 = 500), which is the maximum recommended for storm-resistant louvers to prevent rain penetration." },
       { "text": "9 sq ft", "value": "9", "correct": false, "feedback": "9 sq ft is the minimum free area for 3,500 CFM per the plans. While a larger louver would reduce velocity and pressure drop, it is oversized for 3,000 CFM and wastes wall space." }
     ],
-    "explanation": "The UCSB louver schedule specifies minimum free areas: 1,000 CFM = 2 sq ft, 2,000 CFM = 2.8 sq ft, 3,000 CFM = 6 sq ft, 3,500 CFM = 9 sq ft, 5,780 CFM = 30 sq ft. For 3,000 CFM, the 6 sq ft minimum maintains approximately 500 FPM face velocity — the industry standard maximum for storm-resistant louvers per AMCA 550. Higher velocities cause water carryover into the duct system.",
+    "explanation": "The University louver schedule specifies minimum free areas: 1,000 CFM = 2 sq ft, 2,000 CFM = 2.8 sq ft, 3,000 CFM = 6 sq ft, 3,500 CFM = 9 sq ft, 5,780 CFM = 30 sq ft. For 3,000 CFM, the 6 sq ft minimum maintains approximately 500 FPM face velocity — the industry standard maximum for storm-resistant louvers per AMCA 550. Higher velocities cause water carryover into the duct system.",
     "xpReward": 45
   },
   {
@@ -514,16 +514,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "UCSB Residential Bathroom Exhaust CFM",
-    "scenario": "On the UCSB San Benito student housing plans, a 4-bedroom unit has 2 full bathrooms. What total exhaust CFM is required for the bathroom exhaust system?",
-    "hint": "Residential exhaust rates depend on bathroom type. The UCSB plans specify different CFM rates for half baths, full baths, and shared bathrooms. A full bathroom with a shower requires more exhaust than a half bath (toilet and sink only).",
+    "title": "University Residential Bathroom Exhaust CFM",
+    "scenario": "On the University Student Housing plans, a 4-bedroom unit has 2 full bathrooms. What total exhaust CFM is required for the bathroom exhaust system?",
+    "hint": "Residential exhaust rates depend on bathroom type. The University plans specify different CFM rates for half baths, full baths, and shared bathrooms. A full bathroom with a shower requires more exhaust than a half bath (toilet and sink only).",
     "options": [
       { "text": "100 CFM", "value": "100", "correct": false, "feedback": "100 CFM is the exhaust requirement for a single full bathroom. With 2 full baths, you need to account for both." },
       { "text": "150 CFM", "value": "150", "correct": false, "feedback": "150 CFM is the rate for a single shared bathroom (used by 3+ people). Two standard full baths each require 100 CFM." },
-      { "text": "200 CFM", "value": "200", "correct": true, "feedback": "Correct! Each full bathroom requires 100 CFM per the UCSB plans. Two full baths = 2 x 100 = 200 CFM total bathroom exhaust for the unit." },
+      { "text": "200 CFM", "value": "200", "correct": true, "feedback": "Correct! Each full bathroom requires 100 CFM per the University plans. Two full baths = 2 x 100 = 200 CFM total bathroom exhaust for the unit." },
       { "text": "270 CFM", "value": "270", "correct": false, "feedback": "270 CFM is the kitchen range hood exhaust rate per unit, not bathroom exhaust. Bathroom exhaust is calculated separately at 100 CFM per full bath." }
     ],
-    "explanation": "The UCSB plans specify bathroom exhaust rates: 50 CFM for a half bath (toilet/sink only), 100 CFM for a full bath (with shower/tub), and 150 CFM for a shared bathroom serving 3+ occupants. For a 4-bedroom unit with 2 full baths: 2 x 100 = 200 CFM. This meets IMC Table 403.3 minimum requirements for residential bathroom ventilation and helps control moisture to prevent mold growth.",
+    "explanation": "The University plans specify bathroom exhaust rates: 50 CFM for a half bath (toilet/sink only), 100 CFM for a full bath (with shower/tub), and 150 CFM for a shared bathroom serving 3+ occupants. For a 4-bedroom unit with 2 full baths: 2 x 100 = 200 CFM. This meets IMC Table 403.3 minimum requirements for residential bathroom ventilation and helps control moisture to prevent mold growth.",
     "xpReward": 35
   },
   {
@@ -531,16 +531,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC IDF Room CRAC Sizing",
-    "scenario": "An IDF (Intermediate Distribution Frame) room on Level 31 of the SACC high-rise has a calculated heat load of 30 MBH from network switches and patch panels. What is the correct CRAC unit selection?",
+    "title": "high-rise office IDF Room CRAC Sizing",
+    "scenario": "An IDF (Intermediate Distribution Frame) room on Level 31 of the high-rise commercial has a calculated heat load of 30 MBH from network switches and patch panels. What is the correct CRAC unit selection?",
     "hint": "CRAC units are selected based on sensible cooling capacity (MBH) because IT equipment generates almost entirely sensible heat (no moisture). The unit must meet or exceed the room's heat load.",
     "options": [
       { "text": "Liebert MM20C (500 CFM, 16.1 MBH)", "value": "MM20C", "correct": false, "feedback": "The MM20C at 16.1 MBH is undersized for a 30 MBH load. It would run at 100% capacity continuously and still fail to maintain temperature, risking equipment overheating and network outages." },
-      { "text": "Liebert MM40C (1000 CFM, 32.2 MBH)", "value": "MM40C", "correct": true, "feedback": "Correct! The MM40C at 32.2 MBH exceeds the 30 MBH load with approximately 7% margin. This provides adequate cooling with some headroom for future equipment additions, matching the SACC IDF room specification." },
+      { "text": "Liebert MM40C (1000 CFM, 32.2 MBH)", "value": "MM40C", "correct": true, "feedback": "Correct! The MM40C at 32.2 MBH exceeds the 30 MBH load with approximately 7% margin. This provides adequate cooling with some headroom for future equipment additions, matching the high-rise office IDF room specification." },
       { "text": "Liebert MM92C (2500 CFM, 62.9 MBH)", "value": "MM92C", "correct": false, "feedback": "The MM92C at 62.9 MBH is significantly oversized — over 2x the required capacity. This unit is specified for the larger MDF room. Oversizing wastes energy through short-cycling and excessive airflow." },
       { "text": "Liebert MM15C (375 CFM, 12.0 MBH)", "value": "MM15C", "correct": false, "feedback": "The MM15C at 12.0 MBH covers only 40% of the 30 MBH load. Critical IT equipment would overheat within minutes during peak load." }
     ],
-    "explanation": "CRAC unit sizing for IT rooms is based on sensible cooling capacity matching the calculated heat load. The SACC project specifies the Liebert MM40C (1000 CFM, 32.2 MBH) for IDF rooms and the MM92C (2500 CFM, 62.9 MBH) for the larger MDF room. A small margin above the load (7-15%) allows for future growth without oversizing.",
+    "explanation": "CRAC unit sizing for IT rooms is based on sensible cooling capacity matching the calculated heat load. The high-rise commercial office specifies the Liebert MM40C (1000 CFM, 32.2 MBH) for IDF rooms and the MM92C (2500 CFM, 62.9 MBH) for the larger MDF room. A small margin above the load (7-15%) allows for future growth without oversizing.",
     "xpReward": 40
   },
   {
@@ -548,16 +548,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC Linear Diffuser CFM Selection",
-    "scenario": "A 4-foot linear diffuser serves a private office on Level 30 of the SACC project. The room requires 180 CFM of supply air. What CFM per linear foot rating should be specified for this diffuser?",
-    "hint": "Linear diffusers are rated in CFM per linear foot (CFM/LF). Divide the total required CFM by the diffuser length to find the required per-foot rating. The SACC spec offers 30, 45, 60, and 75 CFM/LF options.",
+    "title": "high-rise office Linear Diffuser CFM Selection",
+    "scenario": "A 4-foot linear diffuser serves a private office on Level 30 of the high-rise commercial office. The room requires 180 CFM of supply air. What CFM per linear foot rating should be specified for this diffuser?",
+    "hint": "Linear diffusers are rated in CFM per linear foot (CFM/LF). Divide the total required CFM by the diffuser length to find the required per-foot rating. The high-rise office spec offers 30, 45, 60, and 75 CFM/LF options.",
     "options": [
       { "text": "30 CFM/LF (120 CFM total)", "value": "30", "correct": false, "feedback": "At 30 CFM/LF, a 4-foot diffuser delivers only 120 CFM — 33% below the 180 CFM requirement. The room would be undercooled and stuffy." },
-      { "text": "45 CFM/LF (180 CFM total)", "value": "45", "correct": true, "feedback": "Correct! 45 CFM/LF x 4 feet = 180 CFM, exactly matching the room requirement. This is the most efficient selection from the SACC diffuser schedule." },
+      { "text": "45 CFM/LF (180 CFM total)", "value": "45", "correct": true, "feedback": "Correct! 45 CFM/LF x 4 feet = 180 CFM, exactly matching the room requirement. This is the most efficient selection from the high-rise office diffuser schedule." },
       { "text": "60 CFM/LF (240 CFM total)", "value": "60", "correct": false, "feedback": "60 CFM/LF delivers 240 CFM — 33% more than needed. While it would cool the room, the excessive airflow causes drafts and noise, and wastes conditioned air." },
       { "text": "75 CFM/LF (300 CFM total)", "value": "75", "correct": false, "feedback": "75 CFM/LF delivers 300 CFM — 67% oversized. This would create uncomfortable drafts, high noise levels, and severely overcool the private office." }
     ],
-    "explanation": "Linear diffuser sizing on the SACC project uses standard ratings of 30, 45, 60, and 75 CFM per linear foot. The calculation is simple: total required CFM divided by diffuser length equals the required CFM/LF rating. Selecting the closest match without undersizing ensures proper air distribution without noise or draft complaints.",
+    "explanation": "Linear diffuser sizing on the high-rise commercial office uses standard ratings of 30, 45, 60, and 75 CFM per linear foot. The calculation is simple: total required CFM divided by diffuser length equals the required CFM/LF rating. Selecting the closest match without undersizing ensures proper air distribution without noise or draft complaints.",
     "xpReward": 35
   },
   {
@@ -565,8 +565,8 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Return Air Grille Sizing for 400 FPM Maximum",
-    "scenario": "An open office area on Level 32 of the SACC project requires 1,600 CFM of return air. The SACC specification limits return air grille face velocity to 400 FPM maximum. What is the minimum grille free area required?",
+    "title": "high-rise office Return Air Grille Sizing for 400 FPM Maximum",
+    "scenario": "An open office area on Level 32 of the high-rise commercial office requires 1,600 CFM of return air. The high-rise office specification limits return air grille face velocity to 400 FPM maximum. What is the minimum grille free area required?",
     "hint": "Face velocity = CFM / Free Area (sq ft). Rearrange to find: Free Area = CFM / Velocity. Remember to convert FPM velocity to get square feet.",
     "options": [
       { "text": "2.0 sq ft", "value": "2.0", "correct": false, "feedback": "2.0 sq ft at 1,600 CFM gives 800 FPM face velocity — double the 400 FPM maximum. This would generate severe noise and turbulence at the grille." },
@@ -574,7 +574,7 @@
       { "text": "4.0 sq ft", "value": "4.0", "correct": true, "feedback": "Correct! 1,600 CFM / 400 FPM = 4.0 sq ft minimum free area. This keeps the grille at exactly the maximum velocity. In practice, slightly larger is better for noise." },
       { "text": "6.0 sq ft", "value": "6.0", "correct": false, "feedback": "6.0 sq ft gives 267 FPM — very quiet but oversized. While it would work, it uses more grille area than necessary and increases material cost." }
     ],
-    "explanation": "Return air grille sizing is driven by the velocity limit: Free Area = CFM / Max Velocity. The SACC specification sets 400 FPM as the maximum to control noise in the office environment. At 400 FPM, the noise contribution from the grille is approximately NC-25, which is acceptable for open offices. Exceeding 400 FPM pushes noise above NC-30, where it becomes noticeable and disruptive to office workers.",
+    "explanation": "Return air grille sizing is driven by the velocity limit: Free Area = CFM / Max Velocity. The high-rise office specification sets 400 FPM as the maximum to control noise in the office environment. At 400 FPM, the noise contribution from the grille is approximately NC-25, which is acceptable for open offices. Exceeding 400 FPM pushes noise above NC-30, where it becomes noticeable and disruptive to office workers.",
     "xpReward": 55
   },
   {
@@ -582,16 +582,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Duct Hanger Spacing Selection",
-    "scenario": "A 30\"x24\" rectangular supply duct is being installed on Level 31 of the SACC project. The duct cross-sectional area is 5.0 sq ft. What is the required maximum hanger spacing per the SACC specification?",
-    "hint": "The SACC spec has two hanger spacing tiers based on duct cross-sectional area. The threshold is 4 sq ft — different spacing is required above and below this threshold.",
+    "title": "high-rise office Duct Hanger Spacing Selection",
+    "scenario": "A 30\"x24\" rectangular supply duct is being installed on Level 31 of the high-rise commercial office. The duct cross-sectional area is 5.0 sq ft. What is the required maximum hanger spacing per the high-rise office specification?",
+    "hint": "The high-rise office spec has two hanger spacing tiers based on duct cross-sectional area. The threshold is 4 sq ft — different spacing is required above and below this threshold.",
     "options": [
-      { "text": "10 feet on center", "value": "10", "correct": false, "feedback": "10-foot spacing exceeds even the wider spacing tier. No duct on the SACC project is allowed 10-foot hanger spacing — the maximum is 8 feet OC for smaller ducts." },
+      { "text": "10 feet on center", "value": "10", "correct": false, "feedback": "10-foot spacing exceeds even the wider spacing tier. No duct on the high-rise commercial office is allowed 10-foot hanger spacing — the maximum is 8 feet OC for smaller ducts." },
       { "text": "8 feet on center", "value": "8", "correct": false, "feedback": "8-foot OC spacing is for ducts with 4 sq ft or less cross section. This 5.0 sq ft duct exceeds the 4 sq ft threshold and requires closer spacing." },
-      { "text": "4 feet on center", "value": "4", "correct": true, "feedback": "Correct! Per the SACC specification, ducts with cross-sectional area exceeding 4 sq ft require hangers at 4 feet on center. This 30x24 duct at 5.0 sq ft is above the threshold." },
-      { "text": "6 feet on center", "value": "6", "correct": false, "feedback": "6-foot spacing is not one of the SACC standard tiers. The spec requires either 8 feet OC (≤4 sq ft) or 4 feet OC (>4 sq ft) — no intermediate option." }
+      { "text": "4 feet on center", "value": "4", "correct": true, "feedback": "Correct! Per the high-rise office specification, ducts with cross-sectional area exceeding 4 sq ft require hangers at 4 feet on center. This 30x24 duct at 5.0 sq ft is above the threshold." },
+      { "text": "6 feet on center", "value": "6", "correct": false, "feedback": "6-foot spacing is not one of the high-rise office standard tiers. The spec requires either 8 feet OC (≤4 sq ft) or 4 feet OC (>4 sq ft) — no intermediate option." }
     ],
-    "explanation": "The SACC duct hanger spacing specification has two tiers: 8 feet OC for ducts with 4 sq ft or less cross section, and 4 feet OC for ducts exceeding 4 sq ft. This 30\"x24\" duct (5.0 sq ft) triggers the tighter spacing. Larger ducts are heavier and have more surface area exposed to seismic forces, requiring more frequent support points. Each hanger must also stay under the 50 lb load limit.",
+    "explanation": "The high-rise office duct hanger spacing specification has two tiers: 8 feet OC for ducts with 4 sq ft or less cross section, and 4 feet OC for ducts exceeding 4 sq ft. This 30\"x24\" duct (5.0 sq ft) triggers the tighter spacing. Larger ducts are heavier and have more surface area exposed to seismic forces, requiring more frequent support points. Each hanger must also stay under the 50 lb load limit.",
     "xpReward": 60
   },
   {
@@ -599,16 +599,16 @@
     "type": "size-it",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "SACC MDF Room CRAC Capacity Verification",
-    "scenario": "The MDF room on the SACC project houses 35 kW of IT equipment. The SACC spec calls for a Liebert MM92C rated at 62.9 MBH sensible capacity. Is the specified unit adequate for this load? (Note: 1 kW = 3.412 MBH)",
+    "title": "high-rise office MDF Room CRAC Capacity Verification",
+    "scenario": "The MDF room on the high-rise commercial office houses 35 kW of IT equipment. The high-rise office spec calls for a Liebert MM92C rated at 62.9 MBH sensible capacity. Is the specified unit adequate for this load? (Note: 1 kW = 3.412 MBH)",
     "hint": "Convert the IT electrical load from kW to MBH using the conversion factor. In a data/telecom room, virtually all electrical energy consumed by IT equipment is converted to heat (sensible load).",
     "options": [
       { "text": "Yes — 35 kW = 119.4 MBH, MM92C at 62.9 MBH is adequate", "value": "119.4", "correct": false, "feedback": "Your conversion is correct (35 x 3.412 = 119.4 MBH), but the conclusion is wrong. 62.9 MBH is only 53% of the 119.4 MBH load — the unit is severely undersized for 35 kW of IT equipment." },
-      { "text": "No — 35 kW = 119.4 MBH, exceeds MM92C capacity of 62.9 MBH", "value": "no-119", "correct": false, "feedback": "The conversion and comparison are correct, but the SACC MDF room does not house 35 kW. The actual IT load for the tenant MDF is approximately 15 kW. At 35 kW, you would need two MM92C units or a larger floor-mounted CRAC." },
-      { "text": "Yes — actual MDF load is ~15 kW = 51.2 MBH, MM92C at 62.9 MBH provides 23% margin", "value": "51.2", "correct": true, "feedback": "Correct! The SACC MDF room IT load is approximately 15 kW (51.2 MBH). The MM92C at 62.9 MBH provides 23% margin above the load, which is appropriate for data room cooling. The 35 kW figure would apply to a much larger MDF." },
+      { "text": "No — 35 kW = 119.4 MBH, exceeds MM92C capacity of 62.9 MBH", "value": "no-119", "correct": false, "feedback": "The conversion and comparison are correct, but the high-rise office MDF room does not house 35 kW. The actual IT load for the tenant MDF is approximately 15 kW. At 35 kW, you would need two MM92C units or a larger floor-mounted CRAC." },
+      { "text": "Yes — actual MDF load is ~15 kW = 51.2 MBH, MM92C at 62.9 MBH provides 23% margin", "value": "51.2", "correct": true, "feedback": "Correct! The high-rise office MDF room IT load is approximately 15 kW (51.2 MBH). The MM92C at 62.9 MBH provides 23% margin above the load, which is appropriate for data room cooling. The 35 kW figure would apply to a much larger MDF." },
       { "text": "No — CRAC units cannot cool IT equipment, only precision AC units can", "value": "no-type", "correct": false, "feedback": "CRAC (Computer Room Air Conditioning) units ARE precision AC units designed specifically for IT equipment cooling. The Liebert MM series is one of the most widely deployed CRAC platforms in the industry." }
     ],
-    "explanation": "CRAC sizing for telecom rooms requires converting the IT electrical load to thermal load: kW x 3.412 = MBH. The SACC MDF at ~15 kW produces 51.2 MBH of sensible heat. The MM92C at 62.9 MBH provides adequate capacity with 23% margin for growth. Industry best practice is 15-25% margin in data rooms to accommodate future equipment additions without requiring a CRAC change-out.",
+    "explanation": "CRAC sizing for telecom rooms requires converting the IT electrical load to thermal load: kW x 3.412 = MBH. The high-rise office MDF at ~15 kW produces 51.2 MBH of sensible heat. The MM92C at 62.9 MBH provides adequate capacity with 23% margin for growth. Industry best practice is 15-25% margin in data rooms to accommodate future equipment additions without requiring a CRAC change-out.",
     "xpReward": 80
   }
 ]

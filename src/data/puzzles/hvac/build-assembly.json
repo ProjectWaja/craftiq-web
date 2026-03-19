@@ -338,8 +338,8 @@
     "type": "build-assembly",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC Flex Duct Connection Assembly",
-    "description": "Assemble the flex duct connection components at a branch takeoff on the SACC high-rise TI project, per the project specification requiring SS worm clamps and UL mastic.",
+    "title": "high-rise office Flex Duct Connection Assembly",
+    "description": "Assemble the flex duct connection components at a branch takeoff on the high-rise commercial TI project, per the project specification requiring SS worm clamps and UL mastic.",
     "parts": [
       { "id": 1, "name": "Sheet metal branch collar at trunk duct", "correctPosition": 1 },
       { "id": 2, "name": "Flex duct inner liner pulled over collar", "correctPosition": 2 },
@@ -361,7 +361,7 @@
       { "id": 5, "label": "Position 5: Insulation cover" },
       { "id": 6, "label": "Position 6: Outer seal" }
     ],
-    "explanation": "The SACC specification mandates stainless steel worm-drive clamps and UL mastic for all flex duct connections — zip ties, duct tape, and sheet metal screws are prohibited. The inner liner must be clamped and sealed before the outer jacket covers the connection. This two-layer sealing approach prevents air leakage at the connection, which is the most common failure point in flex duct installations.",
+    "explanation": "The high-rise office specification mandates stainless steel worm-drive clamps and UL mastic for all flex duct connections — zip ties, duct tape, and sheet metal screws are prohibited. The inner liner must be clamped and sealed before the outer jacket covers the connection. This two-layer sealing approach prevents air leakage at the connection, which is the most common failure point in flex duct installations.",
     "xpReward": 45
   },
   {
@@ -369,8 +369,8 @@
     "type": "build-assembly",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC IDF Room CRAC Condensate Drain",
-    "description": "Assemble the condensate drainage system for a Liebert MM40C CRAC unit in an IDF room on the SACC project.",
+    "title": "high-rise office IDF Room CRAC Condensate Drain",
+    "description": "Assemble the condensate drainage system for a Liebert MM40C CRAC unit in an IDF room on the high-rise commercial office.",
     "parts": [
       { "id": 1, "name": "CRAC unit drain pan connection", "correctPosition": 1 },
       { "id": 2, "name": "P-trap below drain pan outlet", "correctPosition": 2 },
@@ -397,8 +397,8 @@
     "type": "build-assembly",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Exhaust Fan Branch with Backdraft Damper",
-    "description": "Assemble the exhaust branch duct system from a restroom exhaust grille to the main exhaust riser on the SACC high-rise project.",
+    "title": "high-rise office Exhaust Fan Branch with Backdraft Damper",
+    "description": "Assemble the exhaust branch duct system from a restroom exhaust grille to the main exhaust riser on the high-rise commercial project.",
     "parts": [
       { "id": 1, "name": "Exhaust grille in restroom ceiling", "correctPosition": 1 },
       { "id": 2, "name": "Sheet metal branch duct from grille", "correctPosition": 2 },
@@ -420,7 +420,7 @@
       { "id": 5, "label": "Position 5: Fire barrier" },
       { "id": 6, "label": "Position 6: Riser connection" }
     ],
-    "explanation": "Exhaust branch assemblies on the SACC high-rise require a specific component sequence: grille, branch duct, balancing damper (for TAB), backdraft damper (prevents reverse flow from stack effect), fire damper (at rated wall), then riser connection. The backdraft damper is positioned after the balancing damper so it does not interfere with airflow measurement during TAB. In a 30+ story building, stack effect can create significant reverse pressures on exhaust branches.",
+    "explanation": "Exhaust branch assemblies on the high-rise commercial require a specific component sequence: grille, branch duct, balancing damper (for TAB), backdraft damper (prevents reverse flow from stack effect), fire damper (at rated wall), then riser connection. The backdraft damper is positioned after the balancing damper so it does not interfere with airflow measurement during TAB. In a 30+ story building, stack effect can create significant reverse pressures on exhaust branches.",
     "xpReward": 65
   },
   {
@@ -428,8 +428,8 @@
     "type": "build-assembly",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC CRAC Chilled Water Piping Assembly",
-    "description": "Assemble the chilled water piping components connecting the base building chilled water supply to the Liebert MM92C CRAC unit in the SACC MDF room.",
+    "title": "high-rise office CRAC Chilled Water Piping Assembly",
+    "description": "Assemble the chilled water piping components connecting the base building chilled water supply to the Liebert MM92C CRAC unit in the high-rise office MDF room.",
     "parts": [
       { "id": 1, "name": "Chilled water supply isolation valve", "correctPosition": 1 },
       { "id": 2, "name": "Strainer to protect CRAC coil", "correctPosition": 2 },
@@ -450,7 +450,7 @@
       { "id": 5, "label": "Position 5: Energy metering" },
       { "id": 6, "label": "Position 6: To base building return" }
     ],
-    "explanation": "CRAC chilled water piping on the SACC project includes components for both operational control and base building integration. The strainer protects the CRAC coil from debris in the base building loop. The flexible connector accommodates seismic movement and vibration isolation. The BTU meter on the return side accurately measures energy consumption for tenant billing. The expansion tank and air separator are part of the base building system, not the tenant CRAC piping — they are distractors.",
+    "explanation": "CRAC chilled water piping on the high-rise commercial office includes components for both operational control and base building integration. The strainer protects the CRAC coil from debris in the base building loop. The flexible connector accommodates seismic movement and vibration isolation. The BTU meter on the return side accurately measures energy consumption for tenant billing. The expansion tank and air separator are part of the base building system, not the tenant CRAC piping — they are distractors.",
     "xpReward": 70
   },
   {
@@ -458,8 +458,8 @@
     "type": "build-assembly",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "SACC CRAC Seismic Isolation Assembly",
-    "description": "Assemble the seismic isolation and restraint system for a Liebert MM92C CRAC unit in the SACC MDF room (Los Angeles, Seismic Design Category D).",
+    "title": "high-rise office CRAC Seismic Isolation Assembly",
+    "description": "Assemble the seismic isolation and restraint system for a Liebert MM92C CRAC unit in the high-rise office MDF room (Los Angeles, Seismic Design Category D).",
     "parts": [
       { "id": 1, "name": "OSHPD-approved seismic base frame anchored to floor", "correctPosition": 1 },
       { "id": 2, "name": "Spring-neoprene isolation mounts (min 2\" deflection)", "correctPosition": 2 },

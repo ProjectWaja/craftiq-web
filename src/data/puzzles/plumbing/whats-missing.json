@@ -410,7 +410,7 @@
     "trade": "plumbing",
     "difficulty": 2,
     "title": "Closed-Loop Hydronic Heating System",
-    "description": "A closed-loop hydronic heating system has been installed in a commercial building. Review the installation for missing components per UCSB specifications.",
+    "description": "A closed-loop hydronic heating system has been installed in a commercial building. Review the installation for missing components per University specifications.",
     "presentItems": [
       "Hot water boiler with circulator pump",
       "Supply and return piping to heating coils",
@@ -425,7 +425,7 @@
       },
       {
         "name": "Chemical pot feeder on hydronic loop",
-        "explanation": "UCSB specifications require a chemical treatment bypass pot feeder on all closed hydronic loops. Without ongoing chemical treatment (corrosion inhibitors and biocides), internal piping corrodes, biological growth fouls heat exchangers, and system efficiency degrades. The pot feeder allows treatment without draining the system."
+        "explanation": "University specifications require a chemical treatment bypass pot feeder on all closed hydronic loops. Without ongoing chemical treatment (corrosion inhibitors and biocides), internal piping corrodes, biological growth fouls heat exchangers, and system efficiency degrades. The pot feeder allows treatment without draining the system."
       }
     ],
     "distractors": [
@@ -433,7 +433,7 @@
       "Sidestream sand filter",
       "Differential pressure transmitter"
     ],
-    "explanation": "Pressure relief and chemical treatment are essential for hydronic system safety and longevity. The relief valve prevents overpressure damage, and the chemical pot feeder enables ongoing water treatment. Both are UCSB specification requirements verified during commissioning.",
+    "explanation": "Pressure relief and chemical treatment are essential for hydronic system safety and longevity. The relief valve prevents overpressure damage, and the chemical pot feeder enables ongoing water treatment. Both are University specification requirements verified during commissioning.",
     "xpReward": 50
   },
   {
@@ -442,7 +442,7 @@
     "trade": "plumbing",
     "difficulty": 2,
     "title": "Commercial Water Heater with Recirculation",
-    "description": "A commercial domestic hot water system with recirculation has been installed. Check for missing components per UCSB specifications.",
+    "description": "A commercial domestic hot water system with recirculation has been installed. Check for missing components per University specifications.",
     "presentItems": [
       "Commercial gas water heater (199,000 BTU)",
       "Hot water supply piping to fixtures",
@@ -453,7 +453,7 @@
     "missingItems": [
       {
         "name": "Temperature and pressure (T&P) relief valve with discharge piping",
-        "explanation": "A T&P relief valve must be installed in the top 6 inches of the water heater tank and piped to discharge within 6 inches of the floor or to an approved indirect waste receptor. Without it, a thermostat failure can cause the tank to overpressurize and rupture explosively. Required per IPC 504.6 and UCSB specifications."
+        "explanation": "A T&P relief valve must be installed in the top 6 inches of the water heater tank and piped to discharge within 6 inches of the floor or to an approved indirect waste receptor. Without it, a thermostat failure can cause the tank to overpressurize and rupture explosively. Required per IPC 504.6 and University specifications."
       },
       {
         "name": "Check valve and balancing valve on recirculation return",
@@ -473,8 +473,8 @@
     "type": "whats-missing",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "Office Breakroom Pantry Sink (SACC Level 30)",
-    "description": "A Kohler K-3822 pantry sink has been installed in a high-rise office breakroom on Level 30. Review the installation for missing components per SACC specifications.",
+    "title": "Office Breakroom Pantry Sink (high-rise office Level 30)",
+    "description": "A Kohler K-3822 pantry sink has been installed in a high-rise office breakroom on Level 30. Review the installation for missing components per high-rise office specifications.",
     "presentItems": [
       "Kohler K-3822 pantry sink mounted in countertop",
       "Kitchen faucet set to 1.8 GPM default",
@@ -485,11 +485,11 @@
     "missingItems": [
       {
         "name": "Water hammer arresters (J.R. Smith Fig. 5005)",
-        "explanation": "SACC specifications require water hammer arresters at all fixture groups. The J.R. Smith Fig. 5005 is the specified model. Without arresters, solenoid-operated appliances like dishwashers and the Nespresso Aguila 220 create pressure surges that can damage piping and fittings in the high-rise riser system. Required per CPC 609.10."
+        "explanation": "high-rise office specifications require water hammer arresters at all fixture groups. The J.R. Smith Fig. 5005 is the specified model. Without arresters, solenoid-operated appliances like dishwashers and the Nespresso Aguila 220 create pressure surges that can damage piping and fittings in the high-rise riser system. Required per CPC 609.10."
       },
       {
         "name": "Link-Seal Model OS-316 at pipe penetration through breakroom wall",
-        "explanation": "All pipe penetrations through walls in kitchens and breakrooms require Link-Seal Model OS-316 modular seals per SACC specification. Standard caulking or foam is not acceptable — the Link-Seal provides a watertight, mechanical compression seal that accommodates pipe movement and is removable for service."
+        "explanation": "All pipe penetrations through walls in kitchens and breakrooms require Link-Seal Model OS-316 modular seals per high-rise office specification. Standard caulking or foam is not acceptable — the Link-Seal provides a watertight, mechanical compression seal that accommodates pipe movement and is removable for service."
       }
     ],
     "distractors": [
@@ -498,7 +498,7 @@
       "Floor drain with trap primer",
       "Instant hot water dispenser"
     ],
-    "explanation": "High-rise office breakroom installations require water hammer arresters to protect the riser system from pressure surges and Link-Seal modular seals at all kitchen/breakroom penetrations. These are SACC-specific requirements often missed during tenant improvement work.",
+    "explanation": "High-rise office breakroom installations require water hammer arresters to protect the riser system from pressure surges and Link-Seal modular seals at all kitchen/breakroom penetrations. These are high-rise office-specific requirements often missed during tenant improvement work.",
     "xpReward": 45
   },
   {
@@ -506,8 +506,8 @@
     "type": "whats-missing",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "Restroom Water Closet Installation (SACC Level 31)",
-    "description": "A non-residential restroom has been roughed in on Level 31 of the SACC high-rise office. Water closets and lavatories are installed. Check for missing components.",
+    "title": "Restroom Water Closet Installation (high-rise office Level 31)",
+    "description": "A non-residential restroom has been roughed in on Level 31 of the high-rise commercial office. Water closets and lavatories are installed. Check for missing components.",
     "presentItems": [
       "Water closets rated at 1.28 GPF (ASME A112.19.2)",
       "Non-residential lavatory faucets at 0.5 GPM @ 60 PSI",
@@ -522,7 +522,7 @@
       },
       {
         "name": "Pipe sleeves — Schedule 40 galvanized steel through masonry walls",
-        "explanation": "All pipe penetrations through masonry walls require Schedule 40 galvanized steel sleeves per SACC specification. The sleeves protect pipes from abrasion and settlement, provide a defined annular space (maximum 1/2 inch) for firestopping, and allow pipe replacement without disturbing the masonry structure."
+        "explanation": "All pipe penetrations through masonry walls require Schedule 40 galvanized steel sleeves per high-rise office specification. The sleeves protect pipes from abrasion and settlement, provide a defined annular space (maximum 1/2 inch) for firestopping, and allow pipe replacement without disturbing the masonry structure."
       }
     ],
     "distractors": [
@@ -539,8 +539,8 @@
     "type": "whats-missing",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "CRAC Unit Condensate System (SACC Level 31)",
-    "description": "A CRAC (Computer Room Air Conditioning) unit has been installed in a server room on Level 31. The condensate drainage has been piped. Check for missing components per SACC specifications.",
+    "title": "CRAC Unit Condensate System (high-rise office Level 31)",
+    "description": "A CRAC (Computer Room Air Conditioning) unit has been installed in a server room on Level 31. The condensate drainage has been piped. Check for missing components per high-rise office specifications.",
     "presentItems": [
       "CRAC unit with condensate drain pan",
       "3/4-inch condensate drain piped down from unit",
@@ -551,7 +551,7 @@
     "missingItems": [
       {
         "name": "Leak detector pad at CRAC unit base with solenoid valve interlock",
-        "explanation": "SACC specifications require leak detector pads at all water-producing equipment in server rooms. The pad must interlock with a solenoid valve on the water supply to automatically shut off water flow when a leak is detected. A CRAC condensate overflow in a server room can cause catastrophic equipment damage."
+        "explanation": "high-rise office specifications require leak detector pads at all water-producing equipment in server rooms. The pad must interlock with a solenoid valve on the water supply to automatically shut off water flow when a leak is detected. A CRAC condensate overflow in a server room can cause catastrophic equipment damage."
       },
       {
         "name": "Trap primer on server room floor drain",
@@ -572,8 +572,8 @@
     "type": "whats-missing",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "Water Heater Installation with Leak Protection (SACC Level 32)",
-    "description": "A commercial water heater has been installed in a mechanical closet on Level 32 of the SACC high-rise. Check for missing safety and code-required components.",
+    "title": "Water Heater Installation with Leak Protection (high-rise office Level 32)",
+    "description": "A commercial water heater has been installed in a mechanical closet on Level 32 of the high-rise commercial. Check for missing safety and code-required components.",
     "presentItems": [
       "Commercial water heater properly mounted",
       "T&P relief valve with discharge pipe to within 6 inches of floor",
@@ -584,7 +584,7 @@
     "missingItems": [
       {
         "name": "Solenoid valve with leak detector pad",
-        "explanation": "SACC specifications require a solenoid valve on the water supply line to the water heater, interlocked with a leak detector pad placed beneath the unit. If the pad detects water, the solenoid automatically closes and shuts off the water supply. In a high-rise, an undetected water heater leak can cascade down multiple floors causing extensive damage."
+        "explanation": "high-rise office specifications require a solenoid valve on the water supply line to the water heater, interlocked with a leak detector pad placed beneath the unit. If the pad detects water, the solenoid automatically closes and shuts off the water supply. In a high-rise, an undetected water heater leak can cascade down multiple floors causing extensive damage."
       },
       {
         "name": "Seismic strapping per California Building Code",
@@ -597,7 +597,7 @@
       "Water softener",
       "Timer control"
     ],
-    "explanation": "High-rise water heater installations in Los Angeles require both leak detection with automatic shutoff (SACC spec) and seismic strapping (CBC/CPC). These protect the building from water damage in a 32-story structure where gravity amplifies the consequences of any leak.",
+    "explanation": "High-rise water heater installations in Los Angeles require both leak detection with automatic shutoff (high-rise office spec) and seismic strapping (CBC/CPC). These protect the building from water damage in a 32-story structure where gravity amplifies the consequences of any leak.",
     "xpReward": 65
   },
   {
@@ -605,7 +605,7 @@
     "type": "whats-missing",
     "trade": "plumbing",
     "difficulty": 3,
-    "title": "High-Rise Firestopping at Rated Floor Assembly (SACC Levels 30-32)",
+    "title": "High-Rise Firestopping at Rated Floor Assembly (high-rise office Levels 30-32)",
     "description": "Cast iron soil pipe risers penetrate a 2-hour rated floor assembly between Levels 30 and 31. The pipes have been installed with sleeves. Check for missing firestopping and sealing components.",
     "presentItems": [
       "Cast iron soil pipe with Husky 4000 no-hub couplings",
@@ -621,7 +621,7 @@
       },
       {
         "name": "Duxseal non-hardening compound as top seal",
-        "explanation": "After mineral wool packing, a non-hardening compound (Duxseal is specified by SACC) must be applied as the finish seal on both faces of the penetration. Duxseal remains pliable to accommodate pipe thermal expansion and vibration. Hardening compounds crack over time, breaking the fire seal. This specific material is a SACC specification requirement."
+        "explanation": "After mineral wool packing, a non-hardening compound (Duxseal is specified by high-rise office) must be applied as the finish seal on both faces of the penetration. Duxseal remains pliable to accommodate pipe thermal expansion and vibration. Hardening compounds crack over time, breaking the fire seal. This specific material is a high-rise office specification requirement."
       },
       {
         "name": "UL System firestop documentation and inspection tag",

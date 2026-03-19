@@ -335,8 +335,8 @@
     "type": "sequence",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Tenant Panel Installation",
-    "description": "Order the steps for installing a new tenant panelboard (L30B/TR-T) on Level 30 of the SACC commercial office TI at 555 Flower Street, LA.",
+    "title": "high-rise office Office TI: Tenant Panel Installation",
+    "description": "Order the steps for installing a new tenant panelboard (L30B/TR-T) on Level 30 of the high-rise commercial office TI at downtown office tower, LA.",
     "steps": [
       { "id": 1, "text": "Review panel schedule and single-line diagram for panel L30B, noting VD% calculations", "order": 1 },
       { "id": 2, "text": "Coordinate with building management and provide 5-day minimum notice if service interruption is required", "order": 2 },
@@ -344,10 +344,10 @@
       { "id": 4, "text": "Pull feeder conductors from tenant transformer (/TR-T) to panel L30B", "order": 4 },
       { "id": 5, "text": "Terminate feeder conductors on panel main lugs and verify torque specifications", "order": 5 },
       { "id": 6, "text": "Install branch circuit breakers (fully rated, no series rating) per panel schedule", "order": 6 },
-      { "id": 7, "text": "Install TVSS (Transient Voltage Surge Suppressor) at panel per SACC electrical plans", "order": 7 },
+      { "id": 7, "text": "Install TVSS (Transient Voltage Surge Suppressor) at panel per high-rise office electrical plans", "order": 7 },
       { "id": 8, "text": "Complete panel directory with legible circuit identification and affix panel designation label", "order": 8 }
     ],
-    "explanation": "Tenant panel installation in a high-rise TI starts with reviewing the single-line diagram and voltage drop calculations. The 5-day notice requirement for service interruptions is a SACC specification that protects existing tenants at 555 Flower Street. Fully rated breakers are mandatory — series rating is prohibited. The TVSS protects tenant equipment from transients in the high-rise electrical system.",
+    "explanation": "Tenant panel installation in a high-rise TI starts with reviewing the single-line diagram and voltage drop calculations. The 5-day notice requirement for service interruptions is a high-rise office specification that protects existing tenants at downtown office tower. Fully rated breakers are mandatory — series rating is prohibited. The TVSS protects tenant equipment from transients in the high-rise electrical system.",
     "xpReward": 50
   },
   {
@@ -355,18 +355,18 @@
     "type": "sequence",
     "trade": "electrical",
     "difficulty": 1,
-    "title": "SACC Office TI: Temporary Power Setup",
-    "description": "Order the steps for setting up temporary power and lighting for construction on Level 31 of the SACC commercial office TI.",
+    "title": "high-rise office Office TI: Temporary Power Setup",
+    "description": "Order the steps for setting up temporary power and lighting for construction on Level 31 of the high-rise commercial office TI.",
     "steps": [
       { "id": 1, "text": "Identify available power source and verify capacity for temporary construction loads", "order": 1 },
       { "id": 2, "text": "Install temporary panel with breakers and fusing per NEC Article 590", "order": 2 },
       { "id": 3, "text": "Run temporary stringers and install GFCI-protected outlets at work locations", "order": 3 },
       { "id": 4, "text": "Install temporary lamps to provide adequate illumination (minimum 5 foot-candles)", "order": 4 },
-      { "id": 5, "text": "Clearly label all panels and breakers used for temporary lighting per SACC specification", "order": 5 },
+      { "id": 5, "text": "Clearly label all panels and breakers used for temporary lighting per high-rise office specification", "order": 5 },
       { "id": 6, "text": "Schedule premium time work for any tasks that would disturb other floor tenants", "order": 6 },
       { "id": 7, "text": "At project completion, remove all temporary stringers, lamps, outlets, breakers, and fusing", "order": 7 }
     ],
-    "explanation": "Temporary power in a multi-tenant high-rise TI per NEC 590 and SACC specifications requires GFCI protection, adequate lighting, and clear labeling for removal at completion. Premium time work (nights/weekends) must be scheduled when construction activities would disturb other tenants — a significant coordination and cost factor unique to occupied high-rise TI projects.",
+    "explanation": "Temporary power in a multi-tenant high-rise TI per NEC 590 and high-rise office specifications requires GFCI protection, adequate lighting, and clear labeling for removal at completion. Premium time work (nights/weekends) must be scheduled when construction activities would disturb other tenants — a significant coordination and cost factor unique to occupied high-rise TI projects.",
     "xpReward": 45
   },
   {
@@ -374,19 +374,19 @@
     "type": "sequence",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Low Voltage Conduit Rough-In",
-    "description": "Order the steps for roughing in low voltage conduit infrastructure on Level 32 of the SACC commercial office TI.",
+    "title": "high-rise office Office TI: Low Voltage Conduit Rough-In",
+    "description": "Order the steps for roughing in low voltage conduit infrastructure on Level 32 of the high-rise commercial office TI.",
     "steps": [
       { "id": 1, "text": "Review electrical plans for low voltage junction box locations and termination closet position", "order": 1 },
       { "id": 2, "text": "Install wall-mounted junction boxes at designated low voltage equipment locations", "order": 2 },
       { "id": 3, "text": "Install 1-inch minimum empty conduit at each wall-mounted low voltage junction box", "order": 3 },
       { "id": 4, "text": "Route conduit above hung ceiling and stub 6 inches above ceiling grid", "order": 4 },
-      { "id": 5, "text": "Turn conduit stubs towards the termination closet per SACC specification", "order": 5 },
+      { "id": 5, "text": "Turn conduit stubs towards the termination closet per high-rise office specification", "order": 5 },
       { "id": 6, "text": "Install cable tray for horizontal data cable runs between conduit drops and closet", "order": 6 },
       { "id": 7, "text": "Install reference ground bar (RGB) in telecom room and bond to building steel", "order": 7 },
       { "id": 8, "text": "Verify all conduit runs and pull cords, label each conduit with destination", "order": 8 }
     ],
-    "explanation": "Low voltage conduit rough-in follows a systematic plan-to-field process. The SACC specification's 1-inch minimum conduit and 6-inch stub height above the hung ceiling are practical standards that ensure adequate space for cable routing. Turning stubs towards the termination closet streamlines future cable pulls. The reference ground bar (RGB) in the telecom room establishes a clean ground reference for all data equipment per TIA-607-C.",
+    "explanation": "Low voltage conduit rough-in follows a systematic plan-to-field process. The high-rise office specification's 1-inch minimum conduit and 6-inch stub height above the hung ceiling are practical standards that ensure adequate space for cable routing. Turning stubs towards the termination closet streamlines future cable pulls. The reference ground bar (RGB) in the telecom room establishes a clean ground reference for all data equipment per TIA-607-C.",
     "xpReward": 60
   },
   {
@@ -394,8 +394,8 @@
     "type": "sequence",
     "trade": "electrical",
     "difficulty": 2,
-    "title": "SACC Office TI: Data Room Electrical Build-Out",
-    "description": "Order the steps for the complete electrical build-out of a data room on Level 30 of the SACC commercial office TI.",
+    "title": "high-rise office Office TI: Data Room Electrical Build-Out",
+    "description": "Order the steps for the complete electrical build-out of a data room on Level 30 of the high-rise commercial office TI.",
     "steps": [
       { "id": 1, "text": "Install dedicated panelboard with isolated ground (IG) bus for data room circuits", "order": 1 },
       { "id": 2, "text": "Run branch circuits with insulated equipment grounding conductors for IG receptacles", "order": 2 },
@@ -405,7 +405,7 @@
       { "id": 6, "text": "Install leak detectors (LD) at strategic floor locations and wire to leak detection panel (LDP)", "order": 6 },
       { "id": 7, "text": "Test all circuits, verify IG continuity, and commission UPS and LDP alarm systems", "order": 7 }
     ],
-    "explanation": "Data room electrical build-out in the SACC project follows a logical sequence: establish clean power infrastructure (dedicated panel with IG bus), then install power distribution (IG receptacles, PDU, UPS), grounding infrastructure (SRG), environmental protection (leak detection), and finally commission all systems. Each component protects the tenant's data equipment investment.",
+    "explanation": "Data room electrical build-out in the high-rise commercial office follows a logical sequence: establish clean power infrastructure (dedicated panel with IG bus), then install power distribution (IG receptacles, PDU, UPS), grounding infrastructure (SRG), environmental protection (leak detection), and finally commission all systems. Each component protects the tenant's data equipment investment.",
     "xpReward": 65
   },
   {
@@ -413,19 +413,19 @@
     "type": "sequence",
     "trade": "electrical",
     "difficulty": 3,
-    "title": "SACC Office TI: Service Interruption Coordination",
-    "description": "Order the steps for safely performing a planned service interruption to re-utilize existing panels during the SACC high-rise TI at 555 Flower Street.",
+    "title": "high-rise office Office TI: Service Interruption Coordination",
+    "description": "Order the steps for safely performing a planned service interruption to re-utilize existing panels during the high-rise commercial TI at downtown office tower.",
     "steps": [
       { "id": 1, "text": "Submit service interruption request to building management with minimum 5-day advance notice", "order": 1 },
       { "id": 2, "text": "Coordinate premium time work schedule (nights/weekends) to avoid disturbing occupied floors", "order": 2 },
-      { "id": 3, "text": "Verify existing panel ratings — confirm fully rated, no series rating allowed per SACC specification", "order": 3 },
+      { "id": 3, "text": "Verify existing panel ratings — confirm fully rated, no series rating allowed per high-rise office specification", "order": 3 },
       { "id": 4, "text": "Apply lockout/tagout on upstream disconnect and verify zero energy state at existing panel", "order": 4 },
       { "id": 5, "text": "Perform panel modifications — replace breakers, add circuits, verify all breakers are fully rated for available fault current", "order": 5 },
       { "id": 6, "text": "Verify voltage drop calculations per single-line diagram VD% notations (max 3% branch, 5% total)", "order": 6 },
       { "id": 7, "text": "Remove lockout/tagout, energize panel, and verify all circuits with metering equipment", "order": 7 },
       { "id": 8, "text": "Update panel directory, document work completed, and notify building management of restoration", "order": 8 }
     ],
-    "explanation": "Service interruptions in an occupied high-rise require meticulous coordination. The SACC project's 5-day notice requirement, premium time scheduling, and prohibition on series rating all protect existing tenants. Verifying fully rated breakers is critical — in a re-utilized panel, the available fault current may have changed since the original installation. Voltage drop verification against the single-line diagram ensures the modified circuits meet design intent.",
+    "explanation": "Service interruptions in an occupied high-rise require meticulous coordination. The high-rise commercial office's 5-day notice requirement, premium time scheduling, and prohibition on series rating all protect existing tenants. Verifying fully rated breakers is critical — in a re-utilized panel, the available fault current may have changed since the original installation. Voltage drop verification against the single-line diagram ensures the modified circuits meet design intent.",
     "xpReward": 95
   }
 ]

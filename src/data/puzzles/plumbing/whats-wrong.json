@@ -243,7 +243,7 @@
     "title": "Butterfly Valve Installation",
     "components": [
       { "id": 1, "name": "Butterfly valve properly aligned between flanges", "correct": true },
-      { "id": 2, "name": "8-inch butterfly valve with lever handle operator", "correct": false, "violation": "Butterfly valves 6 inches and larger must be equipped with a gear operator, not a lever handle. Lever handles on large valves allow rapid closure that causes water hammer, and they cannot provide the fine control needed for balancing. Gear operators also prevent unauthorized operation.", "codeReference": "UCSB Plumbing Specification / AWWA C504" },
+      { "id": 2, "name": "8-inch butterfly valve with lever handle operator", "correct": false, "violation": "Butterfly valves 6 inches and larger must be equipped with a gear operator, not a lever handle. Lever handles on large valves allow rapid closure that causes water hammer, and they cannot provide the fine control needed for balancing. Gear operators also prevent unauthorized operation.", "codeReference": "University Plumbing Specification / AWWA C504" },
       { "id": 3, "name": "Valve stem oriented correctly per manufacturer", "correct": true },
       { "id": 4, "name": "Flange bolts torqued to specification", "correct": true },
       { "id": 5, "name": "Position indicator visible on valve", "correct": true },
@@ -260,14 +260,14 @@
     "title": "Valve Pressure Rating Mismatch",
     "components": [
       { "id": 1, "name": "System designed for 125 psi operating pressure", "correct": true },
-      { "id": 2, "name": "Gate valve rated at only 100 psi installed on 125 psi system", "correct": false, "violation": "Valves must be rated to exceed the maximum operating pressure by at least 50% per UCSB specifications. A 100 psi rated valve on a 125 psi system is under-rated and risks catastrophic valve body failure. A minimum 200 psi rated valve (Class 150) is required.", "codeReference": "UCSB Plumbing Specification / ASME B16.34" },
+      { "id": 2, "name": "Gate valve rated at only 100 psi installed on 125 psi system", "correct": false, "violation": "Valves must be rated to exceed the maximum operating pressure by at least 50% per University specifications. A 100 psi rated valve on a 125 psi system is under-rated and risks catastrophic valve body failure. A minimum 200 psi rated valve (Class 150) is required.", "codeReference": "University Plumbing Specification / ASME B16.34" },
       { "id": 3, "name": "Pressure relief valve set at 150 psi", "correct": true },
       { "id": 4, "name": "Pressure gauge installed with snubber", "correct": true },
       { "id": 5, "name": "Check valve on pump discharge", "correct": true },
       { "id": 6, "name": "Pipe supports at proper intervals", "correct": true },
       { "id": 7, "name": "System hydrostatic test completed and documented", "correct": true }
     ],
-    "explanation": "Valve pressure ratings must exceed maximum operating pressure by a safety margin. UCSB specs require a minimum 50% safety factor. Installing under-rated valves creates a risk of catastrophic failure that can flood occupied spaces and endanger personnel.",
+    "explanation": "Valve pressure ratings must exceed maximum operating pressure by a safety margin. University specs require a minimum 50% safety factor. Installing under-rated valves creates a risk of catastrophic failure that can flood occupied spaces and endanger personnel.",
     "xpReward": 65
   },
   {
@@ -293,11 +293,11 @@
     "type": "whats-wrong",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "High-Rise Office Lavatory Rough-In (SACC Level 31)",
+    "title": "High-Rise Office Lavatory Rough-In (high-rise office Level 31)",
     "components": [
       { "id": 1, "name": "Non-residential lavatory faucet rated at 0.5 GPM @ 60 PSI", "correct": true },
       { "id": 2, "name": "Water closet rated at 1.28 gallons per flush (ASME A112.19.2)", "correct": true },
-      { "id": 3, "name": "Type M copper supply piping above floor", "correct": false, "violation": "SACC specifications require Type L copper for above-floor domestic water piping. Type M has thinner walls and is not rated for the higher pressures found in high-rise buildings. Type K is required for underground installations.", "codeReference": "CPC 604.1 / SACC Plumbing Specification" },
+      { "id": 3, "name": "Type M copper supply piping above floor", "correct": false, "violation": "high-rise office specifications require Type L copper for above-floor domestic water piping. Type M has thinner walls and is not rated for the higher pressures found in high-rise buildings. Type K is required for underground installations.", "codeReference": "CPC 604.1 / high-rise office Plumbing Specification" },
       { "id": 4, "name": "P-trap with proper trap arm to vent", "correct": true },
       { "id": 5, "name": "Cast iron soil pipe with Husky 4000 no-hub couplings", "correct": true },
       { "id": 6, "name": "Waste pipe at 2% slope for 4-inch line", "correct": false, "violation": "A 4-inch waste pipe requires a minimum slope of 1% (1/8 inch per foot), not 2%. The 2% slope is the requirement for 2-inch pipe. Over-sloping a 4-inch pipe can cause liquids to outrun solids, leaving debris behind in the pipe.", "codeReference": "CPC 708.0 / IPC 704.1" },
@@ -311,13 +311,13 @@
     "type": "whats-wrong",
     "trade": "plumbing",
     "difficulty": 1,
-    "title": "Office Breakroom Sink Installation (SACC Level 30)",
+    "title": "Office Breakroom Sink Installation (high-rise office Level 30)",
     "components": [
       { "id": 1, "name": "Kohler K-3822 pantry sink properly mounted", "correct": true },
       { "id": 2, "name": "Everpure 4FC5 water filtration system connected", "correct": true },
       { "id": 3, "name": "Kitchen faucet set to 2.2 GPM as default flow rate", "correct": false, "violation": "Per CPC 2022, kitchen faucets must default to 1.8 GPM maximum. The temporary increase to 2.2 GPM is permitted only for pot-filling or similar tasks and must require manual activation. The default setting must be 1.8 GPM or less.", "codeReference": "CPC 402.0 / California Green Building Standards" },
       { "id": 4, "name": "1-1/2\" P-trap on sink drain", "correct": true },
-      { "id": 5, "name": "Pipe sleeve through masonry wall using 20 gauge sheet metal", "correct": false, "violation": "Pipe sleeves through masonry walls require Schedule 40 galvanized steel pipe. The 20 gauge sheet metal sleeves are only permitted through framed (stud) partitions. Masonry penetrations need the structural rigidity of Schedule 40 steel.", "codeReference": "SACC Plumbing Specification" },
+      { "id": 5, "name": "Pipe sleeve through masonry wall using 20 gauge sheet metal", "correct": false, "violation": "Pipe sleeves through masonry walls require Schedule 40 galvanized steel pipe. The 20 gauge sheet metal sleeves are only permitted through framed (stud) partitions. Masonry penetrations need the structural rigidity of Schedule 40 steel.", "codeReference": "high-rise office Plumbing Specification" },
       { "id": 6, "name": "Supply valves with proper shutoff access", "correct": true }
     ],
     "explanation": "Commercial breakroom plumbing in California must comply with CPC 2022 water conservation requirements. Kitchen faucets must default to 1.8 GPM, and pipe sleeves must match the wall construction type — Schedule 40 galvanized for masonry, 20 gauge sheet metal for framed walls.",
@@ -328,13 +328,13 @@
     "type": "whats-wrong",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "Water Heater Room — Leak Detection (SACC Level 32)",
+    "title": "Water Heater Room — Leak Detection (high-rise office Level 32)",
     "components": [
       { "id": 1, "name": "Commercial water heater with T&P relief valve", "correct": true },
       { "id": 2, "name": "Solenoid valve on supply line with leak detector pad", "correct": true },
-      { "id": 3, "name": "Pipe penetration through breakroom wall sealed with silicone caulk only", "correct": false, "violation": "Kitchen and breakroom pipe penetrations require Link-Seal Model OS-316 modular seals. Silicone caulk alone does not provide the code-required waterproof and gastight seal at penetrations. Link-Seals provide a mechanical compression seal that remains serviceable and can accommodate pipe movement.", "codeReference": "SACC Plumbing Specification" },
+      { "id": 3, "name": "Pipe penetration through breakroom wall sealed with silicone caulk only", "correct": false, "violation": "Kitchen and breakroom pipe penetrations require Link-Seal Model OS-316 modular seals. Silicone caulk alone does not provide the code-required waterproof and gastight seal at penetrations. Link-Seals provide a mechanical compression seal that remains serviceable and can accommodate pipe movement.", "codeReference": "high-rise office Plumbing Specification" },
       { "id": 4, "name": "Expansion tank on cold water supply", "correct": true },
-      { "id": 5, "name": "Annular space between pipe and sleeve measures 3/4 inch", "correct": false, "violation": "The maximum annular space between the pipe and the sleeve is 1/2 inch per specification. A 3/4-inch gap is too large to properly firestop and seal. The tighter tolerance ensures the firestopping material (mineral wool plus non-hardening compound) can effectively fill the annular space.", "codeReference": "SACC Plumbing Specification" },
+      { "id": 5, "name": "Annular space between pipe and sleeve measures 3/4 inch", "correct": false, "violation": "The maximum annular space between the pipe and the sleeve is 1/2 inch per specification. A 3/4-inch gap is too large to properly firestop and seal. The tighter tolerance ensures the firestopping material (mineral wool plus non-hardening compound) can effectively fill the annular space.", "codeReference": "high-rise office Plumbing Specification" },
       { "id": 6, "name": "Seismic strapping on water heater per CBC", "correct": true },
       { "id": 7, "name": "Firestopping with mineral wool and Duxseal at rated penetrations", "correct": true }
     ],
@@ -346,16 +346,16 @@
     "type": "whats-wrong",
     "trade": "plumbing",
     "difficulty": 2,
-    "title": "CRAC Unit Condensate Drain (SACC Level 31)",
+    "title": "CRAC Unit Condensate Drain (high-rise office Level 31)",
     "components": [
       { "id": 1, "name": "CRAC unit condensate collected in drain pan", "correct": true },
       { "id": 2, "name": "3/4-inch condensate drain (CD) piped down from unit", "correct": true },
-      { "id": 3, "name": "Condensate drain connected directly to sanitary sewer with no air gap", "correct": false, "violation": "Condensate drains must discharge through an indirect waste connection. The SACC spec requires the condensate to spill to a lavatory tailpiece, providing a visible air gap. A direct connection to the sanitary system could allow sewer gases to back up into the CRAC unit and the server room.", "codeReference": "CPC 814.0 / SACC Mechanical Specification" },
+      { "id": 3, "name": "Condensate drain connected directly to sanitary sewer with no air gap", "correct": false, "violation": "Condensate drains must discharge through an indirect waste connection. The high-rise office spec requires the condensate to spill to a lavatory tailpiece, providing a visible air gap. A direct connection to the sanitary system could allow sewer gases to back up into the CRAC unit and the server room.", "codeReference": "CPC 814.0 / high-rise office Mechanical Specification" },
       { "id": 4, "name": "Condensate piping properly insulated to prevent sweating", "correct": true },
       { "id": 5, "name": "Trap primer connection on floor drain near CRAC", "correct": true },
-      { "id": 6, "name": "Urinal in adjacent restroom rated at 0.5 gallons per flush", "correct": false, "violation": "SACC specifications call for 0.125 gallon per flush urinals (pint-flush). A 0.5 GPF urinal uses four times the water required and does not meet California water conservation requirements or the project's LEED enhanced commissioning targets.", "codeReference": "CPC 402.0 / ASME A112.19.2" }
+      { "id": 6, "name": "Urinal in adjacent restroom rated at 0.5 gallons per flush", "correct": false, "violation": "high-rise office specifications call for 0.125 gallon per flush urinals (pint-flush). A 0.5 GPF urinal uses four times the water required and does not meet California water conservation requirements or the project's LEED enhanced commissioning targets.", "codeReference": "CPC 402.0 / ASME A112.19.2" }
     ],
-    "explanation": "CRAC unit condensate must be handled as indirect waste — never directly connected to the sewer. The SACC project specifies spilling condensate to a lavatory tailpiece for visibility and air gap protection. Ultra-low-flow fixtures (0.125 GPF urinals) are specified for LEED compliance.",
+    "explanation": "CRAC unit condensate must be handled as indirect waste — never directly connected to the sewer. The high-rise commercial office specifies spilling condensate to a lavatory tailpiece for visibility and air gap protection. Ultra-low-flow fixtures (0.125 GPF urinals) are specified for LEED compliance.",
     "xpReward": 65
   },
   {
@@ -363,13 +363,13 @@
     "type": "whats-wrong",
     "trade": "plumbing",
     "difficulty": 3,
-    "title": "High-Rise Firestopping and Penetration Seals (SACC Levels 30-32)",
+    "title": "High-Rise Firestopping and Penetration Seals (high-rise office Levels 30-32)",
     "components": [
       { "id": 1, "name": "Cast iron soil pipe through rated floor assembly with Husky 4000 couplings", "correct": true },
       { "id": 2, "name": "Firestopping with mineral wool packing and Duxseal non-hardening compound", "correct": true },
       { "id": 3, "name": "Schedule 40 galvanized steel sleeve through masonry core wall", "correct": true },
-      { "id": 4, "name": "Type K copper used for above-floor domestic water riser between floors", "correct": false, "violation": "Type K copper is specified for underground installations only. Above-floor risers must use Type L copper per SACC specifications. Type K is heavier and more expensive than necessary for above-ground service. Using Type K above floor wastes material and budget without adding any performance benefit in an above-ground application.", "codeReference": "CPC 604.1 / SACC Plumbing Specification" },
-      { "id": 5, "name": "Link-Seal OS-316 at breakroom penetration with 5/8-inch annular space", "correct": false, "violation": "The annular space between the pipe and sleeve must not exceed 1/2 inch. At 5/8 inch, the gap is too large for the Link-Seal to properly compress and seal. The sleeve must be resized or the pipe centered within the existing sleeve to achieve the maximum 1/2-inch annular space.", "codeReference": "SACC Plumbing Specification" },
+      { "id": 4, "name": "Type K copper used for above-floor domestic water riser between floors", "correct": false, "violation": "Type K copper is specified for underground installations only. Above-floor risers must use Type L copper per high-rise office specifications. Type K is heavier and more expensive than necessary for above-ground service. Using Type K above floor wastes material and budget without adding any performance benefit in an above-ground application.", "codeReference": "CPC 604.1 / high-rise office Plumbing Specification" },
+      { "id": 5, "name": "Link-Seal OS-316 at breakroom penetration with 5/8-inch annular space", "correct": false, "violation": "The annular space between the pipe and sleeve must not exceed 1/2 inch. At 5/8 inch, the gap is too large for the Link-Seal to properly compress and seal. The sleeve must be resized or the pipe centered within the existing sleeve to achieve the maximum 1/2-inch annular space.", "codeReference": "high-rise office Plumbing Specification" },
       { "id": 6, "name": "Water hammer arresters installed per J.R. Smith Fig. 5005 at each fixture group", "correct": true },
       { "id": 7, "name": "Trap primers installed on all floor drains per CPC", "correct": true }
     ],

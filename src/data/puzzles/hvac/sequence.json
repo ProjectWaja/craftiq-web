@@ -306,8 +306,8 @@
     "type": "sequence",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC IDF Room CRAC Unit Startup",
-    "description": "Order the steps for starting up a Liebert MM40C CRAC unit in an IDF room on the SACC high-rise office project.",
+    "title": "high-rise office IDF Room CRAC Unit Startup",
+    "description": "Order the steps for starting up a Liebert MM40C CRAC unit in an IDF room on the high-rise commercial office project.",
     "steps": [
       { "id": 1, "text": "Verify spring-neoprene isolation mounts are properly installed with 2\" static deflection", "order": 1 },
       { "id": 2, "text": "Open chilled water isolation valves and verify flow through the CRAC coil", "order": 2 },
@@ -326,8 +326,8 @@
     "type": "sequence",
     "trade": "hvac",
     "difficulty": 1,
-    "title": "SACC Flex Duct Connection Procedure",
-    "description": "Order the steps for making a flex duct connection at a branch takeoff on the SACC commercial office TI project.",
+    "title": "high-rise office Flex Duct Connection Procedure",
+    "description": "Order the steps for making a flex duct connection at a branch takeoff on the high-rise commercial office TI project.",
     "steps": [
       { "id": 1, "text": "Verify flex duct run length will not exceed 5-foot maximum", "order": 1 },
       { "id": 2, "text": "Pull flex duct inner liner over the sheet metal collar", "order": 2 },
@@ -337,7 +337,7 @@
       { "id": 6, "text": "Secure outer jacket with a second SS worm-drive clamp", "order": 6 },
       { "id": 7, "text": "Verify flex duct is fully extended — no compression or kinks", "order": 7 }
     ],
-    "explanation": "The SACC specification is strict about flex duct connections: SS worm clamps (not zip ties or duct tape) and UL mastic are mandatory. The inner liner must be clamped and sealed before the outer jacket is pulled over. Measuring the run length first prevents wasted work — if it exceeds 5 feet, rigid duct must be used instead.",
+    "explanation": "The high-rise office specification is strict about flex duct connections: SS worm clamps (not zip ties or duct tape) and UL mastic are mandatory. The inner liner must be clamped and sealed before the outer jacket is pulled over. Measuring the run length first prevents wasted work — if it exceeds 5 feet, rigid duct must be used instead.",
     "xpReward": 40
   },
   {
@@ -345,8 +345,8 @@
     "type": "sequence",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Exhaust Fan Commissioning",
-    "description": "Order the steps for commissioning a Greenheck CSP-A1050-VG exhaust fan system on the SACC high-rise project.",
+    "title": "high-rise office Exhaust Fan Commissioning",
+    "description": "Order the steps for commissioning a Greenheck CSP-A1050-VG exhaust fan system on the high-rise commercial project.",
     "steps": [
       { "id": 1, "text": "Verify all exhaust branch ducts have backdraft dampers installed", "order": 1 },
       { "id": 2, "text": "Confirm fire dampers are installed and functional at all rated wall penetrations", "order": 2 },
@@ -357,7 +357,7 @@
       { "id": 7, "text": "Balance individual branch ducts to design CFM at each grille", "order": 7 },
       { "id": 8, "text": "Document all readings and submit commissioning report to engineer", "order": 8 }
     ],
-    "explanation": "Exhaust fan commissioning on the SACC project follows a verification-then-performance approach. All accessories (backdraft dampers, fire dampers, timeclock, seismic mounts) must be confirmed before the fan is started. Starting the fan without backdraft dampers means air can reverse-flow through inactive branches. Timeclock control is verified before TAB because the fan must run during business hours regardless of zone occupancy.",
+    "explanation": "Exhaust fan commissioning on the high-rise commercial office follows a verification-then-performance approach. All accessories (backdraft dampers, fire dampers, timeclock, seismic mounts) must be confirmed before the fan is started. Starting the fan without backdraft dampers means air can reverse-flow through inactive branches. Timeclock control is verified before TAB because the fan must run during business hours regardless of zone occupancy.",
     "xpReward": 60
   },
   {
@@ -365,8 +365,8 @@
     "type": "sequence",
     "trade": "hvac",
     "difficulty": 2,
-    "title": "SACC Turning Vane Installation in Rectangular Duct",
-    "description": "Order the steps for installing double-thickness turning vanes in a rectangular duct elbow on the SACC high-rise TI project.",
+    "title": "high-rise office Turning Vane Installation in Rectangular Duct",
+    "description": "Order the steps for installing double-thickness turning vanes in a rectangular duct elbow on the high-rise commercial TI project.",
     "steps": [
       { "id": 1, "text": "Verify duct elbow dimensions match the approved shop drawing", "order": 1 },
       { "id": 2, "text": "Select turning vanes of minimum 20-gauge galvanized steel, double thickness", "order": 2 },
@@ -376,7 +376,7 @@
       { "id": 6, "text": "Secure vane blades into runners at proper spacing for uniform airflow", "order": 6 },
       { "id": 7, "text": "Seal the duct elbow joints with mastic and verify no air leakage", "order": 7 }
     ],
-    "explanation": "Turning vane installation on the SACC project requires double-thickness vanes at 20-gauge minimum with a 48-inch maximum unsupported runner span. Checking the span before installing vane blades is critical — once the blades are in place, adding intermediate supports is much more difficult. These specs are stricter than standard SMACNA because the SACC project is in a seismic zone where vane deflection under dynamic loads is a concern.",
+    "explanation": "Turning vane installation on the high-rise commercial office requires double-thickness vanes at 20-gauge minimum with a 48-inch maximum unsupported runner span. Checking the span before installing vane blades is critical — once the blades are in place, adding intermediate supports is much more difficult. These specs are stricter than standard SMACNA because the high-rise commercial office is in a seismic zone where vane deflection under dynamic loads is a concern.",
     "xpReward": 55
   },
   {
@@ -384,8 +384,8 @@
     "type": "sequence",
     "trade": "hvac",
     "difficulty": 3,
-    "title": "SACC MDF Room CRAC Seismic Installation",
-    "description": "Order the steps for installing a Liebert MM92C CRAC unit with full seismic restraint in the MDF room of the SACC high-rise (Los Angeles, Seismic Design Category D).",
+    "title": "high-rise office MDF Room CRAC Seismic Installation",
+    "description": "Order the steps for installing a Liebert MM92C CRAC unit with full seismic restraint in the MDF room of the high-rise commercial (Los Angeles, Seismic Design Category D).",
     "steps": [
       { "id": 1, "text": "Review structural engineer's approved seismic anchorage details and verify floor capacity", "order": 1 },
       { "id": 2, "text": "Install OSHPD-approved seismic base frame with spring-neoprene isolation mounts", "order": 2 },

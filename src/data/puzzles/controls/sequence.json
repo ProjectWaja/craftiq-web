@@ -357,16 +357,16 @@
     "trade": "controls",
     "difficulty": 1,
     "title": "Transfer Fan Thermostat Installation",
-    "description": "Order the steps for installing and commissioning a wall-mounted thermostat to control a transfer fan in the SACC commercial office TI.",
+    "description": "Order the steps for installing and commissioning a wall-mounted thermostat to control a transfer fan in the high-rise commercial office TI.",
     "steps": [
       { "id": 1, "text": "Mount the thermostat on an interior wall at 4-5 feet height in the served zone", "order": 1 },
       { "id": 2, "text": "Wire the thermostat switch contacts to the transfer fan relay", "order": 2 },
-      { "id": 3, "text": "Set the thermostat setpoint to 80 degrees F per the SACC specification", "order": 3 },
+      { "id": 3, "text": "Set the thermostat setpoint to 80 degrees F per the high-rise office specification", "order": 3 },
       { "id": 4, "text": "Power on the circuit and verify the thermostat display is active", "order": 4 },
       { "id": 5, "text": "Simulate a temperature rise above 80 degrees F and confirm the transfer fan starts", "order": 5 },
       { "id": 6, "text": "Verify the fan stops when temperature drops below the setpoint minus deadband", "order": 6 }
     ],
-    "explanation": "Transfer fan thermostat installation on the SACC project follows a mount-wire-set-verify sequence. The 80 degrees F setpoint is specified to prevent the fan from running continuously while still activating before the space becomes uncomfortably warm. Testing both the on and off functions confirms the deadband prevents short-cycling.",
+    "explanation": "Transfer fan thermostat installation on the high-rise commercial office follows a mount-wire-set-verify sequence. The 80 degrees F setpoint is specified to prevent the fan from running continuously while still activating before the space becomes uncomfortably warm. Testing both the on and off functions confirms the deadband prevents short-cycling.",
     "xpReward": 40
   },
   {
@@ -375,7 +375,7 @@
     "trade": "controls",
     "difficulty": 2,
     "title": "Motorized Outside Air Damper Interlock Commissioning",
-    "description": "Order the steps for commissioning the motorized outside air damper interlock with the evaporator fan on the SACC project.",
+    "description": "Order the steps for commissioning the motorized outside air damper interlock with the evaporator fan on the high-rise commercial office.",
     "steps": [
       { "id": 1, "text": "Verify the motorized damper actuator is powered and wired to the DDC controller output", "order": 1 },
       { "id": 2, "text": "Confirm the interlock wiring between the damper end switch and the fan starter circuit", "order": 2 },
@@ -386,7 +386,7 @@
       { "id": 7, "text": "Verify the fan cannot start when the damper is in the closed position", "order": 7 },
       { "id": 8, "text": "Document the interlock test results and damper open/close times", "order": 8 }
     ],
-    "explanation": "The SACC specification requires the outside air motorized damper to be interlocked with the evaporator fan. The damper must be confirmed fully open before the fan can start, and the fan must shut down when the damper closes. Testing the spring-return confirms fail-safe operation on power loss. This interlock prevents operating the fan against a closed damper and protects against uncontrolled outdoor air infiltration per IMC Section 403.2.",
+    "explanation": "The high-rise office specification requires the outside air motorized damper to be interlocked with the evaporator fan. The damper must be confirmed fully open before the fan can start, and the fan must shut down when the damper closes. Testing the spring-return confirms fail-safe operation on power loss. This interlock prevents operating the fan against a closed damper and protects against uncontrolled outdoor air infiltration per IMC Section 403.2.",
     "xpReward": 65
   },
   {
@@ -395,7 +395,7 @@
     "trade": "controls",
     "difficulty": 2,
     "title": "Firestat and Smoke Detector Functional Testing",
-    "description": "Order the steps for performing a functional test of the firestat and smoke detector safety interlocks on the SACC high-rise TI HVAC system.",
+    "description": "Order the steps for performing a functional test of the firestat and smoke detector safety interlocks on the high-rise commercial TI HVAC system.",
     "steps": [
       { "id": 1, "text": "Notify building management and fire alarm monitoring company that testing will occur", "order": 1 },
       { "id": 2, "text": "Place the fire alarm panel zone for Levels 30-32 in test mode", "order": 2 },
@@ -406,7 +406,7 @@
       { "id": 7, "text": "Reset all devices and verify the system returns to normal operation", "order": 7 },
       { "id": 8, "text": "Remove the fire alarm panel from test mode and confirm with monitoring company", "order": 8 }
     ],
-    "explanation": "Firestat and smoke detector testing on the SACC project must follow a strict protocol. The fire alarm panel must be in test mode to prevent false dispatch of the fire department. The firestat activates at return air temperatures exceeding 125 degrees F, while the smoke detector triggers both system shutdown and audio/visual alarm at the control display panel. Both must operate through hardwired interlocks per NFPA 90A, independent of BAS software.",
+    "explanation": "Firestat and smoke detector testing on the high-rise commercial office must follow a strict protocol. The fire alarm panel must be in test mode to prevent false dispatch of the fire department. The firestat activates at return air temperatures exceeding 125 degrees F, while the smoke detector triggers both system shutdown and audio/visual alarm at the control display panel. Both must operate through hardwired interlocks per NFPA 90A, independent of BAS software.",
     "xpReward": 60
   },
   {
@@ -415,7 +415,7 @@
     "trade": "controls",
     "difficulty": 3,
     "title": "Enhanced LEED Commissioning — Controls Verification",
-    "description": "Order the steps for performing enhanced LEED commissioning verification on all building controls systems for the SACC high-rise TI project.",
+    "description": "Order the steps for performing enhanced LEED commissioning verification on all building controls systems for the high-rise commercial TI project.",
     "steps": [
       { "id": 1, "text": "Review the Owner's Project Requirements (OPR) and Basis of Design (BOD) documents", "order": 1 },
       { "id": 2, "text": "Verify all DDC controllers, sensors, and actuators match the controls submittals", "order": 2 },
@@ -427,7 +427,7 @@
       { "id": 8, "text": "Compile the commissioning report documenting all test results, deficiencies, and resolutions", "order": 8 },
       { "id": 9, "text": "Conduct seasonal performance verification 10 months after occupancy using trend data", "order": 9 }
     ],
-    "explanation": "Enhanced LEED commissioning for the SACC project requires the independent commissioning authority to verify all systems — HVAC controls, BTU metering, lighting controls, and motorized shades — meet the OPR and BOD. The process extends beyond initial commissioning to include 10 months of post-occupancy performance verification using trend data per LEED v4 EAc1 and ASHRAE Guideline 0.",
+    "explanation": "Enhanced LEED commissioning for the high-rise commercial office requires the independent commissioning authority to verify all systems — HVAC controls, BTU metering, lighting controls, and motorized shades — meet the OPR and BOD. The process extends beyond initial commissioning to include 10 months of post-occupancy performance verification using trend data per LEED v4 EAc1 and ASHRAE Guideline 0.",
     "xpReward": 95
   }
 ]

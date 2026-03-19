@@ -284,5 +284,90 @@
     ],
     "explanation": "Open-protocol BACnet compliance per ASHRAE 135-2016 is a core UCSB requirement. Both proprietary software licensing and vendor-locked firmware prevent the owner from competitively maintaining their own building systems, which drives up lifecycle costs and reduces operational flexibility.",
     "xpReward": 75
+  },
+  {
+    "id": "ww-ctrl-018",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "CRAC Unit iCOM Controller Setup",
+    "components": [
+      { "id": 1, "name": "iCOM controller installed on CRAC-32-1 for monitoring and control", "correct": true },
+      { "id": 2, "name": "Liebert vNSA network switch installed for lead/lag coordination", "correct": true },
+      { "id": 3, "name": "CRAC-32-1 and CRAC-32-2 both set as lead units simultaneously", "correct": false, "violation": "Redundant CRAC units must have one designated as lead and one as lag. Setting both as lead causes both units to run at full capacity simultaneously, wasting energy and eliminating redundancy protection. The Liebert vNSA switch must coordinate lead/lag sequencing so only one unit operates at a time under normal conditions.", "codeReference": "ASHRAE Guideline 36 — Redundant Equipment Staging" },
+      { "id": 4, "name": "Temperature and humidity sensors connected to iCOM inputs", "correct": true },
+      { "id": 5, "name": "Leak detector at CRAC drip pan connected to iCOM alarm input", "correct": true },
+      { "id": 6, "name": "iCOM controller not connected to base building BMS for remote monitoring", "correct": false, "violation": "The SACC project requires CRAC unit controls to integrate with the base building BMS for centralized monitoring and alarm notification. An isolated iCOM controller prevents the building engineer from seeing CRAC status, alarms, or performance data from the central workstation.", "codeReference": "ASHRAE 135 (BACnet) — BMS Integration Requirements" }
+    ],
+    "explanation": "CRAC unit controls in high-rise commercial TI spaces require proper lead/lag sequencing via the Liebert vNSA network switch and integration with the base building BMS. The iCOM controller manages local CRAC operation, but remote monitoring through BACnet integration is essential for facilities management per ASHRAE 135.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-ctrl-019",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Transfer Fan Thermostat Control",
+    "components": [
+      { "id": 1, "name": "Transfer fan installed to move air between zones", "correct": true },
+      { "id": 2, "name": "Wall-mounted thermostat controlling the transfer fan", "correct": true },
+      { "id": 3, "name": "Thermostat setpoint set to 90 degrees F instead of 80 degrees F", "correct": false, "violation": "The SACC specification requires transfer fan thermostats to be set at 80 degrees F (adjustable). A 90-degree setpoint means the fan will not activate until the space is dangerously overheated, defeating the purpose of the transfer fan for comfort cooling. The adjustable setpoint must start at the design value of 80 degrees F.", "codeReference": "SACC Mechanical Specification — Transfer Fan Controls" },
+      { "id": 4, "name": "Thermostat wired to fan relay for on/off control", "correct": true },
+      { "id": 5, "name": "Fan relay powered from correct circuit", "correct": true }
+    ],
+    "explanation": "Transfer fans in commercial office TI spaces are controlled by wall-mounted thermostats set to activate at 80 degrees F per the SACC specification. The setpoint is adjustable to allow tuning, but starting at 90 degrees F provides inadequate cooling response and risks occupant discomfort in high-rise office environments.",
+    "xpReward": 35
+  },
+  {
+    "id": "ww-ctrl-020",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Firestat and Smoke Detector Integration",
+    "components": [
+      { "id": 1, "name": "Firestat installed in return air duct set to shutdown at 125 degrees F", "correct": true },
+      { "id": 2, "name": "Smoke detector installed in supply air duct", "correct": true },
+      { "id": 3, "name": "Smoke detector alarm routed only to BAS software with no hardwired shutdown", "correct": false, "violation": "Duct smoke detector shutdown must be hardwired directly to the HVAC equipment disconnect, independent of BAS software. A software-only alarm response means the system continues running during a smoke event if the BAS fails or the alarm is dismissed. NFPA 90A requires hardwired shutdown with audio/visual alarm at the control display panel.", "codeReference": "NFPA 90A / NEC Article 725.3" },
+      { "id": 4, "name": "Firestat hardwired to system disconnect for automatic shutdown", "correct": true },
+      { "id": 5, "name": "Audio/visual alarm indicator missing from control display panel", "correct": false, "violation": "The SACC specification requires smoke detector activation to trigger an audio/visual alarm at the control display panel in addition to system shutdown. Without the alarm indicator, building personnel may not know a smoke event occurred, delaying emergency response.", "codeReference": "NFPA 90A — Section 6.4 / SACC Mechanical Specification" },
+      { "id": 6, "name": "Firestat and smoke detector test ports accessible for maintenance", "correct": true }
+    ],
+    "explanation": "The SACC high-rise project requires both firestat (>125 degrees F return air) and smoke detector integration with hardwired shutdown and audio/visual alarm at the control display panel. Life-safety functions must never rely solely on BAS software per NFPA 90A. The firestat provides thermal protection while the smoke detector provides particulate detection — both are required for comprehensive protection.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-ctrl-021",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Motorized Outside Air Damper Interlock",
+    "components": [
+      { "id": 1, "name": "Motorized damper installed on outside air intake", "correct": true },
+      { "id": 2, "name": "Damper actuator with spring-return to closed position", "correct": true },
+      { "id": 3, "name": "Motorized damper operates independently with no interlock to evaporator fan", "correct": false, "violation": "The SACC specification requires the outside air motorized damper to be interlocked with the evaporator fan operation. The damper must open only when the fan is running and close when the fan stops. Without this interlock, the damper may remain open when the fan is off, allowing unconditioned outdoor air, rain, or insects into the space and potentially causing freeze damage.", "codeReference": "IMC Section 403.2 / SACC Mechanical Specification" },
+      { "id": 4, "name": "Damper sealed with gaskets for low-leakage rating", "correct": true },
+      { "id": 5, "name": "Damper position feedback wired to BMS for monitoring", "correct": true },
+      { "id": 6, "name": "No end switch to confirm damper fully open before fan starts", "correct": false, "violation": "An end switch or position feedback must confirm the motorized outside air damper is fully open before the evaporator fan is allowed to start. Starting the fan with the damper closed creates high negative pressure in the ductwork and starves the unit of ventilation air, potentially damaging ductwork and causing inadequate outdoor air delivery.", "codeReference": "ASHRAE Guideline 36 — Damper/Fan Interlocks" }
+    ],
+    "explanation": "The SACC project requires motorized outside air dampers to be interlocked with evaporator fan operation. The damper must open before the fan starts and close when the fan stops. This interlock protects the space from uncontrolled outdoor air infiltration and prevents ductwork damage from operating against a closed damper.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-ctrl-022",
+    "type": "whats-wrong",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "LEED Commissioning Controls Verification",
+    "components": [
+      { "id": 1, "name": "DDC controllers programmed with sequences of operation", "correct": true },
+      { "id": 2, "name": "BTU meters installed per base building standard and tied to BMS", "correct": true },
+      { "id": 3, "name": "Title 24 lighting controls installed with occupancy sensors", "correct": true },
+      { "id": 4, "name": "No independent commissioning agent verifying system performance", "correct": false, "violation": "Enhanced LEED commissioning requires an independent commissioning authority (CxA) — not the installing contractor — to verify all systems meet design criteria. The CxA must review submittals, witness testing, and document that systems perform per the Owner's Project Requirements (OPR). Without independent verification, LEED commissioning credits cannot be claimed.", "codeReference": "LEED v4 EAp1 / ASHRAE Guideline 0-2019" },
+      { "id": 5, "name": "VAV system operating with outdoor air reset enabled", "correct": true },
+      { "id": 6, "name": "Trend data not configured for post-occupancy performance verification", "correct": false, "violation": "Enhanced LEED commissioning requires post-occupancy trend data collection to verify systems continue to operate as designed after the building is occupied. Without trend data, there is no evidence that control sequences are performing correctly under actual load conditions. A minimum of 10 months of seasonal performance data is required.", "codeReference": "LEED v4 EAc1 — Enhanced Commissioning / ASHRAE Guideline 36" },
+      { "id": 7, "name": "Motorized shades integrated with BMS for daylight harvesting", "correct": true }
+    ],
+    "explanation": "The SACC project requires enhanced LEED commissioning, which goes beyond standard commissioning by requiring an independent commissioning authority and post-occupancy performance verification. BTU meters tied to the BMS, lighting controls per Title 24, motorized shades, and trend data collection are all part of the integrated systems that must be verified to meet the Owner's Project Requirements per ASHRAE Guideline 0.",
+    "xpReward": 90
   }
 ]

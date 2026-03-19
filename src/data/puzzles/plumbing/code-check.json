@@ -334,5 +334,65 @@
     "codeReference": "UCSB Equipment Schedule / ASME",
     "explanation": "The expansion tank fill pressure of 30 PSIG matches the equipment schedule specification. The pre-charge pressure must be set above the system static pressure (25 PSIG at tank elevation) to prevent the tank diaphragm from being fully compressed by static head before the system heats up. At 30 PSIG, the tank provides 5 PSI above static to ensure proper expansion volume is available when the system heats from fill temperature to operating temperature. The tank absorbs the volume increase as water expands, preventing the pressure relief valve from opening during normal operation.",
     "xpReward": 45
+  },
+  {
+    "id": "cc-plmb-029",
+    "type": "code-check",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "SACC Lavatory Flow Rate",
+    "scenario": "On the SACC high-rise office TI (Level 31), a plumber installs non-residential lavatory faucets rated at 0.5 GPM at 60 PSI in the tenant restrooms. The faucets are ASME A112.18.1 listed.",
+    "isUpToCode": true,
+    "codeReference": "CPC 402.0 / ASME A112.18.1",
+    "explanation": "This installation is correct. CPC 2022 requires non-residential lavatory faucets to have a maximum flow rate of 0.5 GPM at 60 PSI. The SACC specification matches this requirement. The 0.5 GPM rate is adequate for handwashing and meets California water conservation standards. The ASME A112.18.1 listing confirms the faucets are tested and certified to the applicable standard.",
+    "xpReward": 35
+  },
+  {
+    "id": "cc-plmb-030",
+    "type": "code-check",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "SACC Urinal Flush Volume",
+    "scenario": "A plumber installs urinals rated at 0.5 gallons per flush on Level 30 of the SACC high-rise office TI. The SACC specifications call for 0.125 gallon per flush urinals per ASME A112.19.2.",
+    "isUpToCode": false,
+    "codeReference": "CPC 402.0 / ASME A112.19.2 / SACC Plumbing Specification",
+    "explanation": "The installed urinals exceed the specified flush volume by 4x. SACC requires 0.125 GPF (pint-flush) urinals, not 0.5 GPF. While 0.5 GPF meets the CPC 2022 minimum standard, the project specification is more stringent for LEED water use reduction credits. The contractor must install the 0.125 GPF urinals specified. Using 0.5 GPF urinals would cause the project to fail its LEED water budget calculations and could jeopardize the entire LEED certification.",
+    "xpReward": 40
+  },
+  {
+    "id": "cc-plmb-031",
+    "type": "code-check",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "SACC Pipe Sleeve Through Masonry — Annular Space",
+    "scenario": "On the SACC high-rise office TI, a plumber installs a 2-inch Type L copper pipe through a Schedule 40 galvanized steel sleeve in a masonry core wall. The annular space between the pipe and sleeve measures 3/4 inch. The SACC specification limits annular space to a maximum of 1/2 inch.",
+    "isUpToCode": false,
+    "codeReference": "SACC Plumbing Specification",
+    "explanation": "The 3/4-inch annular space exceeds the SACC maximum of 1/2 inch. The 1/2-inch limit ensures firestopping materials (mineral wool and Duxseal) can effectively fill and seal the gap. A 3/4-inch annular space is too large for reliable firestopping — the mineral wool may not compress sufficiently to fill the gap, and the Duxseal may sag or pull away from the pipe surface. The sleeve must be replaced with a smaller diameter, or a larger pipe (if permitted) must be used to bring the annular space within specification.",
+    "xpReward": 55
+  },
+  {
+    "id": "cc-plmb-032",
+    "type": "code-check",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "SACC CRAC Condensate Direct Connection",
+    "scenario": "On the SACC high-rise office TI (Level 31), a plumber connects the CRAC unit's 3/4-inch condensate drain directly into the sanitary sewer system through a P-trap, bypassing the lavatory tailpiece connection specified in the SACC documents. The plumber argues the P-trap provides adequate protection against sewer gas.",
+    "isUpToCode": false,
+    "codeReference": "CPC 814.0 / SACC Mechanical Specification",
+    "explanation": "Direct connection to the sanitary sewer is not permitted for condensate drains, regardless of whether a P-trap is installed. CPC 814.0 requires condensate to discharge through an indirect waste connection. The SACC specification specifically requires the CRAC condensate to spill to a lavatory tailpiece, which provides a visible air gap and ensures the discharge is observable. A direct connection would hide any condensate flow problems and could allow sewer gas to reach the server room if the trap seal is lost. The visible spill point also serves as a diagnostic indicator — if the lavatory is constantly wet, maintenance knows the CRAC is producing excessive condensate.",
+    "xpReward": 65
+  },
+  {
+    "id": "cc-plmb-033",
+    "type": "code-check",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "SACC High-Rise Firestopping Material Substitution",
+    "scenario": "On the SACC high-rise office TI, a firestopping subcontractor substitutes intumescent firestop caulk for the specified mineral wool plus Duxseal non-hardening compound at cast iron pipe penetrations through the 2-hour rated floor assembly. The subcontractor claims the intumescent caulk is UL listed and provides equal or better fire resistance.",
+    "isUpToCode": false,
+    "codeReference": "SACC Plumbing Specification / UL Firestop Systems",
+    "explanation": "Material substitutions in firestopping require formal submittal and approval, not field decisions. Even though intumescent caulk may be UL listed, it must be listed as part of the specific UL System that matches the actual construction assembly (cast iron pipe, sleeve type, floor rating, annular space). The SACC specification requires mineral wool plus Duxseal for specific reasons: Duxseal's non-hardening property accommodates cast iron pipe thermal movement and vibration over the building's life. Intumescent caulk hardens and can crack, breaking the seal. Additionally, changing firestopping materials without engineering review and AHJ approval voids the UL listing for that penetration. Every firestop in a high-rise is tracked for LEED enhanced commissioning — unauthorized substitutions create liability and certification issues.",
+    "xpReward": 85
   }
 ]

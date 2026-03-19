@@ -310,5 +310,65 @@
     "codeReference": "UCSB Equipment Schedule / ASME BPVC",
     "explanation": "The pressure relief valve is set 10 PSI above the boiler's rated working pressure. Per ASME Boiler and Pressure Vessel Code, the relief valve must be set at or below the maximum allowable working pressure (MAWP) of the vessel — which is 150 PSIG for this Fulton EZE-480. Setting the relief valve at 160 PSIG means the boiler could operate above its rated pressure before the valve opens, risking vessel failure. The relief valve must be reset to 150 PSIG or lower. The boiler operates at EWT 100°F / LWT 120°F with only 2.5 ft WG pressure drop.",
     "xpReward": 50
+  },
+  {
+    "id": "cc-elec-027",
+    "type": "code-check",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: Branch Circuit Voltage Drop",
+    "scenario": "On Level 30 of the SACC high-rise office TI at 555 Flower Street, a 20A, 120V branch circuit from panel L30B runs 85 feet to workstation receptacles at the far end of the floor. Using 12 AWG copper conductors (1.93 ohms/1000ft), the voltage drop calculates to 2.7%. The SACC single-line diagram shows VD% calculations with a maximum of 3% for branch circuits.",
+    "isUpToCode": true,
+    "codeReference": "NEC 210.19(A) Informational Note / SACC Single Line Diagram",
+    "explanation": "At 2.7% voltage drop, this branch circuit is within the NEC-recommended 3% maximum for branch circuits per NEC 210.19(A) Informational Note. The SACC project enforces this recommendation as a requirement, with voltage drop calculations (VD%) noted on the single-line diagram. Calculation: Vd = 2 x 20A x 1.93 x 85 / 1000 = 6.56V; 6.56V / 120V x 100 = 2.7%. For the total feeder-plus-branch voltage drop to remain under 5%, the feeder from the tenant transformer to panel L30B must contribute no more than 2.3%.",
+    "xpReward": 40
+  },
+  {
+    "id": "cc-elec-028",
+    "type": "code-check",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: Temporary Power GFCI Protection",
+    "scenario": "During construction on Level 31 of the SACC high-rise office TI, the electrical contractor has set up temporary 120V, 20A receptacle outlets for power tools. All temporary receptacles are protected by GFCI devices. The temporary stringer lamps are connected to breakers that are clearly labeled 'TEMPORARY — REMOVE AT COMPLETION' per SACC specification.",
+    "isUpToCode": true,
+    "codeReference": "NEC 590.6(A) / SACC Specification",
+    "explanation": "This temporary power installation is code-compliant. NEC 590.6(A) requires GFCI protection for all 125V, 15A and 20A receptacle outlets used for temporary power during construction. The SACC specification additionally requires clear labeling of all temporary panels and breakers. Properly labeled temporary power ensures systematic removal at project completion and prevents confusion with permanent circuits during final inspection. The contractor must remove all temporary stringers, lamps, outlets, breakers, and fusing at completion per SACC specifications.",
+    "xpReward": 35
+  },
+  {
+    "id": "cc-elec-029",
+    "type": "code-check",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Series-Rated Breaker in Existing Panel",
+    "scenario": "On Level 32 of the SACC high-rise office TI, an electrician installs a series-rated combination in a re-utilized existing panel. The branch circuit breaker has a 10kAIC interrupting rating, but the available fault current at the panel is 22kAIC. The electrician relies on the upstream main breaker to limit the fault current to the branch breaker's rating.",
+    "isUpToCode": false,
+    "codeReference": "NEC 240.86 / SACC Specification",
+    "explanation": "The SACC project specification explicitly prohibits series rating of overcurrent protective devices. All existing panels being re-utilized must use fully rated breakers — meaning each individual breaker must have an interrupting rating equal to or exceeding the available fault current at the panel (22kAIC in this case). Series rating is prohibited because in a multi-tenant high-rise, a fault that exceeds a branch breaker's interrupting rating could cause catastrophic breaker failure, arc flash, and damage to adjacent tenants' electrical systems. The branch breaker must be replaced with one rated at minimum 22kAIC.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-elec-030",
+    "type": "code-check",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Service Interruption Notice",
+    "scenario": "The electrical contractor on the SACC high-rise office TI needs to de-energize an existing riser to tie in new tenant transformer feeds on Level 30. The contractor submits a service interruption request to building management on Monday for a planned outage on Wednesday — 2 business days of advance notice. The work is scheduled for a Saturday to avoid disturbing other tenants.",
+    "isUpToCode": false,
+    "codeReference": "SACC General Conditions / Premium Time Work Requirements",
+    "explanation": "The SACC project specification requires a minimum 5-day notice for any service interruptions to existing tenants. While scheduling the work on Saturday (premium time) to avoid tenant disturbance is correct, the 2-day notice is 3 days short of the minimum. In a multi-tenant high-rise at 555 Flower Street, existing tenants may have critical systems (servers, security, HVAC) that require orderly shutdown before a power outage. The 5-day notice allows tenants to back up data, arrange for UPS systems, notify their own building occupants, and coordinate with IT staff.",
+    "xpReward": 55
+  },
+  {
+    "id": "cc-elec-031",
+    "type": "code-check",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "SACC Office TI: Title 24 Lighting Controls Compliance",
+    "scenario": "On Level 31 of the SACC high-rise office TI at 555 Flower Street, LA, the lighting design includes LED troffers on 277V circuits with occupancy sensors in all rooms and automatic time-switch scheduling. However, the perimeter offices within 15 feet of the curtain wall windows do not have daylight responsive controls (daylight harvesting). The California Title 24 compliance forms (NRCC-ELC-E and NRCC-LTS-E) have been submitted showing all lighting controls as compliant.",
+    "isUpToCode": false,
+    "codeReference": "California Title 24 Section 130.1 / SACC Specification",
+    "explanation": "This installation fails California Title 24 compliance. Section 130.1(d) requires automatic daylight responsive controls (daylight harvesting) for general lighting in primary sidelit zones — areas within 15 feet of vertical fenestration (windows). The SACC project at 555 Flower Street in Los Angeles must comply with Title 24, and the submitted compliance forms are inaccurate because they claim compliance while daylight harvesting is missing in the perimeter zone. The forms must be corrected, daylight sensors installed, and the lighting controls reprogrammed before final inspection. Filing inaccurate compliance forms can result in project delays and penalties.",
+    "xpReward": 80
   }
 ]

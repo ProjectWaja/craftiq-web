@@ -344,5 +344,93 @@
     ],
     "explanation": "This student housing duct installation has two critical sizing errors: a return air duct undersized by a factor of nearly 5x (10x10 vs. 22x22), and an exhaust riser undersized by a factor of over 25x (6x6 vs. 60x16). Both would create extreme noise, air starvation, and fan failure. Duct sizing must always match the plans — cross-referencing duct dimensions with CFM requirements catches these errors before installation.",
     "xpReward": 65
+  },
+  {
+    "id": "ww-hvac-021",
+    "type": "whats-wrong",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC IDF Room CRAC Unit Setup",
+    "components": [
+      { "id": 1, "name": "Liebert MM40C CRAC unit delivering 1000 CFM", "correct": true },
+      { "id": 2, "name": "CRAC mounted directly on raised floor without vibration isolation", "correct": false, "violation": "CRAC units require minimum 1-inch spring-neoprene vibration isolation mounts with 2-inch static deflection per the SACC specification. Direct mounting transmits compressor vibration through the floor structure, causing noise complaints in the high-rise office below.", "codeReference": "SACC Mechanical Specification / ASHRAE Handbook — HVAC Applications Ch. 48" },
+      { "id": 3, "name": "iCOM controller monitoring unit status", "correct": true },
+      { "id": 4, "name": "Condensate drain with P-trap", "correct": true },
+      { "id": 5, "name": "Supply air discharge into IDF room", "correct": true },
+      { "id": 6, "name": "Return air grille face velocity at 550 FPM", "correct": false, "violation": "Return air grille face velocity exceeds the 400 FPM maximum specified in the SACC project documents. At 550 FPM, the grille generates excessive noise and turbulence in the IDF room, which can interfere with sensitive network equipment cooling patterns.", "codeReference": "SACC Mechanical Specification / SMACNA HVAC Systems Testing, Adjusting and Balancing" }
+    ],
+    "explanation": "IDF room CRAC installations in high-rise commercial offices require attention to vibration isolation and return air velocity limits. The Liebert MM40C at 1000 CFM / 32.2 MBH is sized for the IDF heat load, but improper mounting and excessive grille velocity compromise the installation.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-hvac-022",
+    "type": "whats-wrong",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Office Flex Duct Connection",
+    "components": [
+      { "id": 1, "name": "Rigid sheet metal branch duct from trunk line", "correct": true },
+      { "id": 2, "name": "Flex duct run measuring 7 feet to diffuser", "correct": false, "violation": "Flex duct is limited to a maximum of 5 feet per the SACC specification and NFPA 90A. A 7-foot run exceeds this limit, increases pressure drop, and reduces airflow to the diffuser serving the office space.", "codeReference": "NFPA 90A Section 4.3.10 / SACC Mechanical Specification" },
+      { "id": 3, "name": "Linear diffuser delivering 60 CFM per linear foot", "correct": true },
+      { "id": 4, "name": "Flex duct secured with zip ties at connections", "correct": false, "violation": "The SACC specification requires stainless steel worm-drive clamps and UL-listed mastic at all flex duct connections. Zip ties do not provide adequate compression to prevent air leakage and can loosen over time due to thermal cycling in the plenum.", "codeReference": "SACC Mechanical Specification / SMACNA Duct Construction Standards" },
+      { "id": 5, "name": "Duct hanger supporting 45 lbs of ductwork", "correct": true },
+      { "id": 6, "name": "Balancing damper at branch takeoff", "correct": true }
+    ],
+    "explanation": "The SACC high-rise TI project specifies strict flex duct requirements: 5 ft max length, SS worm clamps, and UL mastic. These are tighter than some residential standards because commercial office HVAC systems operate at higher static pressures where poorly connected flex ducts leak significantly.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-hvac-023",
+    "type": "whats-wrong",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC MDF Room Cooling System",
+    "components": [
+      { "id": 1, "name": "Liebert MM92C CRAC unit delivering 2500 CFM", "correct": true },
+      { "id": 2, "name": "Sensible cooling capacity rated at 62.9 MBH", "correct": true },
+      { "id": 3, "name": "No BTU meter installed on CRAC chilled water circuit", "correct": false, "violation": "The SACC specification requires a BTU meter on each CRAC unit per base building standard, tied to the building management system (BMS). Without a BTU meter, the tenant cannot be accurately billed for cooling energy consumption, and the base building owner has no visibility into the MDF cooling load for capacity planning.", "codeReference": "SACC Base Building Standard / ASHRAE 90.1 Energy Metering" },
+      { "id": 4, "name": "Spring-neoprene isolation mounts with 2\" deflection", "correct": true },
+      { "id": 5, "name": "Firestat set to shut down unit at 135°F return air", "correct": false, "violation": "The SACC specification requires the firestat to shut down the CRAC unit when return air temperature exceeds 125°F, not 135°F. A 135°F setpoint delays shutdown by critical seconds during a fire event, allowing the unit to continue circulating smoke-laden air through the MDF room.", "codeReference": "SACC Mechanical Specification / IMC 606.4" },
+      { "id": 6, "name": "iCOM controller with BMS integration", "correct": true },
+      { "id": 7, "name": "Condensate pump with overflow switch", "correct": true }
+    ],
+    "explanation": "MDF room CRAC installations on the SACC project have specific requirements beyond standard equipment installation. BTU metering is mandatory for tenant billing and base building load tracking. The firestat must be set to 125°F per the spec — even 10°F too high compromises fire safety in a room full of critical IT equipment.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-hvac-024",
+    "type": "whats-wrong",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Duct Hanger and Turning Vane Installation",
+    "components": [
+      { "id": 1, "name": "Rectangular duct elbow with double-thickness turning vanes", "correct": true },
+      { "id": 2, "name": "Turning vane runner span of 54 inches without intermediate support", "correct": false, "violation": "Turning vane runners must not exceed 48 inches unsupported per the SACC specification. A 54-inch span will cause the vanes to deflect under airflow pressure, creating turbulence, noise, and reduced turning efficiency. An intermediate support bracket is required.", "codeReference": "SACC Mechanical Specification / SMACNA HVAC Duct Construction Standards" },
+      { "id": 3, "name": "Duct hanger supporting 55 lbs of ductwork", "correct": false, "violation": "The SACC specification limits duct hangers to a maximum of 50 lbs per hanger. A 55 lb load exceeds this limit and risks hanger failure, especially during a seismic event. The duct run needs an additional hanger to distribute the load below 50 lbs per point.", "codeReference": "SACC Mechanical Specification / SMACNA Duct Construction Standards" },
+      { "id": 4, "name": "Duct hangers spaced at 8 feet OC for 3.5 sq ft duct", "correct": true },
+      { "id": 5, "name": "Turning vanes constructed from 20-gauge galvanized steel", "correct": true },
+      { "id": 6, "name": "Duct sealed with mastic at transverse joints", "correct": true }
+    ],
+    "explanation": "The SACC project enforces strict duct support and turning vane requirements for the high-rise commercial TI. The 48-inch maximum unsupported turning vane span and 50 lb per hanger limit are more conservative than general SMACNA minimums because seismic loads in Los Angeles can multiply static loads significantly.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-hvac-025",
+    "type": "whats-wrong",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "SACC Exhaust and Transfer Fan System",
+    "components": [
+      { "id": 1, "name": "Greenheck CSP-A1050-VG exhaust fan rated at 850 CFM", "correct": true },
+      { "id": 2, "name": "Exhaust fan connected to occupancy sensor for control", "correct": false, "violation": "The SACC specification requires exhaust fans to be controlled by a timeclock, not an occupancy sensor. Timeclock control ensures the exhaust system operates during all scheduled building hours regardless of zone occupancy, maintaining building pressurization and code-required ventilation even in temporarily unoccupied areas.", "codeReference": "SACC Mechanical Specification / ASHRAE 62.1" },
+      { "id": 3, "name": "Transfer fan Greenheck CSP-A510-VG at 300 CFM", "correct": true },
+      { "id": 4, "name": "Transfer fan thermostat set to 80°F", "correct": true },
+      { "id": 5, "name": "Exhaust branch duct without backdraft damper", "correct": false, "violation": "Each exhaust branch duct requires a backdraft damper per the SACC specification. Without backdraft dampers, air from pressurized areas can reverse-flow through inactive exhaust branches, short-circuiting the exhaust system and potentially pushing odors or contaminants into adjacent office spaces.", "codeReference": "SACC Mechanical Specification / IMC 501.2" },
+      { "id": 6, "name": "OSHPD-approved seismic spring-neoprene mounts", "correct": true },
+      { "id": 7, "name": "Exhaust duct with fire damper at rated wall", "correct": true },
+      { "id": 8, "name": "Flexible duct connection at fan inlet", "correct": true }
+    ],
+    "explanation": "The SACC exhaust and transfer fan system has specific control and accessory requirements. Exhaust fans use timeclock control (not occupancy sensors) to ensure consistent building ventilation during business hours. Backdraft dampers on each exhaust branch prevent reverse airflow when multiple branches connect to a common exhaust riser — a critical detail in high-rise commercial buildings where stack effect can overwhelm fan static pressure.",
+    "xpReward": 85
   }
 ]

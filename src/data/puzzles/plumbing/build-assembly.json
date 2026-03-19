@@ -344,5 +344,153 @@
     ],
     "explanation": "When a backflow preventer creates a closed system, thermal expansion from the water heater has no relief path. The expansion tank must be installed on the cold water supply near the water heater and pre-charged to match the incoming supply pressure. Without it, the T&P relief valve activates repeatedly or piping can fail per IPC 607.3.2.",
     "xpReward": 85
+  },
+  {
+    "id": "ba-plmb-013",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Office Breakroom Sink Drain Assembly (SACC)",
+    "description": "Assemble the drain components for a Kohler K-3822 pantry sink in a high-rise office breakroom from the sink to the waste stack per SACC specifications.",
+    "parts": [
+      { "id": 1, "name": "Kohler K-3822 basket strainer with putty seal", "correctPosition": 1 },
+      { "id": 2, "name": "1-1/2\" tailpiece from sink drain", "correctPosition": 2 },
+      { "id": 3, "name": "1-1/2\" P-trap", "correctPosition": 3 },
+      { "id": 4, "name": "Trap arm through wall with Link-Seal OS-316 at penetration", "correctPosition": 4 },
+      { "id": 5, "name": "Connection to cast iron soil pipe with Husky 4000 no-hub coupling", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "S-trap" },
+      { "id": 102, "name": "Grease interceptor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At sink bowl" },
+      { "id": 2, "label": "Position 2: Below sink" },
+      { "id": 3, "label": "Position 3: Water seal" },
+      { "id": 4, "label": "Position 4: Wall penetration" },
+      { "id": 5, "label": "Position 5: To waste stack" }
+    ],
+    "explanation": "The SACC breakroom sink drain follows standard drain assembly order with two SACC-specific details: Link-Seal OS-316 modular seals at breakroom wall penetrations (not caulk), and Husky 4000 no-hub couplings for cast iron connections. S-traps are prohibited by CPC 1002.2, and grease interceptors are not required for office pantry sinks.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-plmb-014",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Pipe Sleeve and Firestop Assembly Through Masonry (SACC)",
+    "description": "Assemble the components for a pipe penetration through a masonry core wall in the correct order per SACC firestopping specifications.",
+    "parts": [
+      { "id": 1, "name": "Schedule 40 galvanized steel sleeve grouted into masonry opening", "correctPosition": 1 },
+      { "id": 2, "name": "Type L copper pipe centered in sleeve (1/2\" max annular space)", "correctPosition": 2 },
+      { "id": 3, "name": "Mineral wool insulation packed into annular space", "correctPosition": 3 },
+      { "id": 4, "name": "Duxseal non-hardening compound on both faces", "correctPosition": 4 },
+      { "id": 5, "name": "UL firestop inspection tag affixed", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "20 gauge sheet metal sleeve" },
+      { "id": 102, "name": "Expanding spray foam" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Wall opening" },
+      { "id": 2, "label": "Position 2: Pipe installation" },
+      { "id": 3, "label": "Position 3: Fire resistance layer" },
+      { "id": 4, "label": "Position 4: Seal both faces" },
+      { "id": 5, "label": "Position 5: Documentation" }
+    ],
+    "explanation": "The SACC firestop assembly through masonry uses Schedule 40 galvanized steel sleeves (not sheet metal — that is only for framed partitions). Mineral wool provides fire resistance, and Duxseal's non-hardening property accommodates pipe movement. Spray foam is never acceptable for rated fire assemblies. The UL inspection tag documents the installation for LEED enhanced commissioning.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-plmb-015",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "CRAC Condensate Drain Assembly (SACC)",
+    "description": "Assemble the condensate drain system for a CRAC unit in the Level 31 server room, from the unit drain pan to the discharge point, per SACC specifications.",
+    "parts": [
+      { "id": 1, "name": "CRAC unit drain pan with 3/4\" outlet", "correctPosition": 1 },
+      { "id": 2, "name": "Leak detector pad beneath CRAC unit wired to solenoid valve", "correctPosition": 2 },
+      { "id": 3, "name": "3/4\" condensate drain piped with continuous downward slope", "correctPosition": 3 },
+      { "id": 4, "name": "Pipe insulation on condensate line to prevent sweating", "correctPosition": 4 },
+      { "id": 5, "name": "Spill to lavatory tailpiece with visible air gap (indirect waste)", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Direct connection to sanitary sewer P-trap" },
+      { "id": 102, "name": "Condensate pump to roof drain" },
+      { "id": 103, "name": "Check valve on condensate line" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At CRAC unit" },
+      { "id": 2, "label": "Position 2: Leak protection" },
+      { "id": 3, "label": "Position 3: Drain piping" },
+      { "id": 4, "label": "Position 4: Condensation prevention" },
+      { "id": 5, "label": "Position 5: Discharge point" }
+    ],
+    "explanation": "CRAC condensate drains to a lavatory tailpiece as indirect waste — never directly to the sewer. The leak detector and solenoid interlock protect server equipment from water damage. Insulation prevents the cold condensate pipe from sweating and dripping onto equipment below. A direct sewer connection would allow sewer gas into the server room, and a condensate pump adds unnecessary complexity and failure points when gravity drainage is available.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-plmb-016",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Water Heater with Leak Detection Assembly (SACC)",
+    "description": "Assemble the water heater supply piping and safety components for a commercial water heater in a Level 32 mechanical closet per SACC specifications.",
+    "parts": [
+      { "id": 1, "name": "Type L copper cold water supply from riser", "correctPosition": 1 },
+      { "id": 2, "name": "Solenoid valve interlocked with leak detector pad", "correctPosition": 2 },
+      { "id": 3, "name": "Manual shutoff valve downstream of solenoid", "correctPosition": 3 },
+      { "id": 4, "name": "Expansion tank tee on cold supply near water heater", "correctPosition": 4 },
+      { "id": 5, "name": "Water heater cold inlet with seismic strapping per CBC", "correctPosition": 5 },
+      { "id": 6, "name": "T&P relief valve with discharge pipe to within 6\" of floor", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure reducing valve at water heater" },
+      { "id": 102, "name": "Check valve on hot water outlet" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Supply riser" },
+      { "id": 2, "label": "Position 2: Automatic shutoff" },
+      { "id": 3, "label": "Position 3: Manual shutoff" },
+      { "id": 4, "label": "Position 4: Expansion protection" },
+      { "id": 5, "label": "Position 5: Water heater connection" },
+      { "id": 6, "label": "Position 6: Safety relief" }
+    ],
+    "explanation": "The SACC water heater assembly adds leak detection with solenoid shutoff upstream of the manual valve — so the automatic system can protect the space even when no one is present. The solenoid must be upstream of the manual valve so it can cut supply regardless of manual valve position. The expansion tank connects on the cold side near the heater. Seismic strapping is required in Los Angeles (Seismic Design Category D). The T&P relief valve is the last line of defense per CPC 504.6.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-plmb-017",
+    "type": "build-assembly",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "High-Rise Cast Iron Riser Through Rated Floor (SACC)",
+    "description": "Assemble the complete cast iron soil pipe riser assembly through a 2-hour rated floor between Levels 30 and 31, including all supports, couplings, and firestopping per SACC specifications.",
+    "parts": [
+      { "id": 1, "name": "Schedule 40 galvanized steel sleeve grouted into floor opening", "correctPosition": 1 },
+      { "id": 2, "name": "Cast iron soil pipe riser through sleeve with Husky 4000 no-hub coupling below floor", "correctPosition": 2 },
+      { "id": 3, "name": "Riser clamp support at floor level transferring pipe weight to structure", "correctPosition": 3 },
+      { "id": 4, "name": "Mineral wool packed into annular space (1/2\" max gap)", "correctPosition": 4 },
+      { "id": 5, "name": "Duxseal non-hardening compound applied to both faces of floor penetration", "correctPosition": 5 },
+      { "id": 6, "name": "Branch connections with sanitary fittings above floor on Level 31", "correctPosition": 6 },
+      { "id": 7, "name": "UL firestop inspection tag and LEED commissioning documentation", "correctPosition": 7 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "PVC coupling at floor penetration" },
+      { "id": 102, "name": "Intumescent firestop wrap" },
+      { "id": 103, "name": "Silicone firestop caulk" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Floor opening preparation" },
+      { "id": 2, "label": "Position 2: Pipe through floor" },
+      { "id": 3, "label": "Position 3: Structural support" },
+      { "id": 4, "label": "Position 4: Fire resistance packing" },
+      { "id": 5, "label": "Position 5: Penetration seal" },
+      { "id": 6, "label": "Position 6: Upper floor connections" },
+      { "id": 7, "label": "Position 7: Documentation" }
+    ],
+    "explanation": "High-rise cast iron riser assemblies through rated floors require a precise sequence: sleeve first, then pipe with Husky 4000 coupling (never PVC in a rated assembly), riser clamp for structural support, mineral wool for fire resistance, and Duxseal for a flexible permanent seal. PVC couplings, intumescent wrap, and silicone caulk are not part of the specified SACC firestop system. Every penetration must be documented for LEED enhanced commissioning — undocumented firestops must be opened, inspected, and redone.",
+    "xpReward": 95
   }
 ]

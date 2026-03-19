@@ -463,5 +463,172 @@
     ],
     "explanation": "BACnet interoperability requires proper communication profiles and time synchronization across all controllers. UCSB specs mandate ASHRAE 135-2016 compliance including standardized device profiles and consistent timestamps for effective building operations.",
     "xpReward": 50
+  },
+  {
+    "id": "wm-ctrl-015",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "CRAC Unit Controls Installation",
+    "description": "A Computer Room Air Conditioning (CRAC) unit has been installed on Level 32 of the SACC high-rise TI project with its iCOM controller. Review the installation for missing components.",
+    "presentItems": [
+      "Liebert CRAC unit CRAC-32-1 installed and piped",
+      "iCOM controller mounted on CRAC unit for monitoring",
+      "Liebert vNSA network switch for lead/lag control of CRAC-32-1 and CRAC-32-2",
+      "Supply and return air temperature sensors connected",
+      "Refrigerant pressure gauges installed"
+    ],
+    "missingItems": [
+      {
+        "name": "Leak detector connected to CRAC drip pan",
+        "explanation": "The SACC specification requires leak detectors at each CRAC unit connected to the drip pans. CRAC units handle refrigerant and condensate — a leak can cause water damage to the server/IDF room equipment below. The leak detector must alarm through the iCOM controller and the base building BMS for immediate response."
+      },
+      {
+        "name": "BMS integration for remote monitoring and alarms",
+        "explanation": "The CRAC iCOM controller must be integrated with the base building BMS via BACnet for centralized monitoring. Without BMS integration, CRAC alarms (high temperature, leak, compressor failure) are only visible locally at the unit. Building engineers need remote visibility from the central workstation, especially for after-hours emergency response."
+      }
+    ],
+    "distractors": [
+      "Humidity sensor in adjacent hallway",
+      "Carbon monoxide detector",
+      "Sound attenuator on discharge",
+      "Seismic gas shutoff valve"
+    ],
+    "explanation": "CRAC units in high-rise commercial TI spaces require leak detection at drip pans and BMS integration for remote monitoring. The iCOM controller manages local operation, but without leak detectors and BMS connectivity, critical alarms go unnoticed and water damage risks are unmitigated.",
+    "xpReward": 45
+  },
+  {
+    "id": "wm-ctrl-016",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Exhaust Fan Timeclock Control",
+    "description": "Exhaust fans in the SACC high-rise commercial office TI have been installed with timeclock control. Identify missing control components.",
+    "presentItems": [
+      "Exhaust fans installed per mechanical plans",
+      "7-day programmable timeclock for scheduling",
+      "Fan motor wired through timeclock relay contact",
+      "Fan status indicator light at control panel"
+    ],
+    "missingItems": [
+      {
+        "name": "Manual override switch with automatic return to schedule",
+        "explanation": "Timeclock-controlled exhaust fans must have a manual override switch for after-hours or emergency use. The override must automatically return to the timeclock schedule after a preset period (typically 2 hours) to prevent the fan from being left on indefinitely. Without an override, occupants during unscheduled hours have no ventilation. Required by ASHRAE 62.1 for spaces that may be occupied outside scheduled hours."
+      },
+      {
+        "name": "Current sensing relay for fan status feedback to BMS",
+        "explanation": "A current sensing relay on the exhaust fan motor provides actual run status feedback to the BMS. Without it, the BMS only knows the timeclock schedule — not whether the fan is actually running. A failed motor or tripped breaker would go undetected until occupants complain of poor air quality. Required for LEED commissioning verification."
+      }
+    ],
+    "distractors": [
+      "VFD for speed control",
+      "Duct smoke detector",
+      "Sound level meter",
+      "CO2 sensor"
+    ],
+    "explanation": "Exhaust fan timeclock control requires both a manual override for after-hours use and status feedback to the BMS. The override ensures ventilation is available when needed, while the current sensing relay confirms the fan is actually operating per ASHRAE 62.1 and LEED commissioning requirements.",
+    "xpReward": 40
+  },
+  {
+    "id": "wm-ctrl-017",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BTU Metering Installation for Base Building BMS",
+    "description": "BTU meters have been installed on the SACC high-rise TI project per base building standard. Review the installation for missing components.",
+    "presentItems": [
+      "Ultrasonic flow meter installed on chilled water supply pipe",
+      "Supply water temperature sensor installed",
+      "Return water temperature sensor installed",
+      "BTU meter display showing real-time readings",
+      "BACnet communication module in BTU meter"
+    ],
+    "missingItems": [
+      {
+        "name": "BTU meter data point mapping to base building BMS",
+        "explanation": "The SACC specification requires BTU meters to be tied to the base building BMS for usage monitoring. The BACnet module is installed but the points (total BTU, flow rate, delta-T, supply/return temperatures) must be mapped and trended in the BMS. Without this integration, the building management team cannot track tenant energy usage or allocate costs per the base building standard."
+      },
+      {
+        "name": "BTU meter calibration verification certificate",
+        "explanation": "BTU meters must have a calibration verification per the base building standard. The flow meter accuracy and temperature sensor offsets must be documented and verified against reference instruments during commissioning. Without calibration records, the accuracy of energy billing data is unverifiable and may not satisfy LEED metering requirements."
+      }
+    ],
+    "distractors": [
+      "Pressure gauge on chilled water pipe",
+      "Vibration sensor on pump",
+      "Power quality meter",
+      "Refrigerant charge monitor"
+    ],
+    "explanation": "The SACC project requires BTU meters integrated with the base building BMS for tenant energy usage monitoring. Both data point mapping and calibration verification are essential — the meter hardware alone does not satisfy the specification without BMS integration and documented accuracy per ASHRAE 90.1 Section 8.",
+    "xpReward": 60
+  },
+  {
+    "id": "wm-ctrl-018",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "California Title 24 Lighting Controls",
+    "description": "Lighting controls for the SACC commercial office TI project have been installed per California Title 24 requirements. Identify missing control components.",
+    "presentItems": [
+      "Occupancy sensors installed in private offices and restrooms",
+      "Daylight-responsive controls at perimeter zones within 15 feet of windows",
+      "Manual on/off switches at each lighting control zone",
+      "Automatic shut-off via timeclock after business hours",
+      "Motorized shades (MS) on exterior windows per electrical plans"
+    ],
+    "missingItems": [
+      {
+        "name": "Demand response signal acceptance capability",
+        "explanation": "California Title 24 requires lighting control systems to accept demand response signals for automated load shedding during peak grid events. The system must be capable of reducing lighting power by at least 15% in response to an external signal from the utility or building operator. Without this capability, the project fails Title 24 Section 130.1(d) requirements."
+      },
+      {
+        "name": "Multi-level lighting control (minimum 2 switching levels or continuous dimming)",
+        "explanation": "Title 24 requires multi-level lighting control in spaces larger than 100 sq ft. Each lighting zone must have at least two switching levels (1/3 and 2/3 lamps) or continuous dimming capability. A single on/off switch does not satisfy the requirement for stepped or continuous light level adjustment per Title 24 Section 130.1(b)."
+      }
+    ],
+    "distractors": [
+      "Emergency lighting battery packs",
+      "UV disinfection timer",
+      "Security camera integration",
+      "Acoustic sensor for sound-activated lighting"
+    ],
+    "explanation": "California Title 24 lighting controls for commercial office spaces go beyond basic occupancy sensing and scheduling. Demand response capability and multi-level switching are mandatory requirements that are frequently overlooked during TI projects. The motorized shades complement the daylight controls but do not replace the need for demand response and multi-level switching.",
+    "xpReward": 65
+  },
+  {
+    "id": "wm-ctrl-019",
+    "type": "whats-missing",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "High-Rise BAS Integration with Base Building Systems",
+    "description": "A tenant improvement BAS has been installed on Levels 30-32 of the SACC high-rise at 555 Flower Street. The TI BAS must integrate with the base building systems. Identify missing integration components.",
+    "presentItems": [
+      "TI DDC controllers installed for VAV systems on Levels 30-32",
+      "iCOM controllers on CRAC units with vNSA lead/lag switching",
+      "Motorized outside air dampers interlocked with evaporator fans",
+      "Firestat and smoke detectors installed in ductwork",
+      "Transfer fans with wall-mounted thermostat control at 80 degrees F"
+    ],
+    "missingItems": [
+      {
+        "name": "BACnet gateway between TI BAS and base building BMS",
+        "explanation": "The TI controls must communicate with the base building BMS through a BACnet gateway or IP integration point. Without this gateway, the base building operations team cannot monitor TI HVAC systems, receive alarms, or coordinate energy management between tenant and base building systems. The SACC spec requires all TI systems to be visible on the base building BMS."
+      },
+      {
+        "name": "Base building chilled water valve interlock with TI systems",
+        "explanation": "The TI VAV and CRAC systems use chilled water supplied by the base building plant. A control interlock must coordinate TI chilled water demand with the base building chiller staging. Without this interlock, the base building chillers may not stage properly for TI loads, and the BTU meters cannot accurately track tenant usage for cost allocation."
+      },
+      {
+        "name": "Elevator recall and fire alarm integration for Levels 30-32",
+        "explanation": "The TI smoke detection and fire alarm systems must integrate with the base building fire alarm panel for elevator recall and stairwell pressurization on Levels 30-32. In a high-rise, fire events on tenant floors must trigger building-wide emergency responses through the base building systems per NFPA 72 and IBC Section 907."
+      }
+    ],
+    "distractors": [
+      "Standalone weather station on roof",
+      "Independent emergency generator for TI",
+      "Separate fire command center for tenant"
+    ],
+    "explanation": "High-rise TI projects at the SACC require comprehensive integration between tenant BAS and base building systems. BACnet gateway communication, chilled water coordination, and fire alarm integration are essential for safe operation and facilities management in a multi-tenant high-rise per ASHRAE 135, NFPA 72, and IBC requirements.",
+    "xpReward": 85
   }
 ]

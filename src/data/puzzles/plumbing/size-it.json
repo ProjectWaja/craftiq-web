@@ -491,5 +491,90 @@
     ],
     "explanation": "Trickle vents at UCSB provide 40-50 CFM of fresh air per residential unit. These passive ventilation devices are part of the building's overall ventilation strategy: trickle vents bring in fresh outside air, transfer air grilles (100-200 CFM) move air between rooms, and exhaust fans in bathrooms and kitchens remove stale air. This creates a controlled airflow path through the unit from clean spaces (bedrooms) to wet spaces (bathrooms, kitchen) per ASHRAE 62.2.",
     "xpReward": 35
+  },
+  {
+    "id": "si-plmb-030",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "SACC Non-Residential Lavatory Flow Rate",
+    "scenario": "On the SACC high-rise office TI (Level 31), the plumbing engineer specifies non-residential lavatory faucets for the tenant restrooms. What is the maximum flow rate allowed per CPC 2022 for non-residential lavatory faucets?",
+    "hint": "CPC 2022 sets specific flow rate limits for non-residential lavatory faucets, measured at a standard test pressure. California codes are generally more restrictive than national codes for water conservation.",
+    "options": [
+      { "text": "0.35 GPM @ 60 PSI", "value": "0.35", "correct": false, "feedback": "0.35 GPM is below the CPC 2022 requirement. While ultra-low-flow faucets exist, they often cannot adequately rinse soap from hands, leading to user complaints and hygiene concerns." },
+      { "text": "0.5 GPM @ 60 PSI", "value": "0.5", "correct": true, "feedback": "Correct! CPC 2022 requires non-residential lavatory faucets to have a maximum flow rate of 0.5 GPM at 60 PSI. This is the California standard, which is more restrictive than the national 2.2 GPM limit for residential faucets." },
+      { "text": "1.0 GPM @ 60 PSI", "value": "1.0", "correct": false, "feedback": "1.0 GPM exceeds the CPC 2022 maximum for non-residential lavatories. This rate is closer to what residential kitchen faucets may use. Non-residential restroom faucets need less flow for handwashing." },
+      { "text": "2.2 GPM @ 60 PSI", "value": "2.2", "correct": false, "feedback": "2.2 GPM is the old federal maximum for residential faucets. California's CPC 2022 is far more restrictive, especially for non-residential applications. At 2.2 GPM, the project would fail LEED water use calculations." }
+    ],
+    "explanation": "CPC 2022 limits non-residential lavatory faucets to 0.5 GPM at 60 PSI. This strict California standard supports water conservation goals and LEED certification. The SACC project uses this rate across all tenant restrooms on Levels 30-32.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-plmb-031",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "SACC Water Closet Flush Volume",
+    "scenario": "The SACC high-rise office TI specifications call for water closets compliant with ASME A112.19.2. What is the maximum flush volume for these fixtures per CPC 2022?",
+    "hint": "Water closet flush volumes have been reduced over the decades — from 5 GPF in the 1980s to 3.5 GPF, then 1.6 GPF, and now even lower. CPC 2022 sets the current California maximum.",
+    "options": [
+      { "text": "1.0 gallon per flush", "value": "1.0", "correct": false, "feedback": "1.0 GPF is a high-efficiency toilet (HET) level, but CPC 2022 does not mandate this for all water closets. Some LEED projects specify 1.0 or 1.1 GPF for additional water savings, but it is not the code maximum." },
+      { "text": "1.28 gallons per flush", "value": "1.28", "correct": true, "feedback": "Correct! CPC 2022 requires water closets to use no more than 1.28 gallons per flush per ASME A112.19.2. This is the California standard, replacing the older 1.6 GPF national maximum." },
+      { "text": "1.6 gallons per flush", "value": "1.6", "correct": false, "feedback": "1.6 GPF was the old EPAct standard. CPC 2022 has reduced the maximum to 1.28 GPF. Installing 1.6 GPF fixtures in California would violate the plumbing code and waste 25% more water per flush." },
+      { "text": "3.5 gallons per flush", "value": "3.5", "correct": false, "feedback": "3.5 GPF toilets have been illegal for new installations since 1994. They use nearly three times the water of current code-compliant fixtures." }
+    ],
+    "explanation": "CPC 2022 requires water closets to flush at 1.28 GPF maximum, per ASME A112.19.2. The SACC project specifies this rate for all water closets across the tenant improvement. California's 1.28 GPF requirement is stricter than the older national 1.6 GPF standard.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-plmb-032",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "SACC Waste Pipe Slope — 2-Inch Line",
+    "scenario": "A 2-inch waste pipe runs horizontally from a lavatory group on Level 31 of the SACC high-rise office TI to the vertical soil stack. What minimum slope is required per CPC for this 2-inch waste pipe?",
+    "hint": "Waste pipe slope requirements vary by pipe diameter. Smaller pipes need steeper slopes to maintain the minimum flow velocity required to carry waste solids. CPC and SACC specifications both address this.",
+    "options": [
+      { "text": "1/16 inch per foot (0.5%)", "value": "0.5", "correct": false, "feedback": "1/16 inch per foot is too flat for any waste pipe. At this slope, flow velocity is too low to carry solids, leading to buildup and blockages." },
+      { "text": "1/8 inch per foot (1%)", "value": "1.0", "correct": false, "feedback": "1/8 inch per foot (1%) is the minimum for 4-inch and larger pipes. A 2-inch pipe requires a steeper slope because the smaller diameter cannot achieve sufficient velocity at a 1% grade." },
+      { "text": "1/4 inch per foot (2%)", "value": "2.0", "correct": true, "feedback": "Correct! CPC requires a minimum slope of 1/4 inch per foot (2%) for 2-inch and smaller waste pipes. This steeper slope ensures adequate flow velocity (2 ft/sec minimum) to carry waste solids through the smaller pipe diameter." },
+      { "text": "1/2 inch per foot (4%)", "value": "4.0", "correct": false, "feedback": "1/2 inch per foot is excessively steep. While more slope means faster flow, too much slope causes liquids to outrun solids — the water drains away and leaves solid waste behind in the pipe." }
+    ],
+    "explanation": "Waste pipe slope is diameter-dependent: 2-inch and smaller pipes require 1/4 inch per foot (2%), while 4-inch and larger pipes require 1/8 inch per foot (1%). The SACC project follows CPC standards. Getting the slope wrong for the pipe size is a common apprentice mistake — remember: small pipe = steep slope, big pipe = gentle slope.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-plmb-033",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "SACC Maximum Annular Space at Pipe Sleeve",
+    "scenario": "On the SACC high-rise office TI, a plumber needs to select the correct sleeve size for a 1-1/2 inch Type L copper pipe penetrating a masonry core wall. The SACC specification limits the maximum annular space between the pipe and sleeve. What is the maximum allowable annular space?",
+    "hint": "The annular space is the gap between the outside of the pipe and the inside of the sleeve. This space must be small enough for firestopping materials to effectively seal, but large enough to allow pipe installation and thermal movement.",
+    "options": [
+      { "text": "1/4 inch", "value": "0.25", "correct": false, "feedback": "1/4 inch is too tight. While a smaller gap is better for firestopping, 1/4 inch makes pipe installation extremely difficult and does not allow for thermal expansion movement of the copper pipe within the sleeve." },
+      { "text": "1/2 inch", "value": "0.5", "correct": true, "feedback": "Correct! The SACC specification limits annular space to a maximum of 1/2 inch. This provides enough room for pipe installation and thermal movement while keeping the gap small enough for mineral wool packing and Duxseal to effectively seal the penetration." },
+      { "text": "3/4 inch", "value": "0.75", "correct": false, "feedback": "3/4 inch exceeds the SACC maximum. At this gap, mineral wool may not compress sufficiently to fill the space, and Duxseal may sag or fail to bridge the gap, compromising the fire rating of the assembly." },
+      { "text": "1 inch", "value": "1.0", "correct": false, "feedback": "1 inch is far too large. The firestopping system (mineral wool + Duxseal) is not tested or listed for annular spaces this wide. The penetration would fail firestopping inspection and LEED commissioning verification." }
+    ],
+    "explanation": "The SACC specification limits annular space to 1/2 inch maximum. This dimension is critical for firestopping effectiveness — the mineral wool and Duxseal are tested and listed for specific gap sizes. Exceeding the maximum means the firestop assembly does not match its UL listing and cannot be relied upon to maintain the fire-resistance rating of the wall or floor assembly.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-plmb-034",
+    "type": "size-it",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "SACC Condensate Drain Sizing for CRAC Unit",
+    "scenario": "A CRAC unit in the Level 31 server room produces condensate that must be drained to the nearest lavatory tailpiece per SACC specifications. The condensate drain runs approximately 25 feet horizontally with continuous slope. What size condensate drain pipe does the SACC specification require?",
+    "hint": "CRAC condensate drains are sized based on the unit's cooling capacity and condensate production rate. The SACC specification calls out a specific size for the condensate down drain.",
+    "options": [
+      { "text": "1/2 inch", "value": "0.5", "correct": false, "feedback": "1/2 inch is too small for a CRAC condensate drain. At this size, the pipe can easily clog with biological growth (algae, mold) that naturally forms in condensate lines, especially over a 25-foot horizontal run." },
+      { "text": "3/4 inch", "value": "0.75", "correct": true, "feedback": "Correct! The SACC specification requires a 3/4-inch condensate drain (CD) for CRAC units. This size provides adequate capacity for the condensate volume, allows for some biological buildup without clogging, and can be effectively cleaned with standard maintenance tools." },
+      { "text": "1 inch", "value": "1.0", "correct": false, "feedback": "1 inch exceeds the SACC specification. While a larger pipe would work, it is unnecessary for CRAC condensate volume and wastes material. The 3/4-inch size is adequate and matches the specification." },
+      { "text": "1-1/2 inch", "value": "1.5", "correct": false, "feedback": "1-1/2 inch is far oversized for CRAC condensate. This size is used for fixture drains (kitchen sinks, lavatories). The low volume of condensate in a 1-1/2 inch pipe would flow too slowly, allowing stagnant water and biological growth." }
+    ],
+    "explanation": "SACC specifies 3/4-inch condensate drains for CRAC units. Condensate drain sizing balances capacity against self-scouring velocity — too small clogs easily, too large allows stagnation. The 3/4-inch drain must maintain continuous slope to the lavatory tailpiece where it discharges as indirect waste. In a high-rise server room, a clogged condensate drain can cause a CRAC unit overflow, potentially flooding critical IT equipment.",
+    "xpReward": 80
   }
 ]

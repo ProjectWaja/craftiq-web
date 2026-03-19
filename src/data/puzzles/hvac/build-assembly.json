@@ -332,5 +332,156 @@
     ],
     "explanation": "Kitchen hood grease ducts must be welded steel (no flex duct or galvanized allowed), with cleanout access at every direction change, fire-rated roof penetration, and an upblast fan for proper grease containment per IMC 506 and NFPA 96.",
     "xpReward": 75
+  },
+  {
+    "id": "ba-hvac-013",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Flex Duct Connection Assembly",
+    "description": "Assemble the flex duct connection components at a branch takeoff on the SACC high-rise TI project, per the project specification requiring SS worm clamps and UL mastic.",
+    "parts": [
+      { "id": 1, "name": "Sheet metal branch collar at trunk duct", "correctPosition": 1 },
+      { "id": 2, "name": "Flex duct inner liner pulled over collar", "correctPosition": 2 },
+      { "id": 3, "name": "Stainless steel worm-drive clamp on inner liner", "correctPosition": 3 },
+      { "id": 4, "name": "UL-listed mastic applied over inner clamp joint", "correctPosition": 4 },
+      { "id": 5, "name": "Outer jacket and insulation pulled over connection", "correctPosition": 5 },
+      { "id": 6, "name": "Second SS worm-drive clamp securing outer jacket", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Plastic zip tie" },
+      { "id": 102, "name": "Duct tape wrap" },
+      { "id": 103, "name": "Sheet metal screw" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Starting point at trunk" },
+      { "id": 2, "label": "Position 2: Inner liner connection" },
+      { "id": 3, "label": "Position 3: Inner seal" },
+      { "id": 4, "label": "Position 4: Sealant application" },
+      { "id": 5, "label": "Position 5: Insulation cover" },
+      { "id": 6, "label": "Position 6: Outer seal" }
+    ],
+    "explanation": "The SACC specification mandates stainless steel worm-drive clamps and UL mastic for all flex duct connections — zip ties, duct tape, and sheet metal screws are prohibited. The inner liner must be clamped and sealed before the outer jacket covers the connection. This two-layer sealing approach prevents air leakage at the connection, which is the most common failure point in flex duct installations.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-hvac-014",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC IDF Room CRAC Condensate Drain",
+    "description": "Assemble the condensate drainage system for a Liebert MM40C CRAC unit in an IDF room on the SACC project.",
+    "parts": [
+      { "id": 1, "name": "CRAC unit drain pan connection", "correctPosition": 1 },
+      { "id": 2, "name": "P-trap below drain pan outlet", "correctPosition": 2 },
+      { "id": 3, "name": "Condensate drain pipe (1/4\"/ft slope)", "correctPosition": 3 },
+      { "id": 4, "name": "Overflow safety switch wired to unit shutdown", "correctPosition": 4 },
+      { "id": 5, "name": "Indirect waste connection to floor drain", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Condensate pump" },
+      { "id": 102, "name": "Neutralizer kit" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At CRAC unit" },
+      { "id": 2, "label": "Position 2: Trap installation" },
+      { "id": 3, "label": "Position 3: Horizontal run" },
+      { "id": 4, "label": "Position 4: Safety device" },
+      { "id": 5, "label": "Position 5: Termination" }
+    ],
+    "explanation": "CRAC unit condensate drainage in the IDF room uses gravity drain (no pump needed when a floor drain is accessible). The P-trap prevents air from the CRAC fan from blowing through the drain line. The overflow switch is critical in an IT room — if the drain clogs, the switch shuts down the unit before water damages network equipment worth thousands of dollars. The indirect waste connection (air gap) prevents sewer gas from entering the IDF room.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-hvac-015",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Exhaust Fan Branch with Backdraft Damper",
+    "description": "Assemble the exhaust branch duct system from a restroom exhaust grille to the main exhaust riser on the SACC high-rise project.",
+    "parts": [
+      { "id": 1, "name": "Exhaust grille in restroom ceiling", "correctPosition": 1 },
+      { "id": 2, "name": "Sheet metal branch duct from grille", "correctPosition": 2 },
+      { "id": 3, "name": "Balancing damper for TAB adjustment", "correctPosition": 3 },
+      { "id": 4, "name": "Backdraft damper at branch connection", "correctPosition": 4 },
+      { "id": 5, "name": "Fire damper at fire-rated wall penetration", "correctPosition": 5 },
+      { "id": 6, "name": "Connection to main exhaust riser", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Flexible duct connector" },
+      { "id": 102, "name": "Smoke detector" },
+      { "id": 103, "name": "Sound attenuator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: At restroom" },
+      { "id": 2, "label": "Position 2: Branch duct run" },
+      { "id": 3, "label": "Position 3: Flow adjustment" },
+      { "id": 4, "label": "Position 4: Reverse flow prevention" },
+      { "id": 5, "label": "Position 5: Fire barrier" },
+      { "id": 6, "label": "Position 6: Riser connection" }
+    ],
+    "explanation": "Exhaust branch assemblies on the SACC high-rise require a specific component sequence: grille, branch duct, balancing damper (for TAB), backdraft damper (prevents reverse flow from stack effect), fire damper (at rated wall), then riser connection. The backdraft damper is positioned after the balancing damper so it does not interfere with airflow measurement during TAB. In a 30+ story building, stack effect can create significant reverse pressures on exhaust branches.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-hvac-016",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC CRAC Chilled Water Piping Assembly",
+    "description": "Assemble the chilled water piping components connecting the base building chilled water supply to the Liebert MM92C CRAC unit in the SACC MDF room.",
+    "parts": [
+      { "id": 1, "name": "Chilled water supply isolation valve", "correctPosition": 1 },
+      { "id": 2, "name": "Strainer to protect CRAC coil", "correctPosition": 2 },
+      { "id": 3, "name": "Two-way control valve with actuator", "correctPosition": 3 },
+      { "id": 4, "name": "Flexible connector at CRAC unit inlet", "correctPosition": 4 },
+      { "id": 5, "name": "BTU meter flow and temperature sensors", "correctPosition": 5 },
+      { "id": 6, "name": "Return isolation valve to chilled water return", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Expansion tank" },
+      { "id": 102, "name": "Air separator" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: From base building supply" },
+      { "id": 2, "label": "Position 2: Coil protection" },
+      { "id": 3, "label": "Position 3: Flow modulation" },
+      { "id": 4, "label": "Position 4: Vibration isolation" },
+      { "id": 5, "label": "Position 5: Energy metering" },
+      { "id": 6, "label": "Position 6: To base building return" }
+    ],
+    "explanation": "CRAC chilled water piping on the SACC project includes components for both operational control and base building integration. The strainer protects the CRAC coil from debris in the base building loop. The flexible connector accommodates seismic movement and vibration isolation. The BTU meter on the return side accurately measures energy consumption for tenant billing. The expansion tank and air separator are part of the base building system, not the tenant CRAC piping — they are distractors.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-hvac-017",
+    "type": "build-assembly",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "SACC CRAC Seismic Isolation Assembly",
+    "description": "Assemble the seismic isolation and restraint system for a Liebert MM92C CRAC unit in the SACC MDF room (Los Angeles, Seismic Design Category D).",
+    "parts": [
+      { "id": 1, "name": "OSHPD-approved seismic base frame anchored to floor", "correctPosition": 1 },
+      { "id": 2, "name": "Spring-neoprene isolation mounts (min 2\" deflection)", "correctPosition": 2 },
+      { "id": 3, "name": "CRAC unit set on isolation mounts", "correctPosition": 3 },
+      { "id": 4, "name": "Lateral seismic snubbers at all four corners", "correctPosition": 4 },
+      { "id": 5, "name": "Flexible chilled water connectors at unit", "correctPosition": 5 },
+      { "id": 6, "name": "Flexible electrical conduit connection", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Rigid copper piping connection" },
+      { "id": 102, "name": "Rigid EMT conduit connection" },
+      { "id": 103, "name": "Concrete housekeeping pad" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Floor anchorage" },
+      { "id": 2, "label": "Position 2: Vibration isolation" },
+      { "id": 3, "label": "Position 3: Equipment placement" },
+      { "id": 4, "label": "Position 4: Seismic restraint" },
+      { "id": 5, "label": "Position 5: Piping connections" },
+      { "id": 6, "label": "Position 6: Electrical connections" }
+    ],
+    "explanation": "Seismic CRAC installation requires a layered approach: the base frame anchors to structure, isolation mounts control vibration, the unit sits on the mounts, and seismic snubbers limit earthquake displacement. All piping and electrical must use flexible connections — rigid copper pipe and EMT conduit are distractors because they would rupture during seismic movement. In Los Angeles (SDC D), seismic design is mandatory per ASCE 7 and the building code, and OSHPD approval ensures the isolation system has been tested to withstand California seismic forces.",
+    "xpReward": 95
   }
 ]

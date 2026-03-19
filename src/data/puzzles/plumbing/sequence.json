@@ -338,5 +338,102 @@
     ],
     "explanation": "Automatic balancing valves per Spec 23 21 13 maintain a constant flow rate regardless of system pressure fluctuations — unlike manual balancing valves which drift as other zones open and close. Installing in the correct flow direction is critical; reverse installation causes the valve to shut. P/T test ports allow future flow verification without removing the valve. Locking and labeling prevent unauthorized adjustment that would unbalance the system.",
     "xpReward": 60
+  },
+  {
+    "id": "seq-plmb-018",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Office Breakroom Pantry Sink Installation (SACC)",
+    "description": "Order the steps for installing a Kohler K-3822 pantry sink with Everpure filtration in a high-rise office breakroom per SACC specifications.",
+    "steps": [
+      { "id": 1, "text": "Verify rough-in dimensions and confirm pipe sleeves are installed (Schedule 40 galvanized through masonry, 20 gauge sheet metal through framed walls)", "order": 1 },
+      { "id": 2, "text": "Install Type L copper supply lines through sleeves with maximum 1/2-inch annular space", "order": 2 },
+      { "id": 3, "text": "Install Link-Seal Model OS-316 at breakroom wall penetrations", "order": 3 },
+      { "id": 4, "text": "Mount the Kohler K-3822 pantry sink in countertop and install faucet set to 1.8 GPM default", "order": 4 },
+      { "id": 5, "text": "Connect Everpure 4FC5 water filter to cold water supply under sink", "order": 5 },
+      { "id": 6, "text": "Install 1-1/2\" P-trap, trap arm, and connect to waste piping", "order": 6 },
+      { "id": 7, "text": "Install water hammer arresters (J.R. Smith Fig. 5005) on supply lines", "order": 7 },
+      { "id": 8, "text": "Turn on water supply and test all connections for leaks at full system pressure", "order": 8 }
+    ],
+    "explanation": "Breakroom sink installation in a high-rise starts with verifying sleeves and penetration details — these cannot be corrected after wall finishes are complete. Link-Seals go in before fixtures because access is easier. Water hammer arresters are critical in high-rises where pressure surges travel through the entire riser system. The faucet must default to 1.8 GPM per CPC 2022.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-plmb-019",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Pipe Sleeve Installation Through Masonry Wall (SACC)",
+    "description": "Order the steps for installing a pipe sleeve through a masonry core wall in a high-rise office tenant improvement per SACC specifications.",
+    "steps": [
+      { "id": 1, "text": "Mark the penetration location on the masonry wall per approved shop drawings", "order": 1 },
+      { "id": 2, "text": "Core drill the masonry wall to the sleeve outside diameter", "order": 2 },
+      { "id": 3, "text": "Install Schedule 40 galvanized steel sleeve into the cored opening", "order": 3 },
+      { "id": 4, "text": "Grout the sleeve in place flush with both wall faces", "order": 4 },
+      { "id": 5, "text": "Run the pipe through the sleeve ensuring maximum 1/2-inch annular space", "order": 5 },
+      { "id": 6, "text": "Pack mineral wool tightly into the annular space", "order": 6 },
+      { "id": 7, "text": "Apply Duxseal non-hardening compound on both faces as the finish seal", "order": 7 }
+    ],
+    "explanation": "Pipe sleeves through masonry walls require Schedule 40 galvanized steel — never sheet metal, which is only for framed partitions. The 1/2-inch maximum annular space ensures the mineral wool and Duxseal can properly seal the penetration. Grouting the sleeve before running the pipe prevents misalignment. This sequence is verified during LEED enhanced commissioning.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-plmb-020",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "CRAC Condensate Drain to Lavatory Tailpiece (SACC)",
+    "description": "Order the steps for piping the condensate drain from a CRAC unit in a server room to the lavatory tailpiece per SACC specifications.",
+    "steps": [
+      { "id": 1, "text": "Install the leak detector pad beneath the CRAC unit and wire to solenoid valve control", "order": 1 },
+      { "id": 2, "text": "Connect 3/4-inch condensate drain (CD) to CRAC unit drain pan outlet", "order": 2 },
+      { "id": 3, "text": "Route condensate drain piping with continuous downward slope to the adjacent restroom", "order": 3 },
+      { "id": 4, "text": "Insulate the condensate piping to prevent sweating in the server room environment", "order": 4 },
+      { "id": 5, "text": "Terminate the condensate drain at the lavatory tailpiece with a visible air gap (indirect waste)", "order": 5 },
+      { "id": 6, "text": "Verify the trap primer connection on the server room floor drain is operational", "order": 6 },
+      { "id": 7, "text": "Test the solenoid valve and leak detector interlock by simulating a leak condition", "order": 7 }
+    ],
+    "explanation": "CRAC condensate must be handled as indirect waste — spilling to a lavatory tailpiece provides the required air gap and makes the discharge visible. The leak detector and solenoid valve interlock must be installed and tested before the CRAC unit is placed in service. Insulating the condensate piping prevents condensation dripping onto server equipment below.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-plmb-021",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "High-Rise Firestop Installation at Floor Penetration (SACC)",
+    "description": "Order the steps for firestopping a cast iron soil pipe penetration through a 2-hour rated floor assembly between Levels 30 and 31 per SACC specifications.",
+    "steps": [
+      { "id": 1, "text": "Verify the Schedule 40 galvanized steel sleeve is properly grouted into the floor assembly", "order": 1 },
+      { "id": 2, "text": "Confirm the cast iron pipe with Husky 4000 coupling is centered in the sleeve with maximum 1/2-inch annular space", "order": 2 },
+      { "id": 3, "text": "Pack mineral wool insulation tightly into the annular space to the full depth of the floor assembly", "order": 3 },
+      { "id": 4, "text": "Apply Duxseal non-hardening compound on both the top and bottom faces of the penetration", "order": 4 },
+      { "id": 5, "text": "Verify the firestop assembly matches the listed UL System number for the specific pipe/floor configuration", "order": 5 },
+      { "id": 6, "text": "Affix a firestop inspection tag with UL System number, date, and installer identification", "order": 6 },
+      { "id": 7, "text": "Document the installation with photographs and log it on the firestop tracking spreadsheet for LEED commissioning", "order": 7 }
+    ],
+    "explanation": "Firestopping in high-rises follows a strict sequence: verify the sleeve, center the pipe, pack mineral wool, seal with Duxseal, confirm the UL System match, tag, and document. The non-hardening Duxseal compound is specified because it remains flexible over the life of the building — hardening compounds crack from thermal cycling and pipe vibration, breaking the fire seal. Every penetration must be documented for LEED enhanced commissioning verification.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-plmb-022",
+    "type": "sequence",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "LEED Enhanced Commissioning — Plumbing Verification (SACC)",
+    "description": "Order the steps for performing LEED enhanced commissioning verification of the plumbing systems across Levels 30-32 of the SACC high-rise office TI.",
+    "steps": [
+      { "id": 1, "text": "Review all plumbing submittals and shop drawings for specification compliance (pipe materials, fixture models, valve types)", "order": 1 },
+      { "id": 2, "text": "Verify fixture flow rates: lavatories 0.5 GPM, kitchen faucets 1.8 GPM default, urinals 0.125 GPF, water closets 1.28 GPF", "order": 2 },
+      { "id": 3, "text": "Inspect all firestop installations against UL System listings and verify documentation tags are present", "order": 3 },
+      { "id": 4, "text": "Confirm pipe materials: Type L copper above floor, Type K underground, cast iron soil pipe with Husky 4000 couplings", "order": 4 },
+      { "id": 5, "text": "Test all solenoid valves and leak detector interlocks at water heaters and CRAC units", "order": 5 },
+      { "id": 6, "text": "Verify trap primers are installed and operational on all floor drains", "order": 6 },
+      { "id": 7, "text": "Confirm water hammer arresters (J.R. Smith Fig. 5005) are installed at all fixture groups", "order": 7 },
+      { "id": 8, "text": "Complete commissioning report with deficiency punch list and submit to commissioning authority", "order": 8 }
+    ],
+    "explanation": "LEED enhanced commissioning requires systematic verification of every plumbing system component. The sequence moves from documentation review to fixture verification, firestopping, materials, safety interlocks, and finally the commissioning report. Deficiencies discovered during commissioning must be corrected and re-verified before the building receives LEED certification. This process catches the violations that routine inspections miss.",
+    "xpReward": 95
   }
 ]

@@ -423,5 +423,90 @@
     ],
     "explanation": "Generator exhaust at UCSB must terminate a minimum of 10 feet above grade and 10 feet from the property line. Generator exhaust contains carbon monoxide (CO), nitrogen oxides (NOx), and diesel particulate matter — all hazardous at ground level. The 10-foot height ensures exhaust plume dilution before reaching the breathing zone. The generator room itself requires a minimum of 72 sq ft free area opening for combustion and ventilation air.",
     "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-026",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Firestat Trip Temperature Setting",
+    "scenario": "On the SACC high-rise TI project, a firestat is being installed in the return air duct. Per the SACC specification, at what temperature should the firestat be set to trip and shut down the HVAC system?",
+    "hint": "A firestat detects abnormally high temperatures in the return air that indicate a fire condition in the occupied space. The trip point must be high enough to avoid nuisance trips but low enough to detect a fire before significant smoke spreads through the ductwork.",
+    "options": [
+      { "text": "100 degrees F", "value": "100", "correct": false, "feedback": "100 degrees F is too low for a firestat setting. Normal return air in a high-rise office during extreme heat conditions could approach 85-90 degrees F. A 100-degree setpoint would cause nuisance trips during summer peak loads." },
+      { "text": "125 degrees F", "value": "125", "correct": true, "feedback": "Correct! The SACC specification sets the firestat trip point at 125 degrees F in the return air. This temperature is well above any normal operating condition (return air typically 72-78 degrees F) but low enough to detect a fire condition before extreme heat buildup." },
+      { "text": "160 degrees F", "value": "160", "correct": false, "feedback": "160 degrees F is too high for a return air firestat. By the time return air reaches 160 degrees F, a fire would be well advanced, and the HVAC system would have spread significant smoke throughout the ductwork and building. The SACC specification requires 125 degrees F." },
+      { "text": "200 degrees F", "value": "200", "correct": false, "feedback": "200 degrees F is the typical rating for a fusible-link fire damper, not a return air firestat. A firestat must trip much earlier to shut down the HVAC system before smoke is distributed to other floors of the high-rise." }
+    ],
+    "explanation": "The SACC specification requires the return air firestat to trip at 125 degrees F, which is consistent with NFPA 90A recommendations. At this temperature, the HVAC system shuts down and prevents the fan from circulating smoke and hot gases through the ductwork to other floors of the high-rise. The 125 degrees F setpoint provides a large safety margin above normal return air temperature (typically 72-78 degrees F) while catching fire conditions early.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-ctrl-027",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Transfer Fan Thermostat Setpoint",
+    "scenario": "The SACC project specifies wall-mounted thermostats to control transfer fans in the commercial office TI. What temperature setpoint should the thermostat be set to for fan activation?",
+    "hint": "Transfer fans provide supplemental air movement between zones when temperatures rise above a comfort threshold. The setpoint must balance comfort with energy efficiency — not too low to cause constant fan operation, not too high to allow discomfort.",
+    "options": [
+      { "text": "72 degrees F", "value": "72", "correct": false, "feedback": "72 degrees F is a normal occupied cooling setpoint. Setting the transfer fan at 72 degrees F would cause the fan to run almost continuously, wasting energy. Transfer fans are for supplemental cooling when the primary system cannot maintain comfort." },
+      { "text": "76 degrees F", "value": "76", "correct": false, "feedback": "76 degrees F is only 4 degrees above a typical cooling setpoint. The transfer fan would activate frequently during normal operation, particularly near windows or with high occupancy. The SACC specification sets a higher threshold." },
+      { "text": "80 degrees F", "value": "80", "correct": true, "feedback": "Correct! Per the SACC specification, transfer fan thermostats are set to 80 degrees F, adjustable. This activates the fan only when the primary HVAC system cannot maintain comfort, providing supplemental air movement to prevent hot spots." },
+      { "text": "85 degrees F", "value": "85", "correct": false, "feedback": "85 degrees F is too high for occupant comfort. At this temperature, occupants would already be experiencing significant discomfort for an extended period before the fan activates. The SACC specification sets the setpoint at 80 degrees F." }
+    ],
+    "explanation": "The SACC specification sets transfer fan thermostats at 80 degrees F (adjustable). This setpoint activates the fan only when the space exceeds the comfort range, providing supplemental air circulation without running continuously. The adjustable feature allows building engineers to fine-tune the setpoint based on actual conditions. At 80 degrees F, the fan provides relief before occupants reach significant discomfort, while avoiding unnecessary energy consumption.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-ctrl-028",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Leak Detector Alarm Response Time",
+    "scenario": "Leak detectors at the CRAC units on the SACC project are connected to the drip pans. Per ASHRAE and manufacturer standards, what is the maximum acceptable response time for a leak detector to trigger an alarm after water contact?",
+    "hint": "CRAC units in high-rise commercial spaces sit above occupied floors. A slow leak detection response could result in significant water damage to equipment and the floor below. Response time is measured from water contact to alarm generation.",
+    "options": [
+      { "text": "5 seconds", "value": "5", "correct": true, "feedback": "Correct! Leak detectors for CRAC applications must respond within 5 seconds of water contact. Rapid detection minimizes water damage to equipment, cabling, and occupied spaces below. The iCOM controller receives the alarm and can immediately alert the building engineer via the BMS." },
+      { "text": "30 seconds", "value": "30", "correct": false, "feedback": "30 seconds is too slow for CRAC leak detection. In half a minute, a significant amount of water can escape the drip pan and cause damage to equipment and the floor below. Industry standard is 5 seconds or less for critical space leak detection." },
+      { "text": "2 minutes", "value": "120", "correct": false, "feedback": "2 minutes of undetected water leakage near sensitive equipment and above occupied office space is unacceptable. At typical CRAC condensate flow rates, 2 minutes could produce gallons of water on the floor." },
+      { "text": "5 minutes", "value": "300", "correct": false, "feedback": "5 minutes far exceeds any acceptable leak detection standard. By this time, water damage would likely be extensive and could affect multiple floors of the high-rise." }
+    ],
+    "explanation": "Leak detectors at CRAC units must respond within 5 seconds of water contact per manufacturer standards and industry best practices. In the SACC high-rise, CRAC units on Level 32 sit above occupied office space — a slow leak response could damage equipment, cabling, ceiling finishes, and tenant spaces below. The leak detector signal connects through the iCOM controller to the base building BMS for immediate alarm notification to the building engineer.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-ctrl-029",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Title 24 Lighting Control Zone Maximum Area",
+    "scenario": "The SACC commercial office TI project in Los Angeles must comply with California Title 24 lighting control requirements. What is the maximum floor area per lighting control zone in an open office space?",
+    "hint": "Title 24 requires lighting to be controlled in zones small enough that unoccupied areas can be turned off independently. Larger zones waste energy by keeping lights on in unused areas. The maximum zone size applies to open plan offices.",
+    "options": [
+      { "text": "250 sq ft", "value": "250", "correct": true, "feedback": "Correct! California Title 24 Section 130.1(c) limits lighting control zones to a maximum of 250 sq ft in open office areas. This allows unoccupied sections to be turned off independently, reducing lighting energy waste in partially occupied open floor plans." },
+      { "text": "500 sq ft", "value": "500", "correct": false, "feedback": "500 sq ft exceeds the Title 24 maximum for open office zones. A zone this large would keep lights on over too much unoccupied area, wasting energy. Title 24 requires 250 sq ft maximum zones." },
+      { "text": "1000 sq ft", "value": "1000", "correct": false, "feedback": "1000 sq ft is far too large for a single lighting control zone. At this size, a single occupant would keep lights on over nearly 1000 sq ft of unoccupied space. Title 24 limits zones to 250 sq ft." },
+      { "text": "2500 sq ft", "value": "2500", "correct": false, "feedback": "2500 sq ft represents an entire office suite, not a lighting control zone. Title 24 requires fine-grained control at 250 sq ft maximum per zone to enable energy savings from partial occupancy." }
+    ],
+    "explanation": "California Title 24 Section 130.1(c) limits lighting control zones to 250 sq ft maximum in open office spaces. This requirement ensures that lighting energy is not wasted in partially occupied floor plates — common in high-rise commercial offices like the SACC project where different areas may be occupied at different times. Combined with occupancy sensing and daylight responsive controls, small zones dramatically reduce lighting energy in large open office TI projects.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-ctrl-030",
+    "type": "size-it",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "BACnet MS/TP Maximum Devices Per Trunk",
+    "scenario": "The SACC project uses BACnet MS/TP trunks to connect DDC controllers for VAV boxes across Levels 30-32. Each level has approximately 15 VAV zones. What is the maximum number of devices allowed on a single BACnet MS/TP trunk per ASHRAE 135?",
+    "hint": "BACnet MS/TP uses token-passing on an RS-485 bus. Too many devices on a single trunk increases token rotation time, which slows response and can cause communication timeouts. The practical limit is lower than the theoretical maximum.",
+    "options": [
+      { "text": "16 devices", "value": "16", "correct": false, "feedback": "16 devices is a common RS-485 limit for non-BACnet applications, but BACnet MS/TP supports more. However, 16 devices is often used as a practical limit for critical applications where fast response is needed." },
+      { "text": "32 devices", "value": "32", "correct": true, "feedback": "Correct! ASHRAE 135 specifies a maximum of 32 master devices per BACnet MS/TP trunk (MAC addresses 0-31 for masters, 32-127 for slaves). For the SACC project with 15 VAV zones per level, each level should have its own trunk to stay well under the 32-device limit and maintain fast token rotation." },
+      { "text": "64 devices", "value": "64", "correct": false, "feedback": "64 devices exceeds the BACnet MS/TP master device limit. While MAC addresses go up to 127, only addresses 0-31 participate in token passing as masters. More than 32 masters causes severe performance degradation." },
+      { "text": "127 devices", "value": "127", "correct": false, "feedback": "127 is the total number of valid MAC addresses (0-127, minus 127 which is reserved), but the master device limit is 32 (addresses 0-31). Having 127 devices on a trunk would make token rotation extremely slow — measured in minutes rather than milliseconds." }
+    ],
+    "explanation": "ASHRAE 135 limits BACnet MS/TP trunks to 32 master devices (MAC addresses 0-31). For the SACC project with 15 VAV controllers per floor across 3 floors (45 total), at least two MS/TP trunks are required. Best practice is one trunk per floor (15 devices each), keeping the device count well under 32 for fast token rotation and responsive control. Token rotation time increases linearly with device count — fewer devices means faster response to BAS commands.",
+    "xpReward": 75
   }
 ]

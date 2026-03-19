@@ -344,5 +344,152 @@
     ],
     "explanation": "Feeding a detached structure per NEC 225.30-225.40 and 250.32 requires a 4-wire feeder (3-wire is only allowed for existing installations), separate neutral and ground at the remote panel, a local grounding electrode system, and a disconnect means. Underground conduit burial depth is 18 inches minimum for PVC per NEC Table 300.5. The neutral must NEVER be bonded to ground at the remote panel.",
     "xpReward": 85
+  },
+  {
+    "id": "ba-elec-013",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: Tenant Panel Feed Assembly",
+    "description": "Assemble the components for feeding a new tenant panelboard (L30B) from the tenant transformer on Level 30 of the SACC high-rise office TI.",
+    "parts": [
+      { "id": 1, "name": "Tenant transformer (/TR-T) with secondary overcurrent protection", "correctPosition": 1 },
+      { "id": 2, "name": "Feeder conductors sized per panel schedule with VD% verification", "correctPosition": 2 },
+      { "id": 3, "name": "Panel L30B enclosure mounted with 36-inch working clearance", "correctPosition": 3 },
+      { "id": 4, "name": "Fully rated branch circuit breakers (no series rating allowed)", "correctPosition": 4 },
+      { "id": 5, "name": "TVSS (Transient Voltage Surge Suppressor) installed at panel", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Series-rated breaker combination" },
+      { "id": 102, "name": "Automatic transfer switch" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power source" },
+      { "id": 2, "label": "Position 2: Feeder conductors" },
+      { "id": 3, "label": "Position 3: Panel installation" },
+      { "id": 4, "label": "Position 4: Branch protection" },
+      { "id": 5, "label": "Position 5: Surge protection" }
+    ],
+    "explanation": "Tenant panel feed assembly in the SACC high-rise starts at the tenant transformer and flows through properly sized feeders to the panel. The SACC specification requires fully rated breakers (series rating prohibited) and TVSS at each panel. Voltage drop (VD%) must be verified against the single-line diagram calculations to ensure the feeder-plus-branch total stays under 5%.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-elec-014",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: Low Voltage Conduit Assembly",
+    "description": "Assemble the components for a wall-mounted low voltage junction box conduit run on Level 31 of the SACC high-rise office TI.",
+    "parts": [
+      { "id": 1, "name": "Wall-mounted junction box at low voltage equipment location", "correctPosition": 1 },
+      { "id": 2, "name": "1-inch minimum conduit connected to junction box", "correctPosition": 2 },
+      { "id": 3, "name": "Conduit routed vertically up through wall into ceiling space", "correctPosition": 3 },
+      { "id": 4, "name": "Conduit stub extended 6 inches above hung ceiling", "correctPosition": 4 },
+      { "id": 5, "name": "Conduit stub turned towards termination closet", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "1/2-inch conduit (undersized per SACC spec)" },
+      { "id": 102, "name": "Conduit terminated flush with ceiling grid" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Wall device location" },
+      { "id": 2, "label": "Position 2: Conduit connection" },
+      { "id": 3, "label": "Position 3: Vertical routing" },
+      { "id": 4, "label": "Position 4: Ceiling penetration" },
+      { "id": 5, "label": "Position 5: Directional routing" }
+    ],
+    "explanation": "The SACC low voltage conduit assembly follows a specific pathway from wall to ceiling. The 1-inch minimum conduit (not 1/2-inch) provides adequate capacity for data cables. The 6-inch stub above the hung ceiling (not flush) allows proper cable bending radius. Turning the stub towards the termination closet streamlines cable pulls and prevents cable congestion above the ceiling.",
+    "xpReward": 40
+  },
+  {
+    "id": "ba-elec-015",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Data Room Power Assembly",
+    "description": "Assemble the electrical power distribution components for a data room on Level 32 of the SACC high-rise office TI.",
+    "parts": [
+      { "id": 1, "name": "Dedicated panelboard with isolated ground (IG) bus", "correctPosition": 1 },
+      { "id": 2, "name": "Branch circuits with insulated equipment grounding conductors", "correctPosition": 2 },
+      { "id": 3, "name": "Isolated ground (IG) receptacles (orange triangle) at server racks", "correctPosition": 3 },
+      { "id": 4, "name": "UPS (Uninterruptible Power Supply) connected to critical loads", "correctPosition": 4 },
+      { "id": 5, "name": "PDU (Power Distribution Unit) distributing power to equipment racks", "correctPosition": 5 },
+      { "id": 6, "name": "Signal reference ground bar (SRG) bonded to building steel", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Standard duplex receptacles (no isolated ground)" },
+      { "id": 102, "name": "Power factor correction capacitor bank" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Dedicated panel" },
+      { "id": 2, "label": "Position 2: Clean power wiring" },
+      { "id": 3, "label": "Position 3: Equipment receptacles" },
+      { "id": 4, "label": "Position 4: Backup power" },
+      { "id": 5, "label": "Position 5: Power distribution" },
+      { "id": 6, "label": "Position 6: Ground reference" }
+    ],
+    "explanation": "Data room power assembly in the SACC project follows a clean-power hierarchy: dedicated panel with IG bus provides isolation from the building's general electrical system, insulated grounding conductors maintain that isolation to the receptacles, UPS provides battery backup during outages, and the PDU distributes power to individual equipment. The SRG establishes a common ground reference that prevents ground loops between interconnected data equipment per TIA-607-C.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-elec-016",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Leak Detection System Assembly",
+    "description": "Assemble the leak detection system components for a data room on Level 30 of the SACC high-rise office TI.",
+    "parts": [
+      { "id": 1, "name": "Leak detection panel (LDP) mounted in accessible location", "correctPosition": 1 },
+      { "id": 2, "name": "Low voltage control wiring from LDP to sensor locations", "correctPosition": 2 },
+      { "id": 3, "name": "Leak detectors (LD) installed at floor level in strategic locations", "correctPosition": 3 },
+      { "id": 4, "name": "Alarm relay wired from LDP to building monitoring system", "correctPosition": 4 },
+      { "id": 5, "name": "System test — simulate leak at each sensor and verify alarm activation", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Fire sprinkler tamper switch" },
+      { "id": 102, "name": "Smoke detector in data room ceiling" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Control panel" },
+      { "id": 2, "label": "Position 2: Sensor wiring" },
+      { "id": 3, "label": "Position 3: Detection sensors" },
+      { "id": 4, "label": "Position 4: Alarm integration" },
+      { "id": 5, "label": "Position 5: System commissioning" }
+    ],
+    "explanation": "The SACC project's leak detection system protects data room equipment from water damage. The LDP is the central controller that monitors all LD sensors. Leak detectors are placed at floor level near potential water sources — HVAC condensate drains, sprinkler risers, and plumbing penetrations. The alarm relay to the building monitoring system ensures 24/7 notification. In a high-rise, water leaks from floors above can travel through conduit penetrations and cable trays, making leak detection essential for any data room.",
+    "xpReward": 60
+  },
+  {
+    "id": "ba-elec-017",
+    "type": "build-assembly",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "SACC Office TI: Title 24 Lighting Control Assembly",
+    "description": "Assemble the California Title 24 compliant lighting control system for an office floor on Level 31 of the SACC high-rise office TI at 555 Flower Street, LA.",
+    "parts": [
+      { "id": 1, "name": "Lighting panel (L31B) with 277V circuits for LED troffers", "correctPosition": 1 },
+      { "id": 2, "name": "Automatic time-switch control with 7-day programmable schedule", "correctPosition": 2 },
+      { "id": 3, "name": "Occupancy sensors in private offices, conference rooms, and restrooms", "correctPosition": 3 },
+      { "id": 4, "name": "Daylight harvesting sensors in perimeter zone (within 15 feet of windows)", "correctPosition": 4 },
+      { "id": 5, "name": "Dimming drivers in LED troffers for daylight responsive dimming", "correctPosition": 5 },
+      { "id": 6, "name": "Emergency battery packs in designated fixtures on emergency circuit", "correctPosition": 6 },
+      { "id": 7, "name": "Title 24 compliance forms (NRCC-ELC-E and NRCC-LTS-E) completed and filed", "correctPosition": 7 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Manual dimmer switches at each fixture" },
+      { "id": 102, "name": "Photocell for exterior lighting control" },
+      { "id": 103, "name": "Relay panel for on/off switching only" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Power distribution" },
+      { "id": 2, "label": "Position 2: Scheduling control" },
+      { "id": 3, "label": "Position 3: Vacancy detection" },
+      { "id": 4, "label": "Position 4: Daylight sensing" },
+      { "id": 5, "label": "Position 5: Light level adjustment" },
+      { "id": 6, "label": "Position 6: Life safety lighting" },
+      { "id": 7, "label": "Position 7: Code documentation" }
+    ],
+    "explanation": "California Title 24 lighting controls for the SACC project require a layered approach: time-switch scheduling turns lights off during unoccupied hours, occupancy sensors handle individual rooms, and daylight harvesting dims perimeter lighting when natural light is sufficient. Dimming drivers in the LED fixtures enable the daylight sensors to smoothly reduce artificial light levels. Emergency battery packs provide 90-minute backup per NEC 700.12. The compliance forms (NRCC-ELC-E for electrical, NRCC-LTS-E for lighting) must be completed accurately and filed with the building department before certificate of occupancy.",
+    "xpReward": 90
   }
 ]

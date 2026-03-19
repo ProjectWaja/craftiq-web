@@ -331,5 +331,103 @@
     ],
     "explanation": "VRF fan coil commissioning per Spec 23 81 58 requires verifying the refrigerant system is operational before testing the indoor unit. Network addressing must be done before mode testing because the outdoor unit needs to recognize the indoor unit to allow refrigerant flow. Both heating and cooling modes must be tested independently. BACnet integration through the VRF gateway is verified after confirming the unit operates correctly on its native protocol to isolate any integration issues from mechanical problems.",
     "xpReward": 60
+  },
+  {
+    "id": "seq-ctrl-018",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "CRAC Unit Lead/Lag Switchover",
+    "description": "Order the steps for performing a lead/lag switchover between redundant CRAC units (CRAC-32-1 and CRAC-32-2) using the Liebert vNSA network switch.",
+    "steps": [
+      { "id": 1, "text": "Access the Liebert vNSA network switch configuration interface", "order": 1 },
+      { "id": 2, "text": "Verify the current lag unit (CRAC-32-2) is operational and ready to assume lead", "order": 2 },
+      { "id": 3, "text": "Command the lag unit to start and reach stable operating conditions", "order": 3 },
+      { "id": 4, "text": "Monitor room temperature and humidity to confirm lag unit is maintaining setpoints", "order": 4 },
+      { "id": 5, "text": "Command the current lead unit (CRAC-32-1) to standby mode", "order": 5 },
+      { "id": 6, "text": "Update the vNSA lead/lag designation so CRAC-32-2 is now lead", "order": 6 },
+      { "id": 7, "text": "Verify leak detectors and alarms are active on both units via iCOM controllers", "order": 7 }
+    ],
+    "explanation": "CRAC lead/lag switchover must be done carefully to prevent any gap in cooling. The lag unit must be verified operational and maintaining conditions BEFORE the lead unit is taken offline. The vNSA network switch coordinates this sequencing to ensure continuous cooling for the critical space. Never shut down the lead unit before confirming the lag unit is stable.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-ctrl-019",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Transfer Fan Thermostat Installation",
+    "description": "Order the steps for installing and commissioning a wall-mounted thermostat to control a transfer fan in the SACC commercial office TI.",
+    "steps": [
+      { "id": 1, "text": "Mount the thermostat on an interior wall at 4-5 feet height in the served zone", "order": 1 },
+      { "id": 2, "text": "Wire the thermostat switch contacts to the transfer fan relay", "order": 2 },
+      { "id": 3, "text": "Set the thermostat setpoint to 80 degrees F per the SACC specification", "order": 3 },
+      { "id": 4, "text": "Power on the circuit and verify the thermostat display is active", "order": 4 },
+      { "id": 5, "text": "Simulate a temperature rise above 80 degrees F and confirm the transfer fan starts", "order": 5 },
+      { "id": 6, "text": "Verify the fan stops when temperature drops below the setpoint minus deadband", "order": 6 }
+    ],
+    "explanation": "Transfer fan thermostat installation on the SACC project follows a mount-wire-set-verify sequence. The 80 degrees F setpoint is specified to prevent the fan from running continuously while still activating before the space becomes uncomfortably warm. Testing both the on and off functions confirms the deadband prevents short-cycling.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-ctrl-020",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Motorized Outside Air Damper Interlock Commissioning",
+    "description": "Order the steps for commissioning the motorized outside air damper interlock with the evaporator fan on the SACC project.",
+    "steps": [
+      { "id": 1, "text": "Verify the motorized damper actuator is powered and wired to the DDC controller output", "order": 1 },
+      { "id": 2, "text": "Confirm the interlock wiring between the damper end switch and the fan starter circuit", "order": 2 },
+      { "id": 3, "text": "Command the damper to open from the BAS and verify full open position via end switch", "order": 3 },
+      { "id": 4, "text": "With the damper confirmed open, enable the evaporator fan and verify it starts", "order": 4 },
+      { "id": 5, "text": "Command the damper to close and verify the evaporator fan shuts down automatically", "order": 5 },
+      { "id": 6, "text": "Simulate a power loss to the actuator and confirm the damper spring-returns to closed", "order": 6 },
+      { "id": 7, "text": "Verify the fan cannot start when the damper is in the closed position", "order": 7 },
+      { "id": 8, "text": "Document the interlock test results and damper open/close times", "order": 8 }
+    ],
+    "explanation": "The SACC specification requires the outside air motorized damper to be interlocked with the evaporator fan. The damper must be confirmed fully open before the fan can start, and the fan must shut down when the damper closes. Testing the spring-return confirms fail-safe operation on power loss. This interlock prevents operating the fan against a closed damper and protects against uncontrolled outdoor air infiltration per IMC Section 403.2.",
+    "xpReward": 65
+  },
+  {
+    "id": "seq-ctrl-021",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Firestat and Smoke Detector Functional Testing",
+    "description": "Order the steps for performing a functional test of the firestat and smoke detector safety interlocks on the SACC high-rise TI HVAC system.",
+    "steps": [
+      { "id": 1, "text": "Notify building management and fire alarm monitoring company that testing will occur", "order": 1 },
+      { "id": 2, "text": "Place the fire alarm panel zone for Levels 30-32 in test mode", "order": 2 },
+      { "id": 3, "text": "Verify the HVAC system is running normally with all fans and dampers operational", "order": 3 },
+      { "id": 4, "text": "Simulate the smoke detector with test aerosol and verify system shutdown plus audio/visual alarm at control display panel", "order": 4 },
+      { "id": 5, "text": "Confirm the firestat trips at return air temperature above 125 degrees F using a heat source", "order": 5 },
+      { "id": 6, "text": "Verify both devices trigger hardwired shutdown independent of BAS software", "order": 6 },
+      { "id": 7, "text": "Reset all devices and verify the system returns to normal operation", "order": 7 },
+      { "id": 8, "text": "Remove the fire alarm panel from test mode and confirm with monitoring company", "order": 8 }
+    ],
+    "explanation": "Firestat and smoke detector testing on the SACC project must follow a strict protocol. The fire alarm panel must be in test mode to prevent false dispatch of the fire department. The firestat activates at return air temperatures exceeding 125 degrees F, while the smoke detector triggers both system shutdown and audio/visual alarm at the control display panel. Both must operate through hardwired interlocks per NFPA 90A, independent of BAS software.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-ctrl-022",
+    "type": "sequence",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Enhanced LEED Commissioning — Controls Verification",
+    "description": "Order the steps for performing enhanced LEED commissioning verification on all building controls systems for the SACC high-rise TI project.",
+    "steps": [
+      { "id": 1, "text": "Review the Owner's Project Requirements (OPR) and Basis of Design (BOD) documents", "order": 1 },
+      { "id": 2, "text": "Verify all DDC controllers, sensors, and actuators match the controls submittals", "order": 2 },
+      { "id": 3, "text": "Perform point-to-point checkout on all I/O: VAV boxes, CRAC units, dampers, fans", "order": 3 },
+      { "id": 4, "text": "Execute functional performance tests for each control sequence per the commissioning plan", "order": 4 },
+      { "id": 5, "text": "Verify BTU meters are accurate and properly integrated with base building BMS", "order": 5 },
+      { "id": 6, "text": "Confirm Title 24 lighting controls meet all demand response and multi-level requirements", "order": 6 },
+      { "id": 7, "text": "Configure trending on all critical control points for post-occupancy performance monitoring", "order": 7 },
+      { "id": 8, "text": "Compile the commissioning report documenting all test results, deficiencies, and resolutions", "order": 8 },
+      { "id": 9, "text": "Conduct seasonal performance verification 10 months after occupancy using trend data", "order": 9 }
+    ],
+    "explanation": "Enhanced LEED commissioning for the SACC project requires the independent commissioning authority to verify all systems — HVAC controls, BTU metering, lighting controls, and motorized shades — meet the OPR and BOD. The process extends beyond initial commissioning to include 10 months of post-occupancy performance verification using trend data per LEED v4 EAc1 and ASHRAE Guideline 0.",
+    "xpReward": 95
   }
 ]

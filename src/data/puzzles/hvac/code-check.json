@@ -358,5 +358,65 @@
     "codeReference": "UCSB Louver Schedule / AMCA 550",
     "explanation": "This installation is correct. Per the UCSB louver schedule, 1,000 CFM requires a minimum of 2.0 sq ft free area. At this combination, the face velocity is 500 FPM (1,000 CFM / 2.0 sq ft = 500 FPM), which is the maximum recommended velocity for storm-resistant louvers per AMCA 550. The drainable blade design allows rain that enters the louver to drain back outside rather than entering the duct system. The louver size, type, and free area all meet the specification requirements.",
     "xpReward": 35
+  },
+  {
+    "id": "cc-hvac-031",
+    "type": "code-check",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Flex Duct Length and Clamp Type",
+    "scenario": "On the SACC Level 31 tenant improvement, a sheet metal worker installs a 4-foot flex duct run from a branch takeoff to a linear diffuser. The flex duct connections are secured with stainless steel worm-drive clamps and UL-listed mastic at both ends. The flex is fully extended with no kinks.",
+    "isUpToCode": true,
+    "codeReference": "SACC Mechanical Specification / NFPA 90A Section 4.3.10",
+    "explanation": "This installation is fully compliant with the SACC specification. The 4-foot run is under the 5-foot maximum, stainless steel worm-drive clamps meet the SS worm clamp requirement, and UL-listed mastic provides the required sealant. The SACC spec is explicit about clamp type — zip ties, plastic clamps, and duct tape are all prohibited. The fully extended flex duct ensures minimum pressure drop and maximum airflow delivery.",
+    "xpReward": 35
+  },
+  {
+    "id": "cc-hvac-032",
+    "type": "code-check",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Return Air Grille Velocity",
+    "scenario": "On the SACC project, a return air grille in an open office area on Level 30 is measured at 380 FPM face velocity during TAB. The grille is a fixed-bar type in the ceiling return plenum.",
+    "isUpToCode": true,
+    "codeReference": "SACC Mechanical Specification / SMACNA HVAC Systems Testing, Adjusting and Balancing",
+    "explanation": "The 380 FPM face velocity is within the SACC specification maximum of 400 FPM for return air grilles. At velocities above 400 FPM, return grilles generate audible noise that disrupts office workers — typically NC-35 or higher, which exceeds the NC-30 criterion for open office environments. The 380 FPM reading leaves only 20 FPM of margin, so the TAB contractor should note this in the report. If future rebalancing increases airflow, this grille could exceed the limit.",
+    "xpReward": 40
+  },
+  {
+    "id": "cc-hvac-033",
+    "type": "code-check",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC CRAC Vibration Isolation Deflection",
+    "scenario": "On the SACC project, a Liebert MM40C CRAC unit in the IDF room is installed on spring-neoprene isolation mounts with a measured static deflection of 1.5 inches. The specification requires minimum 1-inch spring-neoprene mounts.",
+    "isUpToCode": false,
+    "codeReference": "SACC Mechanical Specification / ASHRAE Handbook — HVAC Applications Ch. 48",
+    "explanation": "While the SACC specification states minimum 1-inch spring-neoprene mounts, it also requires a minimum 2-inch static deflection for CRAC unit vibration isolation. The 1.5-inch deflection does not meet the 2-inch minimum. Static deflection determines isolation efficiency — at 1.5 inches, the mounts provide approximately 90% isolation efficiency, while 2 inches provides approximately 95%. In a high-rise office building where the IDF room is directly above occupied space, the additional 5% isolation is critical for controlling low-frequency compressor vibration that travels through the structure.",
+    "xpReward": 60
+  },
+  {
+    "id": "cc-hvac-034",
+    "type": "code-check",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Duct Hanger Load and Spacing",
+    "scenario": "On the SACC project, a 24\"x18\" rectangular supply duct (3.0 sq ft cross section) is supported by trapeze hangers spaced at 8 feet on center. Each hanger is carrying approximately 48 lbs including the weight of duct, insulation, and turning vanes.",
+    "isUpToCode": true,
+    "codeReference": "SACC Mechanical Specification / SMACNA HVAC Duct Construction Standards",
+    "explanation": "This installation meets both SACC requirements. The duct cross section is 3.0 sq ft, which is under the 4 sq ft threshold — so 8-foot OC hanger spacing is correct (ducts over 4 sq ft require 4-foot OC spacing). The 48 lb load per hanger is under the 50 lb maximum. However, the load is close to the limit. If additional accessories like smoke detectors, access doors, or heavier insulation are added later, the hangers could become overloaded. Best practice is to document the hanger load margin in the commissioning report.",
+    "xpReward": 55
+  },
+  {
+    "id": "cc-hvac-035",
+    "type": "code-check",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "SACC Transfer Fan Thermostat and Exhaust Fan Control Conflict",
+    "scenario": "On Level 32 of the SACC project, a Greenheck CSP-A510-VG transfer fan is wired to a thermostat set at 80°F, and a Greenheck CSP-A1050-VG exhaust fan on the same floor is wired to a thermostat set at 78°F instead of a timeclock. The contractor argues that the thermostat provides better energy savings by only running the exhaust fan when the space is warm.",
+    "isUpToCode": false,
+    "codeReference": "SACC Mechanical Specification / ASHRAE 62.1 / IMC 403",
+    "explanation": "The transfer fan thermostat at 80°F is correct per the SACC specification. However, the exhaust fan must be controlled by a timeclock, not a thermostat. ASHRAE 62.1 requires continuous exhaust ventilation during occupied hours to maintain indoor air quality — exhaust provides the negative pressure that drives outdoor air into the building through makeup air pathways. A thermostat-controlled exhaust fan would shut off whenever the space temperature drops below 78°F, eliminating ventilation airflow and allowing CO2, VOCs, and other contaminants to accumulate. The contractor's energy savings argument ignores the ventilation code requirement. The exhaust fan must run on a timeclock aligned with building occupancy hours.",
+    "xpReward": 85
   }
 ]

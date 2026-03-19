@@ -344,5 +344,152 @@
     ],
     "explanation": "Energy metering integration requires proper CT installation (correct ratio and orientation), voltage sensing for power factor calculation, and accurate pulse counting in the BAS. The meter K-factor (pulses per kWh) must be correctly configured. Verification against the meter display confirms accuracy per ASHRAE 90.1 Section 8.",
     "xpReward": 80
+  },
+  {
+    "id": "ba-ctrl-013",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "CRAC Unit iCOM Controller Integration",
+    "description": "Assemble the components for integrating a Liebert CRAC unit with the iCOM controller and base building BMS on the SACC project.",
+    "parts": [
+      { "id": 1, "name": "Mount iCOM controller on CRAC unit and connect to unit sensors", "correctPosition": 1 },
+      { "id": 2, "name": "Connect leak detector at drip pan to iCOM alarm input", "correctPosition": 2 },
+      { "id": 3, "name": "Wire iCOM to Liebert vNSA network switch for lead/lag coordination", "correctPosition": 3 },
+      { "id": 4, "name": "Configure BACnet communication module in iCOM for BMS integration", "correctPosition": 4 },
+      { "id": 5, "name": "Map CRAC status points to base building BMS for remote monitoring", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Chilled water flow meter" },
+      { "id": 102, "name": "Duct smoke detector relay" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Local controller" },
+      { "id": 2, "label": "Position 2: Safety devices" },
+      { "id": 3, "label": "Position 3: Unit coordination" },
+      { "id": 4, "label": "Position 4: Network protocol" },
+      { "id": 5, "label": "Position 5: Building integration" }
+    ],
+    "explanation": "CRAC unit integration on the SACC project follows a local-to-global sequence: first the iCOM controller connects to the unit's local sensors and safety devices, then coordinates with the redundant unit through the vNSA switch, then connects to the building BMS via BACnet. This ensures local safety (leak detection) is operational before enabling network features.",
+    "xpReward": 45
+  },
+  {
+    "id": "ba-ctrl-014",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Motorized Outside Air Damper with Fan Interlock",
+    "description": "Assemble the components for installing a motorized outside air damper with evaporator fan interlock on the SACC high-rise TI project.",
+    "parts": [
+      { "id": 1, "name": "Install motorized damper in outside air duct opening", "correctPosition": 1 },
+      { "id": 2, "name": "Mount spring-return actuator on damper shaft", "correctPosition": 2 },
+      { "id": 3, "name": "Wire actuator control signal to DDC controller analog output", "correctPosition": 3 },
+      { "id": 4, "name": "Wire damper end switch to evaporator fan starter interlock circuit", "correctPosition": 4 },
+      { "id": 5, "name": "Wire damper position feedback to DDC controller binary input for BMS monitoring", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Barometric relief damper" },
+      { "id": 102, "name": "Fire damper fusible link" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Mechanical installation" },
+      { "id": 2, "label": "Position 2: Actuation" },
+      { "id": 3, "label": "Position 3: Control signal" },
+      { "id": 4, "label": "Position 4: Safety interlock" },
+      { "id": 5, "label": "Position 5: Status monitoring" }
+    ],
+    "explanation": "The SACC specification requires the outside air damper to be interlocked with the evaporator fan via a hardwired end switch. The spring-return actuator ensures the damper closes on power failure. The end switch in the fan starter circuit prevents the fan from starting until the damper is confirmed open, protecting against operating the fan with a closed damper per IMC Section 403.2.",
+    "xpReward": 50
+  },
+  {
+    "id": "ba-ctrl-015",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "BTU Meter Installation for Base Building BMS",
+    "description": "Assemble the components for installing a BTU meter on the tenant chilled water connection and integrating it with the base building BMS on the SACC project.",
+    "parts": [
+      { "id": 1, "name": "Install ultrasonic flow meter on chilled water supply pipe with required straight pipe runs", "correctPosition": 1 },
+      { "id": 2, "name": "Install matched temperature sensors in supply and return pipe thermowells", "correctPosition": 2 },
+      { "id": 3, "name": "Wire flow meter and temperature sensors to BTU meter calculator/display", "correctPosition": 3 },
+      { "id": 4, "name": "Configure BACnet communication module in BTU meter for BMS integration", "correctPosition": 4 },
+      { "id": 5, "name": "Map BTU, flow rate, and temperature points to base building BMS with trending enabled", "correctPosition": 5 },
+      { "id": 6, "name": "Calibrate meter against reference instruments and document accuracy verification", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Pressure relief valve" },
+      { "id": 102, "name": "Chemical treatment injection port" },
+      { "id": 103, "name": "Expansion tank connection" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Flow sensing" },
+      { "id": 2, "label": "Position 2: Temperature sensing" },
+      { "id": 3, "label": "Position 3: Local calculation" },
+      { "id": 4, "label": "Position 4: Network protocol" },
+      { "id": 5, "label": "Position 5: Building integration" },
+      { "id": 6, "label": "Position 6: Verification" }
+    ],
+    "explanation": "BTU metering on the SACC project follows a sense-calculate-integrate-verify sequence. The flow meter requires adequate straight pipe runs for accuracy. Matched temperature sensors ensure accurate delta-T measurement. BACnet integration with the base building BMS enables remote monitoring and trend data collection for tenant energy cost allocation per ASHRAE 90.1 Section 8 and LEED requirements.",
+    "xpReward": 65
+  },
+  {
+    "id": "ba-ctrl-016",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Firestat and Smoke Detector Safety Chain",
+    "description": "Assemble the HVAC safety shutdown chain from the firestat and smoke detector to the system shutdown on the SACC high-rise TI project.",
+    "parts": [
+      { "id": 1, "name": "Firestat sensor element installed in return air duct (set at 125 degrees F)", "correctPosition": 1 },
+      { "id": 2, "name": "Duct smoke detector installed in supply air duct", "correctPosition": 2 },
+      { "id": 3, "name": "Hardwire both devices in series to HVAC system disconnect relay", "correctPosition": 3 },
+      { "id": 4, "name": "Wire smoke detector alarm output to audio/visual indicator at control display panel", "correctPosition": 4 },
+      { "id": 5, "name": "Connect status monitoring points to BAS for remote alarm notification", "correctPosition": 5 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "CO2 sensor for demand ventilation" },
+      { "id": 102, "name": "Humidity transmitter" },
+      { "id": 103, "name": "Outdoor air temperature sensor" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: Return air safety" },
+      { "id": 2, "label": "Position 2: Supply air safety" },
+      { "id": 3, "label": "Position 3: Hardwired shutdown" },
+      { "id": 4, "label": "Position 4: Local alarm indication" },
+      { "id": 5, "label": "Position 5: Remote monitoring" }
+    ],
+    "explanation": "The SACC safety chain requires both firestat (return air >125 degrees F) and smoke detector (supply air) to be hardwired in series to the HVAC disconnect. This ensures either device can shut down the system independently of BAS software. The audio/visual alarm at the control display panel provides immediate local notification per NFPA 90A. BAS monitoring provides remote notification but is never the primary shutdown mechanism for life-safety functions.",
+    "xpReward": 70
+  },
+  {
+    "id": "ba-ctrl-017",
+    "type": "build-assembly",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Complete TI BAS Integration with Base Building BMS",
+    "description": "Assemble the integration layers for connecting the SACC tenant improvement BAS on Levels 30-32 to the base building BMS, from field devices through building-wide integration.",
+    "parts": [
+      { "id": 1, "name": "DDC controllers for VAV zones, CRAC iCOM controllers, and lighting panels on TI network", "correctPosition": 1 },
+      { "id": 2, "name": "BACnet gateway/router between TI BAS subnet and base building BMS network", "correctPosition": 2 },
+      { "id": 3, "name": "BTU meter BACnet points mapped to base building BMS for energy monitoring", "correctPosition": 3 },
+      { "id": 4, "name": "Fire alarm integration — TI smoke/fire devices connected to base building fire alarm panel", "correctPosition": 4 },
+      { "id": 5, "name": "Motorized shades and Title 24 lighting controls coordinated with base building schedule", "correctPosition": 5 },
+      { "id": 6, "name": "Enhanced LEED commissioning verification of all integrated systems by independent CxA", "correctPosition": 6 }
+    ],
+    "distractors": [
+      { "id": 101, "name": "Standalone weather station" },
+      { "id": 102, "name": "Independent chiller plant controller" },
+      { "id": 103, "name": "Separate security access system" }
+    ],
+    "positions": [
+      { "id": 1, "label": "Position 1: TI field layer" },
+      { "id": 2, "label": "Position 2: Network integration" },
+      { "id": 3, "label": "Position 3: Energy metering" },
+      { "id": 4, "label": "Position 4: Life-safety integration" },
+      { "id": 5, "label": "Position 5: Automation coordination" },
+      { "id": 6, "label": "Position 6: Verification" }
+    ],
+    "explanation": "High-rise TI BAS integration on the SACC project requires a layered approach: field devices first, then network connectivity to the base building, then energy metering integration, then life-safety coordination, then automation scheduling, and finally independent commissioning verification. Each layer depends on the previous one — you cannot verify BTU meter integration before the BACnet gateway is established, and you cannot commission the integrated system until all layers are connected. Enhanced LEED commissioning by an independent CxA verifies the entire integration meets the Owner's Project Requirements per ASHRAE Guideline 0.",
+    "xpReward": 90
   }
 ]

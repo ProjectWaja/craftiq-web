@@ -289,5 +289,90 @@
     ],
     "explanation": "VFD harmonic compliance per IEEE 519 is a UCSB specification requirement. THD must stay below 3% at the PCC, and capacitor placement is critical — output-side capacitors create dangerous resonance with the PWM waveform. These are journeyman-level power quality concepts.",
     "xpReward": 75
+  },
+  {
+    "id": "ww-elec-018",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: Tenant Panel Labeling",
+    "components": [
+      { "id": 1, "name": "New panel L30B installed and energized from tenant transformer", "correct": true },
+      { "id": 2, "name": "Branch circuits terminated with proper torque specifications", "correct": true },
+      { "id": 3, "name": "Panel directory left blank — no circuit identification completed", "correct": false, "violation": "Every panelboard must have a legible circuit directory identifying each circuit. On a commercial TI project, unlabeled panels are an immediate inspection failure and create a safety hazard for other floor tenants and maintenance personnel.", "codeReference": "NEC 408.4(A)", "fixDescription": "Complete the panel directory with legible, permanent markings identifying each circuit's purpose and area served. Include panel designation (L30B/TR-T) matching the single-line diagram." },
+      { "id": 4, "name": "TVSS (Transient Voltage Surge Suppressor) installed at panel", "correct": true },
+      { "id": 5, "name": "Temporary power breaker used for construction but not labeled", "correct": false, "violation": "The SACC project specification requires all panels and breakers used for temporary lighting to be clearly labeled. Unlabeled temporary power creates confusion about which circuits are temporary vs. permanent and risks leaving construction power live during turnover.", "codeReference": "NEC 590.4(D) / SACC Specification", "fixDescription": "Clearly label all temporary power breakers and panels with 'TEMPORARY — REMOVE AT COMPLETION' tags. At project completion, remove all temporary stringers, lamps, outlets, and fusing." },
+      { "id": 6, "name": "Working clearance of 36 inches maintained in front of panel", "correct": true }
+    ],
+    "explanation": "In a commercial office TI, panel labeling is critical both for NEC compliance and for tenant coordination. The SACC project requires clear identification of all permanent and temporary circuits. Unlabeled panels create hazards for other floor tenants during service interruptions and for maintenance electricians who need to quickly identify circuits.",
+    "xpReward": 45
+  },
+  {
+    "id": "ww-elec-019",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "SACC Office TI: GFCI Receptacle Installation",
+    "components": [
+      { "id": 1, "name": "20A receptacles installed in open office areas", "correct": true },
+      { "id": 2, "name": "Isolated ground (IG) receptacles installed at data room workstations", "correct": true },
+      { "id": 3, "name": "Break room receptacle within 6 feet of sink has no GFCI protection", "correct": false, "violation": "All 125V, 15A and 20A receptacles installed within 6 feet of a sink edge in commercial occupancies require GFCI protection. Break room sinks in commercial offices are treated the same as kitchen sinks for GFCI purposes.", "codeReference": "NEC 210.8(B)(7)", "fixDescription": "Replace the standard receptacle with a GFCI receptacle or protect the circuit with a GFCI breaker at panel L30B." },
+      { "id": 4, "name": "Receptacles installed at proper height per ADA requirements", "correct": true },
+      { "id": 5, "name": "Conduit stubbed only 3 inches above hung ceiling at low voltage junction box", "correct": false, "violation": "SACC project specifications require 1-inch minimum empty conduit for all wall-mounted low voltage equipment junction boxes, stubbed 6 inches above the hung ceiling and turned towards the termination closet. A 3-inch stub does not meet the specification.", "codeReference": "SACC Electrical Specification", "fixDescription": "Extend the conduit stub to a minimum of 6 inches above the hung ceiling and turn it towards the termination closet per specification." },
+      { "id": 6, "name": "Proper wire connectors rated for circuit voltage", "correct": true }
+    ],
+    "explanation": "Commercial office TI work combines standard NEC requirements like GFCI protection with project-specific specifications for low voltage infrastructure. The SACC project's 6-inch stub requirement above the ceiling ensures adequate room for cable routing to termination closets and prevents damage during ceiling tile work.",
+    "xpReward": 40
+  },
+  {
+    "id": "ww-elec-020",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Voltage Drop on Branch Circuit",
+    "components": [
+      { "id": 1, "name": "Panel L31C feeding branch circuits on Level 31", "correct": true },
+      { "id": 2, "name": "Branch circuit with 4.2% voltage drop to receptacles at far end of floor", "correct": false, "violation": "NEC 210.19(A) Informational Note recommends a maximum 3% voltage drop on branch circuits, with 5% total for feeder plus branch combined. At 4.2%, this branch circuit exceeds the 3% recommendation. On the SACC project, single-line diagrams include voltage drop calculations (VD%) and the design engineer has specified compliance with these limits.", "codeReference": "NEC 210.19(A) Informational Note / SACC Single Line Diagram", "fixDescription": "Upsize the branch circuit conductors or reroute the circuit to reduce the run length. Recalculate voltage drop to confirm it is at or below 3%." },
+      { "id": 3, "name": "Circuits properly identified on panel schedule with VD% calculations", "correct": true },
+      { "id": 4, "name": "Equipment grounding conductor continuous from panel to devices", "correct": true },
+      { "id": 5, "name": "Series-rated breaker installed in re-utilized existing panel", "correct": false, "violation": "The SACC specification explicitly prohibits series rating of overcurrent protective devices. Existing panels being re-utilized must be fully rated — meaning each breaker must be independently rated for the available fault current without relying on upstream devices to limit let-through current.", "codeReference": "NEC 240.86 / SACC Specification", "fixDescription": "Replace the series-rated breaker with a fully rated breaker that has an individual interrupting rating equal to or exceeding the available fault current at the panel." },
+      { "id": 6, "name": "Proper conduit support and routing above hung ceiling", "correct": true }
+    ],
+    "explanation": "The SACC high-rise TI project enforces strict voltage drop limits and prohibits series-rated protection. Voltage drop calculations appear on the single-line diagrams as VD% values. Series rating is prohibited because in a multi-tenant high-rise, a fault on one tenant's circuit must never compromise protection coordination for other tenants or the building's main switchgear.",
+    "xpReward": 65
+  },
+  {
+    "id": "ww-elec-021",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "SACC Office TI: Data Room Electrical Installation",
+    "components": [
+      { "id": 1, "name": "PDU (Power Distribution Unit) properly installed for data equipment", "correct": true },
+      { "id": 2, "name": "UPS (Uninterruptible Power Supply) system connected", "correct": true },
+      { "id": 3, "name": "Leak detection panel (LDP) installed but leak detectors (LD) not wired to electrical system", "correct": false, "violation": "Leak detectors in data rooms must be properly connected to the leak detection panel and integrated with the building alarm system. Unconnected leak detectors provide no protection against water intrusion that could destroy data equipment worth hundreds of thousands of dollars.", "codeReference": "SACC Electrical Plans / NEC 645.10", "fixDescription": "Wire all leak detectors (LD) to the leak detection panel (LDP) per the electrical plans. Verify alarm signal reaches the building monitoring system." },
+      { "id": 4, "name": "Signal reference ground bar (SRG) properly bonded to building steel", "correct": true },
+      { "id": 5, "name": "Standard receptacles used instead of isolated ground (IG) receptacles at server racks", "correct": false, "violation": "Data rooms require isolated ground (IG) receptacles to prevent electromagnetic interference from the building's general grounding system from affecting sensitive electronic equipment. The SACC plans specifically call out IG receptacles for data room locations.", "codeReference": "NEC 250.146(D) / SACC Electrical Plans", "fixDescription": "Replace standard receptacles with isolated ground (IG) receptacles (orange triangle marking). Run an insulated equipment grounding conductor separate from the conduit back to the panel's isolated ground bus." },
+      { "id": 6, "name": "Reference ground bar (RGB) installed in telecom room", "correct": true }
+    ],
+    "explanation": "Data rooms in commercial office TI projects require specialized electrical installations including isolated ground receptacles, leak detection systems, and dedicated grounding infrastructure. The SACC project includes PDUs, UPS systems, signal reference ground bars (SRG), and reference ground bars (RGB) — all critical for protecting sensitive electronic equipment in a high-rise environment.",
+    "xpReward": 60
+  },
+  {
+    "id": "ww-elec-022",
+    "type": "whats-wrong",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "SACC Office TI: Service Interruption and Temporary Power",
+    "components": [
+      { "id": 1, "name": "Tenant transformer feeding new panels L32B and L32C", "correct": true },
+      { "id": 2, "name": "Service interruption to existing tenants scheduled with only 2-day notice", "correct": false, "violation": "SACC project specifications require a minimum 5-day notice for any service interruptions to existing tenants. In a multi-tenant high-rise at 555 Flower Street, unannounced or short-notice power outages can disrupt business operations, data systems, and security. The 2-day notice is 3 days short of the requirement.", "codeReference": "SACC General Conditions / Premium Time Work Requirements", "fixDescription": "Resubmit the service interruption request with a minimum 5-day advance notice to all affected tenants. Coordinate with the building management office for scheduling." },
+      { "id": 3, "name": "Temporary power stringers and lamps installed per specification", "correct": true },
+      { "id": 4, "name": "California Title 24 electrical compliance forms completed and filed", "correct": true },
+      { "id": 5, "name": "Motorized dampers (MD) and motorized shades (MS) not connected to electrical system", "correct": false, "violation": "Motorized dampers and motorized shades shown on the SACC electrical plans must be connected to the appropriate branch circuits with proper control wiring. Unconnected motorized dampers can prevent proper smoke control in a high-rise fire event, creating a life-safety hazard.", "codeReference": "NEC 430.1 / NFPA 90A / SACC Electrical Plans", "fixDescription": "Connect all motorized dampers (MD) to fire alarm interlocks and motorized shades (MS) to their control circuits per the electrical plans. Verify fire alarm sequences with the fire alarm contractor." },
+      { "id": 6, "name": "Premium time work scheduled to avoid disturbing other floor tenants", "correct": true }
+    ],
+    "explanation": "High-rise commercial TI projects like the SACC 555 Flower Street project have complex coordination requirements. The 5-day minimum notice for service interruptions protects existing tenants. Motorized dampers are life-safety devices that must be connected to fire alarm systems. Premium time work (nights/weekends) is required when construction noise or vibration would disturb occupied floors — a significant cost factor in high-rise TI projects.",
+    "xpReward": 85
   }
 ]

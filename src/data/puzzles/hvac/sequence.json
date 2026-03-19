@@ -300,5 +300,103 @@
     ],
     "explanation": "Fire-rated duct installation per NFPA 90A requires a systems approach: the duct material (G-90 galvanized), fire-resistive coating (minimum 0.04\" thick per ISO 6944), sealed joints, and fire dampers all work together to maintain the fire barrier. Every fire damper must be functionally tested before the ceiling or wall is closed. Labeling is required so future inspectors can verify the rating. This is life-safety work — shortcuts here kill people.",
     "xpReward": 75
+  },
+  {
+    "id": "seq-hvac-018",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC IDF Room CRAC Unit Startup",
+    "description": "Order the steps for starting up a Liebert MM40C CRAC unit in an IDF room on the SACC high-rise office project.",
+    "steps": [
+      { "id": 1, "text": "Verify spring-neoprene isolation mounts are properly installed with 2\" static deflection", "order": 1 },
+      { "id": 2, "text": "Open chilled water isolation valves and verify flow through the CRAC coil", "order": 2 },
+      { "id": 3, "text": "Confirm condensate drain P-trap is primed with water", "order": 3 },
+      { "id": 4, "text": "Verify firestat is set to 125°F return air shutdown threshold", "order": 4 },
+      { "id": 5, "text": "Power on the CRAC unit and initialize the iCOM controller", "order": 5 },
+      { "id": 6, "text": "Set supply air temperature and humidity setpoints per the spec", "order": 6 },
+      { "id": 7, "text": "Verify return air grille face velocity does not exceed 400 FPM", "order": 7 },
+      { "id": 8, "text": "Confirm BTU meter is reading and transmitting data to BMS", "order": 8 }
+    ],
+    "explanation": "CRAC unit startup follows a specific sequence: physical installation verification first (isolation, piping, drainage), then safety devices (firestat), then power-on and controls configuration, and finally performance verification (airflow, metering). Energizing the unit before confirming chilled water flow risks freezing the coil, and skipping the firestat check leaves a life-safety gap.",
+    "xpReward": 45
+  },
+  {
+    "id": "seq-hvac-019",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Flex Duct Connection Procedure",
+    "description": "Order the steps for making a flex duct connection at a branch takeoff on the SACC commercial office TI project.",
+    "steps": [
+      { "id": 1, "text": "Verify flex duct run length will not exceed 5-foot maximum", "order": 1 },
+      { "id": 2, "text": "Pull flex duct inner liner over the sheet metal collar", "order": 2 },
+      { "id": 3, "text": "Secure inner liner with stainless steel worm-drive clamp", "order": 3 },
+      { "id": 4, "text": "Apply UL-listed mastic over the inner clamp connection", "order": 4 },
+      { "id": 5, "text": "Pull outer jacket and insulation over the connection", "order": 5 },
+      { "id": 6, "text": "Secure outer jacket with a second SS worm-drive clamp", "order": 6 },
+      { "id": 7, "text": "Verify flex duct is fully extended — no compression or kinks", "order": 7 }
+    ],
+    "explanation": "The SACC specification is strict about flex duct connections: SS worm clamps (not zip ties or duct tape) and UL mastic are mandatory. The inner liner must be clamped and sealed before the outer jacket is pulled over. Measuring the run length first prevents wasted work — if it exceeds 5 feet, rigid duct must be used instead.",
+    "xpReward": 40
+  },
+  {
+    "id": "seq-hvac-020",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Exhaust Fan Commissioning",
+    "description": "Order the steps for commissioning a Greenheck CSP-A1050-VG exhaust fan system on the SACC high-rise project.",
+    "steps": [
+      { "id": 1, "text": "Verify all exhaust branch ducts have backdraft dampers installed", "order": 1 },
+      { "id": 2, "text": "Confirm fire dampers are installed and functional at all rated wall penetrations", "order": 2 },
+      { "id": 3, "text": "Check that the exhaust fan is connected to timeclock control", "order": 3 },
+      { "id": 4, "text": "Verify seismic spring-neoprene mounts are properly installed", "order": 4 },
+      { "id": 5, "text": "Start the exhaust fan and verify rotation direction", "order": 5 },
+      { "id": 6, "text": "Measure total exhaust airflow at 850 CFM using a pitot traverse", "order": 6 },
+      { "id": 7, "text": "Balance individual branch ducts to design CFM at each grille", "order": 7 },
+      { "id": 8, "text": "Document all readings and submit commissioning report to engineer", "order": 8 }
+    ],
+    "explanation": "Exhaust fan commissioning on the SACC project follows a verification-then-performance approach. All accessories (backdraft dampers, fire dampers, timeclock, seismic mounts) must be confirmed before the fan is started. Starting the fan without backdraft dampers means air can reverse-flow through inactive branches. Timeclock control is verified before TAB because the fan must run during business hours regardless of zone occupancy.",
+    "xpReward": 60
+  },
+  {
+    "id": "seq-hvac-021",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Turning Vane Installation in Rectangular Duct",
+    "description": "Order the steps for installing double-thickness turning vanes in a rectangular duct elbow on the SACC high-rise TI project.",
+    "steps": [
+      { "id": 1, "text": "Verify duct elbow dimensions match the approved shop drawing", "order": 1 },
+      { "id": 2, "text": "Select turning vanes of minimum 20-gauge galvanized steel, double thickness", "order": 2 },
+      { "id": 3, "text": "Install turning vane runners into the duct elbow", "order": 3 },
+      { "id": 4, "text": "Verify no runner span exceeds 48 inches unsupported", "order": 4 },
+      { "id": 5, "text": "Install intermediate support brackets where runner spans exceed 48 inches", "order": 5 },
+      { "id": 6, "text": "Secure vane blades into runners at proper spacing for uniform airflow", "order": 6 },
+      { "id": 7, "text": "Seal the duct elbow joints with mastic and verify no air leakage", "order": 7 }
+    ],
+    "explanation": "Turning vane installation on the SACC project requires double-thickness vanes at 20-gauge minimum with a 48-inch maximum unsupported runner span. Checking the span before installing vane blades is critical — once the blades are in place, adding intermediate supports is much more difficult. These specs are stricter than standard SMACNA because the SACC project is in a seismic zone where vane deflection under dynamic loads is a concern.",
+    "xpReward": 55
+  },
+  {
+    "id": "seq-hvac-022",
+    "type": "sequence",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "SACC MDF Room CRAC Seismic Installation",
+    "description": "Order the steps for installing a Liebert MM92C CRAC unit with full seismic restraint in the MDF room of the SACC high-rise (Los Angeles, Seismic Design Category D).",
+    "steps": [
+      { "id": 1, "text": "Review structural engineer's approved seismic anchorage details and verify floor capacity", "order": 1 },
+      { "id": 2, "text": "Install OSHPD-approved seismic base frame with spring-neoprene isolation mounts", "order": 2 },
+      { "id": 3, "text": "Set CRAC unit on isolation mounts and verify minimum 2-inch static deflection", "order": 3 },
+      { "id": 4, "text": "Install lateral seismic restraint snubbers at all four corners of the unit", "order": 4 },
+      { "id": 5, "text": "Connect chilled water piping with flexible connectors at unit connections", "order": 5 },
+      { "id": 6, "text": "Install flexible electrical conduit and connections to allow seismic movement", "order": 6 },
+      { "id": 7, "text": "Verify all connections have adequate flexibility to accommodate 1-inch seismic displacement", "order": 7 },
+      { "id": 8, "text": "Submit seismic installation certification to structural engineer and AHJ for approval", "order": 8 }
+    ],
+    "explanation": "Seismic CRAC installation in a Los Angeles high-rise requires coordination between the mechanical and structural trades. The isolation mounts provide vibration control during normal operation, while the seismic snubbers limit unit movement during an earthquake. All piping and electrical connections must use flexible connectors — rigid connections will rupture during seismic movement, causing flooding and power loss in the MDF. OSHPD approval and engineer certification are required before the installation is accepted.",
+    "xpReward": 90
   }
 ]

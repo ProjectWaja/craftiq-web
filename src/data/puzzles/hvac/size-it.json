@@ -525,5 +525,90 @@
     ],
     "explanation": "The UCSB plans specify bathroom exhaust rates: 50 CFM for a half bath (toilet/sink only), 100 CFM for a full bath (with shower/tub), and 150 CFM for a shared bathroom serving 3+ occupants. For a 4-bedroom unit with 2 full baths: 2 x 100 = 200 CFM. This meets IMC Table 403.3 minimum requirements for residential bathroom ventilation and helps control moisture to prevent mold growth.",
     "xpReward": 35
+  },
+  {
+    "id": "si-hvac-032",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC IDF Room CRAC Sizing",
+    "scenario": "An IDF (Intermediate Distribution Frame) room on Level 31 of the SACC high-rise has a calculated heat load of 30 MBH from network switches and patch panels. What is the correct CRAC unit selection?",
+    "hint": "CRAC units are selected based on sensible cooling capacity (MBH) because IT equipment generates almost entirely sensible heat (no moisture). The unit must meet or exceed the room's heat load.",
+    "options": [
+      { "text": "Liebert MM20C (500 CFM, 16.1 MBH)", "value": "MM20C", "correct": false, "feedback": "The MM20C at 16.1 MBH is undersized for a 30 MBH load. It would run at 100% capacity continuously and still fail to maintain temperature, risking equipment overheating and network outages." },
+      { "text": "Liebert MM40C (1000 CFM, 32.2 MBH)", "value": "MM40C", "correct": true, "feedback": "Correct! The MM40C at 32.2 MBH exceeds the 30 MBH load with approximately 7% margin. This provides adequate cooling with some headroom for future equipment additions, matching the SACC IDF room specification." },
+      { "text": "Liebert MM92C (2500 CFM, 62.9 MBH)", "value": "MM92C", "correct": false, "feedback": "The MM92C at 62.9 MBH is significantly oversized — over 2x the required capacity. This unit is specified for the larger MDF room. Oversizing wastes energy through short-cycling and excessive airflow." },
+      { "text": "Liebert MM15C (375 CFM, 12.0 MBH)", "value": "MM15C", "correct": false, "feedback": "The MM15C at 12.0 MBH covers only 40% of the 30 MBH load. Critical IT equipment would overheat within minutes during peak load." }
+    ],
+    "explanation": "CRAC unit sizing for IT rooms is based on sensible cooling capacity matching the calculated heat load. The SACC project specifies the Liebert MM40C (1000 CFM, 32.2 MBH) for IDF rooms and the MM92C (2500 CFM, 62.9 MBH) for the larger MDF room. A small margin above the load (7-15%) allows for future growth without oversizing.",
+    "xpReward": 40
+  },
+  {
+    "id": "si-hvac-033",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "SACC Linear Diffuser CFM Selection",
+    "scenario": "A 4-foot linear diffuser serves a private office on Level 30 of the SACC project. The room requires 180 CFM of supply air. What CFM per linear foot rating should be specified for this diffuser?",
+    "hint": "Linear diffusers are rated in CFM per linear foot (CFM/LF). Divide the total required CFM by the diffuser length to find the required per-foot rating. The SACC spec offers 30, 45, 60, and 75 CFM/LF options.",
+    "options": [
+      { "text": "30 CFM/LF (120 CFM total)", "value": "30", "correct": false, "feedback": "At 30 CFM/LF, a 4-foot diffuser delivers only 120 CFM — 33% below the 180 CFM requirement. The room would be undercooled and stuffy." },
+      { "text": "45 CFM/LF (180 CFM total)", "value": "45", "correct": true, "feedback": "Correct! 45 CFM/LF x 4 feet = 180 CFM, exactly matching the room requirement. This is the most efficient selection from the SACC diffuser schedule." },
+      { "text": "60 CFM/LF (240 CFM total)", "value": "60", "correct": false, "feedback": "60 CFM/LF delivers 240 CFM — 33% more than needed. While it would cool the room, the excessive airflow causes drafts and noise, and wastes conditioned air." },
+      { "text": "75 CFM/LF (300 CFM total)", "value": "75", "correct": false, "feedback": "75 CFM/LF delivers 300 CFM — 67% oversized. This would create uncomfortable drafts, high noise levels, and severely overcool the private office." }
+    ],
+    "explanation": "Linear diffuser sizing on the SACC project uses standard ratings of 30, 45, 60, and 75 CFM per linear foot. The calculation is simple: total required CFM divided by diffuser length equals the required CFM/LF rating. Selecting the closest match without undersizing ensures proper air distribution without noise or draft complaints.",
+    "xpReward": 35
+  },
+  {
+    "id": "si-hvac-034",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Return Air Grille Sizing for 400 FPM Maximum",
+    "scenario": "An open office area on Level 32 of the SACC project requires 1,600 CFM of return air. The SACC specification limits return air grille face velocity to 400 FPM maximum. What is the minimum grille free area required?",
+    "hint": "Face velocity = CFM / Free Area (sq ft). Rearrange to find: Free Area = CFM / Velocity. Remember to convert FPM velocity to get square feet.",
+    "options": [
+      { "text": "2.0 sq ft", "value": "2.0", "correct": false, "feedback": "2.0 sq ft at 1,600 CFM gives 800 FPM face velocity — double the 400 FPM maximum. This would generate severe noise and turbulence at the grille." },
+      { "text": "3.0 sq ft", "value": "3.0", "correct": false, "feedback": "3.0 sq ft at 1,600 CFM gives 533 FPM — still exceeds the 400 FPM maximum by 33%. Close but not compliant." },
+      { "text": "4.0 sq ft", "value": "4.0", "correct": true, "feedback": "Correct! 1,600 CFM / 400 FPM = 4.0 sq ft minimum free area. This keeps the grille at exactly the maximum velocity. In practice, slightly larger is better for noise." },
+      { "text": "6.0 sq ft", "value": "6.0", "correct": false, "feedback": "6.0 sq ft gives 267 FPM — very quiet but oversized. While it would work, it uses more grille area than necessary and increases material cost." }
+    ],
+    "explanation": "Return air grille sizing is driven by the velocity limit: Free Area = CFM / Max Velocity. The SACC specification sets 400 FPM as the maximum to control noise in the office environment. At 400 FPM, the noise contribution from the grille is approximately NC-25, which is acceptable for open offices. Exceeding 400 FPM pushes noise above NC-30, where it becomes noticeable and disruptive to office workers.",
+    "xpReward": 55
+  },
+  {
+    "id": "si-hvac-035",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "SACC Duct Hanger Spacing Selection",
+    "scenario": "A 30\"x24\" rectangular supply duct is being installed on Level 31 of the SACC project. The duct cross-sectional area is 5.0 sq ft. What is the required maximum hanger spacing per the SACC specification?",
+    "hint": "The SACC spec has two hanger spacing tiers based on duct cross-sectional area. The threshold is 4 sq ft — different spacing is required above and below this threshold.",
+    "options": [
+      { "text": "10 feet on center", "value": "10", "correct": false, "feedback": "10-foot spacing exceeds even the wider spacing tier. No duct on the SACC project is allowed 10-foot hanger spacing — the maximum is 8 feet OC for smaller ducts." },
+      { "text": "8 feet on center", "value": "8", "correct": false, "feedback": "8-foot OC spacing is for ducts with 4 sq ft or less cross section. This 5.0 sq ft duct exceeds the 4 sq ft threshold and requires closer spacing." },
+      { "text": "4 feet on center", "value": "4", "correct": true, "feedback": "Correct! Per the SACC specification, ducts with cross-sectional area exceeding 4 sq ft require hangers at 4 feet on center. This 30x24 duct at 5.0 sq ft is above the threshold." },
+      { "text": "6 feet on center", "value": "6", "correct": false, "feedback": "6-foot spacing is not one of the SACC standard tiers. The spec requires either 8 feet OC (≤4 sq ft) or 4 feet OC (>4 sq ft) — no intermediate option." }
+    ],
+    "explanation": "The SACC duct hanger spacing specification has two tiers: 8 feet OC for ducts with 4 sq ft or less cross section, and 4 feet OC for ducts exceeding 4 sq ft. This 30\"x24\" duct (5.0 sq ft) triggers the tighter spacing. Larger ducts are heavier and have more surface area exposed to seismic forces, requiring more frequent support points. Each hanger must also stay under the 50 lb load limit.",
+    "xpReward": 60
+  },
+  {
+    "id": "si-hvac-036",
+    "type": "size-it",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "SACC MDF Room CRAC Capacity Verification",
+    "scenario": "The MDF room on the SACC project houses 35 kW of IT equipment. The SACC spec calls for a Liebert MM92C rated at 62.9 MBH sensible capacity. Is the specified unit adequate for this load? (Note: 1 kW = 3.412 MBH)",
+    "hint": "Convert the IT electrical load from kW to MBH using the conversion factor. In a data/telecom room, virtually all electrical energy consumed by IT equipment is converted to heat (sensible load).",
+    "options": [
+      { "text": "Yes — 35 kW = 119.4 MBH, MM92C at 62.9 MBH is adequate", "value": "119.4", "correct": false, "feedback": "Your conversion is correct (35 x 3.412 = 119.4 MBH), but the conclusion is wrong. 62.9 MBH is only 53% of the 119.4 MBH load — the unit is severely undersized for 35 kW of IT equipment." },
+      { "text": "No — 35 kW = 119.4 MBH, exceeds MM92C capacity of 62.9 MBH", "value": "no-119", "correct": false, "feedback": "The conversion and comparison are correct, but the SACC MDF room does not house 35 kW. The actual IT load for the tenant MDF is approximately 15 kW. At 35 kW, you would need two MM92C units or a larger floor-mounted CRAC." },
+      { "text": "Yes — actual MDF load is ~15 kW = 51.2 MBH, MM92C at 62.9 MBH provides 23% margin", "value": "51.2", "correct": true, "feedback": "Correct! The SACC MDF room IT load is approximately 15 kW (51.2 MBH). The MM92C at 62.9 MBH provides 23% margin above the load, which is appropriate for data room cooling. The 35 kW figure would apply to a much larger MDF." },
+      { "text": "No — CRAC units cannot cool IT equipment, only precision AC units can", "value": "no-type", "correct": false, "feedback": "CRAC (Computer Room Air Conditioning) units ARE precision AC units designed specifically for IT equipment cooling. The Liebert MM series is one of the most widely deployed CRAC platforms in the industry." }
+    ],
+    "explanation": "CRAC sizing for telecom rooms requires converting the IT electrical load to thermal load: kW x 3.412 = MBH. The SACC MDF at ~15 kW produces 51.2 MBH of sensible heat. The MM92C at 62.9 MBH provides adequate capacity with 23% margin for growth. Industry best practice is 15-25% margin in data rooms to accommodate future equipment additions without requiring a CRAC change-out.",
+    "xpReward": 80
   }
 ]

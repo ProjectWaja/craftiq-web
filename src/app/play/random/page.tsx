@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useCallback, useEffect, use } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getRandomPuzzle } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
 import { useAuth } from "@/contexts/AuthContext";
-import { TRADES, PUZZLE_TYPES } from "@/constants/trades";
+import { TRADES, PUZZLE_TYPES, BASE_TRADE_CODES, SPECIALTY_CODES } from "@/constants/trades";
 import { TradeCode } from "@/types/trade";
 import { PuzzleType } from "@/types/puzzle";
 import XPBar from "@/components/XPBar";
@@ -21,6 +21,9 @@ import BuildAssemblyPuzzle from "@/components/puzzles/BuildAssemblyPuzzle";
 
 type DifficultySelection = 1 | 2 | 3 | "progressive";
 
+const ALL_TRADE_CODES = [...BASE_TRADE_CODES, ...SPECIALTY_CODES];
+const ALL_PUZZLE_TYPES = Object.keys(PUZZLE_TYPES) as PuzzleType[];
+
 const DIFFICULTY_OPTIONS: { value: DifficultySelection; label: string; subtitle: string; image?: string }[] = [
   { value: 1, label: "Apprentice", subtitle: "Year 1-2 basics", image: "/images/ui-icons/difficulty-1.png" },
   { value: 2, label: "Intermediate", subtitle: "Year 3-4 applied knowledge", image: "/images/ui-icons/difficulty-2.png" },
@@ -34,16 +37,21 @@ const PROGRESSIVE_LABELS: Record<number, string> = {
   3: "Journeyman",
 };
 
-export default function PuzzlePage({ params }: { params: Promise<{ trade: string; type: string }> }) {
-  const { trade, type } = use(params);
-  const tradeCode = trade as TradeCode;
-  const puzzleType = type as PuzzleType;
-  const { isAuthenticated, loading: authLoading } = useAuth();
+function pickRandom<T>(arr: T[], exclude?: T): T {
+  if (arr.length <= 1) return arr[0];
+  const filtered = exclude !== undefined ? arr.filter((x) => x !== exclude) : arr;
+  return filtered[Math.floor(Math.random() * filtered.length)];
+}
 
+export default function RandomPuzzlePage() {
+  const { isAuthenticated } = useAuth();
   const completedIds = useGameStore((s) => s.completedPuzzleIds);
-  const [puzzleKey, setPuzzleKey] = useState(0);
+
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultySelection | null>(null);
+  const [currentTrade, setCurrentTrade] = useState<TradeCode | null>(null);
+  const [currentType, setCurrentType] = useState<PuzzleType | null>(null);
   const [puzzle, setPuzzle] = useState<ReturnType<typeof getRandomPuzzle>>(null);
+  const [puzzleKey, setPuzzleKey] = useState(0);
   const [showLimitGate, setShowLimitGate] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);
 
@@ -53,23 +61,54 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
   const [consecutiveWrong, setConsecutiveWrong] = useState(0);
   const [difficultyToast, setDifficultyToast] = useState<string | null>(null);
 
-  const tradeConfig = TRADES[tradeCode];
-  const typeConfig = PUZZLE_TYPES[puzzleType];
+  const lastTradeRef = useRef<TradeCode | null>(null);
+  const lastTypeRef = useRef<PuzzleType | null>(null);
 
-  // TODO: wire isPro to RevenueCat subscription status
   const isPro = false;
+
+  const pickRandomPuzzle = useCallback((maxDiff: number) => {
+    // Pick random trade and type, avoiding repeats if possible
+    const trade = pickRandom(ALL_TRADE_CODES, lastTradeRef.current ?? undefined);
+    const type = pickRandom(ALL_PUZZLE_TYPES, lastTypeRef.current ?? undefined);
+
+    let next = getRandomPuzzle(trade, type, completedIds, maxDiff);
+
+    // If no puzzle found with this combination, try a few more random combos
+    if (!next) {
+      for (let i = 0; i < 10; i++) {
+        const t = pickRandom(ALL_TRADE_CODES);
+        const pt = pickRandom(ALL_PUZZLE_TYPES);
+        next = getRandomPuzzle(t, pt, completedIds, maxDiff);
+        if (next) {
+          setCurrentTrade(t);
+          setCurrentType(pt);
+          lastTradeRef.current = t;
+          lastTypeRef.current = pt;
+          return next;
+        }
+      }
+    }
+
+    setCurrentTrade(trade);
+    setCurrentType(type);
+    lastTradeRef.current = trade;
+    lastTypeRef.current = type;
+    return next;
+  }, [completedIds]);
 
   // Load first puzzle when difficulty is selected
   useEffect(() => {
     if (selectedDifficulty === null) return;
     const maxDiff = selectedDifficulty === "progressive" ? progressiveDifficulty : selectedDifficulty;
-    const next = getRandomPuzzle(tradeCode, puzzleType, completedIds, maxDiff);
+    const next = pickRandomPuzzle(maxDiff);
     setPuzzle(next);
     setPuzzleKey((k) => k + 1);
   }, [selectedDifficulty]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const loadNext = useCallback((wasCorrect: boolean) => {
     // Handle progressive difficulty updates
+    let maxDiff = selectedDifficulty === "progressive" ? progressiveDifficulty : (selectedDifficulty as number ?? 1);
+
     if (selectedDifficulty === "progressive") {
       let newConsCorrect = wasCorrect ? consecutiveCorrect + 1 : 0;
       let newConsWrong = wasCorrect ? 0 : consecutiveWrong + 1;
@@ -90,9 +129,9 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
       setConsecutiveCorrect(newConsCorrect);
       setConsecutiveWrong(newConsWrong);
       setProgressiveDifficulty(newProgDiff);
+      maxDiff = newProgDiff;
     }
 
-    // Free tier (guest or free account) gets 3 puzzles/day. Pro is unlimited.
     if (!isPro) {
       incrementGuestPuzzleCount();
       if (isDailyLimitReached()) {
@@ -101,28 +140,11 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
       }
     }
 
-    const maxDiff = selectedDifficulty === "progressive"
-      ? (wasCorrect && consecutiveCorrect + 1 >= 3 && progressiveDifficulty < 3
-          ? progressiveDifficulty + 1
-          : !wasCorrect && consecutiveWrong + 1 >= 2 && progressiveDifficulty > 1
-            ? progressiveDifficulty - 1
-            : progressiveDifficulty)
-      : (selectedDifficulty ?? 1);
-    const next = getRandomPuzzle(tradeCode, puzzleType, completedIds, maxDiff);
+    const next = pickRandomPuzzle(maxDiff);
     setPuzzle(next);
     setPuzzleKey((k) => k + 1);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [tradeCode, puzzleType, completedIds, isPro, selectedDifficulty, progressiveDifficulty, consecutiveCorrect, consecutiveWrong]);
-
-  if (!tradeConfig || !typeConfig) {
-    return (
-      <div className="mx-auto max-w-2xl px-6 pt-32 pb-20 text-center">
-        <h1 className="font-mono text-2xl font-bold">Not Found</h1>
-        <p className="mt-2 text-text-secondary">Invalid trade or puzzle type.</p>
-        <Link href="/play" className="mt-4 inline-block text-accent hover:underline">Back to Play</Link>
-      </div>
-    );
-  }
+  }, [isPro, selectedDifficulty, progressiveDifficulty, consecutiveCorrect, consecutiveWrong, pickRandomPuzzle]);
 
   // Difficulty picker screen
   if (selectedDifficulty === null) {
@@ -132,15 +154,16 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
         <div className="mb-6 flex items-center gap-2 text-sm text-text-tertiary">
           <Link href="/play" className="hover:text-text-secondary">Play</Link>
           <span>/</span>
-          <span style={{ color: tradeConfig.color }}>{tradeConfig.name}</span>
-          <span>/</span>
-          <span>{typeConfig.name}</span>
+          <span className="text-accent">Random Puzzle</span>
         </div>
 
         <div className="text-center">
-          <h1 className="font-mono text-2xl font-bold text-text-primary">Choose Difficulty</h1>
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/15 text-3xl">
+            <span>&#x1F3B2;</span>
+          </div>
+          <h1 className="font-mono text-2xl font-bold text-text-primary">Random Puzzle</h1>
           <p className="mt-2 text-sm text-text-secondary">
-            Select your skill level for {typeConfig.name}
+            Choose your difficulty — we will pick the trade and puzzle type
           </p>
         </div>
 
@@ -191,13 +214,18 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
     return (
       <div className="mx-auto max-w-2xl px-6 pt-32 pb-20 text-center">
         <h1 className="font-mono text-2xl font-bold">No Puzzles Available</h1>
-        <p className="mt-2 text-text-secondary">No puzzles found for {tradeConfig.name} — {typeConfig.name}.</p>
-        <Link href="/play" className="mt-4 inline-block text-accent hover:underline">Back to Play</Link>
+        <p className="mt-2 text-text-secondary">No puzzles found at this difficulty. Try a different level.</p>
+        <button
+          onClick={() => setSelectedDifficulty(null)}
+          className="mt-4 inline-block text-accent hover:underline"
+        >
+          Choose Different Difficulty
+        </button>
       </div>
     );
   }
 
-  // Daily limit gate — applies to both guests and free accounts
+  // Daily limit gate
   if (showLimitGate && !isPro) {
     return (
       <div className="mx-auto max-w-lg px-6 pt-32 pb-20 text-center">
@@ -208,9 +236,7 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
           height={120}
           className="mx-auto rounded-full"
         />
-        <h1 className="mt-6 font-mono text-3xl font-bold">
-          Nice Work Today!
-        </h1>
+        <h1 className="mt-6 font-mono text-3xl font-bold">Nice Work Today!</h1>
         <p className="mt-3 text-lg text-text-secondary">
           You&apos;ve completed your 3 free puzzles for today.
           {isAuthenticated
@@ -218,7 +244,6 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
             : " Create a free account to save your progress, or go Pro for unlimited puzzles."
           }
         </p>
-
         <div className="mt-8 flex flex-col gap-3">
           {isAuthenticated ? (
             <Link
@@ -242,15 +267,16 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
             Back to Trades
           </Link>
         </div>
-
         <p className="mt-6 text-sm text-text-tertiary">
           Free tier: 3 puzzles/day. Pro: $9.99/mo for unlimited.
         </p>
-
         <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
       </div>
     );
   }
+
+  const tradeConfig = currentTrade ? TRADES[currentTrade] : null;
+  const typeConfig = currentType ? PUZZLE_TYPES[currentType] : null;
 
   return (
     <div className="pt-28 pb-20">
@@ -266,9 +292,19 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
         <div className="flex items-center gap-2 text-sm text-text-tertiary">
           <Link href="/play" className="hover:text-text-secondary">Play</Link>
           <span>/</span>
-          <span style={{ color: tradeConfig.color }}>{tradeConfig.name}</span>
-          <span>/</span>
-          <span>{typeConfig.name}</span>
+          <span className="text-accent">Random</span>
+          {tradeConfig && (
+            <>
+              <span>/</span>
+              <span style={{ color: tradeConfig.color }}>{tradeConfig.name}</span>
+            </>
+          )}
+          {typeConfig && (
+            <>
+              <span>/</span>
+              <span>{typeConfig.name}</span>
+            </>
+          )}
           {selectedDifficulty === "progressive" && (
             <>
               <span>/</span>
@@ -278,7 +314,7 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
         </div>
       </div>
 
-      {/* Guest prompt — shows after every puzzle for non-authenticated users */}
+      {/* Guest prompt */}
       <GuestPrompt />
 
       {/* XP Bar */}
@@ -288,12 +324,12 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
 
       {/* Puzzle */}
       <div key={puzzleKey}>
-        {puzzleType === "code-check" && <CodeCheckPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "size-it" && <SizeItPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "whats-wrong" && <WhatsWrongPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "whats-missing" && <WhatsMissingPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "sequence" && <SequencePuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "build-assembly" && <BuildAssemblyPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "code-check" && <CodeCheckPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "size-it" && <SizeItPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "whats-wrong" && <WhatsWrongPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "whats-missing" && <WhatsMissingPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "sequence" && <SequencePuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {currentType === "build-assembly" && <BuildAssemblyPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
       </div>
     </div>
   );

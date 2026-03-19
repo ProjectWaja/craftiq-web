@@ -9,7 +9,7 @@ import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: BuildAssemblyPuzzleType;
-  onNextPuzzle: () => void;
+  onNextPuzzle: (wasCorrect: boolean) => void;
 }
 
 export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {

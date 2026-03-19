@@ -9,7 +9,7 @@ import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: SequencePuzzleType;
-  onNextPuzzle: () => void;
+  onNextPuzzle: (wasCorrect: boolean) => void;
 }
 
 export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {

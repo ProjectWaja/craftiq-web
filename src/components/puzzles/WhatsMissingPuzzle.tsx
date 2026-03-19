@@ -10,7 +10,7 @@ import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: WhatsMissingPuzzleType;
-  onNextPuzzle: () => void;
+  onNextPuzzle: (wasCorrect: boolean) => void;
 }
 
 export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {

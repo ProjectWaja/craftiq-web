@@ -8,7 +8,7 @@ interface ResultCardProps {
   xpEarned: number;
   explanation: string;
   codeReference?: string;
-  onNextPuzzle: () => void;
+  onNextPuzzle: (wasCorrect: boolean) => void;
   trade: string;
   type: string;
   correctCount?: number;
@@ -68,7 +68,7 @@ export default function ResultCard({
       {/* Actions */}
       <div className="mt-6 flex gap-3">
         <button
-          onClick={onNextPuzzle}
+          onClick={() => onNextPuzzle(isCorrect)}
           className="flex-1 rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
         >
           Next Puzzle

@@ -9,7 +9,7 @@ import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: SizeItPuzzleType;
-  onNextPuzzle: () => void;
+  onNextPuzzle: (wasCorrect: boolean) => void;
 }
 
 export default function SizeItPuzzle({ puzzle, onNextPuzzle }: Props) {

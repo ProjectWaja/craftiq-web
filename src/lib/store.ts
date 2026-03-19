@@ -5,6 +5,12 @@ import { TradeCode } from '@/types/trade';
 import { getLevel, getLevelProgress, getXPToNextLevel, calculateXP, didLevelUp } from '@/lib/xp-system';
 import { createClient } from '@/lib/supabase';
 
+interface TradeMastery {
+  puzzlesSolved: number;
+  correctCount: number;
+  suggestedDifficulty: number;
+}
+
 interface PlayerProgress {
   totalXP: number;
   puzzlesCompleted: number;
@@ -13,6 +19,7 @@ interface PlayerProgress {
   currentStreak: number;
   bestStreak: number;
   lastPuzzleDate: string | null;
+  tradeMastery: Record<string, TradeMastery>;
 }
 
 interface GameState extends PlayerProgress {
@@ -22,6 +29,7 @@ interface GameState extends PlayerProgress {
   // Actions
   addResult: (result: PuzzleResult) => { xpEarned: number; leveledUp: boolean };
   getCompletedIds: () => string[];
+  getTradeMastery: (trade: string) => TradeMastery;
   reset: () => void;
   setUserId: (id: string | null) => void;
   syncFromSupabase: (userId: string) => Promise<void>;
@@ -36,6 +44,7 @@ const INITIAL_STATE: PlayerProgress & { history: PuzzleResult[]; userId: string 
   currentStreak: 0,
   bestStreak: 0,
   lastPuzzleDate: null,
+  tradeMastery: {},
   history: [],
   userId: null,
 };
@@ -46,6 +55,11 @@ export const useGameStore = create<GameState>()(
       ...INITIAL_STATE,
 
       setUserId: (id: string | null) => set({ userId: id }),
+
+      getTradeMastery: (trade: string): TradeMastery => {
+        const mastery = get().tradeMastery[trade];
+        return mastery ?? { puzzlesSolved: 0, correctCount: 0, suggestedDifficulty: 1 };
+      },
 
       addResult: (result: PuzzleResult) => {
         const state = get();
@@ -72,6 +86,22 @@ export const useGameStore = create<GameState>()(
         const leveledUp = didLevelUp(prevXP, newTotalXP);
         const isCorrect = result.incorrectCount === 0 && result.correctCount === result.totalPossible;
 
+        // Update trade mastery
+        const tradeMastery = { ...state.tradeMastery };
+        const existing = tradeMastery[result.trade] ?? { puzzlesSolved: 0, correctCount: 0, suggestedDifficulty: 1 };
+        const newPuzzlesSolved = existing.puzzlesSolved + 1;
+        const newCorrectCount = existing.correctCount + (isCorrect ? 1 : 0);
+        const accuracy = newPuzzlesSolved > 0 ? newCorrectCount / newPuzzlesSolved : 0;
+        let suggestedDifficulty = existing.suggestedDifficulty;
+        if (accuracy > 0.85 && newPuzzlesSolved > 10) {
+          suggestedDifficulty = Math.min(3, existing.suggestedDifficulty + 1);
+        }
+        tradeMastery[result.trade] = {
+          puzzlesSolved: newPuzzlesSolved,
+          correctCount: newCorrectCount,
+          suggestedDifficulty,
+        };
+
         set({
           totalXP: newTotalXP,
           puzzlesCompleted: state.puzzlesCompleted + 1,
@@ -80,6 +110,7 @@ export const useGameStore = create<GameState>()(
           currentStreak: newStreak,
           bestStreak: Math.max(state.bestStreak, newStreak),
           lastPuzzleDate: today,
+          tradeMastery,
           history: [...state.history, { ...result, xpEarned: finalXP }],
         });
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { TRADES, PUZZLE_TYPES, BASE_TRADE_CODES, SPECIALTY_CODES } from "@/constants/trades";
 import { TradeCode } from "@/types/trade";
 import { PuzzleType } from "@/types/puzzle";
+import { useGameStore } from "@/lib/store";
 import XPBar from "@/components/XPBar";
 
 const TRADE_HERO_IMAGES: Record<string, string> = {
@@ -20,6 +21,12 @@ const TRADE_HERO_IMAGES: Record<string, string> = {
   industrial: '/images/trade-heroes/industrial.png',
 };
 
+const MASTERY_LABELS: Record<number, string> = {
+  1: "Building foundations",
+  2: "Ready for Year 3-4",
+  3: "Journeyman level",
+};
+
 const puzzleTypeKeys = Object.keys(PUZZLE_TYPES) as PuzzleType[];
 
 export default function PlayPage() {
@@ -31,6 +38,27 @@ export default function PlayPage() {
       {/* XP Bar */}
       <div className="mt-6">
         <XPBar />
+      </div>
+
+      {/* Play Random */}
+      <div className="mt-8">
+        <Link
+          href="/play/random"
+          className="group flex items-center gap-5 rounded-2xl border-2 border-accent/20 bg-accent/5 p-6 transition-all hover:border-accent/40 hover:bg-accent/10"
+        >
+          <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-accent/15 text-3xl transition-transform group-hover:scale-110">
+            <span>&#x1F3B2;</span>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-lg font-bold text-text-primary">Random Puzzle</h2>
+            <p className="mt-1 text-sm text-text-secondary">
+              Random trade &amp; type — great for daily practice
+            </p>
+          </div>
+          <span className="text-2xl text-accent/60 transition-transform group-hover:translate-x-1 group-hover:text-accent">
+            &#8250;
+          </span>
+        </Link>
       </div>
 
       {/* Base Trades */}
@@ -54,6 +82,34 @@ export default function PlayPage() {
           ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+function MasteryIndicator({ code }: { code: TradeCode }) {
+  const mastery = useGameStore((s) => s.tradeMastery[code]);
+  if (!mastery || mastery.puzzlesSolved === 0) return null;
+
+  const trade = TRADES[code];
+  const suggested = mastery.suggestedDifficulty;
+  const stars = Array.from({ length: 3 }, (_, i) => i < suggested);
+
+  return (
+    <div className="mt-3 flex items-center gap-2">
+      <div className="flex gap-0.5">
+        {stars.map((filled, i) => (
+          <span
+            key={i}
+            className="text-xs"
+            style={{ color: filled ? trade.color : "#475569" }}
+          >
+            {filled ? "\u2605" : "\u2606"}
+          </span>
+        ))}
+      </div>
+      <span className="text-[10px] text-text-tertiary">
+        {MASTERY_LABELS[suggested] ?? "Building foundations"}
+      </span>
     </div>
   );
 }
@@ -97,6 +153,9 @@ function TradeCard({ code }: { code: TradeCode }) {
             <span className="ml-auto rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-bold text-accent">PRO</span>
           )}
         </div>
+
+        {/* Mastery indicator */}
+        <MasteryIndicator code={code} />
 
         {/* Puzzle type links */}
         <div className="mt-4 grid grid-cols-2 gap-2">

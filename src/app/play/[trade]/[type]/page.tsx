@@ -10,7 +10,7 @@ import { TRADES, PUZZLE_TYPES } from "@/constants/trades";
 import { TradeCode } from "@/types/trade";
 import { PuzzleType } from "@/types/puzzle";
 import XPBar from "@/components/XPBar";
-import GuestPrompt, { incrementGuestPuzzleCount, isGuestLimitReached } from "@/components/GuestPrompt";
+import GuestPrompt, { incrementGuestPuzzleCount, isDailyLimitReached } from "@/components/GuestPrompt";
 import AuthModal from "@/components/AuthModal";
 import CodeCheckPuzzle from "@/components/puzzles/CodeCheckPuzzle";
 import SizeItPuzzle from "@/components/puzzles/SizeItPuzzle";
@@ -34,11 +34,14 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
   const tradeConfig = TRADES[tradeCode];
   const typeConfig = PUZZLE_TYPES[puzzleType];
 
+  // TODO: wire isPro to RevenueCat subscription status
+  const isPro = false;
+
   const loadNext = useCallback(() => {
-    // Track guest puzzle count and check limit
-    if (!isAuthenticated) {
+    // Free tier (guest or free account) gets 3 puzzles/day. Pro is unlimited.
+    if (!isPro) {
       incrementGuestPuzzleCount();
-      if (isGuestLimitReached()) {
+      if (isDailyLimitReached()) {
         setShowLimitGate(true);
         return;
       }
@@ -48,7 +51,7 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
     setPuzzle(next);
     setPuzzleKey((k) => k + 1);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [tradeCode, puzzleType, completedIds, isAuthenticated]);
+  }, [tradeCode, puzzleType, completedIds, isPro]);
 
   if (!tradeConfig || !typeConfig) {
     return (
@@ -70,8 +73,8 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
     );
   }
 
-  // Daily limit gate for guests
-  if (showLimitGate && !isAuthenticated) {
+  // Daily limit gate — applies to both guests and free accounts
+  if (showLimitGate && !isPro) {
     return (
       <div className="mx-auto max-w-lg px-6 pt-32 pb-20 text-center">
         <Image
@@ -85,16 +88,29 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
           Nice Work Today!
         </h1>
         <p className="mt-3 text-lg text-text-secondary">
-          You&apos;ve completed your 3 free puzzles for today. Come back tomorrow for 3 more, or create a free account for unlimited access.
+          You&apos;ve completed your 3 free puzzles for today.
+          {isAuthenticated
+            ? " Upgrade to Pro for unlimited puzzles across all trades and difficulty levels."
+            : " Create a free account to save your progress, or go Pro for unlimited puzzles."
+          }
         </p>
 
         <div className="mt-8 flex flex-col gap-3">
-          <button
-            onClick={() => setAuthModalOpen(true)}
-            className="rounded-xl bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
-          >
-            Create Free Account
-          </button>
+          {isAuthenticated ? (
+            <Link
+              href="/#pricing"
+              className="rounded-xl bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
+            >
+              Go Pro — Unlimited Puzzles
+            </Link>
+          ) : (
+            <button
+              onClick={() => setAuthModalOpen(true)}
+              className="rounded-xl bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl"
+            >
+              Create Free Account
+            </button>
+          )}
           <Link
             href="/play"
             className="rounded-xl border border-border bg-surface-light px-8 py-4 text-base font-semibold text-text-primary transition-colors hover:bg-white/[0.08]"
@@ -104,7 +120,7 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
         </div>
 
         <p className="mt-6 text-sm text-text-tertiary">
-          Free accounts get 3 puzzles/day. Go Pro for unlimited.
+          Free tier: 3 puzzles/day. Pro: $9.99/mo for unlimited.
         </p>
 
         <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />

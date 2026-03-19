@@ -27,7 +27,7 @@ export function incrementGuestPuzzleCount() {
   localStorage.setItem(DAILY_LIMIT_KEY, JSON.stringify({ date: today, count: current + 1 }));
 }
 
-export function isGuestLimitReached(): boolean {
+export function isDailyLimitReached(): boolean {
   return getGuestPuzzlesToday() >= 3;
 }
 

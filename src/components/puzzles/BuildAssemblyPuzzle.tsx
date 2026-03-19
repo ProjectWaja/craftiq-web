@@ -4,15 +4,19 @@ import { useState, useMemo } from "react";
 import { BuildAssemblyPuzzle as BuildAssemblyPuzzleType } from "@/types/puzzle";
 import { scoreBuildAssembly, shuffle } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
+import { playSound } from "@/lib/sounds";
 import PuzzleShell from "./PuzzleShell";
 import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: BuildAssemblyPuzzleType;
   onNextPuzzle: (wasCorrect: boolean) => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
-export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
+export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle, timedMode, timeLimit, onTimeUp }: Props) {
   // Combine real parts + distractors and shuffle
   const allParts = useMemo(
     () => shuffle([
@@ -60,6 +64,7 @@ export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
 
   const handleSubmit = () => {
     if (submitted) return;
+    playSound('submit');
     const scored = scoreBuildAssembly(placements, puzzle);
     setResult(scored);
     setSubmitted(true);
@@ -75,6 +80,13 @@ export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
       totalPossible: puzzle.positions.length,
       timestamp: Date.now(),
     });
+  };
+
+  const handleTimeUp = () => {
+    if (!submitted) {
+      handleSubmit();
+    }
+    onTimeUp?.();
   };
 
   const getPartName = (partId: number) => allParts.find((p) => p.id === partId)?.name ?? "?";
@@ -94,7 +106,16 @@ export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="build-assembly">
+    <PuzzleShell
+      trade={puzzle.trade}
+      title={puzzle.title}
+      difficulty={puzzle.difficulty}
+      xpReward={puzzle.xpReward}
+      puzzleType="build-assembly"
+      timedMode={timedMode}
+      timeLimit={timeLimit}
+      onTimeUp={handleTimeUp}
+    >
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
 
       {/* Parts bank */}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { TRADES } from "@/constants/trades";
 import { TradeCode } from "@/types/trade";
@@ -12,6 +13,11 @@ interface PuzzleShellProps {
   xpReward: number;
   puzzleType?: string;
   children: React.ReactNode;
+  hint?: string;
+  onHintUsed?: () => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
 const DIFFICULTY_LABELS = ["", "Year 1-2", "Year 3-4", "Journeyman+"];
@@ -31,9 +37,68 @@ const DIFFICULTY_IMAGES: Record<number, string> = {
   3: '/images/ui-icons/difficulty-3.png',
 };
 
-export default function PuzzleShell({ trade, title, difficulty, xpReward, puzzleType, children }: PuzzleShellProps) {
+export default function PuzzleShell({
+  trade,
+  title,
+  difficulty,
+  xpReward,
+  puzzleType,
+  children,
+  hint,
+  onHintUsed,
+  timedMode,
+  timeLimit,
+  onTimeUp,
+}: PuzzleShellProps) {
   const tradeConfig = TRADES[trade];
   const headerImage = puzzleType ? PUZZLE_HEADER_IMAGES[puzzleType] : undefined;
+
+  // Hint state
+  const [hintRevealed, setHintRevealed] = useState(false);
+
+  const handleRevealHint = () => {
+    if (!hintRevealed) {
+      setHintRevealed(true);
+      onHintUsed?.();
+    }
+  };
+
+  // Timer state
+  const [timeRemaining, setTimeRemaining] = useState(timeLimit ?? 0);
+  const timerFired = useRef(false);
+
+  const stableOnTimeUp = useCallback(() => {
+    onTimeUp?.();
+  }, [onTimeUp]);
+
+  useEffect(() => {
+    if (!timedMode || !timeLimit) return;
+    setTimeRemaining(timeLimit);
+    timerFired.current = false;
+  }, [timedMode, timeLimit]);
+
+  useEffect(() => {
+    if (!timedMode || !timeLimit) return;
+
+    const interval = setInterval(() => {
+      setTimeRemaining((prev) => {
+        const next = prev - 1;
+        if (next <= 0 && !timerFired.current) {
+          timerFired.current = true;
+          // Defer the callback to avoid setState-during-render
+          setTimeout(() => stableOnTimeUp(), 0);
+          clearInterval(interval);
+          return 0;
+        }
+        return Math.max(0, next);
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timedMode, timeLimit, stableOnTimeUp]);
+
+  const timerPercent = timedMode && timeLimit ? (timeRemaining / timeLimit) * 100 : 0;
+  const timerColor = timerPercent > 60 ? "#22C55E" : timerPercent > 30 ? "#F59E0B" : "#EF4444";
 
   return (
     <div className="mx-auto max-w-2xl px-4">
@@ -78,6 +143,71 @@ export default function PuzzleShell({ trade, title, difficulty, xpReward, puzzle
           </span>
         </div>
       </div>
+
+      {/* Timer bar */}
+      {timedMode && timeLimit && timeLimit > 0 && (
+        <div className="mb-4">
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-xs text-text-tertiary flex items-center gap-1">
+              <span>&#9201;</span> {timeRemaining}s
+            </span>
+            {timeRemaining <= 5 && timeRemaining > 0 && (
+              <span className="text-xs font-semibold text-error animate-pulse">Hurry!</span>
+            )}
+          </div>
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full rounded-full transition-all duration-1000 ease-linear"
+              style={{
+                width: `${timerPercent}%`,
+                backgroundColor: timerColor,
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Hint button */}
+      {hint && (
+        <div className="mb-4">
+          {!hintRevealed ? (
+            <button
+              onClick={handleRevealHint}
+              className="flex items-center gap-2 rounded-xl border border-warning/20 bg-warning/10 px-4 py-2.5 text-sm font-semibold text-warning transition-colors hover:bg-warning/15"
+            >
+              <Image
+                src="/images/ui-icons/hint.png"
+                alt="Hint"
+                width={24}
+                height={24}
+                className="flex-shrink-0"
+                onError={(e) => {
+                  // Fallback if image doesn't exist
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+              <span>Hint (-25% XP)</span>
+            </button>
+          ) : (
+            <div className="rounded-xl border border-warning/20 bg-warning/10 px-4 py-3">
+              <div className="flex items-center gap-2 mb-1.5">
+                <Image
+                  src="/images/ui-icons/hint.png"
+                  alt="Hint"
+                  width={20}
+                  height={20}
+                  className="flex-shrink-0"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+                <span className="text-xs font-semibold uppercase tracking-widest text-warning">Hint</span>
+              </div>
+              <p className="text-sm text-warning/90">{hint}</p>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Puzzle content */}
       {children}

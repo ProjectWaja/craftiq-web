@@ -4,15 +4,19 @@ import { useState, useMemo } from "react";
 import { SequencePuzzle as SequencePuzzleType, SequenceStep } from "@/types/puzzle";
 import { scoreSequence, shuffle } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
+import { playSound } from "@/lib/sounds";
 import PuzzleShell from "./PuzzleShell";
 import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: SequencePuzzleType;
   onNextPuzzle: (wasCorrect: boolean) => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
-export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {
+export default function SequencePuzzle({ puzzle, onNextPuzzle, timedMode, timeLimit, onTimeUp }: Props) {
   const shuffled = useMemo(() => shuffle([...puzzle.steps]), [puzzle]);
   const [steps, setSteps] = useState<SequenceStep[]>(shuffled);
   const [submitted, setSubmitted] = useState(false);
@@ -30,6 +34,7 @@ export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {
 
   const handleSubmit = () => {
     if (submitted) return;
+    playSound('submit');
     const scored = scoreSequence(steps, puzzle);
     setResult(scored);
     setSubmitted(true);
@@ -47,8 +52,24 @@ export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {
     });
   };
 
+  const handleTimeUp = () => {
+    if (!submitted) {
+      handleSubmit();
+    }
+    onTimeUp?.();
+  };
+
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="sequence">
+    <PuzzleShell
+      trade={puzzle.trade}
+      title={puzzle.title}
+      difficulty={puzzle.difficulty}
+      xpReward={puzzle.xpReward}
+      puzzleType="sequence"
+      timedMode={timedMode}
+      timeLimit={timeLimit}
+      onTimeUp={handleTimeUp}
+    >
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
       <p className="mb-4 text-xs text-text-tertiary">Drag to reorder, or use the arrow buttons.</p>
 

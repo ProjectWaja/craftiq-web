@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { playSound } from "@/lib/sounds";
+import XPFlyUp from "./XPFlyUp";
 
 interface ResultCardProps {
   isCorrect: boolean;
@@ -36,8 +39,18 @@ export default function ResultCard({
 
   const resultAlt = isPerfect ? "Perfect score" : isCorrect ? "Correct answer" : "Wrong answer";
 
+  // Play sound on mount
+  useEffect(() => {
+    if (isPerfect) playSound('perfect');
+    else if (isCorrect) playSound('correct');
+    else playSound('wrong');
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <div className={`mt-6 rounded-2xl border p-6 ${isCorrect ? "border-success/30 bg-success/5" : "border-error/30 bg-error/5"}`}>
+      {/* XP Fly-Up */}
+      <XPFlyUp xp={xpEarned} show={true} />
+
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Image

@@ -4,21 +4,26 @@ import { useState } from "react";
 import { CodeCheckPuzzle as CodeCheckPuzzleType } from "@/types/puzzle";
 import { scoreCodeCheck } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
+import { playSound } from "@/lib/sounds";
 import PuzzleShell from "./PuzzleShell";
 import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: CodeCheckPuzzleType;
   onNextPuzzle: (wasCorrect: boolean) => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
-export default function CodeCheckPuzzle({ puzzle, onNextPuzzle }: Props) {
+export default function CodeCheckPuzzle({ puzzle, onNextPuzzle, timedMode, timeLimit, onTimeUp }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState<ReturnType<typeof scoreCodeCheck> | null>(null);
   const addResult = useGameStore((s) => s.addResult);
 
   const handleSubmit = (answer: boolean) => {
     if (submitted) return;
+    playSound('submit');
     const scored = scoreCodeCheck(answer, puzzle);
     setResult(scored);
     setSubmitted(true);
@@ -36,8 +41,25 @@ export default function CodeCheckPuzzle({ puzzle, onNextPuzzle }: Props) {
     });
   };
 
+  const handleTimeUp = () => {
+    if (!submitted) {
+      // Auto-submit as wrong when time runs out
+      handleSubmit(false);
+    }
+    onTimeUp?.();
+  };
+
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="code-check">
+    <PuzzleShell
+      trade={puzzle.trade}
+      title={puzzle.title}
+      difficulty={puzzle.difficulty}
+      xpReward={puzzle.xpReward}
+      puzzleType="code-check"
+      timedMode={timedMode}
+      timeLimit={timeLimit}
+      onTimeUp={handleTimeUp}
+    >
       {/* Scenario */}
       <div className="rounded-2xl border border-border bg-surface-light p-6">
         <h3 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Scenario</h3>

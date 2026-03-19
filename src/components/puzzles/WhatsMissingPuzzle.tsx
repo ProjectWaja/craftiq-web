@@ -5,15 +5,19 @@ import { WhatsMissingPuzzle as WhatsMissingPuzzleType } from "@/types/puzzle";
 import { scoreWhatsMissing } from "@/lib/puzzle-engine";
 import { shuffle } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
+import { playSound } from "@/lib/sounds";
 import PuzzleShell from "./PuzzleShell";
 import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: WhatsMissingPuzzleType;
   onNextPuzzle: (wasCorrect: boolean) => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
-export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
+export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle, timedMode, timeLimit, onTimeUp }: Props) {
   const [selectedNames, setSelectedNames] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState<ReturnType<typeof scoreWhatsMissing> | null>(null);
@@ -34,6 +38,7 @@ export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
 
   const handleSubmit = () => {
     if (submitted) return;
+    playSound('submit');
     const scored = scoreWhatsMissing(selectedNames, puzzle);
     setResult(scored);
     setSubmitted(true);
@@ -49,6 +54,13 @@ export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
       totalPossible: puzzle.missingItems.length,
       timestamp: Date.now(),
     });
+  };
+
+  const handleTimeUp = () => {
+    if (!submitted) {
+      handleSubmit();
+    }
+    onTimeUp?.();
   };
 
   const missingNames = puzzle.missingItems.map((m) => m.name);
@@ -70,7 +82,16 @@ export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="whats-missing">
+    <PuzzleShell
+      trade={puzzle.trade}
+      title={puzzle.title}
+      difficulty={puzzle.difficulty}
+      xpReward={puzzle.xpReward}
+      puzzleType="whats-missing"
+      timedMode={timedMode}
+      timeLimit={timeLimit}
+      onTimeUp={handleTimeUp}
+    >
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
 
       {/* Present items */}

@@ -4,15 +4,19 @@ import { useState } from "react";
 import { WhatsWrongPuzzle as WhatsWrongPuzzleType } from "@/types/puzzle";
 import { scoreWhatsWrong } from "@/lib/puzzle-engine";
 import { useGameStore } from "@/lib/store";
+import { playSound } from "@/lib/sounds";
 import PuzzleShell from "./PuzzleShell";
 import ResultCard from "./ResultCard";
 
 interface Props {
   puzzle: WhatsWrongPuzzleType;
   onNextPuzzle: (wasCorrect: boolean) => void;
+  timedMode?: boolean;
+  timeLimit?: number;
+  onTimeUp?: () => void;
 }
 
-export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
+export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle, timedMode, timeLimit, onTimeUp }: Props) {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState<ReturnType<typeof scoreWhatsWrong> | null>(null);
@@ -27,6 +31,7 @@ export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
 
   const handleSubmit = () => {
     if (submitted) return;
+    playSound('submit');
     const scored = scoreWhatsWrong(selectedIds, puzzle);
     setResult(scored);
     setSubmitted(true);
@@ -43,6 +48,13 @@ export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
       totalPossible: violations.length,
       timestamp: Date.now(),
     });
+  };
+
+  const handleTimeUp = () => {
+    if (!submitted) {
+      handleSubmit();
+    }
+    onTimeUp?.();
   };
 
   const getComponentStyle = (id: number, correct: boolean) => {
@@ -67,7 +79,16 @@ export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="whats-wrong">
+    <PuzzleShell
+      trade={puzzle.trade}
+      title={puzzle.title}
+      difficulty={puzzle.difficulty}
+      xpReward={puzzle.xpReward}
+      puzzleType="whats-wrong"
+      timedMode={timedMode}
+      timeLimit={timeLimit}
+      onTimeUp={handleTimeUp}
+    >
       <p className="mb-4 text-sm text-text-secondary">
         {puzzle.description || "Tap each component that has a code violation."}
       </p>

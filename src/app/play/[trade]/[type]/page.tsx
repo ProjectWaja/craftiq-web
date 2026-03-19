@@ -34,6 +34,12 @@ const PROGRESSIVE_LABELS: Record<number, string> = {
   3: "Journeyman",
 };
 
+const TIME_LIMITS: Record<number, number> = {
+  1: 30,
+  2: 20,
+  3: 15,
+};
+
 export default function PuzzlePage({ params }: { params: Promise<{ trade: string; type: string }> }) {
   const { trade, type } = use(params);
   const tradeCode = trade as TradeCode;
@@ -53,20 +59,39 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
   const [consecutiveWrong, setConsecutiveWrong] = useState(0);
   const [difficultyToast, setDifficultyToast] = useState<string | null>(null);
 
+  // Timed challenge mode
+  const [timedMode, setTimedMode] = useState(false);
+  const [showTimedOption, setShowTimedOption] = useState(false);
+
   const tradeConfig = TRADES[tradeCode];
   const typeConfig = PUZZLE_TYPES[puzzleType];
 
   // TODO: wire isPro to RevenueCat subscription status
   const isPro = false;
 
+  // Calculate time limit based on current difficulty
+  const currentDifficulty = selectedDifficulty === "progressive"
+    ? progressiveDifficulty
+    : (selectedDifficulty ?? 1);
+  const timeLimit = TIME_LIMITS[currentDifficulty] ?? 30;
+
   // Load first puzzle when difficulty is selected
   useEffect(() => {
-    if (selectedDifficulty === null) return;
+    if (selectedDifficulty === null || showTimedOption) return;
     const maxDiff = selectedDifficulty === "progressive" ? progressiveDifficulty : selectedDifficulty;
     const next = getRandomPuzzle(tradeCode, puzzleType, completedIds, maxDiff);
     setPuzzle(next);
     setPuzzleKey((k) => k + 1);
-  }, [selectedDifficulty]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [selectedDifficulty, showTimedOption]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleDifficultySelect = (value: DifficultySelection) => {
+    setSelectedDifficulty(value);
+    setShowTimedOption(true);
+  };
+
+  const handleStartPuzzles = () => {
+    setShowTimedOption(false);
+  };
 
   const loadNext = useCallback((wasCorrect: boolean) => {
     // Handle progressive difficulty updates
@@ -148,7 +173,7 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
           {DIFFICULTY_OPTIONS.map((option) => (
             <button
               key={option.value}
-              onClick={() => setSelectedDifficulty(option.value)}
+              onClick={() => handleDifficultySelect(option.value)}
               className="group flex w-full items-center gap-4 rounded-2xl border-2 border-border bg-surface-light p-5 text-left transition-all hover:border-accent/40 hover:bg-accent/5"
             >
               {option.image ? (
@@ -183,6 +208,88 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
         >
           Back to Trades
         </Link>
+      </div>
+    );
+  }
+
+  // Timed mode option screen (shown after difficulty selection)
+  if (showTimedOption) {
+    const diffLabel = selectedDifficulty === "progressive"
+      ? "Progressive"
+      : DIFFICULTY_OPTIONS.find((o) => o.value === selectedDifficulty)?.label ?? "";
+    const previewTimeLimit = selectedDifficulty === "progressive"
+      ? TIME_LIMITS[1]
+      : TIME_LIMITS[selectedDifficulty as number] ?? 30;
+
+    return (
+      <div className="mx-auto max-w-lg px-6 pt-28 pb-20">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-text-tertiary">
+          <Link href="/play" className="hover:text-text-secondary">Play</Link>
+          <span>/</span>
+          <span style={{ color: tradeConfig.color }}>{tradeConfig.name}</span>
+          <span>/</span>
+          <span>{typeConfig.name}</span>
+        </div>
+
+        <div className="text-center">
+          <h1 className="font-mono text-2xl font-bold text-text-primary">
+            {diffLabel} Mode
+          </h1>
+          <p className="mt-2 text-sm text-text-secondary">
+            Ready to start? You can also enable timed challenges for bonus XP.
+          </p>
+        </div>
+
+        {/* Timed mode toggle */}
+        <div className="mt-8">
+          <button
+            onClick={() => setTimedMode(!timedMode)}
+            className={`flex w-full items-center gap-4 rounded-2xl border-2 p-5 text-left transition-all ${
+              timedMode
+                ? "border-accent bg-accent/10"
+                : "border-border bg-surface-light hover:border-border-medium"
+            }`}
+          >
+            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-warning/15 text-2xl">
+              <span>&#9201;</span>
+            </div>
+            <div className="flex-1">
+              <h3 className={`text-sm font-bold transition-colors ${timedMode ? "text-accent" : "text-text-primary"}`}>
+                Timed Challenge
+              </h3>
+              <p className="mt-0.5 text-xs text-text-tertiary">
+                {previewTimeLimit}s per puzzle — bonus XP for fast answers
+              </p>
+            </div>
+            <div className={`flex h-6 w-11 items-center rounded-full px-0.5 transition-colors ${
+              timedMode ? "bg-accent" : "bg-white/10"
+            }`}>
+              <div className={`h-5 w-5 rounded-full bg-white shadow transition-transform ${
+                timedMode ? "translate-x-5" : "translate-x-0"
+              }`} />
+            </div>
+          </button>
+        </div>
+
+        {/* Start button */}
+        <button
+          onClick={handleStartPuzzles}
+          className="mt-8 w-full rounded-xl bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl hover:opacity-90"
+        >
+          Start Puzzles
+        </button>
+
+        <button
+          onClick={() => {
+            setSelectedDifficulty(null);
+            setShowTimedOption(false);
+            setTimedMode(false);
+          }}
+          className="mt-4 block w-full text-center text-sm text-text-tertiary hover:text-text-secondary transition-colors"
+        >
+          Change Difficulty
+        </button>
       </div>
     );
   }
@@ -252,12 +359,26 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
     );
   }
 
+  // Shared timed mode props
+  const timedProps = timedMode
+    ? { timedMode: true, timeLimit }
+    : {};
+
   return (
     <div className="pt-28 pb-20">
       {/* Difficulty toast */}
       {difficultyToast && (
         <div className="fixed top-20 left-1/2 z-50 -translate-x-1/2 animate-pulse rounded-xl border border-accent/30 bg-accent/15 px-5 py-3 text-sm font-semibold text-accent shadow-lg">
           {difficultyToast}
+        </div>
+      )}
+
+      {/* Timed mode indicator */}
+      {timedMode && (
+        <div className="mx-auto mb-2 max-w-2xl px-4">
+          <span className="inline-flex items-center gap-1.5 rounded-lg bg-warning/15 px-3 py-1 text-xs font-semibold text-warning">
+            <span>&#9201;</span> Timed Challenge — {timeLimit}s per puzzle
+          </span>
         </div>
       )}
 
@@ -288,12 +409,12 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
 
       {/* Puzzle */}
       <div key={puzzleKey}>
-        {puzzleType === "code-check" && <CodeCheckPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "size-it" && <SizeItPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "whats-wrong" && <WhatsWrongPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "whats-missing" && <WhatsMissingPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "sequence" && <SequencePuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
-        {puzzleType === "build-assembly" && <BuildAssemblyPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} />}
+        {puzzleType === "code-check" && <CodeCheckPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
+        {puzzleType === "size-it" && <SizeItPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
+        {puzzleType === "whats-wrong" && <WhatsWrongPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
+        {puzzleType === "whats-missing" && <WhatsMissingPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
+        {puzzleType === "sequence" && <SequencePuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
+        {puzzleType === "build-assembly" && <BuildAssemblyPuzzle puzzle={puzzle as any} onNextPuzzle={loadNext} {...timedProps} />}
       </div>
     </div>
   );

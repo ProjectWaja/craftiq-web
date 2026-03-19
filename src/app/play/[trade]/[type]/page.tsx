@@ -9,6 +9,7 @@ import { TRADES, PUZZLE_TYPES } from "@/constants/trades";
 import { TradeCode } from "@/types/trade";
 import { PuzzleType } from "@/types/puzzle";
 import XPBar from "@/components/XPBar";
+import GuestPrompt from "@/components/GuestPrompt";
 import CodeCheckPuzzle from "@/components/puzzles/CodeCheckPuzzle";
 import SizeItPuzzle from "@/components/puzzles/SizeItPuzzle";
 import WhatsWrongPuzzle from "@/components/puzzles/WhatsWrongPuzzle";
@@ -67,6 +68,9 @@ export default function PuzzlePage({ params }: { params: Promise<{ trade: string
           <span>{typeConfig.name}</span>
         </div>
       </div>
+
+      {/* Guest prompt */}
+      <GuestPrompt />
 
       {/* XP Bar */}
       <div className="mx-auto mb-6 max-w-2xl px-4">

@@ -2,9 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useAuth } from "@/contexts/AuthContext";
+import AuthModal from "@/components/AuthModal";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const { user, isAuthenticated, signOut, loading } = useAuth();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -42,6 +46,31 @@ export default function Header() {
           >
             Download
           </a>
+          {!loading && (
+            isAuthenticated ? (
+              <div className="flex items-center gap-3">
+                <div
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20 text-xs font-bold text-accent"
+                  title={user?.email ?? ''}
+                >
+                  {user?.email?.charAt(0).toUpperCase() ?? '?'}
+                </div>
+                <button
+                  onClick={() => signOut()}
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setAuthModalOpen(true)}
+                className="text-sm font-semibold text-text-secondary hover:text-text-primary transition-colors"
+              >
+                Sign In
+              </button>
+            )
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -71,9 +100,34 @@ export default function Header() {
             >
               Download
             </a>
+            {!loading && (
+              isAuthenticated ? (
+                <div className="flex items-center gap-3 mt-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20 text-xs font-bold text-accent">
+                    {user?.email?.charAt(0).toUpperCase() ?? '?'}
+                  </div>
+                  <span className="text-sm text-text-secondary truncate flex-1">{user?.email}</span>
+                  <button
+                    onClick={() => { signOut(); setMenuOpen(false); }}
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => { setAuthModalOpen(true); setMenuOpen(false); }}
+                  className="mt-2 rounded-xl border border-accent/30 px-5 py-3 text-center text-sm font-semibold text-accent"
+                >
+                  Sign In
+                </button>
+              )
+            )}
           </div>
         </div>
       )}
+
+      <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
     </header>
   );
 }

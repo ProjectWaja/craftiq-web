@@ -151,11 +151,11 @@ export default function Home() {
       <section id="features" className="bg-blueprint-iso py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">6 Puzzle Types</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">6 Puzzle Types</h2>
             <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
               Learn by Doing, Not Reading
             </p>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-base leading-relaxed text-text-secondary">
               Every puzzle is rooted in real installation scenarios. Every explanation cites the actual code section.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-mono text-lg font-bold">{puzzle.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                  <p className="mt-2 text-base leading-relaxed text-text-secondary">
                     {puzzle.description}
                   </p>
                   <span className="mt-3 inline-block text-xs font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
@@ -199,11 +199,11 @@ export default function Home() {
       <section id="trades" className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">10 Trades</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">10 Trades</h2>
             <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
               Your Trade. Your Code. Your Puzzles.
             </p>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-base leading-relaxed text-text-secondary">
               5 core trades free. 5 premium specialty trades for advanced cross-trade knowledge.
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function Home() {
       <section className="bg-blueprint-grid py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">How It Works</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">How It Works</h2>
             <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
               Five Minutes a Day Builds Real Code Knowledge
             </p>
@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-mono text-xl font-bold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.description}</p>
+                  <p className="mt-3 text-base leading-relaxed text-text-secondary">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -275,13 +275,13 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">
                 Real Standards
               </h2>
               <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
                 Every Answer Cites the Actual Code
               </p>
-              <p className="mt-4 text-text-secondary">
+              <p className="mt-4 text-base leading-relaxed text-text-secondary">
                 No generic trivia. Every puzzle references real code standards used on the jobsite.
                 After each puzzle, you see the exact code section, correct vs. incorrect diagrams,
                 and why it matters.
@@ -310,13 +310,13 @@ export default function Home() {
       <section className="bg-blueprint-hex py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">
               Gamification
             </h2>
             <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
               Earn Your Stripes
             </p>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-base leading-relaxed text-text-secondary">
               Track your journey from 1st Year to Master with XP, streaks, achievements, and leaderboard rankings.
             </p>
           </div>
@@ -394,7 +394,7 @@ export default function Home() {
 
           {/* Trade avatars row */}
           <div className="mx-auto mt-12 max-w-2xl">
-            <p className="mb-4 text-center text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+            <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-text-disabled">
               Choose Your Avatar
             </p>
             <div className="flex justify-center gap-4">
@@ -425,7 +425,7 @@ export default function Home() {
       <section id="pricing" className="bg-blueprint-grid py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Pricing</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">Pricing</h2>
             <p className="mt-3 font-mono text-3xl font-bold md:text-4xl">
               Start Free. Go Pro When You&apos;re Ready.
             </p>
@@ -434,7 +434,7 @@ export default function Home() {
           <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
             {/* Free */}
             <div className="rounded-2xl border border-border bg-surface-light p-8">
-              <h3 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Free</h3>
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">Free</h3>
               <div className="mt-4">
                 <span className="font-mono text-5xl font-extrabold">$0</span>
               </div>
@@ -446,7 +446,7 @@ export default function Home() {
                   "Progress tracking",
                   "Daily code tips",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-text-secondary">
+                  <li key={feature} className="flex items-center gap-3 text-base text-text-secondary">
                     <span className="text-success">&#10003;</span>
                     {feature}
                   </li>
@@ -485,7 +485,7 @@ export default function Home() {
                   "Spaced repetition reviews",
                   "Priority support",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-text-primary">
+                  <li key={feature} className="flex items-center gap-3 text-base text-text-primary">
                     <span className="text-accent">&#10003;</span>
                     {feature}
                   </li>
@@ -520,7 +520,7 @@ export default function Home() {
 
               {/* Content side */}
               <div className="bg-surface-light p-10 md:p-14">
-                <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-text-disabled">
                   For Training Programs
                 </h2>
                 <p className="mt-3 font-mono text-3xl font-bold">

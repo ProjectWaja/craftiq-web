@@ -3,7 +3,7 @@
 @theme {
   --color-background: #0C0F1A;
   --color-surface: #111827;
-  --color-surface-light: rgba(255, 255, 255, 0.04);
+  --color-surface-light: rgba(255, 255, 255, 0.06);
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-medium: rgba(255, 255, 255, 0.08);
   --color-text-primary: #F1F5F9;
@@ -53,8 +53,9 @@ body {
   background-size: 1024px 1024px;
   background-repeat: repeat;
   background-position: center;
-  opacity: 0.4;
+  opacity: 0.15;
   pointer-events: none;
+  z-index: 0;
 }
 
 .bg-blueprint-iso {
@@ -68,8 +69,9 @@ body {
   background-size: 1024px 1024px;
   background-repeat: repeat;
   background-position: center;
-  opacity: 0.35;
+  opacity: 0.12;
   pointer-events: none;
+  z-index: 0;
 }
 
 .bg-blueprint-hex {
@@ -83,8 +85,27 @@ body {
   background-size: 1024px 1024px;
   background-repeat: repeat;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.12;
   pointer-events: none;
+  z-index: 0;
+}
+
+/* Global text sizing — bump everything up for web readability */
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Cards and content containers get solid backgrounds so grid lines stay behind */
+.bg-surface-light,
+[class*="bg-surface-light"] {
+  background-color: rgba(17, 24, 39, 0.92) !important;
+  backdrop-filter: blur(8px);
 }
 
 @keyframes float {

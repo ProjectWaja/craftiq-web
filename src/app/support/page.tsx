@@ -69,7 +69,7 @@ export default function Support() {
           {FAQ.map((item) => (
             <div key={item.q} className="rounded-2xl border border-border bg-surface-light p-6">
               <h3 className="font-mono text-sm font-bold text-text-primary">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-text-secondary">{item.a}</p>
+              <p className="mt-2 text-base leading-relaxed text-text-secondary">{item.a}</p>
             </div>
           ))}
         </div>

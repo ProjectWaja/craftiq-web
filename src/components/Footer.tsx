@@ -18,30 +18,30 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Product</h4>
+            <h4 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-disabled">Product</h4>
             <ul className="space-y-2">
-              <li><a href="/#features" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Features</a></li>
-              <li><a href="/#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a></li>
-              <li><a href="/#trades" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Trades</a></li>
-              <li><a href="/#enterprise" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Enterprise</a></li>
+              <li><a href="/#features" className="text-base text-text-secondary hover:text-text-primary transition-colors">Features</a></li>
+              <li><a href="/#pricing" className="text-base text-text-secondary hover:text-text-primary transition-colors">Pricing</a></li>
+              <li><a href="/#trades" className="text-base text-text-secondary hover:text-text-primary transition-colors">Trades</a></li>
+              <li><a href="/#enterprise" className="text-base text-text-secondary hover:text-text-primary transition-colors">Enterprise</a></li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h4 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Legal</h4>
+            <h4 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-disabled">Legal</h4>
             <ul className="space-y-2">
-              <li><Link href="/privacy-policy" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy-policy" className="text-base text-text-secondary hover:text-text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-base text-text-secondary hover:text-text-primary transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h4 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Support</h4>
+            <h4 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-disabled">Support</h4>
             <ul className="space-y-2">
-              <li><Link href="/support" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Help &amp; FAQ</Link></li>
-              <li><a href="mailto:scoprixlabs@gmail.com" className="text-sm text-text-secondary hover:text-text-primary transition-colors">scoprixlabs@gmail.com</a></li>
+              <li><Link href="/support" className="text-base text-text-secondary hover:text-text-primary transition-colors">Help &amp; FAQ</Link></li>
+              <li><a href="mailto:scoprixlabs@gmail.com" className="text-base text-text-secondary hover:text-text-primary transition-colors">scoprixlabs@gmail.com</a></li>
             </ul>
           </div>
         </div>

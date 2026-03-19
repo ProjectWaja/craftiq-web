@@ -356,25 +356,38 @@ export default function Home() {
           </div>
 
           {/* Level progression */}
-          <div className="mx-auto mt-10 flex max-w-2xl flex-wrap justify-center gap-3">
+          <div className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-5">
             {[
-              { level: "1st Year", xp: "0", color: "#94A3B8" },
-              { level: "2nd Year", xp: "500", color: "#3B82F6" },
-              { level: "3rd Year", xp: "1,500", color: "#10B981" },
-              { level: "4th Year", xp: "3,000", color: "#F59E0B" },
-              { level: "Journeyman", xp: "5,000", color: "#8B5CF6" },
-              { level: "Master", xp: "8,000", color: "#EC4899" },
+              { level: "1st Year", xp: "0", color: "#94A3B8", badge: "/images/level-badges/level-1.png" },
+              { level: "2nd Year", xp: "500", color: "#3B82F6", badge: "/images/level-badges/level-2.png" },
+              { level: "3rd Year", xp: "1,500", color: "#10B981", badge: "/images/level-badges/level-3.png" },
+              { level: "4th Year", xp: "3,000", color: "#F59E0B", badge: "/images/level-badges/level-4.jpeg" },
+              { level: "Journeyman", xp: "5,000", color: "#8B5CF6", badge: "/images/level-badges/level-5.png" },
+              { level: "Master", xp: "8,000", color: "#EC4899", badge: "/images/level-badges/level-6.jpeg" },
             ].map((lvl) => (
               <div
                 key={lvl.level}
-                className="rounded-xl border px-4 py-2.5 text-center"
-                style={{
-                  borderColor: `${lvl.color}33`,
-                  backgroundColor: `${lvl.color}0D`,
-                }}
+                className="flex flex-col items-center gap-2"
               >
-                <div className="text-sm font-bold" style={{ color: lvl.color }}>{lvl.level}</div>
-                <div className="text-[11px] text-text-tertiary">{lvl.xp} XP</div>
+                <div
+                  className="overflow-hidden rounded-xl border-2 p-1"
+                  style={{
+                    borderColor: `${lvl.color}44`,
+                    backgroundColor: `${lvl.color}0D`,
+                  }}
+                >
+                  <Image
+                    src={lvl.badge}
+                    alt={`${lvl.level} badge`}
+                    width={80}
+                    height={80}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="text-center">
+                  <div className="text-xs font-bold" style={{ color: lvl.color }}>{lvl.level}</div>
+                  <div className="text-[10px] text-text-tertiary">{lvl.xp} XP</div>
+                </div>
               </div>
             ))}
           </div>
@@ -497,8 +510,8 @@ export default function Home() {
               {/* Illustration side */}
               <div className="relative hidden h-full min-h-[400px] md:block">
                 <Image
-                  src="/images/app/onboarding-screens-04.jpg"
-                  alt="Trade crew leveling up together"
+                  src="/images/banners/enterprise.png"
+                  alt="Enterprise JATC training programs"
                   fill
                   className="object-cover"
                 />
@@ -549,7 +562,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-2xl border border-accent/20 p-10 text-center md:p-20">
             {/* Background images */}
             <div className="absolute inset-0 opacity-10">
-              <Image src="/images/features/iq-and-xp-gauge-01.jpg" alt="" fill className="object-cover" />
+              <Image src="/images/banners/play-browser.png" alt="" fill className="object-cover" />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-background/95 to-controls/10" />
 

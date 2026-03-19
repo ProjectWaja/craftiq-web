@@ -48,7 +48,7 @@ export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward}>
+    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="sequence">
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
       <p className="mb-4 text-xs text-text-tertiary">Drag to reorder, or use the arrow buttons.</p>
 
@@ -137,6 +137,8 @@ export default function SequencePuzzle({ puzzle, onNextPuzzle }: Props) {
           onNextPuzzle={onNextPuzzle}
           trade={puzzle.trade}
           type="sequence"
+          correctCount={result.correctCount}
+          totalPossible={result.totalSteps}
         />
       )}
     </PuzzleShell>

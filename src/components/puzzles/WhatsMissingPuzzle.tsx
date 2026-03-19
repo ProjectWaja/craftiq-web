@@ -70,7 +70,7 @@ export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward}>
+    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="whats-missing">
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
 
       {/* Present items */}
@@ -148,6 +148,8 @@ export default function WhatsMissingPuzzle({ puzzle, onNextPuzzle }: Props) {
           onNextPuzzle={onNextPuzzle}
           trade={puzzle.trade}
           type="whats-missing"
+          correctCount={result.correctSelections.length}
+          totalPossible={puzzle.missingItems.length}
         />
       )}
     </PuzzleShell>

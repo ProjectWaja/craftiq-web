@@ -94,7 +94,7 @@ export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward}>
+    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="build-assembly">
       <p className="mb-4 text-sm text-text-secondary">{puzzle.description}</p>
 
       {/* Parts bank */}
@@ -189,6 +189,8 @@ export default function BuildAssemblyPuzzle({ puzzle, onNextPuzzle }: Props) {
           onNextPuzzle={onNextPuzzle}
           trade={puzzle.trade}
           type="build-assembly"
+          correctCount={result.correctPlacements.length}
+          totalPossible={puzzle.positions.length}
         />
       )}
     </PuzzleShell>

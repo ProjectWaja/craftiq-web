@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 interface ResultCardProps {
@@ -10,6 +11,8 @@ interface ResultCardProps {
   onNextPuzzle: () => void;
   trade: string;
   type: string;
+  correctCount?: number;
+  totalPossible?: number;
 }
 
 export default function ResultCard({
@@ -20,15 +23,33 @@ export default function ResultCard({
   onNextPuzzle,
   trade,
   type,
+  correctCount,
+  totalPossible,
 }: ResultCardProps) {
+  const isPerfect = isCorrect && correctCount !== undefined && totalPossible !== undefined && correctCount === totalPossible;
+
+  const resultImage = isPerfect
+    ? "/images/result-states/perfect.png"
+    : isCorrect
+      ? "/images/result-states/correct.jpeg"
+      : "/images/result-states/wrong.png";
+
+  const resultAlt = isPerfect ? "Perfect score" : isCorrect ? "Correct answer" : "Wrong answer";
+
   return (
     <div className={`mt-6 rounded-2xl border p-6 ${isCorrect ? "border-success/30 bg-success/5" : "border-error/30 bg-error/5"}`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-3xl">{isCorrect ? "\u2713" : "\u2717"}</span>
+          <Image
+            src={resultImage}
+            alt={resultAlt}
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
           <div>
             <h3 className="font-mono text-lg font-bold" style={{ color: isCorrect ? "#22C55E" : "#EF4444" }}>
-              {isCorrect ? "Correct!" : "Not Quite"}
+              {isPerfect ? "Perfect!" : isCorrect ? "Correct!" : "Not Quite"}
             </h3>
             <p className="text-sm text-text-secondary">+{xpEarned} XP earned</p>
           </div>

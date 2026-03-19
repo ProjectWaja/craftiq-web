@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/app/marketing-hero-image-01.jpg",
+        url: "/images/banners/social-share.png",
         width: 1200,
         height: 630,
         alt: "CraftIQ — Union trade education through puzzles",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "CraftIQ — Master Trade Codes Through Puzzles",
     description:
       "825+ puzzles across 10 trades. Built for UA, IBEW & SMACNA apprentices.",
-    images: ["/images/app/marketing-hero-image-01.jpg"],
+    images: ["/images/banners/social-share.png"],
   },
   metadataBase: new URL("https://craftiq.org"),
 };

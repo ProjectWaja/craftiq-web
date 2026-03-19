@@ -67,7 +67,7 @@ export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward}>
+    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="whats-wrong">
       <p className="mb-4 text-sm text-text-secondary">
         {puzzle.description || "Tap each component that has a code violation."}
       </p>
@@ -128,6 +128,8 @@ export default function WhatsWrongPuzzle({ puzzle, onNextPuzzle }: Props) {
           onNextPuzzle={onNextPuzzle}
           trade={puzzle.trade}
           type="whats-wrong"
+          correctCount={result.correctHits.length}
+          totalPossible={puzzle.components.filter((c) => !c.correct).length}
         />
       )}
     </PuzzleShell>

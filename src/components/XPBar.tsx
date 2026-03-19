@@ -1,6 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useGameStore, useLevel, useLevelProgress, useXPToNext } from "@/lib/store";
+
+function getStreakIcon(streak: number): string {
+  if (streak >= 30) return "/images/streak-icons/streak-30.png";
+  if (streak >= 7) return "/images/streak-icons/streak-7.jpeg";
+  if (streak >= 3) return "/images/streak-icons/streak-3.png";
+  return "/images/streak-icons/streak-default.png";
+}
 
 export default function XPBar() {
   const totalXP = useGameStore((s) => s.totalXP);
@@ -29,7 +37,17 @@ export default function XPBar() {
         </div>
         <div className="flex items-center gap-4 text-xs text-text-tertiary">
           <span>{puzzlesCompleted} solved</span>
-          {streak > 0 && <span className="text-warning">{streak}d streak</span>}
+          {streak > 0 && (
+            <span className="flex items-center gap-1 text-warning">
+              <Image
+                src={getStreakIcon(streak)}
+                alt={`${streak} day streak`}
+                width={28}
+                height={28}
+              />
+              {streak}d streak
+            </span>
+          )}
         </div>
       </div>
 

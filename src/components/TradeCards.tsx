@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface Trade {
   name: string;
   code: string;
@@ -9,7 +11,22 @@ interface Trade {
   premium?: boolean;
 }
 
+const TRADE_HERO_IMAGES: Record<string, string> = {
+  hvac: '/images/trade-heroes/hvac.jpeg',
+  plumbing: '/images/trade-heroes/plumbing.jpeg',
+  electrical: '/images/trade-heroes/electrical.jpeg',
+  pipefitting: '/images/trade-heroes/pipefitting.png',
+  controls: '/images/trade-heroes/controls.png',
+  'data-center': '/images/trade-heroes/data-center.jpeg',
+  'central-plant': '/images/trade-heroes/central-plant.jpeg',
+  healthcare: '/images/trade-heroes/healthcare.png',
+  'high-rise': '/images/trade-heroes/high-rise.jpeg',
+  industrial: '/images/trade-heroes/industrial.png',
+};
+
 function TradeCard({ trade }: { trade: Trade }) {
+  const heroImage = TRADE_HERO_IMAGES[trade.code];
+
   return (
     <a
       href={`/play/${trade.code}`}
@@ -30,20 +47,33 @@ function TradeCard({ trade }: { trade: Trade }) {
         e.currentTarget.style.boxShadow = `0 0 0 0 ${trade.color}00`;
       }}
     >
+      {/* Hero image background at low opacity */}
+      {heroImage && (
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src={heroImage}
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0C0F1A]/90" />
+        </div>
+      )}
+
       {trade.premium && (
         <span className="absolute -top-0.5 right-3 rounded-b-lg bg-[#8B5CF6] px-2 py-0.5 text-[9px] font-bold text-white">
           PRO
         </span>
       )}
-      <span className="block text-4xl transition-transform duration-300 group-hover:scale-110">
+      <span className="relative block text-4xl transition-transform duration-300 group-hover:scale-110">
         {trade.icon}
       </span>
-      <h3 className="mt-3 font-mono text-sm font-bold" style={{ color: trade.color }}>
+      <h3 className="relative mt-3 font-mono text-sm font-bold" style={{ color: trade.color }}>
         {trade.name}
       </h3>
-      <p className="mt-1 text-[11px] text-text-tertiary">{trade.union}</p>
+      <p className="relative mt-1 text-[11px] text-text-tertiary">{trade.union}</p>
       <span
-        className="mt-3 inline-block rounded-lg px-3 py-1 text-[11px] font-semibold opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="relative mt-3 inline-block rounded-lg px-3 py-1 text-[11px] font-semibold opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{ backgroundColor: `${trade.color}22`, color: trade.color }}
       >
         Play Now &rarr;

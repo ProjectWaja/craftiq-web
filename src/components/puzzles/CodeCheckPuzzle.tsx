@@ -37,7 +37,7 @@ export default function CodeCheckPuzzle({ puzzle, onNextPuzzle }: Props) {
   };
 
   return (
-    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward}>
+    <PuzzleShell trade={puzzle.trade} title={puzzle.title} difficulty={puzzle.difficulty} xpReward={puzzle.xpReward} puzzleType="code-check">
       {/* Scenario */}
       <div className="rounded-2xl border border-border bg-surface-light p-6">
         <h3 className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Scenario</h3>
@@ -74,6 +74,8 @@ export default function CodeCheckPuzzle({ puzzle, onNextPuzzle }: Props) {
           onNextPuzzle={onNextPuzzle}
           trade={puzzle.trade}
           type="code-check"
+          correctCount={result.isCorrect ? 1 : 0}
+          totalPossible={1}
         />
       )}
     </PuzzleShell>

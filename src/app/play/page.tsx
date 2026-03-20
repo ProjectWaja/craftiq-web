@@ -61,6 +61,27 @@ export default function PlayPage() {
         </Link>
       </div>
 
+      {/* Brain Teasers */}
+      <div className="mt-8">
+        <Link
+          href="/play/maze"
+          className="group flex items-center gap-5 rounded-2xl border-2 border-teal-500/20 bg-teal-500/5 p-6 transition-all hover:border-teal-500/40 hover:bg-teal-500/10"
+        >
+          <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-teal-500/15 text-3xl transition-transform group-hover:scale-110">
+            <span>&#x1F9E9;</span>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-lg font-bold text-text-primary">Pipe Mazes</h2>
+            <p className="mt-1 text-sm text-text-secondary">
+              Fun brain teasers between puzzles — rotate pipes to complete the path
+            </p>
+          </div>
+          <span className="text-2xl text-teal-500/60 transition-transform group-hover:translate-x-1 group-hover:text-teal-500">
+            &#8250;
+          </span>
+        </Link>
+      </div>
+
       {/* Base Trades */}
       <div className="mt-10">
         <h2 className="text-[10px] font-semibold uppercase tracking-widest text-text-disabled">Core Trades</h2>

@@ -1,0 +1,771 @@
+[
+  {
+    "id": "maze-plmb-001",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Route the Water Supply",
+    "description": "Rotate the pipe sections to connect the water main to the correct fixture.",
+    "gridSize": 5,
+    "grid": [
+      ["S", "─", "┐", " ", "A"],
+      [" ", " ", "│", " ", " "],
+      [" ", "─", "┘", "─", "B"],
+      [" ", " ", " ", " ", " "],
+      [" ", " ", " ", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 1], [2, 2]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Kitchen Sink", "correct": false },
+      { "pos": [2, 4], "label": "Bathroom Lav", "correct": true },
+      { "pos": [4, 4], "label": "Hose Bibb", "correct": false }
+    ],
+    "explanation": "Water supply to bathroom lavatories typically branches from the main riser through a 1/2\" branch line. Kitchen sinks and hose bibbs are on separate branches per IPC 604.3.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-plmb-002",
+    "trade": "plumbing",
+    "difficulty": 1,
+    "title": "Find the Drain Path",
+    "description": "Connect the floor drain to the correct waste line outlet.",
+    "gridSize": 5,
+    "grid": [
+      ["A", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " "],
+      ["S", "─", "│", "─", "B"],
+      [" ", " ", " ", " ", " "],
+      ["C", " ", " ", " ", " "]
+    ],
+    "rotatable": [[2, 2], [2, 3]],
+    "start": [2, 0],
+    "ends": [
+      { "pos": [0, 0], "label": "Vent Stack", "correct": false },
+      { "pos": [2, 4], "label": "Waste Line", "correct": true },
+      { "pos": [4, 0], "label": "Storm Drain", "correct": false }
+    ],
+    "explanation": "Floor drains connect to the sanitary waste system, not the storm drain or vent stack. Per IPC 301.3, all plumbing fixtures must drain to the sanitary sewer.",
+    "xpReward": 20
+  },
+  {
+    "id": "maze-plmb-003",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Connect the Hot Water Loop",
+    "description": "Route the hot water recirculation line from the heater to the return.",
+    "gridSize": 7,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", "A"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "┐", " ", " "],
+      [" ", " ", " ", " ", "│", " ", " "],
+      [" ", " ", "┌", "─", "┘", " ", "B"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 4], [4, 2], [4, 4]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Cold Supply", "correct": false },
+      { "pos": [4, 6], "label": "Recirc Return", "correct": true },
+      { "pos": [6, 6], "label": "Floor Drain", "correct": false }
+    ],
+    "explanation": "Hot water recirculation loops return water to the heater inlet, maintaining temperature at fixtures. Per ASHRAE 90.1, recirc pumps reduce wait time and conserve water. The return line connects back to the heater, not the cold supply or drain.",
+    "xpReward": 40
+  },
+  {
+    "id": "maze-plmb-004",
+    "trade": "plumbing",
+    "difficulty": 2,
+    "title": "Route the Vent Stack",
+    "description": "Connect the fixture trap to the proper vent termination through the wall.",
+    "gridSize": 7,
+    "grid": [
+      [" ", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "┌", "─", "─", "─", "┘"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      ["S", "─", "┘", " ", " ", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[1, 2], [1, 6], [3, 2]],
+    "start": [3, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Roof Vent", "correct": true },
+      { "pos": [3, 6], "label": "Window", "correct": false },
+      { "pos": [6, 6], "label": "Foundation", "correct": false }
+    ],
+    "explanation": "Vent stacks must terminate above the roofline per IPC 903.1, at least 6 inches above the roof surface and 10 feet from any openable window. They cannot terminate at a window or below grade.",
+    "xpReward": 40
+  },
+  {
+    "id": "maze-plmb-005",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Underground Piping Network",
+    "description": "Route the main sewer lateral from the building to the correct connection point.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "│", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "┐", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "┐", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", "│", " ", " "],
+      [" ", "█", "█", " ", " ", " ", "│", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "└", "─", "C"],
+      [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 4], [4, 4], [4, 6], [6, 6], [7, 6]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 8], "label": "Storm Main", "correct": false },
+      { "pos": [4, 8], "label": "Grease Trap", "correct": false },
+      { "pos": [7, 8], "label": "Sanitary Main", "correct": true }
+    ],
+    "explanation": "Building sewer laterals connect to the public sanitary main, never to storm mains (separate system per IPC 1101.2). Commercial kitchens require grease traps but the main lateral bypasses them for other waste.",
+    "xpReward": 65
+  },
+  {
+    "id": "maze-plmb-006",
+    "trade": "plumbing",
+    "difficulty": 3,
+    "title": "Medical Gas Distribution",
+    "description": "Route the oxygen supply from the manifold to the correct patient zone.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "─", "┐", " ", " ", " ", " ", " "],
+      [" ", " ", " ", "│", " ", " ", " ", " ", "A"],
+      [" ", " ", " ", "└", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "└", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", " ", " ", "│", " "],
+      [" ", "█", "█", "█", " ", " ", " ", "│", "B"],
+      [" ", " ", " ", " ", " ", "┌", "─", "┘", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 3], [2, 3], [2, 5], [4, 5], [4, 7], [6, 7], [7, 5], [7, 7]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [1, 8], "label": "Vacuum Pump", "correct": false },
+      { "pos": [6, 8], "label": "Patient Ward", "correct": true },
+      { "pos": [8, 5], "label": "Storage Room", "correct": false }
+    ],
+    "explanation": "Medical oxygen systems must be routed from the manifold to patient care areas per NFPA 99. Oxygen lines must never be connected to vacuum systems and should not terminate in non-patient areas like storage rooms.",
+    "xpReward": 70
+  },
+  {
+    "id": "maze-hvac-001",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Direct the Airflow",
+    "description": "Rotate the duct sections to route supply air from the AHU to the office zone.",
+    "gridSize": 5,
+    "grid": [
+      ["S", "─", "│", " ", " "],
+      [" ", " ", " ", " ", "A"],
+      [" ", "┌", "─", "─", "B"],
+      [" ", "│", " ", " ", " "],
+      [" ", "└", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 1]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [1, 4], "label": "Storage Room", "correct": false },
+      { "pos": [2, 4], "label": "Office Zone", "correct": true },
+      { "pos": [4, 4], "label": "Mech Room", "correct": false }
+    ],
+    "explanation": "Supply air from the AHU routes to occupied spaces like offices, not storage rooms or mechanical rooms. ASHRAE 62.1 requires ventilation for occupied zones based on occupancy classification.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-hvac-002",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Route Supply Air to Zone 3",
+    "description": "Connect the main trunk duct to the Zone 3 diffuser.",
+    "gridSize": 5,
+    "grid": [
+      ["A", " ", "S", " ", " "],
+      [" ", " ", "│", " ", " "],
+      [" ", " ", "─", "─", "B"],
+      [" ", " ", " ", " ", " "],
+      ["C", " ", " ", " ", " "]
+    ],
+    "rotatable": [[2, 2], [2, 3]],
+    "start": [2, 0],
+    "ends": [
+      { "pos": [0, 0], "label": "Zone 1", "correct": false },
+      { "pos": [2, 4], "label": "Zone 3", "correct": true },
+      { "pos": [4, 0], "label": "Zone 2", "correct": false }
+    ],
+    "explanation": "Duct branches from the main trunk must be sized to deliver the required CFM to each zone. Zone 3 diffusers connect via branch ducts sized per SMACNA duct design standards.",
+    "xpReward": 20
+  },
+  {
+    "id": "maze-hvac-003",
+    "trade": "hvac",
+    "difficulty": 1,
+    "title": "Balance the Duct Branch",
+    "description": "Route the return air from the office back to the AHU.",
+    "gridSize": 5,
+    "grid": [
+      [" ", " ", " ", " ", "A"],
+      ["S", "│", " ", " ", " "],
+      [" ", " ", " ", " ", "B"],
+      [" ", "┌", "─", "─", "C"],
+      [" ", "│", " ", " ", " "]
+    ],
+    "rotatable": [[1, 1], [3, 1]],
+    "start": [1, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Exhaust Fan", "correct": false },
+      { "pos": [2, 4], "label": "Transfer Grille", "correct": false },
+      { "pos": [3, 4], "label": "AHU Return", "correct": true }
+    ],
+    "explanation": "Return air ducts bring conditioned air back to the AHU for reconditioning. This is separate from exhaust air, which is expelled outdoors. Balanced return air ensures proper building pressure per SMACNA guidelines.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-hvac-004",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Exhaust Duct Routing",
+    "description": "Route kitchen exhaust through the grease duct to the correct termination.",
+    "gridSize": 7,
+    "grid": [
+      [" ", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", " ", "┌", "─", "─", "│"],
+      [" ", " ", " ", "│", " ", " ", " "],
+      ["S", "─", "─", "┘", " ", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 6], [1, 3], [1, 6], [3, 3]],
+    "start": [3, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Roof Exhaust Fan", "correct": true },
+      { "pos": [3, 6], "label": "Supply Plenum", "correct": false },
+      { "pos": [6, 6], "label": "Return Air", "correct": false }
+    ],
+    "explanation": "Kitchen exhaust must route to a dedicated exhaust fan on the roof per NFPA 96 and IMC 506. Grease-laden ducts can never connect to supply or return air systems due to fire and contamination risk.",
+    "xpReward": 45
+  },
+  {
+    "id": "maze-hvac-005",
+    "trade": "hvac",
+    "difficulty": 2,
+    "title": "Smoke Control Duct Path",
+    "description": "Route the smoke control damper activation path from the fire panel.",
+    "gridSize": 7,
+    "grid": [
+      ["S", "─", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", "│", " ", " ", "A"],
+      [" ", " ", " ", "└", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", "│", " "],
+      [" ", " ", "┌", "─", "─", "┘", "B"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 3], [2, 3], [2, 5], [4, 2], [4, 5]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [1, 6], "label": "Supply Diffuser", "correct": false },
+      { "pos": [4, 6], "label": "Smoke Damper", "correct": true },
+      { "pos": [6, 6], "label": "Volume Damper", "correct": false }
+    ],
+    "explanation": "Fire alarm panels activate smoke dampers in duct systems per NFPA 90A. Smoke dampers close upon alarm to prevent smoke spread through the HVAC system. Volume dampers are for air balancing, not fire safety.",
+    "xpReward": 45
+  },
+  {
+    "id": "maze-hvac-006",
+    "trade": "hvac",
+    "difficulty": 3,
+    "title": "VRF Refrigerant Piping Layout",
+    "description": "Route the VRF refrigerant line from the outdoor unit to the correct indoor unit through the branch controller.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "│", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "└", "─", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", "┌", "─", "┘", " ", " ", "B"],
+      [" ", " ", " ", "│", " ", " ", " ", " ", " "],
+      [" ", "█", " ", "└", "─", "─", "┐", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "│", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "└", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 5], [4, 3], [4, 5], [6, 3], [6, 6], [8, 6]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [1, 8], "label": "Condensate Drain", "correct": false },
+      { "pos": [4, 8], "label": "Server Room FCU", "correct": true },
+      { "pos": [8, 8], "label": "Lobby Unit", "correct": false }
+    ],
+    "explanation": "VRF systems use refrigerant branch controllers (BS units) to distribute flow to indoor units. Server rooms typically need dedicated cooling with shorter refrigerant runs per manufacturer guidelines. Total equivalent piping length limits per AHRI 1230.",
+    "xpReward": 60
+  },
+  {
+    "id": "maze-elec-001",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Complete the Circuit",
+    "description": "Route the power feed from the panel to the correct outlet.",
+    "gridSize": 5,
+    "grid": [
+      ["S", "─", "│", " ", "A"],
+      [" ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "B"],
+      [" ", "┌", "─", "─", "C"],
+      [" ", "│", " ", " ", " "]
+    ],
+    "rotatable": [[0, 2], [3, 1]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Light Switch", "correct": false },
+      { "pos": [2, 4], "label": "GFCI Outlet", "correct": false },
+      { "pos": [3, 4], "label": "20A Receptacle", "correct": true }
+    ],
+    "explanation": "Dedicated 20A circuits are required for specific loads per NEC 210.11. The circuit routes from the panel through conduit to the designated receptacle. GFCI outlets require separate wet-location circuits.",
+    "xpReward": 20
+  },
+  {
+    "id": "maze-elec-002",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Route Power to the Panel",
+    "description": "Connect the transformer secondary to the distribution panel.",
+    "gridSize": 5,
+    "grid": [
+      [" ", " ", " ", " ", "A"],
+      ["S", "─", "┐", " ", " "],
+      [" ", " ", "│", " ", "B"],
+      [" ", " ", "│", " ", " "],
+      [" ", " ", "└", "─", "C"]
+    ],
+    "rotatable": [[1, 2], [4, 2]],
+    "start": [1, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Motor Starter", "correct": false },
+      { "pos": [2, 4], "label": "Sub Panel", "correct": false },
+      { "pos": [4, 4], "label": "Main Panel", "correct": true }
+    ],
+    "explanation": "The transformer secondary feeds the main distribution panel first, which then distributes to sub-panels and motor starters. Per NEC 230.70, the service disconnect must be at the main panel location.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-elec-003",
+    "trade": "electrical",
+    "difficulty": 1,
+    "title": "Find the Ground Path",
+    "description": "Route the equipment grounding conductor from the panel to the ground rod.",
+    "gridSize": 5,
+    "grid": [
+      ["A", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " "],
+      ["S", "─", "─", "┐", " "],
+      [" ", " ", " ", "│", " "],
+      [" ", " ", "B", "└", "C"]
+    ],
+    "rotatable": [[2, 3], [4, 3]],
+    "start": [2, 0],
+    "ends": [
+      { "pos": [0, 0], "label": "Neutral Bus", "correct": false },
+      { "pos": [4, 2], "label": "Water Pipe Bond", "correct": false },
+      { "pos": [4, 4], "label": "Ground Rod", "correct": true }
+    ],
+    "explanation": "The grounding electrode conductor connects the panel grounding bus to the grounding electrode (ground rod) per NEC 250.64. While water pipe bonding is required (NEC 250.104), the primary ground path goes to the ground rod.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-elec-004",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Emergency Generator Feed",
+    "description": "Route the emergency power from the generator through the ATS to the emergency panel.",
+    "gridSize": 7,
+    "grid": [
+      ["S", "─", "─", "┐", " ", " ", "A"],
+      [" ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", "└", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", "│", " "],
+      [" ", " ", " ", "┌", "─", "┘", "B"],
+      [" ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", "└", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 3], [2, 3], [2, 5], [4, 3], [4, 5]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Normal Panel", "correct": false },
+      { "pos": [4, 6], "label": "Emergency Panel", "correct": true },
+      { "pos": [6, 6], "label": "Mechanical Panel", "correct": false }
+    ],
+    "explanation": "Emergency generators feed through an Automatic Transfer Switch (ATS) to the emergency distribution panel per NEC Article 700. The ATS ensures seamless switchover from normal to emergency power within 10 seconds.",
+    "xpReward": 45
+  },
+  {
+    "id": "maze-elec-005",
+    "trade": "electrical",
+    "difficulty": 2,
+    "title": "Fire Alarm Circuit Route",
+    "description": "Route the fire alarm initiating device circuit from the FACP to the smoke detector.",
+    "gridSize": 7,
+    "grid": [
+      [" ", " ", " ", " ", " ", " ", "A"],
+      [" ", "┌", "─", "─", "─", "─", "┘"],
+      [" ", "│", " ", " ", " ", " ", " "],
+      ["S", "┘", " ", " ", " ", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 6], [1, 1], [1, 6], [3, 1]],
+    "start": [3, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Smoke Detector", "correct": true },
+      { "pos": [3, 6], "label": "Sprinkler Head", "correct": false },
+      { "pos": [6, 6], "label": "Exit Sign", "correct": false }
+    ],
+    "explanation": "Fire alarm initiating device circuits (IDC) connect the FACP to detection devices like smoke detectors per NFPA 72. Sprinkler heads are part of the suppression system, not the alarm circuit. Exit signs connect to emergency lighting circuits.",
+    "xpReward": 40
+  },
+  {
+    "id": "maze-elec-006",
+    "trade": "electrical",
+    "difficulty": 3,
+    "title": "Data Center UPS Feed",
+    "description": "Route critical power from the UPS through the PDU to the server rack.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "│", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "┐", " ", " ", " ", "A"],
+      [" ", " ", " ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", " ", " ", "│", " "],
+      [" ", "█", "█", " ", " ", " ", " ", "│", "B"],
+      [" ", " ", " ", " ", "┌", "─", "─", "┘", " "],
+      [" ", " ", " ", " ", "│", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 4], [4, 4], [4, 7], [6, 7], [7, 4], [7, 7]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [2, 8], "label": "Lighting Panel", "correct": false },
+      { "pos": [6, 8], "label": "Server Rack PDU", "correct": true },
+      { "pos": [8, 4], "label": "HVAC Panel", "correct": false }
+    ],
+    "explanation": "Critical IT loads receive power through a UPS system feeding Power Distribution Units (PDUs) at each server rack. Per TIA-942, critical power must have dedicated pathways separate from mechanical and lighting loads. Dual-corded servers get A+B feeds from separate PDUs.",
+    "xpReward": 65
+  },
+  {
+    "id": "maze-pipe-001",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Connect the Steam Header",
+    "description": "Route the steam line from the boiler to the correct distribution header.",
+    "gridSize": 5,
+    "grid": [
+      ["S", "─", "─", "┐", " "],
+      [" ", " ", " ", "│", " "],
+      [" ", " ", " ", "│", "A"],
+      [" ", " ", " ", "└", "B"],
+      [" ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 3], [3, 3]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [2, 4], "label": "Condensate Return", "correct": false },
+      { "pos": [3, 4], "label": "Steam Header", "correct": true },
+      { "pos": [4, 4], "label": "Blowdown Tank", "correct": false }
+    ],
+    "explanation": "Steam from the boiler flows to the main distribution header, which branches to individual loads. The condensate return is a separate system that collects condensed steam. Blowdown tanks handle boiler water treatment waste per ASME B31.1.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-pipe-002",
+    "trade": "pipefitting",
+    "difficulty": 1,
+    "title": "Route the Chilled Water",
+    "description": "Connect the chiller supply to the correct AHU coil.",
+    "gridSize": 5,
+    "grid": [
+      ["A", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " "],
+      ["S", "─", "┐", " ", " "],
+      [" ", " ", "│", " ", " "],
+      [" ", " ", "└", "─", "B"],
+      [" ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[2, 2], [4, 2]],
+    "start": [2, 0],
+    "ends": [
+      { "pos": [0, 0], "label": "Heating Coil", "correct": false },
+      { "pos": [4, 4], "label": "Cooling Coil", "correct": true },
+      { "pos": [5, 4], "label": "Steam Coil", "correct": false }
+    ],
+    "explanation": "Chilled water supply (typically 42-44 deg F) connects to cooling coils in AHUs. Hot water or steam connects to heating coils. Per ASHRAE 90.1, chilled and hot water systems must be separate to prevent energy waste.",
+    "xpReward": 20
+  },
+  {
+    "id": "maze-pipe-003",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Complete the Glycol Loop",
+    "description": "Route the glycol solution from the heat exchanger to the correct outdoor coil.",
+    "gridSize": 7,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", "A"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", "│", " "],
+      [" ", " ", "┌", "─", "─", "┘", "B"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 5], [4, 2], [4, 5]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Indoor Coil", "correct": false },
+      { "pos": [4, 6], "label": "Snow Melt Coil", "correct": true },
+      { "pos": [6, 6], "label": "Domestic HW", "correct": false }
+    ],
+    "explanation": "Glycol loops are used for outdoor applications where freeze protection is required, such as snow melt systems. Indoor coils typically use plain water. Glycol must never be cross-connected with domestic hot water systems per plumbing code.",
+    "xpReward": 40
+  },
+  {
+    "id": "maze-pipe-004",
+    "trade": "pipefitting",
+    "difficulty": 2,
+    "title": "Condensate Recovery Path",
+    "description": "Route the steam trap discharge to the correct collection point.",
+    "gridSize": 7,
+    "grid": [
+      [" ", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "┌", "─", "─", "─", "│"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      ["S", "─", "┘", " ", " ", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " ", " ", "C"]
+    ],
+    "rotatable": [[0, 6], [1, 2], [1, 6], [3, 2]],
+    "start": [3, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Condensate Receiver", "correct": true },
+      { "pos": [3, 6], "label": "Flash Tank", "correct": false },
+      { "pos": [6, 6], "label": "Floor Drain", "correct": false }
+    ],
+    "explanation": "Steam trap discharge routes to a condensate receiver tank, which feeds the boiler feedwater system. Dumping condensate to a floor drain wastes energy and treated water. Flash tanks are used for high-pressure condensate recovery per ASME B31.1.",
+    "xpReward": 45
+  },
+  {
+    "id": "maze-pipe-005",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Cooling Tower Piping",
+    "description": "Route the condenser water from the chiller to the cooling tower through the correct path.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "─", "┐", " ", " ", " ", " ", " "],
+      [" ", " ", " ", "│", " ", " ", " ", " ", "A"],
+      [" ", " ", " ", "└", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", "┌", "─", "┘", " ", " ", "B"],
+      [" ", " ", " ", "│", " ", " ", " ", " ", " "],
+      [" ", "█", " ", "└", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "└", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 3], [2, 3], [2, 5], [4, 3], [4, 5], [6, 3], [6, 5], [8, 5]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [1, 8], "label": "Chilled Water Supply", "correct": false },
+      { "pos": [4, 8], "label": "Process Cooling", "correct": false },
+      { "pos": [8, 8], "label": "Cooling Tower", "correct": true }
+    ],
+    "explanation": "Condenser water flows from the chiller's condenser barrel to the cooling tower for heat rejection to atmosphere. This is a separate loop from the chilled water system. Per CTI standards, condenser water typically operates at 85-95 deg F, while chilled water is 42-44 deg F.",
+    "xpReward": 60
+  },
+  {
+    "id": "maze-pipe-006",
+    "trade": "pipefitting",
+    "difficulty": 3,
+    "title": "Process Steam Distribution",
+    "description": "Route high-pressure steam from the main header through the PRV station to the correct process load.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "│", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "┐", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "┐", " ", "B"],
+      [" ", " ", " ", " ", " ", " ", "│", " ", " "],
+      [" ", "█", "█", " ", "┌", "─", "┘", " ", " "],
+      [" ", " ", " ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 4], [4, 4], [4, 6], [6, 4], [6, 6], [8, 4]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 8], "label": "Direct HP Load", "correct": false },
+      { "pos": [4, 8], "label": "PRV Station", "correct": false },
+      { "pos": [8, 8], "label": "LP Process Load", "correct": true }
+    ],
+    "explanation": "High-pressure steam must pass through a Pressure Reducing Valve (PRV) station before reaching low-pressure process loads. Per ASME B31.1, the PRV station includes strainer, PRV, safety valve, and bypass. Direct HP connections to LP equipment can cause catastrophic failure.",
+    "xpReward": 70
+  },
+  {
+    "id": "maze-ctrl-001",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Route the Signal",
+    "description": "Connect the temperature sensor to the correct controller input.",
+    "gridSize": 5,
+    "grid": [
+      ["S", "─", "│", " ", "A"],
+      [" ", " ", " ", " ", " "],
+      [" ", "┌", "─", "─", "B"],
+      [" ", "│", " ", " ", " "],
+      [" ", "└", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 1]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Actuator Output", "correct": false },
+      { "pos": [2, 4], "label": "Controller AI", "correct": true },
+      { "pos": [4, 4], "label": "Power Supply", "correct": false }
+    ],
+    "explanation": "Temperature sensors connect to Analog Input (AI) points on BAS controllers. Actuators connect to Analog Output (AO) or Binary Output (BO) points. Per ASHRAE 135 (BACnet), proper I/O mapping ensures correct control sequences.",
+    "xpReward": 20
+  },
+  {
+    "id": "maze-ctrl-002",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Connect the Sensor Network",
+    "description": "Route the BACnet trunk cable from the controller to the correct network port.",
+    "gridSize": 5,
+    "grid": [
+      ["A", " ", " ", " ", " "],
+      [" ", " ", " ", " ", " "],
+      ["S", "│", "─", "─", "B"],
+      [" ", " ", " ", " ", " "],
+      ["C", " ", " ", " ", " "]
+    ],
+    "rotatable": [[2, 1]],
+    "start": [2, 0],
+    "ends": [
+      { "pos": [0, 0], "label": "Power Bus", "correct": false },
+      { "pos": [2, 4], "label": "MS/TP Trunk", "correct": true },
+      { "pos": [4, 0], "label": "Analog Sensor", "correct": false }
+    ],
+    "explanation": "BACnet MS/TP (Master-Slave/Token-Passing) uses a daisy-chain trunk topology on RS-485 wiring. Per ASHRAE 135, MS/TP networks support up to 127 devices on a single trunk. Power buses and analog sensors use separate wiring.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-ctrl-003",
+    "trade": "controls",
+    "difficulty": 1,
+    "title": "Map the BACnet Trunk",
+    "description": "Connect the building controller to the IP network backbone.",
+    "gridSize": 5,
+    "grid": [
+      [" ", " ", " ", " ", "A"],
+      ["S", "─", "┐", " ", " "],
+      [" ", " ", "│", " ", "B"],
+      [" ", " ", "└", "─", "C"],
+      [" ", " ", " ", " ", " "]
+    ],
+    "rotatable": [[1, 2], [3, 2]],
+    "start": [1, 0],
+    "ends": [
+      { "pos": [0, 4], "label": "Wireless AP", "correct": false },
+      { "pos": [2, 4], "label": "Field Bus", "correct": false },
+      { "pos": [3, 4], "label": "BACnet/IP Switch", "correct": true }
+    ],
+    "explanation": "Building Automation Controllers connect to the IP network via BACnet/IP protocol on Ethernet switches. Per ASHRAE 135, BACnet/IP provides higher bandwidth than MS/TP for supervisory-level communications. Wireless and field bus connections are for different network tiers.",
+    "xpReward": 25
+  },
+  {
+    "id": "maze-ctrl-004",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "VAV Box Control Loop",
+    "description": "Route the control signal from the zone sensor through the DDC controller to the VAV damper actuator.",
+    "gridSize": 7,
+    "grid": [
+      ["S", "─", "─", "┐", " ", " ", "A"],
+      [" ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", "└", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", "│", " "],
+      [" ", " ", "┌", "─", "─", "┘", "B"],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 3], [2, 3], [2, 5], [4, 2], [4, 5]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Thermostat Display", "correct": false },
+      { "pos": [4, 6], "label": "VAV Actuator", "correct": true },
+      { "pos": [6, 6], "label": "Exhaust Fan VFD", "correct": false }
+    ],
+    "explanation": "In a VAV control loop, the zone temperature sensor sends data to the DDC controller, which modulates the VAV damper actuator to maintain setpoint. Per ASHRAE Guideline 36, the controller uses a PID loop to position the damper between minimum and maximum airflow.",
+    "xpReward": 45
+  },
+  {
+    "id": "maze-ctrl-005",
+    "trade": "controls",
+    "difficulty": 2,
+    "title": "Chiller Plant Sequencing",
+    "description": "Route the lead/lag signal from the BAS server to the correct chiller controller.",
+    "gridSize": 7,
+    "grid": [
+      [" ", " ", " ", " ", " ", " ", "A"],
+      ["S", "─", "┐", " ", " ", " ", " "],
+      [" ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "┐", " ", "B"],
+      [" ", " ", " ", " ", "│", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "C"],
+      [" ", " ", " ", " ", " ", " ", " "]
+    ],
+    "rotatable": [[1, 2], [3, 2], [3, 4], [5, 4]],
+    "start": [1, 0],
+    "ends": [
+      { "pos": [0, 6], "label": "Boiler Controller", "correct": false },
+      { "pos": [3, 6], "label": "Chiller 2 (Lag)", "correct": false },
+      { "pos": [5, 6], "label": "Chiller 1 (Lead)", "correct": true }
+    ],
+    "explanation": "Chiller plant sequencing starts the lead chiller first and stages lag chillers based on load. Per ASHRAE Guideline 36, the BAS monitors chilled water supply temperature and system load to determine staging. Lead chiller runs continuously while lag chillers cycle.",
+    "xpReward": 40
+  },
+  {
+    "id": "maze-ctrl-006",
+    "trade": "controls",
+    "difficulty": 3,
+    "title": "Integrated Fire/HVAC Shutdown",
+    "description": "Route the fire alarm relay signal to shut down the correct AHU through the BAS interlock.",
+    "gridSize": 9,
+    "grid": [
+      ["S", "─", "┐", " ", " ", " ", " ", " ", "A"],
+      [" ", " ", "│", " ", " ", " ", " ", " ", " "],
+      [" ", " ", "└", "─", "─", "┐", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "│", " ", " ", " "],
+      [" ", " ", " ", " ", " ", "└", "─", "┐", " "],
+      [" ", " ", " ", " ", " ", " ", " ", "│", " "],
+      [" ", "█", " ", " ", "┌", "─", "─", "┘", "B"],
+      [" ", " ", " ", " ", "│", " ", " ", " ", " "],
+      [" ", " ", " ", " ", "└", "─", "─", "─", "C"]
+    ],
+    "rotatable": [[0, 2], [2, 2], [2, 5], [4, 5], [4, 7], [6, 4], [6, 7], [8, 4]],
+    "start": [0, 0],
+    "ends": [
+      { "pos": [0, 8], "label": "Normal AHU", "correct": false },
+      { "pos": [6, 8], "label": "Smoke Zone AHU", "correct": true },
+      { "pos": [8, 8], "label": "Kitchen Hood", "correct": false }
+    ],
+    "explanation": "Fire alarm systems interlock with the BAS to shut down AHUs serving the affected smoke zone per NFPA 90A. The FACP sends a relay signal through hardwired interlocks (not software) to ensure fail-safe shutdown. Kitchen hoods have separate Type I/II shutdown sequences per NFPA 96.",
+    "xpReward": 70
+  }
+]

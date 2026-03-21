@@ -133,7 +133,43 @@ function computeFlow(
 }
 
 // ---------------------------------------------------------------------------
-// CSS Pipe Renderer helpers
+// Sprite tile mapping
+// ---------------------------------------------------------------------------
+
+const TILE_IMAGES: Record<string, string> = {
+  "─": "/images/tiles/pipe-horizontal.jpeg",
+  "│": "/images/tiles/pipe-vertical.jpeg",
+  "┐": "/images/tiles/pipe-corner.jpeg",   // rotated via CSS
+  "┌": "/images/tiles/pipe-corner.jpeg",
+  "└": "/images/tiles/pipe-corner.jpeg",
+  "┘": "/images/tiles/pipe-corner.jpeg",
+  "┬": "/images/tiles/pipe-t-junction.jpeg", // rotated via CSS
+  "┴": "/images/tiles/pipe-t-junction.jpeg",
+  "├": "/images/tiles/pipe-t-junction.jpeg",
+  "┤": "/images/tiles/pipe-t-junction.jpeg",
+  "┼": "/images/tiles/pipe-cross.jpeg",
+  "S": "/images/tiles/source.jpeg",
+  "A": "/images/tiles/dest-a.jpeg",
+  "B": "/images/tiles/dest-b.jpeg",
+  "C": "/images/tiles/dest-c.jpeg",
+  "V": "/images/tiles/valve-open.jpeg",
+  "█": "/images/tiles/wall.jpeg",
+};
+
+// The corner image connects top-to-right (┐ shape). Map each corner to the rotation needed.
+const TILE_ROTATION: Record<string, number> = {
+  "┐": 0,      // base orientation: top + right
+  "┌": 270,    // right + bottom
+  "└": 180,    // bottom + left
+  "┘": 90,     // left + top
+  "┬": 0,      // base T: left + right + bottom
+  "├": 270,
+  "┴": 180,
+  "┤": 90,
+};
+
+// ---------------------------------------------------------------------------
+// CSS Pipe Renderer helpers (fallback)
 // ---------------------------------------------------------------------------
 
 interface ConnectionBarProps {
@@ -403,118 +439,47 @@ export default function PipeMaze({ config, onNextPuzzle }: PipeMazeProps) {
                       : "1px solid transparent",
                   }}
                 >
-                  {/* Wall fill */}
-                  {isWall && (
-                    <div
-                      className="absolute inset-1 rounded"
-                      style={{ backgroundColor: "rgba(255,255,255,0.06)" }}
-                    />
-                  )}
+                  {/* Render tile sprite or CSS fallback */}
+                  {!isEmpty && (() => {
+                    const tileImg = TILE_IMAGES[cell];
+                    const rotation = TILE_ROTATION[cell] ?? 0;
 
-                  {/* Pipe connections */}
-                  {!isEmpty && !isWall && !isStart && !endInfo && (
-                    <>
-                      {Array.from(conns).map((dir) => (
-                        <ConnectionBar
-                          key={dir}
-                          dir={dir}
-                          color={tradeColor}
-                          hasFlow={hasFlow}
-                        />
-                      ))}
-                      {conns.size > 0 && (
-                        <CenterDot color={tradeColor} hasFlow={hasFlow} />
-                      )}
-                    </>
-                  )}
-
-                  {/* Start cell */}
-                  {isStart && (
-                    <>
-                      {Array.from(conns).map((dir) => (
-                        <ConnectionBar
-                          key={dir}
-                          dir={dir}
-                          color={tradeColor}
-                          hasFlow={true}
-                        />
-                      ))}
-                      <div
-                        className="absolute left-1/2 top-1/2 flex items-center justify-center"
-                        style={{
-                          transform: "translate(-50%, -50%)",
-                          width: cellSize * 0.55,
-                          height: cellSize * 0.55,
-                          borderRadius: "50%",
-                          backgroundColor: tradeColor,
-                          boxShadow: `0 0 12px ${tradeColor}80`,
-                        }}
-                      >
-                        <span className="text-[10px] font-bold text-white">S</span>
-                      </div>
-                    </>
-                  )}
-
-                  {/* End cells */}
-                  {endInfo && (
-                    <>
-                      {Array.from(conns).map((dir) => (
-                        <ConnectionBar
-                          key={dir}
-                          dir={dir}
-                          color={
-                            hasFlow && endInfo.correct
-                              ? "#22C55E"
-                              : hasFlow && !endInfo.correct
-                                ? "#EF4444"
-                                : tradeColor
-                          }
-                          hasFlow={hasFlow}
-                        />
-                      ))}
-                      <div
-                        className="absolute left-1/2 top-1/2 flex items-center justify-center"
-                        style={{
-                          transform: "translate(-50%, -50%)",
-                          width: cellSize * 0.55,
-                          height: cellSize * 0.55,
-                          borderRadius: "50%",
-                          backgroundColor:
-                            hasFlow && endInfo.correct
-                              ? "#22C55E"
-                              : hasFlow && !endInfo.correct
-                                ? "#EF4444"
-                                : "rgba(255,255,255,0.1)",
-                          border: `2px solid ${
-                            hasFlow && endInfo.correct
-                              ? "#22C55E"
-                              : hasFlow && !endInfo.correct
-                                ? "#EF4444"
-                                : "rgba(255,255,255,0.2)"
-                          }`,
-                          boxShadow:
-                            hasFlow && endInfo.correct
-                              ? "0 0 16px rgba(34,197,94,0.5)"
-                              : hasFlow && !endInfo.correct
-                                ? "0 0 16px rgba(239,68,68,0.4)"
-                                : "none",
-                          transition: "all 0.3s ease",
-                        }}
-                      >
-                        <span
-                          className="text-[10px] font-bold"
+                    if (tileImg) {
+                      return (
+                        <img
+                          src={tileImg}
+                          alt={cell}
                           style={{
-                            color:
-                              hasFlow
-                                ? "#FFFFFF"
-                                : "rgba(255,255,255,0.5)",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            transform: rotation ? `rotate(${rotation}deg)` : undefined,
+                            transition: "transform 0.2s ease",
+                            opacity: hasFlow ? 1 : 0.5,
+                            filter: hasFlow ? `drop-shadow(0 0 6px ${tradeColor}80)` : "none",
                           }}
-                        >
-                          {cell}
-                        </span>
-                      </div>
-                    </>
-                  )}
+                          draggable={false}
+                        />
+                      );
+                    }
+
+                    // CSS fallback for unmapped cells
+                    return (
+                      <>
+                        {Array.from(conns).map((dir) => (
+                          <ConnectionBar
+                            key={dir}
+                            dir={dir}
+                            color={tradeColor}
+                            hasFlow={hasFlow}
+                          />
+                        ))}
+                        {conns.size > 0 && (
+                          <CenterDot color={tradeColor} hasFlow={hasFlow} />
+                        )}
+                      </>
+                    );
+                  })()}
 
                   {/* Rotate indicator for rotatable cells */}
                   {isRotatable && !solved && !isStart && !endInfo && (
